@@ -1,0 +1,25 @@
+{
+  "cardId": "sb1_m10",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-natural-hazards-risk-decision",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "visualizations/books/s_b1/sb1_m10/assets/vendor/three/three.min.js",
+    "orbitControls": "visualizations/books/s_b1/sb1_m10/assets/vendor/three/OrbitControls.js",
+    "scripts": [
+      "visualizations/books/s_b1/sb1_m10/assets/vendor/three/GLTFLoader.js"
+    ]
+  },
+  "panelSelectors": [
+    "#control-panel",
+    "#task-panel",
+    "#evidence-panel",
+    "#decision-panel"
+  ],
+  "notes": "气象与地质灾害综合课件接入；台风1、台风2和地震三套 GLB 已中文化命名并按 desktop/tablet/mobile 三档同源资源处理，洪涝、滑坡、泥石流与避险任务使用轻量程序化教学层补齐。"
+}
