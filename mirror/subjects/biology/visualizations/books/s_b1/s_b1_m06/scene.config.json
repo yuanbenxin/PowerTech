@@ -1,0 +1,30 @@
+{
+  "cardId": "s_b1_m06",
+  "status": "ready",
+  "engine": "specimen",
+  "entry": "scene.js?v=23fff7ce36f1",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "cameraPreset": "focus-object",
+  "interactionMode": "process",
+  "labels": [
+    "细胞呼吸",
+    "互动观察",
+    "实验对比"
+  ],
+  "steps": [
+    {
+      "id": "step1",
+      "title": "看葡萄糖怎样初步分解"
+    },
+    {
+      "id": "step2",
+      "title": "看线粒体怎样大量供能"
+    },
+    {
+      "id": "step3",
+      "title": "比较酵母在不同供氧条件下的现象"
+    }
+  ],
+  "notes": "用直观过程图呈现细胞呼吸的分步分解、线粒体中的大量供能，以及酵母在通气和密闭条件下的现象差异。"
+}
