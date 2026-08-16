@@ -1,0 +1,9 @@
+{
+  "cardId": "j7a_m02",
+  "status": "ready",
+  "engine": "microscope",
+  "entry": "scene.js?v=cdff2f25ef9b",
+  "assetsDir": "assets",
+  "cameraPreset": "zoom-slide",
+  "interactionMode": "zoom"
+}
