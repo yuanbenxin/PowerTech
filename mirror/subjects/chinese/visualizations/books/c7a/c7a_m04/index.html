@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>天净沙·秋思 - 交互式名师精讲</title>
+  <style>
+    html, body, #lesson-frame { width: 100%; height: 100%; margin: 0; border: 0; }
+    body { overflow: hidden; background: #f5f4ef; }
+    #lesson-frame { display: block; background: #f5f4ef; }
+  </style>
+</head>
+<body>
+  <iframe id="lesson-frame" title="天净沙·秋思交互式名师精讲" src="lesson/index.html" allow="autoplay; fullscreen"></iframe>
+  <script>
+    (() => {
+      const frame = document.getElementById('lesson-frame');
+      frame.addEventListener('load', () => {
+        const documentRef = frame.contentDocument;
+        if (!documentRef || documentRef.getElementById('shg-device-adaptation')) return;
+        const stylesheet = documentRef.createElement('link');
+        stylesheet.id = 'shg-device-adaptation';
+        stylesheet.rel = 'stylesheet';
+        stylesheet.href = '../platform-adaptive.css';
+        documentRef.head.appendChild(stylesheet);
+      });
+    })();
+  </script>
+</body>
+</html>

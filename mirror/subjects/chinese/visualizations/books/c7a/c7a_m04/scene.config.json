@@ -1,0 +1,10 @@
+{
+  "cardId": "c7a_m04",
+  "title": "天净沙·秋思",
+  "status": "ready",
+  "engine": "poetry-appreciation",
+  "contentType": "poetry",
+  "coursewarePanelMode": "embedded-lesson",
+  "source": "index.html",
+  "notes": "2026-07-24 已重新接入更新版原始课件；lesson/ 保留原课件文件，平台通过同源 iframe 承载，并在运行时注入设备适配样式。"
+}
