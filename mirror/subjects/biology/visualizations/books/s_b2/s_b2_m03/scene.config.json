@@ -1,0 +1,29 @@
+{
+  "cardId": "s_b2_m03",
+  "status": "ready",
+  "engine": "dna",
+  "entry": "scene.js?v=c0a786207c37",
+  "assetsDir": "assets",
+  "cameraPreset": "pedigree-view",
+  "interactionMode": "pan-zoom",
+  "labels": [
+    "伴性遗传",
+    "家系分析",
+    "基因病模拟器"
+  ],
+  "steps": [
+    {
+      "id": "step1",
+      "title": "切换伴 X 隐性与伴 X 显性病例"
+    },
+    {
+      "id": "step2",
+      "title": "设置源头个体基因型并扩展家系"
+    },
+    {
+      "id": "step3",
+      "title": "比较儿子与女儿的患病和携带风险"
+    }
+  ],
+  "notes": "伴性遗传与家系分析基因病模拟场景"
+}

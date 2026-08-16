@@ -1,0 +1,26 @@
+{
+  "cardId": "s_x3_m06",
+  "status": "ready",
+  "engine": "dna",
+  "entry": "scene.js?v=c5f1aefceb8a",
+  "assetsDir": "assets",
+  "cameraPreset": "lab-simulator",
+  "interactionMode": "gene-engineering-flow",
+  "coursewarePanelMode": "scene-controls",
+  "labels": [
+    "限制酶",
+    "黏性末端",
+    "DNA 连接酶",
+    "重组质粒",
+    "转化",
+    "抗性筛选"
+  ],
+  "steps": [
+    "用同一种限制酶识别载体和目的基因两端的相同序列。",
+    "限制酶错位切割，暴露可互补配对的黏性末端。",
+    "目的基因与载体黏性末端配对，DNA 连接酶封闭磷酸二酯键。",
+    "重组质粒导入感受态受体细胞。",
+    "含抗性标记的重组细胞在选择培养基上存活并形成菌落。"
+  ],
+  "notes": "基因工程动态课件。统一布局为左侧模拟框、右侧操作面板；手机横屏自动精简低优先信息。"
+}

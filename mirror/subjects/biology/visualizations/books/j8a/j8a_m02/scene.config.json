@@ -1,0 +1,11 @@
+{
+  "cardId": "j8a_m02",
+  "status": "ready",
+  "engine": "specimen",
+  "entry": "../../../engines/junior-commercial/scene.js?v=0e691a6f49fd",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "step-task-exam",
+  "visualLevel": "A",
+  "notes": "?????????????????????????????"
+}

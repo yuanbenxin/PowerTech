@@ -1,0 +1,20 @@
+{
+  "id": "j8b_m05",
+  "name": "生命起源",
+  "engine": "specimen",
+  "version": "1.0.0",
+  "entry": "scene.js?v=5389582bfd50",
+  "dataFiles": [],
+  "assets": [
+    "assets/stage1.png?v=ae64517558f9",
+    "assets/stage2.png?v=061c40792769",
+    "assets/stage3.png?v=4cabc810a27d",
+    "assets/stage4.png?v=8a1bbb98a3d3",
+    "assets/stage5.png?v=4655eb006d54",
+    "assets/stage6.png?v=1ae090577074"
+  ],
+  "settings": {
+    "showTitle": false,
+    "theme": "dark"
+  }
+}

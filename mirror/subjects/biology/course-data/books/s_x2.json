@@ -1,0 +1,335 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "s_x2",
+        "label": "选择性必修二",
+        "stageId": "senior",
+        "stageLabel": "高中",
+        "chapters": [
+            {
+                "id": "s_x2-ch1",
+                "title": "种群",
+                "summary": "种群特征和数量变化",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "lab",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "种群密度",
+                    "出生率",
+                    "增长曲线",
+                    "样方法",
+                    "标志重捕法"
+                ]
+            },
+            {
+                "id": "s_x2-ch2",
+                "title": "群落",
+                "summary": "群落结构和演替",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "lab",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "群落结构",
+                    "演替",
+                    "土壤小动物调查"
+                ]
+            },
+            {
+                "id": "s_x2-ch3",
+                "title": "生态系统",
+                "summary": "组成、食物链、食物网和生态位",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "生态系统组成",
+                    "食物链",
+                    "食物网",
+                    "生态位"
+                ]
+            },
+            {
+                "id": "s_x2-ch4",
+                "title": "能量流动与物质循环",
+                "summary": "能量传递、金字塔和循环",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "能量流动",
+                    "能量金字塔",
+                    "碳循环",
+                    "氮循环"
+                ]
+            },
+            {
+                "id": "s_x2-ch5",
+                "title": "信息传递与稳定性",
+                "summary": "生态系统中的信息传递和稳定机制",
+                "recommendedModes": [
+                    "card",
+                    "interactive",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "信息传递",
+                    "稳定性",
+                    "负反馈调节"
+                ]
+            },
+            {
+                "id": "s_x2-ch6",
+                "title": "生物多样性与生态工程",
+                "summary": "生物多样性价值和生态工程实践",
+                "recommendedModes": [
+                    "card",
+                    "lab",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "生物多样性价值",
+                    "生态工程",
+                    "生态瓶"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "s_x2_m01",
+            "title": "种群数量特征与调查",
+            "stageId": "senior",
+            "bookId": "s_x2",
+            "chapterIds": [
+                "s_x2-ch1"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦种群数量特征与调查的核心结构、过程与规律",
+            "abstract": "围绕种群中的种群数量特征与调查整合学习内容，重点理解群落演替与生态格局、种群密度、出生率等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "群落演替与生态格局",
+                "种群密度",
+                "出生率",
+                "增长曲线"
+            ],
+            "tags": [
+                "种群密度",
+                "出生率",
+                "增长曲线",
+                "样方法"
+            ],
+            "experiments": [
+                "观察与分析：群落演替与生态格局",
+                "观察与分析：种群密度",
+                "观察与分析：出生率"
+            ],
+            "image": "assets/cards/s_x2_m01_population_ecology.png",
+            "icon": "ListFilter",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x2_m02",
+            "title": "群落结构与演替",
+            "stageId": "senior",
+            "bookId": "s_x2",
+            "chapterIds": [
+                "s_x2-ch2"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦群落结构与演替的核心结构、过程与规律",
+            "abstract": "围绕群落中的群落结构与演替整合学习内容，重点理解群落结构、演替、土壤小动物调查等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "群落结构",
+                "演替",
+                "土壤小动物调查"
+            ],
+            "tags": [
+                "群落结构",
+                "演替",
+                "土壤小动物调查"
+            ],
+            "experiments": [
+                "土壤小动物调查"
+            ],
+            "image": "assets/cards/s_x2_m02_community_succession.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x2_m03",
+            "title": "生态系统结构与生态位",
+            "stageId": "senior",
+            "bookId": "s_x2",
+            "chapterIds": [
+                "s_x2-ch3"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生态系统结构与生态位的核心结构、过程与规律",
+            "abstract": "围绕生态系统中的生态系统结构与生态位整合学习内容，重点理解生态系统组成、食物链、食物网等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "生态系统组成",
+                "食物链",
+                "食物网",
+                "生态位"
+            ],
+            "tags": [
+                "生态系统组成",
+                "食物链",
+                "食物网",
+                "生态位"
+            ],
+            "experiments": [
+                "结构辨识：生态系统组成",
+                "过程推演：食物链",
+                "规律归纳：食物网"
+            ],
+            "image": "assets/cards/s_x2_m03_ecosystem_niche.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x2_m04",
+            "title": "能量流动与物质循环",
+            "stageId": "senior",
+            "bookId": "s_x2",
+            "chapterIds": [
+                "s_x2-ch4"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦能量流动与物质循环的核心结构、过程与规律",
+            "abstract": "围绕能量流动与物质循环中的能量流动与物质循环整合学习内容，重点理解能量流动、能量金字塔、碳循环等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "能量流动",
+                "能量去向",
+                "碳循环",
+                "温室效应"
+            ],
+            "tags": [
+                "能量流动",
+                "能量去向",
+                "碳循环",
+                "温室效应"
+            ],
+            "experiments": [
+                "定量演算：能量逐级递减",
+                "分配探究：同化量四个去向",
+                "路径追踪：碳循环",
+                "关系探究：温室效应"
+            ],
+            "image": "assets/cards/s_x2_m04_energy_flow_material_cycle.png",
+            "icon": "Heart",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x2_m05",
+            "title": "信息传递与稳定性",
+            "stageId": "senior",
+            "bookId": "s_x2",
+            "chapterIds": [
+                "s_x2-ch5"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦信息传递与稳定性的核心结构、过程与规律",
+            "abstract": "围绕信息传递与稳定性中的信息传递与稳定性整合学习内容，重点理解生态工程与保护、信息传递、稳定性等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "生态工程与保护",
+                "信息传递",
+                "稳定性",
+                "负反馈调节"
+            ],
+            "tags": [
+                "信息传递",
+                "稳定性",
+                "负反馈调节",
+                "生态工程与保护"
+            ],
+            "experiments": [
+                "结构辨识：生态工程与保护",
+                "过程推演：信息传递",
+                "规律归纳：稳定性"
+            ],
+            "image": "assets/cards/s_x2_m05_ecosystem_stability_feedback.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x2_m06",
+            "title": "生物多样性与生态工程",
+            "stageId": "senior",
+            "bookId": "s_x2",
+            "chapterIds": [
+                "s_x2-ch6"
+            ],
+            "contentModes": [
+                "lab",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生物多样性与生态工程的核心结构、过程与规律",
+            "abstract": "围绕生物多样性与生态工程中的生物多样性与生态工程整合学习内容，重点理解生物多样性价值、生态工程、生态瓶等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "生物多样性价值",
+                "生态工程",
+                "生态瓶"
+            ],
+            "tags": [
+                "生物多样性价值",
+                "生态工程",
+                "生态瓶"
+            ],
+            "experiments": [
+                "观察与分析：生物多样性价值",
+                "观察与分析：生态工程",
+                "观察与分析：生态瓶"
+            ],
+            "image": "assets/cards/s_x2_m06_biodiversity_ecoengineering.png",
+            "icon": "ListFilter",
+            "engine": "source-html-adapter"
+        }
+    ]
+}

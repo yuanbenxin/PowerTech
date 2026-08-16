@@ -1,0 +1,472 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "j7b",
+        "label": "七年级下册",
+        "stageId": "junior",
+        "stageLabel": "初中",
+        "chapters": [
+            {
+                "id": "j7b-ch1",
+                "title": "人的生殖与发育",
+                "summary": "人类起源、生殖、青春期发育",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "人的生殖",
+                    "青春期",
+                    "胚胎发育基础"
+                ]
+            },
+            {
+                "id": "j7b-ch2",
+                "title": "人体的营养与消化",
+                "summary": "营养物质、消化系统、消化吸收",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "营养物质",
+                    "消化系统",
+                    "唾液消化淀粉",
+                    "吸收过程"
+                ]
+            },
+            {
+                "id": "j7b-ch3",
+                "title": "人体的呼吸",
+                "summary": "呼吸系统、肺泡、气体交换",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "呼吸道",
+                    "肺泡结构",
+                    "气体交换"
+                ]
+            },
+            {
+                "id": "j7b-ch4",
+                "title": "人体内物质运输",
+                "summary": "血液、血管、心脏和血液循环",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "血液组成",
+                    "血管类型",
+                    "心脏结构",
+                    "血液循环",
+                    "小鱼尾鳍血流观察"
+                ]
+            },
+            {
+                "id": "j7b-ch5",
+                "title": "人体废物排出",
+                "summary": "泌尿系统、肾单位、尿液形成",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "泌尿系统",
+                    "肾单位",
+                    "尿液形成"
+                ]
+            },
+            {
+                "id": "j7b-ch6",
+                "title": "神经调节与感觉",
+                "summary": "神经系统、反射、视觉和听觉",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "神经系统",
+                    "反射弧",
+                    "眼和耳"
+                ]
+            },
+            {
+                "id": "j7b-ch7",
+                "title": "激素调节",
+                "summary": "内分泌系统和激素作用",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "激素调节",
+                    "内分泌腺"
+                ]
+            },
+            {
+                "id": "j7b-ch8",
+                "title": "健康、免疫与急救",
+                "summary": "传染病、免疫、用药和急救",
+                "recommendedModes": [
+                    "card",
+                    "interactive",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "免疫",
+                    "传染病",
+                    "安全用药",
+                    "急救基础"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "j7b_m01",
+            "title": "生殖与青春期发育",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch1"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生殖与青春期发育的核心结构、过程与规律",
+            "abstract": "围绕人的生殖与发育中的生殖与青春期发育整合学习内容，重点理解人的生殖与发育、人的生殖、青春期等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "人的生殖与发育",
+                "人的生殖",
+                "青春期",
+                "胚胎发育基础"
+            ],
+            "tags": [
+                "人的生殖",
+                "青春期",
+                "胚胎发育基础",
+                "人的生殖与发育"
+            ],
+            "experiments": [
+                "结构辨识：人的生殖与发育",
+                "过程推演：人的生殖",
+                "规律归纳：青春期"
+            ],
+            "image": "assets/cards/j7b_m01_puberty_reproduction.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m02",
+            "title": "营养与消化吸收",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch2"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦营养与消化吸收的核心结构、过程与规律",
+            "abstract": "围绕人体的营养与消化中的营养与消化吸收整合学习内容，重点理解人体工厂、营养物质、消化系统等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "人体工厂",
+                "营养物质",
+                "消化系统",
+                "唾液消化淀粉"
+            ],
+            "tags": [
+                "营养物质",
+                "消化系统",
+                "唾液消化淀粉",
+                "吸收过程"
+            ],
+            "experiments": [
+                "观察与分析：人体工厂",
+                "观察与分析：营养物质",
+                "观察与分析：消化系统"
+            ],
+            "image": "assets/cards/j7b_m02_digestion_absorption.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m03",
+            "title": "呼吸系统与气体交换",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch3"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦呼吸系统与气体交换的核心结构、过程与规律",
+            "abstract": "围绕人体的呼吸中的呼吸系统与气体交换整合学习内容，重点理解呼吸道、肺泡结构、气体交换等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "呼吸道",
+                "肺泡结构",
+                "气体交换"
+            ],
+            "tags": [
+                "呼吸道",
+                "肺泡结构",
+                "气体交换"
+            ],
+            "experiments": [
+                "结构辨识：呼吸道",
+                "过程推演：肺泡结构",
+                "规律归纳：气体交换"
+            ],
+            "image": "assets/cards/j7b_m03_respiratory_gas_exchange.png",
+            "icon": "Heart",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m04",
+            "title": "血液与血管",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch4"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦血液与血管的核心结构、过程与规律",
+            "abstract": "围绕人体内物质运输中的血液与血管整合学习内容，重点理解血液组成、血管类型、心脏结构等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "血液组成",
+                "血管类型",
+                "心脏结构",
+                "血液循环"
+            ],
+            "tags": [
+                "血液组成",
+                "血管类型",
+                "心脏结构",
+                "血液循环"
+            ],
+            "experiments": [
+                "观察与分析：血液组成",
+                "观察与分析：血管类型",
+                "观察与分析：心脏结构"
+            ],
+            "image": "assets/cards/j7b_m04_blood_vessels.png",
+            "icon": "Heart",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m05",
+            "title": "心脏与血液循环",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch4"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦心脏与血液循环的核心结构、过程与规律",
+            "abstract": "围绕人体内物质运输中的心脏与血液循环整合学习内容，重点理解心脏结构、血液循环、小鱼尾鳍血流观察等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "心脏结构",
+                "血液循环",
+                "小鱼尾鳍血流观察",
+                "血液组成"
+            ],
+            "tags": [
+                "血液组成",
+                "血管类型",
+                "心脏结构",
+                "血液循环"
+            ],
+            "experiments": [
+                "小鱼尾鳍血流观察"
+            ],
+            "image": "assets/cards/j7b_m05_heart_circulation.png",
+            "icon": "Heart",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m06",
+            "title": "泌尿系统与尿液形成",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch5"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦泌尿系统与尿液形成的核心结构、过程与规律",
+            "abstract": "围绕人体废物排出中的泌尿系统与尿液形成整合学习内容，重点理解人体废物排出、泌尿系统、肾单位等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "人体废物排出",
+                "泌尿系统",
+                "肾单位",
+                "尿液形成"
+            ],
+            "tags": [
+                "泌尿系统",
+                "肾单位",
+                "尿液形成",
+                "人体废物排出"
+            ],
+            "experiments": [
+                "结构辨识：人体废物排出",
+                "过程推演：泌尿系统",
+                "规律归纳：肾单位"
+            ],
+            "image": "assets/cards/j7b_m06_urinary_nephron.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m07",
+            "title": "神经系统与反射感觉",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch6"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦神经系统与反射感觉的核心结构、过程与规律",
+            "abstract": "围绕神经调节与感觉中的神经系统与反射感觉整合学习内容，重点理解神经调节与感觉、神经系统、反射弧等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "神经调节与感觉",
+                "神经系统",
+                "反射弧",
+                "眼和耳"
+            ],
+            "tags": [
+                "神经系统",
+                "反射弧",
+                "眼和耳",
+                "神经调节与感觉"
+            ],
+            "experiments": [
+                "结构辨识：神经调节与感觉",
+                "过程推演：神经系统",
+                "规律归纳：反射弧"
+            ],
+            "image": "assets/cards/j7b_m07_nervous_reflex_senses.png",
+            "icon": "Zap",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m08",
+            "title": "激素调节",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch7"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦激素调节的核心结构、过程与规律",
+            "abstract": "围绕激素调节中的激素调节整合学习内容，重点理解内分泌腺、激素调节等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "内分泌腺",
+                "激素调节"
+            ],
+            "tags": [
+                "激素调节",
+                "内分泌腺"
+            ],
+            "experiments": [
+                "结构辨识：内分泌腺",
+                "过程推演：激素调节"
+            ],
+            "image": "assets/cards/j7b_m08_endocrine_regulation.png",
+            "icon": "Thermometer",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7b_m09",
+            "title": "免疫与健康急救",
+            "stageId": "junior",
+            "bookId": "j7b",
+            "chapterIds": [
+                "j7b-ch8"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦免疫与健康急救的核心结构、过程与规律",
+            "abstract": "围绕健康、免疫与急救中的免疫与健康急救整合学习内容，重点理解健康与免疫、免疫、传染病等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "健康与免疫",
+                "免疫",
+                "传染病",
+                "安全用药"
+            ],
+            "tags": [
+                "免疫",
+                "传染病",
+                "安全用药",
+                "急救基础"
+            ],
+            "experiments": [
+                "结构辨识：健康与免疫",
+                "过程推演：免疫",
+                "规律归纳：传染病"
+            ],
+            "image": "assets/cards/j7b_m09_immunity_first_aid.png",
+            "icon": "Shield",
+            "engine": "specimen"
+        }
+    ]
+}

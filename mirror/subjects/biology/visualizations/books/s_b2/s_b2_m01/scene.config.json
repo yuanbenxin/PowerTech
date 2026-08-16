@@ -1,0 +1,11 @@
+{
+  "id": "s_b2_m01",
+  "name": "减数分裂与受精",
+  "engine": "dna",
+  "version": "1.0.0",
+  "entry": "meiosis-fertilization-source.bundle.js?v=c57d95b4c99e",
+  "coursewarePanelMode": "scene-controls",
+  "dataFiles": [],
+  "assets": [],
+  "settings": { "showTitle": false, "theme": "dark", "coursewarePanelMode": "scene-controls" }
+}

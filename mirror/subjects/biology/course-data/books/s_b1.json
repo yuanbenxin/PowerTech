@@ -1,0 +1,480 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "s_b1",
+        "label": "必修一",
+        "stageId": "senior",
+        "stageLabel": "高中",
+        "chapters": [
+            {
+                "id": "s_b1-ch1",
+                "title": "从生物圈到细胞",
+                "summary": "生命系统层次和细胞地位",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "生命系统层次",
+                    "细胞学说"
+                ]
+            },
+            {
+                "id": "s_b1-ch2",
+                "title": "细胞中的元素和化合物",
+                "summary": "蛋白质、核酸、糖类、脂质等",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "蛋白质",
+                    "核酸",
+                    "糖类",
+                    "脂质",
+                    "水和无机盐"
+                ]
+            },
+            {
+                "id": "s_b1-ch3",
+                "title": "细胞的基本结构",
+                "summary": "细胞膜、细胞器、细胞核",
+                "recommendedModes": [
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "细胞膜",
+                    "细胞器",
+                    "细胞核",
+                    "叶绿体和线粒体观察"
+                ]
+            },
+            {
+                "id": "s_b1-ch4",
+                "title": "物质跨膜运输",
+                "summary": "扩散、渗透和主动运输",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "lab",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "自由扩散",
+                    "协助扩散",
+                    "主动运输",
+                    "质壁分离与复原"
+                ]
+            },
+            {
+                "id": "s_b1-ch5",
+                "title": "酶与 ATP",
+                "summary": "酶的特性和 ATP 的功能",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "酶活性",
+                    "温度和 pH 影响",
+                    "ATP"
+                ]
+            },
+            {
+                "id": "s_b1-ch6",
+                "title": "细胞呼吸",
+                "summary": "有氧呼吸、无氧呼吸和实验探究",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "细胞呼吸过程",
+                    "酵母菌呼吸探究"
+                ]
+            },
+            {
+                "id": "s_b1-ch7",
+                "title": "光合作用",
+                "summary": "光反应、暗反应和影响因素",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "叶绿体色素提取",
+                    "光合作用过程",
+                    "影响因素"
+                ]
+            },
+            {
+                "id": "s_b1-ch8",
+                "title": "细胞增殖",
+                "summary": "细胞周期和有丝分裂",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "lab",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "细胞周期",
+                    "有丝分裂",
+                    "根尖有丝分裂观察"
+                ]
+            },
+            {
+                "id": "s_b1-ch9",
+                "title": "细胞生命历程",
+                "summary": "分化、衰老、凋亡和癌变",
+                "recommendedModes": [
+                    "card",
+                    "interactive",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "细胞分化",
+                    "细胞衰老",
+                    "细胞凋亡",
+                    "癌变"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "s_b1_m01",
+            "title": "生命系统层次与细胞学说",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch1"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生命系统层次与细胞学说的核心结构、过程与规律",
+            "abstract": "围绕从生物圈到细胞中的生命系统层次与细胞学说整合学习内容，重点理解分子与细胞学说、生命系统层次、细胞学说等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "分子与细胞学说",
+                "生命系统层次",
+                "细胞学说"
+            ],
+            "tags": [
+                "生命系统层次",
+                "细胞学说",
+                "分子与细胞学说"
+            ],
+            "experiments": [
+                "结构辨识：分子与细胞学说",
+                "过程推演：生命系统层次",
+                "规律归纳：细胞学说"
+            ],
+            "image": "assets/cards/s_b1_m01_life_systems_cell_theory.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_b1_m02",
+            "title": "细胞化合物基础",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch2"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦细胞化合物基础的核心结构、过程与规律",
+            "abstract": "围绕细胞中的元素和化合物中的细胞化合物基础整合学习内容，重点理解蛋白质、核酸、糖类等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "蛋白质",
+                "核酸",
+                "糖类",
+                "脂质"
+            ],
+            "tags": [
+                "蛋白质",
+                "核酸",
+                "糖类",
+                "脂质"
+            ],
+            "experiments": [
+                "结构辨识：蛋白质",
+                "过程推演：核酸",
+                "规律归纳：糖类"
+            ],
+            "image": "assets/cards/s_b1_m02_cell_compounds.png",
+            "icon": "Layers",
+            "engine": "molecule"
+        },
+        {
+            "cardId": "s_b1_m03",
+            "title": "细胞结构与细胞器观察",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch3"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦细胞结构与细胞器观察的核心结构、过程与规律",
+            "abstract": "围绕细胞的基本结构中的细胞结构与细胞器观察整合学习内容，重点理解细胞的基本结构、细胞膜、细胞器等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "细胞的基本结构",
+                "细胞膜",
+                "细胞器",
+                "细胞核"
+            ],
+            "tags": [
+                "细胞膜",
+                "细胞器",
+                "细胞核",
+                "叶绿体和线粒体观察"
+            ],
+            "experiments": [
+                "叶绿体和线粒体观察"
+            ],
+            "image": "assets/cards/s_b1_m03_cell_structure_organelles.png",
+            "icon": "Microscope",
+            "engine": "microscope"
+        },
+        {
+            "cardId": "s_b1_m04",
+            "title": "物质跨膜运输",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch4"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦物质跨膜运输的核心结构、过程与规律",
+            "abstract": "围绕物质跨膜运输中的物质跨膜运输整合学习内容，重点理解自由扩散、协助扩散、主动运输等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "自由扩散",
+                "协助扩散",
+                "主动运输",
+                "质壁分离与复原"
+            ],
+            "tags": [
+                "自由扩散",
+                "协助扩散",
+                "主动运输",
+                "质壁分离与复原"
+            ],
+            "experiments": [
+                "质壁分离与复原"
+            ],
+            "image": "assets/cards/s_b1_m04_membrane_transport.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_b1_m05",
+            "title": "酶与 ATP",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch5"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦酶与 ATP的核心结构、过程与规律",
+            "abstract": "围绕酶与 ATP中的酶与 ATP整合学习内容，重点理解酶活性、温度和 pH 影响、ATP等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "酶活性",
+                "温度和 pH 影响",
+                "ATP"
+            ],
+            "tags": [
+                "酶活性",
+                "温度和 pH 影响",
+                "ATP"
+            ],
+            "experiments": [
+                "观察与分析：酶活性",
+                "观察与分析：温度和 pH 影响",
+                "观察与分析：ATP"
+            ],
+            "image": "assets/cards/s_b1_m05_enzyme_atp.png",
+            "icon": "BookOpen",
+            "engine": "molecule"
+        },
+        {
+            "cardId": "s_b1_m06",
+            "title": "细胞呼吸",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch6"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦细胞呼吸的核心结构、过程与规律",
+            "abstract": "围绕细胞呼吸中的细胞呼吸整合学习内容，重点理解能量代谢深度、细胞呼吸过程、酵母菌呼吸探究等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "能量代谢深度",
+                "细胞呼吸过程",
+                "酵母菌呼吸探究"
+            ],
+            "tags": [
+                "细胞呼吸过程",
+                "酵母菌呼吸探究",
+                "能量代谢深度"
+            ],
+            "experiments": [
+                "酵母菌呼吸探究"
+            ],
+            "image": "assets/cards/s_b1_m06_cellular_respiration.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_b1_m07",
+            "title": "光合作用",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch7"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦光合作用的核心结构、过程与规律",
+            "abstract": "围绕光合作用中的光合作用整合学习内容，重点理解光合作用过程、叶绿体色素提取、影响因素等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "光合作用过程",
+                "叶绿体色素提取",
+                "影响因素"
+            ],
+            "tags": [
+                "叶绿体色素提取",
+                "光合作用过程",
+                "影响因素"
+            ],
+            "experiments": [
+                "叶绿体色素提取"
+            ],
+            "image": "assets/cards/s_b1_m07_photosynthesis.png",
+            "icon": "Leaf",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_b1_m08",
+            "title": "细胞增殖",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch8"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦细胞增殖的核心结构、过程与规律",
+            "abstract": "围绕细胞增殖中的细胞增殖整合学习内容，重点理解细胞周期、有丝分裂、根尖有丝分裂观察等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "细胞周期",
+                "有丝分裂",
+                "根尖有丝分裂观察"
+            ],
+            "tags": [
+                "细胞周期",
+                "有丝分裂",
+                "根尖有丝分裂观察"
+            ],
+            "experiments": [
+                "根尖有丝分裂观察"
+            ],
+            "image": "assets/cards/s_b1_m08_cell_proliferation.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_b1_m09",
+            "title": "细胞生命历程",
+            "stageId": "senior",
+            "bookId": "s_b1",
+            "chapterIds": [
+                "s_b1-ch9"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦细胞生命历程的核心结构、过程与规律",
+            "abstract": "围绕细胞生命历程中的细胞生命历程整合学习内容，重点理解细胞分化、细胞衰老、细胞凋亡等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "细胞分化",
+                "细胞衰老",
+                "细胞凋亡",
+                "癌变"
+            ],
+            "tags": [
+                "细胞分化",
+                "细胞衰老",
+                "细胞凋亡",
+                "癌变"
+            ],
+            "experiments": [
+                "结构辨识：细胞分化",
+                "过程推演：细胞衰老",
+                "规律归纳：细胞凋亡"
+            ],
+            "image": "assets/cards/s_b1_m09_cell_life_process.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        }
+    ]
+}

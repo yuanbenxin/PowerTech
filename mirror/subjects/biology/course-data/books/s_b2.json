@@ -1,0 +1,480 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "s_b2",
+        "label": "必修二",
+        "stageId": "senior",
+        "stageLabel": "高中",
+        "chapters": [
+            {
+                "id": "s_b2-ch1",
+                "title": "减数分裂与受精作用",
+                "summary": "减数分裂阶段和染色体行为",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "lab",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "减数分裂",
+                    "受精作用",
+                    "蝗虫精母细胞装片"
+                ]
+            },
+            {
+                "id": "s_b2-ch2",
+                "title": "孟德尔遗传规律",
+                "summary": "分离定律和自由组合定律",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "分离定律",
+                    "自由组合定律",
+                    "性状分离比模拟"
+                ]
+            },
+            {
+                "id": "s_b2-ch3",
+                "title": "伴性遗传",
+                "summary": "性染色体和伴性遗传规律",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "伴性遗传",
+                    "家系分析"
+                ]
+            },
+            {
+                "id": "s_b2-ch4",
+                "title": "DNA 是主要遗传物质",
+                "summary": "肺炎链球菌转化和噬菌体实验",
+                "recommendedModes": [
+                    "lab",
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "格里菲思实验",
+                    "艾弗里实验",
+                    "噬菌体侵染实验"
+                ]
+            },
+            {
+                "id": "s_b2-ch5",
+                "title": "DNA 结构与复制",
+                "summary": "双螺旋结构和半保留复制",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "DNA 双螺旋",
+                    "碱基互补配对",
+                    "DNA 复制"
+                ]
+            },
+            {
+                "id": "s_b2-ch6",
+                "title": "基因表达",
+                "summary": "转录、翻译和基因控制性状",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "转录",
+                    "翻译",
+                    "中心法则",
+                    "表观遗传"
+                ]
+            },
+            {
+                "id": "s_b2-ch7",
+                "title": "变异",
+                "summary": "基因突变、基因重组和染色体变异",
+                "recommendedModes": [
+                    "card",
+                    "interactive",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "基因突变",
+                    "基因重组",
+                    "染色体变异"
+                ]
+            },
+            {
+                "id": "s_b2-ch8",
+                "title": "育种",
+                "summary": "杂交育种、诱变育种和生物技术育种",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "杂交育种",
+                    "诱变育种",
+                    "单倍体育种",
+                    "多倍体育种"
+                ]
+            },
+            {
+                "id": "s_b2-ch9",
+                "title": "现代生物进化理论",
+                "summary": "种群、基因频率、选择和物种形成",
+                "recommendedModes": [
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "种群基因频率",
+                    "自然选择",
+                    "隔离与物种形成"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "s_b2_m01",
+            "title": "减数分裂与受精",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch1"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦减数分裂与受精的核心结构、过程与规律",
+            "abstract": "围绕减数分裂与受精作用中的减数分裂与受精整合学习内容，重点理解减数分裂、受精作用、蝗虫精母细胞装片等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "减数分裂",
+                "受精作用",
+                "蝗虫精母细胞装片"
+            ],
+            "tags": [
+                "减数分裂",
+                "受精作用",
+                "蝗虫精母细胞装片"
+            ],
+            "experiments": [
+                "蝗虫精母细胞装片"
+            ],
+            "image": "assets/cards/s_b2_m01_meiosis_fertilization.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m02",
+            "title": "孟德尔遗传规律",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch2"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦孟德尔遗传规律的核心结构、过程与规律",
+            "abstract": "围绕孟德尔遗传规律中的孟德尔遗传规律整合学习内容，重点理解孟德尔遗传定律、分离定律、自由组合定律等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "孟德尔遗传定律",
+                "分离定律",
+                "自由组合定律",
+                "性状分离比模拟"
+            ],
+            "tags": [
+                "分离定律",
+                "自由组合定律",
+                "性状分离比模拟",
+                "孟德尔遗传定律"
+            ],
+            "experiments": [
+                "分离定律",
+                "性状分离比模拟"
+            ],
+            "image": "assets/cards/s_b2_m02_mendelian_inheritance.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m03",
+            "title": "伴性遗传与家系分析",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch3"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦伴性遗传与家系分析的核心结构、过程与规律",
+            "abstract": "围绕伴性遗传中的伴性遗传与家系分析整合学习内容，重点理解伴性遗传、家系分析等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "伴性遗传",
+                "家系分析"
+            ],
+            "tags": [
+                "伴性遗传",
+                "家系分析"
+            ],
+            "experiments": [
+                "结构辨识：伴性遗传",
+                "过程推演：家系分析"
+            ],
+            "image": "assets/cards/s_b2_m03_sex_linkage_pedigree.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m04",
+            "title": "遗传物质证据实验",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch4"
+            ],
+            "contentModes": [
+                "lab",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦遗传物质证据实验的核心结构、过程与规律",
+            "abstract": "围绕DNA 是主要遗传物质中的遗传物质证据实验整合学习内容，重点理解基因的本质与表达、格里菲思实验、艾弗里实验等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "基因的本质与表达",
+                "格里菲思实验",
+                "艾弗里实验",
+                "噬菌体侵染实验"
+            ],
+            "tags": [
+                "格里菲思实验",
+                "艾弗里实验",
+                "噬菌体侵染实验",
+                "基因的本质与表达"
+            ],
+            "experiments": [
+                "格里菲思实验",
+                "艾弗里实验",
+                "噬菌体侵染实验"
+            ],
+            "image": "assets/cards/s_b2_m04_genetic_material_evidence.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m05",
+            "title": "DNA 结构与复制",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch5"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦DNA 结构与复制的核心结构、过程与规律",
+            "abstract": "围绕DNA 结构与复制中的DNA 结构与复制整合学习内容，重点理解DNA 双螺旋、碱基互补配对、DNA 复制等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "DNA 双螺旋",
+                "碱基互补配对",
+                "DNA 复制"
+            ],
+            "tags": [
+                "DNA 双螺旋",
+                "碱基互补配对",
+                "DNA 复制"
+            ],
+            "experiments": [
+                "结构辨识：DNA 双螺旋",
+                "过程推演：碱基互补配对",
+                "规律归纳：DNA 复制"
+            ],
+            "image": "assets/cards/s_b2_m05_dna_structure_replication.png",
+            "icon": "Layers",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m06",
+            "title": "基因表达",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch6"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦基因表达的核心结构、过程与规律",
+            "abstract": "围绕基因表达中的基因表达整合学习内容，重点理解转录、翻译、中心法则等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "转录",
+                "翻译",
+                "中心法则",
+                "表观遗传"
+            ],
+            "tags": [
+                "转录",
+                "翻译",
+                "中心法则",
+                "表观遗传"
+            ],
+            "experiments": [
+                "结构辨识：转录",
+                "过程推演：翻译",
+                "规律归纳：中心法则"
+            ],
+            "image": "assets/cards/s_b2_m06_gene_expression.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m07",
+            "title": "变异",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch7"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦变异的核心结构、过程与规律",
+            "abstract": "围绕变异中的变异整合学习内容，重点理解基因突变、基因重组、染色体变异等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "基因突变",
+                "基因重组",
+                "染色体变异"
+            ],
+            "tags": [
+                "基因突变",
+                "基因重组",
+                "染色体变异"
+            ],
+            "experiments": [
+                "结构辨识：基因突变",
+                "过程推演：基因重组",
+                "规律归纳：染色体变异"
+            ],
+            "image": "assets/cards/s_b2_m07_genetic_variation.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m08",
+            "title": "育种",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch8"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦育种的核心结构、过程与规律",
+            "abstract": "围绕育种中的育种整合学习内容，重点理解杂交育种、诱变育种、单倍体育种等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "杂交育种",
+                "诱变育种",
+                "单倍体育种",
+                "多倍体育种"
+            ],
+            "tags": [
+                "杂交育种",
+                "诱变育种",
+                "单倍体育种",
+                "多倍体育种"
+            ],
+            "experiments": [
+                "结构辨识：杂交育种",
+                "过程推演：诱变育种",
+                "规律归纳：单倍体育种"
+            ],
+            "image": "assets/cards/s_b2_m08_breeding_improvement.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_b2_m09",
+            "title": "现代生物进化理论",
+            "stageId": "senior",
+            "bookId": "s_b2",
+            "chapterIds": [
+                "s_b2-ch9"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦现代生物进化理论的核心结构、过程与规律",
+            "abstract": "围绕现代生物进化理论中的现代生物进化理论整合学习内容，重点理解现代进化理论、种群基因频率、自然选择等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "现代进化理论",
+                "种群基因频率",
+                "自然选择",
+                "隔离与物种形成"
+            ],
+            "tags": [
+                "种群基因频率",
+                "自然选择",
+                "隔离与物种形成",
+                "现代进化理论"
+            ],
+            "experiments": [
+                "结构辨识：现代进化理论",
+                "过程推演：种群基因频率",
+                "规律归纳：自然选择"
+            ],
+            "image": "assets/cards/s_b2_m09_modern_evolution_theory.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        }
+    ]
+}

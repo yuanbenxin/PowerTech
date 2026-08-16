@@ -1,0 +1,419 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "j8a",
+        "label": "八年级上册",
+        "stageId": "junior",
+        "stageLabel": "初中",
+        "chapters": [
+            {
+                "id": "j8a-ch1",
+                "title": "植物类群",
+                "summary": "藻类、苔藓、蕨类和种子植物",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "藻类植物",
+                    "苔藓植物",
+                    "蕨类植物",
+                    "种子植物"
+                ]
+            },
+            {
+                "id": "j8a-ch2",
+                "title": "动物类群",
+                "summary": "无脊椎和脊椎动物比较",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "节肢动物",
+                    "鱼类",
+                    "两栖类",
+                    "鸟类",
+                    "哺乳类"
+                ]
+            },
+            {
+                "id": "j8a-ch3",
+                "title": "动物的运动与行为",
+                "summary": "关节、运动系统、行为类型",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "card"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "关节结构",
+                    "运动系统",
+                    "先天性行为",
+                    "学习行为",
+                    "社会行为"
+                ]
+            },
+            {
+                "id": "j8a-ch4",
+                "title": "细菌",
+                "summary": "细菌结构、繁殖和分布",
+                "recommendedModes": [
+                    "lab",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "细菌结构",
+                    "细菌繁殖",
+                    "环境中的细菌"
+                ]
+            },
+            {
+                "id": "j8a-ch5",
+                "title": "真菌",
+                "summary": "真菌结构、孢子和应用",
+                "recommendedModes": [
+                    "lab",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "真菌结构",
+                    "霉菌和蘑菇",
+                    "发酵中的真菌"
+                ]
+            },
+            {
+                "id": "j8a-ch6",
+                "title": "病毒",
+                "summary": "病毒结构和生活方式",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "C",
+                "sampleTopics": [
+                    "病毒结构",
+                    "寄生方式"
+                ]
+            },
+            {
+                "id": "j8a-ch7",
+                "title": "生物分类",
+                "summary": "分类等级和检索思路",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "C",
+                "sampleTopics": [
+                    "从种到界",
+                    "检索表",
+                    "分类依据"
+                ]
+            },
+            {
+                "id": "j8a-ch8",
+                "title": "生物多样性",
+                "summary": "多样性的表现和价值",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "C",
+                "sampleTopics": [
+                    "遗传多样性",
+                    "物种多样性",
+                    "生态系统多样性"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "j8a_m01",
+            "title": "植物类群演化",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch1"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦植物类群演化的核心结构、过程与规律",
+            "abstract": "围绕植物类群中的植物类群演化整合学习内容，重点理解植物类群、藻类植物、苔藓植物等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "植物类群",
+                "藻类植物",
+                "苔藓植物",
+                "蕨类植物"
+            ],
+            "tags": [
+                "藻类植物",
+                "苔藓植物",
+                "蕨类植物",
+                "种子植物"
+            ],
+            "experiments": [
+                "结构辨识：植物类群",
+                "过程推演：藻类植物",
+                "规律归纳：苔藓植物"
+            ],
+            "image": "assets/cards/j8a_m01_plant_groups_evolution.png",
+            "icon": "Leaf",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8a_m02",
+            "title": "动物类群",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch2"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦动物类群的核心结构、过程与规律",
+            "abstract": "围绕动物类群中的动物类群整合学习内容，重点理解节肢动物、鱼类、两栖类等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "节肢动物",
+                "鱼类",
+                "两栖类",
+                "鸟类"
+            ],
+            "tags": [
+                "节肢动物",
+                "鱼类",
+                "两栖类",
+                "鸟类"
+            ],
+            "experiments": [
+                "结构辨识：节肢动物",
+                "过程推演：鱼类",
+                "规律归纳：两栖类"
+            ],
+            "image": "assets/cards/j8a_m02_animal_groups.png",
+            "icon": "PawPrint",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8a_m03",
+            "title": "动物运动与行为",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch3"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦动物运动与行为的核心结构、过程与规律",
+            "abstract": "围绕动物的运动与行为中的动物运动与行为整合学习内容，重点理解动物行为、运动系统、关节结构等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "动物行为",
+                "运动系统",
+                "关节结构",
+                "先天性行为"
+            ],
+            "tags": [
+                "关节结构",
+                "运动系统",
+                "先天性行为",
+                "学习行为"
+            ],
+            "experiments": [
+                "结构辨识：动物行为",
+                "过程推演：运动系统",
+                "规律归纳：关节结构"
+            ],
+            "image": "assets/cards/j8a_m03_animal_motion_behavior.png",
+            "icon": "PawPrint",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8a_m04",
+            "title": "细菌",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch4"
+            ],
+            "contentModes": [
+                "lab",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦细菌的核心结构、过程与规律",
+            "abstract": "围绕细菌中的细菌整合学习内容，重点理解微生物世界、细菌结构、细菌繁殖等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "微生物世界",
+                "细菌结构",
+                "细菌繁殖",
+                "环境中的细菌"
+            ],
+            "tags": [
+                "细菌结构",
+                "细菌繁殖",
+                "环境中的细菌",
+                "微生物世界"
+            ],
+            "experiments": [
+                "观察与分析：微生物世界",
+                "观察与分析：细菌结构",
+                "观察与分析：细菌繁殖"
+            ],
+            "image": "assets/cards/j8a_m04_bacteria.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8a_m05",
+            "title": "真菌",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch5"
+            ],
+            "contentModes": [
+                "lab",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦真菌的核心结构、过程与规律",
+            "abstract": "围绕真菌中的真菌整合学习内容，重点理解真菌结构、霉菌和蘑菇、发酵中的真菌等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "真菌结构",
+                "霉菌和蘑菇",
+                "发酵中的真菌"
+            ],
+            "tags": [
+                "真菌结构",
+                "霉菌和蘑菇",
+                "发酵中的真菌"
+            ],
+            "experiments": [
+                "发酵中的真菌"
+            ],
+            "image": "assets/cards/j8a_m05_fungi.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8a_m06",
+            "title": "病毒",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch6"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦病毒的核心结构、过程与规律",
+            "abstract": "围绕病毒中的病毒整合学习内容，重点理解病毒结构、寄生方式等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "病毒结构",
+                "寄生方式"
+            ],
+            "tags": [
+                "病毒结构",
+                "寄生方式"
+            ],
+            "experiments": [
+                "结构辨识：病毒结构",
+                "过程推演：寄生方式"
+            ],
+            "image": "assets/cards/j8a_m06_virus.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8a_m07",
+            "title": "生物分类",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch7"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦生物分类的核心结构、过程与规律",
+            "abstract": "围绕生物分类中的生物分类整合学习内容，重点理解从种到界、检索表、分类依据等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "从种到界",
+                "检索表",
+                "分类依据"
+            ],
+            "tags": [
+                "从种到界",
+                "检索表",
+                "分类依据"
+            ],
+            "experiments": [
+                "结构辨识：从种到界",
+                "过程推演：检索表",
+                "规律归纳：分类依据"
+            ],
+            "image": "assets/cards/j8a_m07_biological_classification.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8a_m08",
+            "title": "生物多样性",
+            "stageId": "junior",
+            "bookId": "j8a",
+            "chapterIds": [
+                "j8a-ch8"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦生物多样性的核心结构、过程与规律",
+            "abstract": "围绕生物多样性中的生物多样性整合学习内容，重点理解遗传多样性、物种多样性、生态系统多样性等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "遗传多样性",
+                "物种多样性",
+                "生态系统多样性"
+            ],
+            "tags": [
+                "遗传多样性",
+                "物种多样性",
+                "生态系统多样性"
+            ],
+            "experiments": [
+                "结构辨识：遗传多样性",
+                "过程推演：物种多样性",
+                "规律归纳：生态系统多样性"
+            ],
+            "image": "assets/cards/j8a_m08_biodiversity.png",
+            "icon": "ListFilter",
+            "engine": "specimen"
+        }
+    ]
+}

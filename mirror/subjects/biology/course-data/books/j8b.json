@@ -1,0 +1,472 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "j8b",
+        "label": "八年级下册",
+        "stageId": "junior",
+        "stageLabel": "初中",
+        "chapters": [
+            {
+                "id": "j8b-ch1",
+                "title": "无性生殖",
+                "summary": "分裂、出芽、嫁接和扦插",
+                "recommendedModes": [
+                    "lab",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "嫁接",
+                    "扦插",
+                    "无性生殖特点"
+                ]
+            },
+            {
+                "id": "j8b-ch2",
+                "title": "有性生殖与发育",
+                "summary": "植物和动物的有性生殖及发育",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "传粉受精",
+                    "昆虫发育",
+                    "两栖动物发育",
+                    "鸟卵结构"
+                ]
+            },
+            {
+                "id": "j8b-ch3",
+                "title": "遗传现象",
+                "summary": "染色体、DNA、基因和性状",
+                "recommendedModes": [
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "染色体",
+                    "DNA",
+                    "基因",
+                    "性状与遗传"
+                ]
+            },
+            {
+                "id": "j8b-ch4",
+                "title": "变异现象",
+                "summary": "可遗传变异和不可遗传变异",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "变异类型",
+                    "环境影响"
+                ]
+            },
+            {
+                "id": "j8b-ch5",
+                "title": "生命起源",
+                "summary": "生命起源相关观点和证据",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "C",
+                "sampleTopics": [
+                    "生命起源假说",
+                    "化学进化"
+                ]
+            },
+            {
+                "id": "j8b-ch6",
+                "title": "生物进化",
+                "summary": "进化证据和自然选择",
+                "recommendedModes": [
+                    "card",
+                    "interactive",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "化石证据",
+                    "自然选择",
+                    "进化趋势"
+                ]
+            },
+            {
+                "id": "j8b-ch7",
+                "title": "生态系统与环境",
+                "summary": "生态系统、食物链和环境影响",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "生态系统组成",
+                    "食物链",
+                    "食物网",
+                    "生态平衡"
+                ]
+            },
+            {
+                "id": "j8b-ch8",
+                "title": "生物多样性保护",
+                "summary": "保护意义和基本措施",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "C",
+                "sampleTopics": [
+                    "保护生物多样性",
+                    "就地保护",
+                    "迁地保护"
+                ]
+            },
+            {
+                "id": "j8b-ch9",
+                "title": "生态安全与可持续发展",
+                "summary": "人类活动和生态安全",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "C",
+                "sampleTopics": [
+                    "环境污染",
+                    "生态安全",
+                    "可持续发展"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "j8b_m01",
+            "title": "无性生殖",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch1"
+            ],
+            "contentModes": [
+                "lab",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦无性生殖的核心结构、过程与规律",
+            "abstract": "围绕无性生殖中的无性生殖整合学习内容，重点理解嫁接、扦插、无性生殖特点等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "嫁接",
+                "扦插",
+                "无性生殖特点"
+            ],
+            "tags": [
+                "嫁接",
+                "扦插",
+                "无性生殖特点"
+            ],
+            "experiments": [
+                "观察与分析：嫁接",
+                "观察与分析：扦插",
+                "观察与分析：无性生殖特点"
+            ],
+            "image": "assets/cards/j8b_m01_asexual_reproduction.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8b_m02",
+            "title": "有性生殖与动物发育",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch2"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦有性生殖与动物发育的核心结构、过程与规律",
+            "abstract": "围绕有性生殖与发育中的有性生殖与动物发育整合学习内容，重点理解生命的延续、传粉受精、昆虫发育等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "生命的延续",
+                "传粉受精",
+                "昆虫发育",
+                "两栖动物发育"
+            ],
+            "tags": [
+                "传粉受精",
+                "昆虫发育",
+                "两栖动物发育",
+                "鸟卵结构"
+            ],
+            "experiments": [
+                "观察与分析：生命的延续",
+                "观察与分析：传粉受精",
+                "观察与分析：昆虫发育"
+            ],
+            "image": "assets/cards/j8b_m02_sexual_reproduction_development.png",
+            "icon": "PawPrint",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8b_m03",
+            "title": "遗传物质与性状遗传",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch3"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦遗传物质与性状遗传的核心结构、过程与规律",
+            "abstract": "围绕遗传现象中的遗传物质与性状遗传整合学习内容，重点理解遗传现象、DNA、基因等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "遗传现象",
+                "DNA",
+                "基因",
+                "染色体"
+            ],
+            "tags": [
+                "染色体",
+                "DNA",
+                "基因",
+                "性状与遗传"
+            ],
+            "experiments": [
+                "结构辨识：遗传现象",
+                "过程推演：DNA",
+                "规律归纳：基因"
+            ],
+            "image": "assets/cards/j8b_m03_genetic_material_inheritance.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "j8b_m04",
+            "title": "变异现象",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch4"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦变异现象的核心结构、过程与规律",
+            "abstract": "围绕变异现象中的变异现象整合学习内容，重点理解变异类型、环境影响等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "变异类型",
+                "环境影响"
+            ],
+            "tags": [
+                "变异类型",
+                "环境影响"
+            ],
+            "experiments": [
+                "结构辨识：变异类型",
+                "过程推演：环境影响"
+            ],
+            "image": "assets/cards/j8b_m04_biological_variation.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "j8b_m05",
+            "title": "生命起源",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch5"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生命起源的核心结构、过程与规律",
+            "abstract": "围绕生命起源中的生命起源整合学习内容，重点理解生命起源假说、化学进化等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "生命起源假说",
+                "化学进化"
+            ],
+            "tags": [
+                "生命起源假说",
+                "化学进化"
+            ],
+            "experiments": [
+                "结构辨识：生命起源假说",
+                "过程推演：化学进化"
+            ],
+            "image": "assets/cards/j8b_m05_origin_of_life.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8b_m06",
+            "title": "生物进化与自然选择",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch6"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生物进化与自然选择的核心结构、过程与规律",
+            "abstract": "围绕生物进化中的生物进化与自然选择整合学习内容，重点理解生物进化、化石证据、自然选择等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "生物进化",
+                "化石证据",
+                "自然选择",
+                "进化趋势"
+            ],
+            "tags": [
+                "化石证据",
+                "自然选择",
+                "进化趋势",
+                "生物进化"
+            ],
+            "experiments": [
+                "结构辨识：生物进化",
+                "过程推演：化石证据",
+                "规律归纳：自然选择"
+            ],
+            "image": "assets/cards/j8b_m06_evolution_natural_selection.png",
+            "icon": "BookOpen",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8b_m07",
+            "title": "生态系统与生态平衡",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch7"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生态系统与生态平衡的核心结构、过程与规律",
+            "abstract": "围绕生态系统与环境中的生态系统与生态平衡整合学习内容，重点理解生物圈保护、生态系统组成、食物链等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "生物圈保护",
+                "生态系统组成",
+                "食物链",
+                "食物网"
+            ],
+            "tags": [
+                "生态系统组成",
+                "食物链",
+                "食物网",
+                "生态平衡"
+            ],
+            "experiments": [
+                "结构辨识：生物圈保护",
+                "过程推演：生态系统组成",
+                "规律归纳：食物链"
+            ],
+            "image": "assets/cards/j8b_m07_ecosystem_balance.png",
+            "icon": "ListFilter",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8b_m08",
+            "title": "生物多样性保护",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch8"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦生物多样性保护的核心结构、过程与规律",
+            "abstract": "围绕生物多样性保护中的生物多样性保护整合学习内容，重点理解保护生物多样性、就地保护、迁地保护等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "保护生物多样性",
+                "就地保护",
+                "迁地保护"
+            ],
+            "tags": [
+                "保护生物多样性",
+                "就地保护",
+                "迁地保护"
+            ],
+            "experiments": [
+                "结构辨识：保护生物多样性",
+                "过程推演：就地保护",
+                "规律归纳：迁地保护"
+            ],
+            "image": "assets/cards/j8b_m08_biodiversity_conservation.png",
+            "icon": "ListFilter",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j8b_m09",
+            "title": "生态安全与可持续发展",
+            "stageId": "junior",
+            "bookId": "j8b",
+            "chapterIds": [
+                "j8b-ch9"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦生态安全与可持续发展的核心结构、过程与规律",
+            "abstract": "围绕生态安全与可持续发展中的生态安全与可持续发展整合学习内容，重点理解环境污染、生态安全、可持续发展等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "环境污染",
+                "生态安全",
+                "可持续发展"
+            ],
+            "tags": [
+                "环境污染",
+                "生态安全",
+                "可持续发展"
+            ],
+            "experiments": [
+                "结构辨识：环境污染",
+                "过程推演：生态安全",
+                "规律归纳：可持续发展"
+            ],
+            "image": "assets/cards/j8b_m09_ecological_sustainability.png",
+            "icon": "Shield",
+            "engine": "specimen"
+        }
+    ]
+}

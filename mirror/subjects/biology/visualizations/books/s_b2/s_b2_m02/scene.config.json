@@ -1,0 +1,33 @@
+{
+  "cardId": "s_b2_m02",
+  "status": "ready",
+  "engine": "dna",
+  "entry": "scene.js?v=536d8890b676",
+  "assetsDir": "assets",
+  "cameraPreset": "lab-view",
+  "interactionMode": "mendelian-cross",
+  "coursewarePanelMode": "scene-controls",
+  "labels": [
+    "孟德尔遗传规律",
+    "分离定律",
+    "自由组合定律",
+    "配子",
+    "棋盘格",
+    "表现型比例"
+  ],
+  "steps": [
+    {
+      "id": "step1",
+      "title": "选择一对或两对相对性状，并设置亲本基因型。"
+    },
+    {
+      "id": "step2",
+      "title": "模拟减数分裂产生配子，观察等位基因分离与非等位基因自由组合。"
+    },
+    {
+      "id": "step3",
+      "title": "通过棋盘格随机组合配子，统计子代表现型比例。"
+    }
+  ],
+  "notes": "孟德尔遗传规律交互课件。统一布局为左侧模拟框、右侧操作面板；保留参考文档中的配子生成、棋盘格组合和比例统计教学逻辑。"
+}

@@ -1,0 +1,25 @@
+{
+  "cardId": "s_x3_m07",
+  "status": "ready",
+  "engine": "dna",
+  "entry": "scene.js?v=553e77809aa6",
+  "assetsDir": "assets",
+  "cameraPreset": "lab-simulator",
+  "interactionMode": "pcr-cycle",
+  "coursewarePanelMode": "scene-controls",
+  "labels": [
+    "PCR 扩增模拟",
+    "变性 95°C",
+    "退火 55°C",
+    "延伸 72°C",
+    "引物结合",
+    "目标片段"
+  ],
+  "steps": [
+    "变性：高温使双链 DNA 分离为单链模板。",
+    "退火：引物按碱基互补配对原则结合到模板特定位点。",
+    "延伸：Taq 酶从引物 3' 端开始合成新链。",
+    "循环：上一轮产生的每条链都会进入下一轮，目标片段逐步积累。"
+  ],
+  "notes": "PCR 扩增动态追踪课件。布局固定为左侧模拟框、右侧操作面板。"
+}

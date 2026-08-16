@@ -1,0 +1,13 @@
+{
+  "cardId": "card_id_here",
+  "status": "todo",
+  "engine": "specimen",
+  "entry": "scene.js",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "cameraPreset": "focus-object",
+  "interactionMode": "step",
+  "labels": [],
+  "steps": [],
+  "notes": ""
+}

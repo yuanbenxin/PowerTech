@@ -1,0 +1,32 @@
+{
+  "cardId": "s_x3_m09",
+  "status": "ready",
+  "engine": "canvas",
+  "entry": "scene.js?v=4212ea15c156",
+  "assetsDir": "assets",
+  "cameraPreset": "gel-electrophoresis-canvas",
+  "interactionMode": "gel-electrophoresis",
+  "coursewarePanelMode": "scene-controls",
+  "labels": [
+    "DNA 凝胶电泳",
+    "琼脂糖凝胶",
+    "加样孔",
+    "DNA 带负电",
+    "向正极迁移",
+    "分子筛效应",
+    "Marker",
+    "待检样品",
+    "阴性对照",
+    "阳性对照",
+    "条带判读",
+    "荧光成像"
+  ],
+  "steps": [
+    "原理：DNA 磷酸骨架带负电，在电场中向正极迁移。",
+    "制胶与点样：琼脂糖凝胶形成网孔，样品进入加样孔。",
+    "通电跑胶：凝胶产生分子筛效应，小片段迁移更远。",
+    "染色成像：核酸染料结合 DNA 后显示荧光条带。",
+    "结果判读：用 Marker、阴性对照和阳性对照判断样品结果。"
+  ],
+  "notes": "DNA 凝胶电泳动态课件。统一布局为左侧模拟框、右侧操作面板；覆盖电泳原理、点样、迁移规律、荧光成像和条带判读。"
+}

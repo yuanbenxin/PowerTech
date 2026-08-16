@@ -1,0 +1,477 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "s_x3",
+        "label": "选择性必修三",
+        "stageId": "senior",
+        "stageLabel": "高中",
+        "chapters": [
+            {
+                "id": "s_x3-ch1",
+                "title": "微生物培养与分离",
+                "summary": "无菌技术、培养基和分离方法",
+                "recommendedModes": [
+                    "lab",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "无菌技术",
+                    "培养基",
+                    "平板划线",
+                    "菌落计数"
+                ]
+            },
+            {
+                "id": "s_x3-ch2",
+                "title": "发酵工程",
+                "summary": "传统发酵和工业发酵流程",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "传统发酵",
+                    "发酵罐",
+                    "发酵工程流程"
+                ]
+            },
+            {
+                "id": "s_x3-ch3",
+                "title": "植物细胞工程",
+                "summary": "植物组织培养和体细胞杂交",
+                "recommendedModes": [
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "组织培养",
+                    "脱分化",
+                    "再分化",
+                    "体细胞杂交"
+                ]
+            },
+            {
+                "id": "s_x3-ch4",
+                "title": "动物细胞工程",
+                "summary": "动物细胞培养、融合和单克隆抗体",
+                "recommendedModes": [
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "动物细胞培养",
+                    "细胞融合",
+                    "单克隆抗体"
+                ]
+            },
+            {
+                "id": "s_x3-ch5",
+                "title": "胚胎工程",
+                "summary": "核移植、胚胎分割和试管婴儿",
+                "recommendedModes": [
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "核移植",
+                    "胚胎分割",
+                    "试管婴儿"
+                ]
+            },
+            {
+                "id": "s_x3-ch6",
+                "title": "基因工程",
+                "summary": "工具酶、载体和流程",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "限制酶",
+                    "连接酶",
+                    "载体",
+                    "基因工程流程"
+                ]
+            },
+            {
+                "id": "s_x3-ch7",
+                "title": "PCR 与 DNA 检测",
+                "summary": "DNA 粗提取、PCR 扩增和电泳",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "DNA 粗提取",
+                    "PCR",
+                    "电泳"
+                ]
+            },
+            {
+                "id": "s_x3-ch8",
+                "title": "生物技术安全与伦理",
+                "summary": "转基因、克隆和伦理问题",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "C",
+                "sampleTopics": [
+                    "转基因安全",
+                    "克隆伦理",
+                    "生物技术规范"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "s_x3_m01",
+            "title": "微生物培养与分离",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch1"
+            ],
+            "contentModes": [
+                "lab",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦微生物培养与分离的核心结构、过程与规律",
+            "abstract": "围绕微生物培养与分离中的微生物培养与分离整合学习内容，重点理解无菌技术、培养基、平板划线等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "无菌技术",
+                "培养基",
+                "平板划线",
+                "菌落计数"
+            ],
+            "tags": [
+                "无菌技术",
+                "培养基",
+                "平板划线",
+                "菌落计数"
+            ],
+            "experiments": [
+                "微生物培养与分离",
+                "培养基",
+                "平板划线",
+                "菌落计数"
+            ],
+            "image": "assets/cards/s_x3_m01_microbe_culture_isolation.png",
+            "icon": "Microscope",
+            "engine": "microscope"
+        },
+        {
+            "cardId": "s_x3_m02",
+            "title": "发酵工程",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch2"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦发酵工程的核心结构、过程与规律",
+            "abstract": "围绕发酵工程中的发酵工程整合学习内容，重点理解现代生物科技、传统发酵、发酵罐等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "现代生物科技",
+                "传统发酵",
+                "发酵罐",
+                "发酵工程流程"
+            ],
+            "tags": [
+                "传统发酵",
+                "发酵罐",
+                "发酵工程流程",
+                "现代生物科技"
+            ],
+            "experiments": [
+                "传统发酵",
+                "发酵罐",
+                "发酵工程流程"
+            ],
+            "image": "assets/cards/s_x3_m02_fermentation_process.png",
+            "icon": "Beaker",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x3_m03",
+            "title": "植物细胞工程",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch3"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦植物细胞工程的核心结构、过程与规律",
+            "abstract": "围绕植物细胞工程中的植物细胞工程整合学习内容，重点理解组织培养、脱分化、再分化等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "组织培养",
+                "脱分化",
+                "再分化",
+                "体细胞杂交"
+            ],
+            "tags": [
+                "组织培养",
+                "脱分化",
+                "再分化",
+                "体细胞杂交"
+            ],
+            "experiments": [
+                "组织培养"
+            ],
+            "image": "assets/cards/s_x3_m03_plant_cell_engineering.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x3_m04",
+            "title": "动物细胞工程",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch4"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦动物细胞工程的核心结构、过程与规律",
+            "abstract": "围绕动物细胞工程中的动物细胞工程整合学习内容，重点理解动物细胞培养、细胞融合、单克隆抗体等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "动物细胞培养",
+                "细胞融合",
+                "单克隆抗体"
+            ],
+            "tags": [
+                "动物细胞培养",
+                "细胞融合",
+                "单克隆抗体"
+            ],
+            "experiments": [
+                "动物细胞培养"
+            ],
+            "image": "assets/cards/s_x3_m04_animal_cell_engineering.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x3_m05",
+            "title": "胚胎工程",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch5"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "交互观察体内受精、早期胚胎发育、体外受精、胚胎移植和胚胎分割",
+            "abstract": "通过五个可交互情景梳理胚胎工程主线，重点理解两道防多精屏障、卵裂与囊胚结构、体外受精工位、胚胎移植流程以及胚胎分割与 ES 细胞。",
+            "points": [
+                "体内受精与两道屏障",
+                "早期胚胎发育",
+                "体外受精与胚胎移植",
+                "胚胎分割与 ES 细胞"
+            ],
+            "tags": [
+                "精子获能",
+                "早期胚胎",
+                "胚胎移植",
+                "胚胎分割",
+                "ES 细胞"
+            ],
+            "experiments": [
+                "过程推演：体内受精六步",
+                "流程模拟：体外受精与胚胎移植",
+                "结构辨识：胚胎分割与 ES 细胞"
+            ],
+            "image": "assets/cards/s_x3_m05_embryo_engineering.png",
+            "icon": "Beaker",
+            "engine": "source-html-adapter"
+        },
+        {
+            "cardId": "s_x3_m06",
+            "title": "基因工程",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch6"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦基因工程的核心结构、过程与规律",
+            "abstract": "围绕基因工程中的基因工程整合学习内容，重点理解限制酶、连接酶、载体等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "限制酶",
+                "连接酶",
+                "载体",
+                "基因工程流程"
+            ],
+            "tags": [
+                "限制酶",
+                "连接酶",
+                "载体",
+                "基因工程流程"
+            ],
+            "experiments": [
+                "观察与分析：限制酶",
+                "观察与分析：连接酶",
+                "观察与分析：载体"
+            ],
+            "image": "assets/cards/s_x3_m06_genetic_engineering.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_x3_m07",
+            "title": "PCR 与 DNA 检测",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch7"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦PCR 与 DNA 检测的核心结构、过程与规律",
+            "abstract": "围绕PCR 与 DNA 检测中的PCR 与 DNA 检测整合学习内容，重点理解DNA 粗提取、PCR、电泳等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "DNA 粗提取",
+                "PCR",
+                "电泳"
+            ],
+            "tags": [
+                "DNA 粗提取",
+                "PCR",
+                "电泳"
+            ],
+            "experiments": [
+                "DNA 粗提取",
+                "PCR",
+                "电泳"
+            ],
+            "image": "assets/cards/s_x3_m07_pcr_dna_detection.png",
+            "icon": "Dna",
+            "engine": "dna"
+        },
+        {
+            "cardId": "s_x3_m08",
+            "title": "生物技术安全与伦理",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch8"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生物技术安全与伦理的核心结构、过程与规律",
+            "abstract": "围绕生物技术安全与伦理中的生物技术安全与伦理整合学习内容，重点理解转基因安全、克隆伦理、生物技术规范等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "转基因安全",
+                "克隆伦理",
+                "生物技术规范"
+            ],
+            "tags": [
+                "转基因安全",
+                "克隆伦理",
+                "生物技术规范"
+            ],
+            "experiments": [
+                "结构辨识：转基因安全",
+                "过程推演：克隆伦理",
+                "规律归纳：生物技术规范"
+            ],
+            "image": "assets/cards/s_x3_m08_biotech_safety_ethics.png",
+            "icon": "Shield",
+            "engine": "source-html-adapter"
+        },
+        {
+            "cardId": "s_x3_m09",
+            "title": "DNA 凝胶电泳",
+            "stageId": "senior",
+            "bookId": "s_x3",
+            "chapterIds": [
+                "s_x3-ch7"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦 DNA 凝胶电泳的核心结构、过程与规律",
+            "abstract": "围绕 DNA 凝胶电泳中的电泳原理、凝胶制备、点样与电泳过程整合学习内容，重点理解电泳分离原理、条带迁移规律等核心知识，适合做实验模拟与过程推演。",
+            "points": [
+                "电泳原理",
+                "琼脂糖凝胶",
+                "DNA 迁移规律",
+                "条带成像分析"
+            ],
+            "tags": [
+                "电泳",
+                "DNA 鉴定",
+                "凝胶成像",
+                "分子生物学"
+            ],
+            "experiments": [
+                "实验模拟：凝胶制备",
+                "操作练习：点样过程",
+                "过程推演：条带迁移",
+                "结果分析：分子量估算"
+            ],
+            "image": "assets/cards/s_x3_m09_dna_electrophoresis.png",
+            "icon": "Activity",
+            "engine": "dna"
+        }
+    ]
+}

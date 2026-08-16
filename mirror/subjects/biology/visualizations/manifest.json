@@ -1,0 +1,2416 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-04-18",
+  "source": "课程架构数据.json",
+  "structureRules": {
+    "courseData": "课程架构数据.json 负责课程与卡片基础数据",
+    "manifest": "visualizations/manifest.json 负责课程卡片与可视化目录映射",
+    "cardFolders": "每张卡单独目录，后续手工添加 scene.config.json、scene.js 与 assets",
+    "engineFolders": "共享引擎能力统一放在 visualizations/engines 下"
+  },
+  "engines": [
+    {
+      "id": "specimen",
+      "label": "结构模型场景",
+      "description": "适合器官结构、生态结构、分类结构、层次结构等内容。",
+      "folder": "visualizations/engines/specimen",
+      "cardCount": 54,
+      "defaults": {
+        "cameraPreset": "focus-object",
+        "interactionMode": "step"
+      }
+    },
+    {
+      "id": "microscope",
+      "label": "显微观察场景",
+      "description": "适合装片、显微镜、微生物、细胞观察类内容。",
+      "folder": "visualizations/engines/microscope",
+      "cardCount": 4,
+      "defaults": {
+        "cameraPreset": "zoom-slide",
+        "interactionMode": "zoom"
+      }
+    },
+    {
+      "id": "dna",
+      "label": "遗传过程场景",
+      "description": "适合 DNA、遗传规律、复制、转录、翻译、工程流程类内容。",
+      "folder": "visualizations/engines/dna",
+      "cardCount": 13,
+      "defaults": {
+        "cameraPreset": "helix-orbit",
+        "interactionMode": "process"
+      }
+    },
+    {
+      "id": "molecule",
+      "label": "分子机制场景",
+      "description": "适合化合物、酶、ATP、分子变化类内容。",
+      "folder": "visualizations/engines/molecule",
+      "cardCount": 2,
+      "defaults": {
+        "cameraPreset": "molecule-close",
+        "interactionMode": "energy"
+      }
+    }
+  ],
+  "books": [
+    {
+      "bookId": "j7a",
+      "label": "七年级上册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j7a",
+      "cardCount": 9,
+      "cardIds": [
+        "j7a_m01",
+        "j7a_m02",
+        "j7a_m03",
+        "j7a_m04",
+        "j7a_m05",
+        "j7a_m06",
+        "j7a_m07",
+        "j7a_m08",
+        "j7a_m09"
+      ]
+    },
+    {
+      "bookId": "j7b",
+      "label": "七年级下册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j7b",
+      "cardCount": 9,
+      "cardIds": [
+        "j7b_m01",
+        "j7b_m02",
+        "j7b_m03",
+        "j7b_m04",
+        "j7b_m05",
+        "j7b_m06",
+        "j7b_m07",
+        "j7b_m08",
+        "j7b_m09"
+      ]
+    },
+    {
+      "bookId": "j8a",
+      "label": "八年级上册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j8a",
+      "cardCount": 8,
+      "cardIds": [
+        "j8a_m01",
+        "j8a_m02",
+        "j8a_m03",
+        "j8a_m04",
+        "j8a_m05",
+        "j8a_m06",
+        "j8a_m07",
+        "j8a_m08"
+      ]
+    },
+    {
+      "bookId": "j8b",
+      "label": "八年级下册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j8b",
+      "cardCount": 9,
+      "cardIds": [
+        "j8b_m01",
+        "j8b_m02",
+        "j8b_m03",
+        "j8b_m04",
+        "j8b_m05",
+        "j8b_m06",
+        "j8b_m07",
+        "j8b_m08",
+        "j8b_m09"
+      ]
+    },
+    {
+      "bookId": "s_b1",
+      "label": "必修一",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_b1",
+      "cardCount": 9,
+      "cardIds": [
+        "s_b1_m01",
+        "s_b1_m02",
+        "s_b1_m03",
+        "s_b1_m04",
+        "s_b1_m05",
+        "s_b1_m06",
+        "s_b1_m07",
+        "s_b1_m08",
+        "s_b1_m09"
+      ]
+    },
+    {
+      "bookId": "s_b2",
+      "label": "必修二",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_b2",
+      "cardCount": 9,
+      "cardIds": [
+        "s_b2_m01",
+        "s_b2_m02",
+        "s_b2_m03",
+        "s_b2_m04",
+        "s_b2_m05",
+        "s_b2_m06",
+        "s_b2_m07",
+        "s_b2_m08",
+        "s_b2_m09"
+      ]
+    },
+    {
+      "bookId": "s_x1",
+      "label": "选择性必修一",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x1",
+      "cardCount": 5,
+      "cardIds": [
+        "s_x1_m01",
+        "s_x1_m02",
+        "s_x1_m03",
+        "s_x1_m04",
+        "s_x1_m05"
+      ]
+    },
+    {
+      "bookId": "s_x2",
+      "label": "选择性必修二",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x2",
+      "cardCount": 6,
+      "cardIds": [
+        "s_x2_m01",
+        "s_x2_m02",
+        "s_x2_m03",
+        "s_x2_m04",
+        "s_x2_m05",
+        "s_x2_m06"
+      ]
+    },
+    {
+      "bookId": "s_x3",
+      "label": "选择性必修三",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x3",
+      "cardCount": 9,
+      "cardIds": [
+        "s_x3_m01",
+        "s_x3_m02",
+        "s_x3_m03",
+        "s_x3_m04",
+        "s_x3_m05",
+        "s_x3_m06",
+        "s_x3_m07",
+        "s_x3_m08",
+        "s_x3_m09"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "cardId": "j7a_m01",
+      "title": "生命特征与生物圈",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch1"
+      ],
+      "chapterTitles": [
+        "认识生物与生物圈"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7a/j7a_m01",
+      "assetsDir": "visualizations/books/j7a/j7a_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m02",
+      "title": "显微镜与细胞观察",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch2"
+      ],
+      "chapterTitles": [
+        "显微镜与细胞观察"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "microscope",
+      "folder": "visualizations/books/j7a/j7a_m02",
+      "assetsDir": "visualizations/books/j7a/j7a_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m03",
+      "title": "细胞结构与功能",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch3"
+      ],
+      "chapterTitles": [
+        "细胞的结构与生活"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m03",
+      "assetsDir": "visualizations/books/j7a/j7a_m03/assets",
+      "starterFiles": ["scene.config.json", "ecosystem-source.bundle.js"],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m04",
+      "title": "细胞分裂",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch4"
+      ],
+      "chapterTitles": [
+        "细胞分裂与结构层次"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m04",
+      "assetsDir": "visualizations/books/j7a/j7a_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m05",
+      "title": "生物体结构层次",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch4"
+      ],
+      "chapterTitles": [
+        "细胞分裂与结构层次"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m05",
+      "assetsDir": "visualizations/books/j7a/j7a_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "plant-regulation-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m06",
+      "title": "单细胞生物与草履虫观察",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch5"
+      ],
+      "chapterTitles": [
+        "单细胞生物"
+      ],
+      "contentModes": [
+        "lab",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "microscope",
+      "folder": "visualizations/books/j7a/j7a_m06",
+      "assetsDir": "visualizations/books/j7a/j7a_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m07",
+      "title": "植物器官基础",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch6"
+      ],
+      "chapterTitles": [
+        "绿色植物基础"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7a/j7a_m07",
+      "assetsDir": "visualizations/books/j7a/j7a_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m08",
+      "title": "光合作用与有机物制造",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch7"
+      ],
+      "chapterTitles": [
+        "绿色植物与生物圈"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7a/j7a_m08",
+      "assetsDir": "visualizations/books/j7a/j7a_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7a_m09",
+      "title": "蒸腾作用与植物和生物圈",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a-ch7"
+      ],
+      "chapterTitles": [
+        "绿色植物与生物圈"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7a/j7a_m09",
+      "assetsDir": "visualizations/books/j7a/j7a_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m01",
+      "title": "生殖与青春期发育",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch1"
+      ],
+      "chapterTitles": [
+        "人的生殖与发育"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m01",
+      "assetsDir": "visualizations/books/j7b/j7b_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m02",
+      "title": "营养与消化吸收",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch2"
+      ],
+      "chapterTitles": [
+        "人体的营养与消化"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m02",
+      "assetsDir": "visualizations/books/j7b/j7b_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m03",
+      "title": "呼吸系统与气体交换",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch3"
+      ],
+      "chapterTitles": [
+        "人体的呼吸"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m03",
+      "assetsDir": "visualizations/books/j7b/j7b_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m04",
+      "title": "血液与血管",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch4"
+      ],
+      "chapterTitles": [
+        "人体内物质运输"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m04",
+      "assetsDir": "visualizations/books/j7b/j7b_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m05",
+      "title": "心脏与血液循环",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch4"
+      ],
+      "chapterTitles": [
+        "人体内物质运输"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m05",
+      "assetsDir": "visualizations/books/j7b/j7b_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m06",
+      "title": "泌尿系统与尿液形成",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch5"
+      ],
+      "chapterTitles": [
+        "人体废物排出"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m06",
+      "assetsDir": "visualizations/books/j7b/j7b_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m07",
+      "title": "神经系统与反射感觉",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch6"
+      ],
+      "chapterTitles": [
+        "神经调节与感觉"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m07",
+      "assetsDir": "visualizations/books/j7b/j7b_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m08",
+      "title": "激素调节",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch7"
+      ],
+      "chapterTitles": [
+        "激素调节"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j7b/j7b_m08",
+      "assetsDir": "visualizations/books/j7b/j7b_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j7b_m09",
+      "title": "免疫与健康急救",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b-ch8"
+      ],
+      "chapterTitles": [
+        "健康、免疫与急救"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m09",
+      "assetsDir": "visualizations/books/j7b/j7b_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m01",
+      "title": "植物类群演化",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch1"
+      ],
+      "chapterTitles": [
+        "植物类群"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m01",
+      "assetsDir": "visualizations/books/j8a/j8a_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m02",
+      "title": "动物类群",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch2"
+      ],
+      "chapterTitles": [
+        "动物类群"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m02",
+      "assetsDir": "visualizations/books/j8a/j8a_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m03",
+      "title": "动物运动与行为",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch3"
+      ],
+      "chapterTitles": [
+        "动物的运动与行为"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m03",
+      "assetsDir": "visualizations/books/j8a/j8a_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m04",
+      "title": "细菌",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch4"
+      ],
+      "chapterTitles": [
+        "细菌"
+      ],
+      "contentModes": [
+        "lab",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m04",
+      "assetsDir": "visualizations/books/j8a/j8a_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m05",
+      "title": "真菌",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch5"
+      ],
+      "chapterTitles": [
+        "真菌"
+      ],
+      "contentModes": [
+        "lab",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m05",
+      "assetsDir": "visualizations/books/j8a/j8a_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m06",
+      "title": "病毒",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch6"
+      ],
+      "chapterTitles": [
+        "病毒"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m06",
+      "assetsDir": "visualizations/books/j8a/j8a_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m07",
+      "title": "生物分类",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch7"
+      ],
+      "chapterTitles": [
+        "生物分类"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m07",
+      "assetsDir": "visualizations/books/j8a/j8a_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8a_m08",
+      "title": "生物多样性",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a-ch8"
+      ],
+      "chapterTitles": [
+        "生物多样性"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8a/j8a_m08",
+      "assetsDir": "visualizations/books/j8a/j8a_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m01",
+      "title": "无性生殖",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch1"
+      ],
+      "chapterTitles": [
+        "无性生殖"
+      ],
+      "contentModes": [
+        "lab",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8b/j8b_m01",
+      "assetsDir": "visualizations/books/j8b/j8b_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m02",
+      "title": "有性生殖与动物发育",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch2"
+      ],
+      "chapterTitles": [
+        "有性生殖与发育"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8b/j8b_m02",
+      "assetsDir": "visualizations/books/j8b/j8b_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m03",
+      "title": "遗传物质与性状遗传",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch3"
+      ],
+      "chapterTitles": [
+        "遗传现象"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/j8b/j8b_m03",
+      "assetsDir": "visualizations/books/j8b/j8b_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m04",
+      "title": "变异现象",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch4"
+      ],
+      "chapterTitles": [
+        "变异现象"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "dna",
+      "folder": "visualizations/books/j8b/j8b_m04",
+      "assetsDir": "visualizations/books/j8b/j8b_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m05",
+      "title": "生命起源",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch5"
+      ],
+      "chapterTitles": [
+        "生命起源"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8b/j8b_m05",
+      "assetsDir": "visualizations/books/j8b/j8b_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m06",
+      "title": "生物进化与自然选择",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch6"
+      ],
+      "chapterTitles": [
+        "生物进化"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8b/j8b_m06",
+      "assetsDir": "visualizations/books/j8b/j8b_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m07",
+      "title": "生态系统与生态平衡",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch7"
+      ],
+      "chapterTitles": [
+        "生态系统与环境"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8b/j8b_m07",
+      "assetsDir": "visualizations/books/j8b/j8b_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m08",
+      "title": "生物多样性保护",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch8"
+      ],
+      "chapterTitles": [
+        "生物多样性保护"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8b/j8b_m08",
+      "assetsDir": "visualizations/books/j8b/j8b_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "j8b_m09",
+      "title": "生态安全与可持续发展",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b-ch9"
+      ],
+      "chapterTitles": [
+        "生态安全与可持续发展"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "specimen",
+      "folder": "visualizations/books/j8b/j8b_m09",
+      "assetsDir": "visualizations/books/j8b/j8b_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m01",
+      "title": "生命系统层次与细胞学说",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch1"
+      ],
+      "chapterTitles": [
+        "从生物圈到细胞"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/s_b1_m01",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "life-system-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m02",
+      "title": "细胞化合物基础",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch2"
+      ],
+      "chapterTitles": [
+        "细胞中的元素和化合物"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/s_b1_m02",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "compound-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m03",
+      "title": "细胞结构与细胞器观察",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch3"
+      ],
+      "chapterTitles": [
+        "细胞的基本结构"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "microscope",
+      "folder": "visualizations/books/s_b1/s_b1_m03",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m04",
+      "title": "物质跨膜运输",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch4"
+      ],
+      "chapterTitles": [
+        "物质跨膜运输"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_b1/s_b1_m04",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m05",
+      "title": "酶与 ATP",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch5"
+      ],
+      "chapterTitles": [
+        "酶与 ATP"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "molecule",
+      "folder": "visualizations/books/s_b1/s_b1_m05",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m06",
+      "title": "细胞呼吸",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch6"
+      ],
+      "chapterTitles": [
+        "细胞呼吸"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_b1/s_b1_m06",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m07",
+      "title": "光合作用",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch7"
+      ],
+      "chapterTitles": [
+        "光合作用"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_b1/s_b1_m07",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m08",
+      "title": "细胞增殖",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch8"
+      ],
+      "chapterTitles": [
+        "细胞增殖"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_b1/s_b1_m08",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b1_m09",
+      "title": "细胞生命历程",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修一",
+      "chapterIds": [
+        "s_b1-ch9"
+      ],
+      "chapterTitles": [
+        "细胞生命历程"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/s_b1_m09",
+      "assetsDir": "visualizations/books/s_b1/s_b1_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m01",
+      "title": "减数分裂与受精",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch1"
+      ],
+      "chapterTitles": [
+        "减数分裂与受精作用"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_b2/s_b2_m01",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m02",
+      "title": "孟德尔遗传规律",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch2"
+      ],
+      "chapterTitles": [
+        "孟德尔遗传规律"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_b2/s_b2_m02",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m03",
+      "title": "伴性遗传与家系分析",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch3"
+      ],
+      "chapterTitles": [
+        "伴性遗传"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "B",
+      "engine": "dna",
+      "folder": "visualizations/books/s_b2/s_b2_m03",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m04",
+      "title": "遗传物质证据实验",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch4"
+      ],
+      "chapterTitles": [
+        "DNA 是主要遗传物质"
+      ],
+      "contentModes": [
+        "lab",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/s_b2_m04",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "genetic-evidence-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m05",
+      "title": "DNA 结构与复制",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch5"
+      ],
+      "chapterTitles": [
+        "DNA 结构与复制"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_b2/s_b2_m05",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m06",
+      "title": "基因表达",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch6"
+      ],
+      "chapterTitles": [
+        "基因表达"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_b2/s_b2_m06",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m07",
+      "title": "变异",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch7"
+      ],
+      "chapterTitles": [
+        "变异"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_b2/s_b2_m07",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m08",
+      "title": "育种",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch8"
+      ],
+      "chapterTitles": [
+        "育种"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/s_b2_m08",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "breeding-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_b2_m09",
+      "title": "现代生物进化理论",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修二",
+      "chapterIds": [
+        "s_b2-ch9"
+      ],
+      "chapterTitles": [
+        "现代生物进化理论"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/s_b2_m09",
+      "assetsDir": "visualizations/books/s_b2/s_b2_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "evolution-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x1_m01",
+      "title": "内环境与稳态",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修一",
+      "chapterIds": [
+        "s_x1-ch1"
+      ],
+      "chapterTitles": [
+        "内环境与稳态"
+      ],
+      "contentModes": [
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x1/s_x1_m01",
+      "assetsDir": "visualizations/books/s_x1/s_x1_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x1_m02",
+      "title": "神经调节",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修一",
+      "chapterIds": [
+        "s_x1-ch2"
+      ],
+      "chapterTitles": [
+        "神经调节"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x1/s_x1_m02",
+      "assetsDir": "visualizations/books/s_x1/s_x1_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x1_m03",
+      "title": "体液与激素调节",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修一",
+      "chapterIds": [
+        "s_x1-ch3"
+      ],
+      "chapterTitles": [
+        "体液与激素调节"
+      ],
+      "contentModes": [
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x1/s_x1_m03",
+      "assetsDir": "visualizations/books/s_x1/s_x1_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x1_m04",
+      "title": "免疫调节",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修一",
+      "chapterIds": [
+        "s_x1-ch4"
+      ],
+      "chapterTitles": [
+        "免疫调节"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x1/s_x1_m04",
+      "assetsDir": "visualizations/books/s_x1/s_x1_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x1_m05",
+      "title": "植物生命活动调节",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修一",
+      "chapterIds": [
+        "s_x1-ch5"
+      ],
+      "chapterTitles": [
+        "植物生命活动调节"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/s_x1_m05",
+      "assetsDir": "visualizations/books/s_x1/s_x1_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "plant-regulation-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x2_m01",
+      "title": "种群数量特征与调查",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修二",
+      "chapterIds": [
+        "s_x2-ch1"
+      ],
+      "chapterTitles": [
+        "种群"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/s_x2_m01",
+      "assetsDir": "visualizations/books/s_x2/s_x2_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "population-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x2_m02",
+      "title": "群落结构与演替",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修二",
+      "chapterIds": [
+        "s_x2-ch2"
+      ],
+      "chapterTitles": [
+        "群落"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x2/s_x2_m02",
+      "assetsDir": "visualizations/books/s_x2/s_x2_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x2_m03",
+      "title": "生态系统结构与生态位",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修二",
+      "chapterIds": [
+        "s_x2-ch3"
+      ],
+      "chapterTitles": [
+        "生态系统"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/s_x2_m03",
+      "assetsDir": "visualizations/books/s_x2/s_x2_m03/assets",
+      "starterFiles": ["scene.config.json", "ecosystem-source.bundle.js"],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x2_m04",
+      "title": "能量流动与物质循环",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修二",
+      "chapterIds": [
+        "s_x2-ch4"
+      ],
+      "chapterTitles": [
+        "能量流动与物质循环"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/s_x2_m04",
+      "assetsDir": "visualizations/books/s_x2/s_x2_m04/assets",
+      "starterFiles": ["scene.config.json", "energy-cycle-source.bundle.js"],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x2_m05",
+      "title": "信息传递与稳定性",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修二",
+      "chapterIds": [
+        "s_x2-ch5"
+      ],
+      "chapterTitles": [
+        "信息传递与稳定性"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x2/s_x2_m05",
+      "assetsDir": "visualizations/books/s_x2/s_x2_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x2_m06",
+      "title": "生物多样性与生态工程",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修二",
+      "chapterIds": [
+        "s_x2-ch6"
+      ],
+      "chapterTitles": [
+        "生物多样性与生态工程"
+      ],
+      "contentModes": [
+        "lab",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/s_x2_m06",
+      "assetsDir": "visualizations/books/s_x2/s_x2_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "biodiversity-eco-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m01",
+      "title": "微生物培养与分离",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch1"
+      ],
+      "chapterTitles": [
+        "微生物培养与分离"
+      ],
+      "contentModes": [
+        "lab",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "microscope",
+      "folder": "visualizations/books/s_x3/s_x3_m01",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m02",
+      "title": "发酵工程",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch2"
+      ],
+      "chapterTitles": [
+        "发酵工程"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/s_x3_m02",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "fermentation-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m03",
+      "title": "植物细胞工程",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch3"
+      ],
+      "chapterTitles": [
+        "植物细胞工程"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x3/s_x3_m03",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m04",
+      "title": "动物细胞工程",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch4"
+      ],
+      "chapterTitles": [
+        "动物细胞工程"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "specimen",
+      "folder": "visualizations/books/s_x3/s_x3_m04",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m05",
+      "title": "胚胎工程",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch5"
+      ],
+      "chapterTitles": [
+        "胚胎工程"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/s_x3_m05",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "embryo-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m06",
+      "title": "基因工程",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch6"
+      ],
+      "chapterTitles": [
+        "基因工程"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_x3/s_x3_m06",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m07",
+      "title": "PCR 与 DNA 检测",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch7"
+      ],
+      "chapterTitles": [
+        "PCR 与 DNA 检测"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_x3/s_x3_m07",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m08",
+      "title": "生物技术安全与伦理",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch8"
+      ],
+      "chapterTitles": [
+        "生物技术安全与伦理"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/s_x3_m08",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "biotech-safety-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    },
+    {
+      "cardId": "s_x3_m09",
+      "title": "DNA 凝胶电泳",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修三",
+      "chapterIds": [
+        "s_x3-ch7"
+      ],
+      "chapterTitles": [
+        "PCR 与 DNA 检测"
+      ],
+      "contentModes": [
+        "lab",
+        "interactive",
+        "dynamic",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "dna",
+      "folder": "visualizations/books/s_x3/s_x3_m09",
+      "assetsDir": "visualizations/books/s_x3/s_x3_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "cell-life-source.bundle.js"
+      ],
+      "templates": {
+        "sceneConfig": "visualizations/templates/scene.config.template.json",
+        "sceneScript": "visualizations/templates/scene.template.js"
+      }
+    }
+  ]
+}

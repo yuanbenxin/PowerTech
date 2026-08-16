@@ -1,0 +1,284 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "s_x1",
+        "label": "选择性必修一",
+        "stageId": "senior",
+        "stageLabel": "高中",
+        "chapters": [
+            {
+                "id": "s_x1-ch1",
+                "title": "内环境与稳态",
+                "summary": "内环境组成和稳态意义",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "血浆",
+                    "组织液",
+                    "淋巴",
+                    "稳态"
+                ]
+            },
+            {
+                "id": "s_x1-ch2",
+                "title": "神经调节",
+                "summary": "反射弧、动作电位和突触传递",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "反射弧",
+                    "动作电位",
+                    "突触传递"
+                ]
+            },
+            {
+                "id": "s_x1-ch3",
+                "title": "体液与激素调节",
+                "summary": "血糖、体温、水盐平衡与激素",
+                "recommendedModes": [
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "血糖调节",
+                    "体温调节",
+                    "水盐平衡",
+                    "激素调节"
+                ]
+            },
+            {
+                "id": "s_x1-ch4",
+                "title": "免疫调节",
+                "summary": "免疫系统、特异性免疫和免疫失调",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "免疫系统",
+                    "体液免疫",
+                    "细胞免疫",
+                    "过敏",
+                    "自身免疫"
+                ]
+            },
+            {
+                "id": "s_x1-ch5",
+                "title": "植物生命活动调节",
+                "summary": "植物激素和环境信号对植物的调节",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "lab",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "生长素",
+                    "植物激素",
+                    "向性运动",
+                    "生长调节剂"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "s_x1_m01",
+            "title": "内环境与稳态",
+            "stageId": "senior",
+            "bookId": "s_x1",
+            "chapterIds": [
+                "s_x1-ch1"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦内环境与稳态的核心结构、过程与规律",
+            "abstract": "围绕内环境与稳态中的内环境与稳态整合学习内容，重点理解内环境与调节、血浆、组织液等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "内环境与调节",
+                "血浆",
+                "组织液",
+                "淋巴"
+            ],
+            "tags": [
+                "血浆",
+                "组织液",
+                "淋巴",
+                "稳态"
+            ],
+            "experiments": [
+                "结构辨识：内环境与调节",
+                "过程推演：血浆",
+                "规律归纳：组织液"
+            ],
+            "image": "assets/cards/s_x1_m01_internal_environment_homeostasis.png",
+            "icon": "Thermometer",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x1_m02",
+            "title": "神经调节",
+            "stageId": "senior",
+            "bookId": "s_x1",
+            "chapterIds": [
+                "s_x1-ch2"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦神经调节的核心结构、过程与规律",
+            "abstract": "围绕神经调节中的神经调节整合学习内容，重点理解反射弧、动作电位、突触传递等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "反射弧",
+                "动作电位",
+                "突触传递"
+            ],
+            "tags": [
+                "反射弧",
+                "动作电位",
+                "突触传递"
+            ],
+            "experiments": [
+                "结构辨识：反射弧",
+                "过程推演：动作电位",
+                "规律归纳：突触传递"
+            ],
+            "image": "assets/cards/s_x1_m02_neural_regulation.png",
+            "icon": "Zap",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x1_m03",
+            "title": "体液与激素调节",
+            "stageId": "senior",
+            "bookId": "s_x1",
+            "chapterIds": [
+                "s_x1-ch3"
+            ],
+            "contentModes": [
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦体液与激素调节的核心结构、过程与规律",
+            "abstract": "围绕体液与激素调节中的体液与激素调节整合学习内容，重点理解血糖调节、体温调节、水盐平衡等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "血糖调节",
+                "体温调节",
+                "水盐平衡",
+                "激素调节"
+            ],
+            "tags": [
+                "血糖调节",
+                "体温调节",
+                "水盐平衡",
+                "激素调节"
+            ],
+            "experiments": [
+                "结构辨识：血糖调节",
+                "过程推演：体温调节",
+                "规律归纳：水盐平衡"
+            ],
+            "image": "assets/cards/s_x1_m03_hormone_humoral_regulation.png",
+            "icon": "Thermometer",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x1_m04",
+            "title": "免疫调节",
+            "stageId": "senior",
+            "bookId": "s_x1",
+            "chapterIds": [
+                "s_x1-ch4"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦免疫调节的核心结构、过程与规律",
+            "abstract": "围绕免疫调节中的免疫调节整合学习内容，重点理解免疫系统、体液免疫、细胞免疫等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "免疫系统",
+                "体液免疫",
+                "细胞免疫",
+                "过敏"
+            ],
+            "tags": [
+                "免疫系统",
+                "体液免疫",
+                "细胞免疫",
+                "过敏"
+            ],
+            "experiments": [
+                "结构辨识：免疫系统",
+                "过程推演：体液免疫",
+                "规律归纳：细胞免疫"
+            ],
+            "image": "assets/cards/s_x1_m04_immune_regulation.png",
+            "icon": "Shield",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "s_x1_m05",
+            "title": "植物生命活动调节",
+            "stageId": "senior",
+            "bookId": "s_x1",
+            "chapterIds": [
+                "s_x1-ch5"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦植物生命活动调节的核心结构、过程与规律",
+            "abstract": "围绕植物生命活动调节中的植物生命活动调节整合学习内容，重点理解植物生命活动调控、生长素、植物激素等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "植物生命活动调控",
+                "生长素",
+                "植物激素",
+                "向性运动"
+            ],
+            "tags": [
+                "生长素",
+                "植物激素",
+                "向性运动",
+                "生长调节剂"
+            ],
+            "experiments": [
+                "观察与分析：植物生命活动调控",
+                "观察与分析：生长素",
+                "观察与分析：植物激素"
+            ],
+            "image": "assets/cards/s_x1_m05_plant_hormone_regulation.png",
+            "icon": "Leaf",
+            "engine": "source-html-adapter"
+        }
+    ]
+}

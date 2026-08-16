@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>拾光视界 v12.0 - 生物全景教学系统</title>
+    <link rel="stylesheet" href="assets/vendor/fonts/biology-local-fonts.css?v=3d76f36c344d">
+    <script src="assets/vendor/js/tailwind.min.js?v=a2c3d9b38e8e"></script>
+    <script src="assets/vendor/js/react.production.min.js?v=4b4969fa4ef3"></script>
+    <script src="assets/vendor/js/react-dom.production.min.js?v=21758ed084cd"></script>
+    <script src="assets/vendor/js/lucide.min.js?v=0cb3d1d6855b"></script>
+    <script src="biology.config.js?v=91a2ea38a938"></script>
+    <style>
+        :root { --bg-color: #0a0f0d; --primary-color: #10b981; }
+        html, body, #root { width: 100%; height: 100%; min-height: 100dvh; margin: 0; overflow: hidden; }
+        body { background-color: var(--bg-color); color: white; font-family: 'Inter', 'Noto Sans SC', sans-serif; overscroll-behavior: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        @media (pointer: coarse), (max-width: 1024px) {
+          [data-bio-panel-scroll-content="true"] button:not([aria-label^="第 "]) {
+            min-height: 44px !important;
+          }
+        }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .custom-scrollbar::-webkit-scrollbar { width: 2px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+        .lucide-icon { display: inline-block; vertical-align: middle; }
+        .text-shadow-glow { text-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+        .bg-transition { transition: background-image 0.8s ease-in-out; }
+    </style>
+    <link rel="stylesheet" href="./shg-subject-auth-gate.css?v=2111788607f8">
+    <link rel="stylesheet" href="./trial-user-notice.css?v=3a5f39abea8b">
+    <script src="./shg-subject-gate.config.js?v=20260809193335"></script>
+    <script src="./shg-subject-auth-gate.js?v=d068c739a2fd"></script>
+    <script src="./trial-user-notice.js?v=fc960096c94a"></script>
+</head>
+<body>
+    <div class="shg-subject-auth-overlay" id="shgSubjectAuthOverlay">
+        <div class="shg-subject-auth-card">
+            <div class="shg-subject-auth-glow shg-subject-auth-glow-a"></div>
+            <div class="shg-subject-auth-glow shg-subject-auth-glow-b"></div>
+            <div class="shg-subject-auth-visual" aria-hidden="true">
+                <span class="shg-subject-auth-orbit shg-subject-auth-orbit-a"></span>
+                <span class="shg-subject-auth-orbit shg-subject-auth-orbit-b"></span>
+                <span class="shg-subject-auth-core-ring"></span>
+                <span class="shg-subject-auth-core"></span>
+            </div>
+            <p class="shg-subject-auth-eyebrow">SHIGUANG VISION</p>
+            <div class="shg-subject-auth-meta-row">
+                <div class="shg-subject-auth-meta" data-shg-auth-meta>生物入口</div>
+                <div class="shg-subject-auth-phase" data-shg-auth-phase>正在连接统一权限中心</div>
+            </div>
+            <h1 class="shg-subject-auth-title" data-shg-auth-title>正在进入生物系统</h1>
+            <p class="shg-subject-auth-desc" data-shg-auth-desc>正在核验当前账号的统一登录状态，并准备进入该学科系统，请稍候。</p>
+            <div class="shg-subject-auth-progress" aria-hidden="true">
+                <span class="is-done">身份识别</span>
+                <span class="is-active">权限核验</span>
+                <span>系统载入</span>
+            </div>
+            <div class="shg-subject-auth-actions">
+                <a class="shg-subject-auth-button shg-subject-auth-button-primary" data-shg-auth-primary href="/">返回统一入口</a>
+                <a class="shg-subject-auth-button shg-subject-auth-button-secondary" data-shg-auth-secondary href="">刷新重试</a>
+            </div>
+        </div>
+    </div>
+    <div id="root"></div>
+    <script src="app/biology-shared.compiled.js?v=54f755443578"></script>
+    <script src="app/biology-unified-auth.compiled.js?v=37fe5e1c1361"></script>
+    <script src="app/biology-scene-components.compiled.js?v=8b9e69cff7ca"></script>
+    <script src="app/biology-layout-components.compiled.js?v=9dc84e04c77d"></script>
+    <script src="app/biology-entry.compiled.js?v=beda813b8280"></script>
+    <script>window.SHG_LEARNING_ASSISTANT_CONFIG={"subjectKey":"biology","subjectName":"生物","assetBaseUrl":"/dist-learning-assistant/","answerUrl":"/api/unified/learning-assistant/answer","streamUrl":"/api/unified/learning-assistant/answer/stream","version":"20260809193335"};</script>
+    <script src="/dist-learning-assistant/loader.js" data-shg-learning-assistant-loader></script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-04-18",
+    "book": {
+        "id": "j7a",
+        "label": "七年级上册",
+        "stageId": "junior",
+        "stageLabel": "初中",
+        "chapters": [
+            {
+                "id": "j7a-ch1",
+                "title": "认识生物与生物圈",
+                "summary": "生命特征、生物与环境、生物圈基础",
+                "recommendedModes": [
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "生物的特征",
+                    "环境因素",
+                    "生态系统基础"
+                ]
+            },
+            {
+                "id": "j7a-ch2",
+                "title": "显微镜与细胞观察",
+                "summary": "显微镜、装片、细胞观察",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "显微镜结构",
+                    "显微镜使用",
+                    "临时装片",
+                    "洋葱表皮细胞",
+                    "口腔上皮细胞"
+                ]
+            },
+            {
+                "id": "j7a-ch3",
+                "title": "细胞的结构与生活",
+                "summary": "细胞结构、物质与能量、细胞膜功能",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "植物细胞",
+                    "动物细胞",
+                    "细胞膜",
+                    "细胞中的物质"
+                ]
+            },
+            {
+                "id": "j7a-ch4",
+                "title": "细胞分裂与结构层次",
+                "summary": "细胞分裂、组织、器官、系统",
+                "recommendedModes": [
+                    "interactive",
+                    "dynamic",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "细胞分裂",
+                    "组织",
+                    "器官",
+                    "结构层次"
+                ]
+            },
+            {
+                "id": "j7a-ch5",
+                "title": "单细胞生物",
+                "summary": "单细胞生物的结构和生活方式",
+                "recommendedModes": [
+                    "lab",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "草履虫观察",
+                    "单细胞生物特征"
+                ]
+            },
+            {
+                "id": "j7a-ch6",
+                "title": "绿色植物基础",
+                "summary": "根茎叶花果实种子的基础结构",
+                "recommendedModes": [
+                    "interactive",
+                    "card",
+                    "exam"
+                ],
+                "visualPriority": "B",
+                "sampleTopics": [
+                    "种子结构",
+                    "根尖结构",
+                    "导管和筛管",
+                    "叶的结构"
+                ]
+            },
+            {
+                "id": "j7a-ch7",
+                "title": "绿色植物与生物圈",
+                "summary": "蒸腾作用、光合作用、植物与环境",
+                "recommendedModes": [
+                    "lab",
+                    "interactive",
+                    "dynamic",
+                    "exam"
+                ],
+                "visualPriority": "A",
+                "sampleTopics": [
+                    "蒸腾作用",
+                    "光合作用",
+                    "绿叶在光下制造有机物",
+                    "植物与生物圈"
+                ]
+            }
+        ]
+    },
+    "currentCardMapping": [
+        {
+            "cardId": "j7a_m01",
+            "title": "生命特征与生物圈",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch1"
+            ],
+            "contentModes": [
+                "card",
+                "exam"
+            ],
+            "visualLevel": "B",
+            "detail": "聚焦生命特征与生物圈的核心结构、过程与规律",
+            "abstract": "围绕认识生物与生物圈中的生命特征与生物圈整合学习内容，重点理解认识生物与生物圈、生物的特征、环境因素等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "认识生物与生物圈",
+                "生物的特征",
+                "环境因素",
+                "生态系统基础"
+            ],
+            "tags": [
+                "生物的特征",
+                "环境因素",
+                "生态系统基础",
+                "认识生物与生物圈"
+            ],
+            "experiments": [
+                "结构辨识：认识生物与生物圈",
+                "过程推演：生物的特征",
+                "规律归纳：环境因素"
+            ],
+            "image": "assets/cards/j7a_m01_life_biosphere.png",
+            "icon": "ListFilter",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7a_m02",
+            "title": "显微镜与细胞观察",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch2"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦显微镜与细胞观察的核心结构、过程与规律",
+            "abstract": "围绕显微镜与细胞观察中的显微镜与细胞观察整合学习内容，重点理解细胞观察（洋葱实验）、显微镜结构、显微镜使用等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "细胞观察（洋葱实验）",
+                "显微镜结构",
+                "显微镜使用",
+                "临时装片"
+            ],
+            "tags": [
+                "显微镜结构",
+                "显微镜使用",
+                "临时装片",
+                "洋葱表皮细胞"
+            ],
+            "experiments": [
+                "细胞观察（洋葱实验）",
+                "临时装片"
+            ],
+            "image": "assets/cards/j7a_m02_microscope_cell_observation.png",
+            "icon": "Microscope",
+            "engine": "microscope"
+        },
+        {
+            "cardId": "j7a_m03",
+            "title": "细胞结构与功能",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch3"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦细胞结构与功能的核心结构、过程与规律",
+            "abstract": "围绕细胞的结构与生活中的细胞结构与功能整合学习内容，重点理解细胞的结构与生活、植物细胞、动物细胞等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "细胞的结构与生活",
+                "植物细胞",
+                "动物细胞",
+                "细胞膜"
+            ],
+            "tags": [
+                "植物细胞",
+                "动物细胞",
+                "细胞膜",
+                "细胞中的物质"
+            ],
+            "experiments": [
+                "结构辨识：细胞的结构与生活",
+                "过程推演：植物细胞",
+                "规律归纳：动物细胞"
+            ],
+            "image": "assets/cards/j7a_m03_cell_structure_function.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7a_m04",
+            "title": "细胞分裂",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch4"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦细胞分裂的核心结构、过程与规律",
+            "abstract": "围绕细胞分裂与结构层次中的细胞分裂整合学习内容，重点理解细胞分裂与结构层次、细胞分裂、组织等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "细胞分裂与结构层次",
+                "细胞分裂",
+                "组织",
+                "器官"
+            ],
+            "tags": [
+                "细胞分裂",
+                "组织",
+                "器官",
+                "结构层次"
+            ],
+            "experiments": [
+                "结构辨识：细胞分裂与结构层次",
+                "过程推演：细胞分裂",
+                "规律归纳：组织"
+            ],
+            "image": "assets/cards/j7a_m04_cell_division.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7a_m05",
+            "title": "生物体结构层次",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch4"
+            ],
+            "contentModes": [
+                "interactive",
+                "dynamic",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦生物体结构层次的核心结构、过程与规律",
+            "abstract": "围绕细胞分裂与结构层次中的生物体结构层次整合学习内容，重点理解组织、器官、结构层次等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "组织",
+                "器官",
+                "结构层次",
+                "细胞分裂"
+            ],
+            "tags": [
+                "细胞分裂",
+                "组织",
+                "器官",
+                "结构层次"
+            ],
+            "experiments": [
+                "结构辨识：组织",
+                "过程推演：器官",
+                "规律归纳：结构层次"
+            ],
+            "image": "assets/cards/j7a_m05_biological_hierarchy.png",
+            "icon": "Layers",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7a_m06",
+            "title": "单细胞生物与草履虫观察",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch5"
+            ],
+            "contentModes": [
+                "lab",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦单细胞生物与草履虫观察的核心结构、过程与规律",
+            "abstract": "围绕单细胞生物中的单细胞生物与草履虫观察整合学习内容，重点理解单细胞生物、草履虫观察、单细胞生物特征等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "单细胞生物",
+                "草履虫观察",
+                "单细胞生物特征"
+            ],
+            "tags": [
+                "草履虫观察",
+                "单细胞生物特征",
+                "单细胞生物"
+            ],
+            "experiments": [
+                "草履虫观察"
+            ],
+            "image": "assets/cards/j7a_m06_single_cell_paramecium.png",
+            "icon": "Microscope",
+            "engine": "microscope"
+        },
+        {
+            "cardId": "j7a_m07",
+            "title": "植物器官基础",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch6"
+            ],
+            "contentModes": [
+                "interactive",
+                "card",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦植物器官基础的核心结构、过程与规律",
+            "abstract": "围绕绿色植物基础中的植物器官基础整合学习内容，重点理解绿色植物、种子结构、根尖结构等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "绿色植物",
+                "种子结构",
+                "根尖结构",
+                "导管和筛管"
+            ],
+            "tags": [
+                "种子结构",
+                "根尖结构",
+                "导管和筛管",
+                "叶的结构"
+            ],
+            "experiments": [
+                "结构辨识：绿色植物",
+                "过程推演：种子结构",
+                "规律归纳：根尖结构"
+            ],
+            "image": "assets/cards/j7a_m07_plant_organs.png",
+            "icon": "Leaf",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7a_m08",
+            "title": "光合作用与有机物制造",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch7"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦光合作用与有机物制造的核心结构、过程与规律",
+            "abstract": "围绕绿色植物与生物圈中的光合作用与有机物制造整合学习内容，重点理解光合作用、绿叶在光下制造有机物、叶片结构与叶绿体等核心知识，适合做结构辨识、过程推演与考点梳理。",
+            "points": [
+                "光合作用",
+                "绿叶在光下制造有机物",
+                "叶片结构",
+                "植物与生物圈"
+            ],
+            "tags": [
+                "光合作用",
+                "绿叶在光下制造有机物",
+                "叶绿体",
+                "有机物制造"
+            ],
+            "experiments": [
+                "观察与分析：光合作用",
+                "观察与分析：绿叶在光下制造有机物",
+                "结构辨识：叶片横切与叶绿体"
+            ],
+            "image": "assets/cards/j7a_m08_photosynthesis_organic_matter.png",
+            "icon": "Leaf",
+            "engine": "specimen"
+        },
+        {
+            "cardId": "j7a_m09",
+            "title": "蒸腾作用与植物和生物圈",
+            "stageId": "junior",
+            "bookId": "j7a",
+            "chapterIds": [
+                "j7a-ch7"
+            ],
+            "contentModes": [
+                "lab",
+                "interactive",
+                "dynamic",
+                "exam"
+            ],
+            "visualLevel": "A",
+            "detail": "聚焦叶片横切结构、蒸腾作用与植物和生物圈的核心规律",
+            "abstract": "围绕绿色植物与生物圈中的蒸腾作用整合叶片横切 3D 模型，重点理解气孔蒸腾、叶脉水分运输、叶肉光合作用关联和植物与生物圈的水循环联系。",
+            "points": [
+                "蒸腾作用",
+                "植物与生物圈",
+                "叶片结构",
+                "光合作用关联"
+            ],
+            "tags": [
+                "蒸腾作用",
+                "叶片横切",
+                "气孔",
+                "植物与生物圈"
+            ],
+            "experiments": [
+                "3D观察：叶片横切与蒸腾作用",
+                "观察与分析：植物与生物圈",
+                "变量探究：光照、湿度、风速和温度"
+            ],
+            "image": "assets/cards/j7a_m09_transpiration_plant_biosphere.png",
+            "icon": "Leaf",
+            "engine": "specimen"
+        }
+    ]
+}

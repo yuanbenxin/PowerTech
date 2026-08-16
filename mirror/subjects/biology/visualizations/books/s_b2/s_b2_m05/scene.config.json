@@ -1,0 +1,29 @@
+{
+  "cardId": "s_b2_m05",
+  "status": "ready",
+  "engine": "dna",
+  "entry": "scene.js?v=0e7f3866e333",
+  "assetsDir": "assets",
+  "cameraPreset": "replication-fork",
+  "interactionMode": "dna-structure-replication",
+  "coursewarePanelMode": "scene-controls",
+  "labels": [
+    "DNA 结构装配",
+    "脱氧核苷酸",
+    "碱基互补配对",
+    "半保留复制",
+    "解旋酶",
+    "DNA 聚合酶",
+    "DNA 连接酶"
+  ],
+  "steps": [
+    "结构：脱氧核苷酸由磷酸、脱氧核糖和含氮碱基组成。",
+    "结构：核苷酸通过 3'-5' 磷酸二酯键连接成单链。",
+    "结构：A 与 T 形成 2 个氢键，C 与 G 形成 3 个氢键，两条链反向平行。",
+    "结构：DNA 双螺旋中磷酸-脱氧核糖骨架在外侧，碱基排列在内侧。",
+    "复制：解旋酶打开复制叉，亲代两条链分别作为模板。",
+    "复制：RNA 引物提供 3'-OH 起点，DNA 聚合酶只能沿 5'→3' 方向合成新链。",
+    "复制：连接酶连接冈崎片段，最终形成两条半保留子代 DNA。"
+  ],
+  "notes": "DNA 结构与复制动态课件。统一布局为左侧模拟框、右侧操作面板；小屏横屏自动压缩和隐藏低优先说明。"
+}
