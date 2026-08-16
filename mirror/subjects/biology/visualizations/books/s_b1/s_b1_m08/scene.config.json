@@ -1,0 +1,15 @@
+{
+  "id": "s_b1_m08",
+  "name": "细胞增殖",
+  "engine": "specimen",
+  "version": "1.1.0",
+  "entry": "cell-proliferation-source.bundle.js?v=d623362916de",
+  "coursewarePanelMode": "scene-controls",
+  "dataFiles": [],
+  "assets": [],
+  "settings": {
+    "showTitle": false,
+    "theme": "dark",
+    "coursewarePanelMode": "scene-controls"
+  }
+}

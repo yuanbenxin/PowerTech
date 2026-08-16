@@ -1,0 +1,30 @@
+{
+  "cardId": "s_b1_m04",
+  "status": "ready",
+  "engine": "specimen",
+  "entry": "scene.js?v=4ac9eb2ab405",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "cameraPreset": "membrane-transport",
+  "interactionMode": "transport-process",
+  "labels": [
+    "物质跨膜运输",
+    "浓度梯度",
+    "转运蛋白"
+  ],
+  "steps": [
+    {
+      "id": "step1",
+      "title": "切换自由扩散、协助扩散和主动运输"
+    },
+    {
+      "id": "step2",
+      "title": "调节膜内外浓度并观察粒子流向"
+    },
+    {
+      "id": "step3",
+      "title": "比较通道蛋白、载体蛋白和离子泵"
+    }
+  ],
+  "notes": "把源课件的运输类型、浓度、速度、播放重置、视角和原理说明整合到平台右侧操作面板，左侧保留原 3D 动态模拟。"
+}

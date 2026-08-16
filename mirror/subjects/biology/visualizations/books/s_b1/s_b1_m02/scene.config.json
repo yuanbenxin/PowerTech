@@ -1,0 +1,6 @@
+{
+  "id": "s_b1_m02",
+  "engine": "source-html-adapter",
+  "coursewarePanelMode": "scene-controls",
+  "entry": "compound-source.bundle.js?v=25f6e520dd12"
+}

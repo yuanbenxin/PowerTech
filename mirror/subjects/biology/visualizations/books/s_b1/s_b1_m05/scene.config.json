@@ -1,0 +1,30 @@
+{
+  "cardId": "s_b1_m05",
+  "status": "ready",
+  "engine": "molecule",
+  "entry": "scene.js?v=92014d43a632",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "cameraPreset": "molecule-close",
+  "interactionMode": "energy",
+  "labels": [
+    "酶与 ATP",
+    "互动讲解",
+    "自学实验"
+  ],
+  "steps": [
+    {
+      "id": "step1",
+      "title": "切换底物结合、诱导契合、催化生成和产物释放"
+    },
+    {
+      "id": "step2",
+      "title": "调节葡萄糖与 ATP 浓度并观察粒子进入活性中心"
+    },
+    {
+      "id": "step3",
+      "title": "通过右上角 HUD 追踪 ATP 末端磷酸基转移路径"
+    }
+  ],
+  "notes": "接入 enzyme_atp 源课件，左侧保留源 3D 模拟画面并把 HUD 固定在模拟框右上角；源课件原左右侧栏隐藏，阶段、浓度、速度、播放、步进、视角与科学原理说明整合到平台右侧操作面板。"
+}
