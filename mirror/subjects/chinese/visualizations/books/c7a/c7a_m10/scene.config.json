@@ -1,0 +1,10 @@
+{
+  "cardId": "c7a_m10",
+  "title": "夜雨寄北",
+  "status": "ready",
+  "engine": "poetry-appreciation",
+  "contentType": "poetry",
+  "coursewarePanelMode": "embedded-lesson",
+  "source": "index.html",
+  "notes": "原始课件完整保存在 lesson/ 目录；平台通过同源 iframe 承载，设备适配样式在运行时注入，不改动原课件文件。"
+}
