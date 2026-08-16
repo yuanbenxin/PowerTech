@@ -1,0 +1,557 @@
+{
+  "book": {
+    "id": "c7b",
+    "label": "七年级下册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "c7b_c01",
+        "label": "古诗词诵读",
+        "title": "古诗词诵读",
+        "sampleTopics": [
+          "原文诵读",
+          "意象画面",
+          "情感手法"
+        ]
+      },
+      {
+        "id": "c7b_c02",
+        "label": "文言文阅读",
+        "title": "文言文阅读",
+        "sampleTopics": [
+          "原文疏通",
+          "实词虚词",
+          "句式译文"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "c7b_c01",
+      "label": "古诗词诵读",
+      "children": []
+    },
+    {
+      "id": "c7b_c02",
+      "label": "文言文阅读",
+      "children": []
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "c7b_m01",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "竹里馆",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m01_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m02",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "春夜洛城闻笛",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m02_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m03",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "逢入京使",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m03_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m04",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "晚春",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m04_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m05",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "登幽州台歌",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m05_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m06",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "望岳",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m06_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m07",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "登飞来峰",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m07_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m08",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "游山西村",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m08_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m09",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "己亥杂诗（其五）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m09_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m10",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "泊秦淮",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m10_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m11",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "贾生",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m11_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m12",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "过松源晨炊漆公店（其五）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m12_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m13",
+      "chapterIds": [
+        "c7b_c01"
+      ],
+      "title": "约客",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c7b_m13_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c7b_m14",
+      "chapterIds": [
+        "c7b_c02"
+      ],
+      "title": "孙权劝学",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c7b_m14_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c7b_m15",
+      "chapterIds": [
+        "c7b_c02"
+      ],
+      "title": "木兰诗",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c7b_m15_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c7b_m16",
+      "chapterIds": [
+        "c7b_c02"
+      ],
+      "title": "卖油翁",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c7b_m16_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c7b_m17",
+      "chapterIds": [
+        "c7b_c02"
+      ],
+      "title": "陋室铭",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c7b_m17_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c7b_m18",
+      "chapterIds": [
+        "c7b_c02"
+      ],
+      "title": "爱莲说",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c7b_m18_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c7b_m19",
+      "chapterIds": [
+        "c7b_c02"
+      ],
+      "title": "河中石兽",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c7b_m19_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "七年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    }
+  ]
+}

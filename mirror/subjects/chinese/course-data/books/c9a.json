@@ -1,0 +1,449 @@
+{
+  "book": {
+    "id": "c9a",
+    "label": "九年级上册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "c9a_c01",
+        "label": "古诗词诵读",
+        "title": "古诗词诵读",
+        "sampleTopics": [
+          "原文诵读",
+          "意象画面",
+          "情感手法"
+        ]
+      },
+      {
+        "id": "c9a_c02",
+        "label": "文言文阅读",
+        "title": "文言文阅读",
+        "sampleTopics": [
+          "原文疏通",
+          "实词虚词",
+          "句式译文"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "c9a_c01",
+      "label": "古诗词诵读",
+      "children": []
+    },
+    {
+      "id": "c9a_c02",
+      "label": "文言文阅读",
+      "children": []
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "c9a_m01",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "沁园春·雪",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m01_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m02",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "行路难（其一）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m02_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m03",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "酬乐天扬州初逢席上见赠",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m03_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m04",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "水调歌头（明月几时有）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m04_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m05",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "月夜忆舍弟",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m05_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m06",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "长沙过贾谊宅",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m06_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m07",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "左迁蓝关示侄孙湘",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m07_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m08",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "商山早行",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m08_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m09",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "咸阳城东楼",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m09_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m10",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "无题",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m10_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m11",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "行香子（树绕村庄）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m11_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m12",
+      "chapterIds": [
+        "c9a_c01"
+      ],
+      "title": "丑奴儿·书博山道中壁",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9a_m12_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9a_m13",
+      "chapterIds": [
+        "c9a_c02"
+      ],
+      "title": "岳阳楼记",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9a_m13_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c9a_m14",
+      "chapterIds": [
+        "c9a_c02"
+      ],
+      "title": "醉翁亭记",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9a_m14_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c9a_m15",
+      "chapterIds": [
+        "c9a_c02"
+      ],
+      "title": "湖心亭看雪",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9a_m15_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级上册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    }
+  ]
+}

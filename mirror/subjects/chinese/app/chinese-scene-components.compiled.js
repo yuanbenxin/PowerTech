@@ -1,0 +1,390 @@
+window.ChineseApp = window.ChineseApp || {};
+(() => {
+  const app = window.ChineseApp;
+  function DashboardOverlayShell({
+    eyebrow,
+    title,
+    subtitle,
+    onClose,
+    maxWidth = 'max-w-5xl',
+    children
+  }) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "absolute inset-0 z-[120] flex items-center justify-center bg-black/60 px-4 py-5 backdrop-blur-md sm:px-6"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: `w-full ${maxWidth} max-h-full overflow-hidden rounded-[34px] border border-white/10 bg-[#07110f]/96 text-white shadow-[0_30px_120px_rgba(0,0,0,0.45)]`
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-start justify-between gap-5 border-b border-white/8 px-5 py-5 sm:px-7"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "min-w-0"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black uppercase tracking-[0.34em] text-slate-300/90"
+    }, eyebrow), /*#__PURE__*/React.createElement("div", {
+      className: "mt-2 text-3xl font-black italic tracking-tight text-white"
+    }, title), subtitle ? /*#__PURE__*/React.createElement("div", {
+      className: "mt-2 max-w-3xl text-sm leading-7 text-white/60"
+    }, subtitle) : null), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: onClose,
+      className: "rounded-full border border-white/10 px-3 py-2 text-[11px] font-black tracking-[0.18em] text-white/70 transition-all hover:text-white"
+    }, "\u5173\u95ED")), /*#__PURE__*/React.createElement("div", {
+      className: "max-h-[calc(100vh-180px)] overflow-y-auto custom-scrollbar px-5 py-5 sm:px-7 sm:py-6"
+    }, children)));
+  }
+  function formatDateTime(value) {
+    const date = new Date(value || '');
+    if (Number.isNaN(date.getTime())) return '未设置';
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+  }
+  function formatTier(value) {
+    return {
+      founding: '初创会员',
+      normal: '正式会员',
+      regular: '正式会员',
+      trial: '试用会员',
+      'local-preview': '本地预览'
+    }[String(value || '').toLowerCase()] || '未设置';
+  }
+  function formatAccess(value) {
+    return {
+      active: '已开通',
+      expired: '已到期',
+      inactive: '未开通'
+    }[String(value || '').toLowerCase()] || '未设置';
+  }
+  function AnnouncementCenter() {
+    const [loading, setLoading] = React.useState(false);
+    const [items, setItems] = React.useState([]);
+    const [error, setError] = React.useState('');
+    const refresh = async () => {
+      setLoading(true);
+      try {
+        const payload = await app.requestUnifiedApi('/api/announcements/recent?limit=12&scan=120');
+        setItems(Array.isArray(payload?.items) ? payload.items : []);
+        setError('');
+      } catch (requestError) {
+        setError(requestError.message || '公告加载失败，请稍后重试。');
+      } finally {
+        setLoading(false);
+      }
+    };
+    React.useEffect(() => {
+      void refresh();
+    }, []);
+    return /*#__PURE__*/React.createElement("section", {
+      className: "rounded-[28px] border border-white/10 bg-white/[0.04] p-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-start justify-between gap-3"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black tracking-[0.3em] text-slate-300/85"
+    }, "\u516C\u544A\u4E2D\u5FC3"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 text-sm leading-7 text-white/68"
+    }, "\u8FD9\u91CC\u4F1A\u6536\u7EB3\u6700\u8FD1\u7684\u6D88\u606F\u63D0\u9192\u3001\u529F\u80FD\u66F4\u65B0\u548C\u4E0E\u4F60\u8D26\u53F7\u76F8\u5173\u7684\u901A\u77E5\u3002")), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: () => {
+        void refresh();
+      },
+      className: "rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[11px] font-black tracking-[0.16em] text-white/76"
+    }, loading ? '刷新中...' : '刷新')), /*#__PURE__*/React.createElement("div", {
+      className: `mt-5 rounded-[22px] border px-4 py-5 text-sm ${error ? 'border-rose-400/18 bg-rose-500/[0.08] text-rose-50' : 'border-dashed border-white/10 bg-white/[0.03] text-white/58'}`
+    }, error || (items.length ? `当前共有 ${items.length} 条公告。` : '暂无公告消息。')));
+  }
+  function FeedbackCenter() {
+    const [type, setType] = React.useState('bug');
+    const [title, setTitle] = React.useState('');
+    const [content, setContent] = React.useState('');
+    const [state, setState] = React.useState({
+      type: '',
+      text: ''
+    });
+    const [submitting, setSubmitting] = React.useState(false);
+    const submit = async event => {
+      event.preventDefault();
+      if (!title.trim() || !content.trim() || submitting) return;
+      setSubmitting(true);
+      try {
+        await app.requestUnifiedApi('/api/suggestions/submit', {
+          method: 'POST',
+          json: {
+            source: 'chinese',
+            type,
+            title: title.trim(),
+            content: content.trim()
+          }
+        });
+        setState({
+          type: 'success',
+          text: '意见已提交，我们会尽快查看。'
+        });
+        setTitle('');
+        setContent('');
+      } catch (requestError) {
+        setState({
+          type: 'error',
+          text: requestError.message || '意见提交失败，请稍后重试。'
+        });
+      } finally {
+        setSubmitting(false);
+      }
+    };
+    return /*#__PURE__*/React.createElement("section", {
+      className: "rounded-[28px] border border-white/10 bg-white/[0.04] p-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black tracking-[0.3em] text-slate-300/85"
+    }, "\u610F\u89C1\u7BB1"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 text-sm leading-7 text-white/68"
+    }, "\u4F60\u53EF\u4EE5\u5728\u8FD9\u91CC\u63D0\u4EA4\u95EE\u9898\u3001\u529F\u80FD\u5EFA\u8BAE\u548C\u5185\u5BB9\u4FEE\u6B63\u3002"), state.text ? /*#__PURE__*/React.createElement("div", {
+      className: `mt-4 rounded-[20px] border px-4 py-3 text-sm ${state.type === 'success' ? 'border-slate-400/18 bg-slate-500/[0.08] text-slate-50' : 'border-rose-400/18 bg-rose-500/[0.08] text-rose-50'}`
+    }, state.text) : null, /*#__PURE__*/React.createElement("form", {
+      className: "mt-5 space-y-4",
+      onSubmit: submit
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap gap-2"
+    }, [{
+      id: 'bug',
+      label: '问题反馈'
+    }, {
+      id: 'feature',
+      label: '功能建议'
+    }, {
+      id: 'ui',
+      label: '界面优化'
+    }, {
+      id: 'content',
+      label: '内容修正'
+    }].map(item => /*#__PURE__*/React.createElement("button", {
+      key: item.id,
+      type: "button",
+      onClick: () => setType(item.id),
+      className: `rounded-full border px-3 py-2 text-xs font-black tracking-[0.12em] ${type === item.id ? 'border-slate-400/18 bg-slate-500/[0.08] text-slate-100' : 'border-white/10 bg-white/[0.03] text-white/62'}`
+    }, item.label))), /*#__PURE__*/React.createElement("input", {
+      value: title,
+      onChange: event => setTitle(event.target.value),
+      placeholder: "\u53CD\u9988\u6807\u9898",
+      className: "w-full rounded-[18px] border border-white/10 bg-[#07110f] px-4 py-3 text-sm text-white outline-none focus:border-slate-400/40"
+    }), /*#__PURE__*/React.createElement("textarea", {
+      value: content,
+      onChange: event => setContent(event.target.value),
+      placeholder: "\u8BE6\u7EC6\u63CF\u8FF0",
+      className: "min-h-[118px] w-full rounded-[18px] border border-white/10 bg-[#07110f] px-4 py-3 text-sm leading-7 text-white outline-none focus:border-slate-400/40"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "flex justify-end"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "submit",
+      disabled: submitting,
+      className: "rounded-[18px] bg-slate-400 px-5 py-3 text-sm font-black tracking-[0.14em] text-black disabled:opacity-60"
+    }, submitting ? '提交中...' : '提交意见'))));
+  }
+  function AccountOverlay({
+    payload,
+    onClose
+  }) {
+    const user = payload?.user || payload?.resolved?.user || {};
+    const access = payload?.subject_access || payload?.resolved?.subject_access || {};
+    const [copied, setCopied] = React.useState(false);
+    const [loggingOut, setLoggingOut] = React.useState(false);
+    const memberId = user.member_id || '未设置';
+    const logout = async () => {
+      if (loggingOut) return;
+      setLoggingOut(true);
+      await app.logoutFromUnifiedSubject('chinese');
+    };
+    const copy = async () => {
+      try {
+        await navigator.clipboard?.writeText(memberId);
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 1800);
+      } catch (error) {}
+    };
+    return /*#__PURE__*/React.createElement(DashboardOverlayShell, {
+      eyebrow: "CHINESE ACCOUNT",
+      title: "·",
+      subtitle: "\u67E5\u770B\u7EDF\u4E00\u8D26\u53F7\u8D44\u6599\u548C\u521D\u4E2D\u8BED\u6587\u5B66\u79D1\u8BBF\u95EE\u72B6\u6001\u3002",
+      onClose: onClose,
+      maxWidth: "max-w-6xl"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "grid gap-4 xl:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]"
+    }, /*#__PURE__*/React.createElement("section", {
+      className: "rounded-[30px] border border-white/10 bg-white/[0.04] p-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex flex-wrap items-start justify-between gap-4"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black uppercase tracking-[0.3em] text-slate-300/85"
+    }, "\u4F1A\u5458\u8D44\u6599"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 text-3xl font-black italic text-white"
+    }, user.username || user.member_id || '统一账号'), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 flex flex-wrap gap-2"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "rounded-full border border-slate-400/18 bg-slate-500/[0.08] px-3 py-1 text-[11px] font-black tracking-[0.16em] text-slate-100"
+    }, formatTier(access.membership_tier || user.membership_tier)), /*#__PURE__*/React.createElement("span", {
+      className: "rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[11px] font-black tracking-[0.16em] text-white/74"
+    }, formatAccess(access.access_status)))), /*#__PURE__*/React.createElement("div", {
+      className: "min-w-[170px] rounded-[22px] border border-white/10 bg-[#06110f]/70 px-4 py-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black tracking-[0.22em] text-white/36"
+    }, "\u4F1A\u5458\u7F16\u53F7"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 break-all text-sm font-semibold text-white/88"
+    }, memberId))), /*#__PURE__*/React.createElement("div", {
+      className: "mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4"
+    }, [{
+      label: '身份',
+      value: user.identity === 'teacher' ? '教师' : '学生'
+    }, {
+      label: '学科权限',
+      value: formatAccess(access.access_status)
+    }, {
+      label: '有效期',
+      value: formatDateTime(access.expires_at || user.expires_at)
+    }, {
+      label: '当前学科',
+      value: '初中语文'
+    }].map(item => /*#__PURE__*/React.createElement("div", {
+      key: item.label,
+      className: "rounded-[22px] border border-white/10 bg-white/[0.03] p-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black tracking-[0.22em] text-white/35"
+    }, item.label), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 break-words text-base font-black text-white"
+    }, item.value)))), /*#__PURE__*/React.createElement("div", {
+      className: "mt-5 flex flex-wrap gap-3"
+    }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: copy,
+      className: "rounded-[18px] border border-white/10 bg-white/[0.05] px-4 py-3 text-sm font-black tracking-[0.12em] text-white transition-all hover:bg-white/[0.09]"
+    }, copied ? '已复制会员号' : '复制会员号'), /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: logout,
+      disabled: loggingOut,
+      className: "rounded-[18px] border border-rose-400/18 bg-rose-500/[0.10] px-4 py-3 text-sm font-black tracking-[0.12em] text-rose-50 transition-all hover:bg-rose-500/[0.16] disabled:opacity-60"
+    }, loggingOut ? '处理中...' : '退出登录'))), /*#__PURE__*/React.createElement("aside", {
+      className: "space-y-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "rounded-[28px] border border-white/10 bg-white/[0.04] p-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black tracking-[0.3em] text-white/40"
+    }, "\u5F53\u524D\u5B66\u4E60\u533A"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-3 text-2xl font-black text-white"
+    }, "\u521D\u4E2D\u8BED\u6587"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-2 text-base font-semibold text-slate-300"
+    }, "\u8BD7\u8BCD\u4E0E\u6587\u8A00\u6587\u5361\u7247"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-4 text-sm leading-7 text-white/62"
+    }, "\u5F53\u524D\u6559\u6750\u5B9A\u4F4D\u4F1A\u4FDD\u7559\u5728\u8FD9\u4E2A\u5B66\u79D1\u5DE5\u4F5C\u53F0\u4E2D\uFF0C\u540E\u7EED\u63A5\u5165\u8BFE\u4EF6\u540E\u4ECD\u53EF\u4ECE\u540C\u4E00\u5F20\u5361\u7247\u7EE7\u7EED\u5B66\u4E60\u3002")), /*#__PURE__*/React.createElement("div", {
+      className: "rounded-[28px] border border-white/10 bg-white/[0.04] p-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black tracking-[0.3em] text-white/40"
+    }, "\u8D26\u53F7\u72B6\u6001"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-4 grid gap-3"
+    }, [{
+      label: '会员类型',
+      value: formatTier(access.membership_tier || user.membership_tier)
+    }, {
+      label: '访问状态',
+      value: formatAccess(access.access_status)
+    }, {
+      label: '到期时间',
+      value: formatDateTime(access.expires_at || user.expires_at)
+    }].map(item => /*#__PURE__*/React.createElement("div", {
+      key: item.label,
+      className: "rounded-[20px] border border-white/10 bg-white/[0.03] px-4 py-3"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px] font-black tracking-[0.2em] text-white/34"
+    }, item.label), /*#__PURE__*/React.createElement("div", {
+      className: "mt-2 text-sm font-black text-white"
+    }, item.value))))))), /*#__PURE__*/React.createElement("div", {
+      className: "grid gap-4 xl:grid-cols-2"
+    }, /*#__PURE__*/React.createElement(AnnouncementCenter, null), /*#__PURE__*/React.createElement(FeedbackCenter, null))));
+  }
+  function CardDetail({
+    card,
+    frame
+  }) {
+    const coursewareEntry = String(card.courseware?.entry || '').trim();
+    const narrow = frame.isPortrait;
+    const titleSize = narrow ? card.title.length > 11 ? 'text-[24px]' : 'text-[30px]' : 'text-[32px]';
+    const bgUrl = card.image;
+    const isTopic = Boolean(card.isTopic);
+    const isJourneyTopic = isTopic && Boolean(card.chapterRange);
+    const isMasterpiece = Boolean(card.isMasterpiece);
+    if (coursewareEntry) {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "h-full w-full p-0 sm:p-1"
+      }, /*#__PURE__*/React.createElement("iframe", {
+        title: `${card.title}交互式课件`,
+        src: coursewareEntry,
+        allow: "autoplay; fullscreen",
+        className: "h-full w-full border border-[#deb85b]/80 bg-[#071114] shadow-[0_18px_48px_rgba(0,0,0,0.35)]",
+        style: {
+          borderRadius: narrow ? '12px' : '18px',
+          touchAction: 'pan-y'
+        }
+      }));
+    }
+    return /*#__PURE__*/React.createElement("div", {
+      className: "w-full h-full flex items-center justify-center p-2 sm:p-4"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "w-full max-w-2xl bg-zinc-900/60 border border-white/5 flex flex-col overflow-y-auto custom-scrollbar max-h-full",
+      style: {
+        borderRadius: '24px',
+        padding: narrow ? '20px' : '28px'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "mb-4 shrink-0"
+    }, /*#__PURE__*/React.createElement("h2", {
+      className: `cn-detail-title ${titleSize} font-bold leading-tight text-slate-300 break-words`,
+      style: {
+        fontFamily: '"Kaiti", "STKaiti", "楷体", "华文楷体", "Georgia", serif'
+      }
+    }, card.title), /*#__PURE__*/React.createElement("p", {
+      className: "cn-detail-meta mt-2 text-[11px] font-black uppercase tracking-[0.2em] text-white/40"
+    }, card.bookLabel, " / ", app.contentTypeLabel(card.contentType))), /*#__PURE__*/React.createElement("div", {
+      className: `cn-detail-art cn-card-art-${card.contentType} relative shrink-0 overflow-hidden border border-white/5 bg-zinc-950/50 h-[200px] sm:h-[240px]`,
+      style: {
+        borderRadius: '16px',
+        ...(bgUrl ? {
+          backgroundImage: `url(${bgUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        } : isTopic || isMasterpiece ? {
+          backgroundImage: 'radial-gradient(circle at 18% 12%, rgba(203, 151, 57, 0.32), transparent 34%), radial-gradient(circle at 78% 84%, rgba(125, 34, 34, 0.44), transparent 40%), linear-gradient(135deg, #22140e, #351510 52%, #0f1212)'
+        } : {})
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "cn-card-texture absolute inset-0"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "absolute inset-x-0 bottom-0 p-5"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "text-[9px] font-black tracking-[0.3em] text-slate-200/70"
+    }, "CARD STATUS"), /*#__PURE__*/React.createElement("div", {
+      className: "mt-2 text-xl font-black text-white"
+    }, isTopic ? '整本书重点考查' : isMasterpiece ? card.status === 'ready' ? '名著专题已整理' : '名著专题规划中' : '课件待接入'), /*#__PURE__*/React.createElement("div", {
+      className: "mt-1 text-xs leading-5 text-white/70"
+    }, isJourneyTopic ? `${card.chapterRange} · 统编版“精读和跳读”专题的高频锚点，适合用作情节、人物与主题复习。` : isTopic ? `《${card.bookLabel.replace(' · 名著导读', '')}》 · 围绕人物、情节、主题或写法设置的高频复习专题。` : isMasterpiece ? `作者：${card.author} · ${card.grade}${card.topicCount ? ` · 已整理 ${card.topicCount} 个专题` : ' · 尚未创建书内专题'}` : '当前已完成教材卡片与目录定位，原文、注释、译文、音频及互动课件将在后续单独接入。'))), /*#__PURE__*/React.createElement("div", {
+      className: "mt-5 flex flex-col gap-5"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h5", {
+      className: "mb-3 text-[9px] font-black uppercase tracking-widest text-[#B53D35]"
+    }, "\u6838\u5FC3\u8981\u70B9 / Objectives"), /*#__PURE__*/React.createElement("div", {
+      className: "space-y-3"
+    }, card.points.map(point => /*#__PURE__*/React.createElement("div", {
+      key: point,
+      className: "flex gap-2.5 text-[13px] font-medium leading-6 text-zinc-800"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B53D35]"
+    }), point)))), /*#__PURE__*/React.createElement("div", {
+      className: "border-t border-black/5 pt-5"
+    }, /*#__PURE__*/React.createElement("h5", {
+      className: "mb-2 text-[9px] font-black uppercase tracking-widest text-[#B53D35]"
+    }, "\u6458\u8981 / Abstract"), /*#__PURE__*/React.createElement("p", {
+      className: "text-sm font-light italic leading-7 text-zinc-700"
+    }, card.detail)), /*#__PURE__*/React.createElement("div", {
+      className: "mt-1 rounded-xl border border-amber-300/18 bg-amber-300/[0.08] px-4 py-3.5 text-[11px] font-bold leading-5 text-amber-50/88"
+    }, isJourneyTopic ? '本专题卡用于定位原著回目与复习重点；不同地区中考的材料和命题角度会有差异，请以本地考试说明为准。' : isTopic ? '本专题卡用于整合书内人物、情节、主题和写法；不同地区中考的材料与命题角度会有差异，请以本地考试说明为准。' : isMasterpiece ? card.status === 'ready' ? '本书已可进入专题卡复习；后续会在同一书内继续补充人物、情节与主题模块。' : '本书已进入名著导读总目录，但书内专题尚未创建；不会被误标为已经完成。' : '本卡片暂不提供课件入口，待课件完成后按同一位置接入。'))));
+  }
+  Object.assign(app, {
+    CardDetail,
+    AccountOverlay
+  });
+})();

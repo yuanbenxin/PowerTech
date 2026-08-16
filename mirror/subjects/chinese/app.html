@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>PowerTech在线教学演示 - 初中语文诗词与文言文</title>
+    <link rel="stylesheet" href="assets/vendor/fonts/math-local-fonts.css?v=3d76f36c344d">
+    <link rel="stylesheet" href="assets/css/chinese-recitation.css?v=60682c5edc9d">
+    <link rel="stylesheet" href="assets/css/chinese-masterpiece-practice.css?v=087a50c804c6">
+    <link rel="stylesheet" href="assets/css/chinese-journey-lesson.css?v=daea1eecff38">
+    <script src="assets/vendor/js/tailwind.min.js?v=a2c3d9b38e8e"></script>
+    <script src="assets/vendor/js/react.production.min.js?v=4b4969fa4ef3"></script>
+    <script src="assets/vendor/js/react-dom.production.min.js?v=21758ed084cd"></script>
+    <script id="shg-build-version-redirect">
+    (function () {
+        var expected = "20260809193335";
+        try {
+            var url = new URL(window.location.href);
+            if (url.searchParams.get("v") !== expected) {
+                url.searchParams.set("v", expected);
+                window.location.replace(url.toString());
+            }
+        } catch (error) {}
+    })();
+    </script>
+    <script src="chinese.config.js?v=aa50465dff7d"></script>
+    <style>
+        :root { color-scheme: dark; }
+        * { box-sizing: border-box; }
+        html, body, #root { width: 100%; height: 100%; margin: 0; }
+        body { overflow: hidden; background: #0E1010; font-family: 'Kaiti', 'STKaiti', '楷体', '华文楷体', 'Noto Sans SC', 'Microsoft YaHei UI', sans-serif; }
+        button { font: inherit; }
+        .cn-system-shell { background: radial-gradient(circle at 50% 8%, rgba(20, 24, 24, 0.48) 0%, rgba(14, 16, 16, 0.95) 42%, #0E1010 100%); }
+        .cn-system-shell::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .18; background-image: linear-gradient(rgba(227, 222, 195, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(227, 222, 195, .02) 1px, transparent 1px); background-size: 52px 52px; mask-image: linear-gradient(to bottom, black, transparent 88%); }
+        .cn-card-art { background-color: #121414; }
+        .cn-card-art-poetry { background-image: radial-gradient(circle at 22% 18%, rgba(130, 135, 132, 0.2), transparent 32%), linear-gradient(135deg, #121414 0%, #202424 43%, #0c0d0d 100%); }
+        .cn-card-art-classical_chinese { background-image: radial-gradient(circle at 76% 20%, rgba(155, 51, 43, 0.15), transparent 34%), linear-gradient(135deg, #141212 0%, #2b2020 42%, #0c0c0c 100%); }
+        .cn-card-texture { position: absolute; inset: 0; opacity: .16; background-image: repeating-linear-gradient(0deg, transparent 0 15px, rgba(255,255,255,.05) 16px 17px, transparent 18px 34px), repeating-linear-gradient(90deg, transparent 0 54px, rgba(255,255,255,.03) 55px 56px, transparent 57px 108px); transform: perspective(420px) rotateX(58deg) scale(1.6) translateY(9%); transform-origin: bottom; }
+        .cn-detail-art .cn-card-texture { opacity: .24; transform: perspective(680px) rotateX(62deg) scale(1.55) translateY(12%); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { scrollbar-width: none; }
+        .custom-scrollbar::-webkit-scrollbar { width: 7px; height: 7px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { border-radius: 99px; background: rgba(227, 222, 195, 0.15); }
+        @media (max-width: 720px) { .cn-system-shell::before { background-size: 38px 38px; } }
+
+        /* ==================== 玄青焦墨黑 (深色水墨) 样式覆写 ==================== */
+        /* 1. 头部导航与分割线 */
+        header.z-20 {
+            background-color: rgba(14, 16, 16, 0.75) !important;
+            border-bottom-color: rgba(227, 222, 195, 0.08) !important;
+        }
+        /* 导航栏内的文字保持明亮仿古色 */
+        header.z-20 .text-white, header.z-20 .text-slate-300, header.z-20 .text-zinc-400 {
+            color: #E3DEC3 !important;
+        }
+
+        /* 2. 外部大视口与年级过滤器按钮样式（深色背景体系） */
+        .text-zinc-500 {
+            color: #828784 !important; /* 灰墨 */
+        }
+        /* 非激活过滤器按钮 */
+        .border-white\/10.bg-white\/5 {
+            background-color: rgba(22, 25, 25, 0.75) !important;
+            border-color: rgba(227, 222, 195, 0.1) !important;
+            color: #C5BF9E !important;
+        }
+        .border-white\/10.bg-white\/5:hover {
+            border-color: rgba(181, 61, 53, 0.4) !important;
+            color: #E3DEC3 !important;
+        }
+
+        /* 3. 卡片容器重构：改为宣纸白底板 */
+        .bg-zinc-900\/40, .bg-zinc-950\/50, .bg-zinc-900\/60, .cn-card { 
+            background-color: rgba(245, 241, 232, 0.95) !important; /* 宣纸暖白 */
+            border-color: rgba(28, 28, 28, 0.12) !important;
+        }
+
+        /* 4. 卡片（CardTile）内部字色反转为焦浓墨色 */
+        .bg-zinc-900\/40 h3, .bg-zinc-950\/50 h2, .bg-zinc-900\/60 div, .cn-card h3 {
+            color: #1C1C1C !important;
+        }
+        /* 辅助字为深焦墨色，提升阅读对比度 */
+        .bg-zinc-900\/40 .font-black.uppercase,
+        .bg-zinc-900\/40 .text-slate-300,
+        .cn-card .font-black.uppercase,
+        .cn-card .text-slate-300 {
+            color: #3C3C3C !important;
+        }
+        /* 卡片底部的渐变遮罩反转为白底渐变，防止发黑 */
+        .bg-zinc-900\/40 .bg-gradient-to-t, .cn-card .bg-gradient-to-t {
+            background-image: linear-gradient(to top, rgba(245, 241, 232, 0.98) 0%, rgba(245, 241, 232, 0.4) 60%, transparent 100%) !important;
+        }
+        
+        /* 5. 卡片 Hover / Active 状态样式重建（支持高亮朱砂红与反色高对比） */
+        .cn-card.group:hover, .cn-card.group:focus, .cn-card.z-20 {
+            border-color: rgba(181, 61, 53, 0.6) !important;
+            background-color: rgba(18, 20, 20, 0.98) !important; /* 转为深水墨底板 */
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8), 0 0 30px rgba(148,163,184,0.25) !important;
+        }
+        /* Hover/Active 状态下的渐变遮罩还原为暗渐变 */
+        .cn-card.group:hover .bg-gradient-to-t, .cn-card.z-20 .bg-gradient-to-t {
+            background-image: linear-gradient(to top, rgba(14, 16, 16, 0.98) 0%, rgba(14, 16, 16, 0.45) 60%, transparent 100%) !important;
+        }
+        /* Hover/Active 状态下的字色反转 */
+        .cn-card.group:hover h3, .cn-card.z-20 h3 {
+            color: #FFFFFF !important;
+        }
+        /* Hover/Active 状态下的分类小字高亮为暖朱砂红 */
+        .cn-card.group:hover .font-black.uppercase, .cn-card.z-20 .font-black.uppercase {
+            color: #E36A5F !important;
+        }
+        /* Hover/Active 状态下的标签高对比度设计（黑底白字） */
+        .cn-card.group:hover span.rounded-md, .cn-card.z-20 span.rounded-md {
+            background-color: rgba(0, 0, 0, 0.55) !important;
+            border-color: rgba(255, 255, 255, 0.18) !important;
+            color: #FDFBF7 !important;
+        }
+        /* Hover/Active 状态下的底部“查看卡片”与箭头 */
+        .cn-card.group:hover .text-slate-300, .cn-card.z-20 .text-slate-300 {
+            color: #FDFBF7 !important;
+        }
+        
+        /* 6. 卡片小标签（Tags）高对比度适配 (默认状态) */
+        .bg-zinc-900\/40 span.rounded-md, .cn-card span.rounded-md {
+            background-color: rgba(28, 28, 28, 0.07) !important;
+            border-color: rgba(28, 28, 28, 0.15) !important;
+            color: #242424 !important;
+        }
+        /* 卡片“待接入”药丸改成朱砂红印章样式 */
+        .bg-zinc-900\/40 .bg-black\/35, .cn-card .bg-black\/35 {
+            background-color: rgba(181, 61, 53, 0.06) !important;
+            border-color: rgba(181, 61, 53, 0.3) !important;
+            color: #B53D35 !important;
+        }
+
+        /* 6. 卡片详情页（CardDetail）适配 */
+        /* 详情页标题与小字（高对比度焦墨色） */
+        .cn-detail-title {
+            color: #1C1C1C !important;
+        }
+        .cn-detail-meta {
+            color: #3C3C3C !important;
+        }
+        .cn-detail-art h2, .bg-zinc-900\/60 h5 {
+            color: #1C1C1C !important;
+        }
+        /* 核心要点及摘要标题 */
+        .bg-zinc-900\/60 h5 {
+            color: #B53D35 !important; /* 朱砂红 */
+            border-bottom: 1px dashed rgba(28, 28, 28, 0.1);
+            padding-bottom: 4px;
+        }
+        /* 正文内容 */
+        .bg-zinc-900\/60 .text-zinc-300, 
+        .bg-zinc-900\/60 .text-zinc-400 {
+            color: #1C1C1C !important;
+        }
+        .bg-zinc-900\/60 .text-zinc-400 {
+            font-style: italic;
+            color: #4A4A4A !important;
+        }
+        /* 列表点（圆点） */
+        .bg-zinc-900\/60 .bg-slate-400 {
+            background-color: #B53D35 !important;
+        }
+        /* 详情底部提示信息盒 */
+        .bg-zinc-900\/60 .border-amber-300\/18 {
+            border-color: rgba(181, 61, 53, 0.2) !important;
+            background-color: rgba(181, 61, 53, 0.05) !important;
+            color: #9C332B !important;
+        }
+
+        /* 7. 卡件预览图遮罩与字色反转 */
+        .cn-detail-art .bg-gradient-to-t {
+            background-image: linear-gradient(to top, rgba(245, 241, 232, 0.98) 0%, rgba(245, 241, 232, 0.4) 60%, transparent 100%) !important;
+        }
+        .cn-detail-art .text-slate-200\/70 {
+            color: #5B5B5B !important;
+        }
+        .cn-detail-art .text-white {
+            color: #1C1C1C !important;
+        }
+        .cn-detail-art .text-white\/66 {
+            color: #3B3B3B !important;
+        }
+
+        /* 8. 选中的过滤器按钮 (朱砂红) */
+        .bg-slate-400 { 
+            background-color: #9B332B !important; 
+            color: #FDFBF7 !important; 
+        }
+        .border-slate-400 {
+            border-color: #9B332B !important;
+        }
+        .bg-slate-400:hover {
+            background-color: #822a23 !important;
+        }
+
+        /* 9. 其它水墨微调 */
+        .rounded-full {
+            border-radius: 9999px !important;
+        }
+
+        /* 10. 金石印章金石篆刻效果 */
+        .cn-seal {
+            filter: url(#seal-distress);
+            transition: all 0.3s ease;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 2px !important;
+        }
+        .cn-seal-active {
+            background-color: #9B332B !important;
+            border-color: #9B332B !important;
+            color: #FDFBF7 !important;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4), 1px 1px 3px rgba(0, 0, 0, 0.25) !important;
+        }
+        .cn-seal-inactive {
+            background-color: #F5F1E8 !important;
+            border-color: #9B332B !important;
+            color: #9B332B !important;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
+        }
+        .cn-seal-inactive:hover {
+            background-color: #FCF9F2 !important;
+            border-color: #B53D35 !important;
+            color: #B53D35 !important;
+            transform: translateY(-1px);
+            box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        /* 顶部导航功能按钮印章化 */
+        .cn-header-btn {
+            filter: url(#seal-distress);
+            border-radius: 2px !important;
+            border: 1px solid rgba(227, 222, 195, 0.15) !important;
+            background-color: rgba(22, 25, 25, 0.75) !important;
+            color: #C5BF9E !important;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
+        }
+        .cn-header-btn:hover, .cn-header-btn:focus {
+            border-color: #9B332B !important;
+            background-color: #9B332B !important;
+            color: #FDFBF7 !important;
+            transform: translateY(-1px);
+            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.35), 0 4px 8px rgba(0, 0, 0, 0.25) !important;
+        }
+    </style>
+    <link rel="stylesheet" href="./shg-subject-auth-gate.css?v=2111788607f8">
+    <link rel="stylesheet" href="./trial-user-notice.css?v=3a5f39abea8b">
+    <script src="./shg-subject-gate.config.js?v=20260809193335"></script>
+    <script src="./shg-subject-auth-gate.js?v=d068c739a2fd"></script>
+<script>window.ModelViewerElement=window.ModelViewerElement||{};window.ModelViewerElement.dracoDecoderLocation="/draco/1.5.6/";</script>
+<script src="/powertech-ui.js"></script>
+</head>
+<body>
+    <div class="shg-subject-auth-overlay" id="shgSubjectAuthOverlay">
+        <div class="shg-subject-auth-card">
+            <div class="shg-subject-auth-glow shg-subject-auth-glow-a"></div>
+            <div class="shg-subject-auth-glow shg-subject-auth-glow-b"></div>
+            <div class="shg-subject-auth-visual" aria-hidden="true">
+                <span class="shg-subject-auth-orbit shg-subject-auth-orbit-a"></span>
+                <span class="shg-subject-auth-orbit shg-subject-auth-orbit-b"></span>
+                <span class="shg-subject-auth-core-ring"></span>
+                <span class="shg-subject-auth-core"></span>
+            </div>
+            <p class="shg-subject-auth-eyebrow">SHIGUANG VISION</p>
+            <div class="shg-subject-auth-meta-row">
+                <div class="shg-subject-auth-meta" data-shg-auth-meta>语文入口</div>
+                <div class="shg-subject-auth-phase" data-shg-auth-phase>正在连接统一权限中心</div>
+            </div>
+            <h1 class="shg-subject-auth-title" data-shg-auth-title>正在进入语文系统</h1>
+            <p class="shg-subject-auth-desc" data-shg-auth-desc>正在核验当前账号的统一登录状态，并准备进入该学科系统，请稍候。</p>
+            <div class="shg-subject-auth-progress" aria-hidden="true">
+                <span class="is-done">身份识别</span>
+                <span class="is-active">权限核验</span>
+                <span>系统载入</span>
+            </div>
+            <div class="shg-subject-auth-actions">
+                <a class="shg-subject-auth-button shg-subject-auth-button-primary" data-shg-auth-primary href="/">返回统一入口</a>
+                <a class="shg-subject-auth-button shg-subject-auth-button-secondary" data-shg-auth-secondary href="">刷新重试</a>
+            </div>
+        </div>
+    </div>
+    <!-- SVG 滤镜：模拟金石篆刻边缘斑驳与手工雕刻感 -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" width="0" height="0">
+        <defs>
+            <filter id="seal-distress" x="-10%" y="-10%" width="120%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+    <div id="root"></div>
+    <script src="app/chinese-shared.compiled.js?v=7e87f006a7da"></script>
+    <script src="app/chinese-unified-auth.compiled.js?v=361f62e0b429"></script>
+    <script src="app/chinese-scene-components.compiled.js?v=2dc430e6a167"></script>
+    <script src="app/chinese-layout-components.compiled.js?v=e7e3924ba12b"></script>
+    <script src="app/chinese-masterpiece-data.compiled.js?v=3e28a7c753d7"></script>
+    <script src="app/chinese-masterpiece-topic-data.compiled.js?v=4d28fb24a5c5"></script>
+    <script src="app/chinese-journey-data.compiled.js?v=61c92fa502e4"></script>
+    <script src="app/chinese-journey-lesson-components.compiled.js?v=6dd8cea8269f"></script>
+    <script src="app/chinese-masterpiece-practice-data.compiled.js?v=91a71a07f426"></script>
+    <script src="app/chinese-masterpiece-practice-components.compiled.js?v=4c7d71244de1"></script>
+    <script src="app/chinese-recitation-data.compiled.js?v=bf7397bd547b"></script>
+    <script src="app/chinese-recitation-components.compiled.js?v=ef99868734e6"></script>
+    <script src="app/chinese-entry.compiled.js?v=6b5abf8d92e4"></script>
+</body>
+</html>

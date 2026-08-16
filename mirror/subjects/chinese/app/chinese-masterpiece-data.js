@@ -1,0 +1,107 @@
+window.ChineseApp = window.ChineseApp || {};
+
+(() => {
+    const app = window.ChineseApp;
+
+    // 统编初中语文名著导读总目录。只有已经整理出书内专题的作品才标记为 ready。
+    const MASTERPIECE_LIBRARY = [
+        {
+            id: 'masterpiece_xiyouji', title: '西游记', author: '吴承恩', grade: '七年级上册',
+            bookId: 'masterpieces', bookLabel: '七年级上册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'journey', topicCount: 18,
+            image: 'assets/media/masterpieces/xiyouji.jpg',
+            tags: ['精读和跳读', '回目地图', '人物情节'],
+            points: ['已整理 18 个高频回目考点，覆盖人物、情节、主题与阅读方法。', '从“大闹天宫”到“取经功成”可按回目范围定位复习。', '点击进入书目，查看专题卡。'],
+            detail: '统编七年级上册名著导读作品。现已完成回目考点卡，可直接进入书内专题复习。'
+        },
+        {
+            id: 'masterpiece_chaohuaxishi', title: '朝花夕拾', author: '鲁迅', grade: '七年级上册',
+            bookId: 'masterpieces', bookLabel: '七年级上册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_chaohuaxishi', topicCount: 6,
+            image: 'assets/media/masterpieces/chaohuaxishi.jpg',
+            tags: ['回忆散文', '鲁迅', '人物篇目'],
+            points: ['拟整理篇目—人物—童年记忆关联图。', '重点覆盖阿长、藤野先生、范爱农等人物。'],
+            detail: '统编七年级上册名著导读作品，规划为篇目地图与人物主题卡。'
+        },
+        {
+            id: 'masterpiece_luotuoxiangzi', title: '骆驼祥子', author: '老舍', grade: '七年级下册',
+            bookId: 'masterpieces', bookLabel: '七年级下册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_luotuoxiangzi', topicCount: 6,
+            image: 'assets/media/masterpieces/luotuoxiangzi.jpg',
+            tags: ['祥子', '三起三落', '社会悲剧'],
+            points: ['拟整理祥子“三起三落”命运时间线。', '重点覆盖祥子、虎妞、小福子的人物关系。'],
+            detail: '统编七年级下册名著导读作品，适合以命运线、人物关系和悲剧成因组织专题。'
+        },
+        {
+            id: 'masterpiece_haiwanli', title: '海底两万里', author: '儒勒·凡尔纳', grade: '七年级下册',
+            bookId: 'masterpieces', bookLabel: '七年级下册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_haiwanli', topicCount: 6,
+            image: 'assets/media/masterpieces/haiwanli.jpg',
+            tags: ['鹦鹉螺号', '尼摩船长', '科幻航线'],
+            points: ['拟整理鹦鹉螺号航线与海底探险地图。', '重点覆盖尼摩船长、阿龙纳斯和科学幻想特征。'],
+            detail: '统编七年级下册名著导读作品，适合以航线、人物与科学精神组织专题。'
+        },
+        {
+            id: 'masterpiece_hongxing', title: '红星照耀中国', author: '埃德加·斯诺', grade: '八年级上册',
+            bookId: 'masterpieces', bookLabel: '八年级上册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_hongxing', topicCount: 6,
+            image: 'assets/media/masterpieces/hongxing.jpg',
+            tags: ['纪实作品', '长征', '人物档案'],
+            points: ['拟整理长征路线、人物档案与纪实阅读方法。', '重点区分纪实作品的事实性与文学表达。'],
+            detail: '统编八年级上册名著导读作品，规划为历史路线和纪实人物卡。'
+        },
+        {
+            id: 'masterpiece_kunchongji', title: '昆虫记', author: '法布尔', grade: '八年级上册',
+            bookId: 'masterpieces', bookLabel: '八年级上册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_kunchongji', topicCount: 6,
+            image: 'assets/media/masterpieces/kunchongji.jpg',
+            tags: ['科普', '观察', '法布尔'],
+            points: ['拟整理代表昆虫、观察方法与科学小品语言。', '重点覆盖科学精神和作品的文学性。'],
+            detail: '统编八年级上册名著导读作品，规划为昆虫观察与科普语言专题。'
+        },
+        {
+            id: 'masterpiece_fulei', title: '傅雷家书', author: '傅雷', grade: '八年级下册',
+            bookId: 'masterpieces', bookLabel: '八年级下册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_fulei', topicCount: 6,
+            image: 'assets/media/masterpieces/fulei.jpg',
+            tags: ['书信', '成长教育', '艺术修养'],
+            points: ['拟整理父子书信中的成长教育和艺术修养主题。', '重点覆盖书信体特点与家国情怀。'],
+            detail: '统编八年级下册名著导读作品，规划为主题书信与写法专题。'
+        },
+        {
+            id: 'masterpiece_gangtie', title: '钢铁是怎样炼成的', author: '尼古拉·奥斯特洛夫斯基', grade: '八年级下册',
+            bookId: 'masterpieces', bookLabel: '八年级下册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_gangtie', topicCount: 6,
+            image: 'assets/media/masterpieces/gangtie.jpg',
+            tags: ['保尔', '成长', '理想信念'],
+            points: ['拟整理保尔成长阶段与关键选择。', '重点覆盖挫折、意志、理想和书信情节。'],
+            detail: '统编八年级下册名著导读作品，规划为保尔成长线与主题选择卡。'
+        },
+        {
+            id: 'masterpiece_aiqing', title: '艾青诗选', author: '艾青', grade: '九年级上册',
+            bookId: 'masterpieces', bookLabel: '九年级上册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_aiqing', topicCount: 6,
+            image: 'assets/media/masterpieces/aiqing.jpg',
+            tags: ['诗歌', '土地', '太阳'],
+            points: ['拟整理代表诗篇、核心意象与朗读情感。', '重点覆盖“土地”“太阳”等常见意象。'],
+            detail: '统编九年级上册名著导读作品，规划为诗歌意象与朗读专题。'
+        },
+        {
+            id: 'masterpiece_shuihu', title: '水浒传', author: '施耐庵', grade: '九年级上册',
+            bookId: 'masterpieces', bookLabel: '九年级上册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_shuihu', topicCount: 6,
+            image: 'assets/media/masterpieces/shuihu.jpg',
+            tags: ['梁山', '好汉', '人物关系'],
+            points: ['拟整理梁山人物关系、绰号与经典情节地图。', '重点覆盖人物形象、反抗主题与悲剧意味。'],
+            detail: '统编九年级上册名著导读作品，规划为人物关系网与经典情节专题。'
+        },
+        {
+            id: 'masterpiece_rulin', title: '儒林外史', author: '吴敬梓', grade: '九年级下册',
+            bookId: 'masterpieces', bookLabel: '九年级下册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_rulin', topicCount: 6,
+            image: 'assets/media/masterpieces/rulin.jpg',
+            tags: ['讽刺小说', '范进中举', '科举'],
+            points: ['拟整理典型人物、科举故事与讽刺对象。', '重点覆盖夸张、对比等讽刺手法。'],
+            detail: '统编九年级下册名著导读作品，规划为科举讽刺与典型片段专题。'
+        },
+        {
+            id: 'masterpiece_jianai', title: '简·爱', author: '夏洛蒂·勃朗特', grade: '九年级下册',
+            bookId: 'masterpieces', bookLabel: '九年级下册 · 名著导读', contentType: 'masterpiece', isMasterpiece: true, status: 'ready', masterpieceTarget: 'masterpiece_jianai', topicCount: 6,
+            image: 'assets/media/masterpieces/jianai.jpg',
+            tags: ['简·爱', '人格独立', '成长'],
+            points: ['拟整理简·爱的成长轨迹和关键选择。', '重点覆盖人格独立、平等与尊严主题。'],
+            detail: '统编九年级下册名著导读作品，规划为人物成长线与主题阅读专题。'
+        }
+    ];
+
+    Object.assign(app, { MASTERPIECE_LIBRARY });
+})();

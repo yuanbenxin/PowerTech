@@ -1,0 +1,5608 @@
+{
+  "schemaVersion": 2,
+  "bookId": "journey",
+  "title": "西游记读图精练",
+  "generatedAt": "2026-07-29T09:47:09.989Z",
+  "cards": [
+    {
+      "id": "xyj-000",
+      "sourceId": "000",
+      "chapter": "文学常识导读",
+      "theme": "文学常识与作者",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-000.jpg",
+      "questions": [
+        {
+          "id": "picture-000",
+          "type": "文学常识",
+          "prompt": "图中唐僧师徒走向西天，指向《西游记》的整部取经故事。下列关于这部小说的表述，哪一项正确？",
+          "answer": "作者是明代吴承恩，它是一部长篇神魔小说",
+          "options": [
+            "作者是明代吴承恩，它是一部长篇神魔小说",
+            "作者是清代曹雪芹，它是一部世情小说",
+            "作者是明代施耐庵，它是一部历史演义小说",
+            "作者是清代蒲松龄，它是一部志怪短篇集"
+          ],
+          "explanation": "师徒西行是《西游记》的主线。作品通常署名明代吴承恩，以神魔想象写取经磨难。",
+          "scoringKeywords": [
+            "作者是明代吴承恩，它是一部长篇神魔小说"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-001",
+      "sourceId": "001",
+      "chapter": "第一回：灵根育孕源流出，心性修持大道生",
+      "theme": "猴王出世与称王",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-001.jpg",
+      "questions": [
+        {
+          "id": "picture-001",
+          "type": "人物来历",
+          "prompt": "花果山中的石猴出世，开启了孙悟空的故事。孙悟空最初是怎样诞生的？",
+          "answer": "由花果山仙石吸收日月精华孕育化生",
+          "options": [
+            "由花果山仙石吸收日月精华孕育化生",
+            "由东海龙王用龙珠变化而成",
+            "由菩提祖师用泥土捏成",
+            "由唐僧在江中救起并抚养长大"
+          ],
+          "explanation": "“仙石化猴”交代了悟空非凡的生命起点，也与他后来追求长生、反抗天庭相呼应。",
+          "scoringKeywords": [
+            "由花果山仙石吸收日月精华孕育化生"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-002",
+      "sourceId": "002",
+      "chapter": "第三回：四海千山皆拱伏，九幽十类尽除名",
+      "theme": "龙宫夺宝与大闹幽冥",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-002.jpg",
+      "questions": [
+        {
+          "id": "picture-002",
+          "type": "法器来历",
+          "prompt": "悟空在龙宫取到称手兵器。图中这根后来随悟空征战的金箍棒，原本是什么？",
+          "answer": "大禹治水时测定海深浅的定海神珍铁",
+          "options": [
+            "大禹治水时测定海深浅的定海神珍铁",
+            "太上老君炼丹炉中的火钳",
+            "观音菩萨净瓶里的杨柳枝",
+            "玉皇大帝赐给弼马温的官印"
+          ],
+          "explanation": "悟空到东海龙宫寻兵器，得到如意金箍棒；它原是定海神珍铁，可随心变化大小。",
+          "scoringKeywords": [
+            "大禹治水时测定海深浅的定海神珍铁"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-003",
+      "sourceId": "003",
+      "chapter": "第四回：官封弼马心何足，名注齐天意未宁",
+      "theme": "两次招安与齐天大圣",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-003.jpg",
+      "questions": [
+        {
+          "id": "picture-003",
+          "type": "情节因果",
+          "prompt": "图中悟空在天庭受封。玉帝第一次招安时封他为“弼马温”，悟空为何愤而反下天庭？",
+          "answer": "得知弼马温是没有品从的低微官职，认为自己受辱",
+          "options": [
+            "得知弼马温是没有品从的低微官职，认为自己受辱",
+            "发现这个官职必须终身看守五行山",
+            "被要求交出花果山所有猴群",
+            "因唐僧不许他前往西天取经"
+          ],
+          "explanation": "悟空起初不知官职高低，后来得知真相，认为天庭轻慢自己，便回花果山自称“齐天大圣”。",
+          "scoringKeywords": [
+            "得知弼马温是没有品从的低微官职，认为自己受辱"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-004",
+      "sourceId": "004",
+      "chapter": "第五回：乱蟠桃大圣偷丹，反天宫诸神捉怪",
+      "theme": "大闹天宫",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-004.jpg",
+      "questions": [
+        {
+          "id": "picture-004",
+          "type": "情节顺序",
+          "prompt": "画面表现悟空大闹天宫。下列行为中，最能说明他挑战天庭秩序的是哪一项？",
+          "answer": "搅乱蟠桃会后，又偷吃太上老君的九转金丹",
+          "options": [
+            "搅乱蟠桃会后，又偷吃太上老君的九转金丹",
+            "在流沙河收服卷帘大将",
+            "到五庄观救活人参果树",
+            "在车迟国为和尚求雨"
+          ],
+          "explanation": "偷桃、搅乱蟠桃会、偷仙酒和九转金丹，层层升级，构成悟空大闹天宫的重要情节。",
+          "scoringKeywords": [
+            "搅乱蟠桃会后，又偷吃太上老君的九转金丹"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-005",
+      "sourceId": "005",
+      "chapter": "第六回：观音赴会问原因，小圣施威降大圣 & 第七回：八卦炉中逃大圣，五行山下定心猿",
+      "theme": "大战天兵与五行山",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-005.jpg",
+      "questions": [
+        {
+          "id": "picture-005",
+          "type": "情节细节",
+          "prompt": "天兵围困花果山，悟空最终被擒。下列哪一组人物和法宝最符合原著情节？",
+          "answer": "二郎神主战，太上老君以金刚琢相助，哮天犬趁机咬住悟空",
+          "options": [
+            "二郎神主战，太上老君以金刚琢相助，哮天犬趁机咬住悟空",
+            "唐僧主战，观音以芭蕉扇相助，白龙马咬住悟空",
+            "牛魔王主战，如来以紫金葫芦相助，金翅大鹏咬住悟空",
+            "猪八戒主战，镇元子以人参果相助，老鼋咬住悟空"
+          ],
+          "explanation": "悟空神通广大，二郎神与他斗法时，老君暗中抛下金刚琢，哮天犬再乘隙咬住悟空。",
+          "scoringKeywords": [
+            "二郎神主战，太上老君以金刚琢相助，哮天犬趁机咬住悟空"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-006",
+      "sourceId": "006",
+      "chapter": "第八回至第十二回",
+      "theme": "唐僧身世与踏上征程",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-006.jpg",
+      "questions": [
+        {
+          "id": "picture-006",
+          "type": "人物来历",
+          "prompt": "木筏漂流的婴儿是后来的唐僧。唐僧俗家本姓什么，小名为何叫“江流儿”？",
+          "answer": "本姓陈，因出生后被母亲放入江中木匣漂流而得名",
+          "options": [
+            "本姓陈，因出生后被母亲放入江中木匣漂流而得名",
+            "本姓李，因在龙宫江流中出生而得名",
+            "本姓玄，因随玄奘到西天而得名",
+            "本姓孙，因在花果山江边长大而得名"
+          ],
+          "explanation": "唐僧父母遇害后，母亲为保住婴儿性命，将他放入江中；“江流儿”的身世为取经使命增添了苦难底色。",
+          "scoringKeywords": [
+            "本姓陈，因出生后被母亲放入江中木匣漂流而得名"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-007",
+      "sourceId": "007",
+      "chapter": "第十三回至第十四回",
+      "theme": "双叉岭与五行山收徒",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-007.jpg",
+      "questions": [
+        {
+          "id": "picture-007",
+          "type": "情节因果",
+          "prompt": "画面是唐僧在五行山收悟空为徒。唐僧如何使悟空脱困，并给他取了什么法名？",
+          "answer": "揭去如来的金字压帖，悟空破山而出，法名为孙行者",
+          "options": [
+            "揭去如来的金字压帖，悟空破山而出，法名为孙行者",
+            "砍断紧箍咒，悟空飞出炼丹炉，法名为悟能",
+            "打开龙宫石门，悟空得到金箍棒，法名为悟净",
+            "扇灭火焰山，悟空拜入天庭，法名为弼马温"
+          ],
+          "explanation": "悟空被如来压在五行山下五百年，唐僧揭去压帖后收他为徒，取混名“行者”。",
+          "scoringKeywords": [
+            "揭去如来的金字压帖，悟空破山而出，法名为孙行者"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-008",
+      "sourceId": "008",
+      "chapter": "第十五回至第十九回",
+      "theme": "鹰愁涧与高老庄",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-008.jpg",
+      "questions": [
+        {
+          "id": "picture-008",
+          "type": "人物来历",
+          "prompt": "画面中的白龙马原先吞掉唐僧的白马。它后来为何能成为取经队伍的一员？",
+          "answer": "观音菩萨将犯错的西海龙王三太子点化为白龙马",
+          "options": [
+            "观音菩萨将犯错的西海龙王三太子点化为白龙马",
+            "如来将金翅大鹏点化为白龙马",
+            "唐僧把黑熊精点化为白龙马",
+            "太上老君把青牛精点化为白龙马"
+          ],
+          "explanation": "小白龙因犯错被贬，盘踞鹰愁涧；观音点化他驮唐僧，白龙马由此成为取经队伍成员。",
+          "scoringKeywords": [
+            "观音菩萨将犯错的西海龙王三太子点化为白龙马"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-009",
+      "sourceId": "009",
+      "chapter": "第二十二回",
+      "theme": "流沙河收沙僧",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-009.jpg",
+      "questions": [
+        {
+          "id": "picture-009",
+          "type": "人物来历",
+          "prompt": "流沙河中的沙僧后来手持降妖宝杖护送唐僧。他在天庭原任什么职务，又因何被贬？",
+          "answer": "原任卷帘大将，因失手打碎玻璃盏被贬下凡",
+          "options": [
+            "原任卷帘大将，因失手打碎玻璃盏被贬下凡",
+            "原任弼马温，因放走天马被贬下凡",
+            "原任东海龙王，因丢失龙珠被贬下凡",
+            "原任兜率宫童子，因偷吃仙丹被贬下凡"
+          ],
+          "explanation": "沙僧在流沙河受苦，后由观音点化、拜唐僧为师，体现队伍成员各有前过、共同修行。",
+          "scoringKeywords": [
+            "原任卷帘大将，因失手打碎玻璃盏被贬下凡"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-010",
+      "sourceId": "010",
+      "chapter": "第二十三回：三藏不忘本，四圣试禅心",
+      "theme": "四圣试禅心",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-010.jpg",
+      "questions": [
+        {
+          "id": "picture-010",
+          "type": "人物比较",
+          "prompt": "图中“四圣试禅心”以富贵婚姻考验师徒。面对招赘诱惑，谁动了凡心并受惩罚？",
+          "answer": "猪八戒动了凡心，被菩萨用网吊在树上一夜",
+          "options": [
+            "猪八戒动了凡心，被菩萨用网吊在树上一夜",
+            "孙悟空动了凡心，被压在五行山下",
+            "唐僧动了凡心，被变成猛虎",
+            "沙僧动了凡心，被罚回流沙河"
+          ],
+          "explanation": "黎山老母、观音、普贤、文殊化作母女试探，八戒贪恋婚姻富贵，凸显他“凡心未尽”的性格弱点。",
+          "scoringKeywords": [
+            "猪八戒动了凡心，被菩萨用网吊在树上一夜"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-011",
+      "sourceId": "011",
+      "chapter": "第十六回至第十七回",
+      "theme": "观音院与黑风山",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-011.jpg",
+      "questions": [
+        {
+          "id": "picture-011",
+          "type": "情节因果",
+          "prompt": "图中袈裟引出观音院之祸。金池长老为何想害唐僧师徒？",
+          "answer": "贪图锦襕袈裟，想放火烧死师徒后据为己有",
+          "options": [
+            "贪图锦襕袈裟，想放火烧死师徒后据为己有",
+            "想夺取悟空的金箍棒去献给龙王",
+            "想逼唐僧交出无字真经",
+            "想请猪八戒替他担任国师"
+          ],
+          "explanation": "悟空炫耀袈裟，金池长老生出贪念；这场由炫耀和贪婪引发的危机，继而牵出黑熊精偷袈裟。",
+          "scoringKeywords": [
+            "贪图锦襕袈裟，想放火烧死师徒后据为己有"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-012",
+      "sourceId": "012",
+      "chapter": "第二十四回至第二十六回",
+      "theme": "偷吃人参果",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-012.jpg",
+      "questions": [
+        {
+          "id": "picture-012",
+          "type": "情节因果",
+          "prompt": "五庄观的人参果像婴儿，唐僧不肯食用。悟空为何推倒人参果树？",
+          "answer": "偷果被童子辱骂，悟空恼怒而一棒推倒果树",
+          "options": [
+            "偷果被童子辱骂，悟空恼怒而一棒推倒果树",
+            "为给唐僧修建取经用的桥梁",
+            "为了引出火焰山的烈火",
+            "为了让八戒变回天蓬元帅"
+          ],
+          "explanation": "悟空、八戒、沙僧偷食人参果后被责骂，悟空冲动毁树，才引出镇元大仙追赶和观音救树。",
+          "scoringKeywords": [
+            "偷果被童子辱骂，悟空恼怒而一棒推倒果树"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-013",
+      "sourceId": "013",
+      "chapter": "第三十二回至第三十五回",
+      "theme": "平顶山金角银角",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-013.jpg",
+      "questions": [
+        {
+          "id": "picture-013",
+          "type": "人物来历",
+          "prompt": "画面中的金角、银角用法宝围困悟空。他们在下界前原本是什么身份？",
+          "answer": "太上老君看守炼丹炉的两个童子",
+          "options": [
+            "太上老君看守炼丹炉的两个童子",
+            "观音菩萨身边的两个童子",
+            "东海龙王的两个儿子",
+            "文殊、普贤菩萨的坐骑"
+          ],
+          "explanation": "金角、银角盗带多件法宝下界，最后由太上老君收回，说明许多妖怪背后有天界归属。",
+          "scoringKeywords": [
+            "太上老君看守炼丹炉的两个童子"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-014",
+      "sourceId": "014",
+      "chapter": "第二十七回：尸魔三戏唐三藏，圣僧恨逐美猴王",
+      "theme": "三打白骨精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-014.jpg",
+      "questions": [
+        {
+          "id": "picture-014",
+          "type": "细节识记",
+          "prompt": "图中悟空打向白骨精，对应“三打白骨精”。白骨精三次变化的顺序是哪一项？",
+          "answer": "年轻村姑、八旬老妇、白发老翁",
+          "options": [
+            "年轻村姑、八旬老妇、白发老翁",
+            "白龙马、黑熊精、黄风怪",
+            "书生、道士、国王",
+            "龙女、鲤鱼精、白兔精"
+          ],
+          "explanation": "白骨精三变制造悟空滥杀无辜的假象，唐僧肉眼凡胎，最终误会并赶走悟空。",
+          "scoringKeywords": [
+            "年轻村姑、八旬老妇、白发老翁"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-015",
+      "sourceId": "015",
+      "chapter": "第四十回至第四十二回",
+      "theme": "大战红孩儿",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-015.jpg",
+      "questions": [
+        {
+          "id": "picture-015",
+          "type": "人物关系",
+          "prompt": "火焰中的童子是红孩儿。下列关于他的身世和本领，哪一项正确？",
+          "answer": "他是牛魔王和铁扇公主之子，擅长三昧真火",
+          "options": [
+            "他是牛魔王和铁扇公主之子，擅长三昧真火",
+            "他是太上老君童子，擅长金刚琢",
+            "他是西海龙王之子，擅长呼风唤雨",
+            "他是玉兔精之子，擅长吐蛛丝"
+          ],
+          "explanation": "红孩儿在火焰山修炼三百年，三昧真火烧伤悟空，最终被观音收入门下，成为善财童子。",
+          "scoringKeywords": [
+            "他是牛魔王和铁扇公主之子，擅长三昧真火"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-016",
+      "sourceId": "016",
+      "chapter": "第四十四回至第四十六回",
+      "theme": "车迟国斗法",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-016.jpg",
+      "questions": [
+        {
+          "id": "picture-016",
+          "type": "人物辨析",
+          "prompt": "车迟国三位国师以“敬道灭僧”压迫和尚。下列哪一组是他们的本相？",
+          "answer": "虎力大仙是虎精，鹿力大仙是鹿精，羊力大仙是羊精",
+          "options": [
+            "虎力大仙是虎精，鹿力大仙是鹿精，羊力大仙是羊精",
+            "虎力大仙是龙精，鹿力大仙是豹精，羊力大仙是蛇精",
+            "虎力大仙是蜘蛛精，鹿力大仙是白鼠精，羊力大仙是兔精",
+            "虎力大仙是青狮精，鹿力大仙是白象精，羊力大仙是大鹏雕"
+          ],
+          "explanation": "三妖借国师身份实行“敬道灭僧”，悟空以斗法拆穿他们，体现小说对假借宗教权威者的讽刺。",
+          "scoringKeywords": [
+            "虎力大仙是虎精，鹿力大仙是鹿精，羊力大仙是羊精"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-017",
+      "sourceId": "017",
+      "chapter": "第四十七回至第四十九回",
+      "theme": "通天河遇鼋",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-017.jpg",
+      "questions": [
+        {
+          "id": "picture-017",
+          "type": "人物来历",
+          "prompt": "通天河中灵感大王逼百姓献童男童女。它原本是什么，又被谁收服？",
+          "answer": "观音莲花池中的金鱼，被观音用鱼篮收回",
+          "options": [
+            "观音莲花池中的金鱼，被观音用鱼篮收回",
+            "太乙救苦天尊的九头狮子，被太乙救苦天尊收回",
+            "太上老君的青牛，被老君用金刚琢收回",
+            "广寒宫的玉兔，被嫦娥用月光收回"
+          ],
+          "explanation": "灵感大王本是观音池中金鱼，观音以鱼篮收服，画面中的水域危机由此得到解决。",
+          "scoringKeywords": [
+            "观音莲花池中的金鱼，被观音用鱼篮收回"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-018",
+      "sourceId": "018",
+      "chapter": "第五十六回至第五十八回",
+      "theme": "真假美猴王",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-018.jpg",
+      "questions": [
+        {
+          "id": "picture-018",
+          "type": "情节因果",
+          "prompt": "两个悟空争斗，故事进入“真假美猴王”。六耳猕猴为何有机会假扮悟空？",
+          "answer": "悟空因打死强盗被唐僧赶走，心中委屈怨恨给了它可乘之机",
+          "options": [
+            "悟空因打死强盗被唐僧赶走，心中委屈怨恨给了它可乘之机",
+            "悟空主动请它替自己到西天取经",
+            "如来命它下界考验唐僧",
+            "铁扇公主用芭蕉扇把它变成悟空"
+          ],
+          "explanation": "六耳猕猴趁悟空离队，打晕唐僧、抢走行李，故事把外在妖魔与悟空“二心”的内在冲突连在一起。",
+          "scoringKeywords": [
+            "悟空因打死强盗被唐僧赶走，心中委屈怨恨给了它可乘之机"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-019",
+      "sourceId": "019",
+      "chapter": "第五十九回至第六十一回",
+      "theme": "三借芭蕉扇",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-019.jpg",
+      "questions": [
+        {
+          "id": "picture-019",
+          "type": "情节顺序",
+          "prompt": "火焰山挡住师徒西行。悟空第二次借到的扇子为什么没有解决问题？",
+          "answer": "那是一把假扇，越扇火势反而越大",
+          "options": [
+            "那是一把假扇，越扇火势反而越大",
+            "扇子被白龙马吃掉了",
+            "扇子只能用来收服金鱼精",
+            "悟空把扇子交给如来后忘了取回"
+          ],
+          "explanation": "三借芭蕉扇并非重复情节：一借被扇飞，二借得假扇，三借骗得真扇又被牛魔王骗回，冲突逐层升级。",
+          "scoringKeywords": [
+            "那是一把假扇，越扇火势反而越大"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-020",
+      "sourceId": "020",
+      "chapter": "第七十二回至第七十三回",
+      "theme": "盘丝洞与黄花观",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-020.jpg",
+      "questions": [
+        {
+          "id": "picture-020",
+          "type": "情节细节",
+          "prompt": "图中盘丝洞女妖在池边沐浴。悟空抓住她们的破绽后，采取了什么办法？",
+          "answer": "偷走蜘蛛精沐浴时的衣物，再设法救出被蛛丝困住的同伴",
+          "options": [
+            "偷走蜘蛛精沐浴时的衣物，再设法救出被蛛丝困住的同伴",
+            "请蜘蛛精用芭蕉扇灭火焰山",
+            "让蜘蛛精带唐僧到雷音寺取经",
+            "把蜘蛛精送到龙宫看守定海神针"
+          ],
+          "explanation": "盘丝洞一难中，七蜘蛛精以色诱和蛛丝设险；悟空利用其沐浴时机，后以毫毛变小猴破局。",
+          "scoringKeywords": [
+            "偷走蜘蛛精沐浴时的衣物，再设法救出被蛛丝困住的同伴"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-021",
+      "sourceId": "021",
+      "chapter": "第七十四回至第七十七回",
+      "theme": "狮驼岭大战",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-021.jpg",
+      "questions": [
+        {
+          "id": "picture-021",
+          "type": "人物比较",
+          "prompt": "狮驼岭三魔王中，哪一位以飞行速度极快、甚至超过悟空筋斗云而著称？",
+          "answer": "金翅大鹏雕",
+          "options": [
+            "金翅大鹏雕",
+            "青狮精",
+            "白象精",
+            "黄狮精"
+          ],
+          "explanation": "青狮能吞兵，白象长鼻厉害，大鹏一翅九万里；三妖的本领各异，才使狮驼岭成为取经路上的大难。",
+          "scoringKeywords": [
+            "金翅大鹏雕"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-022",
+      "sourceId": "022",
+      "chapter": "第七十八回至第七十九回",
+      "theme": "比丘国救群童",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-022.jpg",
+      "questions": [
+        {
+          "id": "picture-022",
+          "type": "情节因果",
+          "prompt": "图中孩子被装入鹅笼，来自比丘国国王的荒唐命令。国丈为何要索取童男心肝？",
+          "answer": "声称可为被白面狐狸精迷惑而患病的国王煎药延寿",
+          "options": [
+            "声称可为被白面狐狸精迷惑而患病的国王煎药延寿",
+            "声称能让火焰山永不熄灭",
+            "声称能把无字真经变成有字真经",
+            "声称能使乌鸡国国王复活"
+          ],
+          "explanation": "白鹿精化作国丈进献邪说，悟空救下群童，揭露了妖怪借君权伤害百姓的阴谋。",
+          "scoringKeywords": [
+            "声称可为被白面狐狸精迷惑而患病的国王煎药延寿"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-023",
+      "sourceId": "023",
+      "chapter": "第八十回至第八十三回",
+      "theme": "无底洞",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-023.jpg",
+      "questions": [
+        {
+          "id": "picture-023",
+          "type": "人物来历",
+          "prompt": "无底洞妖怪供奉“尊父李天王之位”和“尊兄哪吒三太子之位”。这条线索揭示她是谁？",
+          "answer": "金鼻白毛老鼠精，曾拜托塔李天王为父、哪吒为兄",
+          "options": [
+            "金鼻白毛老鼠精，曾拜托塔李天王为父、哪吒为兄",
+            "玉兔精，曾拜嫦娥为母、吴刚为兄",
+            "白骨精，曾拜唐僧为父、悟空为兄",
+            "铁扇公主，曾拜观音为母、木吒为兄"
+          ],
+          "explanation": "悟空不是只靠打斗，而是在洞中查牌位、追溯关系，才查明白鼠精身世并请李天王父子收服她。",
+          "scoringKeywords": [
+            "金鼻白毛老鼠精，曾拜托塔李天王为父、哪吒为兄"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-024",
+      "sourceId": "024",
+      "chapter": "第八十七回",
+      "theme": "凤仙郡求雨",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-024.jpg",
+      "questions": [
+        {
+          "id": "picture-024",
+          "type": "情节细节",
+          "prompt": "凤仙郡久旱，玉帝设下“鸡吃米山、狗舔面山、灯焰烧断金锁”三条件。其直接原因是什么？",
+          "answer": "郡侯与妻子怄气时推倒供桌、糟践斋天供品，冒犯天庭",
+          "options": [
+            "郡侯与妻子怄气时推倒供桌、糟践斋天供品，冒犯天庭",
+            "悟空偷走龙宫定海神针，惹怒龙王",
+            "唐僧拒绝接受女儿国国王求婚",
+            "八戒偷吃人参果树上的果子"
+          ],
+          "explanation": "凤仙郡之旱把个人的傲慢与一郡百姓的苦难联系起来；悟空劝郡侯悔改，才促成降雨。",
+          "scoringKeywords": [
+            "郡侯与妻子怄气时推倒供桌、糟践斋天供品，冒犯天庭"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-025",
+      "sourceId": "025",
+      "chapter": "第八十九回至第九十回",
+      "theme": "九灵元圣",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-025.jpg",
+      "questions": [
+        {
+          "id": "picture-025",
+          "type": "人物来历",
+          "prompt": "图中九头狮子妖是九灵元圣。它为何要擒拿唐僧师徒？",
+          "answer": "为替干孙子黄狮精被打死一事报仇",
+          "options": [
+            "为替干孙子黄狮精被打死一事报仇",
+            "为替儿子红孩儿夺回芭蕉扇",
+            "为替金角银角拿回紫金葫芦",
+            "为替白骨精夺取唐僧肉"
+          ],
+          "explanation": "黄狮精偷三件兵器后被打死，九灵元圣为其报仇；最终太乙救苦天尊收回自己的坐骑。",
+          "scoringKeywords": [
+            "为替干孙子黄狮精被打死一事报仇"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-026",
+      "sourceId": "026",
+      "chapter": "第九十三回至第九十五回",
+      "theme": "天竺国玉兔精",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-026.jpg",
+      "questions": [
+        {
+          "id": "picture-026",
+          "type": "人物来历",
+          "prompt": "天竺国“假公主”抛绣球招唐僧为驸马。她真正的身份和目的是什么？",
+          "answer": "她是广寒宫玉兔精，想借唐僧元阳真气修炼",
+          "options": [
+            "她是广寒宫玉兔精，想借唐僧元阳真气修炼",
+            "她是观音菩萨，想考验唐僧禅心",
+            "她是铁扇公主，想夺回芭蕉扇",
+            "她是白骨精，想骗悟空交出金箍棒"
+          ],
+          "explanation": "玉兔精因与素娥的旧怨下界冒充公主，抛绣球并非婚恋情节，而是其掠取元阳的阴谋。",
+          "scoringKeywords": [
+            "她是广寒宫玉兔精，想借唐僧元阳真气修炼"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-027",
+      "sourceId": "027",
+      "chapter": "第九十八回",
+      "theme": "凌云渡脱胎换骨",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-027.jpg",
+      "questions": [
+        {
+          "id": "picture-027",
+          "type": "情节细节",
+          "prompt": "凌云渡水急桥险，唐僧不敢过独木桥。谁用什么方法接渡他？",
+          "answer": "接引佛祖撑来无底船，悟空将唐僧推上船渡河",
+          "options": [
+            "接引佛祖撑来无底船，悟空将唐僧推上船渡河",
+            "观音菩萨用鱼篮把唐僧装过去",
+            "老鼋驮着唐僧直接游到长安",
+            "牛魔王用芭蕉扇把唐僧扇过河"
+          ],
+          "explanation": "凌云渡的“无底船”象征过渡和新生，唐僧渡河后见到自己的旧尸，完成脱胎换骨。",
+          "scoringKeywords": [
+            "接引佛祖撑来无底船，悟空将唐僧推上船渡河"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-028",
+      "sourceId": "028",
+      "chapter": "第九十八回至第一百回",
+      "theme": "灵山得道与八十一难",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-028.jpg",
+      "questions": [
+        {
+          "id": "picture-028",
+          "type": "情节因果",
+          "prompt": "师徒初到雷音寺得到无字经。为何阿难、迦叶先传无字经，后来才换成有字真经？",
+          "answer": "因索要“人事”未果，唐僧交出紫金钵盂后才换得有字真经",
+          "options": [
+            "因索要“人事”未果，唐僧交出紫金钵盂后才换得有字真经",
+            "因悟空打碎金箍棒后才换得有字真经",
+            "因八戒用钉耙劈开雷音寺后才换得有字真经",
+            "因白龙马找到龙王后才换得有字真经"
+          ],
+          "explanation": "无字经事件强调“经不可轻传”的叙事设定，也使取经临近成功时仍保留一次制度与人情的考验。",
+          "scoringKeywords": [
+            "因索要“人事”未果，唐僧交出紫金钵盂后才换得有字真经"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-029",
+      "sourceId": "029",
+      "chapter": "第二十回至第二十一回",
+      "theme": "黄风岭黄风怪",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-029.jpg",
+      "questions": [
+        {
+          "id": "picture-029",
+          "type": "法术作用",
+          "prompt": "黄风怪施放的妖风让悟空火眼金睛酸痛流泪。它吹出的是什么风？",
+          "answer": "三昧神风",
+          "options": [
+            "三昧神风",
+            "三昧真火",
+            "五庄仙风",
+            "芭蕉神风"
+          ],
+          "explanation": "三昧神风不是普通大风，能伤悟空火眼金睛；悟空后来请灵吉菩萨以飞龙杖降服黄风怪。",
+          "scoringKeywords": [
+            "三昧神风"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-030",
+      "sourceId": "030",
+      "chapter": "第二十八回至第三十回",
+      "theme": "宝象国与黄袍怪",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-030.jpg",
+      "questions": [
+        {
+          "id": "picture-030",
+          "type": "情节因果",
+          "prompt": "黄袍怪把唐僧变成老虎，八戒和沙僧难以应对。八戒用什么办法请回已被赶走的悟空？",
+          "answer": "到花果山用激将法，请悟空回来救师父",
+          "options": [
+            "到花果山用激将法，请悟空回来救师父",
+            "到龙宫借定海神针，请悟空回来救师父",
+            "到雷音寺偷无字经，请悟空回来救师父",
+            "到火焰山借芭蕉扇，请悟空回来救师父"
+          ],
+          "explanation": "悟空曾被唐僧赶走，但取经危局仍需要他的本领；八戒的激将法推动悟空回归队伍。",
+          "scoringKeywords": [
+            "到花果山用激将法，请悟空回来救师父"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-031",
+      "sourceId": "031",
+      "chapter": "第三十七回至第三十九回",
+      "theme": "乌鸡国真假国王",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-031.jpg",
+      "questions": [
+        {
+          "id": "picture-031",
+          "type": "情节因果",
+          "prompt": "乌鸡国真国王在井中托梦。假国王为何能篡位？",
+          "answer": "狮猁怪化作道人，与国王结义后把他推入八角玻璃井，自己变作国王",
+          "options": [
+            "狮猁怪化作道人，与国王结义后把他推入八角玻璃井，自己变作国王",
+            "黄风怪吹走国王后，让白骨精变成国王",
+            "金角银角收走国王后，让悟空变成国王",
+            "玉兔精骗走国王后，让唐僧变成国王"
+          ],
+          "explanation": "妖怪以救旱灾取得信任，再利用结义与游园行凶，显示真假国王之辨不只靠外貌，还要追查来历和行迹。",
+          "scoringKeywords": [
+            "狮猁怪化作道人，与国王结义后把他推入八角玻璃井，自己变作国王"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-032",
+      "sourceId": "032",
+      "chapter": "第五十回至第五十二回",
+      "theme": "金兜山青牛精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-032.jpg",
+      "questions": [
+        {
+          "id": "picture-032",
+          "type": "法器作用",
+          "prompt": "金兜山独角兕大王用一个白森森的圈子收走众多兵器。这个法宝的来历是什么？",
+          "answer": "太上老君的金刚琢",
+          "options": [
+            "太上老君的金刚琢",
+            "观音菩萨的净瓶",
+            "铁扇公主的芭蕉扇",
+            "镇元大仙的人参果"
+          ],
+          "explanation": "金刚琢能套取兵器、水火不侵，悟空请来多路天神仍无功，最后由太上老君收回青牛精。",
+          "scoringKeywords": [
+            "太上老君的金刚琢"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-033",
+      "sourceId": "033",
+      "chapter": "第五十三回至第五十五回",
+      "theme": "西梁女国与蝎子精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-033.jpg",
+      "questions": [
+        {
+          "id": "picture-033",
+          "type": "情节细节",
+          "prompt": "唐僧和八戒误饮子母河水而怀胎。悟空最终取来什么解除胎气？",
+          "answer": "解阳山破儿洞的落胎泉水",
+          "options": [
+            "解阳山破儿洞的落胎泉水",
+            "通天河灵感大王的鱼篮水",
+            "花果山水帘洞的瀑布水",
+            "火焰山芭蕉扇扇出的雨水"
+          ],
+          "explanation": "女儿国故事中的“怀胎”来自子母河，落胎泉则是唯一解法，悟空必须与如意真仙周旋。",
+          "scoringKeywords": [
+            "解阳山破儿洞的落胎泉水"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-034",
+      "sourceId": "034",
+      "chapter": "第六十五回至第六十六回",
+      "theme": "小雷音寺黄眉怪",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-034.jpg",
+      "questions": [
+        {
+          "id": "picture-034",
+          "type": "情节因果",
+          "prompt": "画面中的寺庙名为“小雷音寺”。黄眉怪怎样利用它骗过唐僧师徒？",
+          "answer": "假造寺庙并变作如来，让小妖扮罗汉菩萨，引诱师徒入内",
+          "options": [
+            "假造寺庙并变作如来，让小妖扮罗汉菩萨，引诱师徒入内",
+            "把真雷音寺搬到火焰山上，引诱师徒入内",
+            "请观音菩萨主持法会，引诱师徒入内",
+            "用无字经书作路标，引诱师徒入内"
+          ],
+          "explanation": "唐僧见寺即拜、不听悟空劝阻，暴露“肉眼凡胎”的局限；黄眉怪正是利用这一点设下陷阱。",
+          "scoringKeywords": [
+            "假造寺庙并变作如来，让小妖扮罗汉菩萨，引诱师徒入内"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-035",
+      "sourceId": "035",
+      "chapter": "第六十七回",
+      "theme": "七绝山红鳞大蟒",
+      "importance": 3,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-035.jpg",
+      "questions": [
+        {
+          "id": "picture-035",
+          "type": "情节细节",
+          "prompt": "七绝山红鳞大蟒吞下悟空后，悟空怎样从其体内破敌？",
+          "answer": "在蟒腹中用金箍棒搅捣，并从背上捅穿而出",
+          "options": [
+            "在蟒腹中用金箍棒搅捣，并从背上捅穿而出",
+            "在蟒腹中念紧箍咒让它投降",
+            "在蟒腹中用芭蕉扇把火焰扇灭",
+            "在蟒腹中偷走它的衣物"
+          ],
+          "explanation": "悟空被吞并非落败，而是主动进入妖腹，以内部攻击破解巨蟒坚硬的外部防御。",
+          "scoringKeywords": [
+            "在蟒腹中用金箍棒搅捣，并从背上捅穿而出"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-036",
+      "sourceId": "036",
+      "chapter": "第六十八回至第七十一回",
+      "theme": "朱紫国与赛太岁",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-036.jpg",
+      "questions": [
+        {
+          "id": "picture-036",
+          "type": "情节细节",
+          "prompt": "朱紫国国王因金圣宫被赛太岁掳走而病重。悟空采用什么特别的诊治办法？",
+          "answer": "悬丝诊脉，并以乌金丹医治",
+          "options": [
+            "悬丝诊脉，并以乌金丹医治",
+            "用金刚琢套走病气",
+            "用鱼篮把病气收回",
+            "用落胎泉水医治"
+          ],
+          "explanation": "悟空不能直接触碰国王，便悬丝诊脉，又以看似寻常的材料制乌金丹，体现他机智解决现实难题的一面。",
+          "scoringKeywords": [
+            "悬丝诊脉，并以乌金丹医治"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-037",
+      "sourceId": "037",
+      "chapter": "第八十四回",
+      "theme": "灭法国剃秃颅",
+      "importance": 3,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-037.jpg",
+      "questions": [
+        {
+          "id": "picture-037",
+          "type": "情节因果",
+          "prompt": "灭法国国王曾立誓杀尽一万和尚。悟空夜里施法剃光国王和百官头发，造成什么结果？",
+          "answer": "国王以为神佛显灵而悔改，将灭法国改为钦法国",
+          "options": [
+            "国王以为神佛显灵而悔改，将灭法国改为钦法国",
+            "国王更恨和尚，改国名为灭佛国",
+            "国王拜牛魔王为国师，迁都火焰山",
+            "国王把唐僧变成猛虎，永囚宫中"
+          ],
+          "explanation": "悟空没有直接杀戮，而是以“全城剃头”的奇计促使国王反省，完成对恶愿的反转。",
+          "scoringKeywords": [
+            "国王以为神佛显灵而悔改，将灭法国改为钦法国"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-038",
+      "sourceId": "038",
+      "chapter": "第九十一回至第九十二回",
+      "theme": "金平府观灯",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-038.jpg",
+      "questions": [
+        {
+          "id": "picture-038",
+          "type": "情节细节",
+          "prompt": "金平府元宵观灯时，三只犀牛精为何能长期骗走百姓的酥合香油？",
+          "answer": "它们假扮佛祖下界，乘风收走供灯香油",
+          "options": [
+            "它们假扮佛祖下界，乘风收走供灯香油",
+            "它们变成国王，强征百姓的粮食",
+            "它们用芭蕉扇吹灭所有灯火",
+            "它们向龙王借洪水淹没金平府"
+          ],
+          "explanation": "辟寒、辟暑、辟尘三犀牛精假借“佛祖显灵”榨取供品，悟空等人揭穿其伪装后才救出唐僧。",
+          "scoringKeywords": [
+            "它们假扮佛祖下界，乘风收走供灯香油"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-039",
+      "sourceId": "039",
+      "chapter": "第九回至第十一回",
+      "theme": "魏征斩龙与太宗游地府",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-039.jpg",
+      "questions": [
+        {
+          "id": "picture-039",
+          "type": "情节因果",
+          "prompt": "泾河龙王在梦中被魏征斩首。它触犯天条的直接行为是什么？",
+          "answer": "私自篡改玉帝规定的降雨时辰和雨量",
+          "options": [
+            "私自篡改玉帝规定的降雨时辰和雨量",
+            "偷走东海龙宫的定海神针",
+            "把唐僧困在无底洞中",
+            "拒绝交出火焰山芭蕉扇"
+          ],
+          "explanation": "龙王为与袁守诚赌气改动雨数，违背天令；魏征虽在与唐太宗下棋，仍在梦中奉命监斩。",
+          "scoringKeywords": [
+            "私自篡改玉帝规定的降雨时辰和雨量"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-040",
+      "sourceId": "040",
+      "chapter": "第四十三回",
+      "theme": "黑水河鼍龙怪",
+      "importance": 3,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-040.jpg",
+      "questions": [
+        {
+          "id": "picture-040",
+          "type": "人物关系",
+          "prompt": "黑水河小鼍龙掳走唐僧和八戒。它与西海龙王是什么关系，后来如何被降服？",
+          "answer": "它是西海龙王的外甥，被摩昂太子带兵生擒回西海",
+          "options": [
+            "它是西海龙王的外甥，被摩昂太子带兵生擒回西海",
+            "它是东海龙王之子，被悟空压在五行山下",
+            "它是观音的坐骑，被观音用鱼篮收回",
+            "它是太上老君童子，被老君带回兜率宫"
+          ],
+          "explanation": "悟空到西海龙宫问罪，龙王派长子摩昂太子出兵，借龙族内部关系解决黑水河之难。",
+          "scoringKeywords": [
+            "它是西海龙王的外甥，被摩昂太子带兵生擒回西海"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-041",
+      "sourceId": "041",
+      "chapter": "第六十二回至第六十三回",
+      "theme": "祭赛国九头虫",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-041.jpg",
+      "questions": [
+        {
+          "id": "picture-041",
+          "type": "情节细节",
+          "prompt": "祭赛国金光寺佛宝被九头虫偷走。悟空夺回佛宝时，请谁相助重创九头虫？",
+          "answer": "二郎神和梅山六兄弟，哮天犬咬掉九头虫一个头",
+          "options": [
+            "二郎神和梅山六兄弟，哮天犬咬掉九头虫一个头",
+            "观音菩萨和善财童子，金毛犼咬掉一个头",
+            "太乙救苦天尊和九灵元圣，白鹤咬掉一个头",
+            "唐僧和白龙马，老鼋咬掉一个头"
+          ],
+          "explanation": "悟空、八戒难敌九头虫，二郎神一行恰好经过；哮天犬建功后，悟空才得以夺回舍利佛宝。",
+          "scoringKeywords": [
+            "二郎神和梅山六兄弟，哮天犬咬掉九头虫一个头"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-042",
+      "sourceId": "042",
+      "chapter": "第八十五回至第八十六回",
+      "theme": "隐雾山豹子精",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-042.jpg",
+      "questions": [
+        {
+          "id": "picture-042",
+          "type": "计策辨析",
+          "prompt": "隐雾山豹子精使用“分瓣梅花计”掳走唐僧。这一计策的关键是什么？",
+          "answer": "让小妖分别引开悟空、八戒、沙僧，再趁唐僧落单下手",
+          "options": [
+            "让小妖分别引开悟空、八戒、沙僧，再趁唐僧落单下手",
+            "把自己分成三瓣，分别变成师徒三人",
+            "用梅花香使唐僧忘记取经目的",
+            "让三名国师替自己守住妖洞"
+          ],
+          "explanation": "豹子精先后派小妖假扮妖怪诱敌，属于典型调虎离山；图中“唐僧被掳”背后考查的是计策结构。",
+          "scoringKeywords": [
+            "让小妖分别引开悟空、八戒、沙僧，再趁唐僧落单下手"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-043",
+      "sourceId": "043",
+      "chapter": "第八十八回",
+      "theme": "玉华州收徒造兵",
+      "importance": 4,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-043.jpg",
+      "questions": [
+        {
+          "id": "picture-043",
+          "type": "情节因果",
+          "prompt": "玉华州三王子拜悟空、八戒、沙僧为师，三件神兵因此被黄狮精偷走。黄狮精为何能发现这些兵器？",
+          "answer": "兵器夜间霞光万道，惊动了豹头山的黄狮精",
+          "options": [
+            "兵器夜间霞光万道，惊动了豹头山的黄狮精",
+            "唐僧故意把兵器送到豹头山",
+            "三王子把兵器卖给黄狮精",
+            "金角银角用金刚琢把兵器套走"
+          ],
+          "explanation": "师徒把兵器放在院中作打造样本，霞光暴露了目标，才引出黄狮精“钉耙宴”与九灵元圣报仇。",
+          "scoringKeywords": [
+            "兵器夜间霞光万道，惊动了豹头山的黄狮精"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-044",
+      "sourceId": "044",
+      "chapter": "第九十七回",
+      "theme": "铜台府寇员外",
+      "importance": 3,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-044.jpg",
+      "questions": [
+        {
+          "id": "picture-044",
+          "type": "情节因果",
+          "prompt": "铜台府寇员外热情斋僧后遇害，唐僧师徒却被当作强盗入狱。造成冤案的直接原因是什么？",
+          "answer": "真强盗劫杀寇员外后，寇家妻子迁怒并诬告唐僧师徒",
+          "options": [
+            "真强盗劫杀寇员外后，寇家妻子迁怒并诬告唐僧师徒",
+            "悟空偷走了寇员外的金箍棒",
+            "唐僧拒绝在寇家讲经，国王下令抓人",
+            "八戒误饮子母河水，官府认为他施妖法"
+          ],
+          "explanation": "此难没有妖怪正面斗法，而是世俗冤屈；悟空追回财物、到地府要回寇员外魂魄，才洗清冤案。",
+          "scoringKeywords": [
+            "真强盗劫杀寇员外后，寇家妻子迁怒并诬告唐僧师徒"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-046",
+      "sourceId": "046",
+      "chapter": "第一回",
+      "theme": "仙石孕育",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-046.jpg",
+      "questions": [
+        {
+          "id": "picture-046",
+          "type": "细节识记",
+          "prompt": "仙石裂开、石猴出世。它出生后首先以什么异象惊动天庭？",
+          "answer": "双目射出两道金光，直冲斗府",
+          "options": [
+            "双目射出两道金光，直冲斗府",
+            "口吐三昧真火，烧到南天门",
+            "挥动金箍棒，打碎凌霄殿",
+            "驾筋斗云，飞到雷音寺"
+          ],
+          "explanation": "石猴虽初生，双目金光已惊动玉帝，预示其后来不凡的命运。",
+          "scoringKeywords": [
+            "双目射出两道金光，直冲斗府"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-047",
+      "sourceId": "047",
+      "chapter": "第一回",
+      "theme": "探水帘洞",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-047.jpg",
+      "questions": [
+        {
+          "id": "picture-047",
+          "type": "情节因果",
+          "prompt": "石猴跃入瀑布发现水帘洞后，群猴为何拥立他为“美猴王”？",
+          "answer": "群猴先约定谁敢进瀑布并找到住处便拜谁为王，石猴做到了",
+          "options": [
+            "群猴先约定谁敢进瀑布并找到住处便拜谁为王，石猴做到了",
+            "玉皇大帝下诏封他为美猴王",
+            "东海龙王把王位让给了他",
+            "菩提祖师替群猴指定了他"
+          ],
+          "explanation": "石猴的勇敢带来新居，也兑现了群猴的约定；“美猴王”称号建立在行动与公认之上。",
+          "scoringKeywords": [
+            "群猴先约定谁敢进瀑布并找到住处便拜谁为王，石猴做到了"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-048",
+      "sourceId": "048",
+      "chapter": "第一回",
+      "theme": "漂洋过海访仙",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-048.jpg",
+      "questions": [
+        {
+          "id": "picture-048",
+          "type": "情节因果",
+          "prompt": "悟空乘木筏漂洋过海访仙。他离开花果山求仙学道的根本原因是什么？",
+          "answer": "见老猴死亡后害怕生死无常，想求长生不老之术",
+          "options": [
+            "见老猴死亡后害怕生死无常，想求长生不老之术",
+            "想替龙王寻找失落的宝珠",
+            "想请如来给他封官",
+            "想借芭蕉扇扇灭火焰山"
+          ],
+          "explanation": "“生死焦虑”是悟空早期求道的动力，后来引出他到灵台方寸山拜菩提祖师。",
+          "scoringKeywords": [
+            "见老猴死亡后害怕生死无常，想求长生不老之术"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-049",
+      "sourceId": "049",
+      "chapter": "第二回",
+      "theme": "菩提赐名",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-049.jpg",
+      "questions": [
+        {
+          "id": "picture-049",
+          "type": "细节识记",
+          "prompt": "菩提祖师为猴王赐名。下列对“孙悟空”名字来历的解释，哪一项正确？",
+          "answer": "因本相像猢狲而取姓孙，又排在“悟”字辈，故名悟空",
+          "options": [
+            "因本相像猢狲而取姓孙，又排在“悟”字辈，故名悟空",
+            "因住在孙家村，空手打败妖怪而得名",
+            "因玉帝姓孙，授予他悟空官职",
+            "因唐僧在五行山救他而临时取名"
+          ],
+          "explanation": "菩提祖师依据“猢狲”去兽旁取“孙”，再按门中排行赐“悟空”，名字包含修行的意味。",
+          "scoringKeywords": [
+            "因本相像猢狲而取姓孙，又排在“悟”字辈，故名悟空"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-050",
+      "sourceId": "050",
+      "chapter": "第二回",
+      "theme": "盘中暗谜",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-050.jpg",
+      "questions": [
+        {
+          "id": "picture-050",
+          "type": "暗示理解",
+          "prompt": "菩提祖师在悟空头上敲三下、背手离去。悟空读懂了什么暗示？",
+          "answer": "半夜三更从后门悄悄去见祖师，求授秘法",
+          "options": [
+            "半夜三更从后门悄悄去见祖师，求授秘法",
+            "三天后到东海龙宫取金箍棒",
+            "三个月后到天庭任弼马温",
+            "三年后到火焰山借芭蕉扇"
+          ],
+          "explanation": "这一情节考查悟空的机敏：祖师没有明说，却以动作和离去方向传递授法时间、地点。",
+          "scoringKeywords": [
+            "半夜三更从后门悄悄去见祖师，求授秘法"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-051",
+      "sourceId": "051",
+      "chapter": "第二回",
+      "theme": "七十二变与筋斗云",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-051.jpg",
+      "questions": [
+        {
+          "id": "picture-051",
+          "type": "情节因果",
+          "prompt": "悟空学得七十二变和筋斗云后被菩提祖师赶走，直接原因是什么？",
+          "answer": "在师兄弟面前卖弄变化，变成松树炫耀本领",
+          "options": [
+            "在师兄弟面前卖弄变化，变成松树炫耀本领",
+            "偷吃了祖师的人参果",
+            "拒绝学习筋斗云，顶撞祖师",
+            "带师兄弟去大闹天宫"
+          ],
+          "explanation": "菩提祖师担心悟空卖弄本领惹祸，赶他下山；这也预示悟空性格中好胜张扬的一面。",
+          "scoringKeywords": [
+            "在师兄弟面前卖弄变化，变成松树炫耀本领"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-052",
+      "sourceId": "052",
+      "chapter": "第二回",
+      "theme": "混世魔王",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-052.jpg",
+      "questions": [
+        {
+          "id": "picture-052",
+          "type": "情节因果",
+          "prompt": "悟空归山后，花果山水帘洞被谁霸占？他如何夺回洞府？",
+          "answer": "混世魔王霸占，悟空与其交战后将其打败",
+          "options": [
+            "混世魔王霸占，悟空与其交战后将其打败",
+            "黄风怪霸占，悟空请灵吉菩萨收服",
+            "黑熊精霸占，悟空请观音收服",
+            "九灵元圣霸占，悟空请太乙救苦天尊收服"
+          ],
+          "explanation": "混世魔王是悟空早期主动降伏的妖怪，显示他学成归来后开始保护猴群。",
+          "scoringKeywords": [
+            "混世魔王霸占，悟空与其交战后将其打败"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-053",
+      "sourceId": "053",
+      "chapter": "第三回",
+      "theme": "傲来国借兵",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-053.jpg",
+      "questions": [
+        {
+          "id": "picture-053",
+          "type": "情节细节",
+          "prompt": "悟空为武装花果山猴群来到傲来国。他用什么方法获得大量兵器？",
+          "answer": "施法刮起狂风，把傲来国兵器运回花果山",
+          "options": [
+            "施法刮起狂风，把傲来国兵器运回花果山",
+            "向玉帝申请军械并得到批准",
+            "请东海龙王赠送所有兵器",
+            "用芭蕉扇扇出一座兵器山"
+          ],
+          "explanation": "悟空先解决猴群武器问题，再去龙宫寻找自己称手的兵器，表现出他作为猴王的组织意识。",
+          "scoringKeywords": [
+            "施法刮起狂风，把傲来国兵器运回花果山"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-054",
+      "sourceId": "054",
+      "chapter": "第三回",
+      "theme": "强销生死簿",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-054.jpg",
+      "questions": [
+        {
+          "id": "picture-054",
+          "type": "情节细节",
+          "prompt": "悟空被勾到幽冥界后强销生死簿。他勾销的是哪一类名字？",
+          "answer": "猴属等名字，使花果山猴群不再受生死簿约束",
+          "options": [
+            "猴属等名字，使花果山猴群不再受生死簿约束",
+            "唐僧师徒四人的名字，使他们立刻成佛",
+            "天庭所有神仙的名字，使玉帝退位",
+            "龙王家族的名字，使大海干涸"
+          ],
+          "explanation": "勾销生死簿是悟空反抗生死秩序的重要行动，也导致龙王和地府共同上天告状。",
+          "scoringKeywords": [
+            "猴属等名字，使花果山猴群不再受生死簿约束"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-055",
+      "sourceId": "055",
+      "chapter": "第三回",
+      "theme": "龙王告状",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-055.jpg",
+      "questions": [
+        {
+          "id": "picture-055",
+          "type": "情节因果",
+          "prompt": "东海龙王为何上天告孙悟空？",
+          "answer": "悟空强要定海神针，还索取凤翅紫金冠等披挂",
+          "options": [
+            "悟空强要定海神针，还索取凤翅紫金冠等披挂",
+            "悟空偷走了龙王的女儿去取经",
+            "悟空用芭蕉扇烧干了东海",
+            "悟空拒绝替龙王镇压九头虫"
+          ],
+          "explanation": "悟空在龙宫得到金箍棒和披挂，龙王自觉受辱，上天告状，天庭由此开始正面应对悟空。",
+          "scoringKeywords": [
+            "悟空强要定海神针，还索取凤翅紫金冠等披挂"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-056",
+      "sourceId": "056",
+      "chapter": "第28回",
+      "theme": "大闹天宫",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-056.jpg",
+      "questions": [
+        {
+          "id": "picture-056",
+          "type": "情节顺序",
+          "prompt": "题图标出“大闹天宫”。下列哪一组行为最符合悟空在天庭不断升级的反抗？",
+          "answer": "偷蟠桃、搅乱蟠桃会，又偷吃九转金丹",
+          "options": [
+            "偷蟠桃、搅乱蟠桃会，又偷吃九转金丹",
+            "在流沙河拜唐僧为师",
+            "到五庄观救活人参果树",
+            "在女儿国答应留下成亲"
+          ],
+          "explanation": "悟空从不满“弼马温”到搅乱蟠桃会，冲突不断升级，终于引来天庭围剿。",
+          "scoringKeywords": [
+            "偷蟠桃、搅乱蟠桃会，又偷吃九转金丹"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-057",
+      "sourceId": "057",
+      "chapter": "第28回",
+      "theme": "五行山下",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-057.jpg",
+      "questions": [
+        {
+          "id": "picture-057",
+          "type": "情节因果",
+          "prompt": "题图为“五行山下”。悟空被压在五行山下五百年，直接原因是什么？",
+          "answer": "如来以佛法降伏大闹天宫的悟空并将他镇压",
+          "options": [
+            "如来以佛法降伏大闹天宫的悟空并将他镇压",
+            "唐僧用紧箍咒惩罚他偷吃人参果",
+            "龙王因丢失金箍棒把他压住",
+            "牛魔王用芭蕉扇把他吹到山下"
+          ],
+          "explanation": "五行山的镇压结束了大闹天宫，也为唐僧后来收徒埋下伏笔。",
+          "scoringKeywords": [
+            "如来以佛法降伏大闹天宫的悟空并将他镇压"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-058",
+      "sourceId": "058",
+      "chapter": "第29回",
+      "theme": "观音寻僧",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-058.jpg",
+      "questions": [
+        {
+          "id": "picture-058",
+          "type": "人物作用",
+          "prompt": "题图为“观音寻僧”。如来要寻找取经人时，观音菩萨承担的关键任务是什么？",
+          "answer": "到东土物色并安排能取回真经的取经人",
+          "options": [
+            "到东土物色并安排能取回真经的取经人",
+            "亲自替唐僧到西天取经",
+            "把悟空重新封为齐天大圣",
+            "替龙王镇守东海"
+          ],
+          "explanation": "观音奉如来之命赴东土，选定金蝉子转世的唐僧，并预先安排徒弟与坐骑。",
+          "scoringKeywords": [
+            "到东土物色并安排能取回真经的取经人"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-059",
+      "sourceId": "059",
+      "chapter": "第29回",
+      "theme": "唐皇托梦",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-059.jpg",
+      "questions": [
+        {
+          "id": "picture-059",
+          "type": "情节因果",
+          "prompt": "题图为“唐皇托梦”。唐太宗游地府、被允还阳后，答应了地藏王菩萨什么事？",
+          "answer": "举办水陆大会，超度地府中的孤魂野鬼",
+          "options": [
+            "举办水陆大会，超度地府中的孤魂野鬼",
+            "立即亲自去灵山取经",
+            "封孙悟空为弼马温",
+            "把皇位让给魏征"
+          ],
+          "explanation": "太宗因泾河龙王一案游地府，答应举办水陆大会，才有观音在长安选取经人的情节。",
+          "scoringKeywords": [
+            "举办水陆大会，超度地府中的孤魂野鬼"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-060",
+      "sourceId": "060",
+      "chapter": "第30回",
+      "theme": "水陆大会",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-060.jpg",
+      "questions": [
+        {
+          "id": "picture-060",
+          "type": "情节作用",
+          "prompt": "题图为“水陆大会”。观音在水陆大会上展示锦襕袈裟和九环锡杖，目的是什么？",
+          "answer": "选出愿意西行取经、普度众生的僧人",
+          "options": [
+            "选出愿意西行取经、普度众生的僧人",
+            "选拔天庭的弼马温",
+            "比试谁能降伏牛魔王",
+            "为龙王挑选驸马"
+          ],
+          "explanation": "水陆大会是唐僧受命取经的直接契机，法器也成为他取经身份的标志。",
+          "scoringKeywords": [
+            "选出愿意西行取经、普度众生的僧人"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-061",
+      "sourceId": "061",
+      "chapter": "第30回",
+      "theme": "收孙悟空",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-061.jpg",
+      "questions": [
+        {
+          "id": "picture-061",
+          "type": "师徒关系",
+          "prompt": "题图为“收孙悟空”。唐僧在两界山救出悟空后，给他取的法名是什么？",
+          "answer": "孙行者",
+          "options": [
+            "孙行者",
+            "孙悟能",
+            "孙悟净",
+            "斗战胜佛"
+          ],
+          "explanation": "唐僧揭去如来的压帖，悟空脱困后拜师，取混名“行者”。",
+          "scoringKeywords": [
+            "孙行者"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-062",
+      "sourceId": "062",
+      "chapter": "第31回",
+      "theme": "紧箍咒",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-062.jpg",
+      "questions": [
+        {
+          "id": "picture-062",
+          "type": "法器作用",
+          "prompt": "题图为“紧箍咒”。唐僧给悟空戴上紧箍的主要作用是什么？",
+          "answer": "约束悟空的任性，使他遵守护送取经人的戒律",
+          "options": [
+            "约束悟空的任性，使他遵守护送取经人的戒律",
+            "让悟空获得七十二变",
+            "帮助悟空扇灭火焰山",
+            "把悟空变成白龙马"
+          ],
+          "explanation": "紧箍把悟空的本领和纪律问题联系起来，是师徒磨合的重要装置。",
+          "scoringKeywords": [
+            "约束悟空的任性，使他遵守护送取经人的戒律"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-063",
+      "sourceId": "063",
+      "chapter": "第31回",
+      "theme": "鹰愁涧",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-063.jpg",
+      "questions": [
+        {
+          "id": "picture-063",
+          "type": "人物来历",
+          "prompt": "题图为“鹰愁涧”。吞掉唐僧白马的白龙，后来为何能成为白龙马？",
+          "answer": "它是犯错的西海龙王三太子，被观音点化护送唐僧",
+          "options": [
+            "它是犯错的西海龙王三太子，被观音点化护送唐僧",
+            "它是东海龙王送给悟空的坐骑",
+            "它是如来变出的白马",
+            "它是黑熊精改过后的化身"
+          ],
+          "explanation": "小白龙原为西海三太子，受观音安排在鹰愁涧等候，后化作白马。",
+          "scoringKeywords": [
+            "它是犯错的西海龙王三太子，被观音点化护送唐僧"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-064",
+      "sourceId": "064",
+      "chapter": "第32回",
+      "theme": "金刚套暗算",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-064.jpg",
+      "questions": [
+        {
+          "id": "picture-064",
+          "type": "情节细节",
+          "prompt": "题图为“金刚套暗算”。悟空与二郎神斗法时，太上老君用什么法宝暗中打中悟空？",
+          "answer": "金刚琢",
+          "options": [
+            "金刚琢",
+            "紫金红葫芦",
+            "芭蕉扇",
+            "鱼篮"
+          ],
+          "explanation": "二郎神与悟空相持不下，老君暗抛金刚琢，哮天犬再趁机咬住悟空。",
+          "scoringKeywords": [
+            "金刚琢"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-065",
+      "sourceId": "065",
+      "chapter": "第32回",
+      "theme": "八卦炉炼眼",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-065.jpg",
+      "questions": [
+        {
+          "id": "picture-065",
+          "type": "情节因果",
+          "prompt": "题图为“八卦炉炼眼”。悟空被投入八卦炉后，为何反而练成火眼金睛？",
+          "answer": "躲在巽位，烟熏火炼使双眼获得辨妖之能",
+          "options": [
+            "躲在巽位，烟熏火炼使双眼获得辨妖之能",
+            "吞下人参果后自然生出神眼",
+            "观音用净瓶为他洗眼",
+            "龙王赠他龙珠后生出神眼"
+          ],
+          "explanation": "八卦炉本想炼化悟空，却因悟空躲在巽位而未被烧死，反得火眼金睛。",
+          "scoringKeywords": [
+            "躲在巽位，烟熏火炼使双眼获得辨妖之能"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-066",
+      "sourceId": "066",
+      "chapter": "第33回",
+      "theme": "打出兜率宫",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-066.jpg",
+      "questions": [
+        {
+          "id": "picture-066",
+          "type": "情节细节",
+          "prompt": "题图为“打出兜率宫”。悟空从八卦炉出来后，首先做了什么？",
+          "answer": "踢倒炼丹炉，打出兜率宫，继续反抗天庭",
+          "options": [
+            "踢倒炼丹炉，打出兜率宫，继续反抗天庭",
+            "马上拜唐僧为师",
+            "去火焰山借芭蕉扇",
+            "到女儿国成亲"
+          ],
+          "explanation": "炼丹炉未能制服悟空，反而激化其反抗，故事由此进入更大的天庭冲突。",
+          "scoringKeywords": [
+            "踢倒炼丹炉，打出兜率宫，继续反抗天庭"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-067",
+      "sourceId": "067",
+      "chapter": "第33回",
+      "theme": "如来五指山",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-067.jpg",
+      "questions": [
+        {
+          "id": "picture-067",
+          "type": "情节细节",
+          "prompt": "题图为“如来五指山”。悟空为何输掉与如来的赌赛？",
+          "answer": "他以为翻出如来手掌，其实仍在如来五指之中",
+          "options": [
+            "他以为翻出如来手掌，其实仍在如来五指之中",
+            "他的金箍棒被龙王收走",
+            "唐僧念紧箍咒使他落败",
+            "牛魔王从背后偷袭他"
+          ],
+          "explanation": "悟空在如来手指上留下记号，才发现自己始终没有逃出佛掌。",
+          "scoringKeywords": [
+            "他以为翻出如来手掌，其实仍在如来五指之中"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-068",
+      "sourceId": "068",
+      "chapter": "第34回",
+      "theme": "观音劝善",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-068.jpg",
+      "questions": [
+        {
+          "id": "picture-068",
+          "type": "人物作用",
+          "prompt": "题图为“观音劝善”。观音安排孙悟空、猪八戒、沙僧等候取经人，体现了什么？",
+          "answer": "让有前过的角色通过护送取经共同修行赎罪",
+          "options": [
+            "让有前过的角色通过护送取经共同修行赎罪",
+            "让妖怪各自占山为王",
+            "让他们回天庭恢复原职",
+            "让他们争夺取经人的位置"
+          ],
+          "explanation": "取经队伍中的成员多有前过，护送唐僧成为其改过与修行的道路。",
+          "scoringKeywords": [
+            "让有前过的角色通过护送取经共同修行赎罪"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-069",
+      "sourceId": "069",
+      "chapter": "第34回",
+      "theme": "金蝉子遭贬",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-069.jpg",
+      "questions": [
+        {
+          "id": "picture-069",
+          "type": "人物来历",
+          "prompt": "题图为“金蝉子遭贬”。唐僧前世金蝉子为何被贬到东土转生？",
+          "answer": "因听如来讲法时轻慢佛法、没有专心聆听",
+          "options": [
+            "因听如来讲法时轻慢佛法、没有专心聆听",
+            "因偷吃蟠桃被玉帝处罚",
+            "因打碎玻璃盏被贬",
+            "因偷走芭蕉扇被铁扇公主告发"
+          ],
+          "explanation": "金蝉子被贬与唐僧西天取经相衔接，取经也是他修成正果的过程。",
+          "scoringKeywords": [
+            "因听如来讲法时轻慢佛法、没有专心聆听"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-070",
+      "sourceId": "070",
+      "chapter": "第35回",
+      "theme": "江流儿血书",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-070.jpg",
+      "questions": [
+        {
+          "id": "picture-070",
+          "type": "人物身世",
+          "prompt": "题图为“江流儿血书”。唐僧母亲为何要让婴儿随木匣漂流，并留下血书？",
+          "answer": "父亲被害后为保住孩子性命，并留下身世线索",
+          "options": [
+            "父亲被害后为保住孩子性命，并留下身世线索",
+            "想让孩子去龙宫学法术",
+            "想让孩子成为花果山猴王",
+            "想让孩子替她到天庭做官"
+          ],
+          "explanation": "江流儿的木匣、血书和香环，是后来认亲复仇的重要证据。",
+          "scoringKeywords": [
+            "父亲被害后为保住孩子性命，并留下身世线索"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-071",
+      "sourceId": "071",
+      "chapter": "第35回",
+      "theme": "寻亲报仇",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-071.jpg",
+      "questions": [
+        {
+          "id": "picture-071",
+          "type": "情节因果",
+          "prompt": "题图为“寻亲报仇”。唐僧得知身世后，如何使生父冤案得以昭雪？",
+          "answer": "凭血书等证据认亲，并协助母亲揭发刘洪的罪行",
+          "options": [
+            "凭血书等证据认亲，并协助母亲揭发刘洪的罪行",
+            "请牛魔王替他报仇",
+            "用紧箍咒惩罚刘洪",
+            "去龙宫取回定海神针"
+          ],
+          "explanation": "陈光蕊冤案使唐僧早年经历与后来承担取经使命形成苦难背景。",
+          "scoringKeywords": [
+            "凭血书等证据认亲，并协助母亲揭发刘洪的罪行"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-072",
+      "sourceId": "072",
+      "chapter": "第36回",
+      "theme": "太宗水陆大会",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-072.jpg",
+      "questions": [
+        {
+          "id": "picture-072",
+          "type": "情节作用",
+          "prompt": "题图为“太宗水陆大会”。玄奘在大会上为何被观音选中？",
+          "answer": "他愿意冒险前往西天，求取能普度众生的真经",
+          "options": [
+            "他愿意冒险前往西天，求取能普度众生的真经",
+            "他武艺胜过孙悟空",
+            "他拥有芭蕉扇",
+            "他是车迟国国师"
+          ],
+          "explanation": "玄奘的愿心使他成为取经人，唐太宗赐其御弟身份。",
+          "scoringKeywords": [
+            "他愿意冒险前往西天，求取能普度众生的真经"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-073",
+      "sourceId": "073",
+      "chapter": "第36回",
+      "theme": "观音赠袈裟",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-073.jpg",
+      "questions": [
+        {
+          "id": "picture-073",
+          "type": "法器识记",
+          "prompt": "题图为“观音赠袈裟”。锦襕袈裟和九环锡杖赠给唐僧，主要用来表明什么？",
+          "answer": "取经人的身份与受命西行的使命",
+          "options": [
+            "取经人的身份与受命西行的使命",
+            "悟空在天庭的官职",
+            "八戒的武器身份",
+            "龙王管理东海的权力"
+          ],
+          "explanation": "袈裟后来引出观音院危机，也使唐僧的取经身份更加明确。",
+          "scoringKeywords": [
+            "取经人的身份与受命西行的使命"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-074",
+      "sourceId": "074",
+      "chapter": "第37回",
+      "theme": "两界山救悟空",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-074.jpg",
+      "questions": [
+        {
+          "id": "picture-074",
+          "type": "情节细节",
+          "prompt": "题图为“两界山救悟空”。唐僧救出悟空的直接动作是什么？",
+          "answer": "揭下如来贴在山上的金字压帖",
+          "options": [
+            "揭下如来贴在山上的金字压帖",
+            "拔出悟空头上的金箍",
+            "打碎太上老君的炼丹炉",
+            "用芭蕉扇吹走五行山"
+          ],
+          "explanation": "压帖被揭后悟空才能破山而出，正式加入取经队伍。",
+          "scoringKeywords": [
+            "揭下如来贴在山上的金字压帖"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-075",
+      "sourceId": "075",
+      "chapter": "第37回",
+      "theme": "打杀六贼",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-075.jpg",
+      "questions": [
+        {
+          "id": "picture-075",
+          "type": "情节理解",
+          "prompt": "题图为“打杀六贼”。悟空打死拦路的六个强盗，后文常以“六贼”象征什么？",
+          "answer": "眼、耳、鼻、舌、身、意六种感官欲念",
+          "options": [
+            "眼、耳、鼻、舌、身、意六种感官欲念",
+            "六位天庭大将",
+            "六个龙王儿子",
+            "六名取经僧人"
+          ],
+          "explanation": "“六贼”既是现实强盗，也带有修行中除去六根妄念的象征意味。",
+          "scoringKeywords": [
+            "眼、耳、鼻、舌、身、意六种感官欲念"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-076",
+      "sourceId": "076",
+      "chapter": "第38回",
+      "theme": "紧箍咒",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-076.jpg",
+      "questions": [
+        {
+          "id": "picture-076",
+          "type": "师徒关系",
+          "prompt": "题图再次聚焦“紧箍咒”。唐僧念咒、悟空头痛，反映师徒关系中哪一项矛盾？",
+          "answer": "悟空本领强却难以自我约束，唐僧必须以戒律管束",
+          "options": [
+            "悟空本领强却难以自我约束，唐僧必须以戒律管束",
+            "唐僧不会辨认悟空的相貌",
+            "悟空想夺取皇位",
+            "八戒想当弼马温"
+          ],
+          "explanation": "紧箍不是悟空法力的来源，而是防止其任性伤人、确保取经秩序的约束。",
+          "scoringKeywords": [
+            "悟空本领强却难以自我约束，唐僧必须以戒律管束"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-077",
+      "sourceId": "077",
+      "chapter": "第38回",
+      "theme": "小白龙吃马",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-077.jpg",
+      "questions": [
+        {
+          "id": "picture-077",
+          "type": "情节因果",
+          "prompt": "题图为“小白龙吃马”。小白龙一开始为何会吃掉唐僧的白马？",
+          "answer": "它在鹰愁涧等待取经人，不知白马是唐僧坐骑而误食",
+          "options": [
+            "它在鹰愁涧等待取经人，不知白马是唐僧坐骑而误食",
+            "它想抢走悟空的金箍棒",
+            "它奉玉帝之命阻拦唐僧",
+            "它被八戒施法变成妖怪"
+          ],
+          "explanation": "经观音点化后，小白龙变为白龙马，以另一种方式补偿此前的过失。",
+          "scoringKeywords": [
+            "它在鹰愁涧等待取经人，不知白马是唐僧坐骑而误食"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-078",
+      "sourceId": "078",
+      "chapter": "第39回",
+      "theme": "点化白龙马",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-078.jpg",
+      "questions": [
+        {
+          "id": "picture-078",
+          "type": "人物来历",
+          "prompt": "题图为“点化白龙马”。白龙马原本因何获罪被贬？",
+          "answer": "纵火烧毁父王殿上的明珠",
+          "options": [
+            "纵火烧毁父王殿上的明珠",
+            "私吞了定海神针",
+            "打碎了太上老君炼丹炉",
+            "偷走了观音的鱼篮"
+          ],
+          "explanation": "西海三太子因犯天条被贬，观音使他改过，成为唐僧坐骑。",
+          "scoringKeywords": [
+            "纵火烧毁父王殿上的明珠"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-079",
+      "sourceId": "079",
+      "chapter": "第39回",
+      "theme": "黑熊精偷袈裟",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-079.jpg",
+      "questions": [
+        {
+          "id": "picture-079",
+          "type": "情节因果",
+          "prompt": "题图为“黑熊精偷袈裟”。黑熊精为何会偷走唐僧的锦襕袈裟？",
+          "answer": "见袈裟华美，生出贪心，趁观音院失火时盗走",
+          "options": [
+            "见袈裟华美，生出贪心，趁观音院失火时盗走",
+            "想把袈裟献给玉帝换官职",
+            "想用袈裟熄灭火焰山",
+            "唐僧主动把袈裟赠给它"
+          ],
+          "explanation": "袈裟本由金池长老贪图而引发危机，黑熊精趁乱盗走，串起两重贪念。",
+          "scoringKeywords": [
+            "见袈裟华美，生出贪心，趁观音院失火时盗走"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-080",
+      "sourceId": "080",
+      "chapter": "第40回",
+      "theme": "观音戴禁箍",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-080.jpg",
+      "questions": [
+        {
+          "id": "picture-080",
+          "type": "情节细节",
+          "prompt": "题图为“观音戴禁箍”。观音用禁箍收服黑熊精后，给它安排了什么归宿？",
+          "answer": "留在观音院看守山门",
+          "options": [
+            "留在观音院看守山门",
+            "护送唐僧继续取经",
+            "回东海做龙王",
+            "到兜率宫看守炼丹炉"
+          ],
+          "explanation": "观音将黑熊精收为守山大神，悟空也借此取回袈裟。",
+          "scoringKeywords": [
+            "留在观音院看守山门"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-081",
+      "sourceId": "081",
+      "chapter": "第40回",
+      "theme": "高老庄收八戒",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-081.jpg",
+      "questions": [
+        {
+          "id": "picture-081",
+          "type": "人物来历",
+          "prompt": "题图为“高老庄收八戒”。猪八戒在天庭原任什么职务，又因何被贬？",
+          "answer": "天蓬元帅，因酒后调戏嫦娥被贬下界",
+          "options": [
+            "天蓬元帅，因酒后调戏嫦娥被贬下界",
+            "卷帘大将，因打碎玻璃盏被贬",
+            "弼马温，因放走天马被贬",
+            "东海龙王，因丢失龙珠被贬"
+          ],
+          "explanation": "猪八戒的前身和贪食好色的性格相互印证，后由观音安排拜唐僧为师。",
+          "scoringKeywords": [
+            "天蓬元帅，因酒后调戏嫦娥被贬下界"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-082",
+      "sourceId": "082",
+      "chapter": "第41回",
+      "theme": "流沙河收沙僧",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-082.jpg",
+      "questions": [
+        {
+          "id": "picture-082",
+          "type": "人物来历",
+          "prompt": "题图为“流沙河收沙僧”。沙僧用什么物件把唐僧师徒渡过流沙河？",
+          "answer": "把颈下骷髅串成法船，渡师徒过河",
+          "options": [
+            "把颈下骷髅串成法船，渡师徒过河",
+            "用芭蕉扇扇出石桥",
+            "请东海龙王把河水冻住",
+            "用金刚琢收走河水"
+          ],
+          "explanation": "流沙河鹅毛难浮，沙僧颈下骷髅能浮水，成为过河的关键。",
+          "scoringKeywords": [
+            "把颈下骷髅串成法船，渡师徒过河"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-083",
+      "sourceId": "083",
+      "chapter": "第41回",
+      "theme": "四圣试禅心",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-083.jpg",
+      "questions": [
+        {
+          "id": "picture-083",
+          "type": "人物比较",
+          "prompt": "题图为“四圣试禅心”。面对富贵婚姻诱惑，谁最先动了凡心？",
+          "answer": "猪八戒",
+          "options": [
+            "猪八戒",
+            "孙悟空",
+            "唐僧",
+            "沙僧"
+          ],
+          "explanation": "黎山老母与三位菩萨化作母女试探，八戒贪恋婚姻富贵，受罚后暴露凡心未尽。",
+          "scoringKeywords": [
+            "猪八戒"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-084",
+      "sourceId": "084",
+      "chapter": "第42回",
+      "theme": "三名妖怪在洞中商议",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-084.jpg",
+      "questions": [
+        {
+          "id": "picture-084",
+          "type": "阅读策略",
+          "prompt": "画面出现变幻莫测的妖怪或险境。读《西游记》这类情节时，最应关注哪一条线索来判断人物与事件？",
+          "answer": "人物的真实身份、行动目的和造成的后果",
+          "options": [
+            "人物的真实身份、行动目的和造成的后果",
+            "只根据外表好看或可怕来下结论",
+            "只记住妖怪所在山洞的名称",
+            "忽略妖怪与取经主线的关系"
+          ],
+          "explanation": "《西游记》常用变化、诱骗和法术制造误判；读者要把“是谁、想做什么、带来什么后果”连起来看。",
+          "scoringKeywords": [
+            "人物的真实身份、行动目的和造成的后果"
+          ]
+        }
+      ],
+      "visualReviewStatus": "needs-annotation"
+    },
+    {
+      "id": "xyj-085",
+      "sourceId": "085",
+      "chapter": "第42回",
+      "theme": "孙悟空持棒护住唐僧和老妇人",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-085.jpg",
+      "questions": [
+        {
+          "id": "picture-085",
+          "type": "人物职责",
+          "prompt": "悟空在画面中持棒迎敌、追击或降妖。结合取经队伍的分工，他承担的核心职责是什么？",
+          "answer": "降妖护师，排除西行路上的险阻",
+          "options": [
+            "降妖护师，排除西行路上的险阻",
+            "代替唐僧讲经并决定取经目标",
+            "只负责记录沿途见闻而不参与冲突",
+            "以天庭官职命令所有妖怪让路"
+          ],
+          "explanation": "悟空是队伍中最主要的护卫者，但他的行动始终服务于护送唐僧完成取经使命。",
+          "scoringKeywords": [
+            "降妖护师，排除西行路上的险阻"
+          ]
+        }
+      ],
+      "visualReviewStatus": "needs-annotation"
+    },
+    {
+      "id": "xyj-086",
+      "sourceId": "086",
+      "chapter": "第43回",
+      "theme": "观音菩萨手持杨柳现身",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-086.jpg",
+      "questions": [
+        {
+          "id": "picture-086",
+          "type": "人物作用",
+          "prompt": "观音菩萨在画面中现身、点化或降妖。她在取经故事结构中更主要的作用是什么？",
+          "answer": "在关键处引导、点化并帮助师徒化解难关",
+          "options": [
+            "在关键处引导、点化并帮助师徒化解难关",
+            "代替唐僧走完全部取经路程",
+            "只负责宣布天庭的日常命令",
+            "专门制造新的妖怪阻拦师徒"
+          ],
+          "explanation": "观音并不替师徒完成任务，而是在关键节点给予方向、法宝或收服妖怪的帮助。",
+          "scoringKeywords": [
+            "在关键处引导、点化并帮助师徒化解难关"
+          ]
+        }
+      ],
+      "visualReviewStatus": "needs-annotation"
+    },
+    {
+      "id": "xyj-087",
+      "sourceId": "087",
+      "chapter": "第43回",
+      "theme": "孙悟空在林中护送唐僧",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-087.jpg",
+      "questions": [
+        {
+          "id": "picture-087",
+          "type": "人物职责",
+          "prompt": "悟空在画面中持棒迎敌、追击或降妖。结合取经队伍的分工，他承担的核心职责是什么？",
+          "answer": "降妖护师，排除西行路上的险阻",
+          "options": [
+            "降妖护师，排除西行路上的险阻",
+            "代替唐僧讲经并决定取经目标",
+            "只负责记录沿途见闻而不参与冲突",
+            "以天庭官职命令所有妖怪让路"
+          ],
+          "explanation": "悟空是队伍中最主要的护卫者，但他的行动始终服务于护送唐僧完成取经使命。",
+          "scoringKeywords": [
+            "降妖护师，排除西行路上的险阻"
+          ]
+        }
+      ],
+      "visualReviewStatus": "needs-annotation"
+    },
+    {
+      "id": "xyj-088",
+      "sourceId": "088",
+      "chapter": "第44回",
+      "theme": "孙悟空在林中挥棒打妖",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-088.jpg",
+      "questions": [
+        {
+          "id": "picture-088",
+          "type": "人物职责",
+          "prompt": "悟空在画面中持棒迎敌、追击或降妖。结合取经队伍的分工，他承担的核心职责是什么？",
+          "answer": "降妖护师，排除西行路上的险阻",
+          "options": [
+            "降妖护师，排除西行路上的险阻",
+            "代替唐僧讲经并决定取经目标",
+            "只负责记录沿途见闻而不参与冲突",
+            "以天庭官职命令所有妖怪让路"
+          ],
+          "explanation": "悟空是队伍中最主要的护卫者，但他的行动始终服务于护送唐僧完成取经使命。",
+          "scoringKeywords": [
+            "降妖护师，排除西行路上的险阻"
+          ]
+        }
+      ],
+      "visualReviewStatus": "needs-annotation"
+    },
+    {
+      "id": "xyj-089",
+      "sourceId": "089",
+      "chapter": "第44回",
+      "theme": "白骨精化白骨",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-089.jpg",
+      "questions": [
+        {
+          "id": "picture-089",
+          "type": "情节顺序",
+          "prompt": "题图为“白骨精化白骨”。白骨精三次变化蒙骗唐僧，正确顺序是哪一项？",
+          "answer": "村姑、老妇、老翁",
+          "options": [
+            "村姑、老妇、老翁",
+            "老翁、村姑、老妇",
+            "白龙马、村姑、老妇",
+            "书生、道士、国王"
+          ],
+          "explanation": "白骨精三变造成悟空“滥杀无辜”的假象，唐僧由此误会悟空。",
+          "scoringKeywords": [
+            "村姑、老妇、老翁"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-090",
+      "sourceId": "090",
+      "chapter": "第45回",
+      "theme": "逐走孙悟空",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-090.jpg",
+      "questions": [
+        {
+          "id": "picture-090",
+          "type": "情节因果",
+          "prompt": "题图为“逐走孙悟空”。唐僧为何把悟空赶走？",
+          "answer": "他误以为悟空连续打死无辜百姓，认为悟空滥杀",
+          "options": [
+            "他误以为悟空连续打死无辜百姓，认为悟空滥杀",
+            "悟空偷走了唐僧的袈裟",
+            "悟空拒绝佩戴金箍",
+            "悟空想夺取白龙马"
+          ],
+          "explanation": "唐僧肉眼凡胎不能识破白骨精，师徒信任因此遭到严峻考验。",
+          "scoringKeywords": [
+            "他误以为悟空连续打死无辜百姓，认为悟空滥杀"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-091",
+      "sourceId": "091",
+      "chapter": "第45回",
+      "theme": "黄袍怪",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-091.jpg",
+      "questions": [
+        {
+          "id": "picture-091",
+          "type": "人物来历",
+          "prompt": "题图为“黄袍怪”。黄袍怪下界前在天庭是什么身份？",
+          "answer": "二十八宿中的奎木狼",
+          "options": [
+            "二十八宿中的奎木狼",
+            "太上老君的青牛",
+            "观音池中的金鱼",
+            "广寒宫的玉兔"
+          ],
+          "explanation": "奎木狼为与百花羞相会下界为妖，最终由天庭召回。",
+          "scoringKeywords": [
+            "二十八宿中的奎木狼"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-092",
+      "sourceId": "092",
+      "chapter": "第46回",
+      "theme": "唐僧变虎",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-092.jpg",
+      "questions": [
+        {
+          "id": "picture-092",
+          "type": "情节因果",
+          "prompt": "题图为“唐僧变虎”。黄袍怪为何能把唐僧变成猛虎？",
+          "answer": "唐僧误饮妖怪法酒，被黄袍怪施法变化",
+          "options": [
+            "唐僧误饮妖怪法酒，被黄袍怪施法变化",
+            "唐僧自己修炼变化术",
+            "悟空念紧箍咒把他变虎",
+            "白龙马吐火把他烧成虎"
+          ],
+          "explanation": "唐僧变虎后，八戒到花果山以激将法请回悟空救师父。",
+          "scoringKeywords": [
+            "唐僧误饮妖怪法酒，被黄袍怪施法变化"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-093",
+      "sourceId": "093",
+      "chapter": "第46回",
+      "theme": "八戒智激",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-093.jpg",
+      "questions": [
+        {
+          "id": "picture-093",
+          "type": "计策辨析",
+          "prompt": "题图为“八戒智激”。八戒如何激孙悟空回花果山救唐僧？",
+          "answer": "故意说师父已被妖怪害死、要散伙分行李",
+          "options": [
+            "故意说师父已被妖怪害死、要散伙分行李",
+            "答应把金箍棒送给悟空",
+            "假扮唐僧去天庭告状",
+            "请牛魔王用扇子相助"
+          ],
+          "explanation": "八戒深知悟空重情义，用激将法唤回他，师徒矛盾才得到修复。",
+          "scoringKeywords": [
+            "故意说师父已被妖怪害死、要散伙分行李"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-094",
+      "sourceId": "094",
+      "chapter": "第47回",
+      "theme": "大战金角银角",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-094.jpg",
+      "questions": [
+        {
+          "id": "picture-094",
+          "type": "法器识记",
+          "prompt": "题图为“大战金角银角”。下列哪一件不是金角、银角常用来擒人的法宝？",
+          "answer": "芭蕉扇",
+          "options": [
+            "芭蕉扇",
+            "紫金红葫芦",
+            "羊脂玉净瓶",
+            "幌金绳"
+          ],
+          "explanation": "金角、银角来自兜率宫，携带多件老君法宝；芭蕉扇属于铁扇公主。",
+          "scoringKeywords": [
+            "芭蕉扇"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-095",
+      "sourceId": "095",
+      "chapter": "第47回",
+      "theme": "紫金红葫芦",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-095.jpg",
+      "questions": [
+        {
+          "id": "picture-095",
+          "type": "法器作用",
+          "prompt": "题图为“紫金红葫芦”。金角银角使用紫金红葫芦时，怎样才能把对手收进去？",
+          "answer": "叫出对方名字，对方答应后便会被吸入",
+          "options": [
+            "叫出对方名字，对方答应后便会被吸入",
+            "只要对方看一眼葫芦",
+            "把葫芦扔到地上就会爆炸",
+            "念紧箍咒后自动收人"
+          ],
+          "explanation": "悟空曾用假葫芦设法周旋，体现他面对法宝时的机智。",
+          "scoringKeywords": [
+            "叫出对方名字，对方答应后便会被吸入"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-096",
+      "sourceId": "096",
+      "chapter": "第48回",
+      "theme": "者行孙",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-096.jpg",
+      "questions": [
+        {
+          "id": "picture-096",
+          "type": "情节细节",
+          "prompt": "题图为“者行孙”。悟空被装入葫芦后，为什么能从中脱身？",
+          "answer": "在葫芦内变作小虫，从葫芦口飞出",
+          "options": [
+            "在葫芦内变作小虫，从葫芦口飞出",
+            "用金箍棒直接打碎天庭",
+            "请唐僧念紧箍咒救他",
+            "让八戒把葫芦吞下"
+          ],
+          "explanation": "悟空将计就计进入葫芦，又凭变化之术脱身，反制金角银角。",
+          "scoringKeywords": [
+            "在葫芦内变作小虫，从葫芦口飞出"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-097",
+      "sourceId": "097",
+      "chapter": "第48回",
+      "theme": "假国王",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-097.jpg",
+      "questions": [
+        {
+          "id": "picture-097",
+          "type": "情节因果",
+          "prompt": "题图为“假国王”。乌鸡国的假国王是什么妖怪变成的？",
+          "answer": "文殊菩萨的坐骑青毛狮子",
+          "options": [
+            "文殊菩萨的坐骑青毛狮子",
+            "观音的金鱼",
+            "太上老君的青牛",
+            "嫦娥的玉兔"
+          ],
+          "explanation": "青毛狮子因文殊的安排下界，推真国王入井并篡位三年。",
+          "scoringKeywords": [
+            "文殊菩萨的坐骑青毛狮子"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-098",
+      "sourceId": "098",
+      "chapter": "第49回",
+      "theme": "八戒捞尸",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-098.jpg",
+      "questions": [
+        {
+          "id": "picture-098",
+          "type": "情节细节",
+          "prompt": "题图为“八戒捞尸”。乌鸡国真国王的尸身在哪里，八戒如何取回？",
+          "answer": "被沉在御花园井中，八戒下井捞出",
+          "options": [
+            "被沉在御花园井中，八戒下井捞出",
+            "被埋在火焰山下，悟空挖出",
+            "被锁在龙宫，白龙马驮出",
+            "被装入紫金葫芦，沙僧倒出"
+          ],
+          "explanation": "悟空先让国王托梦求救，八戒捞尸后才有后续还魂复位。",
+          "scoringKeywords": [
+            "被沉在御花园井中，八戒下井捞出"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-099",
+      "sourceId": "099",
+      "chapter": "第49回",
+      "theme": "九转还魂丹",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-099.jpg",
+      "questions": [
+        {
+          "id": "picture-099",
+          "type": "情节因果",
+          "prompt": "题图为“九转还魂丹”。悟空用什么办法使乌鸡国真国王复活？",
+          "answer": "向太上老君求得九转还魂丹，让其服下还魂",
+          "options": [
+            "向太上老君求得九转还魂丹，让其服下还魂",
+            "请观音用鱼篮装回魂魄",
+            "用芭蕉扇扇回魂魄",
+            "让八戒念紧箍咒"
+          ],
+          "explanation": "九转还魂丹使真国王苏醒，真假国王的冲突才能公开解决。",
+          "scoringKeywords": [
+            "向太上老君求得九转还魂丹，让其服下还魂"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-100",
+      "sourceId": "100",
+      "chapter": "第50回",
+      "theme": "复活乌鸡国王",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-100.jpg",
+      "questions": [
+        {
+          "id": "picture-100",
+          "type": "情节结果",
+          "prompt": "题图为“复活乌鸡国王”。真国王复活后，悟空怎样让假国王现出本相？",
+          "answer": "设计让真假国王当面对质，逼青毛狮子无法继续伪装",
+          "options": [
+            "设计让真假国王当面对质，逼青毛狮子无法继续伪装",
+            "把两人一起压在五行山下",
+            "请铁扇公主用芭蕉扇辨认",
+            "让唐僧念紧箍咒把他们变虎"
+          ],
+          "explanation": "真王复活后，悟空以公开对质恢复国政，文殊菩萨再收回青毛狮子。",
+          "scoringKeywords": [
+            "设计让真假国王当面对质，逼青毛狮子无法继续伪装"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-101",
+      "sourceId": "101",
+      "chapter": "第50回",
+      "theme": "红孩儿吐火",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-101.jpg",
+      "questions": [
+        {
+          "id": "picture-101",
+          "type": "人物本领",
+          "prompt": "题图为“红孩儿吐火”。红孩儿最令悟空难以应对的本领是什么？",
+          "answer": "三昧真火",
+          "options": [
+            "三昧真火",
+            "金刚琢",
+            "鱼篮",
+            "九齿钉耙"
+          ],
+          "explanation": "红孩儿在火焰山修炼三百年，三昧真火让悟空难以用寻常水法扑灭。",
+          "scoringKeywords": [
+            "三昧真火"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-102",
+      "sourceId": "102",
+      "chapter": "第51回",
+      "theme": "真火烧身",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-102.jpg",
+      "questions": [
+        {
+          "id": "picture-102",
+          "type": "情节因果",
+          "prompt": "题图为“真火烧身”。悟空为何越用水扑救，反而被三昧真火烧得更重？",
+          "answer": "水遇真火生出浓烟，悟空因此被烟火熏伤",
+          "options": [
+            "水遇真火生出浓烟，悟空因此被烟火熏伤",
+            "水把金箍棒冲走",
+            "水使红孩儿变成白龙",
+            "水把唐僧变成猛虎"
+          ],
+          "explanation": "三昧真火并非普通火焰，悟空的常规应对失效，才必须请观音相助。",
+          "scoringKeywords": [
+            "水遇真火生出浓烟，悟空因此被烟火熏伤"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-103",
+      "sourceId": "103",
+      "chapter": "第51回",
+      "theme": "观音降服",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-103.jpg",
+      "questions": [
+        {
+          "id": "picture-103",
+          "type": "情节细节",
+          "prompt": "题图为“观音降服”。观音用什么办法收服红孩儿？",
+          "answer": "诱他进入净瓶，再以禁箍使其归服",
+          "options": [
+            "诱他进入净瓶，再以禁箍使其归服",
+            "用金刚琢打碎他的兵器",
+            "用芭蕉扇把他扇到东海",
+            "让太上老君把他炼成仙丹"
+          ],
+          "explanation": "红孩儿最终成为观音座前的善财童子，危机以教化收束。",
+          "scoringKeywords": [
+            "诱他进入净瓶，再以禁箍使其归服"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-104",
+      "sourceId": "104",
+      "chapter": "第52回",
+      "theme": "黑水河遇险",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-104.jpg",
+      "questions": [
+        {
+          "id": "picture-104",
+          "type": "人物关系",
+          "prompt": "题图为“黑水河遇险”。黑水河小鼍龙与西海龙王有什么关系？",
+          "answer": "是西海龙王的外甥",
+          "options": [
+            "是西海龙王的外甥",
+            "是东海龙王的亲子",
+            "是观音菩萨的坐骑",
+            "是太上老君的童子"
+          ],
+          "explanation": "小鼍龙掳走唐僧和八戒，悟空因此到西海龙宫求援。",
+          "scoringKeywords": [
+            "是西海龙王的外甥"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-105",
+      "sourceId": "105",
+      "chapter": "第52回",
+      "theme": "摩昂擒妖",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-105.jpg",
+      "questions": [
+        {
+          "id": "picture-105",
+          "type": "情节结果",
+          "prompt": "题图为“摩昂擒妖”。谁最终擒住黑水河的小鼍龙？",
+          "answer": "西海龙王长子摩昂太子",
+          "options": [
+            "西海龙王长子摩昂太子",
+            "哪吒三太子",
+            "善财童子",
+            "镇元大仙"
+          ],
+          "explanation": "龙族内部关系成为破解黑水河之难的关键，摩昂太子将小鼍龙带回西海。",
+          "scoringKeywords": [
+            "西海龙王长子摩昂太子"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-106",
+      "sourceId": "106",
+      "chapter": "第53回",
+      "theme": "车迟国三妖",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-106.jpg",
+      "questions": [
+        {
+          "id": "picture-106",
+          "type": "人物辨析",
+          "prompt": "题图为“车迟国三妖”。虎力、鹿力、羊力三位国师的本相分别是什么？",
+          "answer": "虎精、鹿精、羊精",
+          "options": [
+            "虎精、鹿精、羊精",
+            "龙精、豹精、蛇精",
+            "蜘蛛精、蜈蚣精、蝎子精",
+            "青狮、白象、大鹏"
+          ],
+          "explanation": "三妖假借国师身份“敬道灭僧”，悟空以斗法揭穿其真相。",
+          "scoringKeywords": [
+            "虎精、鹿精、羊精"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-107",
+      "sourceId": "107",
+      "chapter": "第53回",
+      "theme": "大闹三清观",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-107.jpg",
+      "questions": [
+        {
+          "id": "picture-107",
+          "type": "情节细节",
+          "prompt": "题图为“大闹三清观”。悟空等人为何在三清像前留下恶作剧？",
+          "answer": "为反击车迟国妖道长期欺压和尚",
+          "options": [
+            "为反击车迟国妖道长期欺压和尚",
+            "为偷取三清的法宝",
+            "为请三清收服牛魔王",
+            "为替唐僧举行婚礼"
+          ],
+          "explanation": "悟空、八戒、沙僧借三清像戏弄妖道，是斗法前对假权威的反击。",
+          "scoringKeywords": [
+            "为反击车迟国妖道长期欺压和尚"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-108",
+      "sourceId": "108",
+      "chapter": "第54回",
+      "theme": "斗法求雨",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-108.jpg",
+      "questions": [
+        {
+          "id": "picture-108",
+          "type": "情节比较",
+          "prompt": "题图为“斗法求雨”。悟空与虎力大仙求雨斗法的关键区别是什么？",
+          "answer": "虎力借妖术施雨，悟空请来真龙按天令降雨",
+          "options": [
+            "虎力借妖术施雨，悟空请来真龙按天令降雨",
+            "虎力用芭蕉扇，悟空用金刚琢",
+            "虎力念紧箍咒，悟空变成白龙",
+            "虎力靠天兵，悟空靠牛魔王"
+          ],
+          "explanation": "悟空不仅比法术，更揭穿虎力借假道术蒙骗国王的本质。",
+          "scoringKeywords": [
+            "虎力借妖术施雨，悟空请来真龙按天令降雨"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-109",
+      "sourceId": "109",
+      "chapter": "第54回",
+      "theme": "车迟国下油锅",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-109.jpg",
+      "questions": [
+        {
+          "id": "picture-109",
+          "type": "情节细节",
+          "prompt": "题图为“车迟国下油锅”。悟空如何在下油锅斗法中取胜？",
+          "answer": "让北海龙王收走锅中冷龙，油锅便失去沸腾的法力",
+          "options": [
+            "让北海龙王收走锅中冷龙，油锅便失去沸腾的法力",
+            "把芭蕉扇投入锅中灭火",
+            "用紧箍咒让虎力变虎",
+            "请唐僧跳入锅中"
+          ],
+          "explanation": "悟空看出虎力以冷龙作祟，调走冷龙后，虎力便无法在沸油中逞能。",
+          "scoringKeywords": [
+            "让北海龙王收走锅中冷龙，油锅便失去沸腾的法力"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-110",
+      "sourceId": "110",
+      "chapter": "第55回",
+      "theme": "通天河落水",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-110.jpg",
+      "questions": [
+        {
+          "id": "picture-110",
+          "type": "情节因果",
+          "prompt": "题图为“通天河落水”。老鼋驮师徒过通天河时，为何把他们掀入水中？",
+          "answer": "唐僧忘了替老鼋向如来询问何时能脱去鼍身",
+          "options": [
+            "唐僧忘了替老鼋向如来询问何时能脱去鼍身",
+            "悟空偷走了老鼋的宝珠",
+            "八戒把河水喝干了",
+            "白龙马咬伤老鼋"
+          ],
+          "explanation": "老鼋曾救师徒过河并托问前程，唐僧遗忘承诺，结尾以落水补足一难。",
+          "scoringKeywords": [
+            "唐僧忘了替老鼋向如来询问何时能脱去鼍身"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-111",
+      "sourceId": "111",
+      "chapter": "第55回",
+      "theme": "观音织竹篮",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-111.jpg",
+      "questions": [
+        {
+          "id": "picture-111",
+          "type": "法器作用",
+          "prompt": "题图为“观音织竹篮”。观音用竹篮收服通天河妖怪，说明灵感大王原本是什么？",
+          "answer": "观音莲花池中的金鱼",
+          "options": [
+            "观音莲花池中的金鱼",
+            "太乙救苦天尊的狮子",
+            "广寒宫的玉兔",
+            "太上老君的青牛"
+          ],
+          "explanation": "竹篮化作鱼篮，正好收回池中逃出的金鱼精。",
+          "scoringKeywords": [
+            "观音莲花池中的金鱼"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-112",
+      "sourceId": "112",
+      "chapter": "第56回",
+      "theme": "鱼篮降妖",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-112.jpg",
+      "questions": [
+        {
+          "id": "picture-112",
+          "type": "情节细节",
+          "prompt": "题图为“鱼篮降妖”。观音用什么法宝收服灵感大王？",
+          "answer": "鱼篮",
+          "options": [
+            "鱼篮",
+            "紫金红葫芦",
+            "金刚琢",
+            "幌金绳"
+          ],
+          "explanation": "灵感大王本是观音池中金鱼，鱼篮使其恢复原形并被收回。",
+          "scoringKeywords": [
+            "鱼篮"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-113",
+      "sourceId": "113",
+      "chapter": "第56回",
+      "theme": "金兜山遇险",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-113.jpg",
+      "questions": [
+        {
+          "id": "picture-113",
+          "type": "法器作用",
+          "prompt": "题图为“金兜山遇险”。青牛精最棘手的法宝有什么作用？",
+          "answer": "金刚琢能套走悟空等人的兵器",
+          "options": [
+            "金刚琢能套走悟空等人的兵器",
+            "芭蕉扇能扇灭火焰山",
+            "鱼篮能收服金鱼精",
+            "紫金钵盂能保存真经"
+          ],
+          "explanation": "青牛精借金刚琢套走兵器，连天兵的兵器也难逃，悟空只得请老君。",
+          "scoringKeywords": [
+            "金刚琢能套走悟空等人的兵器"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-114",
+      "sourceId": "114",
+      "chapter": "第57回",
+      "theme": "金刚琢收兵器",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-114.jpg",
+      "questions": [
+        {
+          "id": "picture-114",
+          "type": "法器来历",
+          "prompt": "题图为“金刚琢收兵器”。青牛精手中的金刚琢原本属于谁？",
+          "answer": "太上老君",
+          "options": [
+            "太上老君",
+            "观音菩萨",
+            "东海龙王",
+            "铁扇公主"
+          ],
+          "explanation": "青牛精是老君坐骑，趁老君看丹炉时偷走金刚琢下界。",
+          "scoringKeywords": [
+            "太上老君"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-115",
+      "sourceId": "115",
+      "chapter": "第57回",
+      "theme": "老君降青牛",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-115.jpg",
+      "questions": [
+        {
+          "id": "picture-115",
+          "type": "情节结果",
+          "prompt": "题图为“老君降青牛”。悟空为何最终请太上老君出面？",
+          "answer": "青牛精是老君坐骑，只有老君能收回金刚琢并制服它",
+          "options": [
+            "青牛精是老君坐骑，只有老君能收回金刚琢并制服它",
+            "老君能替唐僧念紧箍咒",
+            "老君拥有火焰山芭蕉扇",
+            "老君是乌鸡国国王"
+          ],
+          "explanation": "悟空多方求援仍难破金刚琢，最终必须由法宝主人收束危机。",
+          "scoringKeywords": [
+            "青牛精是老君坐骑，只有老君能收回金刚琢并制服它"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-116",
+      "sourceId": "116",
+      "chapter": "第58回",
+      "theme": "女儿国迎亲",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-116.jpg",
+      "questions": [
+        {
+          "id": "picture-116",
+          "type": "情节因果",
+          "prompt": "题图为“女儿国迎亲”。女儿国国王为何希望唐僧留下？",
+          "answer": "倾慕唐僧，想与他成亲并共治女儿国",
+          "options": [
+            "倾慕唐僧，想与他成亲并共治女儿国",
+            "想让唐僧替她降伏青牛精",
+            "想夺取悟空的金箍棒",
+            "想请唐僧担任天庭国师"
+          ],
+          "explanation": "女儿国情节以情感和世俗富贵考验唐僧的取经意志。",
+          "scoringKeywords": [
+            "倾慕唐僧，想与他成亲并共治女儿国"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-117",
+      "sourceId": "117",
+      "chapter": "第58回",
+      "theme": "琵琶精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-117.jpg",
+      "questions": [
+        {
+          "id": "picture-117",
+          "type": "人物本领",
+          "prompt": "题图为“琵琶精”。蝎子精最令如来、观音也忌惮的本领是什么？",
+          "answer": "尾钩的倒马毒，能蜇伤神佛",
+          "options": [
+            "尾钩的倒马毒，能蜇伤神佛",
+            "三昧真火",
+            "金刚琢",
+            "金光罩"
+          ],
+          "explanation": "蝎子精的倒马毒十分厉害，悟空最后请昴日星官以本相啼叫降伏它。",
+          "scoringKeywords": [
+            "尾钩的倒马毒，能蜇伤神佛"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-118",
+      "sourceId": "118",
+      "chapter": "第59回",
+      "theme": "真假美猴王",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-118.jpg",
+      "questions": [
+        {
+          "id": "picture-118",
+          "type": "情节因果",
+          "prompt": "题图为“真假美猴王”。六耳猕猴趁什么时机冒充悟空？",
+          "answer": "悟空因打死强盗被唐僧赶走、师徒失和之时",
+          "options": [
+            "悟空因打死强盗被唐僧赶走、师徒失和之时",
+            "悟空受封斗战胜佛之后",
+            "唐僧刚到女儿国时",
+            "悟空在龙宫取金箍棒时"
+          ],
+          "explanation": "六耳猕猴利用悟空离队制造真假之争，把外在妖魔与悟空的“二心”联系起来。",
+          "scoringKeywords": [
+            "悟空因打死强盗被唐僧赶走、师徒失和之时"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-119",
+      "sourceId": "119",
+      "chapter": "第59回",
+      "theme": "谛听辨真假",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-119.jpg",
+      "questions": [
+        {
+          "id": "picture-119",
+          "type": "人物辨析",
+          "prompt": "题图为“谛听辨真假”。谛听明明听出真假悟空，为何不当场说破？",
+          "answer": "担心六耳猕猴凶恶，若说破会伤及地府众生",
+          "options": [
+            "担心六耳猕猴凶恶，若说破会伤及地府众生",
+            "它其实完全分辨不出",
+            "它只会听唐僧念经",
+            "它等待龙王来裁决"
+          ],
+          "explanation": "谛听能察幽冥，却把最终裁决交给如来，体现故事中不同权威的边界。",
+          "scoringKeywords": [
+            "担心六耳猕猴凶恶，若说破会伤及地府众生"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-120",
+      "sourceId": "120",
+      "chapter": "第60回",
+      "theme": "如来辨真假",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-120.jpg",
+      "questions": [
+        {
+          "id": "picture-120",
+          "type": "情节结果",
+          "prompt": "题图为“如来辨真假”。如来如何识破六耳猕猴？",
+          "answer": "指出它是六耳猕猴，能听遍天下声音、善于假冒",
+          "options": [
+            "指出它是六耳猕猴，能听遍天下声音、善于假冒",
+            "用紧箍咒让它现形",
+            "用芭蕉扇把它吹走",
+            "让它吞下九转还魂丹"
+          ],
+          "explanation": "各路神仙难分真假，只有如来揭示六耳猕猴的身份，悟空才将其打死。",
+          "scoringKeywords": [
+            "指出它是六耳猕猴，能听遍天下声音、善于假冒"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-121",
+      "sourceId": "121",
+      "chapter": "第60回",
+      "theme": "火焰山受阻",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-121.jpg",
+      "questions": [
+        {
+          "id": "picture-121",
+          "type": "情节因果",
+          "prompt": "题图为“火焰山受阻”。师徒为何必须取得芭蕉扇？",
+          "answer": "火焰山烈火横在西行必经之路，必须扇灭才能通行",
+          "options": [
+            "火焰山烈火横在西行必经之路，必须扇灭才能通行",
+            "芭蕉扇是打开龙宫的钥匙",
+            "芭蕉扇能医治乌鸡国王",
+            "芭蕉扇能辨别真假悟空"
+          ],
+          "explanation": "火焰山把自然险阻转化为取经考验，才引出三借芭蕉扇的连续冲突。",
+          "scoringKeywords": [
+            "火焰山烈火横在西行必经之路，必须扇灭才能通行"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-122",
+      "sourceId": "122",
+      "chapter": "第61回",
+      "theme": "一调芭蕉扇",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-122.jpg",
+      "questions": [
+        {
+          "id": "picture-122",
+          "type": "情节顺序",
+          "prompt": "题图为“一调芭蕉扇”。悟空第一次向铁扇公主借扇，结果如何？",
+          "answer": "被铁扇公主一扇扇到小须弥山",
+          "options": [
+            "被铁扇公主一扇扇到小须弥山",
+            "立刻借到真扇并扇灭火焰",
+            "被牛魔王用金刚琢套住",
+            "被观音收为善财童子"
+          ],
+          "explanation": "第一次借扇失败后，灵吉菩萨给悟空定风丹，他才能再次应对芭蕉扇。",
+          "scoringKeywords": [
+            "被铁扇公主一扇扇到小须弥山"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-123",
+      "sourceId": "123",
+      "chapter": "第61回",
+      "theme": "定风丹",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-123.jpg",
+      "questions": [
+        {
+          "id": "picture-123",
+          "type": "法器作用",
+          "prompt": "题图为“定风丹”。悟空向灵吉菩萨求定风丹，直接是为了应对什么？",
+          "answer": "铁扇公主芭蕉扇能把人扇飞的大风",
+          "options": [
+            "铁扇公主芭蕉扇能把人扇飞的大风",
+            "红孩儿的三昧真火",
+            "金角银角的紫金葫芦",
+            "黄眉怪的人种袋"
+          ],
+          "explanation": "定风丹使悟空第二次借扇时站得住脚，推动故事进入真假扇的辨析。",
+          "scoringKeywords": [
+            "铁扇公主芭蕉扇能把人扇飞的大风"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-124",
+      "sourceId": "124",
+      "chapter": "第62回",
+      "theme": "钻铁扇肚子",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-124.jpg",
+      "questions": [
+        {
+          "id": "picture-124",
+          "type": "计策辨析",
+          "prompt": "题图为“钻铁扇肚子”。悟空变化成小虫钻进铁扇公主腹中，目的是什么？",
+          "answer": "逼她交出芭蕉扇",
+          "options": [
+            "逼她交出芭蕉扇",
+            "偷走她的金刚琢",
+            "让她变成白龙马",
+            "请她带路去灵山"
+          ],
+          "explanation": "悟空以变化术迫使铁扇公主给扇，但第二次借到的仍是假扇。",
+          "scoringKeywords": [
+            "逼她交出芭蕉扇"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-125",
+      "sourceId": "125",
+      "chapter": "第62回",
+      "theme": "二调芭蕉扇",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-125.jpg",
+      "questions": [
+        {
+          "id": "picture-125",
+          "type": "情节细节",
+          "prompt": "题图为“二调芭蕉扇”。悟空第二次得到的芭蕉扇为何无效？",
+          "answer": "那是一把假扇，越扇火势越大",
+          "options": [
+            "那是一把假扇，越扇火势越大",
+            "扇子被白龙马吃掉",
+            "扇子只能在东海使用",
+            "扇子被如来收走"
+          ],
+          "explanation": "真假扇的反转说明悟空虽取得法宝，仍须辨明真伪并继续斗智。",
+          "scoringKeywords": [
+            "那是一把假扇，越扇火势越大"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-126",
+      "sourceId": "126",
+      "chapter": "第63回",
+      "theme": "牛魔王变八戒",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-126.jpg",
+      "questions": [
+        {
+          "id": "picture-126",
+          "type": "计策辨析",
+          "prompt": "题图为“牛魔王变八戒”。牛魔王变成八戒骗回真扇，利用了什么破绽？",
+          "answer": "悟空变作牛魔王借走真扇后，队伍一时未能辨出假八戒",
+          "options": [
+            "悟空变作牛魔王借走真扇后，队伍一时未能辨出假八戒",
+            "唐僧忘记了紧箍咒",
+            "白龙马认不出火焰山",
+            "观音不在南海"
+          ],
+          "explanation": "悟空骗得真扇，牛魔王又反骗回去，三借过程体现双方连续斗智。",
+          "scoringKeywords": [
+            "悟空变作牛魔王借走真扇后，队伍一时未能辨出假八戒"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-127",
+      "sourceId": "127",
+      "chapter": "第63回",
+      "theme": "大战牛魔王",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-127.jpg",
+      "questions": [
+        {
+          "id": "picture-127",
+          "type": "人物关系",
+          "prompt": "题图为“大战牛魔王”。悟空与牛魔王为何从结拜兄弟变成敌手？",
+          "answer": "牛魔王包庇铁扇公主并夺回真扇，阻断师徒过火焰山",
+          "options": [
+            "牛魔王包庇铁扇公主并夺回真扇，阻断师徒过火焰山",
+            "两人争夺花果山王位",
+            "两人同受弼马温官职羞辱",
+            "牛魔王打碎了玻璃盏"
+          ],
+          "explanation": "旧日兄弟情谊让冲突更复杂，但取经使命最终推动悟空正面迎战。",
+          "scoringKeywords": [
+            "牛魔王包庇铁扇公主并夺回真扇，阻断师徒过火焰山"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-128",
+      "sourceId": "128",
+      "chapter": "第64回",
+      "theme": "哪吒降老牛",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-128.jpg",
+      "questions": [
+        {
+          "id": "picture-128",
+          "type": "情节结果",
+          "prompt": "题图为“哪吒降老牛”。牛魔王最后被迫现出什么原形？",
+          "answer": "大白牛",
+          "options": [
+            "大白牛",
+            "青毛狮子",
+            "金翅大鹏",
+            "白鹿"
+          ],
+          "explanation": "牛魔王变化多端，最后由哪吒、李天王等众神围攻，现出大白牛原形。",
+          "scoringKeywords": [
+            "大白牛"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-129",
+      "sourceId": "129",
+      "chapter": "第64回",
+      "theme": "扫塔辨奇冤",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-129.jpg",
+      "questions": [
+        {
+          "id": "picture-129",
+          "type": "情节因果",
+          "prompt": "题图为“扫塔辨奇冤”。祭赛国金光寺蒙冤的直接原因是什么？",
+          "answer": "塔顶佛宝失窃，国王怀疑寺僧监守自盗",
+          "options": [
+            "塔顶佛宝失窃，国王怀疑寺僧监守自盗",
+            "悟空偷走国王宝剑",
+            "唐僧拒绝给国王讲经",
+            "八戒毁坏了国师道观"
+          ],
+          "explanation": "悟空扫塔查明佛宝被盗，才将线索引向碧波潭九头虫。",
+          "scoringKeywords": [
+            "塔顶佛宝失窃，国王怀疑寺僧监守自盗"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-130",
+      "sourceId": "130",
+      "chapter": "第65回",
+      "theme": "二郎神助战",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-130.jpg",
+      "questions": [
+        {
+          "id": "picture-130",
+          "type": "人物作用",
+          "prompt": "题图为“二郎神助战”。悟空对付九头虫时，为何能请到二郎神相助？",
+          "answer": "二郎神恰好与梅山兄弟经过，加入夺回佛宝的战斗",
+          "options": [
+            "二郎神恰好与梅山兄弟经过，加入夺回佛宝的战斗",
+            "二郎神是唐僧的徒弟",
+            "二郎神持有芭蕉扇",
+            "二郎神要向悟空借紧箍"
+          ],
+          "explanation": "哮天犬咬掉九头虫一头，二郎神的加入扭转了碧波潭战局。",
+          "scoringKeywords": [
+            "二郎神恰好与梅山兄弟经过，加入夺回佛宝的战斗"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-131",
+      "sourceId": "131",
+      "chapter": "第65回",
+      "theme": "九头虫",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-131.jpg",
+      "questions": [
+        {
+          "id": "picture-131",
+          "type": "情节细节",
+          "prompt": "题图为“九头虫”。在碧波潭之战中，哮天犬立下什么功劳？",
+          "answer": "咬掉九头虫一个头",
+          "options": [
+            "咬掉九头虫一个头",
+            "吞掉九头虫的全部兵器",
+            "把九头虫变成白马",
+            "用尾巴扇灭火焰山"
+          ],
+          "explanation": "九头虫负伤逃走，悟空才得以夺回祭赛国的舍利佛宝。",
+          "scoringKeywords": [
+            "咬掉九头虫一个头"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-132",
+      "sourceId": "132",
+      "chapter": "第66回",
+      "theme": "误入小雷音",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-132.jpg",
+      "questions": [
+        {
+          "id": "picture-132",
+          "type": "情节因果",
+          "prompt": "题图为“误入小雷音”。师徒为何会把黄眉怪的妖洞误认作小雷音寺？",
+          "answer": "黄眉怪仿造寺院和佛像，设下假佛法陷阱",
+          "options": [
+            "黄眉怪仿造寺院和佛像，设下假佛法陷阱",
+            "唐僧认错了火焰山方向",
+            "悟空把寺院变出来",
+            "如来故意安排他们停留"
+          ],
+          "explanation": "黄眉怪利用唐僧虔诚心理设局，故事讽刺只看外表、不辨真伪。",
+          "scoringKeywords": [
+            "黄眉怪仿造寺院和佛像，设下假佛法陷阱"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-133",
+      "sourceId": "133",
+      "chapter": "第66回",
+      "theme": "金铙困悟空",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-133.jpg",
+      "questions": [
+        {
+          "id": "picture-133",
+          "type": "法器作用",
+          "prompt": "题图为“金铙困悟空”。黄眉怪用金铙困住悟空后，悟空为何难以脱身？",
+          "answer": "金铙坚固闭合，悟空的金箍棒也难以撬开",
+          "options": [
+            "金铙坚固闭合，悟空的金箍棒也难以撬开",
+            "金铙会使悟空忘记唐僧",
+            "金铙能把悟空变成虎",
+            "金铙会吸干通天河"
+          ],
+          "explanation": "金铙体现黄眉怪法宝的压制力，悟空之后请亢金龙相助。",
+          "scoringKeywords": [
+            "金铙坚固闭合，悟空的金箍棒也难以撬开"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-134",
+      "sourceId": "134",
+      "chapter": "第67回",
+      "theme": "亢金龙钻金铙",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-134.jpg",
+      "questions": [
+        {
+          "id": "picture-134",
+          "type": "情节细节",
+          "prompt": "题图为“亢金龙钻金铙”。亢金龙怎样帮助悟空脱离金铙？",
+          "answer": "化作角钻入铙缝，撑开金铙让悟空出来",
+          "options": [
+            "化作角钻入铙缝，撑开金铙让悟空出来",
+            "用鱼篮收走金铙",
+            "用芭蕉扇吹飞金铙",
+            "念紧箍咒使金铙破裂"
+          ],
+          "explanation": "亢金龙以本相之角破局，体现悟空需借他人特长化解法宝困境。",
+          "scoringKeywords": [
+            "化作角钻入铙缝，撑开金铙让悟空出来"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-135",
+      "sourceId": "135",
+      "chapter": "第67回",
+      "theme": "黄眉老佛人种袋",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-135.jpg",
+      "questions": [
+        {
+          "id": "picture-135",
+          "type": "法器作用",
+          "prompt": "题图为“黄眉老佛人种袋”。人种袋最可怕的作用是什么？",
+          "answer": "能把悟空和天兵连同兵器一起装入袋中",
+          "options": [
+            "能把悟空和天兵连同兵器一起装入袋中",
+            "能使人立刻成佛",
+            "能把火焰山扇灭",
+            "能让人长生不老"
+          ],
+          "explanation": "黄眉怪以人种袋屡次困住悟空，逼他寻找比硬拼更有效的破局办法。",
+          "scoringKeywords": [
+            "能把悟空和天兵连同兵器一起装入袋中"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-136",
+      "sourceId": "136",
+      "chapter": "第68回",
+      "theme": "弥勒佛降妖",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-136.jpg",
+      "questions": [
+        {
+          "id": "picture-136",
+          "type": "情节结果",
+          "prompt": "题图为“弥勒佛降妖”。弥勒佛用什么办法收服黄眉怪？",
+          "answer": "化作瓜田老人，用瓜诱黄眉怪钻进瓜中后收回",
+          "options": [
+            "化作瓜田老人，用瓜诱黄眉怪钻进瓜中后收回",
+            "用金刚琢套住黄眉怪",
+            "用鱼篮装走黄眉怪",
+            "用紧箍咒压住黄眉怪"
+          ],
+          "explanation": "黄眉怪原是弥勒座前司磬的童子，终由主人以巧计收回。",
+          "scoringKeywords": [
+            "化作瓜田老人，用瓜诱黄眉怪钻进瓜中后收回"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-137",
+      "sourceId": "137",
+      "chapter": "第68回",
+      "theme": "盘丝洞蜘蛛精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-137.jpg",
+      "questions": [
+        {
+          "id": "picture-137",
+          "type": "人物辨析",
+          "prompt": "题图为“盘丝洞蜘蛛精”。盘丝洞七名女妖的本相是什么？",
+          "answer": "七个蜘蛛精",
+          "options": [
+            "七个蜘蛛精",
+            "七只白兔精",
+            "七条鲤鱼精",
+            "七位龙女"
+          ],
+          "explanation": "盘丝洞以蛛丝和女色设险，后续还牵出黄花观百眼魔君。",
+          "scoringKeywords": [
+            "七个蜘蛛精"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-138",
+      "sourceId": "138",
+      "chapter": "第69回",
+      "theme": "猪八戒忘形",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-138.jpg",
+      "questions": [
+        {
+          "id": "picture-138",
+          "type": "人物性格",
+          "prompt": "题图为“猪八戒忘形”。面对盘丝洞女妖，八戒的表现最突出地暴露了什么弱点？",
+          "answer": "贪恋女色、凡心未尽",
+          "options": [
+            "贪恋女色、凡心未尽",
+            "害怕任何水域",
+            "不懂使用钉耙",
+            "总想回天庭任职"
+          ],
+          "explanation": "八戒的凡心在女妖诱惑面前再度显露，与唐僧守戒、悟空警觉形成对照。",
+          "scoringKeywords": [
+            "贪恋女色、凡心未尽"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-139",
+      "sourceId": "139",
+      "chapter": "第69回",
+      "theme": "蜈蚣精金光罩",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-139.jpg",
+      "questions": [
+        {
+          "id": "picture-139",
+          "type": "法术识记",
+          "prompt": "题图为“蜈蚣精金光罩”。百眼魔君最厉害的法术是什么？",
+          "answer": "胁下千眼放出金光，形成金光罩困人",
+          "options": [
+            "胁下千眼放出金光，形成金光罩困人",
+            "口吐三昧真火",
+            "金刚琢套走兵器",
+            "芭蕉扇掀起狂风"
+          ],
+          "explanation": "百眼魔君是蜘蛛精师兄，悟空后来请毗蓝婆以绣花针破金光罩。",
+          "scoringKeywords": [
+            "胁下千眼放出金光，形成金光罩困人"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-140",
+      "sourceId": "140",
+      "chapter": "第70回",
+      "theme": "毗蓝婆降妖",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-140.jpg",
+      "questions": [
+        {
+          "id": "picture-140",
+          "type": "情节结果",
+          "prompt": "题图为“毗蓝婆降妖”。毗蓝婆用什么法宝破除百眼魔君的金光罩？",
+          "answer": "绣花针",
+          "options": [
+            "绣花针",
+            "九齿钉耙",
+            "紫金钵盂",
+            "鱼篮"
+          ],
+          "explanation": "毗蓝婆的绣花针使百眼魔君现出蜈蚣本相，说明破解法宝需对症相制。",
+          "scoringKeywords": [
+            "绣花针"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-141",
+      "sourceId": "141",
+      "chapter": "第70回",
+      "theme": "狮驼岭三魔王",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-141.jpg",
+      "questions": [
+        {
+          "id": "picture-141",
+          "type": "人物辨析",
+          "prompt": "题图为“狮驼岭三魔王”。狮驼岭三魔王正确的一组是？",
+          "answer": "青狮、白象、金翅大鹏雕",
+          "options": [
+            "青狮、白象、金翅大鹏雕",
+            "虎力、鹿力、羊力",
+            "金角、银角、红孩儿",
+            "黑熊、黄风、蝎子精"
+          ],
+          "explanation": "三魔王各有本领和妖兵，是取经路上规模最强的妖怪集团之一。",
+          "scoringKeywords": [
+            "青狮、白象、金翅大鹏雕"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-142",
+      "sourceId": "142",
+      "chapter": "第71回",
+      "theme": "孙悟空钻狮腹",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-142.jpg",
+      "questions": [
+        {
+          "id": "picture-142",
+          "type": "情节细节",
+          "prompt": "题图为“孙悟空钻狮腹”。悟空钻入青狮精腹中，主要为了什么？",
+          "answer": "从内部逼迫青狮精放出被吞的唐僧",
+          "options": [
+            "从内部逼迫青狮精放出被吞的唐僧",
+            "偷走青狮精的芭蕉扇",
+            "替青狮精医病",
+            "把青狮精变成白马"
+          ],
+          "explanation": "悟空以变化术进入狮腹，是面对强大吞噬法术时的机智反制。",
+          "scoringKeywords": [
+            "从内部逼迫青狮精放出被吞的唐僧"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-143",
+      "sourceId": "143",
+      "chapter": "第71回",
+      "theme": "八戒被捆",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-143.jpg",
+      "questions": [
+        {
+          "id": "picture-143",
+          "type": "情节因果",
+          "prompt": "题图为“八戒被捆”。狮驼岭险境中，八戒被捆反映了什么？",
+          "answer": "三魔王妖兵众多、法力强，师徒不能只靠单人硬拼",
+          "options": [
+            "三魔王妖兵众多、法力强，师徒不能只靠单人硬拼",
+            "八戒主动投靠大鹏",
+            "唐僧命八戒离队",
+            "八戒偷走三魔王兵器"
+          ],
+          "explanation": "狮驼岭将师徒逐个压制，推动悟空向如来求助。",
+          "scoringKeywords": [
+            "三魔王妖兵众多、法力强，师徒不能只靠单人硬拼"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-144",
+      "sourceId": "144",
+      "chapter": "第72回",
+      "theme": "大鹏展翅",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-144.jpg",
+      "questions": [
+        {
+          "id": "picture-144",
+          "type": "人物本领",
+          "prompt": "题图为“大鹏展翅”。金翅大鹏为何能让悟空感到棘手？",
+          "answer": "飞行速度极快，常先于筋斗云到达目标",
+          "options": [
+            "飞行速度极快，常先于筋斗云到达目标",
+            "它不会变化只能步行",
+            "它惧怕任何风",
+            "它没有妖兵只能单打独斗"
+          ],
+          "explanation": "大鹏的速度与妖兵规模都超出一般妖怪，悟空久战难胜。",
+          "scoringKeywords": [
+            "飞行速度极快，常先于筋斗云到达目标"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-145",
+      "sourceId": "145",
+      "chapter": "第72回",
+      "theme": "如来收大鹏",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-145.jpg",
+      "questions": [
+        {
+          "id": "picture-145",
+          "type": "情节结果",
+          "prompt": "题图为“如来收大鹏”。悟空最终请谁降伏金翅大鹏？",
+          "answer": "如来佛祖",
+          "options": [
+            "如来佛祖",
+            "太上老君",
+            "毗蓝婆菩萨",
+            "镇元大仙"
+          ],
+          "explanation": "大鹏与如来有渊源，最终由如来亲自收伏，狮驼岭之难才结束。",
+          "scoringKeywords": [
+            "如来佛祖"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-146",
+      "sourceId": "146",
+      "chapter": "第73回",
+      "theme": "比丘国救小儿",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-146.jpg",
+      "questions": [
+        {
+          "id": "picture-146",
+          "type": "情节因果",
+          "prompt": "题图为“比丘国救小儿”。比丘国国王为何要收集一千一百一十一个小儿心肝？",
+          "answer": "白鹿精假扮国丈，骗国王用小儿心肝炼药延寿",
+          "options": [
+            "白鹿精假扮国丈，骗国王用小儿心肝炼药延寿",
+            "为了祭祀火焰山",
+            "为了换取龙宫宝珠",
+            "为了给悟空制作金箍"
+          ],
+          "explanation": "悟空救下群童，揭穿了妖怪以“长生”诱惑国王的阴谋。",
+          "scoringKeywords": [
+            "白鹿精假扮国丈，骗国王用小儿心肝炼药延寿"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-147",
+      "sourceId": "147",
+      "chapter": "第73回",
+      "theme": "掏心剖腹",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-147.jpg",
+      "questions": [
+        {
+          "id": "picture-147",
+          "type": "主题理解",
+          "prompt": "题图为“掏心剖腹”。白鹿精以小儿心肝炼药的情节，最突出批判了什么？",
+          "answer": "妖怪假借长生之名残害无辜生命",
+          "options": [
+            "妖怪假借长生之名残害无辜生命",
+            "唐僧拒绝学习医术",
+            "悟空害怕妖怪",
+            "八戒不愿意战斗"
+          ],
+          "explanation": "比丘国把个人求长生与百姓生命相冲突，凸显取经队伍救人的正当性。",
+          "scoringKeywords": [
+            "妖怪假借长生之名残害无辜生命"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-148",
+      "sourceId": "148",
+      "chapter": "第74回",
+      "theme": "南极仙翁收白鹿",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-148.jpg",
+      "questions": [
+        {
+          "id": "picture-148",
+          "type": "人物来历",
+          "prompt": "题图为“南极仙翁收白鹿”。比丘国白鹿精原本是谁的坐骑？",
+          "answer": "南极仙翁",
+          "options": [
+            "南极仙翁",
+            "太上老君",
+            "观音菩萨",
+            "太乙救苦天尊"
+          ],
+          "explanation": "白鹿精下界为妖，最终由南极仙翁收回，显示妖怪背后的天界归属。",
+          "scoringKeywords": [
+            "南极仙翁"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-149",
+      "sourceId": "149",
+      "chapter": "第74回",
+      "theme": "无底洞老鼠精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-149.jpg",
+      "questions": [
+        {
+          "id": "picture-149",
+          "type": "人物来历",
+          "prompt": "题图为“无底洞老鼠精”。白鼠精与哪两位天神有香火关系？",
+          "answer": "托塔李天王和哪吒",
+          "options": [
+            "托塔李天王和哪吒",
+            "二郎神和哮天犬",
+            "太上老君和金角",
+            "南极仙翁和白鹿"
+          ],
+          "explanation": "白鼠精曾在灵山偷吃香花宝烛，认李天王、哪吒为义父义兄，形成无底洞线索。",
+          "scoringKeywords": [
+            "托塔李天王和哪吒"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-150",
+      "sourceId": "150",
+      "chapter": "第75回",
+      "theme": "孙悟空钻肚子",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-150.jpg",
+      "questions": [
+        {
+          "id": "picture-150",
+          "type": "计策辨析",
+          "prompt": "题图为“孙悟空钻肚子”。悟空在无底洞变作什么进入白鼠精腹中，用来逼她放人？",
+          "answer": "一颗红桃",
+          "options": [
+            "一颗红桃",
+            "一把芭蕉扇",
+            "一枚金刚琢",
+            "一条白龙"
+          ],
+          "explanation": "悟空借变化术从内部制敌，迫使白鼠精交出唐僧，再追查其身世。",
+          "scoringKeywords": [
+            "一颗红桃"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-151",
+      "sourceId": "151",
+      "chapter": "第75回",
+      "theme": "李天王下界",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-151.jpg",
+      "questions": [
+        {
+          "id": "picture-151",
+          "type": "情节结果",
+          "prompt": "题图为“李天王下界”。谁最终将无底洞白鼠精带走？",
+          "answer": "托塔李天王与哪吒",
+          "options": [
+            "托塔李天王与哪吒",
+            "二郎神与梅山兄弟",
+            "太乙救苦天尊",
+            "南极仙翁"
+          ],
+          "explanation": "悟空查明白鼠精的义亲关系后，李天王父子下界收伏她。",
+          "scoringKeywords": [
+            "托塔李天王与哪吒"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-152",
+      "sourceId": "152",
+      "chapter": "第76回",
+      "theme": "灭法国剃头",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-152.jpg",
+      "questions": [
+        {
+          "id": "picture-152",
+          "type": "情节细节",
+          "prompt": "题图为“灭法国剃头”。悟空如何惩治想杀尽和尚的灭法国国王？",
+          "answer": "施法剃光国王和大臣的头发，使其醒悟改过",
+          "options": [
+            "施法剃光国王和大臣的头发，使其醒悟改过",
+            "把国王变成猛虎",
+            "用芭蕉扇烧毁王宫",
+            "把国王压在五行山下"
+          ],
+          "explanation": "国王见满朝皆秃才知佛法不可轻侮，后来把国名改为钦法国。",
+          "scoringKeywords": [
+            "施法剃光国王和大臣的头发，使其醒悟改过"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-153",
+      "sourceId": "153",
+      "chapter": "第76回",
+      "theme": "连环洞豹子精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-153.jpg",
+      "questions": [
+        {
+          "id": "picture-153",
+          "type": "情节因果",
+          "prompt": "题图为“连环洞豹子精”。豹子精怎样把唐僧从徒弟身边骗走？",
+          "answer": "使用分瓣梅花计，分别引开悟空、八戒、沙僧",
+          "options": [
+            "使用分瓣梅花计，分别引开悟空、八戒、沙僧",
+            "变成唐僧骗走白龙马",
+            "用金刚琢套走三人兵器",
+            "让国王下令抓走唐僧"
+          ],
+          "explanation": "豹子精的计策核心是调虎离山，趁护卫被逐个引开时掳走唐僧。",
+          "scoringKeywords": [
+            "使用分瓣梅花计，分别引开悟空、八戒、沙僧"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-154",
+      "sourceId": "154",
+      "chapter": "第77回",
+      "theme": "假人头计",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-154.jpg",
+      "questions": [
+        {
+          "id": "picture-154",
+          "type": "计策辨析",
+          "prompt": "题图为“假人头计”。豹子精为何展示假的人头？",
+          "answer": "用假象骗悟空相信唐僧已死，从而动摇其判断",
+          "options": [
+            "用假象骗悟空相信唐僧已死，从而动摇其判断",
+            "向悟空证明自己是天神",
+            "换取铁扇公主的芭蕉扇",
+            "让八戒继承花果山"
+          ],
+          "explanation": "假人头是妖怪制造心理打击的计策，悟空必须核实真相而不能只凭眼前所见。",
+          "scoringKeywords": [
+            "用假象骗悟空相信唐僧已死，从而动摇其判断"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-155",
+      "sourceId": "155",
+      "chapter": "第77回",
+      "theme": "八戒烧藤蔓",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-155.jpg",
+      "questions": [
+        {
+          "id": "picture-155",
+          "type": "情节细节",
+          "prompt": "题图为“八戒烧藤蔓”。八戒烧断洞外藤蔓，直接是为了解决什么问题？",
+          "answer": "破坏豹子精洞口的阻隔，便于救出唐僧",
+          "options": [
+            "破坏豹子精洞口的阻隔，便于救出唐僧",
+            "烧掉火焰山烈火",
+            "炼制九转还魂丹",
+            "点燃水陆大会的香火"
+          ],
+          "explanation": "八戒的钉耙与蛮力在救师过程中常承担破障、开路的作用。",
+          "scoringKeywords": [
+            "破坏豹子精洞口的阻隔，便于救出唐僧"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-156",
+      "sourceId": "156",
+      "chapter": "第78回",
+      "theme": "凤仙郡求雨",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-156.jpg",
+      "questions": [
+        {
+          "id": "picture-156",
+          "type": "情节因果",
+          "prompt": "题图为“凤仙郡求雨”。凤仙郡久旱的根本原因是什么？",
+          "answer": "郡侯因恼怒推倒供桌、让狗吃祭品，触怒玉帝",
+          "options": [
+            "郡侯因恼怒推倒供桌、让狗吃祭品，触怒玉帝",
+            "龙王偷走了定海神针",
+            "铁扇公主拒绝借扇",
+            "国王把唐僧变成猛虎"
+          ],
+          "explanation": "凤仙郡旱灾将人间失礼与天命惩戒相联系，悟空需帮助郡侯改过。",
+          "scoringKeywords": [
+            "郡侯因恼怒推倒供桌、让狗吃祭品，触怒玉帝"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-157",
+      "sourceId": "157",
+      "chapter": "第78回",
+      "theme": "米山面山",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-157.jpg",
+      "questions": [
+        {
+          "id": "picture-157",
+          "type": "情节细节",
+          "prompt": "题图为“米山面山”。凤仙郡要恢复降雨，玉帝设下哪一项条件？",
+          "answer": "让鸡啄尽米山、狗舔尽面山、灯焰烧断金锁",
+          "options": [
+            "让鸡啄尽米山、狗舔尽面山、灯焰烧断金锁",
+            "让悟空交出金箍棒",
+            "让唐僧在火焰山成亲",
+            "让八戒背完八十一座山"
+          ],
+          "explanation": "三项条件原本看似难以完成，悟空以法力促成，体现求雨还须先改过。",
+          "scoringKeywords": [
+            "让鸡啄尽米山、狗舔尽面山、灯焰烧断金锁"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-158",
+      "sourceId": "158",
+      "chapter": "第79回",
+      "theme": "玉帝赐雨",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-158.jpg",
+      "questions": [
+        {
+          "id": "picture-158",
+          "type": "情节结果",
+          "prompt": "题图为“玉帝赐雨”。凤仙郡最终获得降雨，前提是什么？",
+          "answer": "郡侯悔罪行善，悟空又完成玉帝设下的条件",
+          "options": [
+            "郡侯悔罪行善，悟空又完成玉帝设下的条件",
+            "悟空偷走龙王宝珠",
+            "唐僧答应留下做国师",
+            "牛魔王献出芭蕉扇"
+          ],
+          "explanation": "降雨既依靠悟空的行动，也以郡侯改过为条件，强调责任与补救。",
+          "scoringKeywords": [
+            "郡侯悔罪行善，悟空又完成玉帝设下的条件"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-159",
+      "sourceId": "159",
+      "chapter": "第79回",
+      "theme": "玉华州传艺",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-159.jpg",
+      "questions": [
+        {
+          "id": "picture-159",
+          "type": "师徒关系",
+          "prompt": "题图为“玉华州传艺”。玉华州三王子分别拜谁为师学习兵器？",
+          "answer": "悟空、八戒、沙僧三人",
+          "options": [
+            "悟空、八戒、沙僧三人",
+            "唐僧、白龙马、老鼋三人",
+            "如来、观音、文殊三人",
+            "金角、银角、红孩儿三人"
+          ],
+          "explanation": "三王子学艺后仿制神兵，兵器霞光又引来黄狮精盗宝。",
+          "scoringKeywords": [
+            "悟空、八戒、沙僧三人"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-160",
+      "sourceId": "160",
+      "chapter": "第80回",
+      "theme": "黄狮精盗宝",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-160.jpg",
+      "questions": [
+        {
+          "id": "picture-160",
+          "type": "情节因果",
+          "prompt": "题图为“黄狮精盗宝”。黄狮精为何发现悟空等人的神兵？",
+          "answer": "兵器夜间霞光万道，惊动了它",
+          "options": [
+            "兵器夜间霞光万道，惊动了它",
+            "唐僧主动把兵器送给它",
+            "八戒把兵器卖给它",
+            "龙王指引它来偷"
+          ],
+          "explanation": "玉华州三王子学艺后仿制兵器，原兵器放在院中发光，暴露了目标。",
+          "scoringKeywords": [
+            "兵器夜间霞光万道，惊动了它"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-161",
+      "sourceId": "161",
+      "chapter": "第80回",
+      "theme": "九灵元圣",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-161.jpg",
+      "questions": [
+        {
+          "id": "picture-161",
+          "type": "人物来历",
+          "prompt": "题图为“九灵元圣”。九灵元圣原本是谁的坐骑？",
+          "answer": "太乙救苦天尊",
+          "options": [
+            "太乙救苦天尊",
+            "太上老君",
+            "观音菩萨",
+            "南极仙翁"
+          ],
+          "explanation": "九灵元圣为替黄狮精报仇出手，最后由太乙救苦天尊亲自收回。",
+          "scoringKeywords": [
+            "太乙救苦天尊"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-162",
+      "sourceId": "162",
+      "chapter": "第81回",
+      "theme": "太乙救苦天尊",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-162.jpg",
+      "questions": [
+        {
+          "id": "picture-162",
+          "type": "情节结果",
+          "prompt": "题图为“太乙救苦天尊”。太乙救苦天尊下界的主要目的是什么？",
+          "answer": "收回私自下界为妖的坐骑九灵元圣",
+          "options": [
+            "收回私自下界为妖的坐骑九灵元圣",
+            "把唐僧封为旃檀功德佛",
+            "收服火焰山的牛魔王",
+            "赐给悟空金刚琢"
+          ],
+          "explanation": "九灵元圣来历被查明后，须由其主人收回，竹节山之难才结束。",
+          "scoringKeywords": [
+            "收回私自下界为妖的坐骑九灵元圣"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-163",
+      "sourceId": "163",
+      "chapter": "第81回",
+      "theme": "金平府元宵",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-163.jpg",
+      "questions": [
+        {
+          "id": "picture-163",
+          "type": "情节背景",
+          "prompt": "题图为“金平府元宵”。金平府百姓元宵夜供奉酥合香油，后来暴露出什么问题？",
+          "answer": "有妖怪假扮佛灯，专门骗取香油",
+          "options": [
+            "有妖怪假扮佛灯，专门骗取香油",
+            "国王禁止百姓观灯",
+            "唐僧偷走了香油",
+            "八戒把油灯全部打翻"
+          ],
+          "explanation": "金平府的灯会本是民俗场景，却被犀牛精伪装利用。",
+          "scoringKeywords": [
+            "有妖怪假扮佛灯，专门骗取香油"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-164",
+      "sourceId": "164",
+      "chapter": "第82回",
+      "theme": "犀牛精偷油",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-164.jpg",
+      "questions": [
+        {
+          "id": "picture-164",
+          "type": "人物辨析",
+          "prompt": "题图为“犀牛精偷油”。偷吃酥合香油的三只犀牛精假扮成什么？",
+          "answer": "佛爷",
+          "options": [
+            "佛爷",
+            "三位国师",
+            "龙王三太子",
+            "唐僧的徒弟"
+          ],
+          "explanation": "犀牛精以佛相骗取供油，悟空必须从看似神圣的表象中辨出妖怪。",
+          "scoringKeywords": [
+            "佛爷"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-165",
+      "sourceId": "165",
+      "chapter": "第82回",
+      "theme": "大战犀牛精",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-165.jpg",
+      "questions": [
+        {
+          "id": "picture-165",
+          "type": "情节因果",
+          "prompt": "题图为“大战犀牛精”。悟空为何需要同伴协力对付犀牛精？",
+          "answer": "三只犀牛精各有兵器和水中本领，单独追击难以取胜",
+          "options": [
+            "三只犀牛精各有兵器和水中本领，单独追击难以取胜",
+            "悟空失去了金箍棒",
+            "唐僧不允许他战斗",
+            "犀牛精会念紧箍咒"
+          ],
+          "explanation": "金平府之难表现妖怪成群、地形复杂，取胜依赖分工合作。",
+          "scoringKeywords": [
+            "三只犀牛精各有兵器和水中本领，单独追击难以取胜"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-166",
+      "sourceId": "166",
+      "chapter": "第83回",
+      "theme": "四木禽星",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-166.jpg",
+      "questions": [
+        {
+          "id": "picture-166",
+          "type": "人物作用",
+          "prompt": "题图为“四木禽星”。谁最终帮助悟空收服金平府的犀牛精？",
+          "answer": "四木禽星",
+          "options": [
+            "四木禽星",
+            "二十八宿中的奎木狼",
+            "托塔李天王父子",
+            "南极仙翁"
+          ],
+          "explanation": "四木禽星的本相能克制犀牛，帮助悟空结束金平府的假佛灯危机。",
+          "scoringKeywords": [
+            "四木禽星"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-167",
+      "sourceId": "167",
+      "chapter": "第83回",
+      "theme": "天竺国招亲",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-167.jpg",
+      "questions": [
+        {
+          "id": "picture-167",
+          "type": "情节因果",
+          "prompt": "题图为“天竺国招亲”。天竺国公主为何主动抛绣球选中唐僧？",
+          "answer": "玉兔精假扮公主，借招亲设法接近唐僧",
+          "options": [
+            "玉兔精假扮公主，借招亲设法接近唐僧",
+            "国王命公主必须选外国僧人",
+            "唐僧主动报名参加招亲",
+            "悟空替唐僧抢到绣球"
+          ],
+          "explanation": "这场招亲不是姻缘，而是玉兔精以公主身份实施的妖术陷阱。",
+          "scoringKeywords": [
+            "玉兔精假扮公主，借招亲设法接近唐僧"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-168",
+      "sourceId": "168",
+      "chapter": "第84回",
+      "theme": "绣球砸唐僧",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-168.jpg",
+      "questions": [
+        {
+          "id": "picture-168",
+          "type": "情节细节",
+          "prompt": "题图为“绣球砸唐僧”。悟空为何对公主抛绣球的举动保持警惕？",
+          "answer": "取经人突然被指定招亲太反常，怀疑其中有妖怪设局",
+          "options": [
+            "取经人突然被指定招亲太反常，怀疑其中有妖怪设局",
+            "悟空想自己参加招亲",
+            "悟空害怕绣球会变成金箍",
+            "悟空不认识天竺国国王"
+          ],
+          "explanation": "悟空的警觉使师徒没有把招亲当作普通喜事，而是继续查明真相。",
+          "scoringKeywords": [
+            "取经人突然被指定招亲太反常，怀疑其中有妖怪设局"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-169",
+      "sourceId": "169",
+      "chapter": "第84回",
+      "theme": "玉兔精捣药",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-169.jpg",
+      "questions": [
+        {
+          "id": "picture-169",
+          "type": "人物来历",
+          "prompt": "题图为“玉兔精捣药”。玉兔精的真实身份是什么？",
+          "answer": "广寒宫中捣药的玉兔",
+          "options": [
+            "广寒宫中捣药的玉兔",
+            "观音池中的金鱼",
+            "太乙救苦天尊的狮子",
+            "南极仙翁的白鹿"
+          ],
+          "explanation": "玉兔精下界假扮公主，最后由太阴星君派人带回月宫。",
+          "scoringKeywords": [
+            "广寒宫中捣药的玉兔"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-170",
+      "sourceId": "170",
+      "chapter": "第85回",
+      "theme": "太阴星君收玉兔",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-170.jpg",
+      "questions": [
+        {
+          "id": "picture-170",
+          "type": "情节结果",
+          "prompt": "题图为“太阴星君收玉兔”。玉兔精最终如何被处置？",
+          "answer": "太阴星君派人将它带回广寒宫",
+          "options": [
+            "太阴星君派人将它带回广寒宫",
+            "被悟空收为徒弟",
+            "被太上老君投入八卦炉",
+            "被压在五行山下"
+          ],
+          "explanation": "天竺国的招亲危机结束后，玉兔恢复月宫身份，师徒继续西行。",
+          "scoringKeywords": [
+            "太阴星君派人将它带回广寒宫"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-171",
+      "sourceId": "171",
+      "chapter": "第85回",
+      "theme": "寇员外斋僧",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-171.jpg",
+      "questions": [
+        {
+          "id": "picture-171",
+          "type": "人物品质",
+          "prompt": "题图为“寇员外斋僧”。寇员外长期施斋、礼敬唐僧，体现了什么品质？",
+          "answer": "乐善好施、敬重佛法",
+          "options": [
+            "乐善好施、敬重佛法",
+            "贪图国王赏赐",
+            "想夺取唐僧袈裟",
+            "惧怕悟空武力"
+          ],
+          "explanation": "寇员外的善意与其后遭遇的冤祸形成对照，使故事不只停留在降妖。",
+          "scoringKeywords": [
+            "乐善好施、敬重佛法"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-172",
+      "sourceId": "172",
+      "chapter": "第86回",
+      "theme": "强盗劫寇家",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-172.jpg",
+      "questions": [
+        {
+          "id": "picture-172",
+          "type": "情节因果",
+          "prompt": "题图为“强盗劫寇家”。唐僧师徒离开后，寇家为何遭到强盗劫掠？",
+          "answer": "真强盗趁夜劫财行凶，造成后续冤案",
+          "options": [
+            "真强盗趁夜劫财行凶，造成后续冤案",
+            "悟空命猴群来劫寇家",
+            "唐僧借走寇家全部财物",
+            "国王下令抄没寇家"
+          ],
+          "explanation": "真凶的出现与唐僧师徒无关，却导致寇家妻子迁怒诬告。",
+          "scoringKeywords": [
+            "真强盗趁夜劫财行凶，造成后续冤案"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-173",
+      "sourceId": "173",
+      "chapter": "第86回",
+      "theme": "寇员外遇害",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-173.jpg",
+      "questions": [
+        {
+          "id": "picture-173",
+          "type": "情节因果",
+          "prompt": "题图为“寇员外遇害”。寇员外被害后，寇家为何迁怒唐僧师徒？",
+          "answer": "认为师徒离开后便发生灾祸，错误地把悲痛转为指控",
+          "options": [
+            "认为师徒离开后便发生灾祸，错误地把悲痛转为指控",
+            "亲眼看见悟空行凶",
+            "唐僧承认抢劫",
+            "八戒偷走了寇员外的兵器"
+          ],
+          "explanation": "寇家误告构成世俗冤案，提醒学生区分情绪判断与事实证据。",
+          "scoringKeywords": [
+            "认为师徒离开后便发生灾祸，错误地把悲痛转为指控"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-174",
+      "sourceId": "174",
+      "chapter": "第87回",
+      "theme": "唐僧含冤",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-174.jpg",
+      "questions": [
+        {
+          "id": "picture-174",
+          "type": "情节理解",
+          "prompt": "题图为“唐僧含冤”。这场冤案与一般降妖故事最大的不同是什么？",
+          "answer": "主要敌人不是妖怪，而是误会、诬告和不明真相的审判",
+          "options": [
+            "主要敌人不是妖怪，而是误会、诬告和不明真相的审判",
+            "唐僧第一次学会变化术",
+            "悟空失去了金箍棒",
+            "八戒成为国王"
+          ],
+          "explanation": "唐僧含冤让取经困难延伸到现实社会，悟空必须以证据和行动洗冤。",
+          "scoringKeywords": [
+            "主要敌人不是妖怪，而是误会、诬告和不明真相的审判"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-175",
+      "sourceId": "175",
+      "chapter": "第87回",
+      "theme": "地府还魂",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-175.jpg",
+      "questions": [
+        {
+          "id": "picture-175",
+          "type": "情节结果",
+          "prompt": "题图为“地府还魂”。悟空为何到地府寻找寇员外魂魄？",
+          "answer": "让寇员外还魂作证，洗清唐僧师徒的冤屈",
+          "options": [
+            "让寇员外还魂作证，洗清唐僧师徒的冤屈",
+            "让寇员外替唐僧去西天取经",
+            "让寇员外交出芭蕉扇",
+            "让寇员外担任国师"
+          ],
+          "explanation": "追回魂魄使真相能够被证实，冤案最终得以昭雪。",
+          "scoringKeywords": [
+            "让寇员外还魂作证，洗清唐僧师徒的冤屈"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-176",
+      "sourceId": "176",
+      "chapter": "第88回",
+      "theme": "凌云渡脱胎",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-176.jpg",
+      "questions": [
+        {
+          "id": "picture-176",
+          "type": "情节象征",
+          "prompt": "题图为“凌云渡脱胎”。唐僧过凌云渡时看见自己的尸身，象征什么？",
+          "answer": "摆脱旧我、完成修行中的脱胎换骨",
+          "options": [
+            "摆脱旧我、完成修行中的脱胎换骨",
+            "唐僧被妖怪害死",
+            "唐僧要返回长安",
+            "唐僧失去取经资格"
+          ],
+          "explanation": "凌云渡以“见尸”写出修行者越过生死执念、进入新境界。",
+          "scoringKeywords": [
+            "摆脱旧我、完成修行中的脱胎换骨"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-177",
+      "sourceId": "177",
+      "chapter": "第88回",
+      "theme": "接引佛祖无底船",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-177.jpg",
+      "questions": [
+        {
+          "id": "picture-177",
+          "type": "情节细节",
+          "prompt": "题图为“接引佛祖无底船”。无底船为何能载唐僧过凌云渡？",
+          "answer": "它象征依佛法而渡，虽无底却能使人脱离凡胎",
+          "options": [
+            "它象征依佛法而渡，虽无底却能使人脱离凡胎",
+            "船底藏有金刚琢",
+            "船由白龙马拖行",
+            "船能把火焰山的火吸走"
+          ],
+          "explanation": "无底船是凌云渡场景的核心意象，承接唐僧“脱胎换骨”的变化。",
+          "scoringKeywords": [
+            "它象征依佛法而渡，虽无底却能使人脱离凡胎"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-178",
+      "sourceId": "178",
+      "chapter": "第89回",
+      "theme": "顺水流尸",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-178.jpg",
+      "questions": [
+        {
+          "id": "picture-178",
+          "type": "情节象征",
+          "prompt": "题图为“顺水流尸”。唐僧看到顺水而去的尸身，正确理解是哪一项？",
+          "answer": "那是他过去凡胎的象征，并非妖怪害死他",
+          "options": [
+            "那是他过去凡胎的象征，并非妖怪害死他",
+            "那是寇员外的尸身",
+            "那是悟空变化的假人",
+            "那是白龙马被害"
+          ],
+          "explanation": "尸身顺水而去，意味着唐僧完成从凡俗到修行圆满者的转换。",
+          "scoringKeywords": [
+            "那是他过去凡胎的象征，并非妖怪害死他"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-179",
+      "sourceId": "179",
+      "chapter": "第89回",
+      "theme": "大雷音寺",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-179.jpg",
+      "questions": [
+        {
+          "id": "picture-179",
+          "type": "情节细节",
+          "prompt": "题图为“大雷音寺”。师徒到达大雷音寺后，最初得到的经卷有什么问题？",
+          "answer": "经卷没有文字，是无字真经",
+          "options": [
+            "经卷没有文字，是无字真经",
+            "经卷全是天庭官职册",
+            "经卷记载火焰山地图",
+            "经卷被牛魔王烧毁"
+          ],
+          "explanation": "阿傩、迦叶因未获人事先给无字经，师徒发现后必须返回求取有字真经。",
+          "scoringKeywords": [
+            "经卷没有文字，是无字真经"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-180",
+      "sourceId": "180",
+      "chapter": "第90回",
+      "theme": "如来赐经",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-180.jpg",
+      "questions": [
+        {
+          "id": "picture-180",
+          "type": "情节因果",
+          "prompt": "题图为“如来赐经”。如来为何没有立刻责罚阿傩、迦叶索要人事？",
+          "answer": "如来认为取经不应白取，经文传授也需表示敬意",
+          "options": [
+            "如来认为取经不应白取，经文传授也需表示敬意",
+            "如来根本不知道他们索贿",
+            "如来想让唐僧放弃取经",
+            "如来命他们去降伏牛魔王"
+          ],
+          "explanation": "这一情节引出紫金钵盂的交付，也体现小说对现实人情世故的复杂书写。",
+          "scoringKeywords": [
+            "如来认为取经不应白取，经文传授也需表示敬意"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-181",
+      "sourceId": "181",
+      "chapter": "第90回",
+      "theme": "阿傩迦叶索贿",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-181.jpg",
+      "questions": [
+        {
+          "id": "picture-181",
+          "type": "情节细节",
+          "prompt": "题图为“阿傩迦叶索贿”。阿傩、迦叶向唐僧索要的“人事”最后是什么？",
+          "answer": "唐太宗所赐的紫金钵盂",
+          "options": [
+            "唐太宗所赐的紫金钵盂",
+            "悟空的金箍棒",
+            "八戒的九齿钉耙",
+            "铁扇公主的芭蕉扇"
+          ],
+          "explanation": "唐僧交出紫金钵盂后，才取得有字真经，这一细节应与无字经事件连起来理解。",
+          "scoringKeywords": [
+            "唐太宗所赐的紫金钵盂"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-182",
+      "sourceId": "182",
+      "chapter": "第91回",
+      "theme": "紫金钵盂",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-182.jpg",
+      "questions": [
+        {
+          "id": "picture-182",
+          "type": "法器作用",
+          "prompt": "题图为“紫金钵盂”。唐僧交出紫金钵盂后换得了什么？",
+          "answer": "有文字、可以传回东土的真经",
+          "options": [
+            "有文字、可以传回东土的真经",
+            "一把新的金箍棒",
+            "火焰山通行令",
+            "天庭弼马温官印"
+          ],
+          "explanation": "紫金钵盂原是唐太宗所赐，最终作为人事换回真经，完成取经的最后手续。",
+          "scoringKeywords": [
+            "有文字、可以传回东土的真经"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-183",
+      "sourceId": "183",
+      "chapter": "第91回",
+      "theme": "燃灯古佛暗助",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-183.jpg",
+      "questions": [
+        {
+          "id": "picture-183",
+          "type": "人物作用",
+          "prompt": "题图为“燃灯古佛暗助”。燃灯古佛暗中帮助师徒，主要是为了什么？",
+          "answer": "让师徒补足八十一难，使取经功业圆满",
+          "options": [
+            "让师徒补足八十一难，使取经功业圆满",
+            "让悟空重新大闹天宫",
+            "让唐僧留在灵山",
+            "让牛魔王夺回芭蕉扇"
+          ],
+          "explanation": "返程途中经卷落水等事件，使取经难数凑满八十一，结构上完成圆满。",
+          "scoringKeywords": [
+            "让师徒补足八十一难，使取经功业圆满"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-184",
+      "sourceId": "184",
+      "chapter": "第92回",
+      "theme": "白雄尊者撕经",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-184.jpg",
+      "questions": [
+        {
+          "id": "picture-184",
+          "type": "情节细节",
+          "prompt": "题图为“白雄尊者撕经”。白雄尊者以白鼋身份把师徒掀入水中，直接造成什么结果？",
+          "answer": "真经被水打湿，有的经页破损",
+          "options": [
+            "真经被水打湿，有的经页破损",
+            "悟空失去金箍棒",
+            "唐僧被变成猛虎",
+            "白龙马变回龙王"
+          ],
+          "explanation": "经卷落水既补足劫数，也解释传世经文为何有残缺。",
+          "scoringKeywords": [
+            "真经被水打湿，有的经页破损"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-185",
+      "sourceId": "185",
+      "chapter": "第92回",
+      "theme": "无字真经",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-185.jpg",
+      "questions": [
+        {
+          "id": "picture-185",
+          "type": "辨析题",
+          "prompt": "题图为“无字真经”。无字真经与后来取得的有字真经，关键区别是什么？",
+          "answer": "无字经不能阅读传授，有字经才可传回东土",
+          "options": [
+            "无字经不能阅读传授，有字经才可传回东土",
+            "无字经是火焰山地图，有字经是龙宫账簿",
+            "无字经属于道教，有字经属于天庭",
+            "两者完全相同没有区别"
+          ],
+          "explanation": "师徒先得无字经再返灵山，说明取经不能只到达终点，还要真正取得可传播的经文。",
+          "scoringKeywords": [
+            "无字经不能阅读传授，有字经才可传回东土"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-186",
+      "sourceId": "186",
+      "chapter": "第93回",
+      "theme": "重返雷音",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-186.jpg",
+      "questions": [
+        {
+          "id": "picture-186",
+          "type": "情节顺序",
+          "prompt": "题图为“重返雷音”。师徒为何返回大雷音寺？",
+          "answer": "发现先取的经卷无字，必须换取有字真经",
+          "options": [
+            "发现先取的经卷无字，必须换取有字真经",
+            "唐僧忘了带金箍棒",
+            "悟空想再见如来",
+            "八戒要借芭蕉扇"
+          ],
+          "explanation": "重返灵山是取经结尾的重要反转，突出“得到真经”而非“到达灵山”的关键。",
+          "scoringKeywords": [
+            "发现先取的经卷无字，必须换取有字真经"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-187",
+      "sourceId": "187",
+      "chapter": "第93回",
+      "theme": "真经入水",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-187.jpg",
+      "questions": [
+        {
+          "id": "picture-187",
+          "type": "情节理解",
+          "prompt": "题图为“真经入水”。经卷落水这一难在取经结构中有什么作用？",
+          "answer": "补足八十一难，并造成部分经文残缺",
+          "options": [
+            "补足八十一难，并造成部分经文残缺",
+            "使唐僧失去佛号",
+            "让悟空被赶回花果山",
+            "让金翅大鹏复活"
+          ],
+          "explanation": "师徒即将功成时仍遇劫难，强调修行圆满前仍需经历最后考验。",
+          "scoringKeywords": [
+            "补足八十一难，并造成部分经文残缺"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-188",
+      "sourceId": "188",
+      "chapter": "第94回",
+      "theme": "晒经石",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-188.jpg",
+      "questions": [
+        {
+          "id": "picture-188",
+          "type": "情节细节",
+          "prompt": "题图为“晒经石”。师徒把真经晒在石上，后来为何留下经文残缺？",
+          "answer": "经页粘在石上，揭取时被扯破",
+          "options": [
+            "经页粘在石上，揭取时被扯破",
+            "八戒把经文吃掉",
+            "悟空用金箍棒戳破经卷",
+            "风把经文吹到东海"
+          ],
+          "explanation": "晒经石既解释残经，也使归途的事故留下具体可见的痕迹。",
+          "scoringKeywords": [
+            "经页粘在石上，揭取时被扯破"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-189",
+      "sourceId": "189",
+      "chapter": "第94回",
+      "theme": "经传东土",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-189.jpg",
+      "questions": [
+        {
+          "id": "picture-189",
+          "type": "情节结果",
+          "prompt": "题图为“经传东土”。唐僧师徒回到长安最重要的成果是什么？",
+          "answer": "把有字真经带回东土，完成取经使命",
+          "options": [
+            "把有字真经带回东土，完成取经使命",
+            "把火焰山移到长安",
+            "把龙王封为国师",
+            "把花果山献给皇帝"
+          ],
+          "explanation": "真经传入东土使西行任务真正完成，也使师徒的修行成果惠及众生。",
+          "scoringKeywords": [
+            "把有字真经带回东土，完成取经使命"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-190",
+      "sourceId": "190",
+      "chapter": "第95回",
+      "theme": "太宗迎经",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-190.jpg",
+      "questions": [
+        {
+          "id": "picture-190",
+          "type": "情节作用",
+          "prompt": "题图为“太宗迎经”。唐太宗迎接唐僧归来，强调了什么？",
+          "answer": "取经不只是个人修行，也关系东土众生获得佛法",
+          "options": [
+            "取经不只是个人修行，也关系东土众生获得佛法",
+            "太宗准备再次大闹天宫",
+            "太宗要收悟空为义子",
+            "太宗要借芭蕉扇求雨"
+          ],
+          "explanation": "皇帝迎经把唐僧个人的西行与经文向社会传播连接起来。",
+          "scoringKeywords": [
+            "取经不只是个人修行，也关系东土众生获得佛法"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-191",
+      "sourceId": "191",
+      "chapter": "第95回",
+      "theme": "五圣成真",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-191.jpg",
+      "questions": [
+        {
+          "id": "picture-191",
+          "type": "人物对应",
+          "prompt": "题图为“五圣成真”。取经功成后，孙悟空被封为什么？",
+          "answer": "斗战胜佛",
+          "options": [
+            "斗战胜佛",
+            "旃檀功德佛",
+            "净坛使者",
+            "金身罗汉"
+          ],
+          "explanation": "五圣成真是师徒完成取经使命后的受封，悟空的佛号对应其降妖护法的经历。",
+          "scoringKeywords": [
+            "斗战胜佛"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-192",
+      "sourceId": "192",
+      "chapter": "第96回",
+      "theme": "斗战胜佛",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-192.jpg",
+      "questions": [
+        {
+          "id": "picture-192",
+          "type": "人物对应",
+          "prompt": "题图为“斗战胜佛”。“斗战胜佛”对应取经队伍中的谁？",
+          "answer": "孙悟空",
+          "options": [
+            "孙悟空",
+            "唐僧",
+            "猪八戒",
+            "沙僧"
+          ],
+          "explanation": "悟空以斗战护法、降妖克难，最终受封斗战胜佛。",
+          "scoringKeywords": [
+            "孙悟空"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-193",
+      "sourceId": "193",
+      "chapter": "第96回",
+      "theme": "旃檀功德佛",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-193.jpg",
+      "questions": [
+        {
+          "id": "picture-193",
+          "type": "人物对应",
+          "prompt": "题图为“旃檀功德佛”。“旃檀功德佛”对应取经队伍中的谁？",
+          "answer": "唐僧",
+          "options": [
+            "唐僧",
+            "孙悟空",
+            "猪八戒",
+            "白龙马"
+          ],
+          "explanation": "唐僧作为取经人历经劫难，最终受封旃檀功德佛。",
+          "scoringKeywords": [
+            "唐僧"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-194",
+      "sourceId": "194",
+      "chapter": "第97回",
+      "theme": "净坛使者",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-194.jpg",
+      "questions": [
+        {
+          "id": "picture-194",
+          "type": "人物对应",
+          "prompt": "题图为“净坛使者”。“净坛使者”对应取经队伍中的谁？",
+          "answer": "猪八戒",
+          "options": [
+            "猪八戒",
+            "孙悟空",
+            "沙僧",
+            "唐僧"
+          ],
+          "explanation": "八戒因贪食好色未能成佛，被封净坛使者，仍与其性格特点有关。",
+          "scoringKeywords": [
+            "猪八戒"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-195",
+      "sourceId": "195",
+      "chapter": "第97回",
+      "theme": "金身罗汉",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-195.jpg",
+      "questions": [
+        {
+          "id": "picture-195",
+          "type": "人物对应",
+          "prompt": "题图为“金身罗汉”。“金身罗汉”对应取经队伍中的谁？",
+          "answer": "沙僧",
+          "options": [
+            "沙僧",
+            "孙悟空",
+            "猪八戒",
+            "白龙马"
+          ],
+          "explanation": "沙僧忠厚沉稳，取经后受封金身罗汉。",
+          "scoringKeywords": [
+            "沙僧"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-196",
+      "sourceId": "196",
+      "chapter": "第98回",
+      "theme": "八部天龙马",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-196.jpg",
+      "questions": [
+        {
+          "id": "picture-196",
+          "type": "人物对应",
+          "prompt": "题图为“八部天龙马”。白龙马取经成功后受封为什么？",
+          "answer": "八部天龙马",
+          "options": [
+            "八部天龙马",
+            "净坛使者",
+            "斗战胜佛",
+            "旃檀功德佛"
+          ],
+          "explanation": "西海龙王三太子以白龙马身份完成护送使命，最终恢复龙身受封。",
+          "scoringKeywords": [
+            "八部天龙马"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-197",
+      "sourceId": "197",
+      "chapter": "第98回",
+      "theme": "紧箍咒除",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-197.jpg",
+      "questions": [
+        {
+          "id": "picture-197",
+          "type": "情节象征",
+          "prompt": "题图为“紧箍咒除”。悟空成佛后紧箍自然消失，最合理的理解是什么？",
+          "answer": "他已能自觉守戒，不再需要外在约束",
+          "options": [
+            "他已能自觉守戒，不再需要外在约束",
+            "金箍被牛魔王偷走",
+            "唐僧把金箍送给八戒",
+            "观音忘记了咒语"
+          ],
+          "explanation": "紧箍消失表示悟空完成从桀骜不驯到自觉修行者的转变。",
+          "scoringKeywords": [
+            "他已能自觉守戒，不再需要外在约束"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-198",
+      "sourceId": "198",
+      "chapter": "第99回",
+      "theme": "大乘佛法",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-198.jpg",
+      "questions": [
+        {
+          "id": "picture-198",
+          "type": "主题理解",
+          "prompt": "题图为“大乘佛法”。师徒历尽劫难取回大乘佛法，最能体现小说的哪一条主线？",
+          "answer": "在磨难中修行、担当并完成普度众生的使命",
+          "options": [
+            "在磨难中修行、担当并完成普度众生的使命",
+            "争夺天庭官职",
+            "收集天下所有法宝",
+            "让唐僧成为国王"
+          ],
+          "explanation": "取经的意义不只是旅行终点，而是通过劫难完成自我修行并把佛法传向东土。",
+          "scoringKeywords": [
+            "在磨难中修行、担当并完成普度众生的使命"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-199",
+      "sourceId": "199",
+      "chapter": "第99回",
+      "theme": "万国朝贺",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-199.jpg",
+      "questions": [
+        {
+          "id": "picture-199",
+          "type": "情节意义",
+          "prompt": "题图为“万国朝贺”。各国敬仰真经，说明取经成功产生了什么影响？",
+          "answer": "佛法得以广泛传播，唐僧师徒的使命惠及众生",
+          "options": [
+            "佛法得以广泛传播，唐僧师徒的使命惠及众生",
+            "所有妖怪都成为国王",
+            "天庭官职全部废除",
+            "火焰山变成花果山"
+          ],
+          "explanation": "经传东土后获得广泛敬仰，表现取经从个人修行走向社会影响。",
+          "scoringKeywords": [
+            "佛法得以广泛传播，唐僧师徒的使命惠及众生"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    },
+    {
+      "id": "xyj-200",
+      "sourceId": "200",
+      "chapter": "第100回",
+      "theme": "神话永存",
+      "importance": 5,
+      "layout": "landscape",
+      "image": "assets/media/masterpieces/xiyouji-practice/xyj-200.jpg",
+      "questions": [
+        {
+          "id": "picture-200",
+          "type": "主题理解",
+          "prompt": "题图为“神话永存”。《西游记》历久流传，最核心的原因之一是什么？",
+          "answer": "以丰富想象写出反抗、成长、修行和担当的共同主题",
+          "options": [
+            "以丰富想象写出反抗、成长、修行和担当的共同主题",
+            "只记录了天庭官职名称",
+            "只讲解一种法器用法",
+            "只描写唐代长安风景"
+          ],
+          "explanation": "小说的神魔想象与人物成长交织，使其具有持续的文学与教学价值。",
+          "scoringKeywords": [
+            "以丰富想象写出反抗、成长、修行和担当的共同主题"
+          ]
+        }
+      ],
+      "visualReviewStatus": "verified"
+    }
+  ]
+}

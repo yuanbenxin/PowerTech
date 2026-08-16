@@ -1,0 +1,96 @@
+{
+  "version": "0.1.0",
+  "source": "docs/chinese-junior-poetry-classical-card-catalog.md",
+  "splitBy": "book",
+  "status": "catalog-only",
+  "ui": {
+    "stageTabs": [
+      {
+        "id": "junior",
+        "label": "初中"
+      }
+    ],
+    "contentModes": [
+      {
+        "id": "all",
+        "label": "全部篇目"
+      },
+      {
+        "id": "poetry",
+        "label": "古诗词诵读"
+      },
+      {
+        "id": "classical_chinese",
+        "label": "文言文阅读"
+      }
+    ],
+    "defaults": {
+      "stage": "junior",
+      "book": "c7a",
+      "chapter": "all",
+      "contentMode": "all"
+    }
+  },
+  "stages": [
+    {
+      "id": "junior",
+      "label": "初中",
+      "books": [
+        {
+          "id": "c7a",
+          "label": "七年级上册",
+          "stageId": "junior",
+          "stageLabel": "初中",
+          "dataPath": "course-data/books/c7a.json",
+          "chapterCount": 2,
+          "cardCount": 19
+        },
+        {
+          "id": "c7b",
+          "label": "七年级下册",
+          "stageId": "junior",
+          "stageLabel": "初中",
+          "dataPath": "course-data/books/c7b.json",
+          "chapterCount": 2,
+          "cardCount": 19
+        },
+        {
+          "id": "c8a",
+          "label": "八年级上册",
+          "stageId": "junior",
+          "stageLabel": "初中",
+          "dataPath": "course-data/books/c8a.json",
+          "chapterCount": 2,
+          "cardCount": 26
+        },
+        {
+          "id": "c8b",
+          "label": "八年级下册",
+          "stageId": "junior",
+          "stageLabel": "初中",
+          "dataPath": "course-data/books/c8b.json",
+          "chapterCount": 2,
+          "cardCount": 20
+        },
+        {
+          "id": "c9a",
+          "label": "九年级上册",
+          "stageId": "junior",
+          "stageLabel": "初中",
+          "dataPath": "course-data/books/c9a.json",
+          "chapterCount": 2,
+          "cardCount": 15
+        },
+        {
+          "id": "c9b",
+          "label": "九年级下册",
+          "stageId": "junior",
+          "stageLabel": "初中",
+          "dataPath": "course-data/books/c9b.json",
+          "chapterCount": 2,
+          "cardCount": 15
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "book": {
+    "id": "c9b",
+    "label": "九年级下册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "c9b_c01",
+        "label": "古诗词诵读",
+        "title": "古诗词诵读",
+        "sampleTopics": [
+          "原文诵读",
+          "意象画面",
+          "情感手法"
+        ]
+      },
+      {
+        "id": "c9b_c02",
+        "label": "文言文阅读",
+        "title": "文言文阅读",
+        "sampleTopics": [
+          "原文疏通",
+          "实词虚词",
+          "句式译文"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "c9b_c01",
+      "label": "古诗词诵读",
+      "children": []
+    },
+    {
+      "id": "c9b_c02",
+      "label": "文言文阅读",
+      "children": []
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "c9b_m01",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "渔家傲·秋思",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m01_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m02",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "江城子·密州出猎",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m02_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m03",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "破阵子·为陈同甫赋壮词以寄之",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m03_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m04",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "满江红（小住京华）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m04_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m05",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "山坡羊·潼关怀古",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m05_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m06",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "定风波（莫听穿林打叶声）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m06_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m07",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "临江仙·夜登小阁，忆洛中旧游",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m07_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m08",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "太常引·建康中秋夜为吕叔潜赋",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m08_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m09",
+      "chapterIds": [
+        "c9b_c01"
+      ],
+      "title": "浣溪沙（身向云山那畔行）",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、意象、情感与语言赏析交互。",
+      "image": "assets/media/cards/c9b_m09_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "poetry-appreciation",
+      "contentType": "poetry",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "古诗词诵读"
+      ],
+      "points": [
+        "通读诗词原文",
+        "梳理意象与画面",
+        "体会情感与表达手法"
+      ]
+    },
+    {
+      "cardId": "c9b_m10",
+      "chapterIds": [
+        "c9b_c02"
+      ],
+      "title": "鱼我所欲也",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9b_m10_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c9b_m11",
+      "chapterIds": [
+        "c9b_c02"
+      ],
+      "title": "唐雎不辱使命",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9b_m11_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c9b_m12",
+      "chapterIds": [
+        "c9b_c02"
+      ],
+      "title": "送东阳马生序",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9b_m12_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c9b_m13",
+      "chapterIds": [
+        "c9b_c02"
+      ],
+      "title": "曹刿论战",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9b_m13_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c9b_m14",
+      "chapterIds": [
+        "c9b_c02"
+      ],
+      "title": "邹忌讽齐王纳谏",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9b_m14_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    },
+    {
+      "cardId": "c9b_m15",
+      "chapterIds": [
+        "c9b_c02"
+      ],
+      "title": "出师表",
+      "detail": "本卡片已建立篇目位置，待接入原文、注释、句式、译文与结构推演交互。",
+      "image": "assets/media/cards/c9b_m15_v1.jpg",
+      "fallbackImage": "",
+      "isLocked": false,
+      "status": "pending",
+      "engine": "classical-chinese-analysis",
+      "contentType": "classical_chinese",
+      "cardType": "text-study",
+      "visualLevel": "pending",
+      "difficulty": "待编制",
+      "tags": [
+        "统编版",
+        "九年级下册",
+        "文言文阅读"
+      ],
+      "points": [
+        "通读文言原文",
+        "辨析重点实词与虚词",
+        "梳理句式并对照译文"
+      ]
+    }
+  ]
+}
