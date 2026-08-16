@@ -1,0 +1,10 @@
+{
+  "cardId": "c7a_m02",
+  "title": "闻王昌龄左迁龙标遥有此寄",
+  "status": "ready",
+  "engine": "poetry-appreciation",
+  "contentType": "poetry",
+  "coursewarePanelMode": "embedded-lesson",
+  "source": "index.html",
+  "notes": "原始课件完整保存在 lesson/ 目录；平台通过同源 iframe 承载，设备适配样式在运行时注入，不改动原课件文件。"
+}

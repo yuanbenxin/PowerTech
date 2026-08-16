@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>古诗文可视化 - 《闻王昌龄左迁龙标遥有此寄》互动精学</title>
+  <link rel="stylesheet" href="styles.css?v=9cb4c4199267">
+</head>
+<body>
+
+  <!-- 顶部精美导航栏 -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-icon">阅</div>
+      <div class="logo-text-wrapper">
+        <span class="logo-text">名著有声书</span>
+        <span class="logo-subtitle">中考精讲讲堂</span>
+      </div>
+    </div>
+    <div class="header-goal-badge">
+      <span class="badge-dot"></span>
+      <span class="badge-text">今日目标：借月寄情与赠友诗鉴赏</span>
+    </div>
+    <div class="header-right-info" id="header-status-text">
+      八年级上册 · 古诗源曲
+    </div>
+  </header>
+
+
+  <!-- 主内容区 -->
+  <main>
+    
+    <!-- 左侧：多媒体播放控制区 -->
+    <section class="glass-panel">
+      <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span>多媒体播放台</span>
+          <span class="status-indicator-tag" id="video-state-badge">点击播放开始学习</span>
+        </div>
+        <div class="mode-switcher-lux">
+          <button id="btn-playmode-interactive" class="btn-mode-lux active" title="节点暂停，可查看讲解并完成随堂练习">📚 互动精学</button>
+          <button id="btn-playmode-guided" class="btn-mode-lux" title="自动播放节点讲解，讲完后自动续播">🎧 自动伴学</button>
+          <button id="btn-playmode-continuous" class="btn-mode-lux" title="只播放原文视频，全程无讲解打断">▶ 原文纯享</button>
+        </div>
+      </div>
+      <nav class="lesson-outcome-strip" aria-label="本课学习成果">
+        <button type="button" class="lesson-outcome-step" data-outcome="listen">
+          <span class="outcome-index">1</span><span>听读</span><span class="outcome-state" data-outcome-state="listen">待完成</span>
+        </button>
+        <button type="button" class="lesson-outcome-step" data-outcome="evidence">
+          <span class="outcome-index">2</span><span>证据</span><span class="outcome-state" data-outcome-state="evidence">待完成</span>
+        </button>
+        <button type="button" class="lesson-outcome-step" data-outcome="expression">
+          <span class="outcome-index">3</span><span>表达</span><span class="outcome-state" data-outcome-state="expression">待完成</span>
+        </button>
+        <button type="button" class="lesson-outcome-step" data-outcome="review">
+          <span class="outcome-index">4</span><span>巩固</span><span class="outcome-state" data-outcome-state="review">待完成</span>
+        </button>
+      </nav>
+      <div class="panel-body media-panel-body">
+        <div class="media-container">
+          
+          <!-- 视频播放器外框 -->
+          <div class="video-slot">
+            <div class="video-container-lux">
+              <video id="poetry-video" src="李白.mp4" poster="poster.jpg?v=7cf247e468b3" preload="auto" playsinline></video>
+              <!-- 极简流光浮层 -->
+              <div class="video-overlay-shadow"></div>
+              <div class="scene-hotspots" id="scene-hotspots" aria-label="画面证据定位"></div>
+            </div>
+          </div>
+          
+          <!-- 播放控制台 -->
+          <div class="control-console-lux">
+            <!-- 进度条 -->
+            <div class="progress-bar-container">
+              <span class="time-display" id="time-current">00:00</span>
+              <div class="progress-track" id="progress-track">
+                <div class="progress-fill" id="progress-fill">
+                  <div class="progress-handle"></div>
+                </div>
+                <!-- 考点锚点挂载区 -->
+                <div class="checkpoints-container" id="checkpoints-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none;"></div>
+              </div>
+              <span class="time-display" id="time-total">00:00</span>
+            </div>
+
+            <!-- 控制按钮行 -->
+            <div class="control-buttons-row">
+              <div class="action-buttons">
+                <!-- 播放/暂停 -->
+                <button class="btn-play-pause-lux" id="btn-play-pause" title="播放/暂停">
+                  <!-- Play SVG -->
+                  <svg id="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  <!-- Pause SVG -->
+                  <svg id="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                  </svg>
+                </button>
+                <!-- 重新开始 -->
+                <button class="btn-control-secondary" id="btn-replay" title="重新开始">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- 辅助控制区 -->
+              <div style="display: flex; align-items: center; gap: 15px;">
+                <!-- 声音控制 -->
+                <div class="volume-control-group" style="display: flex; align-items: center; gap: 8px;">
+                  <button class="btn-control-secondary" id="btn-volume-toggle" title="静音" style="padding: 4px;">
+                    <svg id="icon-volume-on" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                    <svg id="icon-volume-off" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                      <line x1="23" y1="9" x2="17" y2="15"></line>
+                      <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                  </button>
+                  <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" style="width: 60px; accent-color: var(--color-cinnabar); cursor: pointer;">
+                </div>
+
+                <!-- 倍速控制 -->
+                <div class="speed-selector-group">
+                  <button class="speed-btn-pill" data-speed="0.8">0.8x</button>
+                  <button class="speed-btn-pill active" data-speed="1.0">1.0x</button>
+                  <button class="speed-btn-pill" data-speed="1.2">1.2x</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 进度恢复横幅 -->
+          <div class="resume-progress-banner-lux" id="resume-banner" style="display: none; width: 100%;">
+            <span>已为您记录上次学习进度</span>
+            <button class="btn-resume-lux" id="btn-resume-progress">继续听</button>
+          </div>
+
+
+          <!-- 合并过来的测试与考点模块 -->
+          <div class="panel-tabs-lux" style="margin-top: 20px; border-radius: 0; background: transparent; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 10px;">
+        <button class="panel-tab-btn active" data-tab="tab-testpoint" id="tab-btn-testpoint">核心讲解</button>
+        <button class="panel-tab-btn" data-tab="tab-quiz" id="tab-btn-quiz">答题训练</button>
+        <button class="panel-tab-btn" data-tab="tab-mindmap" id="tab-btn-mindmap">迁移阅读</button>
+        <button class="panel-tab-btn" data-tab="tab-mistakes" id="tab-btn-mistakes">错题订正</button>
+      </div>
+                  </div>
+      </div>
+    </section>
+
+    <!-- 中间：诗词阅读交互区 -->
+    <section class="glass-panel">
+      <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-family: var(--font-serif); font-weight: 700; color: #2d241e;">古诗词文本精读</span>
+          <button id="btn-open-syllabus" class="btn-outline-lux">
+            📂 导学大纲
+          </button>
+        </div>
+        <div class="mode-switcher-lux">
+          <button id="btn-mode-read" class="btn-mode-lux active">原文</button>
+          <button id="btn-mode-evidence" class="btn-mode-lux">证据图</button>
+          <button id="btn-mode-dictate" class="btn-mode-lux">默写</button>
+        </div>
+      </div>
+      <div class="panel-body poetry-column-body-lux">
+        
+        <!-- 宣纸卡片 -->
+        <div class="poetry-card-paper">
+          <div class="paper-inner-border">
+            
+            <!-- 诗词精细排版 -->
+              <div class="poetry-reader-lux" id="read-mode-view">
+              <div class="poetry-header-meta">
+                <h1 class="poetry-title-lux" id="poetry-title">闻王昌龄左迁龙标遥有此寄</h1>
+                <p class="poetry-author-lux" id="poetry-meta-info">〔唐〕李白 · 唐诗</p>
+              </div>
+
+              <!-- 诗句列表 -->
+              <div class="poetry-verses-container-lux" id="verses-list">
+                <!-- 由 JS 渲染 -->
+              </div>
+              </div>
+
+              <div class="evidence-lab" id="evidence-mode-view" style="display: none;">
+                <div class="evidence-lab-heading">
+                  <div>
+                    <span class="evidence-kicker">意象证据链</span>
+                    <h2>把词语归入最能说明它作用的画面</h2>
+                  </div>
+                  <span class="evidence-progress" id="evidence-progress">0 / 12</span>
+                </div>
+                <p class="evidence-instruction">点击一个词语，再选择下方画面。全部归类后，课件会生成“手法—画面—意境—情感”答题链。</p>
+                <div class="evidence-bank" id="evidence-bank" aria-label="待归类意象"></div>
+                <div class="evidence-groups" id="evidence-groups"></div>
+                <div class="evidence-feedback" id="evidence-feedback" aria-live="polite">先选择一个意象词语。</div>
+                <div class="evidence-actions">
+                  <button type="button" class="evidence-reset" id="btn-evidence-reset">重置</button>
+                  <button type="button" class="evidence-check" id="btn-evidence-check">核对证据链</button>
+                </div>
+                <div class="evidence-conclusion" id="evidence-conclusion" hidden>
+                  <div class="evidence-contrast-row">
+                    <span>杨花落尽子规啼</span><strong>暮春凄景</strong><span class="contrast-arrow">递进</span><strong>借月寄情</strong><span>随君直到夜郎西</span>
+                  </div>
+                  <ol>
+                    <li><b>手法</b><span>写景起兴，继而运用想象、拟人和移情。</span></li>
+                    <li><b>画面</b><span>杨花飘零、子规哀啼，明月跨越关山陪友人远行。</span></li>
+                    <li><b>意境</b><span>由暮春凄清转向超越时空的浪漫想象。</span></li>
+                    <li><b>情感</b><span>表达对友人贬谪遭遇的深切同情、关怀与真挚友情。</span></li>
+                  </ol>
+                </div>
+              </div>
+
+            <!-- 情境默写闯关器 -->
+            <div class="dictation-view" id="dictate-mode-view" style="display: none; width: 100%; flex-direction: column; justify-content: center; align-items: center; gap: 14px;">
+              <div style="text-align: center; margin-bottom: 8px;">
+                <h2 style="font-family: var(--font-serif); color: var(--color-primary); font-size: 17px; font-weight: bold;">🎯 情境默写闯关</h2>
+                <p style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">拼音释义辅导 · 逐字比对错字纠错</p>
+              </div>
+              <div class="dictation-card" style="width: 100%; background: #ffffff; border: 1px solid rgba(31, 78, 61, 0.12); padding: 16px; border-radius: 10px; box-shadow: 0 4px 15px rgba(31, 78, 61, 0.03); display: flex; flex-direction: column; gap: 10px;">
+                <div style="font-size: 11.5px; color: var(--color-gold-hover); font-weight: bold; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                  <span id="dictate-progress">关卡 1 / 3</span>
+                  <span id="btn-dictate-clue" style="cursor: pointer; text-decoration: underline;">💡 查看提示</span>
+                </div>
+                <p id="dictate-question-text" style="font-size: 13px; font-family: var(--font-serif); line-height: 1.5; font-weight: bold; color: var(--text-main); text-align: left;">题目加载中...</p>
+                <input type="text" id="dictate-input" placeholder="请在此输入完整诗句（勿含标点）" style="width: 100%; padding: 8px; border-radius: 6px; border: var(--border-thin); font-family: var(--font-serif); font-size: 14px; text-align: center; outline: none; background: #fafafa;" autocomplete="off">
+                
+                <!-- 逐字纠错结果 -->
+                <div id="dictate-diff-result" style="display: none; font-size: 13.5px; font-family: var(--font-serif); background: var(--color-cinnabar-light); border: 1px dashed var(--color-cinnabar); padding: 8px 10px; border-radius: 6px; text-align: center; line-height: 1.5;">
+                  <!-- 红字纠错 -->
+                </div>
+
+                <div id="dictate-explanation-box" style="display: none; font-size: 11.5px; color: var(--text-muted); background: var(--color-primary-light); padding: 8px 10px; border-radius: 6px; text-align: left; line-height: 1.45;">
+                  <!-- 解析 -->
+                </div>
+
+                <button class="btn-resume-play-lux" id="btn-dictate-submit" style="margin-top: 4px; width: 100%;">提交默写答案</button>
+              </div>
+              <button class="btn-resume-play-lux" id="btn-dictate-next" style="display: none; width: 100%; margin-top: 0; background: var(--color-gold);">进入下一关</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 单词释义明亮卡弹窗 -->
+        <div class="vocab-popup-lux" id="vocab-popup">
+          <div class="popup-header-lux">
+            <span class="popup-word-lux" id="popup-word-title">昏鸦</span>
+            <span class="popup-pinyin-lux" id="popup-word-pinyin">hūn yā</span>
+          </div>
+          <div class="popup-body-lux">
+            <p class="popup-meaning-lux" id="popup-word-meaning">黄昏时归巢的乌鸦。</p>
+            <div class="popup-zhongkao-box">
+              <span class="zhongkao-badge">中考得分点</span>
+              <p id="popup-word-zhongkao">【中考要点】点明黄昏的时间点，渲染凄凉、暗淡的氛围，烘托游子无处安身的孤寂悲凉。</p>
+            </div>
+          </div>
+          <div class="popup-footer-lux">
+            <button class="btn-close-popup" id="popup-close-btn">知道并关闭</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <!-- 导学进度抽屉式遮罩层 -->
+  <div class="syllabus-drawer-overlay" id="syllabus-drawer-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; backdrop-filter: blur(2px); transition: opacity 0.3s;">
+    <div class="syllabus-drawer" id="syllabus-drawer" style="position: absolute; right: 0; top: 0; width: 320px; height: 100%; background: url('images/rice_paper.jpg') repeat; border-left: 1px solid rgba(45, 36, 30, 0.2); box-shadow: -10px 0 40px rgba(0,0,0,0.15); padding: 24px; display: flex; flex-direction: column; gap: 20px; transform: translateX(100%); transition: transform 0.3s ease-out;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px solid rgba(45, 36, 30, 0.12); padding-bottom: 12px;">
+        <span style="font-family: var(--font-serif); font-weight: 900; font-size: 17px; color: #2d241e; letter-spacing: 1px;">📖 导学与目录大纲</span>
+        <button id="btn-close-syllabus" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #5c4e43; line-height: 1;">&times;</button>
+      </div>
+      
+      <!-- 导学备考卡片 -->
+      <div class="intro-card-modern" style="margin-bottom: 0;">
+        <div class="intro-title-modern">
+          <span class="intro-icon">💡</span>
+          <span style="font-weight: bold;">课前备考提示</span>
+        </div>
+        <p id="poetry-intro-text-drawer" style="font-size: 12.5px; line-height: 1.5; color: var(--text-dark); margin-top: 6px;"></p>
+      </div>
+      
+      <div style="font-weight: 800; font-size: 13.5px; color: #4a3e35; margin-top: 6px; font-family: var(--font-serif);">本篇句段同步进度</div>
+      <div class="chapter-list-lux" id="chapter-list-drawer" style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px;">
+        <!-- 由 JS 渲染 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 水墨风格图片弹窗 -->
+  <div class="image-modal-overlay" id="image-modal-overlay" style="display: none;">
+    <div class="image-modal-content">
+      <button class="image-modal-close" id="btn-close-image-modal">&times;</button>
+      <img id="image-modal-img" alt="导学图片">
+      <div id="image-modal-caption" class="image-modal-caption"></div>
+    </div>
+  </div>
+
+
+
+    <!-- 全局弹窗：测试模块 -->
+    <div id="test-modules-modal" class="modal-overlay-lux" style="display: none;">
+      <div class="modal-dialog-lux">
+        <button id="btn-close-test-modal" class="btn-close-popup">×</button>
+        <div class="modal-body-lux">
+          <div class="test-modules-container" style="flex: 1; display: flex; flex-direction: column; overflow: hidden; margin-top: 10px;">
+            <!-- Tab 2: 考点卡片 -->
+        <div class="tab-content active" id="tab-testpoint">
+          <div class="testpoint-container-lux" id="testpoint-view-container" style="display: flex; flex-direction: column; justify-content: flex-start; height: 100%; overflow-y: auto;">
+            <!-- 默认空状态 -->
+            <div class="empty-state-card" id="testpoint-empty-state">
+              <div class="empty-state-icon">📖</div>
+              <p class="empty-state-title">中考核心点拨待解锁</p>
+              <p class="empty-state-desc">视频播放时，进度到达考点句（如：第 14 秒“古道西风瘦马”）处时，这里会自动解锁中考名师的干货答题技巧！</p>
+            </div>
+            
+            <!-- 考点卡片内容（动态插入） -->
+            <div class="testpoint-card-lux" id="testpoint-active-card" style="display: none;">
+              <div class="card-tag-lux">中考直通车</div>
+              <div class="tp-navigation-lux" id="tp-navigation" role="tablist" aria-label="已解锁中考考点"></div>
+              <h3 class="tp-title-lux" id="tp-title">考点标题</h3>
+              <p class="tp-verse-lux" id="tp-verse">诗句</p>
+              <p class="tp-question-lux" id="tp-question">中考设问？</p>
+              <div class="tp-template-box-lux" id="tp-template">
+                <!-- 答题步骤 -->
+              </div>
+              <button class="btn-resume-play-lux" id="btn-tp-continue">懂了，继续听</button>
+            </div>
+
+            
+        </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 3: 听后测验 -->
+        <div class="tab-content" id="tab-quiz">
+          <div class="quiz-container-lux" id="quiz-view-container">
+            <!-- 测验内容 -->
+            <div class="quiz-card-lux" id="quiz-active-card">
+              <div class="quiz-header-lux">
+                <span id="quiz-progress-text">问题 1 / 3</span>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <button class="btn-close-popup" style="padding: 2px 6px; font-size: 10px; border-radius: 4px;" id="btn-quiz-clue">💡 提示线索</button>
+                  <span class="quiz-badge-lux">中考必刷</span>
+                </div>
+              </div>
+              
+              <p class="quiz-question-lux" id="quiz-question">加载题目中...</p>
+              
+              <!-- 题目提示框 -->
+              <div class="quiz-clue-box" id="quiz-clue-box" style="display: none; font-size: 12px; color: var(--color-gold-hover); background: var(--color-gold-light); padding: 8px 10px; border-radius: 6px; border: 1px solid rgba(195, 143, 29, 0.2); margin-bottom: 12px;">
+                <strong>答题线索：</strong><span id="quiz-clue-text">线索内容...</span>
+              </div>
+
+              <!-- 客观选择题列表 -->
+              <div class="quiz-options-lux" id="quiz-options-list">
+                <!-- 选项由 JS 生成 -->
+              </div>
+
+              <!-- 主观简答答题框 -->
+              <div class="quiz-subjective-box" id="quiz-subjective-box" style="display: none; flex-direction: column; gap: 10px; margin-top: 10px;">
+                <textarea class="quiz-textarea" id="quiz-subjective-input" placeholder="请输入您的分析答案...（建议采用中考三步法）" style="width: 100%; height: 90px; padding: 10px; border-radius: 8px; border: var(--border-thin); font-family: var(--font-sans); font-size: 13px; resize: none; outline: none; background: #fafafa; transition: border 0.3s;"></textarea>
+                <div style="display: flex; gap: 10px; width: 100%; margin-top: 0;">
+                  <button class="btn-resume-play-lux" id="btn-skip-subjective" style="flex: 1; background: #e0e0e0; color: #666; padding: 12px; font-weight: bold; border-radius: 8px;">跳过，直接看解析</button>
+                  <button class="btn-resume-play-lux" id="btn-submit-subjective" style="flex: 2; margin-top: 0;">提交答案并核对得分点</button>
+                </div>
+              </div>
+
+              <!-- 主观题自测采分表 -->
+              <div class="quiz-grading-box" id="quiz-grading-box" style="display: none; flex-direction: column; gap: 12px; background: var(--color-gold-light); padding: 14px; border-radius: 8px; border: 1px solid rgba(195, 143, 29, 0.2); margin-top: 10px;">
+                <div style="font-weight: bold; font-size: 13px; color: var(--color-gold-hover); display: flex; align-items: center; gap: 4px;">📋 中考评分标准核对表</div>
+                <div id="quiz-grading-checklist" style="display: flex; flex-direction: column; gap: 8px; font-size: 12.5px;">
+                  <!-- 由 JS 生成 -->
+                </div>
+                <button class="btn-resume-play-lux" id="btn-finish-grading" style="margin-top: 4px; width: 100%;">确认得分点，继续下一题</button>
+              </div>
+
+              <!-- 答题解析 -->
+              <div class="explanation-panel-lux" id="quiz-explanation" style="display: none;">
+                <span class="explanation-tag-lux">考点精讲与得分点</span>
+                <div id="quiz-explanation-text">解析内容...</div>
+                <button class="btn-jump-back-lux" id="btn-quiz-jump-back">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 4v6h6M23 20v-6h-6"></path>
+                    <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                  </svg>
+                  <span>回到该句段重新听</span>
+                </button>
+              </div>
+
+              <nav class="quiz-navigation-lux" aria-label="测验题目导航">
+                <button class="quiz-navigation-button quiz-navigation-prev" id="btn-quiz-prev" type="button" aria-label="上一题">
+                  <span aria-hidden="true">←</span>
+                  <span>上一题</span>
+                </button>
+                <button class="quiz-navigation-button quiz-navigation-next" id="btn-quiz-next" type="button" aria-label="下一题">
+                  <span>下一题</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </nav>
+            </div>
+
+            <!-- 测验得分卡 -->
+            <div class="quiz-score-card-lux" id="quiz-score-card" style="display: none; flex-direction: column; align-items: center;">
+              <div class="score-circle-lux">
+                <span class="score-num-lux" id="score-number">100</span>
+                <span class="score-lbl-lux">分数</span>
+              </div>
+              <h3 class="score-msg-lux" id="score-message">全部答对！</h3>
+
+              <div class="skill-bars" id="skill-bars" aria-label="学习能力分项"></div>
+
+              <p class="score-submsg-lux" id="score-submessage">掌握得很扎实，继续保持！</p>
+              <button class="btn-retry-lux" id="btn-quiz-retry">重新挑战</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: 错题本 -->
+        <div class="tab-content" id="tab-mistakes">
+          <div class="mistakes-container" id="mistakes-view-container" style="display: flex; flex-direction: column; gap: 14px; height: 100%; overflow-y: auto;">
+            <div class="intro-title-modern" style="color: var(--color-cinnabar); font-weight: bold; margin-bottom: 2px;">
+              <span>📂 我的中考错题集</span>
+            </div>
+            
+            <!-- 空状态 -->
+            <div id="mistakes-empty-state" class="empty-state-card" style="margin-top: 20px;">
+              <div class="empty-state-icon" style="color: var(--color-cinnabar);">⭐</div>
+              <p class="empty-state-title" style="color: var(--color-cinnabar);">暂无错题收录</p>
+              <p class="empty-state-desc">在测验或默写中答错的题会自动存入此处，方便后续反复演练！</p>
+            </div>
+            
+            <!-- 错题列表 -->
+            <div id="mistakes-list" style="display: none; flex-direction: column; gap: 12px; width: 100%;">
+              <!-- 由 JS 动态渲染 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: 意象脑图 -->
+        <div class="tab-content" id="tab-mindmap">
+          <!-- 新增：意象中考对比脑图 -->
+            <div class="mindmap-box" id="mindmap-box" style="padding: 20px; height: 100%; display: flex; flex-direction: column;">
+              <div id="btn-toggle-mindmap" style="display: none;" style="font-weight: bold; font-size: 13.5px; color: var(--color-primary); display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: var(--font-serif);">
+                <span>🎋 中考高频意象对比脑图</span>
+                <span id="mindmap-arrow">▼ 展开脑图</span>
+              </div>
+              <div id="mindmap-content" style="display: flex; flex: 1; overflow-y: auto; flex-direction: column; gap: 10px; margin-top: 10px; font-size: 12px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 8px;">
+                <!-- 由 JS 渲染意象知识树 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- 学习拦截弹窗 (Learning Modal) -->
+  <div id="learning-modal-overlay" class="learning-modal-overlay">
+    <div class="learning-modal-box">
+      <div class="learning-modal-header">
+        <h2 id="learning-modal-title">【标题】</h2>
+      </div>
+      <div class="learning-modal-body" id="learning-modal-content">
+        <!-- 动态注入内容 -->
+      </div>
+      <span class="learning-modal-narration" id="learning-modal-narration" role="group" aria-label="讲解语音">
+        <button id="btn-learning-narration" class="learning-narration-button" type="button" aria-pressed="false">
+          <span class="learning-narration-icon" aria-hidden="true">&#128266;</span>
+          <span id="learning-narration-label" class="visually-hidden">播放讲解</span>
+        </button>
+        <span id="learning-narration-status" class="learning-narration-status visually-hidden" aria-live="polite">优先使用系统中文语音</span>
+      </span>
+      <div class="learning-modal-quiz-container" id="learning-modal-quiz" style="display: none;" aria-live="polite">
+        <!-- 动态注入相关测试题 -->
+      </div>
+      <div class="learning-modal-footer">
+        <button id="btn-learning-continue" class="learning-modal-continue">我知道了，继续学习</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入脚本 -->
+  <script src="data.js?v=ae146e012d9d"></script>
+  <script src="app.js?v=284563869f58"></script>
+</body>
+</html>
