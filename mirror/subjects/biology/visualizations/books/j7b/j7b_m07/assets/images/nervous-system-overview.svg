@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="神经系统总览教学图">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06111f"/>
+      <stop offset="0.55" stop-color="#0b1326"/>
+      <stop offset="1" stop-color="#08171f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="52%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity=".24"/>
+      <stop offset=".55" stop-color="#38bdf8" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <style>
+      .grid{stroke:#8bd3ff;stroke-opacity:.07;stroke-width:1}
+      .title{font:900 44px "Microsoft YaHei",Arial,sans-serif;fill:#fff}
+      .sub{font:700 22px "Microsoft YaHei",Arial,sans-serif;fill:#b8c6d8}
+      .label{font:900 24px "Microsoft YaHei",Arial,sans-serif;fill:#fff}
+      .small{font:700 18px "Microsoft YaHei",Arial,sans-serif;fill:#cbd5e1}
+      .tag{font:900 18px "Microsoft YaHei",Arial,sans-serif;fill:#7dd3fc}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g>
+    <path class="grid" d="M0 90H1600M0 180H1600M0 270H1600M0 360H1600M0 450H1600M0 540H1600M0 630H1600M0 720H1600M0 810H1600"/>
+    <path class="grid" d="M100 0V900M200 0V900M300 0V900M400 0V900M500 0V900M600 0V900M700 0V900M800 0V900M900 0V900M1000 0V900M1100 0V900M1200 0V900M1300 0V900M1400 0V900M1500 0V900"/>
+  </g>
+  <text x="96" y="96" class="title">神经系统总览</text>
+  <text x="98" y="134" class="sub">中枢神经系统统一处理信息，周围神经把刺激与反应连接起来</text>
+  <g transform="translate(715 120)">
+    <ellipse cx="90" cy="85" rx="96" ry="72" fill="#f59e0b" opacity=".95"/>
+    <path d="M20 86c30-74 115-76 150-8 23 45-11 92-72 97-59 4-95-31-78-89z" fill="#fb7185"/>
+    <path d="M42 82c23-34 53-40 91-26M60 120c34 26 72 24 108-7M62 60c16 18 37 22 64 10" fill="none" stroke="#7f1d1d" stroke-width="8" stroke-linecap="round" opacity=".56"/>
+    <rect x="70" y="148" width="42" height="310" rx="21" fill="#a78bfa"/>
+    <path d="M91 210C-72 238-147 330-205 448M91 255C242 284 335 360 410 512M91 318C-32 376-77 505-136 660M91 372C214 440 238 572 290 725" fill="none" stroke="#38bdf8" stroke-width="11" stroke-linecap="round"/>
+    <path d="M92 210C-70 238-145 330-203 448M92 255C242 284 335 360 410 512M92 318C-32 376-77 505-136 660M92 372C214 440 238 572 290 725" fill="none" stroke="#0ea5e9" stroke-width="24" stroke-linecap="round" opacity=".13"/>
+  </g>
+  <g transform="translate(100 230)">
+    <rect width="378" height="168" rx="24" fill="#071826" stroke="#38bdf8" stroke-opacity=".42"/>
+    <text x="30" y="50" class="tag">中枢神经系统</text>
+    <text x="30" y="96" class="label">脑 + 脊髓</text>
+    <text x="30" y="132" class="small">整合信息，发出指令，是反射和感觉形成的重要中枢。</text>
+  </g>
+  <g transform="translate(1120 250)">
+    <rect width="382" height="168" rx="24" fill="#071826" stroke="#22c55e" stroke-opacity=".42"/>
+    <text x="30" y="50" class="tag" fill="#86efac">周围神经系统</text>
+    <text x="30" y="96" class="label">脑神经 + 脊神经</text>
+    <text x="30" y="132" class="small">把感受器、效应器与中枢连接起来。</text>
+  </g>
+  <g transform="translate(155 620)">
+    <rect width="380" height="142" rx="24" fill="#071826" stroke="#f59e0b" stroke-opacity=".4"/>
+    <text x="30" y="52" class="label">输入：感受器</text>
+    <text x="30" y="94" class="small">皮肤、眼、耳等感受刺激并产生兴奋。</text>
+  </g>
+  <g transform="translate(1045 620)">
+    <rect width="380" height="142" rx="24" fill="#071826" stroke="#fb7185" stroke-opacity=".4"/>
+    <text x="30" y="52" class="label">输出：效应器</text>
+    <text x="30" y="94" class="small">肌肉或腺体接收指令后产生反应。</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="神经元结构教学图">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#070d1a"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <style>
+      .title{font:900 44px "Microsoft YaHei",Arial,sans-serif;fill:#fff}
+      .sub{font:700 22px "Microsoft YaHei",Arial,sans-serif;fill:#b8c6d8}
+      .label{font:900 24px "Microsoft YaHei",Arial,sans-serif;fill:#fff}
+      .small{font:700 18px "Microsoft YaHei",Arial,sans-serif;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="650" cy="445" r="310" fill="#38bdf8" opacity=".05"/>
+  <text x="96" y="96" class="title">神经元结构</text>
+  <text x="98" y="134" class="sub">树突接收信息，细胞体整合信息，轴突把兴奋传向远端</text>
+  <g transform="translate(160 420)">
+    <path d="M410 0C310-140 180-166 62-116M410 0C284-76 170-40 88 38M410 0C306 118 176 152 62 104M410 0C325-204 245-255 135-260M410 0C306 204 220 250 120 260" fill="none" stroke="#22c55e" stroke-width="20" stroke-linecap="round"/>
+    <path d="M420 0C420-78 484-142 562-142s142 64 142 142-64 142-142 142S420 78 420 0z" fill="#fb7185" stroke="#fecdd3" stroke-width="8"/>
+    <circle cx="562" cy="0" r="48" fill="#7f1d1d" opacity=".68"/>
+    <path d="M702 0H920" stroke="#38bdf8" stroke-width="24" stroke-linecap="round"/>
+    <g fill="#f8fafc" stroke="#38bdf8" stroke-width="6">
+      <rect x="755" y="-36" width="58" height="72" rx="18"/>
+      <rect x="840" y="-36" width="58" height="72" rx="18"/>
+    </g>
+    <path d="M920 0H1202" stroke="#38bdf8" stroke-width="16" stroke-linecap="round"/>
+    <path d="M1202 0c54-56 110-72 178-78M1202 0c68 0 122 30 178 82" fill="none" stroke="#a78bfa" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="1398" cy="-82" r="18" fill="#a78bfa"/>
+    <circle cx="1398" cy="86" r="18" fill="#a78bfa"/>
+  </g>
+  <g transform="translate(98 610)">
+    <rect width="360" height="142" rx="24" fill="#071826" stroke="#22c55e" stroke-opacity=".45"/>
+    <text x="30" y="54" class="label">树突</text>
+    <text x="30" y="96" class="small">短而分支多，主要接收来自其他细胞的信息。</text>
+  </g>
+  <g transform="translate(560 640)">
+    <rect width="360" height="142" rx="24" fill="#071826" stroke="#fb7185" stroke-opacity=".45"/>
+    <text x="30" y="54" class="label">细胞体</text>
+    <text x="30" y="96" class="small">含细胞核，负责整合兴奋并维持代谢。</text>
+  </g>
+  <g transform="translate(1020 610)">
+    <rect width="420" height="142" rx="24" fill="#071826" stroke="#38bdf8" stroke-opacity=".45"/>
+    <text x="30" y="54" class="label">轴突与神经末梢</text>
+    <text x="30" y="96" class="small">轴突传导兴奋，末梢通过突触传递给下一个细胞。</text>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="反射与感觉通路教学图">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#050b18"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M0 0L14 7L0 14Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M0 0L14 7L0 14Z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M0 0L14 7L0 14Z" fill="#facc15"/>
+    </marker>
+    <style>
+      .title{font:900 44px "Microsoft YaHei",Arial,sans-serif;fill:#fff}
+      .sub{font:700 22px "Microsoft YaHei",Arial,sans-serif;fill:#b8c6d8}
+      .label{font:900 24px "Microsoft YaHei",Arial,sans-serif;fill:#fff}
+      .small{font:700 18px "Microsoft YaHei",Arial,sans-serif;fill:#cbd5e1}
+      .node{font:900 20px "Microsoft YaHei",Arial,sans-serif;fill:#fff}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="96" y="96" class="title">反射与感觉通路</text>
+  <text x="98" y="134" class="sub">缩手反射可先在脊髓完成，痛觉通常随后上传到大脑形成感觉</text>
+  <g transform="translate(115 300)">
+    <rect x="0" y="82" width="210" height="116" rx="28" fill="#7f1d1d" stroke="#fb7185" stroke-width="5"/>
+    <text x="105" y="132" class="node" text-anchor="middle">感受器</text>
+    <text x="105" y="164" class="small" text-anchor="middle">皮肤受刺激</text>
+    <ellipse cx="560" cy="140" rx="118" ry="150" fill="#1e293b" stroke="#cbd5e1" stroke-width="6"/>
+    <path d="M515 70L560 140L515 210M605 70L560 140L605 210" fill="none" stroke="#94a3b8" stroke-width="18" stroke-linecap="round"/>
+    <text x="560" y="336" class="label" text-anchor="middle">脊髓神经中枢</text>
+    <rect x="970" y="82" width="210" height="116" rx="28" fill="#064e3b" stroke="#22c55e" stroke-width="5"/>
+    <text x="1075" y="132" class="node" text-anchor="middle">效应器</text>
+    <text x="1075" y="164" class="small" text-anchor="middle">肌肉收缩</text>
+    <path d="M210 140C340 70 420 70 505 116" fill="none" stroke="#38bdf8" stroke-width="14" marker-end="url(#arrowBlue)"/>
+    <path d="M610 184C735 252 870 232 970 158" fill="none" stroke="#22c55e" stroke-width="14" marker-end="url(#arrowGreen)"/>
+    <path d="M575 35C642-92 770-132 910-118" fill="none" stroke="#facc15" stroke-width="12" stroke-dasharray="18 14" marker-end="url(#arrowYellow)"/>
+    <path d="M920-118c42-50 96-62 150-22 42 31 40 100-10 130-58 34-126 2-140-62z" fill="#f59e0b"/>
+    <path d="M938-82c34-32 70-34 110-8M942-36c40 20 78 18 112-14" fill="none" stroke="#7c2d12" stroke-width="7" stroke-linecap="round"/>
+    <text x="1032" y="-176" class="label" text-anchor="middle">大脑感觉中枢</text>
+    <text x="355" y="50" class="small" fill="#7dd3fc">传入神经</text>
+    <text x="755" y="252" class="small" fill="#86efac">传出神经</text>
+    <text x="705" y="-100" class="small" fill="#fde68a">上传形成感觉</text>
+  </g>
+  <g transform="translate(118 690)">
+    <rect width="430" height="128" rx="24" fill="#071826" stroke="#38bdf8" stroke-opacity=".45"/>
+    <text x="30" y="52" class="label">反射弧五部分</text>
+    <text x="30" y="92" class="small">感受器、传入神经、中枢、传出神经、效应器。</text>
+  </g>
+  <g transform="translate(610 690)">
+    <rect width="430" height="128" rx="24" fill="#071826" stroke="#22c55e" stroke-opacity=".45"/>
+    <text x="30" y="52" class="label">先反应，后感觉</text>
+    <text x="30" y="92" class="small">缩手反射可在脊髓完成，痛觉再上传到大脑。</text>
+  </g>
+  <g transform="translate(1102 690)">
+    <rect width="380" height="128" rx="24" fill="#071826" stroke="#facc15" stroke-opacity=".45"/>
+    <text x="30" y="52" class="label">复杂反射</text>
+    <text x="30" y="92" class="small">学习形成的反射通常需要大脑皮层参与。</text>
+  </g>
+</svg>
