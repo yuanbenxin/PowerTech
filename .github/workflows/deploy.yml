@@ -1,0 +1,34 @@
+name: Build & Deploy to Netlify
+
+# 构建与部署全流程在 GitHub Actions 完成：
+# 1. build_deploy.py 从 mirror/ 生成 deploy/（含认证补丁、netlify.toml、_headers、404.html）
+# 2. netlify-cli 仅把构建产物推送到 Netlify（API 部署，不触发站点构建，不消耗 credits）
+#
+# 前置条件：
+# - GitHub 仓库 Secrets 需配置 NETLIFY_AUTH_TOKEN（Netlify Personal Access Token）
+# - Netlify 站点（975c8089-f9c0-410a-bd5b-3ee182920527）的 GitHub 自动构建已断开
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build deploy directory
+        run: python tools/build_deploy.py
+
+      - name: Deploy to Netlify (static artifacts only, no build)
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: npx netlify-cli@latest deploy --prod --dir deploy --site 975c8089-f9c0-410a-bd5b-3ee182920527

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>重要声明 - PowerTech 在线教学演示</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    background: #0c0f12; color: #e8eaec; line-height: 1.9;
+  }
+  .bg-deco {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 70% -10%, rgba(52, 211, 153, 0.08), transparent),
+      radial-gradient(ellipse 50% 35% at 15% 110%, rgba(96, 165, 250, 0.06), transparent),
+      linear-gradient(rgba(10, 12, 15, 0.5), rgba(10, 12, 15, 0.74)),
+      url('/background.webp') center / cover no-repeat fixed;
+  }
+  /* 浅色模式：body 整体反色滤镜，此处二次反转抵消，背景保持原色，改用白色遮罩 */
+  html.shg-light .bg-deco {
+    filter: invert(1) hue-rotate(180deg);
+    background:
+      radial-gradient(ellipse 60% 40% at 70% -10%, rgba(255, 255, 255, 0.10), transparent),
+      radial-gradient(ellipse 50% 35% at 15% 110%, rgba(255, 255, 255, 0.06), transparent),
+      linear-gradient(rgba(245, 246, 250, 0.45), rgba(245, 246, 250, 0.7)),
+      url('/background.webp') center / cover no-repeat fixed;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; margin-bottom: 32px; }
+  h1 { font-size: 24px; font-weight: 900; letter-spacing: 0.02em; }
+  .sub { font-size: 12.5px; color: rgba(232,234,236,0.45); margin-top: 6px; }
+  h2 { font-size: 16px; font-weight: 800; color: #6ee7b7; margin: 32px 0 10px; }
+  p { font-size: 14px; color: rgba(232,234,236,0.82); margin-bottom: 10px; }
+  ul { padding-left: 22px; margin: 8px 0 14px; }
+  li { font-size: 14px; color: rgba(232,234,236,0.82); margin-bottom: 6px; }
+  .card {
+    border: 1px solid rgba(110,231,183,0.25); background: rgba(110,231,183,0.06);
+    border-radius: 14px; padding: 18px 20px; margin: 18px 0;
+  }
+  .card b { color: #6ee7b7; }
+  a { color: #6ee7b7; }
+  .muted { color: rgba(232,234,236,0.45); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="bg-deco"></div>
+<div class="wrap">
+  <header>
+    <h1>重要声明</h1>
+    <div class="sub">PowerTech 在线教学演示</div>
+  </header>
+
+  <h2>一、使用即代表同意</h2>
+  <p>访问、浏览或使用本站（含本站全部网页、课件与资源）的任何行为，均视为你<b>已阅读、理解并无条件同意</b>本声明及本站所载全部条款。若你不同意本声明中的任何条款，请立即停止使用本站；<b>继续使用即视为同意</b>，且一经使用即产生法律约束力。</p>
+  <ul>
+    <li>未满 18 周岁的用户应在监护人同意并陪同下使用本站；</li>
+    <li>你同意本站有权随时修改本声明，<b>修改后的声明一经发布即生效，继续使用即视为接受</b>修改后的条款；</li>
+    <li>本站页面内出现的任何补充规则、提示与说明，与本声明具有同等效力。</li>
+  </ul>
+
+  <h2>二、资源来源与汇编权利</h2>
+  <p>本站（本镜像）所包含的全部教学演示、可视化课件、图片、模型与其他资料，均来自公开网络渠道的搜集整理。我们仅对这些资源进行了整理、归类与部分展示层面的优化，并非资源的原始作者，也不主张对任何原始资源本身拥有权利。</p>
+  <p>但请明确：<b>本站对资源的整体选择、编排、分类、导航结构、界面设计、交互逻辑，以及所编写的全部代码与文案，均系独立创作并依法享有著作权</b>，未经本站书面许可，任何人不得整体或实质性复制、抄袭本站的编排结构与界面设计。</p>
+
+  <h2>三、不作担保</h2>
+  <ul>
+    <li>本站不对其中任何内容的<b>正确性、完整性、可用性</b>作出任何明示或暗示的担保；</li>
+    <li>教学演示中的知识点表述、实验现象模拟等可能存在疏漏或偏差，请以教材与官方资料为准；</li>
+    <li>因使用（或无法使用）本站任何内容而产生的任何直接或间接损失，本站不承担责任。</li>
+  </ul>
+
+  <h2>四、非营利性质</h2>
+  <p>本站仅用于学习、研究与技术演示目的。作者<b>不会借助本站获得任何形式的收益</b>，包括但不限于付费订阅、广告收入、流量变现等。</p>
+
+  <h2>五、版权与使用限制</h2>
+  <ul>
+    <li>本站内容仅供<b>个人学习、研究、欣赏</b>使用，<b>禁止任何形式的商业利用与盈利性使用</b>；</li>
+    <li><b>转载、引用本站内容</b>（含文字、图片、代码、课件页面）时，必须<b>注明出处并附上本站链接</b>，不得用于任何商业或盈利性用途；</li>
+    <li><b>禁止</b>对本站进行批量爬取、镜像、抓取或自动化下载，禁止对本站结构、代码进行反向工程、复制或仿制；</li>
+    <li>禁止篡改、歪曲、恶意利用本站内容，或以任何不正当目的使用本站内容；</li>
+    <li>本站整体版式、界面设计与脚本代码的作者为“本新同学”，依法享有著作权；对本站的抄袭、仿制、盗用构成侵权，本站保留依法追究责任的权利。</li>
+  </ul>
+  <div class="card">
+    <p><b>例外情况：</b>本站允许基于 <b>CC BY-NC-ND 4.0</b> 协议（署名—非商业性使用—禁止演绎 4.0）使用本站资源；但<b>此授权不包含版权不属于本站的资源/图片</b>。如确有合理且正当的理由使用此类资源，可联系本站作者获取<b>双重授权</b>。</p>
+  </div>
+
+  <h2>六、侵权处理（DMCA）</h2>
+  <p>如果你认为本站中的某些内容侵犯了你的合法权益，欢迎向我们提出，我们会认真核实并尽快处理。请向以下邮箱发送一封<b>格式规范的 DMCA Takedown Notice</b>：</p>
+  <div class="card">
+    <p><b>联系邮箱：</b>yuanbenxin@outlook.com</p>
+    <p style="margin-top:8px">为避免邮件丢失，<b>建议使用国外邮箱服务</b>（如 Gmail、Outlook、ProtonMail 等）发送，以免出现接收不到的情况。</p>
+  </div>
+  <p class="muted">你寄送给本站的DMCA通知必须包含：被投诉内容的标题与所在页面 / 原作品的出处与链接 / 你的身份与权利证明 / 联系方式 / 善意声明与版权人或其指定的代理人的签名或具有同等法律效力的电子签名，以便我们高效核实处理。</p>
+  <p class="muted">请注意：如你<b>故意</b>提交虚假、恶意或明显失实的侵权通知，本站保留依法追究你法律责任的权利。</p>
+
+  <h2>七、责任限制</h2>
+  <ul>
+    <li>在法律允许的最大范围内，本站对任何<b>直接、间接、偶然、特殊或后果性损害</b>（包括但不限于数据丢失、业务中断、利润损失、设备损坏）均不承担任何责任；</li>
+    <li>本站指向的第三方链接、外部资源由第三方提供，本站不对其内容、安全性与可用性负责；</li>
+    <li>因不可抗力、网络故障、系统维护等原因导致本站暂时无法访问或内容缺失的，本站不承担责任。</li>
+  </ul>
+
+  <h2>八、争议解决与集体诉讼弃权</h2>
+  <p>与本声明或本站相关的任何争议，双方应<b>首先友好协商</b>解决；协商不成的，提交<b>作者所在地有管辖权的人民法院</b>通过诉讼解决。</p>
+  <p><b>集体诉讼弃权：</b>在法律允许的最大范围内，你同意<b>仅以个人身份</b>解决与本声明或本站相关的任何争议或索赔，并<b>明确放弃</b>作为集体诉讼、集团仲裁或其他代表人诉讼的原告或成员参与此类程序的权利；任何争议或索赔均应<b>在诉由产生之日起一年内</b>提出，逾期视为放弃。</p>
+
+  <h2>九、可分性与最终解释权</h2>
+  <p>本声明中的任何条款被认定为无效、违法或不可执行的，不影响其余条款的效力。本声明的<b>最终解释权归本站作者“本新同学”所有</b>。若本声明与任何适用法律冲突，以法律规定为准。</p>
+</div>
+<script src="/powertech-ui.js"></script>
+</body>
+</html>

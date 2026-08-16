@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>友情链接 - PowerTech 在线教学演示</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    background: #0c0f12;
+    color: #e8eaec;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .bg-deco {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 70% -10%, rgba(52, 211, 153, 0.08), transparent),
+      radial-gradient(ellipse 50% 35% at 15% 110%, rgba(96, 165, 250, 0.06), transparent),
+      linear-gradient(rgba(10, 12, 15, 0.5), rgba(10, 12, 15, 0.74)),
+      url('/background.webp') center / cover no-repeat;
+  }
+  /* 浅色模式：body 整体反色滤镜，此处二次反转抵消，背景保持原色，改用白色遮罩 */
+  html.shg-light .bg-deco {
+    filter: invert(1) hue-rotate(180deg);
+    background:
+      radial-gradient(ellipse 60% 40% at 70% -10%, rgba(255, 255, 255, 0.10), transparent),
+      radial-gradient(ellipse 50% 35% at 15% 110%, rgba(255, 255, 255, 0.06), transparent),
+      linear-gradient(rgba(245, 246, 250, 0.45), rgba(245, 246, 250, 0.7)),
+      url('/background.webp') center / cover no-repeat;
+  }
+  header {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 clamp(20px, 5vw, 56px); height: 64px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(12,15,18,0.35);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+  .brand .logo {
+    width: 34px; height: 34px; border-radius: 9px;
+    border: 1px solid rgba(110,231,183,0.5);
+    background: rgba(110,231,183,0.1);
+    display: flex; align-items: center; justify-content: center;
+    color: #6ee7b7; font-weight: 900; font-size: 15px;
+  }
+  .brand .name { font-size: 15.5px; font-weight: 800; letter-spacing: 0.04em; }
+  .brand .sub { font-size: 11px; color: rgba(232,234,236,0.45); margin-top: 1px; }
+  header .tools { display: flex; align-items: center; }
+
+  main {
+    position: relative; z-index: 1; flex: 1;
+    max-width: 1060px; width: 100%; margin: 0 auto;
+    padding: clamp(28px, 6vh, 64px) clamp(20px, 5vw, 56px) 72px;
+  }
+  .hero { margin-bottom: clamp(24px, 4vh, 40px); }
+  .hero h1 {
+    font-size: clamp(26px, 4.2vw, 40px); font-weight: 900;
+    letter-spacing: 0.01em; line-height: 1.2;
+  }
+  .hero h1 em { font-style: normal; color: #6ee7b7; }
+  .hero p {
+    margin-top: 12px; font-size: 14px; line-height: 1.8;
+    color: rgba(232,234,236,0.6); max-width: 560px;
+  }
+  .grid {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .card {
+    position: relative; padding: 22px 22px 18px;
+    border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.045);
+    -webkit-backdrop-filter: blur(5px) saturate(1.2);
+    backdrop-filter: blur(5px) saturate(1.2);
+    box-shadow: 0 12px 34px -16px rgba(0,0,0,.45);
+    transition: transform .2s ease, border-color .2s ease;
+  }
+  .card:hover { transform: translateY(-3px); border-color: rgba(110,231,183,0.35); }
+  .card .logo {
+    width: 52px; height: 52px; border-radius: 14px;
+    border: 1px solid rgba(110,231,183,0.35);
+    background: rgba(255,255,255,0.06);
+    overflow: hidden; margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card .logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .logo .fallback { font-weight: 900; font-size: 20px; color: #6ee7b7; }
+  .card h3 { font-size: 16.5px; font-weight: 800; }
+  .card .en { margin-top: 2px; font-size: 12px; color: rgba(232,234,236,0.45); }
+  .card .desc {
+    margin-top: 8px; font-size: 12.5px; line-height: 1.7;
+    color: rgba(232,234,236,0.55);
+  }
+  .card .go { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .card .go a {
+    padding: 8px 16px; border-radius: 9px; font-size: 12.5px; font-weight: 800;
+    text-decoration: none; transition: all .18s ease;
+    border: 1px solid rgba(255,255,255,0.14); color: rgba(232,234,236,0.8);
+    background: rgba(255,255,255,0.04);
+  }
+  .card .go a:hover { border-color: rgba(110,231,183,0.5); color: #6ee7b7; }
+  .card .go a.primary {
+    background: #34d399; border-color: #34d399; color: #07130d;
+  }
+  .card .go a.primary:hover { background: #6ee7b7; }
+  .note {
+    margin-top: 44px; text-align: center;
+    font-size: 13px; color: rgba(232,234,236,0.5);
+  }
+  .note a { color: #6ee7b7; text-decoration: none; }
+  .note a:hover { text-decoration: underline; }
+  footer {
+    position: relative; z-index: 1;
+    padding: 18px clamp(20px, 5vw, 56px);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(12,15,18,0.35);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    font-size: 11.5px; color: rgba(232,234,236,0.35);
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  footer a { color: rgba(110,231,183,0.7); text-decoration: none; }
+  footer a:hover { color: #6ee7b7; }
+</style>
+</head>
+<body>
+<div class="bg-deco"></div>
+<header>
+  <a class="brand" href="/" title="返回主页">
+    <div class="logo">P</div>
+    <div>
+      <div class="name">PowerTech 在线教学演示</div>
+      <div class="sub">友情链接</div>
+    </div>
+  </a>
+  <div class="tools"></div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>友 情 链 接</h1>
+    <p>一些有趣、有料的站点与组织，欢迎互链互访。</p>
+  </div>
+
+  <div class="grid" id="cards"></div>
+
+  <div class="note">
+    申请友链请联系站主（点击导航栏<a href="https://yuanbenxin.github.io/myblog/" target="_blank" rel="noopener">「关于作者」</a>）
+  </div>
+</main>
+
+<footer>
+  <span>©2026-现在 本新同学 All right reserved</span>
+  <span>
+    <a href="https://yuanbenxin.github.io/myblog/" target="_blank" rel="noopener">关于作者</a>
+    &nbsp;·&nbsp;
+    <a href="/disclaimer.html" target="_blank" rel="noopener">重要声明</a>
+  </span>
+</footer>
+
+<script>
+var LINKS = [
+  {
+    name: '幻月小镇',
+    en: 'Sukina-Lab E.C.H.O.',
+    org: 'Sukina-Lab',
+    desc: 'AI 向善，致力于推动前沿 AI 在情感陪伴领域的应用。',
+    links: [
+      { label: 'ModelScope', url: 'https://modelscope.cn/models/Sukina-Lab_E.C.H.O/' },
+      { label: 'GitHub', url: 'https://github.com/Sukina-Lab/' }
+    ]
+  },
+  {
+    name: '思拓创联',
+    en: 'SCETL',
+    org: 'sectl',
+    desc: '助力每一节课堂教学。',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/sectl' }
+    ]
+  },
+  {
+    name: 'Tinadec',
+    en: 'Tinadec',
+    org: 'Tinadec',
+    desc: '面向 AI 智能体协作的 Agent 工作空间。',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/Tinadec' }
+    ]
+  }
+];
+
+function escHtml(s) {
+  return String(s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+function renderCards() {
+  var box = document.getElementById('cards');
+  var html = '';
+  for (var i = 0; i < LINKS.length; i++) {
+    var l = LINKS[i];
+    var go = '';
+    for (var j = 0; j < l.links.length; j++) {
+      go += '<a class="' + (j === 0 ? 'primary' : '') + '" href="' + escHtml(l.links[j].url) +
+        '" target="_blank" rel="noopener">' + escHtml(l.links[j].label) + '</a>';
+    }
+    html += '<div class="card">' +
+      '<div class="logo" id="logo-' + i + '"><span class="fallback">' + escHtml(l.name.charAt(0)) + '</span></div>' +
+      '<h3>' + escHtml(l.name) + '</h3>' +
+      '<div class="en">' + escHtml(l.en) + '</div>' +
+      '<div class="desc">' + escHtml(l.desc) + '</div>' +
+      '<div class="go">' + go + '</div>' +
+      '</div>';
+  }
+  box.innerHTML = html;
+  loadLogos();
+}
+
+function loadLogos() {
+  for (var i = 0; i < LINKS.length; i++) {
+    (function (idx) {
+      fetch('https://api.github.com/users/' + encodeURIComponent(LINKS[idx].org))
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function (d) {
+          var avatar = String(d.avatar_url || '').split('?')[0] + '?s=96';
+          var img = new Image();
+          img.onload = function () {
+            var host = document.getElementById('logo-' + idx);
+            if (!host) return;
+            host.innerHTML = '';
+            var el = document.createElement('img');
+            el.src = avatar;
+            el.alt = '';
+            host.appendChild(el);
+          };
+          img.onerror = function () { /* 失败保留首字占位 */ };
+          img.src = avatar;
+        })
+        .catch(function () { /* 网络失败保留首字占位 */ });
+    })(i);
+  }
+}
+
+renderCards();
+</script>
+<script src="/powertech-ui.js"></script>
+</body>
+</html>

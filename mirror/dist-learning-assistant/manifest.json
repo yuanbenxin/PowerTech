@@ -1,0 +1,13 @@
+{
+  "name": "小拾光学习助手",
+  "version": "20260804173251",
+  "assets": [
+    "loader.js?v=a7a0a127c17c",
+    "shg-learning-assistant.css?v=cfa6d5ef37f0",
+    "shg-learning-assistant-three.min.js?v=9274bbcec8d9",
+    "shg-learning-assistant-gltf-loader.js?v=5c15967ba830",
+    "shg-learning-assistant.js?v=1deef33c21e2",
+    "assistant.glb?v=d4557c0215e9",
+    "usage-guides.json"
+  ]
+}

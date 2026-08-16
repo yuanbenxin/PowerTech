@@ -1,0 +1,8 @@
+{
+  "name": "gltf-tools",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@gltf-transform/cli": "^4.4.2"
+  }
+}

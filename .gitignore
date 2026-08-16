@@ -1,0 +1,31 @@
+# 平台杂项
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# AI 协作（本地 spec/交接文档，不入库）
+.trae/
+
+# 爬虫与诊断脚本（仅本地使用，不入库）
+tools/mirror.py
+tools/probe.py
+tools/netdiag.py
+tools/_tmp_*.py
+
+# node 依赖（gltf-tools 本地安装）
+tools/gltf-tools/node_modules/
+
+# 生成产物（CI 中由 build_deploy.py 重新生成并直接推送 Netlify）
+deploy/
+
+# 本地还原备份（未压缩 GLB，仅在本地需要）
+models-backup/
+
+# 过程报告与缓存
+mirror-miss.txt
+mirror-report.txt
+asset_list.txt
+verify-report.txt
+compress-report.txt
+patch-ui-report.txt
