@@ -1,0 +1,23 @@
+{
+  "cardId": "j8a_m09",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-leaflet-resource-map",
+  "visualLevel": "A",
+  "vendor": {
+    "leafletCss": "assets/vendor/leaflet/leaflet.css",
+    "leaflet": "assets/vendor/leaflet/leaflet.js",
+    "topojson": "assets/vendor/js/topojson-client.min.js"
+  },
+  "dataGlobals": {
+    "worldTopoData": "assets/countries-110m.json"
+  },
+  "panelSelectors": [
+    ".ui-shell .sidebar"
+  ],
+  "notes": "中国自然资源分布总览源码已迁入平台目录；Leaflet、TopoJSON 和世界边界数据均改为本地资源。"
+}

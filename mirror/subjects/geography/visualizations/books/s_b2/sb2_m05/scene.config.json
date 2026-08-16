@@ -1,0 +1,20 @@
+{
+  "cardId": "sb2_m05",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-urban-spatial-structure",
+  "visualLevel": "A",
+  "vendor": {
+    "three": false,
+    "orbitControls": false
+  },
+  "panelSelectors": [
+    "#ui-left",
+    "#ui-right"
+  ],
+  "notes": "城市内部空间结构 Canvas 课件接入；同心圆、扇形、多核心模式与地租曲线联动，纹理和功能区插图已本地化。"
+}

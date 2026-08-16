@@ -1,0 +1,35 @@
+{
+  "cardId": "sx3m17",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "sourceStyles": [
+    "style.css?v=53e9bc9291b3"
+  ],
+  "sourceScripts": [
+    "worldgeo.js?v=8cefd8624487",
+    "app.js?v=e3d02a3e7371"
+  ],
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-strategic-resource-security-atlas",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "assets/vendor/three/OrbitControls.js?v=02bb4ade710f",
+    "scripts": [
+      "visualizations/books/s_x3/sx3m17/assets/vendor/three/CopyShader.js",
+      "visualizations/books/s_x3/sx3m17/assets/vendor/three/LuminosityHighPassShader.js",
+      "visualizations/books/s_x3/sx3m17/assets/vendor/three/EffectComposer.js",
+      "visualizations/books/s_x3/sx3m17/assets/vendor/three/RenderPass.js",
+      "visualizations/books/s_x3/sx3m17/assets/vendor/three/ShaderPass.js",
+      "visualizations/books/s_x3/sx3m17/assets/vendor/three/MaskPass.js",
+      "visualizations/books/s_x3/sx3m17/assets/vendor/three/UnrealBloomPass.js"
+    ]
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "国家战略资源安全图谱：通过资源来源与依存度、油气运输通道和咽喉要道、安全对策四支柱、风险情景推演，理解国家资源安全的供给、运输与韧性保障。"
+}

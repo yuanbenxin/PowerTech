@@ -1,0 +1,16 @@
+{
+  "cardId": "j7a_m02",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "terrain-projection",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "../../../../assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "../../../../assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "notes": "等高线地形图三维投影、2D/3D 对照、剖面测量、切片水位、坡面径流和地形特征识别。所有引擎资源本地化。"
+}

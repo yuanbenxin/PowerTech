@@ -1,0 +1,16 @@
+{
+  "cardId": "j7a_m08",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "graticule-coordinate-globe",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "../../../../assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "../../../../assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "notes": "经纬网坐标系与地球仪定位。左侧为本地 Three.js 三维地球仪、经纬网、对跖点和大圆航线，右侧仅保留操作控件。所有贴图、模型和引擎资源均为本地资源。"
+}

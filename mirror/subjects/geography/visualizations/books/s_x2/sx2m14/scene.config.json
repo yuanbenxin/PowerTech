@@ -1,0 +1,36 @@
+{
+  "cardId": "sx2m14",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "sourceStyles": [
+    "style.css?v=02002f0d03e3"
+  ],
+  "sourceScripts": [
+    "geodata.js?v=18b4d9b9baa8",
+    "nighttex.js?v=591a24d4e14f",
+    "app.js?v=33c58b05df1b"
+  ],
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-city-cluster-radiation-network",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "assets/vendor/three/OrbitControls.js?v=02bb4ade710f",
+    "scripts": [
+      "visualizations/books/s_x2/sx2m14/assets/vendor/three/CopyShader.js",
+      "visualizations/books/s_x2/sx2m14/assets/vendor/three/LuminosityHighPassShader.js",
+      "visualizations/books/s_x2/sx2m14/assets/vendor/three/EffectComposer.js",
+      "visualizations/books/s_x2/sx2m14/assets/vendor/three/RenderPass.js",
+      "visualizations/books/s_x2/sx2m14/assets/vendor/three/ShaderPass.js",
+      "visualizations/books/s_x2/sx2m14/assets/vendor/three/MaskPass.js",
+      "visualizations/books/s_x2/sx2m14/assets/vendor/three/UnrealBloomPass.js"
+    ]
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "城市群协同与都市圈：使用三维区域底图呈现夜间灯光变迁、都市圈核心-紧密-辐射圈层、产业交通人口辐射网络与长三角/京津冀/粤港澳对比；原课件 #panel 迁移至平台右侧操作面板。"
+}

@@ -1,0 +1,22 @@
+{
+  "cardId": "j7a_m09",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "orbit-controls",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js",
+    "orbitControls": "assets/vendor/three/OrbitControls.js"
+  },
+  "panelSelectors": [
+    "#top-panel",
+    "#data-panel",
+    "#radar-panel",
+    ".panel"
+  ],
+  "notes": "地球五带划分与太阳直射源码接入。左侧保留 3D 地球、公转轨道、太阳直射光束、五带气场与自由旋转缩放；右侧承载轨道滑条、节气按钮、视觉开关、雷达图和数据面板；外部 Three.js、OrbitControls 和地球贴图均已本地化。"
+}

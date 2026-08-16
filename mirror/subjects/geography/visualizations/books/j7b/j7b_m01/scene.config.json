@@ -1,0 +1,22 @@
+{
+  "cardId": "j7b_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-asia-terrain-radial-rivers",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js",
+    "orbitControls": false
+  },
+  "panelSelectors": [
+    ".panel[data-ui-panel]",
+    ".map2d-panel",
+    ".source-chip.lesson-panel[data-ui-panel]",
+    ".profile-panel[data-ui-panel]"
+  ],
+  "notes": "Asia terrain and radial rivers source integrated with platform local Three.js; 2D teaching map stored in assets."
+}

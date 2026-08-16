@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>流域的综合开发 · 交互课件</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --bg:#041019;
+    --panel-line:rgba(125,211,252,.18);
+    --cyan:#7dd3fc; --blue:#38bdf8; --gold:#fbbf24; --green:#4ade80;
+    --red:#f87171; --orange:#fb923c; --purple:#c084fc; --brown:#d4a373;
+    --txt:#e2e8f0; --dim:#8ea3c0;
+  }
+  html,body{ width:100%; height:100%; overflow:hidden; background:var(--bg);
+    font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif; color:var(--txt); }
+
+  #stage{ position:absolute; left:0; top:0; bottom:0; width:calc(100% - 410px); }
+  #scene-canvas{ width:100%; height:100%; display:block; cursor:crosshair; }
+  #panel{ position:absolute; right:0; top:0; bottom:0; width:410px;
+    background:linear-gradient(160deg, rgba(8,20,34,.92), rgba(6,16,30,.96));
+    border-left:1px solid var(--panel-line);
+    box-shadow:-20px 0 60px rgba(0,0,0,.55);
+    display:flex; flex-direction:column; z-index:10; backdrop-filter:blur(14px); }
+
+  .p-banner{ height:96px; background:url('assets/basin.webp') center 62%/cover no-repeat;
+    position:relative; }
+  .p-banner::after{ content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(8,20,34,.15), rgba(8,20,34,.97)); }
+  .p-banner .bt{ position:absolute; left:20px; bottom:10px; z-index:2; }
+  .p-banner h1{ font-size:19px; letter-spacing:1px;
+    background:linear-gradient(90deg,#7dd3fc,#4ade80,#fbbf24);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .p-banner .sub{ font-size:10px; color:#9fb3cc; margin-top:3px; letter-spacing:2px; }
+
+  .tabs{ display:flex; padding:10px 10px 0; gap:5px; }
+  .tab{ flex:1; text-align:center; padding:8px 1px; font-size:11.5px; cursor:pointer;
+    color:var(--dim); border:1px solid transparent; border-radius:10px 10px 0 0;
+    transition:.25s; user-select:none; line-height:1.3; }
+  .tab:hover{ color:var(--txt); }
+  .tab.active{ color:var(--cyan); background:rgba(125,211,252,.08);
+    border:1px solid var(--panel-line); border-bottom-color:transparent; }
+  .tab .ico{ display:block; font-size:16px; margin-bottom:2px; }
+
+  .pages{ flex:1; overflow-y:auto; padding:15px 17px 30px; }
+  .pages::-webkit-scrollbar{ width:6px; }
+  .pages::-webkit-scrollbar-thumb{ background:rgba(125,211,252,.25); border-radius:3px; }
+  .page{ display:none; animation:fadein .4s ease; }
+  .page.show{ display:block; }
+  @keyframes fadein{ from{opacity:0; transform:translateY(8px);} to{opacity:1;} }
+
+  .card{ background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.07);
+    border-radius:14px; padding:13px 15px; margin-bottom:11px; transition:.25s; }
+  .card h3{ font-size:13.5px; margin-bottom:7px; display:flex; align-items:center; gap:7px; }
+  .card p{ font-size:12px; line-height:1.75; color:#b7c4d8; }
+  .card .tag{ display:inline-block; font-size:10px; padding:1px 8px; border-radius:20px;
+    margin-left:auto; letter-spacing:1px; }
+  .clickable{ cursor:pointer; }
+  .clickable:hover{ border-color:rgba(125,211,252,.4); background:rgba(125,211,252,.06);
+    transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.35); }
+
+  .kpi-row{ display:flex; gap:9px; margin-bottom:11px; }
+  .kpi{ flex:1; text-align:center; padding:11px 3px; border-radius:12px;
+    background:linear-gradient(180deg, rgba(125,211,252,.09), rgba(125,211,252,.02));
+    border:1px solid rgba(125,211,252,.15); }
+  .kpi b{ display:block; font-size:21px; color:var(--cyan); font-family:Georgia,serif; }
+  .kpi span{ font-size:10px; color:var(--dim); letter-spacing:1px; }
+
+  .gauge-wrap{ text-align:center; padding:6px 0 2px; }
+  .gauge-num{ font-size:34px; font-weight:700; font-family:Georgia,serif;
+    text-shadow:0 0 24px currentColor; transition:color .5s; line-height:1; }
+  .gauge-unit{ font-size:14px; color:var(--dim); }
+  .gauge-label{ font-size:11px; color:var(--dim); letter-spacing:3px; margin-top:6px; }
+  .gauge-bar{ height:8px; border-radius:5px; background:rgba(255,255,255,.08);
+    margin-top:11px; overflow:hidden; }
+  .gauge-fill{ height:100%; border-radius:5px; transition:width .4s cubic-bezier(.2,.8,.2,1); }
+
+  .slider-block{ margin-bottom:14px; }
+  .slider-head{ display:flex; justify-content:space-between; font-size:12px; margin-bottom:6px; }
+  .slider-head .val{ color:var(--cyan); font-family:Georgia,serif; }
+  input[type=range]{ width:100%; -webkit-appearance:none; height:6px; border-radius:3px;
+    background:linear-gradient(90deg, rgba(125,211,252,.4), rgba(251,146,60,.5)); outline:none; }
+  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:16px; height:16px;
+    border-radius:50%; background:#fff; border:3px solid var(--cyan);
+    box-shadow:0 0 12px rgba(125,211,252,.8); cursor:pointer; }
+  .slider-desc{ font-size:10.5px; color:var(--dim); line-height:1.6; margin-top:5px; }
+
+  .btn{ display:block; width:100%; padding:10px 12px; margin-bottom:9px; border-radius:12px;
+    border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05);
+    color:var(--txt); font-size:12.5px; cursor:pointer; transition:.25s; text-align:left;
+    display:flex; align-items:center; gap:10px; font-family:inherit; }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.4); }
+  .btn .b-ico{ font-size:17px; }
+  .btn small{ display:block; font-size:10px; color:var(--dim); margin-top:2px; }
+  .btn.gold{ border-color:rgba(251,191,36,.35); background:linear-gradient(90deg, rgba(251,191,36,.12), transparent); }
+  .btn.gold:hover{ background:rgba(251,191,36,.2); }
+  .btn.green{ border-color:rgba(74,222,128,.35); background:linear-gradient(90deg, rgba(74,222,128,.12), transparent); }
+  .btn.green:hover{ background:rgba(74,222,128,.2); }
+  .btn.blue{ border-color:rgba(56,189,248,.35); background:linear-gradient(90deg, rgba(56,189,248,.12), transparent); }
+  .btn.blue:hover{ background:rgba(56,189,248,.2); }
+  .btn.purple{ border-color:rgba(192,132,252,.35); background:linear-gradient(90deg, rgba(192,132,252,.12), transparent); }
+  .btn.purple:hover{ background:rgba(192,132,252,.2); }
+  .btn.red{ border-color:rgba(248,113,113,.35); background:linear-gradient(90deg, rgba(248,113,113,.12), transparent); }
+  .btn.red:hover{ background:rgba(248,113,113,.2); }
+
+  .warn-badge{ display:inline-block; padding:5px 14px; border-radius:20px; font-size:12px;
+    letter-spacing:2px; transition:.4s; }
+  .warn-ok{ background:rgba(74,222,128,.12); border:1px solid rgba(74,222,128,.4); color:var(--green); }
+  .warn-mid{ background:rgba(251,191,36,.12); border:1px solid rgba(251,191,36,.4); color:var(--gold); }
+  .warn-bad{ background:rgba(248,113,113,.15); border:1px solid rgba(248,113,113,.5); color:var(--red);
+    animation:blink 1s infinite; }
+  @keyframes blink{ 50%{ opacity:.55; } }
+
+  .quiz-q{ font-size:12.5px; line-height:1.7; margin-bottom:9px; }
+  .quiz-opt{ display:block; width:100%; text-align:left; padding:8px 12px; margin-bottom:6px;
+    border-radius:10px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.04);
+    color:var(--txt); font-size:12px; cursor:pointer; transition:.2s; font-family:inherit; }
+  .quiz-opt:hover{ border-color:var(--cyan); }
+  .quiz-opt.right{ border-color:var(--green); background:rgba(74,222,128,.15); color:var(--green); }
+  .quiz-opt.wrong{ border-color:var(--red); background:rgba(248,113,113,.12); color:var(--red); }
+  .quiz-note{ font-size:11px; color:var(--dim); line-height:1.6; min-height:18px; margin-bottom:12px; }
+
+  .tip-box{ border-left:3px solid var(--cyan); background:rgba(125,211,252,.06);
+    padding:10px 12px; border-radius:0 10px 10px 0; font-size:11.5px; line-height:1.8;
+    color:#b7c4d8; margin-bottom:11px; }
+  .tip-box b{ color:var(--cyan); }
+
+  /* ====== 舞台浮动层 ====== */
+  .hud{ position:absolute; z-index:5; pointer-events:none; }
+  #hud-title{ left:26px; top:20px; }
+  #hud-title .t1{ font-size:25px; font-weight:700; letter-spacing:3px;
+    background:linear-gradient(90deg,#fff,#7dd3fc); -webkit-background-clip:text;
+    background-clip:text; color:transparent; text-shadow:0 2px 14px rgba(0,0,0,.6); }
+  #hud-title .t2{ font-size:11px; color:rgba(226,232,240,.78); letter-spacing:5px; margin-top:4px;
+    text-shadow:0 2px 8px rgba(0,0,0,.8); }
+  #hud-hint{ left:26px; bottom:18px; font-size:11px; color:rgba(226,232,240,.65); letter-spacing:1px;
+    text-shadow:0 2px 8px rgba(0,0,0,.9); }
+  #hud-hint span{ color:rgba(125,211,252,.9); }
+  #hud-dam{ right:26px; top:20px; text-align:right; }
+  .hud-chip{ background:rgba(8,20,34,.62); border:1px solid rgba(125,211,252,.25);
+    border-radius:12px; padding:7px 13px; margin-bottom:7px; backdrop-filter:blur(6px); }
+  .hud-chip .num{ font-size:20px; font-family:Georgia,serif; font-weight:700; line-height:1.1;
+    text-shadow:0 0 14px currentColor; transition:color .4s; }
+  .hud-chip .lab{ font-size:9.5px; color:rgba(226,232,240,.65); letter-spacing:2px; margin-top:2px; }
+  #toast{ position:absolute; left:50%; bottom:64px; transform:translateX(-50%) translateY(20px);
+    background:rgba(8,20,34,.88); border:1px solid rgba(125,211,252,.35); color:var(--cyan);
+    padding:10px 22px; border-radius:30px; font-size:13px; letter-spacing:1px;
+    opacity:0; transition:.4s; z-index:20; pointer-events:none; backdrop-filter:blur(8px);
+    box-shadow:0 8px 30px rgba(0,0,0,.5); white-space:nowrap; max-width:90%; }
+  #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  #toolbar{ position:absolute; left:50%; bottom:16px; transform:translateX(-50%);
+    display:flex; gap:7px; z-index:6; }
+  #toolbar button{ pointer-events:auto; padding:8px 13px; border-radius:24px; font-size:12px;
+    border:1px solid rgba(125,211,252,.25); background:rgba(8,20,34,.75); color:var(--txt);
+    cursor:pointer; transition:.25s; backdrop-filter:blur(8px); font-family:inherit; white-space:nowrap; }
+  #toolbar button:hover{ border-color:var(--cyan); transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.45); }
+  #toolbar button.on{ background:rgba(125,211,252,.22); border-color:var(--cyan); color:var(--cyan);
+    box-shadow:0 0 16px rgba(125,211,252,.35); }
+
+  #loader{ position:fixed; inset:0; z-index:99; display:flex;
+    flex-direction:column; align-items:center; justify-content:center; transition:opacity .8s;
+    background:url('assets/basin.webp') center/cover no-repeat #041019; }
+  #loader::before{ content:''; position:absolute; inset:0; background:rgba(4,16,25,.55); }
+  #loader .ring{ width:64px; height:64px; border-radius:50%; z-index:2;
+    border:2px solid rgba(125,211,252,.15); border-top-color:var(--cyan);
+    animation:spin 1s linear infinite; }
+  #loader p{ margin-top:18px; font-size:12px; color:#cfe3f5; letter-spacing:4px; z-index:2;
+    text-shadow:0 2px 10px rgba(0,0,0,.8); }
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+
+  @media (max-width:900px){ #panel{ width:340px; } #stage{ width:calc(100% - 340px);} }
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="ring"></div><p>正在展开流域长卷 …</p></div>
+
+<!-- ================= 左侧模拟框：流域长卷 ================= -->
+<div id="stage">
+  <canvas id="scene-canvas"></canvas>
+  <div class="hud" id="hud-title">
+    <div class="t1">流域的综合开发</div>
+    <div class="t2">RIVER BASIN · TVA CASE STUDY</div>
+  </div>
+  <div class="hud" id="hud-dam">
+    <div class="hud-chip"><div class="num" id="hud-level" style="color:#7dd3fc">50%</div><div class="lab">水库水位</div></div>
+    <div class="hud-chip"><div class="num" id="hud-flow" style="color:#38bdf8">420</div><div class="lab">下泄流量 m³/s</div></div>
+    <div class="hud-chip"><div class="num" id="hud-power" style="color:#4ade80">160</div><div class="lab">发电出力 MW</div></div>
+  </div>
+  <div class="hud" id="hud-hint"><span>点击区域光环</span> 看讲解 &nbsp;·&nbsp; <span>点击大坝</span> 开关闸门 &nbsp;·&nbsp; 右侧面板调节调度沙盘</div>
+
+  <div id="toolbar">
+    <button data-m="flow" class="on">💧 水流路径</button>
+    <button data-m="spots" class="on">📍 区域标注</button>
+    <button data-m="ships">🚢 航运</button>
+    <button data-m="rain">🌧️ 暴雨考验</button>
+  </div>
+
+  <div id="toast"></div>
+</div>
+
+<!-- ================= 右侧操作面板 ================= -->
+<div id="panel">
+  <div class="p-banner">
+    <div class="bt">
+      <h1>流域的综合开发</h1>
+      <div class="sub">高中地理 · 以田纳西河流域为例</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-page="p1"><span class="ico">🏔️</span>自然背景</div>
+    <div class="tab" data-page="p2"><span class="ico">😣</span>开发之痛</div>
+    <div class="tab" data-page="p3"><span class="ico">🏗️</span>综合开发</div>
+    <div class="tab" data-page="p4"><span class="ico">🎛️</span>调度沙盘</div>
+    <div class="tab" data-page="p5"><span class="ico">✏️</span>检测</div>
+  </div>
+
+  <div class="pages">
+
+    <!-- ===== 模块一：自然背景 ===== -->
+    <div class="page show" id="p1">
+      <div class="tip-box"><b>核心思路：</b>流域开发的<b>自然背景</b>决定开发方向 —— 地形定落差、气候定水量、水系定航道。点击卡片在画面中定位。</div>
+
+      <div class="card clickable" onclick="showSpot('mountain')">
+        <h3>🏔️ 上游山地<span class="tag" style="background:rgba(74,222,128,.15); color:#4ade80;">水能宝库</span></h3>
+        <p>落差大、流速快 · 水能资源丰富 · 也是流域的水源涵养区</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('reservoir')">
+        <h3>🌊 峡谷水库<span class="tag" style="background:rgba(125,211,252,.15); color:#7dd3fc;">筑坝佳址</span></h3>
+        <p>峡谷口窄腹宽 · 工程量小、库容大 · 调蓄洪水的"水柜"</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('dam')">
+        <h3>🏗️ 水利枢纽<span class="tag" style="background:rgba(251,191,36,.15); color:#fbbf24;">开发核心</span></h3>
+        <p>防洪、发电、航运、灌溉的中枢 · <b>在画面中点击大坝可开关闸门</b></p>
+      </div>
+      <div class="card clickable" onclick="showSpot('plain')">
+        <h3>🌾 中下游平原<span class="tag" style="background:rgba(212,163,115,.15); color:#d4a373;">农业基地</span></h3>
+        <p>地形平坦、土层深厚 · 灌溉农业发达 · 人口与聚落集中</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('city')">
+        <h3>🏙️ 滨江城市<span class="tag" style="background:rgba(192,132,252,.15); color:#c084fc;">经济重心</span></h3>
+        <p>水运便利、工业集中 · 也是防洪压力最大的地方</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('estuary')">
+        <h3>🦆 河口湿地<span class="tag" style="background:rgba(56,189,248,.15); color:#38bdf8;">生态屏障</span></h3>
+        <p>三角洲与候鸟家园 · 对上游来水来沙变化极其敏感</p>
+      </div>
+
+      <div class="card">
+        <h3>🌦️ 气候背景</h3>
+        <p>亚热带湿润气候，降水丰富但<b>集中在汛期</b> —— 冬末春初多暴雨，水量季节分配不均是洪涝的根源。去「调度沙盘」拉动降雨滑杆感受一下！</p>
+      </div>
+    </div>
+
+    <!-- ===== 模块二：开发之痛 ===== -->
+    <div class="page" id="p2">
+      <div class="tip-box"><b>历史教训：</b>19 世纪的田纳西河，由于<b>无序开发</b>，曾是美国最贫困的地区之一。点击下方卡片，在画面中重演当时的灾难。</div>
+
+      <div class="card clickable" onclick="doAction('erosion')">
+        <h3>🪓 滥伐森林 → 水土流失<span class="tag" style="background:rgba(212,163,115,.15); color:#d4a373;">▶ 重演</span></h3>
+        <p>山地植被被砍光，暴雨把表土冲进河道 —— 看河水变成浑黄色</p>
+      </div>
+      <div class="card clickable" onclick="doAction('flood')">
+        <h3>🌊 洪涝频发<span class="tag" style="background:rgba(248,113,113,.15); color:#f87171;">▶ 重演</span></h3>
+        <p>没有水库调蓄，汛期洪峰直扑中下游城市与农田</p>
+      </div>
+      <div class="card clickable" onclick="doAction('drought')">
+        <h3>🏜️ 土地退化与贫困<span class="tag" style="background:rgba(251,146,60,.15); color:#fb923c;">▶ 重演</span></h3>
+        <p>水土流失带走肥力，农田减产，流域陷入"越垦越穷"的恶性循环</p>
+      </div>
+
+      <div class="card">
+        <h3>📖 史料卡</h3>
+        <p>1933 年田纳西河流域人均收入不足全国一半：森林覆盖率大幅下降，洪灾几乎年年发生，航运几乎全部中断。<br><br><b>转折：</b>1933 年成立 TVA（田纳西河流域管理局），以<b>梯级开发</b>为核心开展综合治理。</p>
+      </div>
+    </div>
+
+    <!-- ===== 模块三：综合开发 ===== -->
+    <div class="page" id="p3">
+      <div class="tip-box"><b>开发核心 = 河流梯级开发：</b>一排大坝像楼梯一样逐级利用落差。点击措施，看画面中的流域如何"活"起来。</div>
+
+      <button class="btn blue" onclick="doAction('floodctrl')"><span class="b-ico">🚪</span><div>防洪：水库调蓄<small>汛期蓄水削峰 · 点击演示闸门调度</small></div></button>
+      <button class="btn gold" onclick="doAction('power')"><span class="b-ico">⚡</span><div>发电：水电梯级<small>开闸放水，看发电出力表飙升</small></div></button>
+      <button class="btn purple" onclick="doAction('ships')"><span class="b-ico">🚢</span><div>航运：渠化河道<small>大坝抬升水位，千吨船队直达上游</small></div></button>
+      <button class="btn green" onclick="doAction('irrigate')"><span class="b-ico">💧</span><div>灌溉：引水入田<small>灌渠亮起来，平原变粮仓</small></div></button>
+      <button class="btn green" onclick="doAction('reforest')" style="border-color:rgba(74,222,128,.35);"><span class="b-ico">🌲</span><div>生态：植树造林<small>涵养水源，河水由浊变清</small></div></button>
+
+      <div class="kpi-row" style="margin-top:6px;">
+        <div class="kpi"><b>6</b><span>综合效益</span></div>
+        <div class="kpi"><b>1933</b><span>TVA 成立</span></div>
+        <div class="kpi"><b>梯级</b><span>开发核心</span></div>
+      </div>
+      <div class="card">
+        <h3>📖 小结</h3>
+        <p>① 统一管理机构 = 流域管理局<br>② 开发核心 = 梯级开发（防洪/发电/航运/灌溉/旅游/生态）<br>③ 根本理念 = 全流域统筹，人与自然协调</p>
+      </div>
+    </div>
+
+    <!-- ===== 模块四：调度沙盘 ===== -->
+    <div class="page" id="p4">
+      <div class="tip-box"><b>你是流域总调度师：</b>拉动滑杆，在<b>不溃坝、不淹城</b>的前提下让发电与灌溉最大化。汛期的暴雨随时会来！</div>
+
+      <div class="slider-block">
+        <div class="slider-head"><b>🌧️ 流域降雨强度</b><span class="val" id="v-rain">30%</span></div>
+        <input type="range" min="0" max="100" value="30" id="s-rain">
+        <div class="slider-desc">降雨越大，入库洪水越猛 · 试试拉到 90% 以上</div>
+      </div>
+      <div class="slider-block">
+        <div class="slider-head"><b>🚪 大坝闸门开度</b><span class="val" id="v-gate">50%</span></div>
+        <input type="range" min="0" max="100" value="50" id="s-gate">
+        <div class="slider-desc">开大 → 发电多但下游涨水；关小 → 蓄水但库位升高</div>
+      </div>
+      <div class="slider-block">
+        <div class="slider-head"><b>🌲 上游植被覆盖率</b><span class="val" id="v-veg">55%</span></div>
+        <input type="range" min="0" max="100" value="55" id="s-veg">
+        <div class="slider-desc">植被涵养水源、削减洪峰、拦截泥沙 · 生态是最好的水库</div>
+      </div>
+
+      <div class="card gauge-wrap">
+        <div><span class="gauge-num" id="g-level" style="color:#7dd3fc">50</span><span class="gauge-unit"> %</span></div>
+        <div class="gauge-label">水库水位（90% 以上有溃坝风险）</div>
+        <div class="gauge-bar"><div class="gauge-fill" id="gf-level" style="width:50%; background:linear-gradient(90deg,#38bdf8,#fbbf24,#f87171);"></div></div>
+      </div>
+      <div class="card gauge-wrap">
+        <div><span class="gauge-num" id="g-power" style="color:#4ade80">160</span><span class="gauge-unit"> MW</span></div>
+        <div class="gauge-label">水电出力（取决于 水位落差 × 流量）</div>
+        <div class="gauge-bar"><div class="gauge-fill" id="gf-power" style="width:40%; background:linear-gradient(90deg,#1d4e89,#4ade80);"></div></div>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <h3 style="justify-content:center;">🚨 下游城市防洪预警</h3>
+        <span class="warn-badge warn-ok" id="warn-badge">安全 · 正常调度</span>
+        <p style="margin-top:9px; font-size:11px;" id="warn-note">当前下泄流量在城市防洪标准以内。</p>
+      </div>
+
+      <button class="btn red" onclick="doAction('storm')"><span class="b-ico">☔</span><div>汛期暴雨考验<small>强降雨突袭，考验你的调度水平</small></div></button>
+      <button class="btn blue" onclick="doAction('normal')"><span class="b-ico">🧘</span><div>恢复常态调度<small>雨过天晴，回到平衡状态</small></div></button>
+    </div>
+
+    <!-- ===== 模块五：课堂检测 ===== -->
+    <div class="page" id="p5">
+      <div class="tip-box"><b>课堂检测：</b>4 道小题，检验学习成果</div>
+
+      <div class="card">
+        <div class="quiz-q">1️⃣ 田纳西河流域综合开发的<b>核心</b>是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">A. 大力发展航运</button>
+        <button class="quiz-opt" onclick="quiz(this,true,1)">B. 河流的梯级开发</button>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">C. 扩大耕地面积</button>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">D. 开采矿产资源</button>
+        <div class="quiz-note" id="qn1"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">2️⃣ 流域上游山区的开发方向应是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">A. 大规模开垦梯田</button>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">B. 建设重工业基地</button>
+        <button class="quiz-opt" onclick="quiz(this,true,2)">C. 水能开发 + 水源涵养保护</button>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">D. 围河造地发展城镇</button>
+        <div class="quiz-note" id="qn2"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">3️⃣ 下列<b>不属于</b>流域综合开发效益的是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">A. 防洪与发电</button>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">B. 航运与灌溉</button>
+        <button class="quiz-opt" onclick="quiz(this,true,3)">C. 彻底消除一切自然灾害</button>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">D. 旅游与生态改善</button>
+        <div class="quiz-note" id="qn3"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">4️⃣ 上游修建大坝可能对<b>河口地区</b>产生的影响是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">A. 三角洲泥沙淤积加快</button>
+        <button class="quiz-opt" onclick="quiz(this,true,4)">B. 来沙减少，三角洲增长放缓甚至退缩</button>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">C. 海水倒灌完全消失</button>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">D. 湿地面积必然扩大</button>
+        <div class="quiz-note" id="qn4"></div>
+      </div>
+      <div class="kpi-row"><div class="kpi"><b id="quiz-score">0 / 4</b><span>当前得分</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   流域的综合开发 · 交互课件（流域长卷沙盘版）
+   左侧：AI 长卷 + 水流/降雨/闸门/洪水动态模拟
+   右侧：五大教学模块 + 调度沙盘
+   ============================================================ */
+const M = { rain:30, gate:50, veg:55 };       // 调度参数
+let   level = 0.5;                            // 水库水位 0~1
+let   discharge = 420, power = 160;           // 派生量
+const flags = { flow:true, spots:true, ships:false };
+let   tween = null, stormTimer = null;
+let   irrigateFlash = 0, reforestFlash = 0, droughtFlash = 0;
+
+// ---------- 画布与多状态图像 ----------
+const stage  = document.getElementById('stage');
+const canvas = document.getElementById('scene-canvas');
+const ctx    = canvas.getContext('2d');
+const IMGS = { normal:new Image(), storm:new Image(), drought:new Image(), eco:new Image(),
+               gateopen:new Image(), gateclosed:new Image() };
+IMGS.normal.src  = 'assets/basin.webp';
+IMGS.storm.src   = 'assets/basin_storm.webp';
+IMGS.drought.src = 'assets/basin_drought.webp';
+IMGS.eco.src     = 'assets/basin_eco.webp';
+IMGS.gateopen.src   = 'assets/basin_gateopen.webp';
+IMGS.gateclosed.src = 'assets/basin_gateclosed.webp';
+let imgReady = false;
+IMGS.normal.onload = ()=>{ imgReady = true; };
+// 场景状态权重（显示值，向目标平滑逼近 → 整幅画面交叉淡变）
+const K = { storm:0, drought:0, eco:0, open:0, closed:0 };
+function sceneKTarget(){
+  const storm  = Math.min(1, Math.max(0, (M.rain-55)/40));
+  const drought= Math.min(1, Math.max(0, (18-M.rain)/18)) * (1-storm);
+  const eco    = Math.min(1, Math.max(0, (M.veg-70)/30)) * (1-storm) * (1-drought);
+  const open   = Math.min(1, Math.max(0, (M.gate-55)/45));   // 开闸泄洪图
+  const closed = Math.min(1, Math.max(0, (30-M.gate)/30));   // 关闸蓄水图
+  return { storm, drought, eco, open, closed };
+}
+
+let VW = 0, VH = 0, DPR = 1;
+function fitCanvas(){
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  VW = stage.clientWidth; VH = stage.clientHeight;
+  canvas.width = VW * DPR; canvas.height = VH * DPR;
+}
+fitCanvas();
+window.addEventListener('resize', fitCanvas);
+
+function view(){
+  const im = IMGS.normal;
+  if (!imgReady) return { ox:0, oy:0, dw:VW, dh:VH };
+  const s = Math.max(VW / im.width, VH / im.height);
+  const dw = im.width * s, dh = im.height * s;
+  return { ox:(VW-dw)/2, oy:(VH-dh)/2, dw, dh };
+}
+function P(nx, ny){
+  const v = view();
+  return { x: v.ox + nx * v.dw, y: v.oy + ny * v.dh };
+}
+
+// ---------- 区域热点 ----------
+const SPOTS = {
+  mountain: { x:0.10,  y:0.26,  r:30, color:'#4ade80', label:'上游山地 · 水能宝库',
+    msg:'🏔️ 上游山地：落差大、流速快，水能丰富；森林是水源涵养的第一道防线' },
+  reservoir:{ x:0.275, y:0.20,  r:30, color:'#7dd3fc', label:'峡谷水库 · 调蓄水柜',
+    msg:'🌊 峡谷水库：口窄腹宽，筑坝工程量小库容大，汛期蓄洪、枯期补水' },
+  dam:      { x:0.315, y:0.485, r:28, color:'#fbbf24', label:'水利枢纽 · 点击开关闸门',
+    msg:'🏗️ 水利枢纽：防洪、发电、航运、灌溉的中枢 —— 再点一次切换闸门' },
+  plain:    { x:0.46,  y:0.56,  r:30, color:'#d4a373', label:'中下游平原 · 农业基地',
+    msg:'🌾 中下游平原：地形平坦、土层深厚，灌溉农业与聚落集中之地' },
+  city:     { x:0.675, y:0.49,  r:30, color:'#c084fc', label:'滨江城市 · 防洪重点',
+    msg:'🏙️ 滨江城市：水运便利、工业集中，也是洪峰来临时最脆弱的地方' },
+  estuary:  { x:0.875, y:0.66,  r:30, color:'#38bdf8', label:'河口湿地 · 生态屏障',
+    msg:'🦆 河口湿地：三角洲与候鸟家园，上游来沙减少会让三角洲退缩' },
+};
+const spotFlash = {};
+
+// ---------- 干流路径（Catmull-Rom，归一化坐标） ----------
+const RIVER = [
+  [0.075,0.33],[0.048,0.50],[0.075,0.66],[0.15,0.735],[0.235,0.71],[0.30,0.62],
+  [0.37,0.565],[0.43,0.53],[0.50,0.50],[0.57,0.44],[0.625,0.385],[0.67,0.43],
+  [0.685,0.53],[0.665,0.64],[0.655,0.74],[0.675,0.83],[0.76,0.83],[0.87,0.78],[0.98,0.72],
+];
+function catmull(pts, t){
+  const n = pts.length - 1;
+  const f = t * n, i = Math.min(n - 1, Math.floor(f)), u = f - i;
+  const p0 = pts[Math.max(0, i-1)], p1 = pts[i], p2 = pts[i+1], p3 = pts[Math.min(n, i+2)];
+  const cr = (a,b,c,d)=> 0.5*((2*b) + (-a+c)*u + (2*a-5*b+4*c-d)*u*u + (-a+3*b-3*c+d)*u*u*u);
+  return [cr(p0[0],p1[0],p2[0],p3[0]), cr(p0[1],p1[1],p2[1],p3[1])];
+}
+const RIVER_PTS = [];
+for (let i=0;i<=500;i++) RIVER_PTS.push(catmull(RIVER, i/500));
+function riverAt(t){ return RIVER_PTS[Math.min(500, Math.max(0, Math.round(t*500)))]; }
+
+// 大坝溢流路径：库面 → 坝顶 → 坝面 → 坝下深潭
+const SPILL = [[0.275,0.21],[0.295,0.36],[0.315,0.44],[0.315,0.55],[0.30,0.62]];
+const SPILL_PTS = [];
+for (let i=0;i<=200;i++) SPILL_PTS.push(catmull(SPILL, i/200));
+function spillAt(t){ return SPILL_PTS[Math.min(200, Math.max(0, Math.round(t*200)))]; }
+
+// ---------- 粒子系统 ----------
+const flowParts = [];
+for (let i=0;i<240;i++) flowParts.push({ t:Math.random(), sp:0.05+Math.random()*0.06, r:1.4+Math.random()*2.0, off:Math.random()*6.28 });
+const spillParts = [];
+for (let i=0;i<90;i++) spillParts.push({ t:Math.random(), sp:0.25+Math.random()*0.3, r:1.5+Math.random()*2.4 });
+const rainParts = [];
+for (let i=0;i<220;i++) rainParts.push({ x:Math.random()*0.45, y:Math.random()*0.55, sp:0.5+Math.random()*0.5, len:0.012+Math.random()*0.014 });
+const boats = [];
+for (let i=0;i<4;i++) boats.push({ t:0.55 + i*0.11, sp:0.010+Math.random()*0.006, dir:1 });
+const ripples = [];   // 点击涟漪反馈
+
+// ============================================================
+//  流域水文模型
+// ============================================================
+function hydroTick(dt){
+  // 入库流量：降雨驱动，植被削减洪峰
+  const inflow  = 0.028 + (M.rain/100)*0.12 * (1 - (M.veg/100)*0.45);
+  // 出库流量：闸门控制
+  const outflow = 0.022 + (M.gate/100)*0.11;
+  // 库水位超 1 → 被迫漫顶泄洪
+  const spillExtra = level >= 0.995 ? (inflow - outflow) : 0;
+  level += (inflow - outflow - Math.max(0,spillExtra)) * dt * 0.55;
+  level = Math.min(1.0, Math.max(0.06, level));
+  // 派生量
+  discharge = Math.round((outflow + Math.max(0,spillExtra)) * 4200);
+  power = Math.round(M.gate/100 * (0.25 + 0.75*level) * 340);
+}
+function floodRisk(){
+  if (discharge > 430) return 2;      // 漫顶/超标准洪水
+  if (discharge > 330) return 1;      // 警戒
+  return 0;
+}
+function updateHUD(){
+  const lv = Math.round(level*100);
+  const el = document.getElementById('hud-level');
+  el.textContent = lv + '%';
+  el.style.color = lv > 90 ? '#f87171' : lv > 70 ? '#fbbf24' : '#7dd3fc';
+  const fl = document.getElementById('hud-flow');
+  fl.textContent = discharge;
+  fl.style.color = discharge > 330 ? '#fbbf24' : discharge > 430 ? '#f87171' : '#38bdf8';
+  document.getElementById('hud-power').textContent = power;
+  // 面板仪表
+  const gl = document.getElementById('g-level');
+  gl.textContent = lv;
+  gl.style.color = lv > 90 ? '#f87171' : lv > 70 ? '#fbbf24' : '#7dd3fc';
+  document.getElementById('gf-level').style.width = lv + '%';
+  const gp = document.getElementById('g-power');
+  gp.textContent = power;
+  gp.style.color = power > 240 ? '#4ade80' : power > 120 ? '#7dd3fc' : '#8ea3c0';
+  document.getElementById('gf-power').style.width = Math.min(100, power/340*100) + '%';
+  // 预警
+  const risk = floodRisk();
+  const badge = document.getElementById('warn-badge');
+  const note = document.getElementById('warn-note');
+  if (risk === 0){
+    badge.className = 'warn-badge warn-ok';
+    badge.textContent = '安全 · 正常调度';
+    note.textContent = '当前下泄流量在城市防洪标准以内。';
+  } else if (risk === 1){
+    badge.className = 'warn-badge warn-mid';
+    badge.textContent = '警戒 · 流量偏大';
+    note.textContent = '下泄流量接近城市防洪标准，注意库区腾库！';
+  } else {
+    badge.className = 'warn-badge warn-bad';
+    badge.textContent = '⚠️ 洪峰预警';
+    note.textContent = '洪水直扑下游城市！关闸削峰或提前预泄。';
+  }
+}
+
+// ============================================================
+//  情景与动作
+// ============================================================
+function animateM(target, ms){ tween = { from:{...M}, to:target, t:0, ms }; }
+function syncSliders(){
+  const map = { rain:'s-rain', gate:'s-gate', veg:'s-veg' };
+  Object.keys(map).forEach(k=>{
+    document.getElementById(map[k]).value = M[k];
+    document.getElementById('v-'+k).textContent = Math.round(M[k]) + '%';
+  });
+}
+function doAction(type){
+  if (type==='erosion'){
+    animateM({ veg:8, rain:80 }, 2400);
+    toast('🪓 森林被砍光：暴雨把表土冲进河道，看河水由清变浊！');
+  } else if (type==='flood'){
+    animateM({ rain:95, gate:15, veg:20 }, 2400);
+    toast('🌊 洪涝重演：没有调蓄，洪峰直扑中下游城市！');
+  } else if (type==='drought'){
+    droughtFlash = 8;
+    animateM({ veg:10, rain:12 }, 2400);
+    toast('🏜️ 土地退化：肥力流失，农田减产，"越垦越穷"');
+  } else if (type==='floodctrl'){
+    animateM({ rain:80, gate:70, veg:60 }, 2600);
+    toast('🚪 防洪调度：预泄腾库 + 拦洪削峰，城市转危为安');
+  } else if (type==='power'){
+    animateM({ gate:85, rain:45 }, 2200);
+    toast('⚡ 开闸发电：水位落差 × 流量 = 水电出力飙升');
+  } else if (type==='ships'){
+    flags.ships = !flags.ships;
+    document.querySelector('#toolbar [data-m="ships"]').classList.toggle('on', flags.ships);
+    if (flags.ships) animateM({ gate:60, rain:35 }, 1800);
+    toast(flags.ships ? '🚢 航运恢复：大坝抬升水位，船队贯通全河' : '船队已收锚');
+  } else if (type==='irrigate'){
+    irrigateFlash = 8;
+    animateM({ rain:35, gate:55 }, 2000);
+    toast('💧 引水入田：灌渠亮起来，平原变粮仓');
+  } else if (type==='reforest'){
+    reforestFlash = 8;
+    animateM({ veg:95 }, 2600);
+    toast('🌲 植树造林：涵养水源，河水由浊变清');
+  } else if (type==='storm'){
+    animateM({ rain:96 }, 2000);
+    toast('☔ 暴雨突袭！库水位猛涨 —— 快开闸泄洪保城市！');
+  } else if (type==='normal'){
+    animateM({ rain:30, gate:50, veg:55 }, 2000);
+    toast('🧘 恢复常态调度');
+  }
+}
+function showSpot(key){
+  if (!flags.spots){
+    flags.spots = true;
+    document.querySelector('#toolbar [data-m="spots"]').classList.add('on');
+  }
+  spotFlash[key] = 4;
+  toast(SPOTS[key].msg);
+}
+
+// 面板交互
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.page).classList.add('show');
+  });
+});
+[['rain','s-rain','v-rain'],['gate','s-gate','v-gate'],['veg','s-veg','v-veg']].forEach(([key,sid,vid])=>{
+  document.getElementById(sid).addEventListener('input', e=>{
+    M[key] = +e.target.value;
+    document.getElementById(vid).textContent = e.target.value + '%';
+  });
+});
+
+// 工具栏
+document.querySelectorAll('#toolbar button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    const m = b.dataset.m;
+    if (m==='flow'){
+      flags.flow = !flags.flow;
+      b.classList.toggle('on', flags.flow);
+      toast(flags.flow ? '💧 水流路径已显示' : '水流路径已隐藏');
+    } else if (m==='spots'){
+      flags.spots = !flags.spots;
+      b.classList.toggle('on', flags.spots);
+      toast(flags.spots ? '📍 区域标注已显示' : '区域标注已隐藏');
+    } else if (m==='ships'){
+      doAction('ships');
+    } else if (m==='rain'){
+      doAction('storm');
+    }
+  });
+});
+
+// 课堂检测
+const quizDone = {};
+let quizScore = 0;
+function quiz(el, right, q){
+  if (quizDone[q]) return;
+  quizDone[q] = true;
+  el.classList.add(right ? 'right' : 'wrong');
+  el.parentElement.querySelectorAll('.quiz-opt').forEach(b=>{
+    if (b !== el && b.getAttribute('onclick').includes(',true,')) b.classList.add('right');
+  });
+  const notes = {
+    1:'解析：梯级开发是核心，一坝多用、逐级利用落差。',
+    2:'解析：上游落差大适合水电，同时必须保护水源涵养林。',
+    3:'解析：综合开发能减灾但不可能"彻底消除"自然灾害。',
+    4:'解析：大坝拦沙，河口来沙减少，三角洲增长放缓甚至退缩（如阿斯旺大坝）。'
+  };
+  document.getElementById('qn'+q).textContent = notes[q];
+  if (right) quizScore++;
+  document.getElementById('quiz-score').textContent = quizScore + ' / 4';
+  if (right) toast('✅ 回答正确！'); else toast('❌ 再想一想，解析已显示');
+}
+
+let toastTimer = null;
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 3400);
+}
+</script>
+
+<script>
+// ============================================================
+//  渲染层：长卷 + 动态水文模拟
+// ============================================================
+let lastT = performance.now();
+let elapsed = 0;
+
+function hexA(hex, a){
+  const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+function roundRect(x, y, w, h, r){
+  ctx.beginPath();
+  ctx.moveTo(x+r, y);
+  ctx.arcTo(x+w, y, x+w, y+h, r);
+  ctx.arcTo(x+w, y+h, x, y+h, r);
+  ctx.arcTo(x, y+h, x, y, r);
+  ctx.arcTo(x, y, x+w, y, r);
+  ctx.closePath();
+}
+
+// 河水浑浊度：雨大 + 植被少 → 水土流失
+function mudK(){
+  return Math.min(1, (M.rain/100) * (1 - M.veg/100) * 1.6 + droughtFlash*0.04);
+}
+function waterColor(a){
+  const k = mudK();
+  const r = Math.round(56 + (160-56)*k);
+  const g = Math.round(165 + (110-165)*k);
+  const b = Math.round(248 - (248-70)*k);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+function drawBG(){
+  const v = view();
+  ctx.fillStyle = '#04121e';
+  ctx.fillRect(0,0,VW,VH);
+  if (!imgReady) return;
+  const draw = (im, a)=>{
+    if (a > 0.01 && im.complete && im.naturalWidth){
+      ctx.globalAlpha = a;
+      ctx.drawImage(im, v.ox, v.oy, v.dw, v.dh);
+      ctx.globalAlpha = 1;
+    }
+  };
+  draw(IMGS.normal, 1);
+  draw(IMGS.drought, K.drought);   // 干旱枯水层
+  draw(IMGS.eco, K.eco);           // 绿水青山层
+  draw(IMGS.gateclosed, K.closed); // 关闸蓄水层
+  draw(IMGS.gateopen, K.open);     // 开闸泄洪层
+  draw(IMGS.storm, K.storm);       // 暴雨洪水层（最上层）
+}
+
+// 暴雨乌云（风暴图本身已压暗天空，随 K.storm 减弱叠加）
+function drawStormSky(){
+  const k = (M.rain/100) * (1 - K.storm*0.8);
+  if (k < 0.1) return;
+  const g = ctx.createLinearGradient(0, 0, 0, VH*0.55);
+  g.addColorStop(0, `rgba(30,38,52,${0.5*k})`);
+  g.addColorStop(1, 'rgba(30,38,52,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, VW, VH*0.55);
+}
+
+// 降雨（山区上空）
+function drawRain(dt){
+  const k = M.rain/100;
+  if (k < 0.08) return;
+  const n = Math.floor(rainParts.length * k);
+  ctx.save();
+  ctx.strokeStyle = `rgba(180,215,245,${0.35 + k*0.35})`;
+  ctx.lineWidth = 1.4;
+  for (let i=0;i<n;i++){
+    const d = rainParts[i];
+    d.y += d.sp * dt * (0.8 + k);
+    if (d.y > 0.62){ d.y = -0.02; d.x = Math.random()*0.45; }
+    const p1 = P(d.x, d.y), p2 = P(d.x - 0.004, d.y + d.len);
+    ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// 干流水流粒子
+function drawFlow(dt){
+  if (!flags.flow) return;
+  const v = view();
+  const flowK = 0.5 + Math.min(1.2, discharge/400);
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  for (const d of flowParts){
+    d.t += d.sp * flowK * dt;
+    if (d.t > 1) d.t = 0;
+    const [nx, ny] = riverAt(d.t);
+    const p = P(nx, ny + Math.sin(elapsed*3 + d.off)*0.002);
+    const sz = d.r * (v.dw/1800 + 0.4) * (1 + mudK()*0.4);
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, sz, 0, Math.PI*2);
+    ctx.fillStyle = waterColor(0.75);
+    ctx.shadowColor = mudK() > 0.4 ? 'rgba(200,150,80,.9)' : 'rgba(125,211,252,.9)';
+    ctx.shadowBlur = 8;
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+// 大坝溢流（闸门放水）
+function drawSpill(dt){
+  const k = M.gate/100;
+  if (k < 0.05) return;
+  const n = Math.floor(spillParts.length * (0.2 + k*0.8));
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  for (let i=0;i<n;i++){
+    const d = spillParts[i];
+    d.t += d.sp * dt * (0.5 + k);
+    if (d.t > 1) d.t = 0;
+    const [nx, ny] = spillAt(d.t);
+    const p = P(nx + Math.sin(elapsed*5 + i)*0.0015, ny);
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, d.r * (0.8 + d.t*0.6), 0, Math.PI*2);
+    ctx.fillStyle = `rgba(230,248,255,${0.5 + k*0.35})`;
+    ctx.shadowColor = 'rgba(200,240,255,.95)';
+    ctx.shadowBlur = 10;
+    ctx.fill();
+  }
+  // 坝面水幕
+  if (k > 0.1){
+    const a = P(0.305, 0.43), b = P(0.325, 0.43), c = P(0.315, 0.60);
+    const g = ctx.createLinearGradient(0, a.y, 0, c.y);
+    g.addColorStop(0, `rgba(220,245,255,${0.30*k})`);
+    g.addColorStop(1, `rgba(220,245,255,${0.05*k})`);
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+    ctx.lineTo(c.x + (b.x-a.x)*0.4, c.y); ctx.lineTo(c.x - (b.x-a.x)*0.4, c.y);
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+}
+
+// 水库水位（蓝色覆盖层 + 刻度）
+function drawReservoir(){
+  const v = view();
+  const p = P(0.275, 0.20);
+  const rx = v.dw * 0.115 * (0.55 + level*0.45);
+  const ry = v.dh * 0.055 * (0.5 + level*0.5);
+  ctx.save();
+  const g = ctx.createRadialGradient(p.x, p.y, ry*0.2, p.x, p.y, rx);
+  const hi = level > 0.9;
+  g.addColorStop(0, hi ? 'rgba(96,165,250,.30)' : 'rgba(56,150,248,.22)');
+  g.addColorStop(1, 'rgba(56,150,248,0)');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.ellipse(p.x, p.y, rx, ry, 0, 0, Math.PI*2); ctx.fill();
+  if (hi){
+    ctx.strokeStyle = `rgba(248,113,113,${0.5 + Math.sin(elapsed*4)*0.3})`;
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash([8,6]);
+    ctx.beginPath(); ctx.ellipse(p.x, p.y, rx*0.96, ry*0.96, 0, 0, Math.PI*2); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.font = 'bold 13px "Microsoft YaHei"';
+    ctx.fillStyle = '#f87171';
+    ctx.shadowColor = 'rgba(0,0,0,.9)'; ctx.shadowBlur = 6;
+    ctx.fillText('⚠️ 库水位超警，溃坝风险！', p.x - rx*0.7, p.y - ry - 10);
+  }
+  ctx.restore();
+}
+
+// 城市洪水预警
+function drawFlood(){
+  const risk = floodRisk();
+  if (risk === 0) return;
+  const v = view();
+  const p = P(0.675, 0.52);
+  const rx = v.dw * 0.075, ry = v.dh * 0.16;
+  ctx.save();
+  const a = risk === 2 ? 0.22 + Math.sin(elapsed*4)*0.08 : 0.10;
+  const g = ctx.createRadialGradient(p.x, p.y, ry*0.2, p.x, p.y, rx);
+  g.addColorStop(0, `rgba(248,113,113,${a})`);
+  g.addColorStop(1, 'rgba(248,113,113,0)');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.ellipse(p.x, p.y, rx, ry, 0, 0, Math.PI*2); ctx.fill();
+  if (risk === 2){
+    ctx.font = 'bold 14px "Microsoft YaHei"';
+    ctx.fillStyle = `rgba(248,113,113,${0.75 + Math.sin(elapsed*5)*0.25})`;
+    ctx.shadowColor = 'rgba(0,0,0,.9)'; ctx.shadowBlur = 8;
+    ctx.fillText('🚨 洪峰过境！', p.x - rx*0.5, p.y - ry - 8);
+  }
+  ctx.restore();
+}
+
+// 灌溉辉光（农田）
+function drawIrrigate(){
+  if (irrigateFlash <= 0) return;
+  const v = view();
+  const p = P(0.46, 0.56);
+  const r = v.dw * 0.16;
+  const a = Math.min(0.25, irrigateFlash*0.04);
+  const g = ctx.createRadialGradient(p.x, p.y, r*0.1, p.x, p.y, r);
+  g.addColorStop(0, `rgba(74,222,128,${a})`);
+  g.addColorStop(1, 'rgba(74,222,128,0)');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI*2); ctx.fill();
+  // 灌渠亮线
+  ctx.save();
+  ctx.strokeStyle = `rgba(125,211,252,${Math.min(0.7, irrigateFlash*0.12)})`;
+  ctx.lineWidth = 2;
+  ctx.shadowColor = 'rgba(125,211,252,.9)'; ctx.shadowBlur = 8;
+  ctx.setLineDash([10,8]);
+  ctx.lineDashOffset = -elapsed*30;
+  const canals = [
+    [[0.36,0.56],[0.42,0.55],[0.50,0.56],[0.55,0.52]],
+    [[0.38,0.62],[0.46,0.63],[0.53,0.60]],
+    [[0.41,0.50],[0.48,0.47],[0.55,0.44]],
+  ];
+  canals.forEach(c=>{
+    ctx.beginPath();
+    c.forEach((pt,i)=>{
+      const pp = P(pt[0], pt[1]);
+      i ? ctx.lineTo(pp.x, pp.y) : ctx.moveTo(pp.x, pp.y);
+    });
+    ctx.stroke();
+  });
+  ctx.restore();
+}
+
+// 山地绿化辉光 / 退化枯黄
+function drawMountainTint(){
+  const v = view();
+  const p = P(0.13, 0.30);
+  const r = v.dw * 0.16;
+  let col = null, a = 0;
+  if (reforestFlash > 0){ col = '74,222,128'; a = Math.min(0.22, reforestFlash*0.035); }
+  else if (M.veg < 25){ col = '212,163,115'; a = 0.18; }
+  if (!col) return;
+  const g = ctx.createRadialGradient(p.x, p.y, r*0.1, p.x, p.y, r);
+  g.addColorStop(0, `rgba(${col},${a})`);
+  g.addColorStop(1, `rgba(${col},0)`);
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI*2); ctx.fill();
+}
+
+// 农田退化枯黄
+function drawDrought(){
+  if (droughtFlash <= 0) return;
+  const v = view();
+  const p = P(0.46, 0.58);
+  const r = v.dw * 0.15;
+  const a = Math.min(0.24, droughtFlash*0.04);
+  const g = ctx.createRadialGradient(p.x, p.y, r*0.1, p.x, p.y, r);
+  g.addColorStop(0, `rgba(212,163,115,${a})`);
+  g.addColorStop(1, 'rgba(212,163,115,0)');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI*2); ctx.fill();
+}
+
+// 船只
+function drawBoats(dt){
+  if (!flags.ships) return;
+  const v = view();
+  boats.forEach(b=>{
+    b.t += b.sp * b.dir * dt;
+    if (b.t > 0.98){ b.t = 0.98; b.dir = -1; }
+    if (b.t < 0.50){ b.t = 0.50; b.dir = 1; }
+    const [nx, ny] = riverAt(b.t);
+    const p = P(nx, ny);
+    const s = v.dw/1800 + 0.4;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    // 船体
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 11*s, 4*s, 0, 0, Math.PI*2);
+    ctx.fillStyle = '#8a5a33';
+    ctx.fill();
+    ctx.beginPath();
+    ctx.ellipse(0, -2.5*s, 7*s, 2.4*s, 0, 0, Math.PI*2);
+    ctx.fillStyle = '#f3e2c2';
+    ctx.fill();
+    // 尾迹
+    ctx.strokeStyle = 'rgba(220,245,255,.6)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(-b.dir*10*s, 2*s);
+    ctx.lineTo(-b.dir*24*s, 5*s + Math.sin(elapsed*4)*1.5);
+    ctx.stroke();
+    ctx.restore();
+  });
+}
+
+// 区域热点光环
+function drawSpots(){
+  if (!flags.spots) return;
+  const v = view();
+  ctx.save();
+  Object.keys(SPOTS).forEach(key=>{
+    const s = SPOTS[key];
+    const p = P(s.x, s.y);
+    const flash = spotFlash[key] > 0;
+    if (flash) spotFlash[key] -= 1/60;
+    const baseR = s.r * (v.dw/1700 + 0.35);
+    const pulse = (elapsed*0.9 + s.x*7) % 1;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, baseR + pulse*20, 0, Math.PI*2);
+    ctx.strokeStyle = hexA(s.color, (1-pulse) * (flash ? 0.9 : 0.4));
+    ctx.lineWidth = flash ? 3 : 1.6;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, baseR, 0, Math.PI*2);
+    ctx.strokeStyle = hexA(s.color, flash ? 1 : 0.75);
+    ctx.lineWidth = flash ? 3.5 : 2;
+    ctx.shadowColor = s.color;
+    ctx.shadowBlur = flash ? 20 : 10;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 4, 0, Math.PI*2);
+    ctx.fillStyle = s.color;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.font = '12px "Microsoft YaHei"';
+    const w = ctx.measureText(s.label).width;
+    let lx = p.x - w/2 - 8;
+    lx = Math.min(Math.max(lx, 6), VW - w - 22);
+    const ly = p.y - baseR - 26;
+    ctx.fillStyle = flash ? 'rgba(8,20,34,.9)' : 'rgba(8,20,34,.62)';
+    roundRect(lx, ly, w+16, 22, 11);
+    ctx.fill();
+    ctx.strokeStyle = hexA(s.color, flash ? 0.95 : 0.5);
+    ctx.lineWidth = 1;
+    roundRect(lx, ly, w+16, 22, 11);
+    ctx.stroke();
+    ctx.fillStyle = flash ? s.color : '#e6eef8';
+    ctx.fillText(s.label, lx+8, ly+15);
+  });
+  ctx.restore();
+}
+
+// 点击涟漪
+function drawRipples(dt){
+  for (let i=ripples.length-1; i>=0; i--){
+    const r = ripples[i];
+    r.t += dt * 1.6;
+    if (r.t >= 1){ ripples.splice(i,1); continue; }
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, 12 + r.t*64, 0, Math.PI*2);
+    ctx.strokeStyle = `rgba(125,211,252,${(1-r.t)*0.85})`;
+    ctx.lineWidth = 3 - r.t*2;
+    ctx.shadowColor = 'rgba(125,211,252,.9)';
+    ctx.shadowBlur = 12;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, 5*(1-r.t), 0, Math.PI*2);
+    ctx.fillStyle = `rgba(255,255,255,${(1-r.t)*0.9})`;
+    ctx.fill();
+  }
+}
+
+// ---------- 主循环 ----------
+function frame(now){
+  requestAnimationFrame(frame);
+  const dt = Math.min((now - lastT)/1000, 0.05);
+  lastT = now;
+  elapsed += dt;
+  ctx.setTransform(DPR,0,0,DPR,0,0);   // 高分屏按 CSS 像素绘制
+  const kt = sceneKTarget();
+  K.storm  += (kt.storm  - K.storm)  * Math.min(1, dt*1.8);
+  K.drought+= (kt.drought- K.drought)* Math.min(1, dt*1.8);
+  K.eco    += (kt.eco    - K.eco)    * Math.min(1, dt*1.8);
+  K.open   += (kt.open   - K.open)   * Math.min(1, dt*3.0);   // 闸门图响应更快
+  K.closed += (kt.closed - K.closed) * Math.min(1, dt*3.0);
+
+  if (tween){
+    tween.t += dt * 1000;
+    const k = Math.min(1, tween.t / tween.ms);
+    const e = 1 - Math.pow(1-k, 3);
+    Object.keys(tween.to).forEach(key=>{
+      M[key] = tween.from[key] + (tween.to[key] - tween.from[key]) * e;
+    });
+    syncSliders();
+    if (k >= 1) tween = null;
+  }
+  if (irrigateFlash > 0) irrigateFlash -= dt;
+  if (reforestFlash > 0) reforestFlash -= dt;
+  if (droughtFlash > 0) droughtFlash -= dt;
+
+  hydroTick(dt);
+  updateHUD();
+
+  drawBG();
+  drawStormSky();
+  drawReservoir();
+  drawMountainTint();
+  drawDrought();
+  drawIrrigate();
+  drawFlood();
+  drawSpill(dt);
+  drawFlow(dt);
+  drawBoats(dt);
+  drawRain(dt);
+  drawSpots();
+  drawRipples(dt);
+}
+
+// ---------- 点击与悬停 ----------
+function hitTest(px, py){
+  if (flags.spots){
+    for (const key of Object.keys(SPOTS)){
+      const s = SPOTS[key];
+      const p = P(s.x, s.y);
+      const baseR = s.r * (view().dw/1700 + 0.35) + 10;
+      if (Math.hypot(p.x-px, p.y-py) < baseR) return key;
+    }
+  }
+  return null;
+}
+canvas.addEventListener('click', e=>{
+  const r = canvas.getBoundingClientRect();
+  const px = e.clientX - r.left, py = e.clientY - r.top;
+  ripples.push({ x:px, y:py, t:0 });
+  const key = hitTest(px, py);
+  if (!key) return;
+  if (key === 'dam'){
+    // 点击大坝：切换闸门
+    const target = M.gate > 45 ? 8 : 85;
+    animateM({ gate:target }, 1600);
+    spotFlash.dam = 3;
+    toast(target > 45 ? '🚪 闸门开启：放水发电，下游涨水' : '🚪 闸门关闭：蓄水拦洪，库位上升');
+  } else {
+    showSpot(key);
+  }
+});
+canvas.addEventListener('pointermove', e=>{
+  const r = canvas.getBoundingClientRect();
+  canvas.style.cursor = hitTest(e.clientX - r.left, e.clientY - r.top) ? 'pointer' : 'crosshair';
+});
+
+requestAnimationFrame(frame);
+let loaderHidden = false;
+function hideLoader(){
+  if (loaderHidden) return;
+  loaderHidden = true;
+  const l = document.getElementById('loader');
+  if (l){ l.style.opacity = 0; setTimeout(()=>l.remove(), 800); }
+}
+IMGS.normal.onload = ()=>{ imgReady = true; setTimeout(hideLoader, 300); };
+setTimeout(hideLoader, 4000);   // 兜底
+setTimeout(()=>toast('👋 点击画面中的光环探索流域，点大坝可以开关闸门'), 1600);
+</script>
+</body>
+</html>

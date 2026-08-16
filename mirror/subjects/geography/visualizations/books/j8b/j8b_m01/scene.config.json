@@ -1,0 +1,15 @@
+{
+  "cardId": "j8b_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-four-geographic-regions",
+  "visualLevel": "A",
+  "panelSelectors": [
+    ".ui-shell .sidebar"
+  ],
+  "notes": "中国四大地理区域划分源文件已迁入；内联 Three.js 与 DEM 数据保留，控制面板迁入系统侧栏。"
+}

@@ -1,0 +1,16 @@
+{
+  "cardId": "j7a_m06",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "population-density-globe",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "../../../../assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "../../../../assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "notes": "全球人口密度 3D 热力带。左侧为同一个本地 Three.js 地球仪上的人口热力薄膜、3D 柱状热力带、超大城市信标和航线网络，右侧仅保留操作控件。所有贴图、模型和引擎资源均为本地资源。"
+}

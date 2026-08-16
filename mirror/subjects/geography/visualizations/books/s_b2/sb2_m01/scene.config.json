@@ -1,0 +1,20 @@
+{
+  "cardId": "sb2_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-population-distribution-migration",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "visualizations/books/s_b2/sb2_m01/assets/vendor/three/three.min.js",
+    "orbitControls": "visualizations/books/s_b2/sb2_m01/assets/vendor/three/OrbitControls.js"
+  },
+  "panelSelectors": [
+    "#ui-left",
+    "#ui-right"
+  ],
+  "notes": "人口分布与迁移三维推演课件接入；人口密度核心标记已核对，热力图、三维柱阵、2D 投影和多时期迁移飞线均使用本地资源。"
+}

@@ -1,0 +1,16 @@
+{
+  "cardId": "j7a_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "orbit-simulation",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "../../../../assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "../../../../assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "notes": "地球自转、公转、昼夜更替、四季变化、太阳直射点和城市日影综合演示。"
+}

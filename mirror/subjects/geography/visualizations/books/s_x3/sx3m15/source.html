@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>污染转移与环境安全 · 交互课件</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --bg:#04121c;
+    --panel-line:rgba(110,231,183,.18);
+    --cyan:#6ee7b7; --blue:#38bdf8; --gold:#fbbf24; --green:#4ade80;
+    --red:#f87171; --orange:#fb923c; --purple:#c084fc;
+    --txt:#e2e8f0; --dim:#8ea3c0;
+  }
+  html,body{ width:100%; height:100%; overflow:hidden; background:var(--bg);
+    font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif; color:var(--txt); }
+
+  #stage{ position:absolute; left:0; top:0; bottom:0; width:calc(100% - 410px); }
+  #scene-canvas{ width:100%; height:100%; display:block; cursor:crosshair; }
+  #panel{ position:absolute; right:0; top:0; bottom:0; width:410px;
+    background:linear-gradient(160deg, rgba(8,22,30,.92), rgba(6,18,26,.96));
+    border-left:1px solid var(--panel-line);
+    box-shadow:-20px 0 60px rgba(0,0,0,.55);
+    display:flex; flex-direction:column; z-index:10; backdrop-filter:blur(14px); }
+
+  .p-banner{ height:96px; background:url('assets/world.webp') center 45%/cover no-repeat;
+    position:relative; }
+  .p-banner::after{ content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(8,22,30,.15), rgba(8,22,30,.97)); }
+  .p-banner .bt{ position:absolute; left:20px; bottom:10px; z-index:2; }
+  .p-banner h1{ font-size:19px; letter-spacing:1px;
+    background:linear-gradient(90deg,#6ee7b7,#38bdf8,#fbbf24);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .p-banner .sub{ font-size:10px; color:#9fb3cc; margin-top:3px; letter-spacing:2px; }
+
+  .tabs{ display:flex; padding:10px 10px 0; gap:5px; }
+  .tab{ flex:1; text-align:center; padding:8px 1px; font-size:11.5px; cursor:pointer;
+    color:var(--dim); border:1px solid transparent; border-radius:10px 10px 0 0;
+    transition:.25s; user-select:none; line-height:1.3; }
+  .tab:hover{ color:var(--txt); }
+  .tab.active{ color:var(--cyan); background:rgba(110,231,183,.08);
+    border:1px solid var(--panel-line); border-bottom-color:transparent; }
+  .tab .ico{ display:block; font-size:16px; margin-bottom:2px; }
+
+  .pages{ flex:1; overflow-y:auto; padding:15px 17px 30px; }
+  .pages::-webkit-scrollbar{ width:6px; }
+  .pages::-webkit-scrollbar-thumb{ background:rgba(110,231,183,.25); border-radius:3px; }
+  .page{ display:none; animation:fadein .4s ease; }
+  .page.show{ display:block; }
+  @keyframes fadein{ from{opacity:0; transform:translateY(8px);} to{opacity:1;} }
+
+  .card{ background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.07);
+    border-radius:14px; padding:13px 15px; margin-bottom:11px; transition:.25s; }
+  .card h3{ font-size:13.5px; margin-bottom:7px; display:flex; align-items:center; gap:7px; }
+  .card p{ font-size:12px; line-height:1.75; color:#b7c4d8; }
+  .card .tag{ display:inline-block; font-size:10px; padding:1px 8px; border-radius:20px;
+    margin-left:auto; letter-spacing:1px; }
+  .clickable{ cursor:pointer; }
+  .clickable:hover{ border-color:rgba(110,231,183,.4); background:rgba(110,231,183,.06);
+    transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.35); }
+
+  .kpi-row{ display:flex; gap:9px; margin-bottom:11px; }
+  .kpi{ flex:1; text-align:center; padding:11px 3px; border-radius:12px;
+    background:linear-gradient(180deg, rgba(110,231,183,.09), rgba(110,231,183,.02));
+    border:1px solid rgba(110,231,183,.15); }
+  .kpi b{ display:block; font-size:21px; color:var(--cyan); font-family:Georgia,serif; }
+  .kpi span{ font-size:10px; color:var(--dim); letter-spacing:1px; }
+
+  .gauge-wrap{ text-align:center; padding:6px 0 2px; }
+  .gauge-num{ font-size:34px; font-weight:700; font-family:Georgia,serif;
+    text-shadow:0 0 24px currentColor; transition:color .5s; line-height:1; }
+  .gauge-unit{ font-size:14px; color:var(--dim); }
+  .gauge-label{ font-size:11px; color:var(--dim); letter-spacing:3px; margin-top:6px; }
+  .gauge-bar{ height:8px; border-radius:5px; background:rgba(255,255,255,.08);
+    margin-top:11px; overflow:hidden; }
+  .gauge-fill{ height:100%; border-radius:5px; transition:width .4s cubic-bezier(.2,.8,.2,1); }
+
+  .slider-block{ margin-bottom:14px; }
+  .slider-head{ display:flex; justify-content:space-between; font-size:12px; margin-bottom:6px; }
+  .slider-head .val{ color:var(--cyan); font-family:Georgia,serif; }
+  input[type=range]{ width:100%; -webkit-appearance:none; height:6px; border-radius:3px;
+    background:linear-gradient(90deg, rgba(110,231,183,.4), rgba(251,146,60,.5)); outline:none; }
+  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:16px; height:16px;
+    border-radius:50%; background:#fff; border:3px solid var(--cyan);
+    box-shadow:0 0 12px rgba(110,231,183,.8); cursor:pointer; }
+  .slider-desc{ font-size:10.5px; color:var(--dim); line-height:1.6; margin-top:5px; }
+
+  .btn{ display:block; width:100%; padding:10px 12px; margin-bottom:9px; border-radius:12px;
+    border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05);
+    color:var(--txt); font-size:12.5px; cursor:pointer; transition:.25s; text-align:left;
+    display:flex; align-items:center; gap:10px; font-family:inherit; }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.4); }
+  .btn .b-ico{ font-size:17px; }
+  .btn small{ display:block; font-size:10px; color:var(--dim); margin-top:2px; }
+  .btn.gold{ border-color:rgba(251,191,36,.35); background:linear-gradient(90deg, rgba(251,191,36,.12), transparent); }
+  .btn.gold:hover{ background:rgba(251,191,36,.2); }
+  .btn.green{ border-color:rgba(74,222,128,.35); background:linear-gradient(90deg, rgba(74,222,128,.12), transparent); }
+  .btn.green:hover{ background:rgba(74,222,128,.2); }
+  .btn.blue{ border-color:rgba(56,189,248,.35); background:linear-gradient(90deg, rgba(56,189,248,.12), transparent); }
+  .btn.blue:hover{ background:rgba(56,189,248,.2); }
+  .btn.purple{ border-color:rgba(192,132,252,.35); background:linear-gradient(90deg, rgba(192,132,252,.12), transparent); }
+  .btn.purple:hover{ background:rgba(192,132,252,.2); }
+  .btn.red{ border-color:rgba(248,113,113,.35); background:linear-gradient(90deg, rgba(248,113,113,.12), transparent); }
+  .btn.red:hover{ background:rgba(248,113,113,.2); }
+
+  .quiz-q{ font-size:12.5px; line-height:1.7; margin-bottom:9px; }
+  .quiz-opt{ display:block; width:100%; text-align:left; padding:8px 12px; margin-bottom:6px;
+    border-radius:10px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.04);
+    color:var(--txt); font-size:12px; cursor:pointer; transition:.2s; font-family:inherit; }
+  .quiz-opt:hover{ border-color:var(--cyan); }
+  .quiz-opt.right{ border-color:var(--green); background:rgba(74,222,128,.15); color:var(--green); }
+  .quiz-opt.wrong{ border-color:var(--red); background:rgba(248,113,113,.12); color:var(--red); }
+  .quiz-note{ font-size:11px; color:var(--dim); line-height:1.6; min-height:18px; margin-bottom:12px; }
+
+  .tip-box{ border-left:3px solid var(--cyan); background:rgba(110,231,183,.06);
+    padding:10px 12px; border-radius:0 10px 10px 0; font-size:11.5px; line-height:1.8;
+    color:#b7c4d8; margin-bottom:11px; }
+  .tip-box b{ color:var(--cyan); }
+
+  /* ====== 舞台浮动层 ====== */
+  .hud{ position:absolute; z-index:5; pointer-events:none; }
+  #hud-title{ left:26px; top:20px; }
+  #hud-title .t1{ font-size:25px; font-weight:700; letter-spacing:3px;
+    background:linear-gradient(90deg,#fff,#6ee7b7); -webkit-background-clip:text;
+    background-clip:text; color:transparent; text-shadow:0 2px 14px rgba(0,0,0,.6); }
+  #hud-title .t2{ font-size:11px; color:rgba(226,232,240,.78); letter-spacing:4px; margin-top:4px;
+    text-shadow:0 2px 8px rgba(0,0,0,.8); }
+  #hud-hint{ left:26px; bottom:18px; font-size:11px; color:rgba(226,232,240,.65); letter-spacing:1px;
+    text-shadow:0 2px 8px rgba(0,0,0,.9); }
+  #hud-hint span{ color:rgba(110,231,183,.9); }
+  #hud-score{ right:26px; top:20px; text-align:right; }
+  .hud-chip{ background:rgba(8,22,30,.62); border:1px solid rgba(110,231,183,.25);
+    border-radius:12px; padding:7px 13px; margin-bottom:7px; backdrop-filter:blur(6px); }
+  .hud-chip .num{ font-size:22px; font-family:Georgia,serif; font-weight:700; line-height:1.1;
+    text-shadow:0 0 14px currentColor; transition:color .4s; }
+  .hud-chip .lab{ font-size:9.5px; color:rgba(226,232,240,.65); letter-spacing:2px; margin-top:2px; }
+  #toast{ position:absolute; left:50%; bottom:64px; transform:translateX(-50%) translateY(20px);
+    background:rgba(8,22,30,.88); border:1px solid rgba(110,231,183,.35); color:var(--cyan);
+    padding:10px 22px; border-radius:30px; font-size:13px; letter-spacing:1px;
+    opacity:0; transition:.4s; z-index:20; pointer-events:none; backdrop-filter:blur(8px);
+    box-shadow:0 8px 30px rgba(0,0,0,.5); white-space:nowrap; max-width:90%; }
+  #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  #toolbar{ position:absolute; left:50%; bottom:16px; transform:translateX(-50%);
+    display:flex; gap:7px; z-index:6; }
+  #toolbar button{ pointer-events:auto; padding:8px 13px; border-radius:24px; font-size:12px;
+    border:1px solid rgba(110,231,183,.25); background:rgba(8,22,30,.75); color:var(--txt);
+    cursor:pointer; transition:.25s; backdrop-filter:blur(8px); font-family:inherit; white-space:nowrap; }
+  #toolbar button:hover{ border-color:var(--cyan); transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.45); }
+  #toolbar button.on{ background:rgba(110,231,183,.22); border-color:var(--cyan); color:var(--cyan);
+    box-shadow:0 0 16px rgba(110,231,183,.35); }
+
+  #loader{ position:fixed; inset:0; z-index:99; display:flex;
+    flex-direction:column; align-items:center; justify-content:center; transition:opacity .8s;
+    background:url('assets/world.webp') center/cover no-repeat #04121c; }
+  #loader::before{ content:''; position:absolute; inset:0; background:rgba(4,18,28,.55); }
+  #loader .ring{ width:64px; height:64px; border-radius:50%; z-index:2;
+    border:2px solid rgba(110,231,183,.15); border-top-color:var(--cyan);
+    animation:spin 1s linear infinite; }
+  #loader p{ margin-top:18px; font-size:12px; color:#cfe3f5; letter-spacing:4px; z-index:2;
+    text-shadow:0 2px 10px rgba(0,0,0,.8); }
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+
+  @media (max-width:900px){ #panel{ width:340px; } #stage{ width:calc(100% - 340px);} }
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="ring"></div><p>正在展开蓝色星球 …</p></div>
+
+<!-- ================= 左侧模拟框：世界污染转移图景 ================= -->
+<div id="stage">
+  <canvas id="scene-canvas"></canvas>
+  <div class="hud" id="hud-title">
+    <div class="t1">污染转移 · 环境安全</div>
+    <div class="t2">TRANSBOUNDARY POLLUTION &amp; ENVIRONMENTAL SECURITY</div>
+  </div>
+  <div class="hud" id="hud-score">
+    <div class="hud-chip"><div class="num" id="hud-env" style="color:#fbbf24">42</div><div class="lab">环境安全指数</div></div>
+    <div class="hud-chip"><div class="num" id="hud-level" style="color:#fbbf24">风险较高</div><div class="lab">全球环境风险</div></div>
+  </div>
+  <div class="hud" id="hud-hint"><span>点击热点光环</span> 看案例 &nbsp;·&nbsp; <span>点击发光路径</span> 认识转移方式 &nbsp;·&nbsp; 右侧面板转动治理地球</div>
+
+  <div id="toolbar">
+    <button data-m="routes" class="on">🔀 转移路径</button>
+    <button data-m="spots" class="on">📍 热点标注</button>
+    <button data-m="ship">🚢 洋垃圾船</button>
+    <button data-m="oil">⚫ 油污泄漏</button>
+  </div>
+
+  <div id="toast"></div>
+</div>
+
+<!-- ================= 右侧操作面板 ================= -->
+<div id="panel">
+  <div class="p-banner">
+    <div class="bt">
+      <h1>污染转移与环境安全</h1>
+      <div class="sub">高中地理 · 选择性必修 3 · 交互课件</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-page="p1"><span class="ico">🔀</span>转移途径</div>
+    <div class="tab" data-page="p2"><span class="ico">⚠️</span>安全威胁</div>
+    <div class="tab" data-page="p3"><span class="ico">🎛️</span>治理沙盘</div>
+    <div class="tab" data-page="p4"><span class="ico">🤝</span>全球共治</div>
+    <div class="tab" data-page="p5"><span class="ico">✏️</span>检测</div>
+  </div>
+
+  <div class="pages">
+
+    <!-- ===== 模块一：转移途径 ===== -->
+    <div class="page show" id="p1">
+      <div class="tip-box"><b>核心概念：</b>污染物通过<b>自然过程</b>（大气、水体运动）和<b>人为过程</b>（贸易、产业转移）跨境转移，把一国的污染变成全人类的威胁。点击卡片，在地图上高亮路径。</div>
+
+      <div class="card clickable" onclick="highlightRoute('air')">
+        <h3>💨 大气与水体输送<span class="tag" style="background:rgba(56,189,248,.15); color:#38bdf8;">自然转移</span></h3>
+        <p>盛行风把酸雨、霾带往下风国家 · 洋流把塑料垃圾汇集成大洋垃圾带</p>
+      </div>
+      <div class="card clickable" onclick="highlightRoute('waste')">
+        <h3>🚢 废弃物跨境转移<span class="tag" style="background:rgba(251,146,60,.15); color:#fb923c;">人为转移</span></h3>
+        <p>"洋垃圾"以贸易名义从发达国家流向发展中国家，拆解处理毒害当地</p>
+      </div>
+      <div class="card clickable" onclick="highlightRoute('industry')">
+        <h3>🏭 污染密集型产业转移<span class="tag" style="background:rgba(192,132,252,.15); color:#c084fc;">人为转移</span></h3>
+        <p>高污染产业随全球分工迁往环境标准低的国家 —— "污染避难所"假说</p>
+      </div>
+
+      <h3 style="font-size:13px; margin:6px 2px 9px; color:var(--cyan); letter-spacing:2px;">📍 点击定位五大热点</h3>
+      <div class="card clickable" onclick="showSpot('asia')">
+        <h3>🏙️ 东亚工业带</h3><p>世界工厂 · 大气污染物与塑料的主要输出源之一</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('garbage')">
+        <h3>🌀 太平洋垃圾带</h3><p>洋流汇集的"第八大陆"，面积约为法国的 3 倍</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('seasia')">
+        <h3>⚓ 东南亚接收港</h3><p>洋垃圾与转移产业的主要输入地</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('northam')">
+        <h3>🌆 北美工业带</h3><p>历史上的酸雨跨境（美加之间）与洋垃圾输出地</p>
+      </div>
+      <div class="card clickable" onclick="showSpot('current')">
+        <h3>🌊 大洋环流系统</h3><p>污染物全球"传送带"，无人能置身事外</p>
+      </div>
+    </div>
+
+    <!-- ===== 模块二：安全威胁 ===== -->
+    <div class="page" id="p2">
+      <div class="tip-box"><b>环境安全 = 国家安全：</b>污染转移威胁输入国的生态、健康与经济，甚至引发国际争端。点击卡片重演真实案例。</div>
+
+      <div class="card clickable" onclick="caseDemo('acid')">
+        <h3>🌧️ 酸雨跨境<span class="tag" style="background:rgba(56,189,248,.15); color:#38bdf8;">▶ 演示</span></h3>
+        <p>20 世纪美国 Midwest 的 SO₂ 飘到加拿大，酸化湖泊森林，酿成外交争端</p>
+      </div>
+      <div class="card clickable" onclick="caseDemo('ship')">
+        <h3>🚢 洋垃圾之殇<span class="tag" style="background:rgba(248,113,113,.15); color:#f87171;">▶ 演示</span></h3>
+        <p>广东贵屿曾是世界最大电子垃圾拆解地：土壤重金属超标数百倍</p>
+      </div>
+      <div class="card clickable" onclick="caseDemo('oil')">
+        <h3>⚫ 油轮泄漏<span class="tag" style="background:rgba(120,120,120,.2); color:#cbd5e1;">▶ 演示</span></h3>
+        <p>"威望号"（2002）泄漏 6 万吨原油，污染西班牙 500 km 海岸，跨国索赔多年</p>
+      </div>
+      <div class="card clickable" onclick="caseDemo('garbage')">
+        <h3>🌀 塑料垃圾带<span class="tag" style="background:rgba(251,146,60,.15); color:#fb923c;">▶ 演示</span></h3>
+        <p>每年约 800 万吨塑料入海，经食物链回到人类餐桌</p>
+      </div>
+
+      <div class="card">
+        <h3>📖 思考</h3>
+        <p>污染转移对<b>输出国</b>是"减负"，对<b>输入国</b>却是生态灾难与健康危机 —— 这公平吗？污染真的可以"转移"掉吗？</p>
+      </div>
+    </div>
+
+    <!-- ===== 模块三：治理沙盘 ===== -->
+    <div class="page" id="p3">
+      <div class="tip-box"><b>你是全球环境治理官：</b>拉动四根治理杠杆，观察环境安全指数与整个星球的变化 —— 地图会在<b>失控</b>与<b>清洁</b>两个未来之间渐变！</div>
+
+      <div class="slider-block">
+        <div class="slider-head"><b>📜 国际公约执行力</b><span class="val" id="v-treaty">45%</span></div>
+        <input type="range" min="0" max="100" value="45" id="s-treaty">
+        <div class="slider-desc">《巴塞尔公约》等是否得到切实遵守与监督</div>
+      </div>
+      <div class="slider-block">
+        <div class="slider-head"><b>🛃 洋垃圾进口禁令</b><span class="val" id="v-ban">45%</span></div>
+        <input type="range" min="0" max="100" value="45" id="s-ban">
+        <div class="slider-desc">海关把关力度 · 拉满后洋垃圾航线将彻底中断</div>
+      </div>
+      <div class="slider-block">
+        <div class="slider-head"><b>🏭 产业绿色升级</b><span class="val" id="v-industry">35%</span></div>
+        <input type="range" min="0" max="100" value="35" id="s-industry">
+        <div class="slider-desc">输入国拒绝"污染避难所"，转向高附加值绿色产业</div>
+      </div>
+      <div class="slider-block">
+        <div class="slider-head"><b>🛰️ 监测预警与追责</b><span class="val" id="v-monitor">40%</span></div>
+        <input type="range" min="0" max="100" value="40" id="s-monitor">
+        <div class="slider-desc">卫星监测、污染溯源、跨国索赔与联合执法</div>
+      </div>
+
+      <div class="card gauge-wrap">
+        <div><span class="gauge-num" id="g-env" style="color:#fbbf24">42</span><span class="gauge-unit"> /100</span></div>
+        <div class="gauge-label">环境安全指数</div>
+        <div class="gauge-bar"><div class="gauge-fill" id="gf-env" style="width:42%; background:linear-gradient(90deg,#f87171,#fbbf24,#4ade80);"></div></div>
+      </div>
+
+      <h3 style="font-size:13px; margin:8px 2px 9px; color:var(--gold); letter-spacing:2px;">⚡ 三种未来情景</h3>
+      <button class="btn red" onclick="applyScenario('ignore')"><span class="b-ico">🕳️</span><div>放任自流<small>各自为政 · 星球滑向失控</small></div></button>
+      <button class="btn gold" onclick="applyScenario('solo')"><span class="b-ico">🛃</span><div>单边行动<small>个别国家禁令 · 够用吗？</small></div></button>
+      <button class="btn green" onclick="applyScenario('global')"><span class="b-ico">🤝</span><div>全球共治<small>公约 + 禁令 + 升级 + 追责</small></div></button>
+    </div>
+
+    <!-- ===== 模块四：全球共治 ===== -->
+    <div class="page" id="p4">
+      <div class="tip-box"><b>核心观点：</b>环境安全是全人类共同利益，需要<b>国际合作</b>与<b>共同但有区别的责任</b>。</div>
+
+      <div class="card clickable" onclick="caseDemo('treaty')">
+        <h3>📜 《巴塞尔公约》(1992)</h3>
+        <p>控制危险废物越境转移及其处置 · 转移须经输入国"事先知情同意"</p>
+      </div>
+      <div class="card">
+        <h3>☠️ 《斯德哥尔摩公约》(2004)</h3>
+        <p>淘汰持久性有机污染物（POPs）—— 这类污染物会随大气环球旅行</p>
+      </div>
+      <div class="card">
+        <h3>🇨🇳 中国行动</h3>
+        <p>2017 年起全面禁止洋垃圾入境 · 打好污染防治攻坚战 · 以生态文明推动构建<b>人类命运共同体</b></p>
+      </div>
+      <div class="card">
+        <h3>⚖️ 共同但有区别的责任</h3>
+        <p>发达国家历史排放多、应担主要治理责任并向发展中国家转让技术与资金</p>
+      </div>
+
+      <div class="kpi-row" style="margin-top:6px;">
+        <div class="kpi"><b>1992</b><span>巴塞尔公约</span></div>
+        <div class="kpi"><b>2017</b><span>中国禁洋垃圾</span></div>
+        <div class="kpi"><b>共同体</b><span>核心理念</span></div>
+      </div>
+      <div class="card">
+        <h3>📖 小结</h3>
+        <p>① 转移途径 = 自然（大气/水体）+ 人为（废弃物贸易/产业转移）<br>② 威胁 = 生态破坏、健康危机、国际争端<br>③ 出路 = 国际合作 + 源头减量 + 绿色产业</p>
+      </div>
+    </div>
+
+    <!-- ===== 模块五：课堂检测 ===== -->
+    <div class="page" id="p5">
+      <div class="tip-box"><b>课堂检测：</b>4 道小题，检验学习成果</div>
+
+      <div class="card">
+        <div class="quiz-q">1️⃣ 下列<b>不属于</b>污染物跨境转移方式的是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">A. 大气运动输送</button>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">B. 洋流输送</button>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">C. 废弃物国际贸易</button>
+        <button class="quiz-opt" onclick="quiz(this,true,1)">D. 地壳板块运动</button>
+        <div class="quiz-note" id="qn1"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">2️⃣ "洋垃圾"输入对输入国的主要危害是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">A. 增加就业，利大于弊</button>
+        <button class="quiz-opt" onclick="quiz(this,true,2)">B. 污染土壤水源，危害生态与健康</button>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">C. 抬高出口关税</button>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">D. 促进旅游业发展</button>
+        <div class="quiz-note" id="qn2"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">3️⃣ 控制危险废物越境转移的国际公约是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">A. 《巴黎协定》</button>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">B. 《京都议定书》</button>
+        <button class="quiz-opt" onclick="quiz(this,true,3)">C. 《巴塞尔公约》</button>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">D. 《生物多样性公约》</button>
+        <div class="quiz-note" id="qn3"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">4️⃣ 应对污染转移的<b>根本出路</b>是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">A. 把污染转移到更远的国家</button>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">B. 各国紧闭国门互不往来</button>
+        <button class="quiz-opt" onclick="quiz(this,true,4)">C. 国际合作 + 源头减量 + 绿色产业</button>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">D. 加深海洋倾倒深度</button>
+        <div class="quiz-note" id="qn4"></div>
+      </div>
+      <div class="kpi-row"><div class="kpi"><b id="quiz-score">0 / 4</b><span>当前得分</span></div></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   污染转移与环境安全 · 交互课件（世界图景版）
+   左侧：AI 世界图景 + 转移路径/案例动态 + 双状态渐变
+   右侧：五大教学模块 + 治理沙盘
+   ============================================================ */
+const M = { treaty:45, ban:45, industry:35, monitor:40 };   // 治理杠杆
+const flags = { routes:true, spots:true, shipdemo:false };
+let   tween = null, scenarioTarget = {...M};
+let   oilFlash = 0, shipFlash = 0;
+const ripples = [];
+
+// ---------- 画布与多状态图像 ----------
+const stage  = document.getElementById('stage');
+const canvas = document.getElementById('scene-canvas');
+const ctx    = canvas.getContext('2d');
+const IMGS = { normal:new Image(), dirty:new Image(), clean:new Image(), waste:new Image() };
+IMGS.normal.src = 'assets/world.webp';
+IMGS.dirty.src  = 'assets/world_dirty.webp';
+IMGS.clean.src  = 'assets/world_clean.webp';
+IMGS.waste.src  = 'assets/world_waste.webp';
+let imgReady = false;
+// 场景状态权重（显示值，平滑逼近目标 → 整幅画面交叉淡变）
+const K = { dirty:0, clean:0, waste:0 };
+function envScore(){
+  return Math.round(M.treaty*0.30 + M.ban*0.25 + M.industry*0.25 + M.monitor*0.20);
+}
+function sceneKTarget(){
+  const s = envScore();
+  const dirty = Math.min(1, Math.max(0, (52 - s)/40));
+  const clean = Math.min(1, Math.max(0, (s - 68)/32)) * (1 - dirty);
+  const waste = Math.min(1, Math.max(0, (32 - M.ban)/32)) * (1 - clean);  // 禁令松弛 → 洋垃圾围城图
+  return { dirty, clean, waste };
+}
+
+let VW = 0, VH = 0, DPR = 1;
+function fitCanvas(){
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  VW = stage.clientWidth; VH = stage.clientHeight;
+  canvas.width = VW * DPR; canvas.height = VH * DPR;
+}
+fitCanvas();
+window.addEventListener('resize', fitCanvas);
+
+function view(){
+  const im = IMGS.normal;
+  if (!imgReady) return { ox:0, oy:0, dw:VW, dh:VH };
+  const s = Math.max(VW / im.width, VH / im.height);
+  const dw = im.width * s, dh = im.height * s;
+  return { ox:(VW-dw)/2, oy:(VH-dh)/2, dw, dh };
+}
+function P(nx, ny){
+  const v = view();
+  return { x: v.ox + nx * v.dw, y: v.oy + ny * v.dh };
+}
+
+// ---------- 热点 ----------
+const SPOTS = {
+  asia:    { x:0.21, y:0.34, r:28, color:'#fbbf24', label:'东亚工业带 · 输出源',
+    msg:'🏙️ 东亚工业带：世界工厂，大气污染物与塑料垃圾的重要输出源之一' },
+  garbage: { x:0.58, y:0.52, r:30, color:'#fb923c', label:'太平洋垃圾带',
+    msg:'🌀 太平洋垃圾带：洋流把全球塑料汇成"第八大陆"，面积约为法国的 3 倍' },
+  seasia:  { x:0.29, y:0.60, r:26, color:'#f87171', label:'东南亚接收港 · 输入地',
+    msg:'⚓ 东南亚接收港：洋垃圾与污染密集型产业的主要输入地' },
+  northam: { x:0.895,y:0.30, r:28, color:'#c084fc', label:'北美工业带',
+    msg:'🌆 北美工业带：美加酸雨争端的发生地，也是洋垃圾的主要输出方' },
+  current: { x:0.71, y:0.66, r:26, color:'#38bdf8', label:'大洋环流 · 传送带',
+    msg:'🌊 大洋环流：污染物的全球传送带 —— 没有哪个国家能独善其身' },
+};
+const spotFlash = {};
+
+// ---------- 转移路径（二次贝塞尔 + 环流圆） ----------
+const ROUTES = {
+  air:      { p0:[0.22,0.28], pc:[0.48,0.10], p1:[0.82,0.20], color:'#cbd5e1', n:34, sp:0.05,
+              label:'大气输送', msg:'💨 大气输送：酸雨与霾随盛行西风跨境，下风国家无辜"吃灰"' },
+  waste:    { p0:[0.88,0.38], pc:[0.58,0.80], p1:[0.29,0.60], color:'#fb923c', n:30, sp:0.045,
+              label:'洋垃圾航线', msg:'🚢 洋垃圾航线：废弃物以"贸易"之名，从富国流向穷国' },
+  industry: { p0:[0.22,0.37], pc:[0.19,0.48], p1:[0.25,0.58], color:'#c084fc', n:20, sp:0.06,
+              label:'产业转移', msg:'🏭 产业转移：高污染环节迁往环境标准低的地区 —— "污染避难所"' },
+  current:  { circle:[0.58,0.52,0.17,0.125], color:'#38bdf8', n:40, sp:0.03,
+              label:'洋流汇集', msg:'🌊 洋流汇集：塑料随环流打转聚集，形成大洋垃圾带' },
+};
+const routeFlash = {};
+const routeParts = {};
+Object.keys(ROUTES).forEach(k=>{
+  const f = ROUTES[k];
+  routeParts[k] = [];
+  for (let i=0;i<f.n;i++) routeParts[k].push({ t:Math.random(), sp:f.sp*(0.7+Math.random()*0.6) });
+});
+function quad(f, t){
+  const u = 1-t;
+  return {
+    x: u*u*f.p0[0] + 2*u*t*f.pc[0] + t*t*f.p1[0],
+    y: u*u*f.p0[1] + 2*u*t*f.pc[1] + t*t*f.p1[1],
+  };
+}
+// 路径活跃度：治理越好，转移越弱；禁令单独掐断洋垃圾航线
+function routeActivity(key){
+  const s = envScore();
+  const base = Math.max(0.12, 1 - s/130);
+  if (key === 'waste') return Math.max(0, 1 - M.ban/105) * base + (flags.shipdemo ? 0.5 : 0);
+  if (key === 'industry') return Math.max(0.1, 1 - (M.industry/100)*0.9) * base;
+  return base;
+}
+
+// ---------- 演示粒子 ----------
+const wasteShip = { t:0, active:false };
+const oilSlicks = [];
+const ripplesArr = ripples;
+
+// ---------- 每根治理杠杆的专属可视化 ----------
+// ① 工业海岸烟雾（产业绿色升级 ↑ → 烟雾 ↓；公约执行也有抑制）
+const COASTS = [[0.21,0.295],[0.90,0.255]];
+const coastSmoke = [];
+for (let i=0;i<80;i++){
+  const c = COASTS[i % 2];
+  coastSmoke.push({ x:c[0]+(Math.random()-0.5)*0.06, y:c[1], life:Math.random(),
+    sp:0.08+Math.random()*0.10, sway:Math.random()*6.28, size:4+Math.random()*8 });
+}
+// ② 洋垃圾船队（禁令 ↑ → 船一艘艘消失）
+const cargoShips = [];
+for (let i=0;i<3;i++) cargoShips.push({ t:i*0.33 + 0.05, sp:0.028+Math.random()*0.014 });
+// ③ 绿色产业星光（产业升级 ↑ → 工业带亮起绿金星芒）
+const glints = [];
+for (let i=0;i<50;i++){
+  const c = COASTS[i % 2];
+  glints.push({ x:c[0]+(Math.random()-0.5)*0.10, y:c[1]+(Math.random()-0.5)*0.09, off:Math.random()*6.28 });
+}
+
+// ============================================================
+//  HUD 与沙盘
+// ============================================================
+function updateHUD(){
+  const s = envScore();
+  const el = document.getElementById('hud-env');
+  el.textContent = s;
+  el.style.color = s >= 68 ? '#4ade80' : s >= 45 ? '#fbbf24' : '#f87171';
+  const lv = document.getElementById('hud-level');
+  if (s >= 68){ lv.textContent = '总体可控'; lv.style.color = '#4ade80'; }
+  else if (s >= 45){ lv.textContent = '风险较高'; lv.style.color = '#fbbf24'; }
+  else { lv.textContent = '濒临失控'; lv.style.color = '#f87171'; }
+  const g = document.getElementById('g-env');
+  g.textContent = s;
+  g.style.color = el.style.color;
+  document.getElementById('gf-env').style.width = s + '%';
+}
+
+function animateM(target, ms){ tween = { from:{...M}, to:target, t:0, ms }; }
+function syncSliders(){
+  const map = { treaty:'s-treaty', ban:'s-ban', industry:'s-industry', monitor:'s-monitor' };
+  Object.keys(map).forEach(k=>{
+    document.getElementById(map[k]).value = M[k];
+    document.getElementById('v-'+k).textContent = Math.round(M[k]) + '%';
+  });
+}
+function applyScenario(name){
+  const map = {
+    ignore: { treaty:15, ban:5,  industry:15, monitor:10 },
+    solo:   { treaty:35, ban:88, industry:55, monitor:50 },
+    global: { treaty:92, ban:95, industry:85, monitor:88 },
+  };
+  const msg = {
+    ignore:'🕳️ 放任自流：没有公约约束，星球滑向失控',
+    solo:'🛃 单边行动：个别国家高筑围墙 —— 注意指数只升了一点',
+    global:'🤝 全球共治：公约+禁令+升级+追责，星球重现蔚蓝',
+  }[name];
+  animateM(map[name], 3200);
+  toast(msg);
+}
+
+function showSpot(key){
+  if (!flags.spots){
+    flags.spots = true;
+    document.querySelector('#toolbar [data-m="spots"]').classList.add('on');
+  }
+  spotFlash[key] = 4;
+  toast(SPOTS[key].msg);
+}
+function highlightRoute(key){
+  if (!flags.routes){
+    flags.routes = true;
+    document.querySelector('#toolbar [data-m="routes"]').classList.add('on');
+  }
+  routeFlash[key] = 4;
+  toast(ROUTES[key].msg);
+}
+function caseDemo(type){
+  if (type==='acid'){ highlightRoute('air'); showSpot('northam'); }
+  else if (type==='ship' || type==='treaty'){
+    if (type==='ship'){
+      wasteShip.active = true; wasteShip.t = 0;
+      shipFlash = 6;
+      toast('🚢 一艘洋垃圾船正驶往东南亚港口 —— 看禁令如何让它消失');
+    } else {
+      animateM({ treaty:85, ban:80 }, 2600);
+      toast('📜 公约生效：越境转移须经"事先知情同意"，航线暗淡了');
+    }
+  }
+  else if (type==='oil'){
+    oilSlicks.push({ t:0 });
+    oilFlash = 8;
+    toast('⚫ 油轮泄漏！油污随洋流扩散，跨国界蔓延');
+  }
+  else if (type==='garbage'){ showSpot('garbage'); highlightRoute('current'); }
+}
+
+// 面板交互
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.page).classList.add('show');
+  });
+});
+[['treaty','s-treaty','v-treaty'],['ban','s-ban','v-ban'],
+ ['industry','s-industry','v-industry'],['monitor','s-monitor','v-monitor']].forEach(([key,sid,vid])=>{
+  document.getElementById(sid).addEventListener('input', e=>{
+    M[key] = +e.target.value;
+    document.getElementById(vid).textContent = e.target.value + '%';
+    updateHUD();
+  });
+});
+
+// 工具栏
+document.querySelectorAll('#toolbar button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    const m = b.dataset.m;
+    if (m==='routes'){
+      flags.routes = !flags.routes;
+      b.classList.toggle('on', flags.routes);
+      toast(flags.routes ? '🔀 转移路径已显示' : '转移路径已隐藏');
+    } else if (m==='spots'){
+      flags.spots = !flags.spots;
+      b.classList.toggle('on', flags.spots);
+      toast(flags.spots ? '📍 热点标注已显示' : '热点标注已隐藏');
+    } else if (m==='ship'){
+      wasteShip.active = true; wasteShip.t = 0;
+      shipFlash = 6;
+      toast('🚢 洋垃圾船出航：从美国东岸驶往东南亚拆解港');
+    } else if (m==='oil'){
+      oilSlicks.push({ t:0 });
+      oilFlash = 8;
+      toast('⚫ 油污泄漏：黑色油膜随洋流扩散');
+    }
+  });
+});
+
+// 课堂检测
+const quizDone = {};
+let quizScore = 0;
+function quiz(el, right, q){
+  if (quizDone[q]) return;
+  quizDone[q] = true;
+  el.classList.add(right ? 'right' : 'wrong');
+  el.parentElement.querySelectorAll('.quiz-opt').forEach(b=>{
+    if (b !== el && b.getAttribute('onclick').includes(',true,')) b.classList.add('right');
+  });
+  const notes = {
+    1:'解析：地壳运动是地质过程，不会转移污染物。',
+    2:'解析：拆解洋垃圾释放重金属与二噁英，毒害土壤、水源与健康。',
+    3:'解析：《巴塞尔公约》控制危险废物越境转移，须"事先知情同意"。',
+    4:'解析：污染没有国界，只能靠国际合作从源头减量。'
+  };
+  document.getElementById('qn'+q).textContent = notes[q];
+  if (right) quizScore++;
+  document.getElementById('quiz-score').textContent = quizScore + ' / 4';
+  if (right) toast('✅ 回答正确！'); else toast('❌ 再想一想，解析已显示');
+}
+
+let toastTimer = null;
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 3400);
+}
+</script>
+
+<script>
+// ============================================================
+//  渲染层：世界图景 + 转移路径 + 案例动态
+// ============================================================
+let lastT = performance.now();
+let elapsed = 0;
+
+function hexA(hex, a){
+  const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+function roundRect(x, y, w, h, r){
+  ctx.beginPath();
+  ctx.moveTo(x+r, y);
+  ctx.arcTo(x+w, y, x+w, y+h, r);
+  ctx.arcTo(x+w, y+h, x, y+h, r);
+  ctx.arcTo(x, y+h, x, y, r);
+  ctx.arcTo(x, y, x+w, y, r);
+  ctx.closePath();
+}
+
+function drawBG(){
+  const v = view();
+  ctx.fillStyle = '#04121c';
+  ctx.fillRect(0,0,VW,VH);
+  if (!imgReady) return;
+  const draw = (im, a)=>{
+    if (a > 0.01 && im.complete && im.naturalWidth){
+      ctx.globalAlpha = a;
+      ctx.drawImage(im, v.ox, v.oy, v.dw, v.dh);
+      ctx.globalAlpha = 1;
+    }
+  };
+  draw(IMGS.normal, 1);
+  draw(IMGS.clean, K.clean);    // 治理后的清洁星球
+  draw(IMGS.waste, K.waste);    // 禁令松弛 → 洋垃圾围城层
+  draw(IMGS.dirty, K.dirty);    // 失控的污染星球（最上层）
+}
+
+// 转移路径粒子流
+function drawRoutes(dt){
+  if (!flags.routes) return;
+  const v = view();
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  Object.keys(ROUTES).forEach(key=>{
+    const f = ROUTES[key];
+    const act = routeActivity(key);
+    if (act < 0.03) return;
+    const flash = routeFlash[key] > 0;
+    if (flash) routeFlash[key] -= dt;
+    const alphaBase = (flash ? 0.95 : 0.7) * Math.min(1, act + 0.25);
+    // 路径微光导管
+    ctx.strokeStyle = hexA(f.color, (flash ? 0.5 : 0.16) * act + (flash ? 0.2 : 0));
+    ctx.lineWidth = flash ? 7 : 3.5;
+    ctx.lineCap = 'round';
+    ctx.shadowColor = f.color;
+    ctx.shadowBlur = flash ? 16 : 8;
+    ctx.beginPath();
+    if (f.circle){
+      const c = P(f.circle[0], f.circle[1]);
+      ctx.ellipse(c.x, c.y, f.circle[2]*v.dw, f.circle[3]*v.dh, 0, 0, Math.PI*2);
+    } else {
+      const p0 = P(f.p0[0], f.p0[1]);
+      ctx.moveTo(p0.x, p0.y);
+      for (let t=0.04; t<=1.001; t+=0.04){
+        const q = quad(f, Math.min(1,t));
+        const pp = P(q.x, q.y);
+        ctx.lineTo(pp.x, pp.y);
+      }
+    }
+    ctx.stroke();
+    // 粒子
+    const parts = routeParts[key];
+    const nShow = Math.floor(parts.length * Math.min(1, act + (flash ? 0.5 : 0)));
+    for (let i=0;i<nShow;i++){
+      const d = parts[i];
+      d.t += d.sp * dt * (flash ? 2.2 : 1);
+      if (d.t > 1) d.t = 0;
+      let pp;
+      if (f.circle){
+        const a = d.t * Math.PI*2;
+        pp = { x: f.circle[0] + Math.cos(a)*f.circle[2], y: f.circle[1] + Math.sin(a)*f.circle[3] };
+        pp = P(pp.x, pp.y);
+      } else {
+        const q = quad(f, d.t);
+        pp = P(q.x, q.y);
+      }
+      const sz = (flash ? 3.2 : 2.2) * (v.dw/1800 + 0.45);
+      ctx.beginPath();
+      ctx.arc(pp.x, pp.y, sz, 0, Math.PI*2);
+      ctx.fillStyle = hexA(f.color, alphaBase);
+      ctx.shadowColor = f.color;
+      ctx.shadowBlur = flash ? 14 : 9;
+      ctx.fill();
+    }
+    // 标签
+    let lp;
+    if (f.circle){
+      lp = P(f.circle[0], f.circle[1] - f.circle[3] - 0.03);
+    } else {
+      const mid = quad(f, 0.5);
+      lp = P(mid.x, mid.y);
+    }
+    drawRouteLabel(lp.x + 14, lp.y - 12, f.label, f.color, flash, act);
+  });
+  ctx.restore();
+}
+function drawRouteLabel(x, y, name, color, flash, act){
+  ctx.save();
+  ctx.font = `${flash?13:12}px "Microsoft YaHei"`;
+  const w = ctx.measureText(name).width;
+  if (x + w + 8 > VW - 6) x = x - w - 28;
+  if (x - 7 < 6) x = 13;
+  ctx.fillStyle = flash ? 'rgba(8,22,30,.85)' : 'rgba(8,22,30,.55)';
+  roundRect(x-7, y-13, w+14, 21, 10);
+  ctx.fill();
+  ctx.strokeStyle = hexA(color, (flash ? 0.9 : 0.4) * Math.min(1, act+0.3));
+  ctx.lineWidth = 1;
+  roundRect(x-7, y-13, w+14, 21, 10);
+  ctx.stroke();
+  ctx.fillStyle = flash ? color : hexA(color, 0.92);
+  ctx.fillText(name, x, y+2);
+  ctx.restore();
+}
+
+// 洋垃圾船
+function drawWasteShip(dt){
+  if (!wasteShip.active) return;
+  wasteShip.t += dt * 0.09;
+  if (wasteShip.t >= 1){
+    wasteShip.active = false;
+    shipFlash = 6;
+    toast('⚓ 洋垃圾到港：拆解场的污染将在此沉积数十年');
+    return;
+  }
+  const f = ROUTES.waste;
+  const q = quad(f, wasteShip.t);
+  const p = P(q.x, q.y);
+  const v = view();
+  const s = v.dw/1600 + 0.35;
+  ctx.save();
+  ctx.translate(p.x, p.y);
+  ctx.beginPath();
+  ctx.ellipse(0, 0, 13*s, 4.5*s, 0, 0, Math.PI*2);
+  ctx.fillStyle = '#4a3a2a';
+  ctx.fill();
+  ctx.fillStyle = '#8a2a2a';
+  ctx.fillRect(-8*s, -6.5*s, 16*s, 4.5*s);
+  ctx.fillStyle = '#c9a06a';
+  for (let i=0;i<3;i++) ctx.fillRect((-6+i*4.5)*s, -9.5*s, 3.5*s, 3*s);
+  ctx.strokeStyle = 'rgba(220,245,255,.55)';
+  ctx.lineWidth = 1.6;
+  ctx.beginPath();
+  ctx.moveTo(0, 2.5*s);
+  ctx.lineTo(-18*s, 6*s + Math.sin(elapsed*4)*1.5);
+  ctx.stroke();
+  ctx.restore();
+  // 到港污染晕
+  if (wasteShip.t > 0.9 || shipFlash > 0){
+    const port = P(0.29, 0.60);
+    const g = ctx.createRadialGradient(port.x, port.y, 5, port.x, port.y, v.dw*0.06);
+    g.addColorStop(0, 'rgba(80,60,40,.4)');
+    g.addColorStop(1, 'rgba(80,60,40,0)');
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.arc(port.x, port.y, v.dw*0.06, 0, Math.PI*2); ctx.fill();
+  }
+}
+
+// 油污扩散
+function drawOil(dt){
+  for (let i=oilSlicks.length-1; i>=0; i--){
+    const o = oilSlicks[i];
+    o.t += dt * 0.25;
+    if (o.t > 1.6){ oilSlicks.splice(i,1); continue; }
+    const v = view();
+    const grow = Math.min(1, o.t);
+    const p = P(0.66 + o.t*0.06, 0.58 + o.t*0.05);
+    const r = v.dw * (0.02 + grow*0.075);
+    ctx.save();
+    const g = ctx.createRadialGradient(p.x, p.y, r*0.15, p.x, p.y, r);
+    g.addColorStop(0, `rgba(15,12,10,${0.75*Math.min(1,2-o.t)})`);
+    g.addColorStop(0.8, `rgba(20,16,12,${0.5*Math.min(1,2-o.t)})`);
+    g.addColorStop(1, 'rgba(20,16,12,0)');
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.ellipse(p.x, p.y, r, r*0.6, 0.3, 0, Math.PI*2);
+    ctx.fill();
+    if (o.t < 1){
+      ctx.font = 'bold 13px "Microsoft YaHei"';
+      ctx.fillStyle = 'rgba(248,113,113,.95)';
+      ctx.shadowColor = 'rgba(0,0,0,.9)'; ctx.shadowBlur = 6;
+      ctx.fillText('⚫ 油污扩散中', p.x + r*0.5, p.y - r*0.5);
+    }
+    ctx.restore();
+  }
+}
+
+// ============ 每根杠杆的专属实时可视化 ============
+// 工业海岸烟雾（产业升级 + 公约执行 → 实时变稀）
+function drawCoastSmoke(dt){
+  const suppress = Math.min(1, M.industry/100*0.7 + M.treaty/100*0.35);
+  const alpha = 0.38 * (1 - suppress);
+  if (alpha < 0.03) return;
+  ctx.save();
+  for (const s of coastSmoke){
+    s.life += dt * s.sp * (1.2 - suppress*0.8);
+    if (s.life > 1) s.life = 0;
+    const p = P(s.x + s.life*0.05 + Math.sin(elapsed*0.7 + s.sway)*0.003, s.y - s.life*0.14);
+    const grow = s.size * (0.4 + s.life*1.5) * (view().dw/1800 + 0.3);
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, grow, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(105,98,88,${alpha * Math.sin(s.life*Math.PI)})`;
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+// 洋垃圾船队（禁令拉满 → 全部消失 + 港口红线封杀）
+function drawCargoShips(dt){
+  const n = Math.round((1 - M.ban/100) * cargoShips.length + 0.001);
+  const v = view();
+  ctx.save();
+  for (let i=0;i<n;i++){
+    const sh = cargoShips[i];
+    sh.t += sh.sp * dt;
+    if (sh.t > 1) sh.t = 0;
+    const q = quad(ROUTES.waste, sh.t);
+    const p = P(q.x, q.y);
+    const s = v.dw/1900 + 0.3;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 10*s, 3.6*s, 0, 0, Math.PI*2);
+    ctx.fillStyle = '#3d3d3d';
+    ctx.fill();
+    ctx.fillStyle = '#7a2020';
+    ctx.fillRect(-6*s, -5.2*s, 12*s, 3.6*s);
+    ctx.restore();
+  }
+  // 禁令高 → 港口"禁止入境"标志
+  if (M.ban >= 75){
+    const port = P(0.29, 0.60);
+    const r = (16 + Math.sin(elapsed*3)*2) * (v.dw/1800 + 0.35);
+    const a = Math.min(1, (M.ban-75)/25);
+    ctx.beginPath();
+    ctx.arc(port.x, port.y, r, 0, Math.PI*2);
+    ctx.strokeStyle = `rgba(248,113,113,${0.9*a})`;
+    ctx.lineWidth = 4;
+    ctx.shadowColor = 'rgba(248,113,113,.9)';
+    ctx.shadowBlur = 14;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(port.x - r*0.72, port.y - r*0.72);
+    ctx.lineTo(port.x + r*0.72, port.y + r*0.72);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    ctx.font = 'bold 12px "Microsoft YaHei"';
+    ctx.fillStyle = `rgba(248,113,113,${0.95*a})`;
+    ctx.fillText('洋垃圾禁止入境', port.x - 44, port.y - r - 10);
+  }
+  ctx.restore();
+}
+
+// 绿色产业星光（产业升级 → 工业带闪烁绿金星芒）
+function drawGlints(){
+  const k = (M.industry/100 - 0.45) / 0.55;
+  if (k <= 0) return;
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  for (const g of glints){
+    const tw = Math.max(0, Math.sin(elapsed*2.2 + g.off)) * k;
+    if (tw < 0.15) continue;
+    const p = P(g.x, g.y);
+    const s = (2.2 + Math.sin(elapsed*3+g.off)*1.2) * tw;
+    ctx.strokeStyle = `rgba(110,231,183,${0.85*tw})`;
+    ctx.lineWidth = 1.4;
+    ctx.shadowColor = 'rgba(110,231,183,.95)';
+    ctx.shadowBlur = 8;
+    ctx.beginPath();
+    ctx.moveTo(p.x - s*2, p.y); ctx.lineTo(p.x + s*2, p.y);
+    ctx.moveTo(p.x, p.y - s*2); ctx.lineTo(p.x, p.y + s*2);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// 监测卫星 + 雷达扫描环（监测预警 → 太平洋上的"天眼"）
+function drawMonitor(){
+  const k = (M.monitor/100 - 0.4) / 0.6;
+  if (k <= 0) return;
+  const v = view();
+  const c = P(0.58, 0.52);
+  ctx.save();
+  // 雷达扩散环 ×2
+  for (let i=0;i<2;i++){
+    const phase = ((elapsed*0.35 + i*0.5) % 1);
+    const r = phase * v.dw * 0.22;
+    ctx.beginPath();
+    ctx.ellipse(c.x, c.y, r, r*0.72, 0, 0, Math.PI*2);
+    ctx.strokeStyle = `rgba(56,189,248,${(1-phase)*0.55*k})`;
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'rgba(56,189,248,.8)';
+    ctx.shadowBlur = 8;
+    ctx.stroke();
+  }
+  // 卫星过顶 + 扫描光束
+  const sx = ((elapsed*0.02) % 1.25) - 0.12;
+  const sp = P(sx, 0.055);
+  ctx.beginPath();
+  ctx.arc(sp.x, sp.y, 4.5, 0, Math.PI*2);
+  ctx.fillStyle = `rgba(226,240,255,${0.95*k})`;
+  ctx.shadowColor = 'rgba(150,220,255,1)';
+  ctx.shadowBlur = 12;
+  ctx.fill();
+  ctx.fillRect(sp.x-11, sp.y-1.2, 7, 2.4);
+  ctx.fillRect(sp.x+4, sp.y-1.2, 7, 2.4);
+  // 光束打向垃圾带
+  ctx.beginPath();
+  ctx.moveTo(sp.x, sp.y);
+  ctx.lineTo(c.x, c.y - v.dh*0.12);
+  ctx.strokeStyle = `rgba(56,189,248,${0.25*k})`;
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([5,6]);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.restore();
+}
+
+// 公约护盾（公约执行力高 → 热点升起绿色护盾弧）
+function drawTreatyShields(){
+  const k = (M.treaty/100 - 0.6) / 0.4;
+  if (k <= 0) return;
+  const v = view();
+  ctx.save();
+  Object.keys(SPOTS).forEach((key, i)=>{
+    const s = SPOTS[key];
+    const p = P(s.x, s.y);
+    const r = s.r * (v.dw/1700 + 0.35) + 14 + Math.sin(elapsed*2 + i)*3;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, r, -Math.PI*0.82, -Math.PI*0.18);
+    ctx.strokeStyle = `rgba(74,222,128,${0.75*k})`;
+    ctx.lineWidth = 3.5;
+    ctx.lineCap = 'round';
+    ctx.shadowColor = 'rgba(74,222,128,.9)';
+    ctx.shadowBlur = 12;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, r, Math.PI*0.18, Math.PI*0.82);
+    ctx.stroke();
+  });
+  ctx.restore();
+}
+
+// 热点光环
+function drawSpots(){
+  if (!flags.spots) return;
+  const v = view();
+  ctx.save();
+  Object.keys(SPOTS).forEach(key=>{
+    const s = SPOTS[key];
+    const p = P(s.x, s.y);
+    const flash = spotFlash[key] > 0;
+    if (flash) spotFlash[key] -= 1/60;
+    const baseR = s.r * (v.dw/1700 + 0.35);
+    const pulse = (elapsed*0.9 + s.x*7) % 1;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, baseR + pulse*20, 0, Math.PI*2);
+    ctx.strokeStyle = hexA(s.color, (1-pulse) * (flash ? 0.9 : 0.4));
+    ctx.lineWidth = flash ? 3 : 1.6;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, baseR, 0, Math.PI*2);
+    ctx.strokeStyle = hexA(s.color, flash ? 1 : 0.75);
+    ctx.lineWidth = flash ? 3.5 : 2;
+    ctx.shadowColor = s.color;
+    ctx.shadowBlur = flash ? 20 : 10;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 4, 0, Math.PI*2);
+    ctx.fillStyle = s.color;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.font = '12px "Microsoft YaHei"';
+    const w = ctx.measureText(s.label).width;
+    let lx = p.x - w/2 - 8;
+    lx = Math.min(Math.max(lx, 6), VW - w - 22);
+    const ly = p.y - baseR - 26;
+    ctx.fillStyle = flash ? 'rgba(8,22,30,.9)' : 'rgba(8,22,30,.62)';
+    roundRect(lx, ly, w+16, 22, 11);
+    ctx.fill();
+    ctx.strokeStyle = hexA(s.color, flash ? 0.95 : 0.5);
+    ctx.lineWidth = 1;
+    roundRect(lx, ly, w+16, 22, 11);
+    ctx.stroke();
+    ctx.fillStyle = flash ? s.color : '#e6eef8';
+    ctx.fillText(s.label, lx+8, ly+15);
+  });
+  ctx.restore();
+}
+
+// 点击涟漪
+function drawRipples(dt){
+  for (let i=ripplesArr.length-1; i>=0; i--){
+    const r = ripplesArr[i];
+    r.t += dt * 1.6;
+    if (r.t >= 1){ ripplesArr.splice(i,1); continue; }
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, 12 + r.t*64, 0, Math.PI*2);
+    ctx.strokeStyle = `rgba(110,231,183,${(1-r.t)*0.85})`;
+    ctx.lineWidth = 3 - r.t*2;
+    ctx.shadowColor = 'rgba(110,231,183,.9)';
+    ctx.shadowBlur = 12;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, 5*(1-r.t), 0, Math.PI*2);
+    ctx.fillStyle = `rgba(255,255,255,${(1-r.t)*0.9})`;
+    ctx.fill();
+  }
+}
+
+// ---------- 主循环 ----------
+function frame(now){
+  requestAnimationFrame(frame);
+  const dt = Math.min((now - lastT)/1000, 0.05);
+  lastT = now;
+  elapsed += dt;
+  ctx.setTransform(DPR,0,0,DPR,0,0);   // 高分屏按 CSS 像素绘制
+
+  if (tween){
+    tween.t += dt * 1000;
+    const k = Math.min(1, tween.t / tween.ms);
+    const e = 1 - Math.pow(1-k, 3);
+    Object.keys(tween.to).forEach(key=>{
+      M[key] = tween.from[key] + (tween.to[key] - tween.from[key]) * e;
+    });
+    syncSliders(); updateHUD();
+    if (k >= 1) tween = null;
+  }
+  // 场景图层权重平滑逼近 → 整幅画面交叉淡变
+  const kt = sceneKTarget();
+  K.dirty += (kt.dirty - K.dirty) * Math.min(1, dt*2.6);
+  K.clean += (kt.clean - K.clean) * Math.min(1, dt*2.6);
+  K.waste += (kt.waste - K.waste) * Math.min(1, dt*3.0);   // 禁令图响应更快
+  if (oilFlash > 0) oilFlash -= dt;
+  if (shipFlash > 0) shipFlash -= dt;
+
+  drawBG();
+  drawRoutes(dt);
+  drawOil(dt);
+  drawWasteShip(dt);
+  drawCoastSmoke(dt);   // 产业/公约杠杆 → 烟雾
+  drawCargoShips(dt);   // 禁令杠杆 → 船队与封杀线
+  drawGlints();         // 产业杠杆 → 绿色星光
+  drawMonitor();        // 监测杠杆 → 卫星与雷达
+  drawTreatyShields();  // 公约杠杆 → 绿色护盾
+  drawSpots();
+  drawRipples(dt);
+}
+
+// ---------- 点击与悬停 ----------
+function distToRoute(key, px, py){
+  const f = ROUTES[key];
+  let best = 1e9;
+  if (f.circle){
+    const v = view();
+    const c = P(f.circle[0], f.circle[1]);
+    const dx = (px - c.x)/(f.circle[2]*v.dw), dy = (py - c.y)/(f.circle[3]*v.dh);
+    const d = Math.abs(Math.hypot(dx, dy) - 1);
+    best = d * Math.min(f.circle[2]*v.dw, f.circle[3]*v.dh);
+  } else {
+    for (let t=0; t<=1.001; t+=0.03){
+      const q = quad(f, Math.min(1,t));
+      const p = P(q.x, q.y);
+      const d = Math.hypot(p.x-px, p.y-py);
+      if (d < best) best = d;
+    }
+  }
+  return best;
+}
+function hitTest(px, py){
+  if (flags.spots){
+    for (const key of Object.keys(SPOTS)){
+      const s = SPOTS[key];
+      const p = P(s.x, s.y);
+      const baseR = s.r * (view().dw/1700 + 0.35) + 10;
+      if (Math.hypot(p.x-px, p.y-py) < baseR) return { type:'spot', key };
+    }
+  }
+  if (flags.routes){
+    for (const key of Object.keys(ROUTES)){
+      if (distToRoute(key, px, py) < 16) return { type:'route', key };
+    }
+  }
+  return null;
+}
+canvas.addEventListener('click', e=>{
+  const r = canvas.getBoundingClientRect();
+  const px = e.clientX - r.left, py = e.clientY - r.top;
+  ripplesArr.push({ x:px, y:py, t:0 });
+  const hit = hitTest(px, py);
+  if (!hit) return;
+  if (hit.type === 'spot') showSpot(hit.key);
+  else highlightRoute(hit.key);
+});
+canvas.addEventListener('pointermove', e=>{
+  const r = canvas.getBoundingClientRect();
+  canvas.style.cursor = hitTest(e.clientX - r.left, e.clientY - r.top) ? 'pointer' : 'crosshair';
+});
+
+updateHUD();
+requestAnimationFrame(frame);
+let loaderHidden = false;
+function hideLoader(){
+  if (loaderHidden) return;
+  loaderHidden = true;
+  const l = document.getElementById('loader');
+  if (l){ l.style.opacity = 0; setTimeout(()=>l.remove(), 800); }
+}
+IMGS.normal.onload = ()=>{ imgReady = true; setTimeout(hideLoader, 300); };
+setTimeout(hideLoader, 4000);   // 兜底
+setTimeout(()=>toast('👋 点击发光路径认识转移方式，到治理沙盘拯救这颗星球'), 1600);
+</script>
+</body>
+</html>

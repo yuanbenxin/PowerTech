@@ -1,0 +1,17 @@
+{
+  "cardId": "sb2_m04",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-industrial-location-transfer",
+  "visualLevel": "A",
+  "panelSelectors": [
+    "#ui-left",
+    "#ui-right",
+    "#status-hud"
+  ],
+  "notes": "工业区位与产业转移路径课件接入；主画布保留在左侧，模式切换、区位权重、产业场景、图层、视角、阶段与状态图例统一迁入右侧操作面板。"
+}

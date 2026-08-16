@@ -1,0 +1,167 @@
+{
+  "version": "0.2.0",
+  "updated": "2026-05-11",
+  "book": {
+    "id": "s_x3",
+    "label": "选择性必修3 资源、环境与国家安全",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "c1",
+        "label": "自然环境与人类社会",
+        "cardCount": 0
+      },
+      {
+        "id": "c2",
+        "label": "资源安全与国家安全",
+        "cardCount": 3
+      },
+      {
+        "id": "c3",
+        "label": "环境安全与国家安全",
+        "cardCount": 3
+      },
+      {
+        "id": "c4",
+        "label": "保障国家安全的战略",
+        "cardCount": 3
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "sx3m14",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "碳循环与双碳路径",
+      "detail": "联动碳源、碳汇、能源结构和减排路径，理解双碳目标。",
+      "image": "assets/cards/sx3m14.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "CloudSun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3m15",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "污染转移与环境安全",
+      "detail": "展示污染扩散、转移路径和环境风险，理解环境安全。",
+      "image": "assets/cards/sx3m15.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3m16",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "生物多样性与自然保护地",
+      "detail": "展示自然保护地、生态廊道和生境连通性，理解生物多样性保护。",
+      "image": "assets/cards/sx3m16.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Globe2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3_m01",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "化石能源开发与安全",
+      "abstract": "分析煤炭、石油等能源的空间分布与国家能源安全",
+      "detail": "结合GIS数据展示全球主要能源矿产的储量及贸易流向",
+      "topics": [
+        "资源安全"
+      ],
+      "points": [
+        "能源分布"
+      ],
+      "experiments": [
+        "GIS空间分析"
+      ],
+      "image": "assets/cards/sx2_m02.webp",
+      "icon": "Globe2",
+      "engine": "gis"
+    },
+    {
+      "cardId": "sx3_m02",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "生态退化与生态安全",
+      "abstract": "探讨荒漠化、水土流失等生态问题及其治理措施",
+      "detail": "对比植被覆盖率变化，模拟水土流失过程及治理成效",
+      "topics": [
+        "环境安全"
+      ],
+      "points": [
+        "水土流失"
+      ],
+      "experiments": [
+        "生态演"
+      ],
+      "image": "assets/cards/sx1_m04.webp",
+      "icon": "Mountain",
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "sx3m11",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "粮食安全与耕地保护",
+      "detail": "展示耕地、粮食主产区、需求和风险因素，理解粮食安全。",
+      "image": "assets/cards/sx3m11.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3m12",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "水资源安全与流域调控",
+      "detail": "展示水资源分布、供需矛盾和调水路径，理解水资源安全。",
+      "image": "assets/cards/sx3m12.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3m13",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "海洋空间资源与海洋权益",
+      "detail": "展示海洋资源、通道和空间利用，理解海洋空间资源与权益。",
+      "image": "assets/cards/sx3m13.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3m17",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "国家战略资源安全图谱",
+      "detail": "综合能源、矿产、粮食、水和海洋资源，构建国家战略资源安全图谱。",
+      "image": "assets/cards/sx3m17.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    }
+  ]
+}

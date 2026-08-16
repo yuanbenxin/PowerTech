@@ -1,0 +1,239 @@
+{
+  "book": {
+    "id": "j7a",
+    "label": "七年级上册",
+    "stageId": "junior",
+    "stageLabel": "初中"
+  },
+  "chapterTree": [
+    {
+      "id": "j7a_c1",
+      "label": "第一章 地球和地图",
+      "children": [
+        {
+          "id": "j7a_c1_1",
+          "label": "第一节 地球的形状和大小"
+        },
+        {
+          "id": "j7a_c1_2",
+          "label": "第二节 地球的运动"
+        },
+        {
+          "id": "j7a_c1_3",
+          "label": "第三节 地图的阅读"
+        },
+        {
+          "id": "j7a_c1_4",
+          "label": "第四节 地形图的判读"
+        }
+      ]
+    },
+    {
+      "id": "j7a_c2",
+      "label": "第二章 陆地和海洋",
+      "children": [
+        {
+          "id": "j7a_c2_1",
+          "label": "第一节 大洲和大洋"
+        },
+        {
+          "id": "j7a_c2_2",
+          "label": "第二节 海陆的变迁"
+        }
+      ]
+    },
+    {
+      "id": "j7a_c3",
+      "label": "第三章 天气与气候",
+      "children": [
+        {
+          "id": "j7a_c3_1",
+          "label": "第一节 多变的天气"
+        },
+        {
+          "id": "j7a_c3_2",
+          "label": "第二节 气温的变化与分布"
+        },
+        {
+          "id": "j7a_c3_3",
+          "label": "第三节 降水的变化与分布"
+        },
+        {
+          "id": "j7a_c3_4",
+          "label": "第四节 世界的气候"
+        }
+      ]
+    },
+    {
+      "id": "j7a_c4",
+      "label": "第四章 居民与聚落",
+      "children": [
+        {
+          "id": "j7a_c4_1",
+          "label": "4.1 人口与人种"
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j7a_m01",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "title": "地球的自转与公转模拟",
+      "detail": "三维可视化展示地球绕地轴自转及绕太阳公转的动态过程，直观理解昼夜交替与四季变化。",
+      "image": "assets/cards/j7a_m01.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m02",
+      "chapterIds": [
+        "j7a_c1_4"
+      ],
+      "title": "等高线地形图的三维投影",
+      "detail": "将平面的等高线地图实时投影并拔高为 3D 地形，辅助学生理解山脊、山谷、陡崖等地形特征。",
+      "image": "assets/cards/j7a_m02.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m03",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "title": "七大洲与五大洋全景分布",
+      "detail": "可自由旋转缩放的 3D 地球仪，精准标注世界七大洲和五大洋的轮廓与分界线。",
+      "image": "assets/cards/j7a_m03.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m04",
+      "chapterIds": [
+        "j7a_c2_2"
+      ],
+      "title": "板块构造与海陆变迁",
+      "detail": "动态演示大陆漂移假说与六大板块的碰撞张裂过程，定位全球主要火山地震带。",
+      "image": "assets/cards/j7a_m04.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m05",
+      "chapterIds": [
+        "j7a_c3_4"
+      ],
+      "title": "世界气温与气候类型分布",
+      "detail": "结合等温线数据，在三维地球上展现赤道到两极的气温递变规律及主要气候类型的空间分布。",
+      "image": "assets/cards/j7a_m05_v2.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m06",
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "title": "全球人口密度 3D 热力带",
+      "detail": "三维可视化的地球人口聚集极值区。",
+      "image": "assets/cards/j7a_m06.webp",
+      "isLocked": true,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m07",
+      "chapterIds": [
+        "j7a_c2_2"
+      ],
+      "title": "地壳运动与盘古大陆分裂",
+      "detail": "时光倒流，亿万年前的大陆漂移模拟。",
+      "image": "assets/cards/j7a_m07.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m08",
+      "chapterIds": [
+        "j7a_c1_1"
+      ],
+      "title": "经纬网坐标系与地球仪定位",
+      "detail": "在三维地球仪上实时拖动经纬线网格，精准定位任意地理坐标。",
+      "image": "assets/cards/j7a_m08.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7a_m09",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "title": "地球五带划分与太阳直射点",
+      "detail": "可视化热带、南北温带、南北寒带的形成原因与太阳直射角变化。",
+      "image": "assets/cards/j7a_m09.webp",
+      "fallbackImage": "",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7am10",
+      "chapterIds": [
+        "j7a_c1_3"
+      ],
+      "title": "地图三要素与比例尺方向图例",
+      "detail": "通过比例尺、方向和图例联动操作，训练地图三要素的基础判读能力。",
+      "image": "assets/cards/j7am10.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7am11",
+      "chapterIds": [
+        "j7a_c3_1"
+      ],
+      "title": "天气符号与卫星云图判读",
+      "detail": "结合天气符号、卫星云图和城市天气变化，训练天气图判读。",
+      "image": "assets/cards/j7am11.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "CloudSun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7am12",
+      "chapterIds": [
+        "j7a_c3_2",
+        "j7a_c3_3"
+      ],
+      "title": "气温曲线与降水柱状图气候判读",
+      "detail": "联动气温曲线、降水柱状图与城市位置，训练气候资料图判读。",
+      "image": "assets/cards/j7am12.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "CloudSun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7am13",
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "title": "聚落形态与自然环境",
+      "detail": "比较不同地形和水系条件下的聚落形态，理解自然环境对聚落的影响。",
+      "image": "assets/cards/j7am13.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    }
+  ]
+}

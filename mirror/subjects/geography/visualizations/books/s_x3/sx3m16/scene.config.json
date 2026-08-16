@@ -1,0 +1,21 @@
+{
+  "cardId": "sx3m16",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-biodiversity-protected-area",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "panelSelectors": [
+    "#panel",
+    "#toolbar2",
+    "#toolbar"
+  ],
+  "notes": "通过生态岛、自然保护地巡游、威胁因子和保护行动的联动，理解生物多样性三个层次、自然保护地体系及保护措施。"
+}

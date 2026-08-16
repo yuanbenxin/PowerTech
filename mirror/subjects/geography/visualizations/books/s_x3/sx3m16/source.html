@@ -1,0 +1,2759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生物多样性与自然保护地 · 3D 交互课件（旗舰版）</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --bg:#050a14;
+    --panel-line:rgba(94,234,212,.18);
+    --cyan:#5eead4; --blue:#60a5fa; --gold:#fbbf24; --green:#4ade80;
+    --red:#f87171; --purple:#c084fc;
+    --txt:#e2e8f0; --dim:#8ea3c0;
+  }
+  html,body{ width:100%; height:100%; overflow:hidden; background:var(--bg);
+    font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif; color:var(--txt); }
+
+  #stage{ position:absolute; left:0; top:0; bottom:0; width:calc(100% - 410px); }
+  #scene-canvas{ width:100%; height:100%; display:block; cursor:crosshair; }
+  #panel{ position:absolute; right:0; top:0; bottom:0; width:410px;
+    background:linear-gradient(160deg, rgba(10,18,34,.92), rgba(8,14,28,.96));
+    border-left:1px solid var(--panel-line);
+    box-shadow:-20px 0 60px rgba(0,0,0,.55);
+    display:flex; flex-direction:column; z-index:10; backdrop-filter:blur(14px); }
+
+  .p-head{ padding:16px 20px 11px; border-bottom:1px solid rgba(94,234,212,.12);
+    background:linear-gradient(90deg, rgba(94,234,212,.08), transparent); }
+  .p-head h1{ font-size:19px; letter-spacing:1px;
+    background:linear-gradient(90deg,#5eead4,#60a5fa,#c084fc);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .p-head .sub{ font-size:11px; color:var(--dim); margin-top:5px; letter-spacing:1.5px; }
+
+  .tabs{ display:flex; padding:9px 12px 0; gap:5px; }
+  .tab{ flex:1; min-width:0; text-align:center; padding:8px 3px; font-size:11px; cursor:pointer;
+    color:var(--dim); border:1px solid transparent; border-radius:9px 9px 0 0;
+    transition:.25s; user-select:none; line-height:1.3; font-family:inherit; }
+  .tab:hover{ color:var(--txt); }
+  .tab.active{ color:var(--cyan); background:rgba(94,234,212,.08);
+    border:1px solid var(--panel-line); border-bottom-color:transparent; }
+  .tab .ico{ display:block; font-size:16px; margin-bottom:2px; }
+
+  .panel-evidence{ margin:0 12px; padding:8px 10px; border:1px solid rgba(94,234,212,.16);
+    border-radius:0 0 11px 11px; background:linear-gradient(135deg,rgba(15,23,42,.82),rgba(12,35,46,.42)); }
+  .evidence-summary{ display:flex; align-items:center; gap:8px; }
+  .evidence-score{ min-width:42px; text-align:center; }
+  .evidence-score b{ display:block; color:#86efac; font:700 23px/1 Georgia,serif; }
+  .evidence-score span{ color:var(--dim); font-size:9px; letter-spacing:1px; }
+  .evidence-copy{ min-width:0; flex:1; }
+  .evidence-copy b{ display:block; color:#dbeafe; font-size:10.5px; line-height:1.35; }
+  .evidence-copy p{ display:-webkit-box; overflow:hidden; margin-top:2px; color:#9fb3cc; font-size:9.5px; line-height:1.35;
+    -webkit-line-clamp:1; -webkit-box-orient:vertical; }
+  .summary-progress{ height:3px; overflow:hidden; margin-top:6px; border-radius:4px; background:rgba(255,255,255,.10); }
+  .summary-progress i{ display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg,#f87171,#fbbf24,#4ade80,#5eead4); transition:width .6s ease; }
+  .metric-details{ margin-top:7px; border:1px solid rgba(148,163,184,.15); border-radius:8px; background:rgba(15,23,42,.46); }
+  .metric-details summary{ padding:7px 8px; color:#b9c9dc; font-size:9.5px; cursor:pointer; list-style:none; }
+  .metric-details summary::-webkit-details-marker{ display:none; }
+  .metric-details summary::after{ content:'查看'; float:right; color:var(--cyan); }
+  .metric-details[open] summary{ border-bottom:1px solid rgba(148,163,184,.14); }
+  .metric-details[open] summary::after{ content:'收起'; }
+  .metric-row{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; margin-top:7px; }
+  .metric-chip{ min-width:0; min-height:34px; padding:6px 7px; border:1px solid rgba(148,163,184,.16); border-radius:8px;
+    background:rgba(15,23,42,.68); color:#cbd5e1; cursor:pointer; font:inherit; text-align:left; display:flex; align-items:center; gap:3px; }
+  .metric-chip span{ min-width:0; overflow:hidden; color:#b9d9ed; font-size:9.5px; white-space:nowrap; text-overflow:ellipsis; }
+  .metric-chip b{ margin-left:auto; color:#f8fafc; font:700 15px/1 Georgia,serif; }
+  .metric-chip:hover,.metric-chip:focus-visible{ border-color:rgba(94,234,212,.58); background:rgba(13,148,136,.14); outline:none; }
+  .pages{ flex:1; overflow-y:auto; padding:12px 14px 24px; }
+  .pages::-webkit-scrollbar{ width:6px; }
+  .pages::-webkit-scrollbar-thumb{ background:rgba(94,234,212,.25); border-radius:3px; }
+  .page{ display:none; animation:fadein .4s ease; }
+  .page.show{ display:block; }
+  @keyframes fadein{ from{opacity:0; transform:translateY(8px);} to{opacity:1;} }
+
+  .card{ background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.07);
+    border-radius:14px; padding:13px 15px; margin-bottom:11px; transition:.25s; }
+  .card h3{ font-size:13.5px; margin-bottom:7px; display:flex; align-items:center; gap:7px; }
+  .card p{ font-size:12px; line-height:1.75; color:#b7c4d8; }
+  .card .tag{ display:inline-block; font-size:10px; padding:1px 8px; border-radius:20px;
+    margin-left:auto; letter-spacing:1px; }
+  .clickable{ cursor:pointer; }
+  .clickable:hover{ border-color:rgba(94,234,212,.4); background:rgba(94,234,212,.06);
+    transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.35); }
+
+  .kpi-row{ display:flex; gap:9px; margin-bottom:11px; }
+  .kpi{ flex:1; text-align:center; padding:11px 3px; border-radius:12px;
+    background:linear-gradient(180deg, rgba(94,234,212,.09), rgba(94,234,212,.02));
+    border:1px solid rgba(94,234,212,.15); }
+  .kpi b{ display:block; font-size:21px; color:var(--cyan); font-family:Georgia,serif; }
+  .kpi span{ font-size:10px; color:var(--dim); letter-spacing:1px; }
+
+  .gauge-wrap{ text-align:center; padding:6px 0 2px; }
+  .gauge-num{ font-size:42px; font-weight:700; font-family:Georgia,serif;
+    text-shadow:0 0 24px currentColor; transition:color .5s; line-height:1; }
+  .gauge-label{ font-size:11px; color:var(--dim); letter-spacing:3px; margin-top:6px; }
+  .gauge-bar{ height:8px; border-radius:5px; background:rgba(255,255,255,.08);
+    margin-top:11px; overflow:hidden; }
+  .gauge-fill{ height:100%; width:100%; border-radius:5px;
+    background:linear-gradient(90deg,#f87171,#fbbf24,#4ade80,#5eead4);
+    transition:width .6s cubic-bezier(.2,.8,.2,1); }
+
+  .slider-block{ margin-bottom:15px; }
+  .slider-head{ display:flex; justify-content:space-between; font-size:12px; margin-bottom:6px; }
+  .slider-head .val{ color:var(--cyan); font-family:Georgia,serif; }
+  input[type=range]{ width:100%; -webkit-appearance:none; height:6px; border-radius:3px;
+    background:linear-gradient(90deg, rgba(94,234,212,.4), rgba(248,113,113,.5)); outline:none; }
+  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:16px; height:16px;
+    border-radius:50%; background:#fff; border:3px solid var(--cyan);
+    box-shadow:0 0 12px rgba(94,234,212,.8); cursor:pointer; }
+  .slider-desc{ font-size:10.5px; color:var(--dim); line-height:1.6; margin-top:5px; }
+
+  .btn{ display:block; width:100%; padding:10px 12px; margin-bottom:9px; border-radius:12px;
+    border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05);
+    color:var(--txt); font-size:12.5px; cursor:pointer; transition:.25s; text-align:left;
+    display:flex; align-items:center; gap:10px; font-family:inherit; }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.4); }
+  .btn .b-ico{ font-size:17px; }
+  .btn small{ display:block; font-size:10px; color:var(--dim); margin-top:2px; }
+  .btn.gold{ border-color:rgba(251,191,36,.35); background:linear-gradient(90deg, rgba(251,191,36,.12), transparent); }
+  .btn.gold:hover{ background:rgba(251,191,36,.2); }
+  .btn.green{ border-color:rgba(74,222,128,.35); background:linear-gradient(90deg, rgba(74,222,128,.12), transparent); }
+  .btn.green:hover{ background:rgba(74,222,128,.2); }
+  .btn.blue{ border-color:rgba(96,165,250,.35); background:linear-gradient(90deg, rgba(96,165,250,.12), transparent); }
+  .btn.blue:hover{ background:rgba(96,165,250,.2); }
+  .btn.purple{ border-color:rgba(192,132,252,.35); background:linear-gradient(90deg, rgba(192,132,252,.12), transparent); }
+  .btn.purple:hover{ background:rgba(192,132,252,.2); }
+  .btn.red{ border-color:rgba(248,113,113,.35); background:linear-gradient(90deg, rgba(248,113,113,.12), transparent); }
+  .btn.red:hover{ background:rgba(248,113,113,.2); }
+  .btn .prog{ margin-left:auto; font-family:Georgia,serif; color:var(--cyan); font-size:13px; }
+
+  .park-item{ display:flex; align-items:center; gap:10px; padding:9px 12px; margin-bottom:8px;
+    border-radius:12px; border:1px solid rgba(255,255,255,.07); background:rgba(255,255,255,.03);
+    width:100%; color:var(--txt); font:inherit; text-align:left; cursor:pointer; transition:.25s; }
+  .park-item:hover{ border-color:rgba(251,191,36,.5); background:rgba(251,191,36,.08); transform:translateX(-3px); }
+  .park-item .p-ico{ font-size:20px; }
+  .park-item b{ font-size:12.5px; display:block; }
+  .park-item span{ font-size:10px; color:var(--dim); }
+  .park-item .fly{ margin-left:auto; font-size:10px; color:var(--gold); letter-spacing:1px; }
+
+  .quiz-q{ font-size:12.5px; line-height:1.7; margin-bottom:9px; }
+  .quiz-opt{ display:block; width:100%; text-align:left; padding:8px 12px; margin-bottom:6px;
+    border-radius:10px; border:1px solid rgba(255,255,255,.1); background:rgba(255,255,255,.04);
+    color:var(--txt); font-size:12px; cursor:pointer; transition:.2s; font-family:inherit; }
+  .quiz-opt:hover{ border-color:var(--cyan); }
+  .quiz-opt.right{ border-color:var(--green); background:rgba(74,222,128,.15); color:var(--green); }
+  .quiz-opt.wrong{ border-color:var(--red); background:rgba(248,113,113,.12); color:var(--red); }
+  .quiz-note{ font-size:11px; color:var(--dim); line-height:1.6; min-height:18px; margin-bottom:12px; }
+
+  .tip-box{ border-left:3px solid var(--cyan); background:rgba(94,234,212,.06);
+    padding:10px 12px; border-radius:0 10px 10px 0; font-size:11.5px; line-height:1.8;
+    color:#b7c4d8; margin-bottom:11px; }
+  .tip-box b{ color:var(--cyan); }
+
+  .stage-hint{ margin:0 0 8px; color:#a9b9cd; font-size:10.5px; line-height:1.5; }
+  .stage-hint b{ margin-right:5px; color:var(--cyan); font-size:10px; letter-spacing:1px; }
+  .scenario-prompt{ margin:0 0 8px; color:#b9c9dc; font-size:10.5px; line-height:1.4; }
+  .scenario-prompt b{ color:var(--cyan); font-size:10px; letter-spacing:1px; }
+  .scenario-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; margin:0 0 10px; }
+  .scenario-btn{ min-height:56px; padding:7px 4px; border:1px solid rgba(148,163,184,.16); border-radius:9px;
+    background:rgba(255,255,255,.035); color:var(--txt); cursor:pointer; font:inherit; text-align:center; }
+  .scenario-btn strong{ display:block; font-size:10.5px; white-space:nowrap; }
+  .scenario-btn small{ display:block; margin-top:3px; color:var(--dim); font-size:8.5px; line-height:1.2; }
+  .scenario-btn:hover,.scenario-btn:focus-visible{ border-color:rgba(94,234,212,.55); background:rgba(13,148,136,.13); outline:none; }
+  .advanced-details{ margin:0 0 10px; border:1px solid rgba(148,163,184,.15); border-radius:9px; background:rgba(15,23,42,.46); }
+  .advanced-details summary{ padding:9px 10px; color:#cbd5e1; font-size:10.5px; cursor:pointer; list-style:none; }
+  .advanced-details summary::-webkit-details-marker{ display:none; }
+  .advanced-details summary::after{ content:'展开'; float:right; color:var(--cyan); font-size:10px; }
+  .advanced-details[open] summary{ border-bottom:1px solid rgba(148,163,184,.14); }
+  .advanced-details[open] summary::after{ content:'收起'; }
+  .details-body{ padding:10px 11px 2px; }
+  .case-choices{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; margin:0 0 10px; }
+  .case-choice{ min-width:0; padding:8px 4px; border:1px solid rgba(251,191,36,.22); border-radius:9px;
+    background:rgba(251,191,36,.055); color:#fde68a; font:inherit; font-size:10px; cursor:pointer; }
+  .case-choice:hover,.case-choice:focus-visible{ border-color:rgba(251,191,36,.65); background:rgba(251,191,36,.13); outline:none; }
+  .inline-case-list{ display:grid; grid-template-columns:1fr 1fr; gap:6px; padding:0 11px 10px; }
+  .inline-case-list .park-item{ margin:0; padding:7px 8px; }
+  .inline-case-list .park-item .p-ico{ font-size:16px; }
+  .inline-case-list .park-item .fly{ display:none; }
+
+  /* ====== 3D 浮动层 ====== */
+  .hud{ position:absolute; z-index:5; pointer-events:none; }
+  #hud-title{ left:26px; top:20px; }
+  #hud-title .t1{ font-size:25px; font-weight:700; letter-spacing:3px;
+    background:linear-gradient(90deg,#fff,#5eead4); -webkit-background-clip:text;
+    background-clip:text; color:transparent; }
+  #hud-title .t2{ font-size:11px; color:rgba(226,232,240,.6); letter-spacing:5px; margin-top:4px; }
+  #hud-hint{ left:26px; bottom:18px; font-size:11px; color:rgba(226,232,240,.5); letter-spacing:1px; }
+  #hud-hint span{ color:rgba(94,234,212,.75); }
+  #hud-stat{ right:26px; top:20px; text-align:right; }
+  #hud-stat .num{ font-size:40px; font-family:Georgia,serif; font-weight:700;
+    text-shadow:0 0 22px currentColor; transition:color .5s; line-height:1; }
+  #hud-stat .lab{ font-size:10px; color:rgba(226,232,240,.55); letter-spacing:3px; margin-top:4px; }
+  #hud-env{ right:26px; top:100px; text-align:right; font-size:11px; color:rgba(226,232,240,.6);
+    letter-spacing:2px; }
+  #toast{ position:absolute; left:50%; bottom:64px; transform:translateX(-50%) translateY(20px);
+    background:rgba(10,20,36,.88); border:1px solid rgba(94,234,212,.35); color:var(--cyan);
+    padding:10px 22px; border-radius:30px; font-size:13px; letter-spacing:1px;
+    opacity:0; transition:.4s; z-index:20; pointer-events:none; backdrop-filter:blur(8px);
+    box-shadow:0 8px 30px rgba(0,0,0,.5); white-space:nowrap; max-width:90%; }
+  #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  /* 3D 工具栏 */
+  #toolbar{ position:absolute; left:50%; bottom:16px; transform:translateX(-50%);
+    display:flex; gap:7px; z-index:6; }
+  #toolbar button{ pointer-events:auto; padding:8px 13px; border-radius:24px; font-size:12px;
+    border:1px solid rgba(94,234,212,.25); background:rgba(10,20,36,.75); color:var(--txt);
+    cursor:pointer; transition:.25s; backdrop-filter:blur(8px); font-family:inherit; white-space:nowrap; }
+  #toolbar button:hover{ border-color:var(--cyan); transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.45); }
+  #toolbar button.on{ background:rgba(94,234,212,.22); border-color:var(--cyan); color:var(--cyan);
+    box-shadow:0 0 16px rgba(94,234,212,.35); }
+
+  /* 巡游字幕与电影黑边 */
+  .cine{ position:absolute; left:0; right:0; height:0; background:#000; z-index:7;
+    transition:height .8s ease; pointer-events:none; }
+  #cine-top{ top:0; } #cine-bot{ bottom:0; }
+  body.touring .cine{ height:46px; }
+  #caption{ position:absolute; left:50%; bottom:118px; transform:translateX(-50%);
+    text-align:center; z-index:8; pointer-events:none; opacity:0; transition:opacity .6s;
+    max-width:80%; }
+  #caption.show{ opacity:1; }
+  #caption .cp-title{ font-size:25px; font-weight:700; letter-spacing:3px; color:#fff;
+    text-shadow:0 0 22px rgba(94,234,212,.85), 0 2px 10px rgba(0,0,0,.85); }
+  #caption .cp-sub{ font-size:13px; color:#c3d2e6; margin-top:7px; letter-spacing:1.5px;
+    text-shadow:0 2px 8px rgba(0,0,0,.9); }
+  #caption .cp-bar{ width:56px; height:2px; margin:8px auto 0;
+    background:linear-gradient(90deg, transparent, var(--cyan), transparent); }
+
+  /* 环境控制条（时间/季节/机位） */
+  #toolbar2{ position:absolute; left:50%; bottom:60px; transform:translateX(-50%);
+    display:flex; gap:6px; align-items:center; z-index:6; padding:7px 14px;
+    border-radius:26px; border:1px solid rgba(96,165,250,.25);
+    background:rgba(10,20,36,.75); backdrop-filter:blur(8px); }
+  #toolbar2 .tb2-label{ font-size:14px; pointer-events:none; }
+  #toolbar2 .tb2-sep{ width:1px; height:16px; background:rgba(255,255,255,.15); }
+  #toolbar2 button{ pointer-events:auto; width:32px; height:32px; border-radius:50%;
+    border:1px solid rgba(96,165,250,.3); background:transparent; font-size:15px;
+    cursor:pointer; transition:.25s; display:flex; align-items:center; justify-content:center; }
+  #toolbar2 button:hover{ border-color:var(--blue); transform:translateY(-2px); }
+  #toolbar2 button.on{ background:rgba(96,165,250,.25); border-color:var(--blue);
+    box-shadow:0 0 12px rgba(96,165,250,.4); }
+  #toolbar2 input[type=range]{ width:130px; pointer-events:auto; height:5px;
+    background:linear-gradient(90deg,#2a3a5c,#ffd166,#ff9a5a,#0a1428); }
+  #toolbar2 input[type=range]::-webkit-slider-thumb{ width:14px; height:14px; border-color:var(--gold); }
+
+  /* 物种百科卡片 */
+  #infoCard{ position:absolute; left:26px; bottom:64px; width:320px; z-index:7;
+    background:rgba(10,20,36,.88); border:1px solid rgba(94,234,212,.3); border-radius:16px;
+    padding:15px 17px; backdrop-filter:blur(12px); box-shadow:0 14px 40px rgba(0,0,0,.55);
+    animation:popin .3s ease; }
+  #infoCard.hidden{ display:none; }
+  @keyframes popin{ from{opacity:0; transform:translateY(12px);} to{opacity:1;} }
+  #infoCard h4{ font-size:16px; margin-bottom:3px; display:flex; align-items:center; gap:8px; }
+  #infoCard .lv{ display:inline-block; font-size:10px; padding:2px 9px; border-radius:20px;
+    background:rgba(248,113,113,.18); color:var(--red); letter-spacing:1px; margin-bottom:8px; }
+  #infoCard p{ font-size:11.5px; line-height:1.8; color:#b7c4d8; }
+  #infoCard .close{ position:absolute; top:8px; right:12px; cursor:pointer; color:var(--dim);
+    font-size:16px; pointer-events:auto; z-index:2; }
+  #infoCard .close:hover{ color:#fff; }
+  #infoCard img{ width:100%; border-radius:12px; margin-bottom:10px;
+    border:1px solid rgba(94,234,212,.2); display:block; }
+  #infoCard img.hidden{ display:none; }
+
+  /* 图鉴页 */
+  .dex-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .dex-card{ border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03); cursor:pointer; transition:.25s; }
+  .dex-card:hover{ border-color:var(--cyan); transform:translateY(-3px);
+    box-shadow:0 10px 26px rgba(0,0,0,.5); }
+  .dex-card img{ width:100%; aspect-ratio:1; object-fit:cover; display:block; }
+  .dex-card .dn{ padding:8px 10px 10px; text-align:center; }
+  .dex-card .dn b{ font-size:12.5px; display:block; }
+  .dex-card .dn span{ font-size:9.5px; color:var(--red); letter-spacing:1px; }
+
+  /* 面板头图 */
+  .p-banner{ height:92px; background:url('assets/banner.webp') center 38%/cover no-repeat;
+    position:relative; }
+  .p-banner::after{ content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(10,18,34,.15), rgba(10,18,34,.97)); }
+  .p-banner .bt{ position:absolute; left:20px; bottom:10px; z-index:2; }
+
+  #loader{ position:fixed; inset:0; z-index:99; display:flex;
+    flex-direction:column; align-items:center; justify-content:center; transition:opacity .8s;
+    background:url('assets/banner.webp') center/cover no-repeat #050a14; }
+  #loader::before{ content:''; position:absolute; inset:0; background:rgba(5,10,20,.55); }
+  #loader .ring{ width:64px; height:64px; border-radius:50%; z-index:2;
+    border:2px solid rgba(94,234,212,.15); border-top-color:var(--cyan);
+    animation:spin 1s linear infinite; }
+  #loader p{ margin-top:18px; font-size:12px; color:#cfe3f5; letter-spacing:4px; z-index:2;
+    text-shadow:0 2px 10px rgba(0,0,0,.8); }
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+
+  /* ====== 教学证据与决策层 ====== */
+  .learning-path{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; margin:0 0 11px; }
+  .path-step{ min-width:0; min-height:62px; padding:8px 4px; border:1px solid rgba(148,163,184,.16);
+    border-radius:10px; background:rgba(15,23,42,.58); color:#cbd5e1; font:inherit; cursor:pointer; text-align:center; }
+  .path-step strong{ display:block; color:#f8fafc; font-size:11px; margin-top:2px; }
+  .path-step small{ display:block; margin-top:3px; color:var(--dim); font-size:9px; line-height:1.25; }
+  .path-step:hover,.path-step:focus-visible{ border-color:rgba(94,234,212,.55); background:rgba(13,148,136,.14); outline:none; }
+  .dimension-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:0 0 11px; }
+  .dimension-card{ min-width:0; padding:10px 7px; border:1px solid rgba(148,163,184,.16); border-radius:11px;
+    background:rgba(15,23,42,.74); color:var(--txt); text-align:left; font:inherit; cursor:pointer; }
+  .dimension-card:hover,.dimension-card:focus-visible{ border-color:rgba(94,234,212,.58); outline:none; }
+  .dimension-card .d-name{ display:block; min-height:28px; color:#dbeafe; font-size:10px; line-height:1.3; }
+  .dimension-card b{ display:block; margin:4px 0 6px; font:700 21px/1 Georgia,serif; }
+  .dimension-card .mini-bar{ display:block; height:4px; overflow:hidden; border-radius:4px; background:rgba(255,255,255,.10); }
+  .dimension-card .mini-bar i{ display:block; height:100%; border-radius:inherit; transition:width .45s ease; }
+  #genetic-fill{ background:#c084fc; } #species-fill{ background:#4ade80; } #ecosystem-fill{ background:#60a5fa; }
+  .evidence-card,.case-evidence,.plan-status,.projection-card{ margin:0 0 11px; padding:11px 12px; border:1px solid rgba(94,234,212,.18);
+    border-radius:11px; background:linear-gradient(135deg,rgba(15,23,42,.78),rgba(12,35,46,.48)); }
+  .evidence-card b,.case-evidence b,.plan-status b,.projection-card b{ display:block; color:#99f6e4; font-size:12px; line-height:1.4; }
+  .evidence-card p,.case-evidence p,.plan-status p,.projection-card p{ margin-top:5px; color:#b7c4d8; font-size:11px; line-height:1.65; }
+  .threshold-row{ display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+  .threshold-chip{ padding:3px 7px; border-radius:999px; background:rgba(96,165,250,.12); color:#bfdbfe; font-size:9px; }
+  .threshold-chip.warn{ background:rgba(251,146,60,.14); color:#fed7aa; }
+  .threshold-chip.danger{ background:rgba(248,113,113,.15); color:#fecaca; }
+  .plan-meter{ display:flex; align-items:center; gap:9px; margin-top:8px; }
+  .plan-meter b{ margin:0; min-width:42px; color:var(--gold); font:700 23px/1 Georgia,serif; }
+  .plan-meter span{ color:var(--dim); font-size:10px; line-height:1.35; }
+  .plan-tags{ display:flex; flex-wrap:wrap; gap:5px; margin-top:9px; }
+  .plan-tags span{ padding:3px 7px; border:1px solid rgba(148,163,184,.16); border-radius:999px; color:#cbd5e1; font-size:9px; }
+  .plan-tags span.on{ border-color:rgba(94,234,212,.52); background:rgba(13,148,136,.16); color:#99f6e4; }
+  .projection-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:0 0 10px; }
+  .projection-card.bad{ border-color:rgba(248,113,113,.26); background:rgba(69,18,27,.38); }
+  .projection-card.good{ border-color:rgba(74,222,128,.28); background:rgba(10,63,43,.32); }
+  .projection-card strong{ display:block; color:#f8fafc; font-size:11px; }
+  .projection-card .projection-score{ display:block; margin-top:5px; font:700 26px/1 Georgia,serif; }
+  .projection-card.bad .projection-score{ color:#fca5a5; } .projection-card.good .projection-score{ color:#86efac; }
+  .year-bars{ display:flex; align-items:end; gap:2px; height:34px; margin-top:8px; }
+  .year-bars i{ display:block; flex:1; min-width:2px; border-radius:2px 2px 0 0; background:#64748b; transition:height .35s ease; }
+  .projection-card.bad .year-bars i{ background:linear-gradient(#fb923c,#ef4444); }
+  .projection-card.good .year-bars i{ background:linear-gradient(#5eead4,#22c55e); }
+  .scenario-question .live-evidence{ margin-top:8px; padding:8px 10px; border-radius:8px; background:rgba(96,165,250,.08); color:#bfdbfe; font-size:10.5px; line-height:1.6; }
+  .quality-chip{ display:inline-flex; align-items:center; gap:5px; margin-top:8px; padding:3px 7px; border-radius:999px; background:rgba(94,234,212,.10); color:#99f6e4; font-size:9px; }
+
+  @media (max-width:900px){ #panel{ width:340px; } #stage{ width:calc(100% - 340px);} }
+  @media (max-width:520px){ .learning-path{ grid-template-columns:repeat(2,minmax(0,1fr)); } .dimension-grid{ gap:6px; }
+    .dimension-card{ padding:8px 5px; } .dimension-card b{ font-size:19px; } }
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="ring"></div><p>正在构建生态方舟 …</p></div>
+
+<!-- ================= 左侧 3D 模拟框 ================= -->
+<div id="stage">
+  <canvas id="scene-canvas"></canvas>
+  <div class="hud" id="hud-title">
+    <div class="t1">生物多样性 · 生态方舟</div>
+    <div class="t2">BIODIVERSITY &amp; PROTECTED AREAS</div>
+  </div>
+  <div class="hud" id="hud-stat">
+    <div class="num" id="hud-bio-num">100</div>
+    <div class="lab">生物多样性指数</div>
+  </div>
+  <div class="hud" id="hud-env">🌙 夜晚 · 晴朗</div>
+  <div class="hud" id="hud-hint"><span>点击动物/植物</span> 查看百科 &nbsp;·&nbsp; <span>拖拽</span> 旋转 &nbsp;·&nbsp; <span>滚轮</span> 缩放</div>
+
+  <div class="cine" id="cine-top"></div>
+  <div class="cine" id="cine-bot"></div>
+  <div id="caption"><div class="cp-title"></div><div class="cp-sub"></div><div class="cp-bar"></div></div>
+
+  <div id="toolbar2">
+    <span class="tb2-label">🕐</span>
+    <input type="range" min="0" max="100" value="85" id="time-slider" title="时间">
+    <span class="tb2-sep"></span>
+    <button data-season="spring">🌸</button>
+    <button data-season="summer" class="on">☀️</button>
+    <button data-season="autumn">🍂</button>
+    <button data-season="winter">❄️</button>
+    <span class="tb2-sep"></span>
+    <button data-cam="top" title="俯瞰">🛰️</button>
+    <button data-cam="low" title="贴地视角">🏕️</button>
+  </div>
+  <div id="toolbar">
+    <button data-m="tour">🚁 巡游</button>
+    <button data-m="plant">🌱 植树</button>
+    <button data-m="release">🐾 放归</button>
+    <button data-m="clean">🧹 清除入侵</button>
+    <button data-m="foodweb">🕸️ 食物链</button>
+    <button data-m="rain">🌧️ 降雨</button>
+    <button data-m="snow">❄️ 降雪</button>
+    <button data-m="orbit">🔁 旋转</button>
+  </div>
+
+  <div id="infoCard" class="hidden">
+    <span class="close" onclick="closeInfo()">✕</span>
+    <img id="ic-img" class="hidden" alt="">
+    <h4 id="ic-title"></h4>
+    <span class="lv" id="ic-level"></span>
+    <p id="ic-text"></p>
+  </div>
+
+  <div id="toast"></div>
+</div>
+
+<!-- ================= 右侧操作面板 ================= -->
+<div id="panel">
+  <div class="p-banner">
+    <div class="bt">
+      <h1 style="font-size:18px; letter-spacing:1px; background:linear-gradient(90deg,#5eead4,#60a5fa,#c084fc); -webkit-background-clip:text; background-clip:text; color:transparent;">生物多样性与自然保护地</h1>
+      <div style="font-size:10px; color:#9fb3cc; margin-top:3px; letter-spacing:2px;">高中地理 · 选择性必修 3 · 3D 交互课件</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button type="button" class="tab active" data-page="p1">① 发现问题</button>
+    <button type="button" class="tab" data-page="p4">② 制定保护</button>
+    <button type="button" class="tab" data-page="p6">③ 比较结局</button>
+    <button type="button" class="tab" data-page="p5">④ 自我检验</button>
+  </div>
+
+  <section class="panel-evidence" aria-label="当前生态证据">
+    <div class="evidence-summary">
+      <div class="evidence-score"><b id="panel-bio-num">100</b><span>综合指数</span></div>
+      <div class="evidence-copy">
+        <b id="evidence-title">观察证据 · 三类多样性均处于稳定状态</b>
+        <p id="evidence-text">选择一种干扰，观察哪一类多样性先下降。</p>
+      </div>
+    </div>
+    <div class="summary-progress"><i id="bio-fill" style="width:100%"></i></div>
+  </section>
+
+  <div class="pages">
+
+    <!-- ===== 阶段一：发现问题 ===== -->
+    <div class="page show" id="p1">
+      <p class="scenario-prompt"><b>选择情景</b>一次只改变一种干扰，观察模型和综合状态。</p>
+      <div class="scenario-grid" aria-label="干扰情景">
+        <button class="scenario-btn" onclick="applyPreset(0,0,0,0,0,'原始状态 · 生态平衡')"><strong>🌿 基线</strong><small>无干扰</small></button>
+        <button class="scenario-btn" onclick="applyPreset(35,25,20,15,30,'人类干扰 · 指数下降')"><strong>🏘️ 干扰</strong><small>适度开发</small></button>
+        <button class="scenario-btn" onclick="applyPreset(85,70,65,60,80,'生态危机 · 濒临崩溃')"><strong>⚠️ 危机</strong><small>威胁叠加</small></button>
+      </div>
+      <details class="advanced-details">
+        <summary>精细调参：只调整一个威胁</summary>
+        <div class="details-body">
+          <div class="slider-block"><div class="slider-head"><b>🪓 栖息地丧失</b><span class="val" id="v-habitat">0%</span></div><input type="range" min="0" max="100" value="0" id="s-habitat"><div class="slider-desc">砍伐、围垦与扩张会优先削弱生态系统完整性。</div></div>
+          <div class="slider-block"><div class="slider-head"><b>🌡️ 气候变化</b><span class="val" id="v-climate">0%</span></div><input type="range" min="0" max="100" value="0" id="s-climate"><div class="slider-desc">雪线、水流与物种栖息范围将发生连锁变化。</div></div>
+          <div class="slider-block"><div class="slider-head"><b>🏭 环境污染</b><span class="val" id="v-pollution">0%</span></div><input type="range" min="0" max="100" value="0" id="s-pollution"><div class="slider-desc">水体质量与物种生存同时受影响。</div></div>
+          <div class="slider-block"><div class="slider-head"><b>🦠 物种入侵</b><span class="val" id="v-invasive">0%</span></div><input type="range" min="0" max="100" value="0" id="s-invasive"><div class="slider-desc">外来种会排挤本地种并扰动食物链。</div></div>
+          <div class="slider-block"><div class="slider-head"><b>🏹 过度开发</b><span class="val" id="v-hunt">0%</span></div><input type="range" min="0" max="100" value="0" id="s-hunt"><div class="slider-desc">盗猎、过捕会优先压低物种多样性。</div></div>
+        </div>
+      </details>
+      <details class="advanced-details">
+        <summary>深入观察：三维指标与物种图鉴</summary>
+        <div class="details-body">
+          <div class="metric-row" aria-label="三类多样性指标">
+            <button class="metric-chip" onclick="highlightLayer('genetic')" aria-label="查看遗传多样性场景证据"><span>🧬 遗传</span><b id="genetic-index">100</b><i id="genetic-fill" hidden></i></button>
+            <button class="metric-chip" onclick="highlightLayer('species')" aria-label="查看物种多样性场景证据"><span>🦌 物种</span><b id="species-index">100</b><i id="species-fill" hidden></i></button>
+            <button class="metric-chip" onclick="highlightLayer('ecosystem')" aria-label="查看生态系统多样性场景证据"><span>🏞️ 生态</span><b id="ecosystem-index">100</b><i id="ecosystem-fill" hidden></i></button>
+          </div>
+          <div class="dex-grid" style="margin-top:10px;">
+            <div class="dex-card" onclick="dexGo('大熊猫')"><img src="assets/panda.webp?v=b0686338c252" alt="大熊猫"><div class="dn"><b>🐼 大熊猫</b><span>国家一级</span></div></div>
+            <div class="dex-card" onclick="dexGo('东北虎')"><img src="assets/tiger.webp?v=6ed2f8c7e325" alt="东北虎"><div class="dn"><b>🐯 东北虎</b><span>国家一级</span></div></div>
+            <div class="dex-card" onclick="dexGo('藏羚羊')"><img src="assets/antelope.webp?v=7abffeea1728" alt="藏羚羊"><div class="dn"><b>🦌 藏羚羊</b><span>国家一级</span></div></div>
+            <div class="dex-card" onclick="dexGo('雪豹')"><img src="assets/leopard.webp?v=1d7e213a1852" alt="雪豹"><div class="dn"><b>🐆 雪豹</b><span>国家一级</span></div></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- ===== 阶段二：制定保护 ===== -->
+    <div class="page" id="p4">
+      <p class="stage-hint"><b>本步任务</b>参考真实案例，用 100 点预算配置有针对性的措施。</p>
+      <div class="case-evidence" id="park-case"><b>中国保护地案例 · 三江源国家公园</b><p>高寒生态系统与江河源头保护。观察重点：源头涵养、栖息地完整性与就地保护的长期作用。</p></div>
+      <div class="case-choices" aria-label="保护地案例">
+        <button type="button" class="case-choice" onclick="selectParkCase('sjy')">🏔️ 三江源</button>
+        <button type="button" class="case-choice" onclick="selectParkCase('panda')">🐼 大熊猫</button>
+        <button type="button" class="case-choice" onclick="selectParkCase('tiger')">🐯 东北虎豹</button>
+      </div>
+      <details class="advanced-details">
+        <summary>更多保护地案例</summary>
+        <div class="inline-case-list">
+          <button type="button" class="park-item" onclick="selectParkCase('rainforest')"><span class="p-ico">🌴</span><span><b>海南热带雨林</b><span>热带雨林与旗舰物种</span></span><span class="fly">案例 →</span></button>
+          <button type="button" class="park-item" onclick="selectParkCase('wuyi')"><span class="p-ico">🍃</span><span><b>武夷山</b><span>中亚热带森林</span></span><span class="fly">案例 →</span></button>
+        </div>
+      </details>
+      <div class="plan-status"><b>可用生态行动点：<span id="plan-budget">100</span> / 100</b><div class="plan-tags" id="plan-tags"><span data-plan="insitu">国家公园</span><span data-plan="exsitu">迁地保护</span><span data-plan="restore">生态修复</span><span data-plan="law">法治保障</span></div><p id="plan-summary">先在“发现问题”中制造一种干扰，再选择措施。不同措施作用对象不同，恢复也存在时间差。</p></div>
+
+      <button class="btn gold" onclick="doAction('insitu')"><span class="b-ico">🏞️</span><div>就地保护 · 国家公园<small>40 点 · 抑制栖息地破碎与盗猎</small></div></button>
+      <button class="btn blue" onclick="doAction('exsitu')"><span class="b-ico">🐼</span><div>迁地保护 · 繁育放归<small>20 点 · 为濒危种群保留种源</small></div></button>
+      <button class="btn green" onclick="doAction('restore')"><span class="b-ico">🌱</span><div>生态修复<small>30 点 · 恢复湿地、林地结构和功能</small></div></button>
+      <button class="btn purple" onclick="doAction('law')"><span class="b-ico">⚖️</span><div>法治保障<small>10 点 · 减少污染、盗猎与入侵风险</small></div></button>
+      <button class="btn red" onclick="doAction('reset')"><span class="b-ico">🔄</span><div>重置场景<small>回到初始状态</small></div></button>
+
+    </div>
+
+    <!-- ===== 阶段三：比较结局 ===== -->
+    <div class="page" id="p6">
+      <p class="stage-hint"><b>本步任务</b>比较同一初始情景在十年后的两种结局。</p>
+      <button class="btn gold" onclick="simulate10Years()"><span class="b-ico">⏳</span><div>运行十年对照推演<small>用同一初始情景比较两种结局</small></div><span class="prog" id="m-sim">▶</span></button>
+      <div class="projection-grid">
+        <div class="projection-card bad"><strong>无保护情景</strong><span class="projection-score" id="baseline-score">—</span><div class="year-bars" id="baseline-bars"></div><p id="baseline-note">威胁叠加，生态系统可能越过恢复阈值。</p></div>
+        <div class="projection-card good"><strong>组合保护情景</strong><span class="projection-score" id="protected-score">—</span><div class="year-bars" id="protected-bars"></div><p id="protected-note">国家公园、修复与法治形成协同。</p></div>
+      </div>
+      <div class="evidence-card"><b id="sim-title">先建立一个可比较的初始情景</b><p id="sim-result">建议先在“发现问题”中只增加一种威胁，再进入“制定保护”配置措施。推演结果将给出综合指数、最低维度与关键原因。</p></div>
+    </div>
+
+    <!-- ===== 阶段四：自我检验 ===== -->
+    <div class="page" id="p5">
+      <p class="stage-hint"><b>本步任务</b>先依据当前模型作答，再按需复习基础知识。</p>
+      <div class="card scenario-question">
+        <div class="quiz-q">当前情景中，哪一类多样性最需要优先关注？</div>
+        <div class="live-evidence" id="model-question-evidence">请先在“发现问题”中改变一个威胁，系统会把当前最低指标作为答题证据。</div>
+        <button class="quiz-opt" onclick="checkScenarioAnswer('genetic')">A. 遗传多样性</button>
+        <button class="quiz-opt" onclick="checkScenarioAnswer('species')">B. 物种多样性</button>
+        <button class="quiz-opt" onclick="checkScenarioAnswer('ecosystem')">C. 生态系统多样性</button>
+        <div class="quiz-note" id="model-question-note"></div>
+      </div>
+      <details class="advanced-details">
+        <summary>基础知识复习（4 题）</summary>
+        <div class="details-body">
+      <div class="card">
+        <div class="quiz-q">1️⃣ 生物多样性减少的<b>首要</b>人为原因是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">A. 全球气候变暖</button>
+        <button class="quiz-opt" onclick="quiz(this,true,1)">B. 栖息地丧失与破碎化</button>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">C. 外来物种入侵</button>
+        <button class="quiz-opt" onclick="quiz(this,false,1)">D. 环境污染</button>
+        <div class="quiz-note" id="qn1"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">2️⃣ 我国自然保护地体系的主体是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">A. 自然保护区</button>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">B. 风景名胜区</button>
+        <button class="quiz-opt" onclick="quiz(this,true,2)">C. 国家公园</button>
+        <button class="quiz-opt" onclick="quiz(this,false,2)">D. 湿地公园</button>
+        <div class="quiz-note" id="qn2"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">3️⃣ 保护生物多样性<b>最有效</b>的措施是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">A. 建立动物园进行人工繁育</button>
+        <button class="quiz-opt" onclick="quiz(this,true,3)">B. 建立自然保护区（就地保护）</button>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">C. 建立种质资源库</button>
+        <button class="quiz-opt" onclick="quiz(this,false,3)">D. 加强立法打击盗猎</button>
+        <div class="quiz-note" id="qn3"></div>
+      </div>
+
+      <div class="card">
+        <div class="quiz-q">4️⃣ 下列<b>不属于</b>我国首批国家公园的是？</div>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">A. 三江源国家公园</button>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">B. 大熊猫国家公园</button>
+        <button class="quiz-opt" onclick="quiz(this,true,4)">C. 张家界国家公园</button>
+        <button class="quiz-opt" onclick="quiz(this,false,4)">D. 武夷山国家公园</button>
+        <div class="quiz-note" id="qn4"></div>
+      </div>
+      <div class="kpi-row"><div class="kpi"><b id="quiz-score">0 / 4</b><span>基础题得分</span></div></div>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   生物多样性与自然保护地 · 3D 交互课件（旗舰版）
+   ============================================================ */
+const threat = { habitat:0, climate:0, pollution:0, invasive:0, hunt:0 };
+const flags  = { ringNational:false, ringReserve:false, ringPark:false, dome:false,
+                 foodweb:false, rain:false, snow:false };
+let   bioIndex = 100;
+function getQualityProfile(){
+  const viewportWidth = Math.max(window.innerWidth || 0, document.documentElement?.clientWidth || 0);
+  const narrow = viewportWidth <= 700;
+  const mid = !narrow && viewportWidth <= 900;
+  return narrow
+    ? { name:'手机轻量版', trees:280, stars:380, birds:12, butterflies:5, fishes:3, fireflies:48, sparkles:48, smoke:24, precip:200, pixelRatio:1, shadows:false, shadowMap:512, antialias:false, satelliteLabels:false }
+    : mid
+      ? { name:'平板均衡版', trees:570, stars:900, birds:25, butterflies:12, fishes:6, fireflies:150, sparkles:120, smoke:60, precip:560, pixelRatio:1.35, shadows:true, shadowMap:1024, antialias:true, satelliteLabels:false }
+      : { name:'桌面高清版', trees:820, stars:1600, birds:40, butterflies:18, fishes:9, fireflies:260, sparkles:220, smoke:90, precip:1000, pixelRatio:2, shadows:true, shadowMap:2048, antialias:true, satelliteLabels:true };
+}
+const QUALITY = getQualityProfile();
+let   scene, camera, renderer, controls, clock;
+let   terrain, terrainGeo, baseColors, lake, underRock, starMat;
+let   hemiLight, sunLight, moonLight, sunGlow;
+let   treeCanopy, treeTrunk, treeCount = QUALITY.trees;
+let   birds, birdData = [], fireflies, fireflyData = [];
+let   animals = [], plantedTrees = [], butterflies = [], fishes = [], clouds = [];
+let   sparkles, smoke, smokeData = [], factory, invasivePatches = [];
+let   ringMeshes = {}, labelSprites = [], shieldDome, foodwebGroup;
+let   waterfall, waterfallPts, wfData = [];
+let   flowerHeads, flowerStems, reeds, bamboos;
+let   precip, precipData = [];
+let   skyTint, treeTop, bushes, terrainRocks, snowGems, ripples = [], pondMeshes = [];
+let   camAnim = null, threatTween = null;
+let   geneticFlash = 0, speciesFlash = 0, ecoFlash = 0;
+let   clickMode = null, dayIdx = 3, simTimer = null;
+const mission = { plant:0, release:0, clean:0, sim:0, score:0, done:0 };
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+// ---------- 噪声 ----------
+function hash2(x,y){ const n = Math.sin(x*127.1 + y*311.7)*43758.5453; return n - Math.floor(n); }
+function vnoise(x,y){
+  const xi = Math.floor(x), yi = Math.floor(y);
+  const xf = x - xi, yf = y - yi;
+  const u = xf*xf*(3-2*xf), v = yf*yf*(3-2*yf);
+  const a = hash2(xi,yi), b = hash2(xi+1,yi), c = hash2(xi,yi+1), d = hash2(xi+1,yi+1);
+  return a + (b-a)*u + (c-a)*v + (a-b-c+d)*u*v;
+}
+function fbm(x,y){ let t=0,a=1,f=1,s=0; for(let i=0;i<4;i++){ t+=vnoise(x*f,y*f)*a; s+=a; a*=.5; f*=2; } return t/s; }
+
+// ---------- 生物分区 ----------
+function angDeg(x,z){ let a = Math.atan2(z,x)*180/Math.PI; return a<0 ? a+360 : a; }
+function sectorOf(x,z){
+  const a = angDeg(x,z);
+  if (a>=300 || a<=20)  return 'mountain';
+  if (a>80 && a<=170)   return 'lake';
+  if (a>170 && a<=280)  return 'grass';
+  return 'forest';
+}
+const lakeCenter = new THREE.Vector3(Math.cos(125*Math.PI/180)*11, 0, Math.sin(125*Math.PI/180)*11);
+
+// ---------- 群岛定义（主岛 + 四座卫星生态岛） ----------
+const ISLANDS = [
+  { cx:0,   cz:0,   R:26, type:'main',    yOff:0,    name:'生态方舟主岛' },
+  { cx:-58, cz:-36, R:14, type:'jungle',  yOff:-2,   name:'热带雨林岛' },
+  { cx:58,  cz:-32, R:12, type:'desert',  yOff:-1,   name:'荒漠岛' },
+  { cx:-52, cz:44,  R:13, type:'snow',    yOff:1.5,  name:'雪山岛' },
+  { cx:54,  cz:42,  R:11, type:'wetland', yOff:-1.5, name:'湿地岛' },
+];
+function islandAt(x,z){
+  let best = null, bd = 1.25;
+  for (const isl of ISLANDS){
+    const d = Math.hypot(x-isl.cx, z-isl.cz) / isl.R;
+    if (d < bd){ bd = d; best = isl; }
+  }
+  return best;
+}
+
+function terrainH(x,z){
+  let best = -6;
+  for (const isl of ISLANDS){
+    const lx = x - isl.cx, lz = z - isl.cz;
+    const r = Math.hypot(lx, lz);
+    if (r > isl.R+3) continue;
+    const f = Math.max(0, 1 - (r/isl.R)*(r/isl.R));
+    const n = fbm(x*0.08+7, z*0.08+3);
+    let h;
+    if (isl.type==='main'){
+      const sec = sectorOf(x,z);
+      if (sec==='mountain'){
+        h = f * (3.5 + n*9.5);
+        const d1 = Math.hypot(x-14, z+2), d2 = Math.hypot(x-19, z-8);
+        h += Math.max(0, 5.5 - d1*0.5) * f + Math.max(0, 4 - d2*0.5) * f;
+      } else if (sec==='lake'){
+        h = f * (1.2 + n*1.5);
+        const dl = Math.hypot(x-lakeCenter.x, z-lakeCenter.z);
+        h -= Math.max(0, 3.2 - dl*0.28) * f;
+      } else if (sec==='grass'){
+        h = f * (1.6 + n*2.2);
+      } else {
+        h = f * (2.2 + n*3.4);
+      }
+    } else if (isl.type==='jungle'){
+      h = f * (2.6 + n*4.2);
+    } else if (isl.type==='desert'){
+      h = f * (1.3 + n*2.4);
+      h += Math.max(0, 2.4 - Math.hypot(lx-4, lz+3)*0.32) * f;   // 沙丘
+      h += Math.max(0, 1.8 - Math.hypot(lx+5, lz-4)*0.35) * f;
+    } else if (isl.type==='snow'){
+      h = f * (4 + n*8);
+      h += Math.max(0, 5.5 - Math.hypot(lx, lz)*0.5) * f;        // 主峰
+    } else {  // wetland
+      h = f * (1.0 + n*1.3);
+      h -= Math.max(0, 1.9 - Math.hypot(lx-3, lz-2)*0.5) * f;    // 水塘1
+      h -= Math.max(0, 1.6 - Math.hypot(lx+4, lz+3)*0.45) * f;   // 水塘2
+    }
+    h = h - f*0.4 + isl.yOff;
+    if (h > best) best = h;
+  }
+  return best;
+}
+function groundY(x,z){ return terrainH(x,z) + islandBob(); }
+let bobNow = 0;
+function islandBob(){ return bobNow; }
+
+function colorFor(x,z,h){
+  const isl = islandAt(x,z);
+  const n = fbm(x*0.25+1, z*0.25+9);
+  const c = new THREE.Color();
+  const type = isl ? isl.type : 'main';
+  if (type === 'jungle'){
+    c.setHex(0x1f5c30).lerp(new THREE.Color(0x35824a), n);
+  } else if (type === 'desert'){
+    c.setHex(0xe0c88f).lerp(new THREE.Color(0xc4a468), n);
+    if (h > 2.6) c.lerp(new THREE.Color(0xd9b878), 0.5);
+  } else if (type === 'snow'){
+    if (h > 7.2)      c.setHex(0xffffff);
+    else if (h > 5)   c.setHex(0xdde6ee).lerp(new THREE.Color(0x9aa3ad), Math.min(1,(7.2-h)/2));
+    else              c.setHex(0x7a9068).lerp(new THREE.Color(0x8a8f96), Math.min(1,(h-1)/3));
+  } else if (type === 'wetland'){
+    c.setHex(0x6fae8c).lerp(new THREE.Color(0x578f70), n);
+    if (h < isl.yOff + 0.35) c.setHex(0x4d8a9a);                  // 浅水区
+  } else {
+    const sec = sectorOf(x,z);
+    if (h < 0.15){ c.setHex(0xd9c89a); }
+    else if (sec==='mountain'){
+      if (h > 7.2)      c.setHex(0xffffff);
+      else if (h > 5.2) c.setHex(0x9aa3ad);
+      else              c.setHex(0x6f8f5a).lerp(new THREE.Color(0x8a8f96), Math.min(1,(h-2)/3));
+    } else if (sec==='lake'){
+      c.setHex(0x86b06a).lerp(new THREE.Color(0x5f9e78), n);
+    } else if (sec==='grass'){
+      c.setHex(0xa9c76f).lerp(new THREE.Color(0x8fb45e), n);
+    } else {
+      c.setHex(0x3f7d46).lerp(new THREE.Color(0x2d5c34), n);
+    }
+    if (h < 0.8) c.lerp(new THREE.Color(0xd9c89a), Math.max(0,(0.8-h))*0.8);
+  }
+  if (h < (isl ? isl.yOff : 0) + 0.15 && type !== 'wetland') c.setHex(0xcbb98f);
+  return c;
+}
+
+// ---------- 初始化 ----------
+function init(){
+  const stage = document.getElementById('stage');
+  scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a1428, 0.0085);
+  clock = new THREE.Clock();
+
+  camera = new THREE.PerspectiveCamera(52, stage.clientWidth/stage.clientHeight, 0.1, 900);
+  camera.position.set(56, 36, 62);
+
+  renderer = new THREE.WebGLRenderer({ canvas:document.getElementById('scene-canvas'), antialias:QUALITY.antialias });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, QUALITY.pixelRatio));
+  renderer.setSize(stage.clientWidth, stage.clientHeight);
+  renderer.shadowMap.enabled = QUALITY.shadows;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.dampingFactor = 0.06;
+  controls.target.set(0, 3, 0);
+  controls.minDistance = 14; controls.maxDistance = 280;
+  controls.maxPolarAngle = Math.PI * 0.52;
+  controls.autoRotateSpeed = 0.8;
+
+  hemiLight = new THREE.HemisphereLight(0x88aaff, 0x223318, 0.55);
+  scene.add(hemiLight);
+  moonLight = new THREE.DirectionalLight(0xbfd4ff, 0.9);
+  moonLight.position.set(-35, 42, -25);
+  moonLight.castShadow = true;
+  moonLight.shadow.mapSize.set(QUALITY.shadowMap, QUALITY.shadowMap);
+  moonLight.shadow.camera.left = -40; moonLight.shadow.camera.right = 40;
+  moonLight.shadow.camera.top = 40;  moonLight.shadow.camera.bottom = -40;
+  scene.add(moonLight);
+  sunLight = new THREE.DirectionalLight(0xffd9a0, 0.85);
+  sunLight.position.set(30, 18, 30);
+  scene.add(sunLight);
+  scene.add(new THREE.AmbientLight(0x223044, 0.6));
+
+  buildSky();
+  buildIsland();
+  buildLake();
+  buildWaterfall();
+  buildClouds();
+  buildTrees();
+  buildDecor();
+  buildFlowersReedsBamboo();
+  buildAnimals();
+  buildBirds();
+  buildButterflies();
+  buildFish();
+  buildFireflies();
+  buildSparkles();
+  buildFactorySmoke();
+  buildInvasivePatches();
+  buildRings();
+  buildLabels();
+  buildShield();
+  buildFoodweb();
+  buildPrecip();
+  bindClicks();
+
+  window.addEventListener('resize', onResize);
+  applyThreats();
+  animate();
+  setTimeout(()=>{ const l=document.getElementById('loader'); l.style.opacity=0; setTimeout(()=>l.remove(), 800); }, 600);
+}
+
+// ---------- 天空 ----------
+function buildSky(){
+  // AI 生成星空全景作为场景背景
+  new THREE.TextureLoader().load('assets/sky.webp', tex=>{
+    tex.mapping = THREE.EquirectangularReflectionMapping;
+    scene.background = tex;
+  });
+  // 昼夜调色穹顶（叠加在星空贴图之上）
+  skyTint = new THREE.Mesh(new THREE.SphereGeometry(380, 24, 16),
+    new THREE.MeshBasicMaterial({ color:0x0a1428, transparent:true, opacity:0.55,
+      side:THREE.BackSide, depthWrite:false, fog:false }));
+  scene.add(skyTint);
+
+  const N = QUALITY.stars, pos = new Float32Array(N*3);
+  for (let i=0;i<N;i++){
+    const r = 260 + Math.random()*180;
+    const t = Math.random()*Math.PI*2, p = Math.acos(2*Math.random()-1);
+    pos[i*3]   = r*Math.sin(p)*Math.cos(t);
+    pos[i*3+1] = Math.abs(r*Math.cos(p))*0.7 - 20;
+    pos[i*3+2] = r*Math.sin(p)*Math.sin(t);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  starMat = new THREE.PointsMaterial({ color:0xbfd8ff, size:1.1, sizeAttenuation:true,
+    transparent:true, opacity:0.85, blending:THREE.AdditiveBlending, depthWrite:false });
+  scene.add(new THREE.Points(g, starMat));
+
+  const earth = new THREE.Mesh(new THREE.SphereGeometry(26, 48, 48),
+    new THREE.MeshPhongMaterial({ color:0x1d5f8a, emissive:0x0a2f4d, shininess:30 }));
+  earth.position.set(-95, 34, -140);
+  scene.add(earth);
+  const glow = new THREE.Mesh(new THREE.SphereGeometry(27.5, 48, 48),
+    new THREE.MeshBasicMaterial({ color:0x3aa0e0, transparent:true, opacity:0.18,
+      blending:THREE.AdditiveBlending, side:THREE.BackSide }));
+  glow.position.copy(earth.position);
+  scene.add(glow);
+
+  // 太阳光晕
+  const cv = document.createElement('canvas'); cv.width = cv.height = 256;
+  const ctx = cv.getContext('2d');
+  const grad = ctx.createRadialGradient(128,128,10,128,128,128);
+  grad.addColorStop(0,'rgba(255,236,190,1)');
+  grad.addColorStop(0.35,'rgba(255,210,130,.55)');
+  grad.addColorStop(1,'rgba(255,200,120,0)');
+  ctx.fillStyle = grad; ctx.fillRect(0,0,256,256);
+  sunGlow = new THREE.Sprite(new THREE.SpriteMaterial({ map:new THREE.CanvasTexture(cv),
+    transparent:true, opacity:0.9, blending:THREE.AdditiveBlending, depthWrite:false }));
+  sunGlow.scale.set(90, 90, 1);
+  sunGlow.position.set(150, 90, 130);
+  scene.add(sunGlow);
+}
+
+// ---------- 悬浮群岛 ----------
+const floatingRocks = [];
+const satUnderRocks = [];
+function buildIsland(){
+  terrainGeo = new THREE.PlaneGeometry(175, 175, 200, 200);
+  terrainGeo.rotateX(-Math.PI/2);
+  const pos = terrainGeo.attributes.position;
+  const colors = new Float32Array(pos.count*3);
+  for (let i=0;i<pos.count;i++){
+    const x = pos.getX(i), z = pos.getZ(i);
+    const h = terrainH(x,z);
+    pos.setY(i, h);
+    const c = colorFor(x,z,h);
+    colors[i*3]=c.r; colors[i*3+1]=c.g; colors[i*3+2]=c.b;
+  }
+  terrainGeo.setAttribute('color', new THREE.BufferAttribute(colors,3));
+  terrainGeo.computeVertexNormals();
+  baseColors = colors.slice();
+
+  terrain = new THREE.Mesh(terrainGeo, new THREE.MeshStandardMaterial({
+    vertexColors:true, flatShading:true, roughness:0.95, metalness:0.02 }));
+  terrain.receiveShadow = true;
+  scene.add(terrain);
+
+  underRock = new THREE.Mesh(new THREE.ConeGeometry(23, 20, 9),
+    new THREE.MeshStandardMaterial({ color:0x4a3f36, flatShading:true, roughness:1 }));
+  underRock.rotation.x = Math.PI;
+  underRock.position.y = -10.4;
+  scene.add(underRock);
+
+  // 卫星岛底岩锥
+  const rockMat = new THREE.MeshStandardMaterial({ color:0x4a3f36, flatShading:true, roughness:1 });
+  ISLANDS.filter(i=>i.type!=='main').forEach(isl=>{
+    const h = isl.R * 0.85;
+    const cone = new THREE.Mesh(new THREE.ConeGeometry(isl.R*0.82, h, 8), rockMat);
+    cone.rotation.x = Math.PI;
+    cone.position.set(isl.cx, isl.yOff - h/2 - 0.35, isl.cz);
+    cone.userData = { baseY: cone.position.y };
+    scene.add(cone);
+    satUnderRocks.push(cone);
+  });
+
+  // 通往卫星岛的悬浮踏石链
+  const stepMat = new THREE.MeshStandardMaterial({ color:0x6a5f52, flatShading:true, roughness:1 });
+  ISLANDS.filter(i=>i.type!=='main').forEach(isl=>{
+    const steps = 5;
+    for (let i=1;i<=steps;i++){
+      const k = i/(steps+1);
+      const sx = 0 + (isl.cx)*k, sz = 0 + (isl.cz)*k;
+      const stone = new THREE.Mesh(new THREE.IcosahedronGeometry(1.1, 0), stepMat);
+      stone.scale.set(1.4, 0.45, 1.4);
+      stone.position.set(sx + (Math.random()-0.5)*2, -0.5 + Math.sin(k*Math.PI)*1.2 + (Math.random()-0.5), sz + (Math.random()-0.5)*2);
+      stone.userData = { spin:0.1+Math.random()*0.2, bobAmp:0.3+Math.random()*0.4, bobOff:Math.random()*6 };
+      stone.userData.baseY = stone.position.y;
+      scene.add(stone);
+      floatingRocks.push(stone);
+    }
+  });
+
+  for (let i=0;i<9;i++){
+    const s = 0.6 + Math.random()*1.6;
+    const rock = new THREE.Mesh(new THREE.IcosahedronGeometry(s, 0),
+      new THREE.MeshStandardMaterial({ color:0x5a5048, flatShading:true, roughness:1 }));
+    const a = Math.random()*Math.PI*2;
+    rock.position.set(Math.cos(a)*(16+Math.random()*10), -8-Math.random()*9, Math.sin(a)*(16+Math.random()*10));
+    rock.userData = { spin:0.2+Math.random()*0.5, bobAmp:0.4+Math.random()*0.5, bobOff:Math.random()*6 };
+    rock.userData.baseY = rock.position.y;
+    scene.add(rock);
+    floatingRocks.push(rock);
+  }
+}
+
+// ---------- 湖泊 ----------
+function buildLake(){
+  lake = new THREE.Mesh(new THREE.CircleGeometry(7.2, 48),
+    new THREE.MeshPhongMaterial({ color:0x2fa8c8, emissive:0x0b4a66, transparent:true,
+      opacity:0.85, shininess:120, specular:0x99eaff }));
+  lake.rotation.x = -Math.PI/2;
+  lake.position.set(lakeCenter.x, 0.32, lakeCenter.z);
+  scene.add(lake);
+  // 湖面涟漪
+  for (let i=0;i<3;i++){
+    const rp = new THREE.Mesh(new THREE.RingGeometry(0.9, 1.05, 40),
+      new THREE.MeshBasicMaterial({ color:0x9fe8ff, transparent:true, opacity:0.3,
+        blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide }));
+    rp.rotation.x = -Math.PI/2;
+    rp.position.set(lakeCenter.x, 0.36, lakeCenter.z);
+    rp.userData = { off: i/3 };
+    scene.add(rp);
+    ripples.push(rp);
+  }
+  const halo = new THREE.Mesh(new THREE.CircleGeometry(8.6, 48),
+    new THREE.MeshBasicMaterial({ color:0x35c8e8, transparent:true, opacity:0.12,
+      blending:THREE.AdditiveBlending, depthWrite:false }));
+  halo.rotation.x = -Math.PI/2;
+  halo.position.set(lakeCenter.x, 0.34, lakeCenter.z);
+  lake.userData.halo = halo;
+  scene.add(halo);
+
+  // 湿地岛水塘
+  const wl = ISLANDS[4];
+  [[3,2,3.2],[-4,-3,2.4]].forEach(([dx,dz,rr])=>{
+    const px = wl.cx + dx, pz = wl.cz + dz;
+    const pond = new THREE.Mesh(new THREE.CircleGeometry(rr, 32),
+      new THREE.MeshPhongMaterial({ color:0x2fa8c8, emissive:0x0b4a66, transparent:true,
+        opacity:0.8, shininess:110 }));
+    pond.rotation.x = -Math.PI/2;
+    pond.position.set(px, wl.yOff + 0.32, pz);   // 固定水位，低于塘岸、高于塘底
+    pond.userData.baseY = pond.position.y;
+    scene.add(pond);
+    pondMeshes.push(pond);
+  });
+}
+
+// ---------- 瀑布（山地 → 湖泊 生命之源） ----------
+function buildWaterfall(){
+  // 起点：山地边缘高处；终点：湖岸
+  const topA = 40*Math.PI/180, botA = 78*Math.PI/180;
+  const top = new THREE.Vector3(Math.cos(topA)*13, 0, Math.sin(topA)*13);
+  const bot = new THREE.Vector3(Math.cos(botA)*16, 0, Math.sin(botA)*16);
+  top.y = terrainH(top.x, top.z) + 0.6;
+  bot.y = terrainH(bot.x, bot.z) + 0.35;
+
+  // 水帘
+  const len = top.distanceTo(bot);
+  waterfall = new THREE.Mesh(new THREE.PlaneGeometry(1.7, len, 1, 12),
+    new THREE.MeshBasicMaterial({ color:0x9adcf5, transparent:true, opacity:0.45,
+      blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide }));
+  waterfall.position.copy(top).lerp(bot, 0.5);
+  waterfall.lookAt(bot.x, bot.y, bot.z);
+  waterfall.rotateX(Math.PI/2 * 0); // 保持立面
+  waterfall.userData = { top, bot };
+  scene.add(waterfall);
+
+  // 落水粒子
+  const N = 120, pos = new Float32Array(N*3);
+  for (let i=0;i<N;i++){
+    const k = Math.random();
+    pos[i*3]   = top.x + (bot.x-top.x)*k + (Math.random()-0.5)*0.9;
+    pos[i*3+1] = top.y + (bot.y-top.y)*k;
+    pos[i*3+2] = top.z + (bot.z-top.z)*k + (Math.random()-0.5)*0.9;
+    wfData.push({ k, sp:0.35+Math.random()*0.4 });
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  waterfallPts = new THREE.Points(g, new THREE.PointsMaterial({ color:0xcdeeff, size:0.32,
+    transparent:true, opacity:0.8, blending:THREE.AdditiveBlending, depthWrite:false }));
+  scene.add(waterfallPts);
+}
+
+// ---------- 云朵 ----------
+function buildClouds(){
+  for (let i=0;i<7;i++){
+    const cloud = new THREE.Group();
+    const mat = new THREE.MeshPhongMaterial({ color:0xffffff, transparent:true,
+      opacity:0.5, depthWrite:false });
+    const n = 3 + Math.floor(Math.random()*3);
+    for (let j=0;j<n;j++){
+      const s = new THREE.Mesh(new THREE.SphereGeometry(1.2+Math.random()*1.4, 8, 6), mat);
+      s.position.set(j*1.6 - n*0.8, Math.random()*0.5, (Math.random()-0.5)*1.4);
+      s.scale.y = 0.55;
+      cloud.add(s);
+    }
+    const a = Math.random()*Math.PI*2;
+    cloud.userData = { a, r:22+Math.random()*42, h:14+Math.random()*10, sp:0.02+Math.random()*0.03 };
+    cloud.position.set(Math.cos(a)*cloud.userData.r, cloud.userData.h, Math.sin(a)*cloud.userData.r);
+    scene.add(cloud);
+    clouds.push(cloud);
+  }
+}
+
+// ---------- 树木（双层树冠 · 更精致） ----------
+function buildTrees(){
+  const canopyGeo = new THREE.ConeGeometry(1.05, 2.2, 6);
+  const topGeo    = new THREE.ConeGeometry(0.68, 1.7, 6);
+  const trunkGeo  = new THREE.CylinderGeometry(0.14, 0.22, 1.0, 5);
+  const canopyMat = new THREE.MeshStandardMaterial({ color:0xffffff, flatShading:true, roughness:0.9 });
+  const topMat    = new THREE.MeshStandardMaterial({ color:0xffffff, flatShading:true, roughness:0.85 });
+  const trunkMat  = new THREE.MeshStandardMaterial({ color:0x6b4a2f, flatShading:true, roughness:1 });
+  treeCanopy = new THREE.InstancedMesh(canopyGeo, canopyMat, treeCount);
+  treeTop    = new THREE.InstancedMesh(topGeo, topMat, treeCount);
+  treeTrunk  = new THREE.InstancedMesh(trunkGeo, trunkMat, treeCount);
+  treeCanopy.castShadow = true;
+  const dummy = new THREE.Object3D();
+  const cGreen = new THREE.Color();
+  let placed = 0, guard = 0;
+  const jungleIsl = ISLANDS[1];
+  while (placed < treeCount && guard++ < 40000){
+    let x, z, sec;
+    if (Math.random() < 0.34){
+      // 热带雨林岛：更高大茂密
+      const a2 = Math.random()*Math.PI*2, r2 = Math.sqrt(Math.random())*jungleIsl.R*0.85;
+      x = jungleIsl.cx + Math.cos(a2)*r2;
+      z = jungleIsl.cz + Math.sin(a2)*r2;
+      sec = 'jungle';
+    } else {
+      const a = Math.random()*Math.PI*2, r = 3 + Math.sqrt(Math.random())*19.5;
+      x = Math.cos(a)*r; z = Math.sin(a)*r;
+      sec = sectorOf(x,z);
+    }
+    if (sec==='lake') continue;
+    const h = terrainH(x,z);
+    if (sec==='jungle'){ if (h < 0.3 || h > 5.5) continue; }
+    else { if (h < 0.5 || h > 5.6) continue; }
+    if (sec==='grass' && Math.random() < 0.72) continue;
+    if (sec==='desert') continue;
+    const s = sec==='jungle' ? 1.15 + Math.random()*0.95
+            : 0.7 + Math.random()*0.9 + (sec==='forest' ? 0.25 : 0);
+    const rotY = Math.random()*Math.PI*2;
+    // 下层树冠
+    dummy.position.set(x, h + 1.35*s, z);
+    dummy.scale.setScalar(s);
+    dummy.rotation.set(0, rotY, 0);
+    dummy.updateMatrix();
+    treeCanopy.setMatrixAt(placed, dummy.matrix);
+    cGreen.setHex(sec==='jungle' ? 0x1e5c33 : sec==='grass' ? 0x77a24e : 0x2e6b3a).offsetHSL(0, 0, (Math.random()-0.5)*0.08);
+    treeCanopy.setColorAt(placed, cGreen);
+    // 上层树冠（浅色，微微错动）
+    dummy.position.set(x + (Math.random()-0.5)*0.12, h + 2.45*s, z + (Math.random()-0.5)*0.12);
+    dummy.rotation.set(0, rotY + 0.5, 0);
+    dummy.updateMatrix();
+    treeTop.setMatrixAt(placed, dummy.matrix);
+    cGreen.offsetHSL(0.01, 0.05, 0.1);
+    treeTop.setColorAt(placed, cGreen);
+    // 树干
+    dummy.position.set(x, h + 0.45*s, z);
+    dummy.rotation.set(0, rotY, 0);
+    dummy.updateMatrix();
+    treeTrunk.setMatrixAt(placed, dummy.matrix);
+    placed++;
+  }
+  treeCanopy.instanceMatrix.needsUpdate = true;
+  treeTop.instanceMatrix.needsUpdate = true;
+  treeTrunk.instanceMatrix.needsUpdate = true;
+  scene.add(treeCanopy); scene.add(treeTop); scene.add(treeTrunk);
+}
+
+// ---------- 灌木 · 地表岩石 · 山顶雪晶 ----------
+function buildDecor(){
+  const dummy = new THREE.Object3D();
+  const col = new THREE.Color();
+
+  // 灌木丛（主岛 + 雨林岛）
+  const BN = 220;
+  bushes = new THREE.InstancedMesh(new THREE.SphereGeometry(0.5, 7, 5),
+    new THREE.MeshStandardMaterial({ color:0xffffff, flatShading:true, roughness:0.95 }), BN);
+  let placed = 0, guard = 0;
+  while (placed < BN && guard++ < 20000){
+    const isl = Math.random() < 0.3 ? ISLANDS[1] : ISLANDS[0];
+    const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*isl.R*0.85;
+    const x = isl.cx + Math.cos(a)*r, z = isl.cz + Math.sin(a)*r;
+    const h = terrainH(x,z);
+    if (h < isl.yOff + 0.3 || h > 5.4 + isl.yOff) continue;
+    dummy.position.set(x, h + 0.18, z);
+    dummy.scale.set(0.6+Math.random()*0.9, 0.4+Math.random()*0.5, 0.6+Math.random()*0.9);
+    dummy.rotation.y = Math.random()*Math.PI*2;
+    dummy.updateMatrix();
+    bushes.setMatrixAt(placed, dummy.matrix);
+    col.setHex(isl.type==='jungle' ? 0x2a6b3a : 0x3c7a44).offsetHSL(0, 0, (Math.random()-0.5)*0.09);
+    bushes.setColorAt(placed, col);
+    placed++;
+  }
+  scene.add(bushes);
+
+  // 地表岩石（所有岛屿）
+  const RN2 = 110;
+  terrainRocks = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(0.4, 0),
+    new THREE.MeshStandardMaterial({ color:0x8a8f96, flatShading:true, roughness:1 }), RN2);
+  placed = 0; guard = 0;
+  while (placed < RN2 && guard++ < 20000){
+    const isl = ISLANDS[Math.floor(Math.random()*ISLANDS.length)];
+    const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*isl.R*0.85;
+    const x = isl.cx + Math.cos(a)*r, z = isl.cz + Math.sin(a)*r;
+    const h = terrainH(x,z);
+    if (h < isl.yOff + 0.1) continue;
+    dummy.position.set(x, h + 0.1, z);
+    dummy.scale.set(0.5+Math.random()*1.3, 0.4+Math.random()*0.9, 0.5+Math.random()*1.3);
+    dummy.rotation.set(Math.random()*3, Math.random()*3, Math.random()*3);
+    dummy.updateMatrix();
+    terrainRocks.setMatrixAt(placed, dummy.matrix);
+    placed++;
+  }
+  scene.add(terrainRocks);
+
+  // 荒漠岛仙人掌
+  const CN = 42;
+  const desertIsl = ISLANDS[2];
+  const cactus = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.14, 0.18, 1.7, 6),
+    new THREE.MeshStandardMaterial({ color:0x4a8f4f, flatShading:true, roughness:0.9 }), CN);
+  placed = 0; guard = 0;
+  while (placed < CN && guard++ < 20000){
+    const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*desertIsl.R*0.8;
+    const x = desertIsl.cx + Math.cos(a)*r, z = desertIsl.cz + Math.sin(a)*r;
+    const h = terrainH(x,z);
+    if (h < desertIsl.yOff + 0.2) continue;
+    dummy.position.set(x, h + 0.8, z);
+    dummy.scale.set(0.7+Math.random()*0.7, 0.6+Math.random()*0.9, 0.7+Math.random()*0.7);
+    dummy.rotation.y = Math.random()*Math.PI*2;
+    dummy.updateMatrix();
+    cactus.setMatrixAt(placed, dummy.matrix);
+    placed++;
+  }
+  scene.add(cactus);
+
+  // 山顶雪晶（主岛山地 + 雪山岛；冬季增大 / 气候变暖消融）
+  const GN = 34;
+  snowGems = new THREE.InstancedMesh(new THREE.OctahedronGeometry(0.35, 0),
+    new THREE.MeshStandardMaterial({ color:0xeaf6ff, flatShading:true, roughness:0.3,
+      emissive:0x88aacc, emissiveIntensity:0.25 }), GN);
+  placed = 0; guard = 0;
+  while (placed < GN && guard++ < 20000){
+    const isl = Math.random() < 0.45 ? ISLANDS[3] : ISLANDS[0];
+    const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*isl.R*0.8;
+    const x = isl.cx + Math.cos(a)*r, z = isl.cz + Math.sin(a)*r;
+    const h = terrainH(x,z);
+    if (isl.type==='main' && sectorOf(x,z)!=='mountain') continue;
+    if (h < isl.yOff + 5.5) continue;
+    dummy.position.set(x, h + 0.35, z);
+    dummy.scale.setScalar(0.6+Math.random()*1);
+    dummy.rotation.set(Math.random()*3, Math.random()*3, 0);
+    dummy.updateMatrix();
+    snowGems.setMatrixAt(placed, dummy.matrix);
+    placed++;
+  }
+  scene.add(snowGems);
+}
+
+// ---------- 花海 · 芦苇 · 竹林 ----------
+function buildFlowersReedsBamboo(){
+  const dummy = new THREE.Object3D();
+  const col = new THREE.Color();
+
+  // 花朵（草原 + 湖岸）
+  const FN = 160;
+  flowerHeads = new THREE.InstancedMesh(new THREE.SphereGeometry(0.16, 6, 5),
+    new THREE.MeshStandardMaterial({ color:0xffffff, flatShading:true, emissive:0x222222 }), FN);
+  flowerStems = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.02, 0.02, 0.5, 4),
+    new THREE.MeshStandardMaterial({ color:0x3f7d46 }), FN);
+  const petals = [0xff7eb9, 0xffd166, 0xc084fc, 0xff8f6b, 0x7ee8fa, 0xf9f871];
+  let placed = 0, guard = 0;
+  while (placed < FN && guard++ < 20000){
+    const a = Math.random()*Math.PI*2, r = 4 + Math.sqrt(Math.random())*18;
+    const x = Math.cos(a)*r, z = Math.sin(a)*r;
+    const sec = sectorOf(x,z);
+    if (sec!=='grass' && sec!=='lake') continue;
+    const h = terrainH(x,z);
+    if (h < 0.4) continue;
+    dummy.position.set(x, h + 0.55, z); dummy.scale.setScalar(0.8+Math.random()*0.9);
+    dummy.updateMatrix();
+    flowerHeads.setMatrixAt(placed, dummy.matrix);
+    col.setHex(petals[Math.floor(Math.random()*petals.length)]);
+    flowerHeads.setColorAt(placed, col);
+    dummy.position.y = h + 0.25; dummy.updateMatrix();
+    flowerStems.setMatrixAt(placed, dummy.matrix);
+    placed++;
+  }
+  scene.add(flowerHeads); scene.add(flowerStems);
+
+  // 芦苇（环湖）
+  const RN = 90;
+  reeds = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.03, 0.05, 1.6, 4),
+    new THREE.MeshStandardMaterial({ color:0x8a9a5b, flatShading:true }), RN);
+  for (let i=0;i<RN;i++){
+    const a = Math.random()*Math.PI*2;
+    const rr = 7.6 + Math.random()*1.8;
+    const x = lakeCenter.x + Math.cos(a)*rr, z = lakeCenter.z + Math.sin(a)*rr;
+    const h = Math.max(terrainH(x,z), 0.2);
+    dummy.position.set(x, h + 0.8, z);
+    dummy.scale.setScalar(0.7 + Math.random()*0.8);
+    dummy.rotation.set((Math.random()-0.5)*0.2, 0, (Math.random()-0.5)*0.2);
+    dummy.updateMatrix();
+    reeds.setMatrixAt(i, dummy.matrix);
+  }
+  scene.add(reeds);
+
+  // 竹林（森林区·熊猫家园）
+  const BN = 42;
+  bamboos = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.07, 0.09, 3.4, 5),
+    new THREE.MeshStandardMaterial({ color:0x58b368, flatShading:true }), BN);
+  const bx = Math.cos(335*Math.PI/180)*10, bz = Math.sin(335*Math.PI/180)*10;
+  for (let i=0;i<BN;i++){
+    const x = bx + (Math.random()-0.5)*8, z = bz + (Math.random()-0.5)*8;
+    const h = terrainH(x,z);
+    dummy.position.set(x, h + 1.7, z);
+    dummy.scale.setScalar(0.6 + Math.random()*0.7);
+    dummy.updateMatrix();
+    bamboos.setMatrixAt(i, dummy.matrix);
+  }
+  scene.add(bamboos);
+}
+</script>
+
+<script>
+// ---------- 珍稀动物（点击可看百科） ----------
+const SPECIES_INFO = {
+  '大熊猫':   { ico:'🐼', img:'assets/panda.webp', lv:'国家一级重点保护野生动物', txt:'被誉为"活化石"与中国国宝，以竹子为食，是生物多样性保护的旗舰物种。大熊猫国家公园跨川陕甘三省，打通了原本破碎化的栖息地廊道。' },
+  '东北虎':   { ico:'🐯', img:'assets/tiger.webp', lv:'国家一级重点保护野生动物', txt:'森林生态系统的顶级捕食者，位于食物链顶端。它的存在说明森林生态系统结构完整、猎物充足——保护东北虎就是保护整片森林。' },
+  '藏羚羊':   { ico:'🦌', img:'assets/antelope.webp', lv:'国家一级重点保护野生动物', txt:'青藏高原特有物种，曾因盗猎濒临灭绝，经可可西里严格保护后种群恢复到 30 万只以上，是就地保护成功的经典案例。' },
+  '金丝猴':   { ico:'🐒', img:'assets/monkey.webp', lv:'国家一级重点保护野生动物', txt:'川金丝猴栖息于海拔 1500–3300 米的针阔混交林，毛色金黄，群居生活。栖息地破碎化是其生存的最大威胁。' },
+  '朱鹮':     { ico:'🕊️', img:'assets/ibis.webp', lv:'国家一级重点保护野生动物', txt:'曾濒临野外灭绝，1981 年在陕西洋县仅发现 7 只。经人工繁育与野化放归（迁地保护+就地保护结合），全球种群已超 9000 只。' },
+  '雪豹':     { ico:'🐆', img:'assets/leopard.webp', lv:'国家一级重点保护野生动物', txt:'高山生态系统的旗舰物种，栖息于雪线附近，被称为"雪山之王"。气候变化导致雪线上移，正不断压缩它的生存空间。' },
+  '骆驼':     { ico:'🐫', lv:'荒漠生态系统代表物种', txt:'"沙漠之舟"，极耐干旱，驼峰储存脂肪、鼻孔可闭合防沙。野骆驼为国家一级保护动物，数量比大熊猫还稀少，主要分布于罗布泊一带。' },
+  '鱼类':     { ico:'🐟', lv:'湿地生态系统指示物种', txt:'鱼类是湖泊湿地生态健康的指示器。水质污染、围湖造田、过度捕捞会首先反映在鱼类数量的减少上。' }
+};
+function dexGo(name){
+  const a = animals.find(x=>x.userData.name === name && x.visible) || animals.find(x=>x.userData.name === name);
+  showSpeciesInfo(name);
+  if (a){
+    const p = a.position;
+    flyTo(new THREE.Vector3(p.x + 7, p.y + 5, p.z + 7), new THREE.Vector3(p.x, p.y + 1, p.z));
+    toast(SPECIES_INFO[name].ico + ' 镜头已锁定 ' + name);
+  }
+}
+const ECO_INFO = {
+  forest:   { ico:'🌲', name:'森林生态系统', txt:'陆地上最复杂、物种最丰富的生态系统，具有涵养水源、保持水土、固碳释氧等功能。垂直结构复杂，为不同生物提供多样的栖息空间。' },
+  grass:    { ico:'🌾', name:'草原生态系统', txt:'分布在半干旱地区，以草本植物为主，是藏羚羊等有蹄类的家园。过度放牧会导致草场退化、土地荒漠化。' },
+  lake:     { ico:'💧', name:'湿地湖泊生态系统', txt:'"地球之肾"，具有调蓄洪水、净化水质、维护生物多样性等功能，是朱鹮、鱼类和水生植物的家园。' },
+  mountain: { ico:'🏔️', name:'山地生态系统', txt:'随海拔升高呈现垂直地带性分异：森林→灌丛→草甸→流石滩→冰雪带。雪豹栖息于雪线附近，对气候变化极为敏感。' },
+  jungle:   { ico:'🌴', name:'热带雨林生态系统', txt:'全年高温多雨，是地球上物种最丰富、生产力最高的生态系统，"地球之肺"。海南热带雨林国家公园保护的正是这类生态系统。' },
+  desert:   { ico:'🏜️', name:'荒漠生态系统', txt:'降水稀少、蒸发旺盛，植被稀疏但旱生生物独特（仙人掌、骆驼等）。生态脆弱，一旦破坏极难恢复，防风固沙是其关键生态服务。' },
+  wetland:  { ico:'🦆', name:'岛屿湿地生态系统', txt:'浅水沼泽与水塘交错，是候鸟迁徙的重要停歇地。湿地萎缩会直接导致依赖它的物种种群崩溃。' },
+  snow:     { ico:'🧊', name:'雪山冰川生态系统', txt:'高寒环境，雪线以上是永久冰雪带。冰川是"固体水库"，气候变暖导致冰川退缩，威胁下游水源安全。' }
+};
+
+function makeDeer(){  // 藏羚羊
+  const g = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color:0xc9a06a, flatShading:true, roughness:0.9 });
+  const body = new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.75, 0.6), mat);
+  body.position.y = 0.85; body.castShadow = true; g.add(body);
+  const head = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.42, 0.42), mat);
+  head.position.set(0.8, 1.35, 0); g.add(head);
+  const neck = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.6, 0.3), mat);
+  neck.position.set(0.62, 1.05, 0); neck.rotation.z = -0.4; g.add(neck);
+  const hornMat = new THREE.MeshStandardMaterial({ color:0x3a2a18, flatShading:true });
+  [0.12,-0.12].forEach(z=>{
+    const horn = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.05, 0.65, 4), hornMat);
+    horn.position.set(0.85, 1.8, z); horn.rotation.z = 0.25; g.add(horn);
+  });
+  for (let i=0;i<4;i++){
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.06, 0.85, 5), mat);
+    leg.position.set(i<2?0.45:-0.45, 0.42, i%2?0.2:-0.2);
+    g.add(leg);
+  }
+  return g;
+}
+function makePanda(){
+  const g = new THREE.Group();
+  const white = new THREE.MeshStandardMaterial({ color:0xf2f2f2, flatShading:true, roughness:0.9 });
+  const black = new THREE.MeshStandardMaterial({ color:0x222222, flatShading:true, roughness:0.9 });
+  const body = new THREE.Mesh(new THREE.SphereGeometry(0.62, 10, 8), white);
+  body.position.y = 0.6; body.castShadow = true; g.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.42, 10, 8), white);
+  head.position.set(0.25, 1.25, 0); g.add(head);
+  [[0.06,1.62,0.25],[0.06,1.62,-0.25]].forEach(p=>{
+    const ear = new THREE.Mesh(new THREE.SphereGeometry(0.13, 6, 5), black);
+    ear.position.set(...p); g.add(ear);
+  });
+  [[0.58,1.28,0.16],[0.58,1.28,-0.16]].forEach(p=>{
+    const eye = new THREE.Mesh(new THREE.SphereGeometry(0.09, 6, 5), black);
+    eye.position.set(...p); g.add(eye);
+  });
+  [[0.3,0.18,0.35],[0.3,0.18,-0.35],[-0.35,0.18,0.32],[-0.35,0.18,-0.32]].forEach(p=>{
+    const leg = new THREE.Mesh(new THREE.SphereGeometry(0.2, 6, 5), black);
+    leg.position.set(...p); g.add(leg);
+  });
+  return g;
+}
+function makeTiger(){
+  const g = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color:0xd97b2b, flatShading:true, roughness:0.9 });
+  const stripeMat = new THREE.MeshStandardMaterial({ color:0x2a1c10, flatShading:true });
+  const body = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.7, 0.62), mat);
+  body.position.y = 0.8; body.castShadow = true; g.add(body);
+  // 虎纹
+  for (let i=0;i<4;i++){
+    const stripe = new THREE.Mesh(new THREE.BoxGeometry(0.09, 0.74, 0.66), stripeMat);
+    stripe.position.set(-0.5 + i*0.32, 0.8, 0);
+    g.add(stripe);
+  }
+  const head = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.5, 0.55), mat);
+  head.position.set(0.9, 1.1, 0); g.add(head);
+  const jaw = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.2, 0.4),
+    new THREE.MeshStandardMaterial({ color:0xf2e3c9, flatShading:true }));
+  jaw.position.set(1.1, 0.92, 0); g.add(jaw);
+  const tail = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.03, 0.9, 4), mat);
+  tail.position.set(-0.85, 1.1, 0); tail.rotation.z = -0.7; g.add(tail);
+  for (let i=0;i<4;i++){
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.07, 0.8, 5), mat);
+    leg.position.set(i<2?0.5:-0.5, 0.4, i%2?0.2:-0.2);
+    g.add(leg);
+  }
+  return g;
+}
+function makeMonkey(){  // 金丝猴
+  const g = new THREE.Group();
+  const gold = new THREE.MeshStandardMaterial({ color:0xe8a33d, flatShading:true, roughness:0.9 });
+  const face = new THREE.MeshStandardMaterial({ color:0x7ab3d9, flatShading:true });
+  const body = new THREE.Mesh(new THREE.SphereGeometry(0.45, 9, 7), gold);
+  body.position.y = 0.65; body.castShadow = true; g.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.3, 9, 7), gold);
+  head.position.set(0.1, 1.2, 0); g.add(head);
+  const faceM = new THREE.Mesh(new THREE.SphereGeometry(0.18, 7, 6), face);
+  faceM.position.set(0.32, 1.18, 0); g.add(faceM);
+  const tail = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.03, 1.2, 4), gold);
+  tail.position.set(-0.5, 1, 0); tail.rotation.z = -1; g.add(tail);
+  [[0.2,0.15,0.25],[0.2,0.15,-0.25]].forEach(p=>{
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.06, 0.5, 4), gold);
+    leg.position.set(...p); g.add(leg);
+  });
+  return g;
+}
+function makeIbis(){  // 朱鹮
+  const g = new THREE.Group();
+  const white = new THREE.MeshStandardMaterial({ color:0xf7ecec, flatShading:true });
+  const red = new THREE.MeshStandardMaterial({ color:0xe84a4a, flatShading:true });
+  const body = new THREE.Mesh(new THREE.SphereGeometry(0.3, 8, 6), white);
+  body.scale.set(1.4, 1, 1); body.position.y = 0.55; g.add(body);
+  const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.07, 0.5, 5), white);
+  neck.position.set(0.35, 0.85, 0); neck.rotation.z = -0.5; g.add(neck);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.13, 7, 5), red);
+  head.position.set(0.52, 1.05, 0); g.add(head);
+  const beak = new THREE.Mesh(new THREE.ConeGeometry(0.04, 0.35, 5), red);
+  beak.position.set(0.7, 1.02, 0); beak.rotation.z = -1.2; g.add(beak);
+  const legMat = new THREE.MeshStandardMaterial({ color:0xcc4444 });
+  [0.1,-0.1].forEach(z=>{
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.45, 4), legMat);
+    leg.position.set(0, 0.22, z); g.add(leg);
+  });
+  return g;
+}
+function makeLeopard(){  // 雪豹
+  const g = new THREE.Group();
+  const grey = new THREE.MeshStandardMaterial({ color:0xd8dde3, flatShading:true, roughness:0.9 });
+  const body = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.55, 0.5), grey);
+  body.position.y = 0.65; body.castShadow = true; g.add(body);
+  const head = new THREE.Mesh(new THREE.BoxGeometry(0.4, 0.4, 0.42), grey);
+  head.position.set(0.72, 0.95, 0); g.add(head);
+  const tail = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.04, 1, 4), grey);
+  tail.position.set(-0.7, 0.9, 0); tail.rotation.z = -0.9; g.add(tail);
+  for (let i=0;i<4;i++){
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.06, 0.6, 4), grey);
+    leg.position.set(i<2?0.4:-0.4, 0.3, i%2?0.17:-0.17);
+    g.add(leg);
+  }
+  return g;
+}
+
+function makeCamel(){  // 骆驼（荒漠岛）
+  const g = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color:0xc9a06a, flatShading:true, roughness:0.95 });
+  const body = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.8, 0.62), mat);
+  body.position.y = 1.05; body.castShadow = true; g.add(body);
+  [[-0.35],[0.3]].forEach(([hx])=>{
+    const hump = new THREE.Mesh(new THREE.SphereGeometry(0.3, 7, 6), mat);
+    hump.position.set(hx, 1.55, 0); g.add(hump);
+  });
+  const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.15, 1.1, 5), mat);
+  neck.position.set(0.85, 1.55, 0); neck.rotation.z = -0.35; g.add(neck);
+  const head = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.26, 0.26), mat);
+  head.position.set(1.2, 2.05, 0); g.add(head);
+  for (let i=0;i<4;i++){
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.07, 1.05, 5), mat);
+    leg.position.set(i<2?0.55:-0.55, 0.52, i%2?0.22:-0.22);
+    g.add(leg);
+  }
+  return g;
+}
+
+function spawnAnimal(maker, zone, name, x, z){
+  let tries = 0, h;
+  if (x === undefined){
+    const isl = ISLANDS.find(i=>i.type===zone);   // 卫星岛类型 zone
+    do {
+      if (isl){
+        const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*isl.R*0.75;
+        x = isl.cx + Math.cos(a)*r; z = isl.cz + Math.sin(a)*r;
+      } else {
+        const a = Math.random()*Math.PI*2, r = 4 + Math.sqrt(Math.random())*17;
+        x = Math.cos(a)*r; z = Math.sin(a)*r;
+      }
+      h = terrainH(x,z);
+      tries++;
+    } while (tries < 200 && (isl ? (h < isl.yOff + 0.3)
+        : (sectorOf(x,z)!==zone || h<0.4 || h>(zone==='mountain'?6.5:4.8))));
+  } else h = terrainH(x,z);
+  const m = maker();
+  m.position.set(x, h, z);
+  m.rotation.y = Math.random()*Math.PI*2;
+  m.scale.setScalar(0.9 + Math.random()*0.3);
+  m.userData = { home:new THREE.Vector3(x,h,z), phase:Math.random()*6.28,
+    speed:0.2+Math.random()*0.25, radius:1.5+Math.random()*2, name, s0:m.scale.x, extra:false };
+  scene.add(m);
+  animals.push(m);
+  return m;
+}
+function buildAnimals(){
+  for (let i=0;i<7;i++) spawnAnimal(makeDeer,   'grass',  '藏羚羊');
+  for (let i=0;i<4;i++) spawnAnimal(makePanda,  'forest', '大熊猫');
+  for (let i=0;i<3;i++) spawnAnimal(makeMonkey, 'forest', '金丝猴');
+  for (let i=0;i<2;i++) spawnAnimal(makeTiger,  'forest', '东北虎');
+  for (let i=0;i<3;i++) spawnAnimal(makeIbis,   'lake',   '朱鹮');
+  for (let i=0;i<2;i++) spawnAnimal(makeLeopard,'mountain','雪豹');
+  // 卫星岛特有物种
+  for (let i=0;i<3;i++) spawnAnimal(makeMonkey, 'jungle',  '金丝猴');
+  for (let i=0;i<2;i++) spawnAnimal(makeLeopard,'snow',    '雪豹');
+  for (let i=0;i<2;i++) spawnAnimal(makeIbis,   'wetland', '朱鹮');
+  for (let i=0;i<3;i++) spawnAnimal(makeCamel,  'desert',  '骆驼');
+}
+
+// ---------- 飞鸟 ----------
+function buildBirds(){
+  const geo = new THREE.ConeGeometry(0.16, 0.7, 4);
+  geo.rotateX(Math.PI/2);
+  const mat = new THREE.MeshBasicMaterial({ color:0xd8e8ff, transparent:true, opacity:0.9 });
+  const N = QUALITY.birds;
+  birds = new THREE.InstancedMesh(geo, mat, N);
+  for (let i=0;i<N;i++){
+    birdData.push({ r: 12 + Math.random()*16, h: 13 + Math.random()*10,
+      a: Math.random()*Math.PI*2, sp: 0.15 + Math.random()*0.25, s: 0.8 + Math.random()*0.8 });
+  }
+  scene.add(birds);
+}
+
+// ---------- 蝴蝶 ----------
+function buildButterflies(){
+  const colors = [0xff7eb9, 0xffd166, 0xc084fc, 0x7ee8fa, 0xf9f871];
+  for (let i=0;i<QUALITY.butterflies;i++){
+    const g = new THREE.Group();
+    const mat = new THREE.MeshBasicMaterial({ color:colors[i%colors.length],
+      side:THREE.DoubleSide, transparent:true, opacity:0.9 });
+    const w1 = new THREE.Mesh(new THREE.PlaneGeometry(0.28, 0.2), mat);
+    w1.position.x = -0.14; g.add(w1);
+    const w2 = new THREE.Mesh(new THREE.PlaneGeometry(0.28, 0.2), mat);
+    w2.position.x = 0.14; g.add(w2);
+    const a = Math.random()*Math.PI*2, r = 5+Math.random()*15;
+    const x = Math.cos(a)*r, z = Math.sin(a)*r;
+    g.userData = { x, z, h:terrainH(x,z)+1+Math.random()*1.5, off:Math.random()*6.28,
+      r:0.8+Math.random()*1.2, w1, w2 };
+    scene.add(g);
+    butterflies.push(g);
+  }
+}
+
+// ---------- 鱼群 ----------
+function buildFish(){
+  const mat = new THREE.MeshStandardMaterial({ color:0xff9a5a, flatShading:true,
+    emissive:0x552200 });
+  for (let i=0;i<QUALITY.fishes;i++){
+    const f = new THREE.Mesh(new THREE.ConeGeometry(0.12, 0.5, 5), mat);
+    f.geometry.rotateX(Math.PI/2);
+    f.userData = { r:1.5+Math.random()*4.5, a:Math.random()*Math.PI*2,
+      sp:0.3+Math.random()*0.5, jumpOff:Math.random()*6.28 };
+    scene.add(f);
+    fishes.push(f);
+  }
+}
+
+// ---------- 萤火虫 / 基因闪光 ----------
+function buildFireflies(){
+  const N = QUALITY.fireflies, pos = new Float32Array(N*3);
+  for (let i=0;i<N;i++){
+    const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*24;
+    const x = Math.cos(a)*r, z = Math.sin(a)*r;
+    pos[i*3]=x; pos[i*3+1]=terrainH(x,z)+0.6+Math.random()*4; pos[i*3+2]=z;
+    fireflyData.push({ x, z, off:Math.random()*6.28, amp:0.3+Math.random()*0.7 });
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  fireflies = new THREE.Points(g, new THREE.PointsMaterial({ color:0xaef29a, size:0.28,
+    transparent:true, opacity:0.85, blending:THREE.AdditiveBlending, depthWrite:false }));
+  scene.add(fireflies);
+}
+function buildSparkles(){
+  const N = QUALITY.sparkles, pos = new Float32Array(N*3);
+  for (let i=0;i<N;i++){
+    const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*22;
+    const x = Math.cos(a)*r, z = Math.sin(a)*r;
+    pos[i*3]=x; pos[i*3+1]=terrainH(x,z)+0.4+Math.random()*3.5; pos[i*3+2]=z;
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  sparkles = new THREE.Points(g, new THREE.PointsMaterial({ color:0xffd166, size:0.42,
+    transparent:true, opacity:0, blending:THREE.AdditiveBlending, depthWrite:false }));
+  scene.add(sparkles);
+}
+
+// ---------- 工厂污染 ----------
+function buildFactorySmoke(){
+  factory = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color:0x555b63, flatShading:true, roughness:1 });
+  const hall = new THREE.Mesh(new THREE.BoxGeometry(2.6, 1.4, 1.8), mat);
+  hall.position.y = 0.7; factory.add(hall);
+  const chimney = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.3, 2.6, 6), mat);
+  chimney.position.set(0.7, 2.2, 0); factory.add(chimney);
+  const fx = Math.cos(218*Math.PI/180)*20, fz = Math.sin(218*Math.PI/180)*20;
+  factory.position.set(fx, terrainH(fx,fz), fz);
+  factory.visible = false;
+  scene.add(factory);
+
+  const N = QUALITY.smoke, pos = new Float32Array(N*3);
+  for (let i=0;i<N;i++){
+    pos[i*3] = fx + (Math.random()-0.5)*1.5;
+    pos[i*3+1] = factory.position.y + 3 + Math.random()*7;
+    pos[i*3+2] = fz + (Math.random()-0.5)*1.5;
+    smokeData.push({ off:Math.random()*6.28, sp:0.5+Math.random() });
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  smoke = new THREE.Points(g, new THREE.PointsMaterial({ color:0x6b6f75, size:1.1,
+    transparent:true, opacity:0, depthWrite:false }));
+  scene.add(smoke);
+}
+
+// ---------- 入侵物种紫斑 ----------
+function buildInvasivePatches(){
+  for (let i=0;i<6;i++){
+    const a = (195 + i*30) * Math.PI/180, r = 8 + Math.random()*10;
+    const x = Math.cos(a)*r, z = Math.sin(a)*r;
+    const patch = new THREE.Mesh(new THREE.CircleGeometry(1, 24),
+      new THREE.MeshBasicMaterial({ color:0xa855f7, transparent:true, opacity:0,
+        blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide }));
+    patch.rotation.x = -Math.PI/2;
+    patch.position.set(x, terrainH(x,z)+0.15, z);
+    patch.userData = { targetR: 1.5 + Math.random()*2.5, phase:Math.random()*6.28, cleaned:false };
+    scene.add(patch);
+    invasivePatches.push(patch);
+  }
+}
+
+// ---------- 保护地光环 ----------
+function makeRing(radius, color, y){
+  const grp = new THREE.Group();
+  const ring = new THREE.Mesh(new THREE.RingGeometry(radius-0.28, radius+0.28, 80),
+    new THREE.MeshBasicMaterial({ color, transparent:true, opacity:0,
+      blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide }));
+  ring.rotation.x = -Math.PI/2;
+  grp.add(ring);
+  const beam = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius, 9, 80, 1, true),
+    new THREE.MeshBasicMaterial({ color, transparent:true, opacity:0,
+      blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide }));
+  beam.position.y = 4.5;
+  grp.add(beam);
+  grp.position.y = y;
+  grp.userData = { ring, beam, on:false };
+  scene.add(grp);
+  return grp;
+}
+function buildRings(){
+  ringMeshes.national = makeRing(21.5, 0xfbbf24, 1.2);
+  const fx = Math.cos(330*Math.PI/180)*11, fz = Math.sin(330*Math.PI/180)*11;
+  ringMeshes.reserve = makeRing(10.5, 0x4ade80, 1.2);
+  ringMeshes.reserve.position.set(fx, 1.2, fz);
+  ringMeshes.park = makeRing(8.8, 0x60a5fa, 1.2);
+  ringMeshes.park.position.set(lakeCenter.x, 1.2, lakeCenter.z);
+}
+
+// ---------- 标签 ----------
+function makeLabel(text, color, pos){
+  const cv = document.createElement('canvas');
+  cv.width = 512; cv.height = 128;
+  const ctx = cv.getContext('2d');
+  ctx.font = 'bold 52px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.shadowColor = color; ctx.shadowBlur = 26;
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText(text, 256, 64);
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map:new THREE.CanvasTexture(cv),
+    transparent:true, opacity:0.92, depthWrite:false }));
+  sp.scale.set(11, 2.75, 1);
+  sp.position.copy(pos);
+  scene.add(sp);
+  labelSprites.push(sp);
+  return sp;
+}
+function buildLabels(){
+  makeLabel('森林生态系统', '#4ade80', new THREE.Vector3(Math.cos(340*Math.PI/180)*13, 8.5, Math.sin(340*Math.PI/180)*13));
+  makeLabel('草原生态系统', '#a3e635', new THREE.Vector3(Math.cos(225*Math.PI/180)*13, 7, Math.sin(225*Math.PI/180)*13));
+  makeLabel('山地生态系统', '#e2e8f0', new THREE.Vector3(15, 13.5, -2));
+  makeLabel('湿地湖泊生态系统', '#38bdf8', new THREE.Vector3(lakeCenter.x, 7, lakeCenter.z));
+  // 卫星岛标签
+  if (QUALITY.satelliteLabels){
+    makeLabel('热带雨林岛', '#2ee06f', new THREE.Vector3(ISLANDS[1].cx, 9, ISLANDS[1].cz));
+    makeLabel('荒漠岛', '#f0c46a', new THREE.Vector3(ISLANDS[2].cx, 7.5, ISLANDS[2].cz));
+    makeLabel('雪山岛', '#dff2ff', new THREE.Vector3(ISLANDS[3].cx, 13, ISLANDS[3].cz));
+    makeLabel('湿地岛', '#5ad0f0', new THREE.Vector3(ISLANDS[4].cx, 6.5, ISLANDS[4].cz));
+  }
+}
+
+// ---------- 护盾 ----------
+function buildShield(){
+  shieldDome = new THREE.Mesh(new THREE.SphereGeometry(27, 40, 24, 0, Math.PI*2, 0, Math.PI/2),
+    new THREE.MeshBasicMaterial({ color:0xc084fc, transparent:true, opacity:0,
+      wireframe:true, blending:THREE.AdditiveBlending, depthWrite:false }));
+  scene.add(shieldDome);
+}
+
+// ---------- 食物链透视 ----------
+function buildFoodweb(){
+  foodwebGroup = new THREE.Group();
+  const chains = [
+    { pts:[[-14,0,10],[-8,2.5,4],[-3,9,-2]],  c:0xa3e635 },  // 草→昆虫→鸟
+    { pts:[[-16,0,-9],[-11,1.5,-4],[-5,1.5,8]], c:0xf87171 }, // 草→藏羚羊→东北虎(森林)
+    { pts:[[9,0,-8],[5,1.5,-4]],                c:0x4ade80 }, // 竹→大熊猫
+    { pts:[[lakeCenter.x,0.6,lakeCenter.z],[lakeCenter.x+4,2,lakeCenter.z-3]], c:0x38bdf8 } // 鱼→朱鹮
+  ];
+  chains.forEach(ch=>{
+    for (let i=0;i<ch.pts.length-1;i++){
+      const a = new THREE.Vector3(...ch.pts[i]);
+      a.y = Math.max(a.y, terrainH(a.x,a.z)+0.4);
+      const b = new THREE.Vector3(...ch.pts[i+1]);
+      if (b.y < 1) b.y = Math.max(b.y, terrainH(b.x,b.z)+0.4);
+      const mid = a.clone().lerp(b, 0.5); mid.y += 2.2;
+      const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
+      const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 24, 0.09, 6),
+        new THREE.MeshBasicMaterial({ color:ch.c, transparent:true, opacity:0.75,
+          blending:THREE.AdditiveBlending, depthWrite:false }));
+      foodwebGroup.add(tube);
+      // 箭头
+      const arrow = new THREE.Mesh(new THREE.ConeGeometry(0.3, 0.8, 6),
+        new THREE.MeshBasicMaterial({ color:ch.c, transparent:true, opacity:0.9,
+          blending:THREE.AdditiveBlending, depthWrite:false }));
+      const end = curve.getPoint(0.95), prev = curve.getPoint(0.85);
+      arrow.position.copy(end);
+      arrow.lookAt(end.clone().multiplyScalar(2).sub(prev));
+      arrow.rotateX(Math.PI/2);
+      foodwebGroup.add(arrow);
+    }
+  });
+  foodwebGroup.visible = false;
+  scene.add(foodwebGroup);
+}
+
+// ---------- 降雨 / 降雪 ----------
+function buildPrecip(){
+  const N = QUALITY.precip, pos = new Float32Array(N*3);
+  for (let i=0;i<N;i++){
+    pos[i*3]   = (Math.random()-0.5)*150;
+    pos[i*3+1] = Math.random()*32;
+    pos[i*3+2] = (Math.random()-0.5)*150;
+    precipData.push({ sp:14+Math.random()*8 });
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  precip = new THREE.Points(g, new THREE.PointsMaterial({ color:0x9ecfff, size:0.18,
+    transparent:true, opacity:0, depthWrite:false }));
+  scene.add(precip);
+}
+</script>
+
+<script>
+// ============================================================
+//  昼夜系统
+// ============================================================
+const TIME_KEYS = [
+  { t:0,    n:'🌄 清晨', sky:0x5a7ba8, fogD:0.005,  sun:0.9,  sunC:0xffc890, moon:0.5,  hemi:0.7,  stars:0.15, glow:0.5 },
+  { t:0.33, n:'☀️ 正午', sky:0x9ec8e8, fogD:0.0035, sun:1.4,  sunC:0xfff2d9, moon:0.2,  hemi:0.95, stars:0,    glow:0.9 },
+  { t:0.66, n:'🌅 黄昏', sky:0x3a2a4a, fogD:0.006,  sun:0.7,  sunC:0xff9a5a, moon:0.4,  hemi:0.5,  stars:0.3,  glow:0.6 },
+  { t:1,    n:'🌙 夜晚', sky:0x0a1428, fogD:0.0085, sun:0.25, sunC:0xbfd4ff, moon:0.9,  hemi:0.55, stars:0.85, glow:0 },
+];
+let timeV = 0.85;   // 默认夜晚
+let season = 'summer';
+const envBase = { fogD:0.0085, sky:new THREE.Color(0x0a1428) };
+const SEASON_CFG = {
+  spring:{ tint:new THREE.Color(0x7ddb8a), k:0.16, snow:7.2, flowers:1.25 },
+  summer:{ tint:new THREE.Color(0xffffff), k:0,    snow:7.2, flowers:1 },
+  autumn:{ tint:new THREE.Color(0xe8973d), k:0.42, snow:7.2, flowers:0.55 },
+  winter:{ tint:new THREE.Color(0xffffff), k:0,    snow:2.6, flowers:0.05 },
+};
+function lerpN(a,b,k){ return a+(b-a)*k; }
+function applyDay(){
+  let i = 0;
+  while (i < TIME_KEYS.length-2 && timeV > TIME_KEYS[i+1].t) i++;
+  const A = TIME_KEYS[i], B = TIME_KEYS[i+1];
+  const k = Math.min(1, Math.max(0, (timeV - A.t)/(B.t - A.t)));
+  envBase.fogD = lerpN(A.fogD, B.fogD, k);
+  envBase.sky.setHex(A.sky).lerp(new THREE.Color(B.sky), k);
+  sunLight.intensity = lerpN(A.sun,B.sun,k);
+  sunLight.color.setHex(A.sunC).lerp(new THREE.Color(B.sunC), k);
+  moonLight.intensity = lerpN(A.moon,B.moon,k);
+  hemiLight.intensity = lerpN(A.hemi,B.hemi,k);
+  starMat.opacity = lerpN(A.stars,B.stars,k);
+  sunGlow.material.opacity = lerpN(A.glow,B.glow,k);
+  if (skyTint){
+    skyTint.material.color.copy(envBase.sky);
+    skyTint.material.opacity = 0.28 + (1 - Math.min(1, sunLight.intensity/1.4)) * 0.35;
+  }
+  applyThreats();
+  updateEnvHUD();
+}
+function currentTimeName(){
+  let best = TIME_KEYS[0], d = 9;
+  TIME_KEYS.forEach(K=>{ const dd = Math.abs(K.t - timeV); if (dd < d){ d = dd; best = K; } });
+  return best.n;
+}
+function updateEnvHUD(){
+  const sn = { spring:'🌸 春', summer:'🌿 夏', autumn:'🍂 秋', winter:'❄️ 冬' }[season];
+  const w = flags.snow ? ' · 降雪' : flags.rain ? ' · 降雨' : '';
+  document.getElementById('hud-env').textContent = sn + ' · ' + currentTimeName() + w;
+}
+
+// ============================================================
+//  威胁模拟 · 生态响应
+// ============================================================
+const BROWN = new THREE.Color(0x8a6b48), GREY = new THREE.Color(0x6e6a60);
+function applyThreats(){
+  const h = threat.habitat/100, c = threat.climate/100,
+        p = threat.pollution/100, v = threat.invasive/100, u = threat.hunt/100;
+
+  const treeHealth = Math.max(0.02, 1 - h*0.92 - p*0.15);
+  const visibleTrees = Math.floor(treeCount * treeHealth);
+  treeCanopy.count = visibleTrees;
+  treeTop.count = visibleTrees;
+  treeTrunk.count  = visibleTrees;
+  bushes.count = Math.floor(220 * Math.max(0.05, treeHealth));
+
+  // 地表退化 + 雪线（季节基准 + 气候抬升）
+  const st = SEASON_CFG[season];
+  const snowLine = st.snow + c*3.2;
+  const WHITE = new THREE.Color(0xffffff);
+  const pos = terrainGeo.attributes.position, col = terrainGeo.attributes.color;
+  const tmp = new THREE.Color(), base = new THREE.Color();
+  const degrade = Math.min(1, h*0.85 + p*0.35 + v*0.15);
+  for (let i=0;i<pos.count;i++){
+    base.setRGB(baseColors[i*3], baseColors[i*3+1], baseColors[i*3+2]);
+    tmp.copy(base);
+    const y = pos.getY(i);
+    // 季节染色（春秋植被变色）
+    if (st.k > 0 && y > 0.4 && y < 6 && sectorOf(pos.getX(i), pos.getZ(i))!=='mountain')
+      tmp.lerp(st.tint, st.k);
+    // 雪线以上积雪 / 雪退裸岩
+    if (y >= snowLine && y > 2) tmp.lerp(WHITE, season==='winter' ? 0.9 : 0.85);
+    else if (y > 5.2 && y < snowLine) tmp.lerp(GREY, 0.6);
+    tmp.lerp(BROWN, degrade * (y < 6 ? 0.75 : 0.3));
+    col.setXYZ(i, tmp.r, tmp.g, tmp.b);
+  }
+  col.needsUpdate = true;
+
+  // 雪晶（冬季增大 / 气候变暖消融）
+  if (snowGems){
+    const gemS = Math.max(0.05, (season==='winter' ? 1.5 : 1) * (1 - c*0.9));
+    snowGems.scale.setScalar(gemS);
+  }
+
+  // 湖泊萎缩
+  const lakeScale = Math.max(0.25, 1 - c*0.55 - p*0.1);
+  lake.scale.setScalar(lakeScale);
+  lake.material.opacity = 0.85 - p*0.35;
+  lake.userData.halo.scale.setScalar(lakeScale);
+  lake.userData.halo.material.opacity = 0.12 * lakeScale;
+
+  // 瀑布断流（气候变化）
+  const wf = Math.max(0, 1 - c*1.1);
+  waterfall.material.opacity = 0.45 * wf;
+  waterfallPts.material.opacity = 0.8 * wf;
+
+  // 花海枯萎 · 芦苇枯干（季节修正）
+  flowerHeads.count = Math.min(160, Math.floor(160 * Math.max(0.03, 1 - h*0.9) * st.flowers));
+  flowerStems.count = flowerHeads.count;
+  reeds.count = Math.floor(90 * Math.max(0.1, 1 - c*0.8 - p*0.3));
+
+  // 污染雾霾
+  scene.fog.density = envBase.fogD + p*0.028;
+  const fogC = envBase.sky.clone().lerp(new THREE.Color(0x4a4038), p*0.85);
+  scene.fog.color.copy(fogC);
+  renderer.setClearColor(fogC);
+  factory.visible = p > 0.06;
+  smoke.material.opacity = p * 0.55;
+
+  // 入侵紫斑
+  invasivePatches.forEach(pt=>{
+    if (pt.userData.cleaned) return;
+    pt.material.opacity = v * 0.4;
+    const r = pt.userData.targetR * (0.2 + v*0.8);
+    pt.scale.setScalar(Math.max(0.01, r));
+  });
+
+  // 动物 / 鱼 / 蝴蝶 / 鸟
+  const animalHealth = Math.max(0, 1 - u*0.85 - h*0.5);
+  const visibleAnimals = Math.floor(animals.length * animalHealth);
+  animals.forEach((a,i)=>{ a.visible = i < visibleAnimals; });
+  const fishHealth = Math.max(0, 1 - u*0.7 - p*0.5);
+  fishes.forEach((f,i)=>{ f.visible = i < Math.floor(fishes.length*fishHealth); });
+  const bfHealth = Math.max(0, 1 - h*0.8 - p*0.4);
+  butterflies.forEach((b,i)=>{ b.visible = i < Math.floor(butterflies.length*bfHealth); });
+  birds.count = Math.floor(birdData.length * Math.max(0.05, 1 - u*0.7 - p*0.4));
+
+  biodiversityDimensions = computeIndicators(threat, protectionPlan);
+  bioIndex = biodiversityDimensions.overall;
+  updateBioUI();
+}
+function updateBioUI(){
+  const num = document.getElementById('hud-bio-num');
+  const pnum = document.getElementById('panel-bio-num');
+  const fill = document.getElementById('bio-fill');
+  num.textContent = bioIndex; pnum.textContent = bioIndex;
+  fill.style.width = bioIndex + '%';
+  const color = bioIndex >= 75 ? '#4ade80' : bioIndex >= 50 ? '#fbbf24' : bioIndex >= 25 ? '#fb923c' : '#f87171';
+  num.style.color = color; pnum.style.color = color;
+  const mappings = [
+    ['genetic','genetic-index','genetic-fill'],
+    ['species','species-index','species-fill'],
+    ['ecosystem','ecosystem-index','ecosystem-fill']
+  ];
+  mappings.forEach(([key, numberId, fillId])=>{
+    const value = biodiversityDimensions[key];
+    const number = document.getElementById(numberId);
+    const bar = document.getElementById(fillId);
+    if (number) number.textContent = value;
+    if (bar) bar.style.width = value + '%';
+  });
+  updateBiodiversityEvidence();
+}
+
+// ============================================================
+//  3D 场景点击（百科 + 任务模式）
+// ============================================================
+function bindClicks(){
+  const el = renderer.domElement;
+  let down = null;
+  el.addEventListener('pointerdown', e=>{ down = [e.clientX, e.clientY]; });
+  el.addEventListener('pointerup', e=>{
+    if (!down) return;
+    const dx = e.clientX-down[0], dy = e.clientY-down[1];
+    down = null;
+    if (dx*dx + dy*dy > 36) return;   // 拖拽不触发
+    onSceneClick(e);
+  });
+}
+function onSceneClick(e){
+  const r = renderer.domElement.getBoundingClientRect();
+  mouse.set(((e.clientX-r.left)/r.width)*2-1, -((e.clientY-r.top)/r.height)*2+1);
+  raycaster.setFromCamera(mouse, camera);
+
+  if (clickMode === 'clean'){
+    const hit = raycaster.intersectObjects(invasivePatches.filter(pt=>pt.visible && !pt.userData.cleaned && pt.material.opacity>0.05));
+    if (hit.length){ cleanPatch(hit[0].object); return; }
+  }
+  if (clickMode === 'plant' || clickMode === 'release'){
+    const hit = raycaster.intersectObject(terrain);
+    if (hit.length){
+      const p = hit[0].point;
+      const islHit = islandAt(p.x, p.z);
+      if (!islHit || terrainH(p.x, p.z) < islHit.yOff + 0.3){
+        toast('⚠️ 这里无法操作，请点击岛内陆地');
+        return;
+      }
+      clickMode === 'plant' ? plantTreeAt(p) : releaseAnimalAt(p);
+      return;
+    }
+  }
+  // 动物百科
+  const hits = raycaster.intersectObjects(animals.filter(a=>a.visible), true);
+  if (hits.length){
+    let o = hits[0].object;
+    while (o && !o.userData.name) o = o.parent;
+    if (o){ showSpeciesInfo(o.userData.name); return; }
+  }
+  if (raycaster.intersectObjects(fishes.filter(f=>f.visible)).length){ showSpeciesInfo('鱼类'); return; }
+  // 生态系统百科（群岛感知）
+  const th = raycaster.intersectObject(terrain);
+  if (th.length){
+    const p = th[0].point;
+    const isl = islandAt(p.x, p.z);
+    if (isl){
+      showEcoInfo(isl.type === 'main' ? sectorOf(p.x, p.z) : isl.type);
+    } else closeInfo();
+  } else closeInfo();
+}
+function showSpeciesInfo(name){
+  const info = SPECIES_INFO[name]; if (!info) return;
+  const img = document.getElementById('ic-img');
+  if (info.img){ img.src = info.img; img.classList.remove('hidden'); }
+  else img.classList.add('hidden');
+  document.getElementById('ic-title').textContent = info.ico + ' ' + name;
+  document.getElementById('ic-level').textContent = info.lv;
+  document.getElementById('ic-text').textContent = info.txt;
+  document.getElementById('infoCard').classList.remove('hidden');
+}
+function showEcoInfo(sec){
+  const info = ECO_INFO[sec]; if (!info) return;
+  document.getElementById('ic-img').classList.add('hidden');
+  document.getElementById('ic-title').textContent = info.ico + ' ' + info.name;
+  document.getElementById('ic-level').textContent = '生态系统类型';
+  document.getElementById('ic-text').textContent = info.txt;
+  document.getElementById('infoCard').classList.remove('hidden');
+}
+function closeInfo(){ document.getElementById('infoCard').classList.add('hidden'); }
+
+// ============================================================
+//  互动任务
+// ============================================================
+function setToolbarMode(m){
+  clickMode = (clickMode === m) ? null : m;
+  document.querySelectorAll('#toolbar button').forEach(b=>{
+    if (['plant','release','clean'].includes(b.dataset.m))
+      b.classList.toggle('on', b.dataset.m === clickMode);
+  });
+  renderer.domElement.style.cursor = clickMode ? 'cell' : 'crosshair';
+}
+function startMission(m){
+  setToolbarMode(m);
+  if (clickMode === 'plant')   toast('🌱 植树模式：点击岛内陆地种树（每棵 +5 积分）');
+  if (clickMode === 'release') toast('🐾 放归模式：点击草地/森林放归动物（每只 +8 积分）');
+  if (clickMode === 'clean'){
+    if (threat.invasive < 30){
+      animateThreats({ habitat:threat.habitat, climate:threat.climate, pollution:threat.pollution,
+        invasive:55, hunt:threat.hunt }, 900);
+      toast('🦠 已模拟入侵物种爆发！点击紫色斑块清除（每处 +10 积分）');
+    } else toast('🧹 清除模式：点击紫色入侵斑块（每处 +10 积分）');
+  }
+}
+function plantTreeAt(p){
+  const g = new THREE.Group();
+  const canopy = new THREE.Mesh(new THREE.ConeGeometry(0.95, 2.8, 6),
+    new THREE.MeshStandardMaterial({ color:0x2e6b3a, flatShading:true }));
+  canopy.position.y = 1.9; canopy.castShadow = true; g.add(canopy);
+  const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.2, 0.9, 5),
+    new THREE.MeshStandardMaterial({ color:0x6b4a2f, flatShading:true }));
+  trunk.position.y = 0.45; g.add(trunk);
+  g.position.copy(p);
+  g.scale.setScalar(0.01);
+  g.userData = { pop:1.2 };
+  scene.add(g);
+  plantedTrees.push(g);
+  mission.plant++; mission.score += 5;
+  threat.habitat = Math.max(0, threat.habitat - 2);
+  syncSliders(); applyThreats();
+  if (mission.plant === 10){ mission.done++; toast('🎉 任务一完成！荒山披绿装 +30 积分'); mission.score += 30; }
+  else toast(`🌱 种下一棵树（${mission.plant}/10）`);
+  updateMissionUI();
+}
+function releaseAnimalAt(p){
+  const isl = islandAt(p.x, p.z);
+  let maker, name, sec;
+  if (isl && isl.type === 'jungle'){ maker = makeMonkey; name = '金丝猴'; sec = 'jungle'; }
+  else if (isl && isl.type === 'desert'){ maker = makeCamel; name = '骆驼'; sec = 'desert'; }
+  else if (isl && isl.type === 'snow'){ maker = makeLeopard; name = '雪豹'; sec = 'snow'; }
+  else if (isl && isl.type === 'wetland'){ maker = makeIbis; name = '朱鹮'; sec = 'wetland'; }
+  else {
+    sec = sectorOf(p.x, p.z);
+    if (sec==='forest'){ maker = Math.random()<0.5 ? makePanda : makeMonkey; name = maker===makePanda?'大熊猫':'金丝猴'; }
+    else if (sec==='grass'){ maker = makeDeer; name = '藏羚羊'; }
+    else if (sec==='mountain'){ maker = makeLeopard; name = '雪豹'; }
+    else { maker = makeIbis; name = '朱鹮'; }
+  }
+  const a = spawnAnimal(maker, sec, name, p.x, p.z);
+  a.userData.extra = true;
+  a.scale.setScalar(0.01);
+  a.userData.popIn = true;
+  mission.release++; mission.score += 8;
+  threat.hunt = Math.max(0, threat.hunt - 2);
+  syncSliders(); applyThreats();
+  if (mission.release === 5){ mission.done++; toast('🎉 任务二完成！万物共生 +30 积分'); mission.score += 30; }
+  else toast(`🐾 放归一只${name}（${mission.release}/5）`);
+  updateMissionUI();
+}
+function cleanPatch(pt){
+  pt.userData.cleaned = true;
+  pt.visible = false;
+  mission.clean++; mission.score += 10;
+  threat.invasive = Math.max(0, threat.invasive - 15);
+  syncSliders(); applyThreats();
+  if (mission.clean === 3){ mission.done++; toast('🎉 任务三完成！守护本土物种 +30 积分'); mission.score += 30; }
+  else toast(`🧹 清除一处入侵斑块（${mission.clean}/3）`);
+  updateMissionUI();
+}
+function updateMissionUI(){
+  document.getElementById('m-plant').textContent = Math.min(mission.plant,10) + '/10';
+  document.getElementById('m-release').textContent = Math.min(mission.release,5) + '/5';
+  document.getElementById('m-clean').textContent = Math.min(mission.clean,3) + '/3';
+  document.getElementById('eco-score').textContent = mission.score;
+  document.getElementById('mission-done').textContent = mission.done + ' / 4';
+}
+function simulate10Years(){
+  if (simTimer) return;
+  let y = 0;
+  const prot = flags.ringNational;
+  document.getElementById('sim-result').textContent = '推演进行中…';
+  toast('⏳ 十年生态推演开始' + (prot ? '（有国家公园保护）' : '（无保护状态）'));
+  simTimer = setInterval(()=>{
+    y++;
+    Object.keys(threat).forEach(k=>{
+      threat[k] = Math.min(100, Math.max(0, threat[k] + (prot ? -4 : Math.max(1.5, threat[k]*0.10))));
+    });
+    syncSliders(); applyThreats();
+    toast(`⏳ 第 ${y} 年 · 生物多样性指数 ${bioIndex}`);
+    if (y >= 10){
+      clearInterval(simTimer); simTimer = null;
+      mission.sim = 1;
+      if (!mission.simDone){ mission.done++; mission.score += 40; mission.simDone = true; }
+      document.getElementById('m-sim').textContent = '✓';
+      document.getElementById('sim-result').textContent = prot
+        ? `【有国家公园保护】十年后指数 ${bioIndex}。威胁逐年下降，生态系统在严格保护下自我修复——就地保护是最有效的措施。`
+        : `【无保护状态】十年后指数 ${bioIndex}。威胁复合增长、相互叠加，生态系统加速退化——这正是建立自然保护地体系的紧迫性所在。`;
+      updateMissionUI();
+      toast(prot ? '🏞️ 推演完成：保护下生态持续向好' : '⚠️ 推演完成：无保护下生态加速退化');
+    }
+  }, 900);
+}
+
+// ============================================================
+//  面板交互
+// ============================================================
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.page).classList.add('show');
+  });
+});
+[['habitat','s-habitat','v-habitat'],['climate','s-climate','v-climate'],
+ ['pollution','s-pollution','v-pollution'],['invasive','s-invasive','v-invasive'],
+ ['hunt','s-hunt','v-hunt']].forEach(([key,sid,vid])=>{
+  document.getElementById(sid).addEventListener('input', e=>{
+    threat[key] = +e.target.value;
+    document.getElementById(vid).textContent = e.target.value + '%';
+    applyThreats();
+  });
+});
+function applyPreset(h,c,p,v,u,msg){
+  animateThreats({ habitat:h, climate:c, pollution:p, invasive:v, hunt:u }, 1600);
+  toast(msg);
+}
+function animateThreats(target, ms){ threatTween = { from:{...threat}, to:target, t:0, ms }; }
+function syncSliders(){
+  const map = { habitat:'s-habitat', climate:'s-climate', pollution:'s-pollution',
+    invasive:'s-invasive', hunt:'s-hunt' };
+  Object.keys(map).forEach(k=>{
+    document.getElementById(map[k]).value = threat[k];
+    document.getElementById('v-'+k).textContent = Math.round(threat[k]) + '%';
+  });
+}
+function toggleRing(which, fromCard){
+  const key = which==='national' ? 'ringNational' : which==='reserve' ? 'ringReserve' : 'ringPark';
+  flags[key] = !flags[key];
+  ringMeshes[which].userData.on = flags[key];
+  const name = which==='national' ? '国家公园（金色）' : which==='reserve' ? '自然保护区（绿色）' : '自然公园（蓝色）';
+  toast((flags[key]?'已开启 ':'已关闭 ') + name + '边界光环');
+  if (flags[key] && fromCard){
+    const g = ringMeshes[which];
+    flyTo(new THREE.Vector3(g.position.x + 18, 20, g.position.z + 18), new THREE.Vector3(g.position.x, 2, g.position.z));
+  }
+}
+function flyToPark(name, desc){
+  if (!flags.ringNational){ flags.ringNational = true; ringMeshes.national.userData.on = true; }
+  const a = Math.random()*Math.PI*2;
+  flyTo(new THREE.Vector3(Math.cos(a)*34, 24, Math.sin(a)*34), new THREE.Vector3(0, 3, 0));
+  toast('🏞️ ' + name + ' —— ' + desc);
+}
+function flyTo(pos, target){
+  camAnim = { p0:camera.position.clone(), p1:pos, t0:controls.target.clone(), t1:target, t:0 };
+}
+function highlightLayer(layer){
+  if (layer==='genetic'){ geneticFlash = 5; toast('🧬 遗传多样性：金色光点 = 种群间的基因交流'); }
+  if (layer==='species'){ speciesFlash = 5; toast('🦌 物种多样性：珍稀动物已被聚光标记，点击它们看百科！'); }
+  if (layer==='ecosystem'){ ecoFlash = 6; toast('🏔️ 生态系统多样性：四大生态系统依次闪烁，点击地表看详情！'); }
+}
+function doAction(type){
+  if (type==='insitu'){
+    if (!flags.ringNational){ flags.ringNational = true; ringMeshes.national.userData.on = true; }
+    animateThreats({ habitat:15, climate:20, pollution:10, invasive:10, hunt:5 }, 2600);
+    toast('🏞️ 国家公园建立！最严格的就地保护启动，生态系统开始恢复');
+    flyTo(new THREE.Vector3(36, 30, 36), new THREE.Vector3(0, 3, 0));
+  } else if (type==='exsitu'){
+    for (let i=0;i<3;i++){
+      const a = Math.random()*Math.PI*2, r = 6+Math.random()*6;
+      const x = Math.cos(a)*r, z = Math.sin(a)*r;
+      const p = spawnAnimal(makePanda, 'forest', '大熊猫', x, z);
+      p.userData.extra = true;
+      p.scale.setScalar(0.01);
+      p.userData.popIn = true;
+    }
+    toast('🐼 人工繁育个体野化放归成功！物种种群数量回升');
+  } else if (type==='restore'){
+    animateThreats({ habitat:0, climate:0, pollution:0, invasive:0, hunt:0 }, 3200);
+    toast('🌱 退耕还林还草 · 湿地恢复 —— 生态系统全面修复中…');
+  } else if (type==='law'){
+    flags.dome = true;
+    setTimeout(()=>{ flags.dome = false; }, 4200);
+    toast('⚖️ 生态保护红线与法治屏障已构筑（紫色护盾）');
+  } else if (type==='reset'){
+    animateThreats({ habitat:0, climate:0, pollution:0, invasive:0, hunt:0 }, 1200);
+    flags.ringNational = flags.ringReserve = flags.ringPark = flags.dome = false;
+    Object.values(ringMeshes).forEach(r=>r.userData.on = false);
+    toast('🔄 场景已重置');
+  }
+}
+
+// ============================================================
+//  群岛巡游导览（电影模式）
+// ============================================================
+const TOUR_STOPS = [
+  { pos:[74,48,80], tgt:[0,2,0],   title:'🌍 生态方舟群岛', sub:'一场穿越五大生态系统的生物多样性之旅', hold:4.2 },
+  { pos:[34,22,36], tgt:[0,4,0],   title:'🏔️ 生态方舟主岛', sub:'森林 · 草原 · 雪山 · 湖泊 —— 一岛尽览生态系统多样性', hold:4.6 },
+  { pos:null, tgt:null, lake:true, title:'💧 湿地湖泊', sub:'"地球之肾"：调蓄洪水 · 净化水质 · 哺育万物', hold:4.2 },
+  { isl:1, title:'🌴 热带雨林岛', sub:'"地球之肺"—— 物种最丰富、生产力最高的生态系统', hold:4.6 },
+  { isl:2, title:'🏜️ 荒漠岛', sub:'生态脆弱区：仙人掌与骆驼的旱生家园，破坏易、恢复难', hold:4.6 },
+  { isl:3, title:'🧊 雪山岛', sub:'冰川是"固体水库"，雪线之上是雪豹的王国', hold:4.6 },
+  { isl:4, title:'🦆 湿地岛', sub:'浅水沼泽是候鸟迁徙的停歇地，朱鹮在此觅食', hold:4.6 },
+  { pos:[30,42,68], tgt:[0,2,0],   title:'🛡️ 保护生物多样性', sub:'就是保护我们共同的未来 —— 从建立国家公园开始', hold:5 },
+];
+let tour = null;
+function startTour(){
+  if (tour){ stopTour('🚁 已停止巡游'); return; }
+  tour = { idx:0, timer:null };
+  controls.enabled = false;
+  document.body.classList.add('touring');
+  const b = document.querySelector('#toolbar [data-m="tour"]');
+  if (b) b.classList.add('on');
+  closeInfo();
+  toast('🚁 巡游开始 · 再次点击🚁可随时停止');
+  tourNext();
+}
+function tourNext(){
+  if (!tour) return;
+  if (tour.idx >= TOUR_STOPS.length){ stopTour('🚁 巡游结束 · 开始自由探索吧！'); return; }
+  const s = TOUR_STOPS[tour.idx];
+  let pos, tgt;
+  if (s.lake){
+    pos = new THREE.Vector3(lakeCenter.x + 13, 7.5, lakeCenter.z + 13);
+    tgt = new THREE.Vector3(lakeCenter.x, 1, lakeCenter.z);
+  } else if (s.isl !== undefined){
+    const isl = ISLANDS[s.isl];
+    pos = new THREE.Vector3(isl.cx + isl.R*1.3, 13, isl.cz + isl.R*1.3);
+    tgt = new THREE.Vector3(isl.cx, isl.yOff + 2.5, isl.cz);
+  } else {
+    pos = new THREE.Vector3(...s.pos);
+    tgt = new THREE.Vector3(...s.tgt);
+  }
+  flyTo(pos, tgt);
+  showCaption(s.title, s.sub);
+  tour.idx++;
+  tour.timer = setTimeout(tourNext, (s.hold + 1.8) * 1000);
+}
+function stopTour(msg){
+  if (tour) clearTimeout(tour.timer);
+  tour = null;
+  controls.enabled = true;
+  document.body.classList.remove('touring');
+  hideCaption();
+  const b = document.querySelector('#toolbar [data-m="tour"]');
+  if (b) b.classList.remove('on');
+  if (msg) toast(msg);
+}
+function showCaption(title, sub){
+  const cp = document.getElementById('caption');
+  cp.querySelector('.cp-title').textContent = title;
+  cp.querySelector('.cp-sub').textContent = sub;
+  cp.classList.add('show');
+}
+function hideCaption(){ document.getElementById('caption').classList.remove('show'); }
+
+// 工具栏
+document.querySelectorAll('#toolbar button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    const m = b.dataset.m;
+    if (m==='tour'){
+      startTour();
+    } else if (['plant','release','clean'].includes(m)){
+      setToolbarMode(m);
+      if (clickMode==='plant') toast('🌱 植树模式：点击岛内陆地种树');
+      else if (clickMode==='release') toast('🐾 放归模式：点击陆地放归动物');
+      else if (clickMode==='clean') toast('🧹 清除模式：点击紫色入侵斑块');
+      else toast('已退出操作模式');
+    } else if (m==='foodweb'){
+      flags.foodweb = !flags.foodweb;
+      foodwebGroup.visible = flags.foodweb;
+      b.classList.toggle('on', flags.foodweb);
+      toast(flags.foodweb ? '🕸️ 食物链透视已开启：生产者→消费者能量流动' : '食物链透视已关闭');
+    } else if (m==='rain'){
+      flags.rain = !flags.rain; if (flags.rain) flags.snow = false;
+      document.querySelector('#toolbar [data-m="snow"]').classList.remove('on');
+      b.classList.toggle('on', flags.rain);
+      updateEnvHUD();
+      toast(flags.rain ? '🌧️ 降雨开始 —— 湿地是天然的蓄水库' : '雨停了');
+    } else if (m==='snow'){
+      flags.snow = !flags.snow; if (flags.snow) flags.rain = false;
+      document.querySelector('#toolbar [data-m="rain"]').classList.remove('on');
+      b.classList.toggle('on', flags.snow);
+      updateEnvHUD();
+      toast(flags.snow ? '❄️ 降雪开始 —— 积雪是山地生态系统的重要水源' : '雪停了');
+    } else if (m==='orbit'){
+      controls.autoRotate = !controls.autoRotate;
+      b.classList.toggle('on', controls.autoRotate);
+      toast(controls.autoRotate ? '🔁 自动旋转已开启' : '自动旋转已关闭');
+    }
+  });
+});
+
+// 环境控制条：时间滑杆 / 季节 / 机位
+document.getElementById('time-slider').addEventListener('input', e=>{
+  timeV = e.target.value / 100;
+  applyDay();
+});
+document.querySelectorAll('#toolbar2 [data-season]').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    season = b.dataset.season;
+    document.querySelectorAll('#toolbar2 [data-season]').forEach(x=>x.classList.toggle('on', x===b));
+    applyThreats(); updateEnvHUD();
+    const names = { spring:'🌸 春季 · 万物复苏，花海盛开', summer:'🌿 夏季 · 葱郁繁茂',
+      autumn:'🍂 秋季 · 层林尽染', winter:'❄️ 冬季 · 银装素裹' };
+    toast(names[season]);
+  });
+});
+document.querySelectorAll('#toolbar2 [data-cam]').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    if (b.dataset.cam === 'top'){
+      flyTo(new THREE.Vector3(0.1, 62, 0.1), new THREE.Vector3(0, 2, 0));
+      toast('🛰️ 俯瞰视角 · 纵览全岛生态格局');
+    } else {
+      flyTo(new THREE.Vector3(-20, 5.5, 18), new THREE.Vector3(0, 3.5, 0));
+      toast('🏕️ 贴地视角 · 沉浸式观察生物');
+    }
+  });
+});
+
+// 课堂检测
+const quizDone = {};
+let quizScore = 0;
+function quiz(el, right, q){
+  if (quizDone[q]) return;
+  quizDone[q] = true;
+  el.classList.add(right ? 'right' : 'wrong');
+  el.parentElement.querySelectorAll('.quiz-opt').forEach(b=>{
+    if (b !== el && b.getAttribute('onclick').includes(',true,')) b.classList.add('right');
+  });
+  const notes = {
+    1:'解析：栖息地丧失与破碎化是生物多样性减少的首要人为原因。',
+    2:'解析：以国家公园为主体、自然保护区为基础、各类自然公园为补充。',
+    3:'解析：就地保护保护了物种的原生栖息地，是最有效的措施。',
+    4:'解析：首批国家公园是三江源、大熊猫、东北虎豹、海南热带雨林、武夷山。'
+  };
+  document.getElementById('qn'+q).textContent = notes[q];
+  if (right) quizScore++;
+  document.getElementById('quiz-score').textContent = quizScore + ' / 4';
+  if (right) toast('✅ 回答正确！'); else toast('❌ 再想一想，解析已显示');
+}
+
+let toastTimer = null;
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 2800);
+}
+
+// ============================================================
+//  主循环
+// ============================================================
+const dummy = new THREE.Object3D();
+function animate(){
+  requestAnimationFrame(animate);
+  const dt = Math.min(clock.getDelta(), 0.05);
+  const t = clock.elapsedTime;
+  controls.update();
+
+  if (camAnim){
+    camAnim.t += dt / 1.6;
+    const k = camAnim.t >= 1 ? 1 : (1 - Math.pow(1 - camAnim.t, 3));
+    camera.position.lerpVectors(camAnim.p0, camAnim.p1, k);
+    controls.target.lerpVectors(camAnim.t0, camAnim.t1, k);
+    if (camAnim.t >= 1) camAnim = null;
+  }
+  if (threatTween){
+    threatTween.t += dt * 1000;
+    const k = Math.min(1, threatTween.t / threatTween.ms);
+    const e = 1 - Math.pow(1-k, 3);
+    Object.keys(threatTween.to).forEach(key=>{
+      threat[key] = threatTween.from[key] + (threatTween.to[key] - threatTween.from[key]) * e;
+    });
+    syncSliders(); applyThreats();
+    if (k >= 1) threatTween = null;
+  }
+
+  // 岛屿呼吸
+  bobNow = Math.sin(t*0.4)*0.35;
+  terrain.position.y = bobNow;
+  underRock.position.y = -10.4 + bobNow;
+  satUnderRocks.forEach(c=>{ c.position.y = c.userData.baseY + bobNow; });
+  pondMeshes.forEach(p=>{ p.position.y = p.userData.baseY + bobNow; });
+  lake.position.y = 0.32 + bobNow;
+  lake.userData.halo.position.y = 0.34 + bobNow;
+  Object.values(ringMeshes).forEach(g=>{ g.position.y = 1.2 + bobNow; });
+  labelSprites.forEach(s=>{
+    if (s.userData.y0 === undefined) s.userData.y0 = s.position.y;
+    s.position.y = s.userData.y0 + bobNow;
+  });
+  floatingRocks.forEach(r=>{
+    r.rotation.y += r.userData.spin * dt;
+    r.position.y = r.userData.baseY + Math.sin(t*0.6 + r.userData.bobOff) * r.userData.bobAmp + bobNow;
+  });
+
+  // 动物
+  animals.forEach(a=>{
+    if (!a.visible) return;
+    if (a.userData.popIn){
+      a.scale.multiplyScalar(1.06);
+      if (a.scale.x >= (a.userData.s0||1)){ a.scale.setScalar(a.userData.s0||1); a.userData.popIn = false; }
+    }
+    const u = a.userData;
+    const ang = t * u.speed + u.phase;
+    const nx = u.home.x + Math.cos(ang) * u.radius;
+    const nz = u.home.z + Math.sin(ang) * u.radius;
+    const dx = nx - a.position.x, dz = nz - a.position.z;
+    a.position.x = nx; a.position.z = nz;
+    a.position.y = terrainH(nx, nz) + bobNow + Math.abs(Math.sin(t*3 + u.phase)) * 0.06;
+    if (Math.abs(dx)+Math.abs(dz) > 0.001) a.rotation.y = Math.atan2(dz, dx);
+    if (speciesFlash > 0 && !u.popIn){
+      const s = 1 + Math.sin(t*6)*0.08;
+      a.scale.setScalar(s * (u.s0 || 1));
+    } else if (!u.popIn) a.scale.setScalar(u.s0 || 1);
+  });
+  if (speciesFlash > 0) speciesFlash -= dt;
+
+  // 新种的树（成长动画）
+  plantedTrees.forEach(g=>{
+    if (g.userData.pop && g.scale.x < g.userData.pop){
+      g.scale.multiplyScalar(1.04);
+      if (g.scale.x >= g.userData.pop) g.scale.setScalar(g.userData.pop);
+    }
+  });
+
+  // 飞鸟
+  for (let i=0;i<birdData.length;i++){
+    const b = birdData[i];
+    b.a += b.sp * dt;
+    dummy.position.set(Math.cos(b.a)*b.r, b.h + Math.sin(t + i)*0.8 + bobNow, Math.sin(b.a)*b.r);
+    dummy.rotation.set(0, -b.a, Math.sin(t*8 + i)*0.5);
+    dummy.scale.setScalar(b.s);
+    dummy.updateMatrix();
+    if (i < birds.count) birds.setMatrixAt(i, dummy.matrix);
+  }
+  birds.instanceMatrix.needsUpdate = true;
+
+  // 蝴蝶
+  butterflies.forEach(b=>{
+    if (!b.visible) return;
+    const u = b.userData;
+    const ang = t*0.5 + u.off;
+    b.position.set(u.x + Math.cos(ang)*u.r, u.h + Math.sin(t*1.5+u.off)*0.5 + bobNow, u.z + Math.sin(ang)*u.r);
+    b.rotation.y = -ang + Math.PI/2;
+    const flap = Math.sin(t*14 + u.off)*0.9;
+    u.w1.rotation.y = flap; u.w2.rotation.y = -flap;
+  });
+
+  // 鱼（游弋 + 跃出水面）
+  fishes.forEach(f=>{
+    if (!f.visible) return;
+    const u = f.userData;
+    u.a += u.sp * dt;
+    const jump = Math.max(0, Math.sin(t*0.7 + u.jumpOff));
+    const jy = jump > 0.92 ? (jump-0.92)*14 : -0.15;
+    f.position.set(lakeCenter.x + Math.cos(u.a)*u.r*lake.scale.x,
+      0.32 + bobNow + jy, lakeCenter.z + Math.sin(u.a)*u.r*lake.scale.x);
+    f.rotation.y = -u.a;
+    f.rotation.x = jy > 0 ? -0.6 : 0;
+  });
+
+  // 瀑布水流
+  if (waterfallPts.material.opacity > 0.02){
+    const wp = waterfallPts.geometry.attributes.position;
+    const top = waterfall.userData.top, bot = waterfall.userData.bot;
+    for (let i=0;i<wfData.length;i++){
+      wfData[i].k += wfData[i].sp * dt;
+      if (wfData[i].k > 1) wfData[i].k = 0;
+      const k = wfData[i].k;
+      wp.setXYZ(i, top.x + (bot.x-top.x)*k, top.y + (bot.y-top.y)*k + bobNow, top.z + (bot.z-top.z)*k);
+    }
+    wp.needsUpdate = true;
+    waterfall.position.y = (top.y+bot.y)/2 + bobNow;
+  }
+
+  // 云朵漂移
+  clouds.forEach(c=>{
+    const u = c.userData;
+    u.a += u.sp * dt;
+    c.position.set(Math.cos(u.a)*u.r, u.h + Math.sin(t*0.3+u.r)*0.6, Math.sin(u.a)*u.r);
+  });
+
+  // 萤火虫
+  const fp = fireflies.geometry.attributes.position;
+  for (let i=0;i<fireflyData.length;i++){
+    const f = fireflyData[i];
+    fp.setX(i, f.x + Math.sin(t*0.7 + f.off)*f.amp);
+    fp.setZ(i, f.z + Math.cos(t*0.5 + f.off)*f.amp);
+  }
+  fp.needsUpdate = true;
+  fireflies.material.opacity = 0.55 + Math.sin(t*2)*0.3;
+
+  // 基因闪光
+  if (geneticFlash > 0){
+    geneticFlash -= dt;
+    sparkles.material.opacity = 0.4 + Math.sin(t*10)*0.35;
+  } else sparkles.material.opacity = Math.max(0, sparkles.material.opacity - dt);
+
+  // 生态标签闪烁
+  if (ecoFlash > 0){
+    ecoFlash -= dt;
+    labelSprites.forEach((s,i)=>{
+      const k = 1 + Math.max(0, Math.sin(t*2.2 + i*1.57))*0.35;
+      s.scale.set(11*k, 2.75*k, 1);
+    });
+  } else labelSprites.forEach(s=>s.scale.set(11, 2.75, 1));
+
+  // 污染烟雾
+  if (smoke.material.opacity > 0.01){
+    const sp = smoke.geometry.attributes.position;
+    for (let i=0;i<smokeData.length;i++){
+      let y = sp.getY(i) + smokeData[i].sp * dt * 2.2;
+      if (y > factory.position.y + 12) y = factory.position.y + 3;
+      sp.setY(i, y);
+      sp.setX(i, sp.getX(i) + Math.sin(t + smokeData[i].off)*dt*0.6);
+    }
+    sp.needsUpdate = true;
+  }
+
+  // 入侵紫斑脉动
+  invasivePatches.forEach(pt=>{
+    if (!pt.userData.cleaned && pt.material.opacity > 0.01)
+      pt.material.opacity = (threat.invasive/100) * (0.45 + Math.sin(t*3 + pt.userData.phase)*0.12);
+  });
+
+  // 保护地光环
+  Object.values(ringMeshes).forEach(g=>{
+    const u = g.userData;
+    u.ring.material.opacity += ((u.on?0.85:0) - u.ring.material.opacity) * dt * 4;
+    u.beam.material.opacity += ((u.on?0.10:0) - u.beam.material.opacity) * dt * 4;
+    if (u.on) u.ring.scale.setScalar(1 + Math.sin(t*2.5)*0.02);
+  });
+
+  // 护盾
+  shieldDome.material.opacity += ((flags.dome?0.35:0) - shieldDome.material.opacity) * dt * 3;
+  shieldDome.rotation.y += dt * 0.4;
+
+  // 食物链脉动
+  if (foodwebGroup.visible){
+    const k = 0.55 + Math.sin(t*3)*0.3;
+    foodwebGroup.children.forEach(m=>{ m.material.opacity = k; });
+    foodwebGroup.position.y = bobNow;
+  }
+
+  // 降雨 / 降雪
+  const raining = flags.rain || flags.snow;
+  precip.material.opacity += ((raining?0.7:0) - precip.material.opacity) * dt * 3;
+  if (raining){
+    const snow = flags.snow;
+    precip.material.color.setHex(snow ? 0xffffff : 0x9ecfff);
+    precip.material.size = snow ? 0.3 : 0.15;
+    const pp = precip.geometry.attributes.position;
+    for (let i=0;i<precipData.length;i++){
+      let y = pp.getY(i) - precipData[i].sp * dt * (snow?0.25:1);
+      if (y < 0) y = 30;
+      pp.setY(i, y);
+      if (snow) pp.setX(i, pp.getX(i) + Math.sin(t*2 + i)*dt*0.8);
+    }
+    pp.needsUpdate = true;
+  }
+
+  lake.material.emissiveIntensity = 0.6 + Math.sin(t*1.8)*0.25;
+
+  // 湖面涟漪扩散
+  ripples.forEach(rp=>{
+    const k = ((t*0.25 + rp.userData.off) % 1);
+    const s = (0.5 + k*6) * lake.scale.x;
+    rp.scale.setScalar(Math.max(0.01, s));
+    rp.material.opacity = 0.35 * (1-k) * lake.material.opacity;
+    rp.position.y = 0.36 + bobNow;
+  });
+
+  renderer.render(scene, camera);
+}
+
+function onResize(){
+  const stage = document.getElementById('stage');
+  camera.aspect = stage.clientWidth / stage.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(stage.clientWidth, stage.clientHeight);
+}
+
+// ============================================================
+//  教学优化层：三维指标、保护方案、案例与情景证据
+// ============================================================
+const protectionPlan = {
+  budget: 100,
+  selected: { insitu:false, exsitu:false, restore:false, law:false },
+  geneticBuffer: 0
+};
+let biodiversityDimensions = { genetic:100, species:100, ecosystem:100, overall:100, lowest:'genetic' };
+let modelQuestionDone = false;
+let lastQuestionScenario = '';
+
+const PARK_CASES = {
+  sjy: { icon:'🏔️', name:'三江源国家公园', desc:'高寒生态系统与江河源头保护。核心证据是源头涵养、草地完整性与野生动物迁徙通道。', focus:'对应模型：气候变化会影响雪线、冰雪融水与湿地补给。' },
+  panda: { icon:'🐼', name:'大熊猫国家公园', desc:'跨区域保护大熊猫栖息地，关键不只是增加个体数量，更是修复破碎生境并保持种群连通。', focus:'对应模型：栖息地丧失会先压低生态系统与遗传连通性。' },
+  tiger: { icon:'🐯', name:'东北虎豹国家公园', desc:'保护顶级捕食者及其完整食物网，需要减少盗猎、维持猎物种群和森林栖息地。', focus:'对应模型：过度开发会直接降低物种多样性并扰动食物链。' },
+  rainforest: { icon:'🌴', name:'海南热带雨林国家公园', desc:'保护热带雨林生态系统与旗舰物种，强调核心保护、生态廊道与社区协同。', focus:'对应模型：林地破碎会削弱生态系统结构和物种栖息空间。' },
+  wuyi: { icon:'🍃', name:'武夷山国家公园', desc:'保护中亚热带原生性森林生态系统及其生物多样性，兼顾科学研究与严格保护。', focus:'对应模型：污染与不合理利用会改变水体和森林生态过程。' }
+};
+
+function clampScore(value){ return Math.max(0, Math.min(100, Math.round(value))); }
+function computeIndicators(input, planState){
+  const h = (input.habitat || 0) / 100;
+  const c = (input.climate || 0) / 100;
+  const p = (input.pollution || 0) / 100;
+  const v = (input.invasive || 0) / 100;
+  const u = (input.hunt || 0) / 100;
+  const selected = planState?.selected || {};
+  const fragmentation = h > 0.35 ? (h - 0.35) * 0.30 : 0;
+  const ecosystemThreshold = h > 0.55 || c > 0.62 ? 0.12 : 0;
+  const speciesThreshold = u > 0.55 || v > 0.62 ? 0.10 : 0;
+  const geneticBase = 100 * (1 - (0.39*h + 0.10*c + 0.08*p + 0.07*v + 0.13*u + fragmentation));
+  const speciesBase = 100 * (1 - (0.31*h + 0.17*c + 0.18*p + 0.18*v + 0.30*u + speciesThreshold));
+  const ecosystemBase = 100 * (1 - (0.54*h + 0.25*c + 0.16*p + 0.09*v + ecosystemThreshold));
+  const genetic = clampScore(geneticBase + (selected.exsitu ? 8 : 0) + (selected.insitu ? 4 : 0) + (planState?.geneticBuffer || 0));
+  const species = clampScore(speciesBase + (selected.insitu ? 9 : 0) + (selected.exsitu ? 5 : 0) + (selected.law ? 6 : 0));
+  const ecosystem = clampScore(ecosystemBase + (selected.insitu ? 7 : 0) + (selected.restore ? 13 : 0) + (selected.law ? 3 : 0));
+  const dimensions = { genetic, species, ecosystem };
+  const sorted = Object.keys(dimensions).sort((a,b)=>dimensions[a]-dimensions[b]);
+  const stable = genetic >= 99 && species >= 99 && ecosystem >= 99;
+  const lowest = stable ? 'stable' : sorted[0];
+  return { ...dimensions, overall:clampScore(genetic*0.28 + species*0.38 + ecosystem*0.34), lowest };
+}
+function dimensionName(key){ return { genetic:'遗传多样性', species:'物种多样性', ecosystem:'生态系统多样性', stable:'三类多样性' }[key] || '综合多样性'; }
+function dimensionEvidence(key){
+  return {
+    genetic:'种群数量与栖息地连通性是遗传交流的基础；恢复通常比植被外观更慢。',
+    species:'动物、鱼类、鸟群与蝴蝶数量是物种丰富度的可视证据。',
+    ecosystem:'森林覆盖、湿地水面、雪线与瀑布水流共同反映生态系统结构和功能。'
+  }[key];
+}
+function updateBiodiversityEvidence(){
+  const state = biodiversityDimensions;
+  const title = document.getElementById('evidence-title');
+  const text = document.getElementById('evidence-text');
+  const impact = document.getElementById('impact-evidence');
+  const chips = document.getElementById('threshold-row');
+  const modelEvidence = document.getElementById('model-question-evidence');
+  const lowest = state.lowest;
+  const threatTotal = Object.values(threat).reduce((sum, value)=>sum + value, 0);
+  const scenarioKey = `${Math.round(threat.habitat)}:${Math.round(threat.climate)}:${Math.round(threat.pollution)}:${Math.round(threat.invasive)}:${Math.round(threat.hunt)}`;
+  if (scenarioKey !== lastQuestionScenario){
+    lastQuestionScenario = scenarioKey;
+    modelQuestionDone = false;
+    const modelNote = document.getElementById('model-question-note');
+    if (modelNote) modelNote.textContent = '';
+  }
+  const isStable = lowest === 'stable';
+  const level = isStable ? state.overall : state[lowest];
+  const status = level < 45 ? '危险阈值' : level < 70 ? '风险阈值' : '稳定区间';
+  if (title) title.textContent = isStable ? '三类多样性均处于稳定状态' : `优先关注 · ${dimensionName(lowest)} ${level}（${status}）`;
+  if (text) text.textContent = threatTotal < 1
+    ? '生态系统完整、物种丰富、种群连通。请在“发现问题”中一次只改变一种威胁，比较谁先下降。'
+    : `${dimensionEvidence(lowest)} 当前最直接的场景证据请看左侧模型；不要只根据综合分数下结论。`;
+  if (impact) impact.innerHTML = isStable
+    ? '<b>一次只改变一种威胁</b><p>观察森林、湿地、动物、雪线与水流，再比较三项指标。</p>'
+    : `<b>优先关注 · ${dimensionName(lowest)} ${level}</b><p>${dimensionEvidence(lowest)}${level < 45 ? ' 已接近或进入不可逆风险区。' : ''}</p>`;
+  if (chips) chips.innerHTML = ['genetic','species','ecosystem'].map(key=>{
+    const value = state[key]; const levelClass = value < 45 ? 'danger' : value < 70 ? 'warn' : '';
+    return `<span class="threshold-chip ${levelClass}">${dimensionName(key)} ${value}</span>`;
+  }).join('');
+  if (modelEvidence) modelEvidence.textContent = threatTotal < 1
+    ? '当前没有干扰，三个维度均为稳定状态。请先在“发现问题”中制造一种威胁后再作答。'
+    : `当前最低指标是“${dimensionName(lowest)}”(${level})。请选择与模型证据一致的答案，并说明你观察到的场景变化。`;
+  const qualityChip = document.getElementById('quality-chip');
+  if (qualityChip) qualityChip.textContent = `◌ 当前设备：${QUALITY.name} · 保留生态主体与教学识别点`;
+}
+function goToPage(pageId){
+  const tab = document.querySelector(`.tab[data-page="${pageId}"]`);
+  if (!tab) return;
+  document.querySelectorAll('.tab').forEach(item=>item.classList.toggle('active', item === tab));
+  document.querySelectorAll('.page').forEach(page=>page.classList.toggle('show', page.id === pageId));
+}
+function selectParkCase(key){
+  const item = PARK_CASES[key];
+  if (!item) return;
+  const card = document.getElementById('park-case');
+  if (card) card.innerHTML = `<b>${item.icon} 中国保护地案例 · ${item.name}</b><p>${item.desc}<br><span style="color:#99f6e4">${item.focus}</span></p>`;
+  flyToPark(item.name, item.desc);
+}
+function updatePlanUI(){
+  const budget = document.getElementById('plan-budget');
+  const summary = document.getElementById('plan-summary');
+  if (budget) budget.textContent = protectionPlan.budget;
+  Object.keys(protectionPlan.selected).forEach(key=>{
+    const tag = document.querySelector(`#plan-tags [data-plan="${key}"]`);
+    if (tag) tag.classList.toggle('on', protectionPlan.selected[key]);
+  });
+  const chosen = Object.keys(protectionPlan.selected).filter(key=>protectionPlan.selected[key]);
+  if (summary) summary.textContent = chosen.length
+    ? `已配置：${chosen.map(key=>({insitu:'就地保护',exsitu:'迁地保护',restore:'生态修复',law:'法治保障'})[key]).join('、')}。不同措施的恢复对象与速度不同。`
+    : '尚未配置措施。先从当前威胁出发，选择保护对象明确的措施。';
+}
+function doAction(type){
+  if (type === 'reset'){
+    Object.keys(protectionPlan.selected).forEach(key=>protectionPlan.selected[key] = false);
+    protectionPlan.budget = 100; protectionPlan.geneticBuffer = 0; modelQuestionDone = false;
+    animateThreats({ habitat:0, climate:0, pollution:0, invasive:0, hunt:0 }, 1000);
+    flags.ringNational = flags.ringReserve = flags.ringPark = flags.dome = false;
+    Object.values(ringMeshes).forEach(ring=>ring.userData.on = false);
+    updatePlanUI(); applyThreats(); toast('🔄 已复位：回到可比较的生态基线'); return;
+  }
+  const config = {
+    insitu:{ cost:40, label:'国家公园就地保护', target:{ habitat:0.58, climate:0.94, pollution:0.82, invasive:0.75, hunt:0.46 } },
+    exsitu:{ cost:20, label:'迁地保护与繁育放归', target:{ habitat:1, climate:1, pollution:1, invasive:1, hunt:0.80 } },
+    restore:{ cost:30, label:'生态修复', target:{ habitat:0.68, climate:0.91, pollution:0.52, invasive:0.84, hunt:1 } },
+    law:{ cost:10, label:'法治保障与生态红线', target:{ habitat:0.92, climate:1, pollution:0.66, invasive:0.70, hunt:0.64 } }
+  }[type];
+  if (!config || protectionPlan.selected[type]){ toast('该措施已配置；请观察它对应的指标变化。'); return; }
+  if (protectionPlan.budget < config.cost){ toast('生态行动点不足，请重新配置方案。'); return; }
+  protectionPlan.selected[type] = true; protectionPlan.budget -= config.cost;
+  const target = Object.fromEntries(Object.entries(threat).map(([key,value])=>[key, Math.round(value * config.target[key])]));
+  if (type === 'insitu'){
+    flags.ringNational = true; ringMeshes.national.userData.on = true;
+    flyTo(new THREE.Vector3(36, 30, 36), new THREE.Vector3(0, 3, 0));
+  }
+  if (type === 'exsitu'){
+    protectionPlan.geneticBuffer = 3;
+    for (let i=0;i<2;i++){
+      const angle = Math.random()*Math.PI*2, radius = 7 + Math.random()*5;
+      const animal = spawnAnimal(makePanda, 'forest', '大熊猫', Math.cos(angle)*radius, Math.sin(angle)*radius);
+      animal.userData.extra = true; animal.scale.setScalar(0.01); animal.userData.popIn = true;
+    }
+  }
+  if (type === 'law'){ flags.dome = true; setTimeout(()=>{ flags.dome = false; }, 3600); }
+  animateThreats(target, 1500); updatePlanUI(); applyThreats();
+  toast(`🧭 已配置${config.label}（-${config.cost} 点）：${dimensionEvidence(type === 'restore' ? 'ecosystem' : type === 'exsitu' ? 'genetic' : 'species')}`);
+}
+function projectScenario(protectedMode){
+  const planned = protectedMode ? protectionPlan : { selected:{ insitu:false, exsitu:false, restore:false, law:false }, geneticBuffer:0 };
+  const values = []; let current = { ...threat };
+  for (let year=1; year<=10; year++){
+    Object.keys(current).forEach(key=>{
+      if (!protectedMode){ current[key] = Math.min(100, current[key] + 5 + current[key]*0.08); return; }
+      const reductions = {
+        habitat:(planned.selected.insitu ? 5.0 : 0) + (planned.selected.restore ? 3.5 : 0),
+        climate:(planned.selected.restore ? 1.3 : 0),
+        pollution:(planned.selected.restore ? 3.8 : 0) + (planned.selected.law ? 3.0 : 0),
+        invasive:(planned.selected.law ? 3.4 : 0) + (planned.selected.insitu ? 1.3 : 0),
+        hunt:(planned.selected.insitu ? 4.0 : 0) + (planned.selected.law ? 3.4 : 0) + (planned.selected.exsitu ? 1.0 : 0)
+      }[key];
+      current[key] = Math.max(0, Math.min(100, current[key] + 2.1 - reductions));
+    });
+    const projected = computeIndicators(current, planned);
+    if (protectedMode){
+      // 保护能遏制风险，但种群连通、栖息地演替和生态功能恢复存在时间差，不能“一键满分”。
+      const lag = {
+        genetic:(planned.selected.exsitu ? 3 : 10) + Math.max(0, 6 - year) * 1.1,
+        species:(planned.selected.insitu ? 4 : 11) + Math.max(0, 4 - year) * 0.9,
+        ecosystem:(planned.selected.restore ? 3 : 12) + Math.max(0, 3 - year) * 1.2
+      };
+      ['genetic','species','ecosystem'].forEach(key=>{ projected[key] = Math.min(projected[key], Math.max(0, 100 - lag[key])); });
+      projected.overall = clampScore(projected.genetic*0.28 + projected.species*0.38 + projected.ecosystem*0.34);
+      projected.lowest = Object.keys({genetic:projected.genetic,species:projected.species,ecosystem:projected.ecosystem})
+        .sort((a,b)=>projected[a]-projected[b])[0];
+    }
+    values.push(projected);
+  }
+  return values;
+}
+function renderProjection(prefix, series){
+  const final = series[series.length-1];
+  const score = document.getElementById(`${prefix}-score`);
+  const bars = document.getElementById(`${prefix}-bars`);
+  if (score) score.textContent = final.overall;
+  if (bars) bars.innerHTML = series.map(point=>`<i style="height:${Math.max(5,point.overall)}%" title="${point.overall}"></i>`).join('');
+  return final;
+}
+function simulate10Years(){
+  if (simTimer) return;
+  const noProtection = projectScenario(false);
+  const withProtection = projectScenario(true);
+  let year = 0;
+  const selectedCount = Object.values(protectionPlan.selected).filter(Boolean).length;
+  document.getElementById('sim-title').textContent = '正在逐年比对同一初始情景…';
+  simTimer = setInterval(()=>{
+    year++;
+    const baseline = renderProjection('baseline', noProtection.slice(0, year));
+    const protectedResult = renderProjection('protected', withProtection.slice(0, year));
+    document.getElementById('baseline-note').textContent = `第 ${year} 年：综合 ${baseline.overall}，最低为${dimensionName(baseline.lowest)} ${baseline[baseline.lowest]}。`;
+    document.getElementById('protected-note').textContent = selectedCount
+      ? `第 ${year} 年：综合 ${protectedResult.overall}，最低为${dimensionName(protectedResult.lowest)} ${protectedResult[protectedResult.lowest]}。`
+      : '尚未配置保护方案，因此与无保护情景接近。';
+    if (year >= 10){
+      clearInterval(simTimer); simTimer = null;
+      document.getElementById('m-sim').textContent = '✓';
+      const gap = protectedResult.overall - baseline.overall;
+      document.getElementById('sim-title').textContent = `十年证据 · 组合方案比无保护情景高 ${gap} 分`;
+      document.getElementById('sim-result').textContent = selectedCount
+        ? `无保护情景的关键风险是${dimensionName(baseline.lowest)}降至 ${baseline[baseline.lowest]}；你的保护方案使综合指数达到 ${protectedResult.overall}。注意：${dimensionName(protectedResult.lowest)}仍为 ${protectedResult[protectedResult.lowest]}，说明保护有效并不等于生态过程已经完全恢复。`
+        : `未配置保护措施时，两条曲线几乎没有差异。返回“制定保护”，至少选择两项作用对象不同的措施，再运行一次。`;
+      toast(selectedCount ? '📈 推演完成：请用最低指标解释方案效果' : '⚠️ 尚无保护方案，无法形成有效对照');
+    }
+  }, 180);
+}
+function highlightLayer(layer){
+  const indexSets = { genetic:[], species:[], ecosystem:[0,1,2,3] };
+  labelSprites.forEach((sprite,index)=>{ sprite.material.opacity = indexSets[layer].includes(index) ? 1 : 0.22; });
+  if (layer === 'genetic'){ geneticFlash = 5; toast('🧬 关注种群连通性：基因交流不等于短时间增加几个个体。'); }
+  if (layer === 'species'){ speciesFlash = 5; toast('🦌 关注可见物种、食物链与栖息空间。'); }
+  if (layer === 'ecosystem'){ ecoFlash = 6; toast('🏞️ 关注森林、湿地、山地和水体共同构成的生态系统。'); }
+  setTimeout(()=>labelSprites.forEach(sprite=>sprite.material.opacity = 0), 5000);
+}
+function checkScenarioAnswer(choice){
+  if (Object.values(threat).every(value=>value < 1)){ toast('请先在“发现问题”中制造一种威胁，再依据指标作答。'); return; }
+  if (modelQuestionDone){ toast('本题已作答，请改变情景后重置再练习。'); return; }
+  const expected = biodiversityDimensions.lowest;
+  const right = choice === expected;
+  modelQuestionDone = true;
+  const note = document.getElementById('model-question-note');
+  if (note) note.textContent = right
+    ? `解析：当前${dimensionName(expected)}为 ${biodiversityDimensions[expected]}，是三个维度中的最低值；证据应来自模型中相应的场景变化。`
+    : `再观察：当前最低的是${dimensionName(expected)}（${biodiversityDimensions[expected]}）。不要只凭总指数作答，要回到场景寻找证据。`;
+  toast(right ? '✅ 证据判断正确' : '❌ 请依据当前三维指标重新判断');
+}
+
+init();
+applyDay();
+updatePlanUI();
+labelSprites.forEach(sprite=>sprite.material.opacity = 0);
+</script>
+</body>
+</html>

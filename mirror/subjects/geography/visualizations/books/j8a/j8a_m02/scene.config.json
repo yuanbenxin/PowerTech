@@ -1,0 +1,25 @@
+{
+  "cardId": "j8a_m02",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-terrain-step-model",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js"
+  },
+  "dataGlobals": {
+    "chinaDemData": "assets/china-dem-data.json",
+    "worldTopoData": "assets/world-topo-data.json"
+  },
+  "panelSelectors": [
+    ".ui-shell .sidebar",
+    ".ui-shell .detail-panel",
+    ".ui-shell .dock",
+    ".scene-chip"
+  ],
+  "notes": "中国三级阶梯地势模型源文件已迁入；DEM 与世界拓扑数据改为本地 JSON 资源注入，避免外部脚本被适配器移除后黑屏。"
+}

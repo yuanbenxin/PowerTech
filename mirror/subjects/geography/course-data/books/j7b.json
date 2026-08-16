@@ -1,0 +1,240 @@
+{
+  "book": {
+    "id": "j7b",
+    "label": "七年级下册",
+    "stageId": "junior",
+    "stageLabel": "初中"
+  },
+  "chapterTree": [
+    {
+      "id": "j7b_c6",
+      "label": "第六章 我们生活的大洲——亚洲",
+      "children": [
+        {
+          "id": "j7b_c6_1",
+          "label": "第一节 位置和范围"
+        },
+        {
+          "id": "j7b_c6_2",
+          "label": "第二节 自然环境"
+        }
+      ]
+    },
+    {
+      "id": "j7b_c7",
+      "label": "第七章 我们临近的地区和国家",
+      "children": [
+        {
+          "id": "j7b_c7_1",
+          "label": "第一节 日本"
+        },
+        {
+          "id": "j7b_c7_2",
+          "label": "第二节 东南亚"
+        }
+      ]
+    },
+    {
+      "id": "j7b_c8",
+      "label": "第八章 东半球其他的地区和国家",
+      "children": [
+        {
+          "id": "j7b_c8_1",
+          "label": "8.1 中东"
+        },
+        {
+          "id": "j7b_c8_2",
+          "label": "8.2 欧洲西部"
+        },
+        {
+          "id": "j7b_c8_3",
+          "label": "8.3 撒哈拉以南非洲"
+        }
+      ]
+    },
+    {
+      "id": "j7b_c9",
+      "label": "第九章 西半球的国家",
+      "children": [
+        {
+          "id": "j7b_c9_1",
+          "label": "9.1 美国"
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j7b_m01",
+      "chapterIds": [
+        "j7b_c6_2"
+      ],
+      "title": "亚洲地形与河流放射状分布",
+      "detail": "构建亚洲宏伟的 3D 地形沙盘，凸显中部高、四周低的地势特征，以及大河呈放射状流向周边的水系特征",
+      "image": "assets/cards/j7b_m01.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7b_m02",
+      "chapterIds": [
+        "j7b_c7_1"
+      ],
+      "title": "日本的地形与火山地震",
+      "detail": "局部高精度数字高程模型（DEM），展示日本多山少平原的岛国地形，以及位于环太平洋火山地震带的地理位置",
+      "image": "assets/cards/j7b_m02.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "globe"
+    },
+    {
+      "cardId": "j7b_m05",
+      "chapterIds": [
+        "j7b_c7_1"
+      ],
+      "title": "日本列岛：地震带与火山地震带",
+      "detail": "剖切地壳，透视富士山内部的岩浆运动",
+      "image": "assets/cards/j7b_m05.webp",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j7b_m06",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "title": "欧洲西部的温带海洋性气候",
+      "detail": "大西洋暖流与盛行西风带的粒子流场",
+      "image": "assets/cards/j7b_m06.webp",
+      "isLocked": true,
+      "engine": "particle"
+    },
+    {
+      "cardId": "j7b_m07",
+      "chapterIds": [
+        "j7b_c7_2"
+      ],
+      "title": "东南亚十字路口的海峡与航线",
+      "detail": "马六甲海峡的全球航运枢纽地位与洋流动态模拟",
+      "image": "assets/cards/j7b_m07.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "globe"
+    },
+    {
+      "cardId": "j7b_m08",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "title": "中东石油资源三维分布",
+      "detail": "波斯湾沿岸国家的石油储量三维柱状热力图",
+      "image": "assets/cards/j7b_m08.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "globe"
+    },
+    {
+      "cardId": "j7b_m09",
+      "chapterIds": [
+        "j7b_c8_3"
+      ],
+      "title": "撒哈拉以南非洲的气候带",
+      "detail": "以赤道为轴南北对称分布的热带气候带粒子模拟",
+      "image": "assets/cards/j7b_m09.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "particle"
+    },
+    {
+      "cardId": "j7b_m10",
+      "chapterIds": [
+        "j7b_c9_1"
+      ],
+      "title": "南北美洲纵贯山脉与气候",
+      "detail": "落基山脉-安第斯山脉的纵向地形对气候的阻隔效应",
+      "image": "assets/cards/j7b_m10.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j7bm11",
+      "chapterIds": [
+        "j7b_c6_1"
+      ],
+      "title": "亚洲位置范围与分区拼图",
+      "detail": "通过亚洲范围、相对位置和分区拼图，建立亚洲区域空间定位。",
+      "image": "assets/cards/j7bm11.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7bm12",
+      "chapterIds": [
+        "j7b_c7_2"
+      ],
+      "title": "印度季风农业与人口城市",
+      "detail": "联动印度季风、降水、农业和人口城市分布，认识季风对生产生活的影响。",
+      "image": "assets/cards/j7bm12.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "CloudSun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7bm13",
+      "chapterIds": [
+        "j7b_c9_1"
+      ],
+      "title": "俄罗斯工业带与交通线",
+      "detail": "展示俄罗斯资源、工业带和交通线，理解资源开发与交通布局的关系。",
+      "image": "assets/cards/j7bm13.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7bm14",
+      "chapterIds": [
+        "j7b_c9_1"
+      ],
+      "title": "澳大利亚矿产、牧羊带与城市",
+      "detail": "展示澳大利亚矿产、牧羊带和沿海城市分布，理解区域发展条件。",
+      "image": "assets/cards/j7bm14.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7bm15",
+      "chapterIds": [
+        "j7b_c9_1"
+      ],
+      "title": "巴西地形气候与亚马孙",
+      "detail": "展示巴西地形气候、亚马孙雨林和城市农业分布，理解区域差异。",
+      "image": "assets/cards/j7bm15.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "CloudSun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j7bm16",
+      "chapterIds": [
+        "j7b_c9_1"
+      ],
+      "title": "极地地区冰盖、科考与生态保护",
+      "detail": "对比南北极冰盖、科考站和生态保护，认识极地地区地理特征。",
+      "image": "assets/cards/j7bm16.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    }
+  ]
+}

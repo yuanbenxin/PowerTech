@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>昼夜长短与正午太阳高度 · 3D 计算模拟</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;background:#04060e;color:#e8eef7;
+    font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+  body{display:flex}
+  /* ---------- 左侧 3D ---------- */
+  #stage{flex:1;position:relative;min-width:0}
+  #stage canvas{display:block}
+  .ovTitle{position:absolute;top:18px;left:22px;z-index:5;pointer-events:none}
+  .ovTitle h1{font-size:22px;letter-spacing:2px;font-weight:700;
+    background:linear-gradient(90deg,#ffd76a,#7fd0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ovTitle p{font-size:12px;color:#8fa3bf;margin-top:4px;letter-spacing:1px}
+  #badgeTerm{position:absolute;top:20px;right:18px;z-index:5;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  .badge{padding:6px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:1px;
+    background:rgba(10,18,36,.72);border:1px solid rgba(127,208,255,.35);backdrop-filter:blur(6px)}
+  .badge.gold{border-color:rgba(255,215,106,.5);color:#ffd76a}
+  .badge.cyan{color:#7fd0ff}
+  .badge.polar{display:none;color:#b08cff;border-color:rgba(176,140,255,.55);animation:pulseB 1.6s infinite}
+  @keyframes pulseB{50%{box-shadow:0 0 18px rgba(176,140,255,.55)}}
+  /* 读数 chips */
+  #chips{position:absolute;left:22px;bottom:18px;z-index:5;display:flex;gap:10px;flex-wrap:wrap;max-width:70%}
+  .chip{background:rgba(10,18,36,.72);border:1px solid rgba(255,255,255,.14);border-radius:12px;
+    padding:8px 14px;backdrop-filter:blur(6px);font-size:12px;color:#9db2cc}
+  .chip b{display:block;font-size:19px;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+  .chip.gold b{color:#ffd76a}.chip.cyan b{color:#7fd0ff}
+  #toast{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:6;
+    background:rgba(8,14,30,.85);border:1px solid rgba(127,208,255,.4);padding:9px 20px;border-radius:999px;
+    font-size:13px;color:#cfe3ff;opacity:0;transition:opacity .5s;pointer-events:none;white-space:nowrap}
+  /* ---------- 右侧面板 ---------- */
+  #panel{width:386px;flex:none;background:linear-gradient(180deg,#0a1122,#070b18);
+    border-left:1px solid rgba(127,208,255,.14);overflow-y:auto;padding:16px 16px 26px}
+  #panel::-webkit-scrollbar{width:6px}
+  #panel::-webkit-scrollbar-thumb{background:rgba(127,208,255,.25);border-radius:3px}
+  .card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+    border-radius:14px;padding:13px 14px;margin-bottom:13px}
+  .card h3{font-size:13px;color:#8fa3bf;font-weight:600;letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+  .bigNum{display:flex;align-items:baseline;gap:10px}
+  .bigNum .v{font-size:38px;font-weight:800;color:#ffd76a;font-variant-numeric:tabular-nums;line-height:1}
+  .bigNum .v.cyan{color:#7fd0ff}
+  .bigNum .u{font-size:15px;color:#8fa3bf}
+  .formula{margin-top:8px;font-size:13px;color:#9db2cc;background:rgba(0,0,0,.28);border-radius:8px;
+    padding:7px 10px;font-variant-numeric:tabular-nums}
+  .formula b{color:#ffd76a}
+  .daybar{display:flex;height:20px;border-radius:10px;overflow:hidden;margin-top:10px;border:1px solid rgba(255,255,255,.12)}
+  .daybar .d{background:linear-gradient(90deg,#ff9a3c,#ffd76a)}
+  .daybar .n{background:linear-gradient(90deg,#1c2c52,#31427a);flex:1}
+  .daybar span{font-size:11px;line-height:20px;padding:0 8px;color:#231708;font-weight:700;white-space:nowrap}
+  .riset{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:#9db2cc}
+  .riset b{color:#e8eef7;font-variant-numeric:tabular-nums}
+  /* 滑杆 */
+  .sld{margin-bottom:14px}
+  .sld .lab{display:flex;justify-content:space-between;font-size:13px;color:#c7d6ec;margin-bottom:6px}
+  .sld .lab b{color:#ffd76a;font-variant-numeric:tabular-nums}
+  input[type=range]{width:100%;appearance:none;height:6px;border-radius:3px;outline:none;
+    background:linear-gradient(90deg,#ffd76a var(--p,50%),rgba(255,255,255,.13) var(--p,50%))}
+  input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;border-radius:50%;
+    background:#fff;border:3px solid #ffd76a;cursor:pointer;box-shadow:0 0 10px rgba(255,215,106,.7)}
+  .sld.cyan input[type=range]{background:linear-gradient(90deg,#7fd0ff var(--p,50%),rgba(255,255,255,.13) var(--p,50%))}
+  .sld.cyan input[type=range]::-webkit-slider-thumb{border-color:#7fd0ff;box-shadow:0 0 10px rgba(127,208,255,.7)}
+  .pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+  .pill{font-size:12px;padding:5px 11px;border-radius:999px;cursor:pointer;user-select:none;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#c7d6ec;transition:.2s}
+  .pill:hover{border-color:#ffd76a;color:#ffd76a}
+  .pill.on{background:rgba(255,215,106,.16);border-color:#ffd76a;color:#ffd76a}
+  /* 图标开关 */
+  .togs{display:flex;gap:8px;flex-wrap:wrap}
+  .tog{flex:1;min-width:64px;text-align:center;font-size:12px;padding:8px 4px;border-radius:10px;cursor:pointer;
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#8fa3bf;transition:.2s;user-select:none}
+  .tog .ic{font-size:17px;display:block;margin-bottom:3px}
+  .tog.on{border-color:#7fd0ff;color:#7fd0ff;background:rgba(127,208,255,.1)}
+  /* 播放 */
+  .playrow{display:flex;align-items:center;gap:10px;margin-top:8px}
+  #btnPlay{width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;font-size:16px;flex:none;
+    background:linear-gradient(135deg,#ffd76a,#ff9a3c);color:#231708;box-shadow:0 4px 14px rgba(255,154,60,.4)}
+  #btnPlay:hover{transform:scale(1.06)}
+  .spd{font-size:12px;color:#8fa3bf}
+  .spd b{color:#fff;cursor:pointer;border-bottom:1px dashed #8fa3bf}
+  /* 地面视角 */
+  #skyWrap{position:relative}
+  #sky{width:100%;height:232px;border-radius:10px;display:block;background:#060a16}
+  #skyTag{position:absolute;top:8px;left:10px;font-size:11px;color:rgba(255,255,255,.65);letter-spacing:1px;
+    background:rgba(0,0,0,.35);padding:3px 9px;border-radius:999px;pointer-events:none}
+  #skyLegend{position:absolute;top:8px;right:10px;font-size:11px;pointer-events:none;
+    background:rgba(0,0,0,.35);padding:4px 10px;border-radius:999px;display:flex;gap:9px}
+  #skyLegend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:3px}
+  /* Quiz */
+  .q{font-size:13px;color:#dce7f5;margin-bottom:10px;line-height:1.5}
+  .opts{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+  .opt{flex:1;min-width:70px;text-align:center;font-size:13px;padding:7px 4px;border-radius:9px;cursor:pointer;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);transition:.2s;user-select:none}
+  .opt:hover{border-color:#7fd0ff}
+  .opt.ok{background:rgba(80,220,140,.18);border-color:#50dc8c;color:#7ff0ae}
+  .opt.no{background:rgba(255,90,90,.16);border-color:#ff5a5a;color:#ff9a9a}
+  #scoreLine{font-size:12px;color:#8fa3bf;margin-top:4px}
+  #scoreLine b{color:#ffd76a}
+  @media (max-width:860px){body{flex-direction:column}#panel{width:100%;height:46%}#stage{height:54%}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="ovTitle"><h1>昼夜长短与正午太阳高度</h1><p>3D 计算模拟 · 拖动旋转 / 滚轮缩放</p></div>
+  <div id="badgeTerm">
+    <div class="badge gold" id="bdSeason">夏至 · 北半球昼最长</div>
+    <div class="badge cyan" id="bdDirect">直射点 23.5°N</div>
+    <div class="badge polar" id="bdPolar">极昼</div>
+  </div>
+  <div id="chips">
+    <div class="chip gold">正午太阳高度<b id="cH">73.5°</b></div>
+    <div class="chip cyan">昼长<b id="cDay">14h 51m</b></div>
+    <div class="chip">日出 / 日落<b id="cRs" style="font-size:15px">04:46 / 19:37</b></div>
+  </div>
+  <div id="toast"></div>
+</div>
+
+<div id="panel">
+  <div class="card">
+    <h3>📐 实时计算</h3>
+    <div class="bigNum"><span class="v" id="vH">73.5</span><span class="u">° 正午太阳高度</span></div>
+    <div class="formula" id="fH">H = 90° − | φ − δ | = 90° − | 40° − 23.5° | = <b>73.5°</b></div>
+    <div class="daybar" id="daybar"><div class="d" style="width:62%"><span>昼 14h51m</span></div><div class="n"></div></div>
+    <div class="riset"><span>🌅 日出 <b id="vRise">04:46</b></span><span id="vDayFrac" style="color:#ffd76a">昼弧 223°</span><span>日落 <b id="vSet">19:37</b> 🌇</span></div>
+  </div>
+
+  <div class="card">
+    <h3>☀️ 太阳直射点纬度 δ</h3>
+    <div class="sld"><div class="lab"><span>南回归线 ←→ 北回归线</span><b id="vD">23.5°N</b></div>
+      <input type="range" id="sD" min="-23.5" max="23.5" step="0.1" value="23.5"></div>
+    <div class="pills" id="termPills">
+      <span class="pill" data-d="-23.5">冬至 −23.5°</span>
+      <span class="pill" data-d="0">春分 / 秋分 0°</span>
+      <span class="pill on" data-d="23.5">夏至 +23.5°</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📍 观测点纬度 φ</h3>
+    <div class="sld cyan"><div class="lab"><span>75°S ←→ 75°N</span><b id="vP" style="color:#7fd0ff">40°N</b></div>
+      <input type="range" id="sP" min="-75" max="75" step="0.5" value="40"></div>
+    <div class="pills" id="phiPills">
+      <span class="pill" data-p="0">赤道</span>
+      <span class="pill" data-p="23.5">北回归线</span>
+      <span class="pill on" data-p="40">北京 40°N</span>
+      <span class="pill" data-p="66.5">北极圈</span>
+      <span class="pill" data-p="-66.5">南极圈</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🕐 时刻（地球自转）</h3>
+    <div class="sld cyan"><div class="lab"><span>拖动或播放，看观测点穿越昼弧 / 夜弧</span><b id="vT">10:00</b></div>
+      <input type="range" id="sT" min="0" max="24" step="0.02" value="10"></div>
+    <div class="playrow">
+      <button id="btnPlay">▶</button>
+      <span class="spd">速度 <b id="spdBtn">×1</b> · <span id="skyClock" style="color:#7fd0ff">观测点正值上午</span></span>
+    </div>
+    <div class="pills" style="margin-top:10px" id="jumpPills">
+      <span class="pill" data-t="rise">🌅 日出</span>
+      <span class="pill" data-t="noon">☀️ 正午</span>
+      <span class="pill" data-t="set">🌇 日落</span>
+      <span class="pill" data-t="mid">🌃 子夜</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>👁 图层</h3>
+    <div class="togs">
+      <div class="tog on" data-k="term"><span class="ic">🌓</span>晨昏线</div>
+      <div class="tog on" data-k="rays"><span class="ic">☀️</span>太阳光线</div>
+      <div class="tog on" data-k="arcs"><span class="ic">🌈</span>昼弧夜弧</div>
+      <div class="tog on" data-k="axis"><span class="ic">🧭</span>地轴网格</div>
+    </div>
+    <h3 style="margin-top:12px">🎥 机位</h3>
+    <div class="togs">
+      <div class="tog cam on" data-cam="persp"><span class="ic">🛰</span>太空斜视</div>
+      <div class="tog cam" data-cam="side"><span class="ic">📐</span>侧视光照图</div>
+      <div class="tog cam" data-cam="polar"><span class="ic">🧊</span>极地俯视</div>
+      <div class="tog cam" data-cam="close"><span class="ic">🔍</span>观测点特写</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🏔 地面视角 · 太阳周日视运动</h3>
+    <div id="skyWrap"><canvas id="sky"></canvas><div id="skyTag">站在观测点看天空</div>
+      <div id="skyLegend">
+        <span><i style="background:#ffd76a"></i>今日</span>
+        <span><i style="background:#ff6e5a"></i>夏至</span>
+        <span><i style="background:#ffffff"></i>二分</span>
+        <span><i style="background:#7aa0ff"></i>冬至</span>
+      </div></div>
+  </div>
+
+  <div class="card">
+    <h3>✏️ 课堂速算检测 <span id="scoreLine" style="margin-left:auto">得分 <b id="score">0</b>/3</span></h3>
+    <div class="q" data-a="1">1. 夏至日，北京（40°N）的正午太阳高度是？
+      <div class="opts"><span class="opt">66.5°</span><span class="opt">73.5°</span><span class="opt">90°</span></div></div>
+    <div class="q" data-a="0">2. 冬至日，赤道上的昼长是？
+      <div class="opts"><span class="opt">12 小时</span><span class="opt">0 小时</span><span class="opt">24 小时</span></div></div>
+    <div class="q" data-a="2">3. 太阳直射北回归线时，北极圈以内出现？
+      <div class="opts"><span class="opt">极夜</span><span class="opt">昼夜平分</span><span class="opt">极昼</span></div></div>
+  </div>
+</div>
+
+<script src="lib/three.min.js"></script>
+<script src="lib/OrbitControls.js"></script>
+<script>
+/* ================= 数学核心 ================= */
+const D2R=Math.PI/180, R2D=180/Math.PI;
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const lerp=(a,b,t)=>a+(b-a)*t;
+// 昼长（小时）；返回 0 / 24 表示极夜 / 极昼
+function dayLength(phi,delta){
+  const x=-Math.tan(phi*D2R)*Math.tan(delta*D2R);
+  if(x<=-1)return 24; if(x>=1)return 0;
+  return 2*Math.acos(clamp(x,-1,1))*R2D/15;
+}
+const noonAlt=(phi,delta)=>90-Math.abs(phi-delta);
+const fmtT=t=>{t=((t%24)+24)%24;const h=Math.floor(t),m=Math.round((t-h)*60);
+  return (m===60?(h+1)%24:h).toString().padStart(2,'0')+':'+(m===60?0:m).toString().padStart(2,'0');};
+const fmtLat=(v)=>Math.abs(v).toFixed(1).replace('.0','')+'°'+(v>0?'N':v<0?'S':'');
+
+/* ================= 状态 ================= */
+const S={delta:23.5, phi:40, time:10, playing:false, speed:1,
+         show:{term:true,rays:true,arcs:true,axis:true}};
+const T={delta:23.5, phi:40};
+const SPEEDS=[1,4,12];let spdIdx=0;
+
+/* ================= Three.js 场景 ================= */
+const stage=document.getElementById('stage');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.outputEncoding=THREE.sRGBEncoding;
+stage.appendChild(renderer.domElement);
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x04060e);
+const camera=new THREE.PerspectiveCamera(45,1,0.1,200);
+const CAM0=new THREE.Vector3(3.6,2.1,4.6);
+camera.position.copy(CAM0);
+const controls=new THREE.OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=0.08;
+controls.minDistance=2.1;controls.maxDistance=14;
+
+/* 灯光：太阳方向光 + 微弱环境光 */
+const sunDir=new THREE.Vector3(1,0,0);           // 太阳永远在 +X（黄道光方向）
+const dl=new THREE.DirectionalLight(0xfff3d6,1.25);dl.position.set(6,0,0);scene.add(dl);
+scene.add(new THREE.AmbientLight(0x33415e,0.55));
+
+/* 星空 */
+(function stars(){
+  const n=900,pos=new Float32Array(n*3);
+  for(let i=0;i<n;i++){const r=38+Math.random()*30,u=Math.random()*2-1,a=Math.random()*Math.PI*2;
+    const s=Math.sqrt(1-u*u);pos[i*3]=r*s*Math.cos(a);pos[i*3+1]=r*u;pos[i*3+2]=r*s*Math.sin(a);}
+  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xaFC4e8,size:0.16,sizeAttenuation:true,transparent:true,opacity:0.85})));
+})();
+
+/* 太阳本体 + 光晕 */
+const sunGrp=new THREE.Group();sunGrp.position.set(5.6,0,0);scene.add(sunGrp);
+sunGrp.add(new THREE.Mesh(new THREE.SphereGeometry(0.42,32,24),
+  new THREE.MeshBasicMaterial({color:0xffd76a})));
+(function glow(){
+  const c=document.createElement('canvas');c.width=c.height=256;
+  const x=c.getContext('2d'),g=x.createRadialGradient(128,128,10,128,128,128);
+  g.addColorStop(0,'rgba(255,225,140,1)');g.addColorStop(0.35,'rgba(255,180,80,.45)');g.addColorStop(1,'rgba(255,160,60,0)');
+  x.fillStyle=g;x.fillRect(0,0,256,256);
+  const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),
+    blending:THREE.AdditiveBlending,depthWrite:false,transparent:true}));
+  sp.scale.set(3.4,3.4,1);sunGrp.add(sp);
+})();
+
+/* 平行太阳光线（箭头组） */
+const raysGrp=new THREE.Group();scene.add(raysGrp);
+[[0,0],[0.62,0],[-0.62,0],[0,0.62],[0,-0.62],[0.44,0.44],[-0.44,-0.44]].forEach(([y,z])=>{
+  const a=new THREE.ArrowHelper(new THREE.Vector3(-1,0,0),new THREE.Vector3(4.7,y,z),
+    y===0&&z===0?3.55:3.35,0xffc95e,y===0&&z===0?0.16:0.11,y===0&&z===0?0.10:0.07);
+  a.line.material.transparent=true;a.line.material.opacity=0.85;
+  raysGrp.add(a);
+});
+
+/* ===== 地球层级：tilt（黄赤交角）→ spin（自转） ===== */
+const tilt=new THREE.Group();scene.add(tilt);
+const spin=new THREE.Group();tilt.add(spin);
+
+/* 地球贴图（AI 生成；失败则程序纹理兜底） */
+function fallbackTex(){
+  const c=document.createElement('canvas');c.width=1024;c.height=512;const x=c.getContext('2d');
+  const g=x.createLinearGradient(0,0,0,512);g.addColorStop(0,'#dfefff');g.addColorStop(0.12,'#2b6cb0');
+  g.addColorStop(0.5,'#1d4e89');g.addColorStop(0.88,'#2b6cb0');g.addColorStop(1,'#eaf6ff');
+  x.fillStyle=g;x.fillRect(0,0,1024,512);
+  x.fillStyle='#3f7d44';
+  for(let i=0;i<70;i++){x.beginPath();x.ellipse(Math.random()*1024,90+Math.random()*330,
+    20+Math.random()*70,12+Math.random()*40,Math.random()*3,0,7);x.fill();}
+  const t=new THREE.CanvasTexture(c);return t;
+}
+const earthMat=new THREE.MeshPhongMaterial({shininess:8,specular:new THREE.Color(0x223344)});
+new THREE.TextureLoader().load('assets/earth.webp',
+  t=>{t.encoding=THREE.sRGBEncoding;earthMat.map=t;earthMat.needsUpdate=true;},
+  undefined,()=>{earthMat.map=fallbackTex();earthMat.needsUpdate=true;});
+const earth=new THREE.Mesh(new THREE.SphereGeometry(1,64,48),earthMat);spin.add(earth);
+/* 大气边缘光 */
+const atmo=new THREE.Mesh(new THREE.SphereGeometry(1.055,48,32),
+  new THREE.MeshBasicMaterial({color:0x4d9fff,transparent:true,opacity:0.09,
+  side:THREE.BackSide,blending:THREE.AdditiveBlending,depthWrite:false}));
+scene.add(atmo);
+
+/* 经纬网格（随自转） */
+const gridGrp=new THREE.Group();spin.add(gridGrp);
+function ring(radius,y,color,op,dash){
+  const pts=[];for(let i=0;i<=90;i++){const a=i/90*Math.PI*2;pts.push(new THREE.Vector3(radius*Math.cos(a),y,radius*Math.sin(a)));}
+  const m=dash?new THREE.LineDashedMaterial({color,transparent:true,opacity:op,dashSize:0.06,gapSize:0.05})
+              :new THREE.LineBasicMaterial({color,transparent:true,opacity:op});
+  const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),m);
+  if(dash)l.computeLineDistances();return l;
+}
+function meridian(lon,color,op){
+  const pts=[];for(let i=0;i<=90;i++){const a=i/90*Math.PI*2;
+    pts.push(new THREE.Vector3(Math.cos(a)*Math.cos(lon),Math.sin(a),-Math.cos(a)*Math.sin(lon)));}
+  return new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),
+    new THREE.LineBasicMaterial({color,transparent:true,opacity:op}));
+}
+for(let la=-60;la<=60;la+=30)gridGrp.add(ring(Math.cos(la*D2R)*1.002,Math.sin(la*D2R)*1.002,0x8fb6d8,0.22));
+for(let lo=0;lo<180;lo+=30){gridGrp.add(meridian(lo*D2R,0x8fb6d8,0.16));gridGrp.add(meridian((lo+180)*D2R,0x8fb6d8,0.16));}
+/* 回归线 & 极圈（虚线，随 tilt 固定） */
+const refGrp=new THREE.Group();tilt.add(refGrp);
+[23.5,-23.5].forEach(la=>refGrp.add(ring(Math.cos(la*D2R)*1.004,Math.sin(la*D2R)*1.004,0xffd76a,0.5,true)));
+[66.5,-66.5].forEach(la=>refGrp.add(ring(Math.cos(la*D2R)*1.004,Math.sin(la*D2R)*1.004,0xb08cff,0.45,true)));
+refGrp.add(ring(1.004,0,0xffffff,0.4)); // 赤道
+
+/* 地轴 + 极标记（随 tilt） */
+const axisGrp=new THREE.Group();tilt.add(axisGrp);
+axisGrp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(
+  [new THREE.Vector3(0,-1.62,0),new THREE.Vector3(0,1.62,0)]),
+  new THREE.LineBasicMaterial({color:0x9fd8ff,transparent:true,opacity:0.9})));
+function textSprite(txt,color='#fff',fs=46,scale=0.34){
+  const c=document.createElement('canvas'),pad=18,x0=c.getContext('2d');
+  x0.font=`bold ${fs}px "Microsoft YaHei"`;const w=x0.measureText(txt).width;
+  c.width=w+pad*2;c.height=fs+pad*2;
+  const x=c.getContext('2d');x.font=`bold ${fs}px "Microsoft YaHei"`;x.textAlign='center';x.textBaseline='middle';
+  x.shadowColor='rgba(0,0,0,.9)';x.shadowBlur=8;x.fillStyle=color;x.fillText(txt,c.width/2,c.height/2);
+  const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),transparent:true,depthWrite:false}));
+  sp.scale.set(scale*c.width/c.height,scale,1);return sp;
+}
+const sprN=textSprite('N','#9fd8ff');sprN.position.set(0,1.5,0);axisGrp.add(sprN);
+const sprS=textSprite('S','#9fd8ff');sprS.position.set(0,-1.5,0);axisGrp.add(sprS);
+
+/* ===== 晨昏线 + 夜半球（世界系，静止） ===== */
+const termGrp=new THREE.Group();scene.add(termGrp);
+(function(){
+  const pts=[];for(let i=0;i<=128;i++){const a=i/128*Math.PI*2;pts.push(new THREE.Vector3(0,1.006*Math.cos(a),1.006*Math.sin(a)));}
+  termGrp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),
+    new THREE.LineBasicMaterial({color:0x7fd0ff,transparent:true,opacity:0.95,blending:THREE.AdditiveBlending})));
+  const lab=textSprite('晨昏线','#7fd0ff',40,0.3);lab.position.set(0,1.32,0.12);termGrp.add(lab);
+  // 夜半球壳
+  const g=new THREE.SphereGeometry(1.02,48,32,-Math.PI/2,Math.PI);
+  const shell=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:0x03040c,transparent:true,
+    opacity:0.62,side:THREE.DoubleSide,depthWrite:false}));
+  // 自检：壳顶点平均 x 应 <0（夜侧），否则翻转
+  const p=g.attributes.position;let avg=0;for(let i=0;i<p.count;i++)avg+=p.getX(i);avg/=p.count;
+  if(avg>0)shell.rotation.y=Math.PI;
+  termGrp.add(shell);
+})();
+
+/* ===== 太阳直射点标记（世界系静止） ===== */
+(function(){
+  const dot=new THREE.Mesh(new THREE.SphereGeometry(0.045,16,12),new THREE.MeshBasicMaterial({color:0xffe08a}));
+  dot.position.set(1.03,0,0);scene.add(dot);
+  const halo=new THREE.Sprite(new THREE.SpriteMaterial({map:(function(){
+      const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');
+      const g=x.createRadialGradient(64,64,4,64,64,64);g.addColorStop(0,'rgba(255,224,138,.95)');
+      g.addColorStop(1,'rgba(255,224,138,0)');x.fillStyle=g;x.fillRect(0,0,128,128);
+      return new THREE.CanvasTexture(c);})(),blending:THREE.AdditiveBlending,depthWrite:false,transparent:true}));
+  halo.scale.set(0.5,0.5,1);halo.position.copy(dot.position);scene.add(halo);
+  const lab=textSprite('太阳直射点','#ffd76a',40,0.32);lab.position.set(1.5,0.42,0);scene.add(lab);
+})();
+
+/* ===== 观测纬圈：昼弧 / 夜弧（随 tilt，世界系静止） ===== */
+const arcGrp=new THREE.Group();tilt.add(arcGrp);
+/* 可改文字的动态标签（纹理缓存） */
+function makeDynLabel(color,scale){
+  const sp=new THREE.Sprite(new THREE.SpriteMaterial({transparent:true,depthWrite:false}));
+  let cur=null;
+  sp.setText=t=>{if(t===cur)return;cur=t;
+    if(sp.material.map)sp.material.map.dispose();
+    const c=document.createElement('canvas'),x0=c.getContext('2d');
+    x0.font='bold 40px "Microsoft YaHei"';const w=Math.max(40,x0.measureText(t).width);
+    c.width=w+28;c.height=62;
+    const x=c.getContext('2d');x.font='bold 40px "Microsoft YaHei"';x.textAlign='center';x.textBaseline='middle';
+    x.shadowColor='rgba(0,0,0,.95)';x.shadowBlur=9;x.fillStyle=color;x.fillText(t,c.width/2,31);
+    sp.material.map=new THREE.CanvasTexture(c);sp.material.needsUpdate=true;
+    sp.scale.set(scale*c.width/c.height,scale,1);};
+  return sp;
+}
+const dayLab=makeDynLabel('#ffd76a',0.3),nightLab=makeDynLabel('#93a9ff',0.3);
+arcGrp.add(dayLab,nightLab);
+let dayLine,nightLine,baseRing,riseDot,setDot;
+function buildArcs(){
+  [dayLine,nightLine,baseRing,riseDot,setDot].forEach(o=>{if(o){arcGrp.remove(o);o.geometry&&o.geometry.dispose();}});
+  const phi=S.phi*D2R,delta=S.delta*D2R;
+  const cp=Math.cos(phi),sp=Math.sin(phi);
+  const day=[],night=[];
+  for(let i=0;i<=240;i++){
+    const la=i/240*Math.PI*2-Math.PI;
+    const p=new THREE.Vector3(cp*Math.cos(la),sp,-cp*Math.sin(la));
+    (cp*Math.cos(la)*Math.cos(delta)+sp*Math.sin(delta)>0?day:night).push(p);
+  }
+  baseRing=new THREE.Line(new THREE.BufferGeometry().setFromPoints(
+    (()=>{const a=[];for(let i=0;i<=128;i++){const t=i/128*Math.PI*2;a.push(new THREE.Vector3(cp*Math.cos(t),sp,-cp*Math.sin(t)));}return a;})()),
+    new THREE.LineBasicMaterial({color:0xffffff,transparent:true,opacity:0.28}));
+  arcGrp.add(baseRing);
+  if(day.length>1){dayLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints(day),
+    new THREE.LineBasicMaterial({color:0xffb84d,transparent:true,opacity:1,blending:THREE.AdditiveBlending}));arcGrp.add(dayLine);}
+  if(night.length>1){nightLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints(night),
+    new THREE.LineBasicMaterial({color:0x5f7dff,transparent:true,opacity:0.95}));arcGrp.add(nightLine);}
+  // 日出 / 日落点（纬圈与晨昏线交点）
+  const x=-Math.tan(phi)*Math.tan(delta);
+  if(Math.abs(x)<1){
+    const w=Math.acos(clamp(x,-1,1));
+    const mk=c=>new THREE.Mesh(new THREE.SphereGeometry(0.032,12,10),
+      new THREE.MeshBasicMaterial({color:c}));
+    // 自转使观测点 A=(t-12)·15° 增大；昼区间 A∈(-ω,+ω)：A=-ω 处日出（λ=-ω），A=+ω 处日落（λ=+ω）
+    riseDot=mk(0x7ff0ae);setDot=mk(0xff9a6a);
+    riseDot.position.set(cp*Math.cos(-w),sp,-cp*Math.sin(-w));
+    setDot.position.set(cp*Math.cos(w),sp,-cp*Math.sin(w));
+    arcGrp.add(riseDot,setDot);
+  }
+  // 昼弧 / 夜弧度数标签：分别挂在白昼中点（λ=0）与黑夜中点（λ=π）
+  dayLab.position.set(cp*1.2,sp*1.2,0);
+  nightLab.position.set(-cp*1.2,sp*1.2,0);
+}
+
+/* ===== 观测者（随自转） ===== */
+const obsGrp=new THREE.Group();spin.add(obsGrp);
+const obsDot=new THREE.Mesh(new THREE.SphereGeometry(0.05,16,12),
+  new THREE.MeshBasicMaterial({color:0xffffff}));obsGrp.add(obsDot);
+const obsHalo=new THREE.Sprite(new THREE.SpriteMaterial({map:(function(){
+    const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');
+    const g=x.createRadialGradient(64,64,4,64,64,64);g.addColorStop(0,'rgba(255,255,255,.9)');
+    g.addColorStop(1,'rgba(127,208,255,0)');x.fillStyle=g;x.fillRect(0,0,128,128);
+    return new THREE.CanvasTexture(c);})(),blending:THREE.AdditiveBlending,depthWrite:false,transparent:true}));
+obsHalo.scale.set(0.4,0.4,1);obsGrp.add(obsHalo);
+const zenithLine=new THREE.Line(new THREE.BufferGeometry(),
+  new THREE.LineBasicMaterial({color:0x7fd0ff,transparent:true,opacity:0.7}));
+spin.add(zenithLine);
+/* 观测点地平圈坐标架：半透明圆盘 = 地平面（太阳高度角的定义基准） */
+const obsFrame=new THREE.Group();spin.add(obsFrame);
+const horDisc=new THREE.Mesh(new THREE.CircleGeometry(0.55,48),
+  new THREE.MeshBasicMaterial({color:0x7fd0ff,transparent:true,opacity:0.14,
+  side:THREE.DoubleSide,depthWrite:false}));
+obsFrame.add(horDisc);
+(function(){const pts=[];for(let i=0;i<=64;i++){const a=i/64*Math.PI*2;
+  pts.push(new THREE.Vector3(0.55*Math.cos(a),0.55*Math.sin(a),0));}
+  obsFrame.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),
+    new THREE.LineBasicMaterial({color:0x7fd0ff,transparent:true,opacity:0.85})));})();
+const horLab=textSprite('地平圈','#7fd0ff',34,0.2);horLab.position.set(0.68,0,0.02);obsFrame.add(horLab);
+const zenLab=textSprite('天顶','#9fd8ff',34,0.2);zenLab.position.set(0,0,0.52);obsFrame.add(zenLab);
+/* 迷你太阳：实时显示太阳相对地平圈的位置（在盘上方=昼，下方=夜） */
+const sunMini=new THREE.Sprite(new THREE.SpriteMaterial({map:(function(){
+    const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');
+    const g=x.createRadialGradient(64,64,4,64,64,64);g.addColorStop(0,'rgba(255,240,180,1)');
+    g.addColorStop(0.4,'rgba(255,200,90,.85)');g.addColorStop(1,'rgba(255,180,70,0)');
+    x.fillStyle=g;x.fillRect(0,0,128,128);return new THREE.CanvasTexture(c);})(),
+  blending:THREE.AdditiveBlending,depthWrite:false,transparent:true}));
+sunMini.scale.set(0.34,0.34,1);scene.add(sunMini);
+function placeObserver(){
+  const phi=S.phi*D2R,p=new THREE.Vector3(Math.cos(phi),Math.sin(phi),0);
+  obsGrp.position.copy(p);
+  obsFrame.position.copy(p);
+  obsFrame.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),p.clone().normalize());
+  zenithLine.geometry.setFromPoints([p,p.clone().multiplyScalar(1.42)]);
+}
+/* 观测者处：太阳高度弧 + 指向太阳的光线（世界系，逐帧更新） */
+const altArc=new THREE.Line(new THREE.BufferGeometry(),
+  new THREE.LineBasicMaterial({color:0xffd76a,transparent:true,opacity:0.95,blending:THREE.AdditiveBlending}));
+scene.add(altArc);
+const altLab=textSprite('','#ffd76a',42,0.3);scene.add(altLab);
+const obsRay=new THREE.Line(new THREE.BufferGeometry(),
+  new THREE.LineDashedMaterial({color:0xffc95e,dashSize:0.1,gapSize:0.07,transparent:true,opacity:0.8}));
+scene.add(obsRay);
+
+/* ================= 地面视角（2D 太阳视运动） ================= */
+const skyC=document.getElementById('sky'),sx=skyC.getContext('2d');
+function drawSky(){
+  const dpr=Math.min(devicePixelRatio,2);
+  const W=skyC.clientWidth,H=skyC.clientHeight;
+  if(skyC.width!==W*dpr){skyC.width=W*dpr;skyC.height=H*dpr;}
+  sx.setTransform(dpr,0,0,dpr,0,0);
+  const phi=S.phi,delta=S.delta,t=S.time;
+  const L=dayLength(phi,delta);
+  const h=(t-12)*15*D2R;                       // 时角
+  const altNow=Math.asin(clamp(Math.sin(phi*D2R)*Math.sin(delta*D2R)+Math.cos(phi*D2R)*Math.cos(delta*D2R)*Math.cos(h),-1,1));
+  const dayLight=clamp((altNow*R2D+6)/18,0,1); // 天空亮度
+  // 天空
+  const g=sx.createLinearGradient(0,0,0,H);
+  const top=[lerp(4,58,dayLight),lerp(7,140,dayLight),lerp(18,220,dayLight)];
+  const bot=[lerp(10,150,dayLight),lerp(14,200,dayLight),lerp(34,255,dayLight)];
+  g.addColorStop(0,`rgb(${top.map(v=>v|0).join(',')})`);g.addColorStop(1,`rgb(${bot.map(v=>v|0).join(',')})`);
+  sx.fillStyle=g;sx.fillRect(0,0,W,H);
+  // 夜晚星星
+  if(dayLight<0.35){sx.fillStyle='rgba(255,255,255,'+(0.7*(0.35-dayLight)/0.35)+')';
+    for(let i=0;i<40;i++){const px=(i*97.3)%W,py=(i*57.7)%(H*0.7);sx.fillRect(px,py,1.4,1.4);}}
+  const hor=H-42, cx=W/2;
+  // 地面
+  const gg=sx.createLinearGradient(0,hor,0,H);
+  gg.addColorStop(0,'#26331f');gg.addColorStop(1,'#10180e');
+  sx.fillStyle=gg;sx.fillRect(0,hor,W,H-hor);
+  sx.strokeStyle='rgba(255,255,255,.55)';sx.lineWidth=1.4;
+  sx.beginPath();sx.moveTo(0,hor);sx.lineTo(W,hor);sx.stroke();
+  // 方位标注（北半球面南：左东右西；南半球面北：左西右东）
+  const south=phi>=0;
+  sx.font='bold 13px "Microsoft YaHei"';sx.textAlign='center';sx.fillStyle='rgba(255,255,255,.85)';
+  sx.fillText(south?'南':'北',cx,hor+18);
+  sx.fillText(south?'东':'西',16,hor+18);sx.fillText(south?'西':'东',W-16,hor+18);
+  sx.font='11px "Microsoft YaHei"';sx.fillStyle='rgba(255,255,255,.45)';
+  sx.fillText('地 平 圈',cx,hor-6);
+  // 投影函数：时角 hh(弧度) + 直射点 dDeg → [x, y, 高度角]
+  const kX=(W/2-26)/130, kY=(hor-26)/95;
+  const sp2=Math.sin(phi*D2R),cp2=Math.cos(phi*D2R);
+  const proj=(hh,dDeg)=>{
+    const sd=Math.sin(dDeg*D2R),cd=Math.cos(dDeg*D2R);
+    const up=sd*sp2+cd*cp2*Math.cos(hh);
+    const east=cd*Math.sin(hh);
+    const north=sd*cp2-cd*sp2*Math.cos(hh);
+    const alt=Math.asin(clamp(up,-1,1))*R2D;
+    const toward=south?-north:north;
+    const A=Math.atan2(south?east:-east,toward)*R2D;
+    return [cx+clamp(A,-135,135)*kX, hor-clamp(alt,-15,92)*kY, alt];
+  };
+  const trace=(dDeg,color,width,dash)=>{
+    sx.setLineDash(dash);sx.lineWidth=width;sx.strokeStyle=color;
+    sx.beginPath();let st=false;
+    for(let hh=-180;hh<=180;hh+=2){
+      const [px,py,alt]=proj(hh*D2R,dDeg);
+      if(alt>-0.5){st?sx.lineTo(px,py):sx.moveTo(px,py);st=true;}
+      else st=false;
+    }
+    sx.stroke();sx.setLineDash([]);
+  };
+  // 二分二至参考轨迹（经典对比图）
+  if(Math.abs(delta-23.5)>0.6)trace(23.5,'rgba(255,110,90,.6)',1.5,[3,4]);
+  if(Math.abs(delta)>0.6)trace(0,'rgba(255,255,255,.55)',1.5,[3,4]);
+  if(Math.abs(delta+23.5)>0.6)trace(-23.5,'rgba(122,160,255,.6)',1.5,[3,4]);
+  // 今日太阳视运动轨迹（金色加粗）
+  trace(delta,'rgba(255,215,106,.95)',2.4,[6,4]);
+  let noonXY=null;
+  {const [px,py,alt]=proj(0,delta);noonXY=[px,py,alt];}
+  // 极昼 / 极夜标注
+  if(L>=24){sx.fillStyle='rgba(255,215,106,.95)';sx.font='bold 15px "Microsoft YaHei"';
+    sx.fillText('极 昼 · 太阳终日不落',cx,26);}
+  else if(L<=0){sx.fillStyle='rgba(176,140,255,.95)';sx.font='bold 15px "Microsoft YaHei"';
+    sx.fillText('极 夜 · 太阳终日不出',cx,26);}
+  else{
+    // 日出日落标记
+    const w=L/2*15; // 半昼长时角（度）
+    [[-w,'🌅 '+fmtT(12-L/2)],[w,'🌇 '+fmtT(12+L/2)]].forEach(([hh,txt])=>{
+      const [px]=proj(hh*D2R,delta);
+      sx.fillStyle='#ffd76a';sx.beginPath();sx.arc(px,hor,4,0,7);sx.fill();
+      sx.font='11px "Microsoft YaHei"';sx.fillStyle='rgba(255,255,255,.9)';
+      sx.fillText(txt,clamp(px,34,W-34),hor-10);
+    });
+    // 日出方位结论（高频考点）
+    sx.font='bold 12px "Microsoft YaHei"';sx.textAlign='left';
+    sx.fillStyle='rgba(255,215,106,.9)';
+    sx.fillText(delta>5?'日出东北 · 日落西北':delta<-5?'日出东南 · 日落西南':'日出正东 · 日落正西',10,46);
+    sx.textAlign='center';
+  }
+  // 正午位置 + H 标注
+  if(noonXY&&noonXY[2]>0){
+    sx.fillStyle='rgba(255,255,255,.9)';sx.font='bold 12px "Microsoft YaHei"';
+    sx.fillText('正午 H='+noonAlt(phi,delta).toFixed(1)+'°',clamp(noonXY[0],52,W-52),Math.max(noonXY[1]-14,16));
+  }
+  // 当前太阳
+  if(L>0){
+    const [px,py,alt]=proj(h,delta);
+    if(alt>-1){
+      const rg=sx.createRadialGradient(px,py,2,px,py,26);
+      rg.addColorStop(0,'rgba(255,230,150,1)');rg.addColorStop(0.35,'rgba(255,190,80,.75)');rg.addColorStop(1,'rgba(255,180,70,0)');
+      sx.fillStyle=rg;sx.beginPath();sx.arc(px,py,26,0,7);sx.fill();
+      sx.fillStyle='#fff3c8';sx.beginPath();sx.arc(px,py,7.5,0,7);sx.fill();
+    }else{
+      sx.fillStyle='rgba(255,255,255,.55)';sx.font='12px "Microsoft YaHei"';
+      sx.fillText('太阳位于地平线下 '+Math.abs(alt).toFixed(1)+'°',cx,26);
+    }
+  }
+}
+
+/* ================= UI 绑定 ================= */
+const $=id=>document.getElementById(id);
+function setRangeFill(el){const p=(el.value-el.min)/(el.max-el.min)*100;el.style.setProperty('--p',p+'%');}
+['sD','sP','sT'].forEach(i=>setRangeFill($(i)));
+$('sD').addEventListener('input',e=>{T.delta=+e.target.value;setRangeFill(e.target);markPills();});
+$('sP').addEventListener('input',e=>{T.phi=+e.target.value;setRangeFill(e.target);markPills();});
+$('sT').addEventListener('input',e=>{S.time=+e.target.value;setRangeFill(e.target);pausePlay();});
+$('termPills').addEventListener('click',e=>{const d=e.target.dataset.d;if(d===undefined)return;
+  T.delta=+d;S.delta=+d;$('sD').value=d;setRangeFill($('sD'));markPills();});
+$('phiPills').addEventListener('click',e=>{const d=e.target.dataset.p;if(d===undefined)return;
+  T.phi=+d;$('sP').value=d;setRangeFill($('sP'));markPills();});
+function markPills(){
+  document.querySelectorAll('#termPills .pill').forEach(p=>p.classList.toggle('on',Math.abs(+p.dataset.d-T.delta)<0.05));
+  document.querySelectorAll('#phiPills .pill').forEach(p=>p.classList.toggle('on',Math.abs(+p.dataset.p-T.phi)<0.26));
+}
+$('btnPlay').addEventListener('click',()=>{S.playing=!S.playing;$('btnPlay').textContent=S.playing?'⏸':'▶';});
+function pausePlay(){S.playing=false;$('btnPlay').textContent='▶';}
+$('spdBtn').addEventListener('click',()=>{spdIdx=(spdIdx+1)%SPEEDS.length;S.speed=SPEEDS[spdIdx];$('spdBtn').textContent='×'+S.speed;});
+document.querySelectorAll('.tog[data-k]').forEach(t=>t.addEventListener('click',()=>{
+  const k=t.dataset.k;
+  t.classList.toggle('on');S.show[k]=t.classList.contains('on');
+}));
+/* 机位预设：平滑飞行 */
+let camAnim=null;
+function flyTo(p1,t1){camAnim={p0:camera.position.clone(),t0:controls.target.clone(),p1,t1,k:0};}
+const CAMVIEWS={
+  persp:()=>[CAM0.clone(),new THREE.Vector3(0,0,0)],
+  side:()=>[new THREE.Vector3(5.4,0.4,0),new THREE.Vector3(0,0,0)],       // 正对太阳光：教科书侧视光照图
+  polar:()=>[new THREE.Vector3(0.9,4.9,0.9),new THREE.Vector3(0,0,0)],    // 俯视极区：看极昼极夜范围
+  close:()=>{const p=new THREE.Vector3();obsGrp.getWorldPosition(p);
+    const away=p.clone().normalize();
+    return [p.clone().addScaledVector(away,1.25).add(new THREE.Vector3(0,0.3,0)),p.clone()];}
+};
+document.querySelectorAll('.tog.cam').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tog.cam').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');
+  const [p,tg]=CAMVIEWS[t.dataset.cam]();flyTo(p,tg);
+  toast({persp:'太空斜视：全局看晨昏线切割纬圈',side:'侧视光照图：教科书经典视角，晨昏线成一条直线',
+    polar:'极地俯视：看极圈内的极昼 / 极夜范围',close:'观测点特写：太阳高度角 = 太阳与地平圈的夹角'}[t.dataset.cam]);
+}));
+/* 时刻快捷跳转 */
+$('jumpPills').addEventListener('click',e=>{
+  const k=e.target.dataset.t;if(!k)return;
+  const L=dayLength(S.phi,S.delta);
+  if(L>0&&L<24){
+    S.time=({rise:12-L/2,noon:12,set:12+L/2,mid:0}[k]+24)%24;
+  }else S.time=12;
+  $('sT').value=S.time;setRangeFill($('sT'));pausePlay();
+});
+/* Quiz */
+let score=0;
+document.querySelectorAll('.q').forEach(q=>{
+  q.querySelectorAll('.opt').forEach((o,i)=>o.addEventListener('click',()=>{
+    if(q.dataset.done)return;q.dataset.done=1;
+    if(i===+q.dataset.a){o.classList.add('ok');score++;$('score').textContent=score;}
+    else{o.classList.add('no');q.querySelectorAll('.opt')[+q.dataset.a].classList.add('ok');}
+  }));
+});
+function toast(msg){const t=$('toast');t.textContent=msg;t.style.opacity=1;
+  clearTimeout(t._h);t._h=setTimeout(()=>t.style.opacity=0,2600);}
+setTimeout(()=>toast('先点「📐 侧视光照图」看晨昏线，再点「🔍 观测点特写」看太阳高度角'),700);
+
+/* ================= 读数刷新 ================= */
+let rtKey='';
+function refreshText(){
+  const phi=S.phi,delta=S.delta;
+  // 时刻类（每帧都变，但 textContent 开销小）
+  $('vT').textContent=fmtT(S.time);
+  const Lc=dayLength(phi,delta),tc=S.time;
+  $('skyClock').textContent=Lc>=24?'极昼：太阳全天在线':Lc<=0?'极夜：太阳全天不出':
+    (tc<12-Lc/2||tc>12+Lc/2)?'观测点正值夜晚':(tc<12?'观测点正值上午':'观测点正值下午');
+  // 其余依赖 φ/δ，变化才写 DOM
+  const key=phi.toFixed(2)+'|'+delta.toFixed(2);
+  if(key===rtKey)return;rtKey=key;
+  const H=noonAlt(phi,delta),L=dayLength(phi,delta);
+  $('vH').textContent=H.toFixed(1);
+  $('fH').innerHTML=`H = 90° − | φ − δ | = 90° − | ${fmtLat(phi)} − ${fmtLat(delta)} | = <b>${H.toFixed(1)}°</b>`;
+  $('vD').textContent=fmtLat(delta);$('vP').textContent=fmtLat(phi);
+  $('cH').textContent=H.toFixed(1)+'°';
+  $('bdDirect').textContent='直射点 '+fmtLat(delta);
+  // 昼长与昼夜条
+  const bar=$('daybar');
+  if(L>=24){$('cDay').textContent='24h（极昼）';bar.innerHTML='<div class="d" style="width:100%"><span>极昼 · 全天为昼</span></div>';
+    $('vRise').textContent='—';$('vSet').textContent='—';$('vDayFrac').textContent='昼弧 360°';$('cRs').textContent='极昼';
+    dayLab.setText('极昼 360°');nightLab.setText('');}
+  else if(L<=0){$('cDay').textContent='0h（极夜）';bar.innerHTML='<div class="n" style="width:100%"></div>';
+    $('vRise').textContent='—';$('vSet').textContent='—';$('vDayFrac').textContent='夜弧 360°';$('cRs').textContent='极夜';
+    dayLab.setText('');nightLab.setText('极夜 360°');}
+  else{
+    const hh=Math.floor(L),mm=Math.round((L-hh)*60);
+    $('cDay').textContent=hh+'h '+mm+'m';
+    bar.innerHTML=`<div class="d" style="width:${(L/24*100).toFixed(1)}%"><span>昼 ${hh}h${mm}m</span></div><div class="n"></div>`;
+    $('vRise').textContent=fmtT(12-L/2);$('vSet').textContent=fmtT(12+L/2);
+    const dArc=Math.round(L/24*360);
+    $('vDayFrac').textContent='昼弧 '+dArc+'°';
+    $('cRs').textContent=fmtT(12-L/2)+' / '+fmtT(12+L/2);
+    dayLab.setText('昼弧 '+dArc+'°');nightLab.setText('夜弧 '+(360-dArc)+'°');
+  }
+  // 节气 / 极昼极夜徽章
+  let sea;
+  if(delta>23.4)sea='夏至 · 北半球昼最长';
+  else if(delta<-23.4)sea='冬至 · 北半球昼最短';
+  else if(Math.abs(delta)<0.6)sea='春秋分 · 全球昼夜平分';
+  else if(delta>0)sea='夏半年 · 北半球昼长夜短';
+  else sea='冬半年 · 北半球昼短夜长';
+  $('bdSeason').textContent=sea;
+  const bp=$('bdPolar');
+  if(L>=24){bp.style.display='block';bp.textContent='观测点：极昼';}
+  else if(L<=0){bp.style.display='block';bp.textContent='观测点：极夜';}
+  else bp.style.display='none';
+}
+
+/* ================= 主循环 ================= */
+// 高度角标签纹理缓存：仅文字变化时重建
+let altLabTxt='';
+function setAltLabel(txt){
+  if(txt===altLabTxt)return;altLabTxt=txt;
+  if(altLab.material.map)altLab.material.map.dispose();
+  const c=document.createElement('canvas');c.width=260;c.height=64;
+  const x=c.getContext('2d');x.font='bold 38px "Microsoft YaHei"';x.textAlign='center';x.textBaseline='middle';
+  x.shadowColor='rgba(0,0,0,.9)';x.shadowBlur=8;x.fillStyle='#ffd76a';
+  x.fillText(txt,130,32);
+  altLab.material.map=new THREE.CanvasTexture(c);
+  altLab.material.needsUpdate=true;
+}
+const clock=new THREE.Clock();
+const tmpV=new THREE.Vector3(),tmpZ=new THREE.Vector3(),tmpW=new THREE.Vector3();
+let lastPhi=null,lastDelta=null;
+function animate(){
+  requestAnimationFrame(animate);
+  const dt=Math.min(clock.getDelta(),0.05);
+  // 平滑逼近目标
+  const k=Math.min(1,dt*5);
+  S.delta=lerp(S.delta,T.delta,k);S.phi=lerp(S.phi,T.phi,k);
+  if(Math.abs(S.delta-T.delta)<0.005)S.delta=T.delta;
+  if(Math.abs(S.phi-T.phi)<0.005)S.phi=T.phi;
+  if(S.playing){S.time=(S.time+dt*S.speed*0.9)%24;$('sT').value=S.time;setRangeFill($('sT'));}
+  // 层级角度
+  tilt.rotation.z=-S.delta*D2R;
+  spin.rotation.y=(S.time-12)*15*D2R;
+  // 纬圈重建（参数变化时）
+  if(lastPhi!==S.phi||lastDelta!==S.delta){
+    buildArcs();placeObserver();lastPhi=S.phi;lastDelta=S.delta;
+  }
+  // 图层显隐
+  termGrp.visible=S.show.term;raysGrp.visible=S.show.rays;arcGrp.visible=S.show.arcs;
+  gridGrp.visible=S.show.axis;axisGrp.visible=S.show.axis;refGrp.visible=S.show.axis;
+  // 观测者世界位置 → 太阳高度弧（地平圈投影方向 → 太阳，正是定义）
+  obsGrp.getWorldPosition(tmpV);
+  tmpZ.copy(tmpV).normalize();                       // 天顶方向
+  const cosZen=clamp(tmpZ.dot(sunDir),-1,1);
+  const alt=90-Math.acos(cosZen)*R2D;                // 当前太阳高度角（带符号）
+  tmpW.copy(sunDir).addScaledVector(tmpZ,-cosZen);   // 太阳在地平圈上的投影方向
+  sunMini.position.copy(tmpV).addScaledVector(sunDir,0.62);
+  sunMini.material.opacity=tmpV.x>-0.4?1:0.25;
+  if(tmpW.lengthSq()>1e-6&&tmpV.x>-0.2){
+    tmpW.normalize();
+    const R=0.42,aS=alt*D2R,nn=Math.max(4,Math.ceil(Math.abs(alt)/3)),pts=[];
+    for(let i=0;i<=nn;i++){const a=aS*i/nn;
+      pts.push(tmpV.clone().addScaledVector(tmpW,R*Math.cos(a)).addScaledVector(tmpZ,R*Math.sin(a)));}
+    altArc.geometry.setFromPoints(pts);altArc.visible=true;
+    altLab.visible=true;
+    const mid=tmpV.clone().addScaledVector(tmpW,(R+0.2)*Math.cos(aS/2)).addScaledVector(tmpZ,(R+0.2)*Math.sin(aS/2));
+    altLab.position.copy(mid);
+    setAltLabel(alt.toFixed(1)+'°');
+    altArc.material.color.set(alt>=0?0xffd76a:0xff6a5e);
+  }else if(tmpV.x>0.55){
+    // 观测点恰在直射纬度：太阳位于天顶
+    altArc.visible=false;altLab.visible=true;
+    altLab.position.copy(tmpV).multiplyScalar(1.55);
+    setAltLabel('直射 90°');
+  }else{altArc.visible=false;altLab.visible=false;}
+  // 观测者 → 太阳虚线
+  obsRay.geometry.setFromPoints([tmpV,tmpV.clone().addScaledVector(sunDir,4)]);
+  obsRay.computeLineDistances();
+  obsRay.visible=tmpV.x>-0.4;
+  // 太阳自转小动画
+  sunGrp.rotation.y+=dt*0.2;
+  // 相机飞行补间
+  if(camAnim){
+    camAnim.k=Math.min(1,camAnim.k+dt*1.5);
+    const kk=camAnim.k,e=kk*kk*(3-2*kk);
+    camera.position.lerpVectors(camAnim.p0,camAnim.p1,e);
+    controls.target.lerpVectors(camAnim.t0,camAnim.t1,e);
+    if(camAnim.k>=1)camAnim=null;
+  }
+  refreshText();
+  drawSky();
+  controls.update();
+  renderer.render(scene,camera);
+}
+function resize(){
+  const w=stage.clientWidth,h=stage.clientHeight;
+  renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();
+}
+window.addEventListener('resize',resize);
+resize();
+buildArcs();placeObserver();
+animate();
+</script>
+</body>
+</html>

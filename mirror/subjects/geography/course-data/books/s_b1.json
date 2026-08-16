@@ -1,0 +1,326 @@
+{
+  "version": "0.2.0",
+  "updated": "2026-05-11",
+  "book": {
+    "id": "s_b1",
+    "label": "必修第一册",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "c1",
+        "label": "宇宙中的地球",
+        "cardCount": 3
+      },
+      {
+        "id": "c2",
+        "label": "地球上的大气",
+        "cardCount": 5
+      },
+      {
+        "id": "c3",
+        "label": "地球上的水",
+        "cardCount": 2
+      },
+      {
+        "id": "c4",
+        "label": "地貌",
+        "cardCount": 2
+      },
+      {
+        "id": "c5",
+        "label": "植被与土壤",
+        "cardCount": 2
+      },
+      {
+        "id": "c6",
+        "label": "自然灾害",
+        "cardCount": 1
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "sb1_m01",
+      "chapterIds": [
+        "c1"
+      ],
+      "title": "天体系统与太阳活动",
+      "abstract": "探索天体系统层级与太阳活动对地球的影响",
+      "detail": "在宇宙空间中观察太阳系模型，并分析太阳耀斑对地球磁场的作用",
+      "topics": [
+        "宇宙环境",
+        "太阳"
+      ],
+      "points": [
+        "天体系统",
+        "太阳辐射",
+        "太阳活动",
+        "地磁"
+      ],
+      "experiments": [
+        "模型交互：太阳系天体运行",
+        "动态推演：太阳活动过程"
+      ],
+      "image": "assets/cards/sb1_m01.webp",
+      "icon": "Sun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1_m04",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "河流地貌的发育",
+      "abstract": "探究流水侵蚀与堆积地貌的演变过程",
+      "detail": "在沙盘中推演河流的侵蚀、搬运和堆积，观察峡谷与三角洲的形成",
+      "topics": [
+        "地貌发育",
+        "外力作用"
+      ],
+      "points": [
+        "流水侵蚀",
+        "流水堆积",
+        "V型谷",
+        "冲积扇与三角"
+      ],
+      "experiments": [
+        "沙盘模拟：河流的侵蚀与堆",
+        "过程推演：牛轭湖的形"
+      ],
+      "image": "visualizations/books/s_b1/sb1_m04/assets/river_mature.webp",
+      "icon": "Mountain",
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "sb1m12",
+      "chapterIds": [
+        "c1"
+      ],
+      "title": "地质年代与地球演化时间轴",
+      "detail": "通过地质年代时间轴和重大事件节点，理解地球演化过程。",
+      "image": "visualizations/books/s_b1/sb1m12/assets/e4_mesozoic.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Mountain",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1_m02",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "大气热力环流",
+      "abstract": "深入解析大气受热过程与热力环流原理",
+      "detail": "通过粒子系统模拟海陆风、山谷风及城市热岛效应",
+      "topics": [
+        "大气运动",
+        "自然环境"
+      ],
+      "points": [
+        "大气受热",
+        "热力环流",
+        "风的形成",
+        "逆温现象"
+      ],
+      "experiments": [
+        "流体模拟：热力环流形",
+        "过程推演：大气的受热过程"
+      ],
+      "image": "assets/cards/sb1_m02.webp",
+      "icon": "Wind",
+      "engine": "particle"
+    },
+    {
+      "cardId": "sb1_m03",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "海水的运动：洋流",
+      "abstract": "认识全球洋流分布及其对地理环境的影响",
+      "detail": "在三维地球上观察洋流的流动，分析暖流和寒流对气候及渔场的作用",
+      "topics": [
+        "水循",
+        "海洋环境"
+      ],
+      "points": [
+        "洋流分布",
+        "暖流与寒",
+        "气候影",
+        "渔场形成"
+      ],
+      "experiments": [
+        "空间辨识：全球洋流分",
+        "规律归纳：洋流对气候的影响"
+      ],
+      "image": "assets/cards/sb1_m03.webp",
+      "icon": "Waves",
+      "engine": "globe"
+    },
+    {
+      "cardId": "sb1_m10",
+      "chapterIds": [
+        "c6"
+      ],
+      "title": "气象与地质灾害",
+      "abstract": "认识常见自然灾害的成因与防御措施",
+      "detail": "联动台风、洪涝、地震、滑坡和泥石流场景，分析灾害链条与避险策略",
+      "topics": [
+        "自然灾害",
+        "防灾减灾"
+      ],
+      "points": [
+        "台风与洪涝",
+        "地震与滑坡",
+        "泥石流",
+        "灾害防御"
+      ],
+      "experiments": [
+        "情景模拟：灾害发生与避险",
+        "风险判断：预警、地形与撤离路线"
+      ],
+      "image": "assets/cards/sx1_m03.webp",
+      "icon": "Zap",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1_m05",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "大气层垂直分层与臭氧层",
+      "detail": "平流层、对流层的立体解剖与粒子辐射吸收",
+      "image": "assets/cards/sb1_m05.webp",
+      "isLocked": true,
+      "engine": "particle"
+    },
+    {
+      "cardId": "sb1_m06",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "科里奥利力与全球风带",
+      "detail": "随地球自转而发生偏转的气流轨迹数学推演",
+      "image": "assets/cards/sb1_m06.webp",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1_m07",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "热力环流与海陆风城市热岛",
+      "detail": "白天海风夜间陆风的粒子对流循环与城市热岛效应叠加",
+      "image": "assets/cards/sb1_m02.webp",
+      "fallbackImage": "",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1_m08",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "气旋与反气旋台风结构剖面",
+      "detail": "台风眼壁的三维螺旋上升气流与云层结构全息切面",
+      "image": "assets/cards/sx1_m02.webp",
+      "fallbackImage": "",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1_m09",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "河流地貌V型谷三角洲牛轭湖",
+      "detail": "河流上中下游的侵蚀搬运沉积全过程地貌演化模拟",
+      "image": "assets/cards/sb1_m04.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "sb1m11",
+      "chapterIds": [
+        "c1"
+      ],
+      "title": "地球内部圈层结构透视",
+      "detail": "三维剖切地球内部圈层，理解地壳、地幔、地核和地震波传播。",
+      "image": "assets/cards/sb1m11.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Mountain",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1m13",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "水循环与陆地水体补给",
+      "detail": "联动降水、蒸发、径流、下渗和补给类型，理解水循环过程。",
+      "image": "assets/cards/sb1m13.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1m14",
+      "chapterIds": [
+        "c5"
+      ],
+      "title": "植被分布与自然带",
+      "detail": "展示植被分布、自然带和水热条件关系，理解自然带形成。",
+      "image": "assets/cards/sb1m14.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Globe2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb1m15",
+      "chapterIds": [
+        "c5"
+      ],
+      "title": "土壤剖面与土壤形成过程",
+      "detail": "通过土壤剖面和成土因素调节，理解土壤形成过程。",
+      "image": "assets/cards/sb1m15.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Mountain",
+      "engine": "source-html-adapter"
+    }
+  ],
+  "chapterTree": [
+    {
+      "id": "c1",
+      "label": "宇宙中的地球",
+      "children": []
+    },
+    {
+      "id": "c2",
+      "label": "地球上的大气",
+      "children": []
+    },
+    {
+      "id": "c3",
+      "label": "地球上的水",
+      "children": []
+    },
+    {
+      "id": "c4",
+      "label": "地貌",
+      "children": []
+    },
+    {
+      "id": "c5",
+      "label": "植被与土壤",
+      "children": []
+    },
+    {
+      "id": "c6",
+      "label": "自然灾害",
+      "children": []
+    }
+  ]
+}

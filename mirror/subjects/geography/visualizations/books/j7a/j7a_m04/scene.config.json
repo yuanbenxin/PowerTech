@@ -1,0 +1,21 @@
+{
+  "cardId": "j7a_m04",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "orbit-controls",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "../../../../assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "../../../../assets/vendor/three/OrbitControls.js?v=02bb4ade710f",
+    "d3": "../../../../assets/vendor/js/d3.v7.min.js?v=f3e093fa4371",
+    "topojson": "../../../../assets/vendor/js/topojson-client.min.js?v=a21c3a36a966"
+  },
+  "panelSelectors": [
+    "#top-panel"
+  ],
+  "notes": "板块构造与海陆变迁源码接入。左侧保留 3D 地球/2D 推演画布和自由旋转缩放，右侧使用单一透明操作面板承载时间滑条、阶段跳转、模式按钮、图例、HUD 与说明；外部 Three.js、D3、TopoJSON、世界地图、板块边界和地球贴图均已本地化。"
+}

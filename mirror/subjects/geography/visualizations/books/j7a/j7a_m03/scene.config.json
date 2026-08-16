@@ -1,0 +1,16 @@
+{
+  "cardId": "j7a_m03",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "world-panorama",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "../../../../assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "../../../../assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "notes": "七大洲与五大洋全景分布。左侧本地 Three.js 地球仪与二维展开图，右侧无滚动控制面板。所有纹理、模型和引擎资源均为本地资源。"
+}

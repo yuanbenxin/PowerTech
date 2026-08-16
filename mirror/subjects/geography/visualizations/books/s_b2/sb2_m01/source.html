@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球人口分布与迁移三维推演系统</title>
+    <style>
+        :root {
+            --bg: #030712;
+            --panel-bg: rgba(15, 23, 42, 0.75);
+            --border: rgba(255, 255, 255, 0.08);
+            --primary: #00f2fe;
+            --primary-glow: rgba(0, 242, 254, 0.4);
+            --secondary: #f43f5e;
+            --secondary-glow: rgba(244, 63, 94, 0.4);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: transparent;
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: block;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: none;
+        }
+
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url('assets/shanghai_night_4k.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #canvas-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(3, 7, 18, 0.3);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* 统一玻璃拟态面板系统 */
+        .glass-panel {
+            background: var(--panel-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            z-index: 10;
+        }
+
+        /* 左侧主控制面板 */
+        #ui-left {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            bottom: 20px;
+            width: 380px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox */
+        }
+        #ui-left::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+        /* 右侧解析面板 */
+        #ui-right {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            bottom: 20px;
+            width: 380px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        #ui-right::-webkit-scrollbar { display: none; }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h1::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* 选项卡按钮组 */
+        .tabs {
+            display: flex;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 4px;
+            border: 1px solid var(--border);
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 10px 14px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.15) 0%, rgba(79, 172, 254, 0.15) 100%);
+            color: var(--primary);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            text-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        /* 模块容器 */
+        .module-section {
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .module-section.active { display: flex; }
+
+        .section-title {
+            font-size: 12px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* 滑块控制器 */
+        .control-group {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .control-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+        .value-badge {
+            min-width: 38px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: rgba(0, 242, 254, 0.12);
+            color: var(--primary);
+            text-align: center;
+            font-family: Consolas, monospace;
+            font-weight: 700;
+            font-size: 11px;
+            border: 1px solid rgba(0, 242, 254, 0.22);
+        }
+        input[type=range] {
+            appearance: none; -webkit-appearance: none; width: 100%; background: transparent; outline: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 5px; background: rgba(255,255,255,0.08); border-radius: 999px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            appearance: none; -webkit-appearance: none;
+            height: 15px; width: 15px; border-radius: 50%;
+            background: var(--primary); box-shadow: 0 0 10px var(--primary);
+            cursor: pointer; margin-top: -5px; transition: transform 0.1s;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        /* 时代按钮（垂直时间轴结构） */
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            padding-left: 16px;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 5px; top: 8px; bottom: 8px;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .timeline-node {
+            position: relative;
+            padding: 12px 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+        }
+        .timeline-node::before {
+            content: '';
+            position: absolute;
+            left: -15px; top: 18px;
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #475569;
+            border: 2px solid var(--bg);
+            transition: all 0.3s;
+        }
+        .timeline-node.active {
+            background: rgba(0, 242, 254, 0.05);
+            border-color: rgba(0, 242, 254, 0.25);
+            box-shadow: inset 0 0 12px rgba(0, 242, 254, 0.05);
+        }
+        .timeline-node.active::before {
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+        }
+        .timeline-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+        .timeline-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* 3D 浮动卡片标签样式 */
+        .beacon-label {
+            position: absolute;
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid var(--border);
+            padding: 5px 8px;
+            border-radius: 8px;
+            pointer-events: none;
+            transform: translate(-50%, -100%);
+            transition: opacity 0.3s;
+            white-space: normal;
+            word-break: keep-all;
+            overflow-wrap: normal;
+            text-align: center;
+            max-width: 112px;
+            line-height: 1.16;
+            backdrop-filter: blur(8px);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        .beacon-label::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px 5px 0;
+            border-style: solid;
+            border-color: rgba(15, 23, 42, 0.75) transparent transparent;
+            display: block;
+            width: 0;
+        }
+        .beacon-label span {
+            color: var(--primary);
+            font-size: 9px;
+            opacity: 0.8;
+        }
+
+        /* 推力与拉力分析 Bento 网格 */
+        .factor-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .factor-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .factor-card-title {
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .factor-card-title.push { color: #f43f5e; }
+        .factor-card-title.pull { color: #10b981; }
+        .factor-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            list-style: none;
+        }
+        .factor-item {
+            font-size: 11px;
+            color: var(--text-muted);
+            padding: 6px 8px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.02);
+            border-left: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .factor-item.active-push {
+            border-left-color: #f43f5e;
+            background: rgba(244, 63, 94, 0.05);
+            color: var(--text-main);
+        }
+        .factor-item.active-pull {
+            border-left-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+            color: var(--text-main);
+        }
+
+        /* 右侧教育卡片 */
+        .edu-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .edu-card h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
+            border-left: 3px solid var(--primary);
+            padding-left: 8px;
+        }
+        .edu-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .edu-list li {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .edu-list li strong {
+            color: #fff;
+            font-size: 13px;
+        }
+
+        /* HUD 水平状态指示器 */
+        #status-hud {
+            position: absolute;
+            left: 50%;
+            bottom: 24px;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 12px;
+        }
+        .hud-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .hud-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        /* 隐藏 HUD 信息框 */
+        #cursor-hud {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            color: var(--primary);
+            font-family: monospace;
+            font-size: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: opacity 0.2s, left 0.1s, top 0.1s;
+            line-height: 1.6;
+            white-space: nowrap;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 1200px) {
+            body {
+                flex-direction: column;
+                overflow: hidden;
+            }
+            #ui-left {
+                top: 15px; left: 15px; right: 15px;
+                width: calc(100vw - 30px);
+                bottom: auto;
+                max-height: 40vh;
+                border-radius: 12px;
+            }
+            #ui-right {
+                top: calc(40vh + 30px); left: 15px; right: 15px;
+                width: calc(100vw - 30px);
+                bottom: 15px;
+                max-height: 25vh;
+                border-radius: 12px;
+            }
+            #status-hud {
+                display: none; /* 移动端隐藏底部HUD以避让画面 */
+            }
+        }
+
+        #ui-left,
+        #ui-right {
+            position: relative;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            width: 100%;
+            max-height: none;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            overflow: visible;
+        }
+        #ui-right {
+            margin-top: 16px;
+        }
+        #ui-left h1,
+        #ui-left > .desc {
+            display: none;
+        }
+        #ui-left .tabs,
+        #ui-left .control-group,
+        #ui-right .edu-card {
+            border-radius: 8px;
+        }
+        #ui-left .tab-btn,
+        #ui-left .timeline-node {
+            min-height: 42px;
+        }
+        #status-hud {
+            max-width: calc(100% - 24px);
+            left: 50%;
+            right: auto;
+            bottom: 10px;
+            transform: translateX(-50%);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container">
+        <canvas id="flat-canvas" style="display:none; position: absolute; top:0; left:0; width:100%; height:100%; z-index: 2;"></canvas>
+    </div>
+    <div id="cursor-hud"></div>
+
+    <!-- 左侧主控制面板 -->
+    <div id="ui-left" class="glass-panel">
+        <h1>人口分布与迁移推演系统</h1>
+        <p class="desc">高中地理核心要素交互推演课件。包含全球人口宏观分布特征分析与多时期国际国内迁移动态模拟。</p>
+        
+        <!-- 维度切换：3D 地球与 2D 平面 -->
+        <div class="tabs" style="margin-bottom: 12px;">
+            <button id="btn-view-3d" class="tab-btn active" onclick="switchViewType('3d')">
+                🔮 3D 旋转地球
+            </button>
+            <button id="btn-view-2d" class="tab-btn" onclick="switchViewType('2d')">
+                🗺️ 2D 平面投影
+            </button>
+        </div>
+
+        <div class="tabs">
+            <button id="btn-dist" class="tab-btn active" onclick="switchMode(0)">
+                🌐 人口分布规律
+            </button>
+            <button id="btn-mig" class="tab-btn" onclick="switchMode(1)">
+                🚀 人口迁移路径
+            </button>
+        </div>
+
+        <!-- 模块一：人口分布 -->
+        <div id="section-dist" class="module-section active">
+            <div class="section-title">📊 数据呈现选项</div>
+            
+            <div class="control-group">
+                <div class="control-label">
+                    <span>👁️ 数据模式</span>
+                </div>
+                <div class="tabs" style="border:none; padding:0; background:transparent;">
+                    <button id="btn-mode-heatmap" class="tab-btn active" style="padding: 8px 0;" onclick="setDensityMode('heatmap')">全息连续热力</button>
+                    <button id="btn-mode-hex" class="tab-btn" style="padding: 8px 0;" onclick="setDensityMode('hex')">三维数据柱阵</button>
+                </div>
+            </div>
+
+            <div class="control-group" id="height-ctrl" style="display:none;">
+                <div class="control-label">
+                    <span>🏢 3D 柱体高度倍率</span>
+                    <span class="value-badge" id="val-height">1.0x</span>
+                </div>
+                <input type="range" id="slider-height" min="0.2" max="3.0" step="0.1" value="1.0">
+            </div>
+
+            <div class="control-group">
+                <div class="control-label">
+                    <span>🚫 最低密度过滤阈值</span>
+                    <span class="value-badge" id="val-thresh">0%</span>
+                </div>
+                <input type="range" id="slider-thresh" min="0" max="0.5" step="0.01" value="0.0">
+                <span class="desc" style="font-size:10px;">调高可过滤掉稀疏区，精准凸显世界核心城市群。</span>
+            </div>
+            
+            <div class="section-title">⚖️ 推力与拉力分析</div>
+            <div class="factor-container">
+                <div class="factor-card">
+                    <div class="factor-card-title push">❌ 推力 (排斥力)</div>
+                    <ul class="factor-list">
+                        <li class="factor-item active-push">战争与社会动荡</li>
+                        <li class="factor-item active-push">自然灾害与饥荒</li>
+                        <li class="factor-item active-push">高失业率与贫困</li>
+                        <li class="factor-item active-push">环境污染与退化</li>
+                    </ul>
+                </div>
+                <div class="factor-card">
+                    <div class="factor-card-title pull">✨ 拉力 (吸引力)</div>
+                    <ul class="factor-list">
+                        <li class="factor-item active-pull">就业机会与高薪</li>
+                        <li class="factor-item active-pull">优越的教育资源</li>
+                        <li class="factor-item active-pull">完善的医疗与安全</li>
+                        <li class="factor-item active-pull">宜人的气候环境</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块二：人口迁移 -->
+        <div id="section-mig" class="module-section">
+            <div class="section-title">⏳ 迁移发展时期推演</div>
+            <div class="timeline-container">
+                <div class="timeline-node active" onclick="switchEra(0)">
+                    <div class="timeline-title">第一阶段：15世纪至二战前</div>
+                    <div class="timeline-desc">新航路开辟，以集团性、大批量的强迫/自发移民为主（如欧洲人移向美洲、非洲黑奴贸易、中国人“下南洋”）。</div>
+                </div>
+                <div class="timeline-node" onclick="switchEra(1)">
+                    <div class="timeline-title">第二阶段：第二次世界大战后</div>
+                    <div class="timeline-desc">国际人口迁移形式发生改变，发展中国家流向发达国家，定居移民减少，劳务移民增加。</div>
+                </div>
+                <div class="timeline-node" onclick="switchEra(2)">
+                    <div class="timeline-title">第三阶段：改革开放后的国内迁移</div>
+                    <div class="timeline-desc">中国由中西部向东部沿海（珠三角、长三角、京津冀）集聚，工业化与城市化拉动。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右侧解析面板 -->
+    <div id="ui-right" class="glass-panel">
+        <!-- 分布模式解析 -->
+        <div id="edu-dist" class="module-section active">
+            <div class="section-title">📖 全球人口分布三大特征</div>
+            <div class="edu-card">
+                <h3>1. 纬度分布特征</h3>
+                <ul class="edu-list">
+                    <li>90%以上的人口分布在北半球，尤其是北纬 20°~60° 的温带和亚热带地区。</li>
+                </ul>
+            </div>
+            <div class="edu-card">
+                <h3>2. 海陆分布特征</h3>
+                <ul class="edu-list">
+                    <li>近60%的人口分布在距离海岸线 200 千米以内的沿海平原与地带，交通便利，经济发达。</li>
+                </ul>
+            </div>
+            <div class="edu-card">
+                <h3>3. 海拔分布特征</h3>
+                <ul class="edu-list">
+                    <li>80%以上的人口居住在海拔 500 米以下的平原及低丘陵地区，利于耕作与交通。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 迁移模式解析 -->
+        <div id="edu-mig" class="module-section">
+            <div class="section-title">🌍 迁移特征与地区影响</div>
+            <div class="edu-card" id="mig-details-card">
+                <!-- 动态更新内容 -->
+                <h3 id="mig-era-title">15世纪至二战前</h3>
+                <ul class="edu-list" id="mig-era-list">
+                    <li><strong>流向特征：</strong>欧洲 $\rightarrow$ 美洲、大洋洲；非洲 $\rightarrow$ 美洲（黑奴贩卖）；亚洲 $\rightarrow$ 东南亚（下南洋）。</li>
+                    <li><strong>主导因素：</strong>新航路开辟，资本主义扩张，土地开发，强迫掠夺。</li>
+                    <li><strong>迁出区影响：</strong>缓解人口压力，但大量壮劳力丧失（如非洲黑奴）。</li>
+                    <li><strong>迁入区影响：</strong>开发了美洲与大洋洲，促进文化交融，带来技术与劳力。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- HUD 指示器 -->
+    <div id="status-hud" class="glass-panel">
+        <div class="hud-item" style="color:var(--primary);"><span class="hud-dot" style="background-color:var(--primary);"></span><span>三维全息视口</span></div>
+        <div class="hud-item" style="color:#eab308;"><span class="hud-dot" style="background-color:#eab308;"></span><span>人口核心聚集区</span></div>
+        <div class="hud-item" style="color:#f43f5e;"><span class="hud-dot" style="background-color:#f43f5e;"></span><span>超级都会 beacon 极光</span></div>
+        <div class="hud-item" style="color:#38bdf8;"><span class="hud-dot" style="background-color:#38bdf8;"></span><span>国际/国内人口流动飞线</span></div>
+    </div>
+
+    <script>
+        const EARTH_RADIUS = 50;
+        let scene, camera, renderer, controls;
+        let earthGroup, iMesh, heatMesh;
+        let beaconsGroup;
+        const instancesData = [];
+        let labelsArray = [];
+        let imgLoaded = false;
+        
+        let currentHeightMultiplier = 1.0;
+        let currentThreshold = 0.0;
+        let currentDensityMode = 'heatmap'; // 'heatmap' or 'hex'
+        let currentMode = 0; // 0: 分布, 1: 迁移
+        let currentEra = 0; // 0: 50s-二战, 1: 二战后, 2: 中国改革开放
+        let isUserInteracting = false;
+
+        // 2D 平面投影相关变量
+        let viewType = '3d'; // '3d' or '2d'
+        const flatCanvas = document.getElementById('flat-canvas');
+        const flatCtx = flatCanvas.getContext('2d');
+        const flatMapImage = new Image();
+        function resolveSourceAsset(path) {
+            if (typeof window.resolveGeographySourceAsset === 'function') {
+                return window.resolveGeographySourceAsset(path);
+            }
+            const base = window.__GEOGRAPHY_SOURCE_BASE_URL__;
+            if (base) {
+                try { return new URL(path, base).href; } catch (error) {}
+            }
+            return path;
+        }
+        const EARTH_TEXTURE_URL = resolveSourceAsset('assets/earth_night_real.webp');
+        flatMapImage.src = EARTH_TEXTURE_URL;
+        let flatMapImageLoaded = false;
+        flatMapImage.onload = () => { flatMapImageLoaded = true; };
+        let cachedHeatmapCanvas = null;
+        let flatParticles = [];
+        let flatCx = 0, flatCy = 0, flatMapScale = 1;
+
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        const hud = document.getElementById('cursor-hud');
+        
+        const dummy = new THREE.Object3D();
+        const colorObj = new THREE.Color();
+
+        // 全球标准地理坐标：先记录真实经纬度，再统一换算到 3D 球面与 2D 等距圆柱投影。
+        const regionCoords = {
+            japan: { lat: 35.66, lon: 139.68, name: "东亚/日本圈", pop: "3746万", details: "东亚核心，世界最稠密人口群之一。" },
+            china_east: { lat: 31.23, lon: 121.46, name: "中国长三角/华东", pop: "1.2亿", details: "沿海黄金口岸，主要人口迁入区。" },
+            china_inland: { lat: 30.64, lon: 104.04, name: "中国四川盆地/中西部", pop: "8000万", details: "地形盆地平原，传统迁出人口大省。" },
+            china_south: { lat: 23.11, lon: 113.24, name: "中国珠三角/华南", pop: "7800万", details: "改革开放前沿，超高人口吸纳中心。" },
+            india: { lat: 25.29, lon: 79.99, name: "南亚恒河平原", pop: "3.2亿", details: "平原地形，水源丰富，世界首个人口大国中心。" },
+            seasia: { lat: -7.00, lon: 109.98, name: "东南亚印尼爪哇", pop: "1.4亿", details: "火山火山灰土极为肥沃，农业高度密集区。" },
+            europe: { lat: 50.09, lon: 8.66, name: "西欧莱茵河平原", pop: "8500万", details: "工业化起步早，都市连绵带，资本主义中心。" },
+            uk: { lat: 51.48, lon: -0.11, name: "英国伦敦圈", pop: "1425万", details: "欧洲工业先驱，经典移民迁出/迁入区。" },
+            us_east: { lat: 40.70, lon: -73.98, name: "北美大西洋沿岸", pop: "5500万", details: "美国东北部大西洋沿岸城市带，传统经济核心。" },
+            us_west: { lat: 34.04, lon: -118.24, name: "美国西海岸/加州", pop: "3800万", details: "科技产业高度集聚，吸引全球精英。" },
+            latam: { lat: -23.54, lon: -46.62, name: "拉美圣保罗/里约", pop: "2242万", details: "南美人口最稠密沿海经济带。" },
+            africa_west: { lat: 6.50, lon: 3.35, name: "西非几内亚湾沿岸", pop: "2.1亿", details: "尼日利亚等人口高增长带，非洲未来劳力核心。" },
+            saudi: { lat: 25.00, lon: 54.99, name: "中东海湾沿岸", pop: "3500万", details: "石油资源极度丰富，劳务移民核心迁入区。" },
+            aus_east: { lat: -33.84, lon: 151.20, name: "澳洲东南沿海", pop: "1800万", details: "气候温和，地势平坦，典型现代迁入区。" }
+        };
+
+        const twoDLabelOffsets = {
+            japan: { x: 52, y: -34 },
+            china_east: { x: 30, y: -6 },
+            china_inland: { x: -92, y: -44 },
+            china_south: { x: 62, y: 58 },
+            india: { x: -68, y: 34 },
+            seasia: { x: 58, y: 54 },
+            europe: { x: -8, y: -16 },
+            uk: { x: 18, y: -28 },
+            africa_west: { x: -18, y: 18 }
+        };
+
+        function getFlatPosition(region) {
+            return {
+                x: (region.lon / 180) * 800,
+                y: -(region.lat / 90) * 400
+            };
+        }
+
+        function normalizeLongitude(lon) {
+            return ((lon + 180) % 360 + 360) % 360 - 180;
+        }
+
+        function latLonToSphere(latDeg, lonDeg, radius) {
+            const lon = normalizeLongitude(lonDeg) * Math.PI / 180;
+            const lat = latDeg * Math.PI / 180;
+            const cosLat = Math.cos(lat);
+            return new THREE.Vector3(
+                radius * Math.cos(lon) * cosLat,
+                radius * Math.sin(lat),
+                -radius * Math.sin(lon) * cosLat
+            );
+        }
+
+        function spherePointToLatLon(point) {
+            const radius = Math.max(0.0001, point.length());
+            const lat = Math.asin(THREE.MathUtils.clamp(point.y / radius, -1, 1)) * 180 / Math.PI;
+            const lon = normalizeLongitude(Math.atan2(-point.z, point.x) * 180 / Math.PI);
+            return { lat, lon };
+        }
+
+        function get3DPosition(region, radius) {
+            return latLonToSphere(region.lat, region.lon, radius);
+        }
+
+        init();
+
+        function init() {
+            scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2(0x030712, 0.005);
+
+            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.set(0, 30, 140);
+
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.domElement.style.position = 'absolute';
+            renderer.domElement.style.inset = '0';
+            renderer.domElement.style.zIndex = '3';
+            renderer.domElement.style.pointerEvents = 'auto';
+            renderer.domElement.style.cursor = 'grab';
+            document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.minDistance = 60;
+            controls.maxDistance = 220;
+            controls.enableRotate = true;
+            controls.enableZoom = true;
+            controls.enablePan = false;
+            controls.rotateSpeed = 0.75;
+            controls.target.set(0, 0, 0);
+            controls.update();
+            controls.addEventListener('start', () => {
+                isUserInteracting = true;
+                renderer.domElement.style.cursor = 'grabbing';
+            });
+            controls.addEventListener('end', () => {
+                isUserInteracting = false;
+                renderer.domElement.style.cursor = 'grab';
+            });
+
+            earthGroup = new THREE.Group();
+            scene.add(earthGroup);
+
+            // 1. 加载真实的 NASA 全球卫星夜景图 texture
+            const textureLoader = new THREE.TextureLoader();
+            textureLoader.load(EARTH_TEXTURE_URL, (texture) => {
+                imgLoaded = true;
+                // 提升球体精度到 128 解决 3d 模型边缘粗糙问题
+                const earthGeo = new THREE.SphereGeometry(EARTH_RADIUS * 0.992, 128, 128);
+                
+                const earthMat = new THREE.MeshPhongMaterial({
+                    map: texture,
+                    emissiveMap: texture,
+                    emissive: 0xffffff,
+                    emissiveIntensity: 1.2, /* 让城市夜景贴图自发光，解决暗淡问题 */
+                    color: 0xffffff,
+                    shininess: 0,
+                    specular: 0x000000
+                });
+                
+                const earthMesh = new THREE.Mesh(earthGeo, earthMat);
+                earthGroup.add(earthMesh);
+
+                generatePopulationMatrix();
+                updateHeatmapLayer();
+            });
+
+            // 2. 增加高保真电影级菲涅尔边缘大气层光晕 (解决 3d 模型粗糙、边缘无光晕的问题)
+            const atmosGeo = new THREE.SphereGeometry(EARTH_RADIUS * 1.15, 128, 128);
+            const atmosMat = new THREE.ShaderMaterial({
+                vertexShader: `
+                    varying vec3 vNormal;
+                    void main() {
+                        vNormal = normalize(normalMatrix * normal);
+                        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                    }
+                `,
+                fragmentShader: `
+                    varying vec3 vNormal;
+                    void main() {
+                        float intensity = pow(0.6 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.5);
+                        gl_FragColor = vec4(0.0, 0.75, 1.0, 1.0) * intensity * 0.8;
+                    }
+                `,
+                blending: THREE.AdditiveBlending,
+                side: THREE.BackSide,
+                transparent: true,
+                depthWrite: false
+            });
+            earthGroup.add(new THREE.Mesh(atmosGeo, atmosMat));
+
+            // 光照系统
+            const ambientLight = new THREE.AmbientLight(0xffffff, 1.8); /* 调亮环境光 */
+            scene.add(ambientLight);
+
+            const dirLight = new THREE.DirectionalLight(0x00f2fe, 1.2); /* 调亮主光源 */
+            dirLight.position.set(100, 50, 50);
+            scene.add(dirLight);
+
+            // 预留连续热力图空壳 Mesh
+            heatMesh = new THREE.Mesh(
+                new THREE.SphereGeometry(EARTH_RADIUS * 1.002, 128, 128),
+                new THREE.MeshBasicMaterial({
+                    transparent: true,
+                    opacity: 0.85,
+                    blending: THREE.AdditiveBlending,
+                    depthWrite: false
+                })
+            );
+            earthGroup.add(heatMesh);
+
+            beaconsGroup = new THREE.Group();
+            earthGroup.add(beaconsGroup);
+            buildBeaconLabels();
+
+            setupControls();
+            setupRaycaster();
+
+            window.addEventListener('resize', onResize);
+            onResize();
+            animate();
+        }
+
+        // --- 人口分布：高精度球面极值数据生成 ---
+        function getPopulationDensity(lat, lon) {
+            let density = 0;
+            const centers = [
+                // 东亚密集区 (中日韩)
+                { lat: 30, lon: 116, r: 16, w: 1.0 },
+                { lat: 36, lon: 139, r: 6, w: 0.9 },
+                { lat: 23, lon: 114, r: 8, w: 0.85 },
+                
+                // 南亚密集区 (印度恒河平原及周边)
+                { lat: 25, lon: 80, r: 18, w: 1.0 },
+                { lat: 15, lon: 77, r: 10, w: 0.8 },
+
+                // 西欧密集区
+                { lat: 50, lon: 8, r: 12, w: 0.8 },
+                { lat: 51, lon: 0, r: 6, w: 0.75 },
+
+                // 北美东海岸及大湖区
+                { lat: 41, lon: -75, r: 10, w: 0.75 },
+                { lat: 42, lon: -85, r: 8, w: 0.6 },
+
+                // 东南亚 (印尼爪哇、越南红河)
+                { lat: -6, lon: 110, r: 6, w: 0.85 },
+                { lat: 21, lon: 105, r: 5, w: 0.7 },
+
+                // 非洲核心 (几内亚湾、尼罗河三角洲)
+                { lat: 6, lon: 6, r: 9, w: 0.7 },
+                { lat: 30, lon: 31, r: 5, w: 0.75 },
+
+                // 南美东南沿海 (巴西/阿根廷)
+                { lat: -23, lon: -45, r: 7, w: 0.7 }
+            ];
+
+            centers.forEach(c => {
+                let dLat = lat - c.lat;
+                let dLon = lon - c.lon;
+                if(dLon > 180) dLon -= 360;
+                if(dLon < -180) dLon += 360;
+                let dist = Math.sqrt(dLat*dLat + dLon*dLon);
+                if(dist < c.r * 2.5) {
+                    density += c.w * Math.exp(-(dist*dist)/(c.r*c.r*0.4));
+                }
+            });
+
+            density += 0.015 * Math.random();
+
+            if(lat > 65 || lat < -55) density *= 0.01; 
+            if(lat > 15 && lat < 30 && lon > -15 && lon < 40) density *= 0.01; 
+            if(lat > -30 && lat < -15 && lon > 115 && lon < 140) density *= 0.02; 
+            if(lat > -10 && lat < 5 && lon > -75 && lon < -50) density *= 0.05; 
+            if(lat > 28 && lat < 40 && lon > 75 && lon < 95) density *= 0.01; 
+            if(lat > 35 && lat < 45 && lon > 50 && lon < 70) density *= 0.05; 
+
+            return Math.max(0, Math.min(density, 1.0));
+        }
+
+        // --- 绘制 2D 连续全息热力贴图材质 ---
+        function createHeatmapTexture() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1024;
+            canvas.height = 512;
+            const ctx = canvas.getContext('2d');
+            const imgData = ctx.createImageData(canvas.width, canvas.height);
+
+            const cLow = new THREE.Color(0x0055ff); 
+            const cMid = new THREE.Color(0xeab308); 
+            const cHigh = new THREE.Color(0xf43f5e); 
+            const cExtreme = new THREE.Color(0xffffff); 
+            const tColor = new THREE.Color();
+
+            for(let y=0; y<canvas.height; y++) {
+                let lat = 90 - (y / canvas.height) * 180;
+                for(let x=0; x<canvas.width; x++) {
+                    let lon = (x / canvas.width) * 360 - 180;
+                    let d = getPopulationDensity(lat, lon);
+
+                    let idx = (y * canvas.width + x) * 4;
+                    if(d > 0.01) {
+                        if(d > 0.8) tColor.lerpColors(cHigh, cExtreme, (d-0.8)/0.2);
+                        else if(d > 0.45) tColor.lerpColors(cMid, cHigh, (d-0.45)/0.35);
+                        else if(d > 0.12) tColor.lerpColors(cLow, cMid, (d-0.12)/0.33);
+                        else tColor.lerpColors(new THREE.Color(0x000000), cLow, d/0.12);
+
+                        imgData.data[idx] = tColor.r * 255;
+                        imgData.data[idx+1] = tColor.g * 255;
+                        imgData.data[idx+2] = tColor.b * 255;
+                        imgData.data[idx+3] = Math.min(255, Math.pow(d, 0.6) * 380);
+                    } else {
+                        imgData.data[idx+3] = 0;
+                    }
+                }
+            }
+            ctx.putImageData(imgData, 0, 0);
+
+            const blurCanvas = document.createElement('canvas');
+            blurCanvas.width = 1024; blurCanvas.height = 512;
+            const bCtx = blurCanvas.getContext('2d');
+            bCtx.filter = 'blur(5px)';
+            bCtx.drawImage(canvas, 0, 0);
+
+            cachedHeatmapCanvas = blurCanvas;
+            return new THREE.CanvasTexture(blurCanvas);
+        }
+
+        function updateHeatmapLayer() {
+            if(heatMesh) {
+                if(heatMesh.material.map) heatMesh.material.map.dispose();
+                heatMesh.material.map = createHeatmapTexture();
+                heatMesh.material.needsUpdate = true;
+            }
+        }
+
+        // --- 生成 3D 柱体点云分布阵列 ---
+        function generatePopulationMatrix() {
+            const N = 45000;
+            const phi = Math.PI * (3 - Math.sqrt(5));
+            instancesData.length = 0;
+
+            for(let i=0; i<N; i++) {
+                let y = 1 - (i / (N - 1)) * 2;
+                let radius = Math.sqrt(1 - y * y);
+                let theta = phi * i;
+
+                let x = Math.cos(theta) * radius;
+                let z = Math.sin(theta) * radius;
+
+                const geo = spherePointToLatLon(new THREE.Vector3(x, y, z));
+                let lat = geo.lat;
+                let lon = geo.lon;
+
+                let density = getPopulationDensity(lat, lon);
+                if(density > 0.02) {
+                    instancesData.push({x, y, z, lat, lon, density});
+                }
+            }
+
+            if(!iMesh) {
+                // 升级低模多边形为 16 边精细发光水晶柱体
+                const boxGeo = new THREE.CylinderGeometry(0.25, 0.25, 1.0, 16);
+                boxGeo.rotateX(Math.PI / 2);
+                boxGeo.translate(0, 0, -0.5); 
+
+                const boxMat = new THREE.MeshPhysicalMaterial({
+                    transparent: true, 
+                    opacity: 0.95, 
+                    roughness: 0.1,
+                    metalness: 0.2,
+                    clearcoat: 1.0,
+                    clearcoatRoughness: 0.1
+                });
+
+                iMesh = new THREE.InstancedMesh(boxGeo, boxMat, instancesData.length);
+                iMesh.visible = false;
+                earthGroup.add(iMesh);
+            }
+
+            updateInstances();
+        }
+
+        function updateInstances() {
+            if(!iMesh) return;
+
+            const maxH = 15.0; 
+            for(let i=0; i<instancesData.length; i++) {
+                let d = instancesData[i];
+
+                if(d.density < currentThreshold) {
+                    dummy.scale.set(0, 0, 0);
+                    dummy.updateMatrix();
+                    iMesh.setMatrixAt(i, dummy.matrix);
+                    continue;
+                }
+
+                dummy.position.set(d.x * EARTH_RADIUS, d.y * EARTH_RADIUS, d.z * EARTH_RADIUS);
+                dummy.lookAt(0,0,0);
+
+                let h = Math.max(0.1, d.density * maxH * currentHeightMultiplier);
+                dummy.scale.set(1, 1, h);
+                dummy.updateMatrix();
+                iMesh.setMatrixAt(i, dummy.matrix);
+
+                if(d.density > 0.8) {
+                    colorObj.lerpColors(new THREE.Color(0xf43f5e), new THREE.Color(0xffffff), (d.density-0.8)/0.2);
+                } else if(d.density > 0.4) {
+                    colorObj.lerpColors(new THREE.Color(0xeab308), new THREE.Color(0xf43f5e), (d.density-0.4)/0.4);
+                } else {
+                    colorObj.lerpColors(new THREE.Color(0x0055ff), new THREE.Color(0xeab308), d.density/0.4);
+                }
+
+                iMesh.setColorAt(i, colorObj);
+            }
+
+            iMesh.instanceMatrix.needsUpdate = true;
+            if(iMesh.instanceColor) iMesh.instanceColor.needsUpdate = true;
+        }
+
+        // --- 核心：多时代全球/中国人口迁移动态网络构建 ---
+        const eraData = [
+            {
+                title: "第一阶段：15世纪至二战前 (地理大发现时期)",
+                details: "新航路开辟，全球大发现时代催生了最大规模的全球跨洋移民潮，多属强迫或主动开垦殖民性质。",
+                facts: [
+                    "<strong>欧洲 $\rightarrow$ 美洲与大洋洲：</strong>资本主义殖民扩张，欧洲宗主国人民自发移民到新大陆，开发土地和资源。",
+                    "<strong>非洲黑奴贸易 $\rightarrow$ 美洲：</strong>殖民者为了解决美洲庄园劳动力短缺，强制贩卖大量非洲黑人（非洲惨重损失）。",
+                    "<strong>亚洲“下南洋”、“闯关东”：</strong>以契约华工或躲避战乱的流民为主，大量向东南亚和东北地区开垦（如闯关东开发了黑土地）。"
+                ],
+                paths: [
+                    { from: "uk", to: "us_east", count: 4, type: "欧洲殖民开拓" },
+                    { from: "europe", to: "latam", count: 3, type: "欧洲跨洋移民" },
+                    { from: "africa_west", to: "latam", count: 5, type: "强迫黑奴贸易" },
+                    { from: "china_east", to: "seasia", count: 3, type: "下南洋华工" },
+                    { from: "china_inland", to: "china_east", count: 2, type: "开垦与流动" }
+                ],
+                activeFactors: {
+                    push: [0, 1, 2], 
+                    pull: [0, 3]    
+                }
+            },
+            {
+                title: "第二阶段：第二次世界大战后 (国际流向演变)",
+                details: "国际政治版图重组与全球经济不平衡加剧，定居性跨国移民减少，追求就业与技术提升的劳务移民成主体。",
+                facts: [
+                    "<strong>发展中国家 $\rightarrow$ 发达国家：</strong>拉美、亚洲、非洲成为主要的净迁出区，北美与西欧为大迁入区。",
+                    "<strong>中东海湾劳务繁荣：</strong>海湾国家石油开发释放巨大的基础设施与服务业红利，吸引大量南亚（印、巴）劳务工人迁入。",
+                    "<strong>全球“脑力外流” (Brain Drain)：</strong>发展中地区的顶尖高科技人才与留学生，源源不断向美国硅谷、西欧研发中心集聚。"
+                ],
+                paths: [
+                    { from: "india", to: "saudi", count: 5, type: "劳务工人输出" },
+                    { from: "india", to: "us_west", count: 3, type: "精英科技人才移民" },
+                    { from: "latam", to: "us_east", count: 4, type: "拉美移民输入" },
+                    { from: "china_east", to: "us_west", count: 3, type: "高科技人才外流" },
+                    { from: "africa_west", to: "europe", count: 4, type: "北非/地中海人口流动" }
+                ],
+                activeFactors: {
+                    push: [2],    
+                    pull: [0, 1, 2] 
+                }
+            },
+            {
+                title: "第三阶段：改革开放后的国内人口流动 (中国国内迁移)",
+                details: "中国户籍制度改革与沿海经济特区率先开放，农村剩余劳动力释放，掀起世界史诗级的“孔雀东南飞”城市化奇迹。",
+                facts: [
+                    "<strong>中西部 $\rightarrow$ 东南沿海大都市圈：</strong>四川、湖南、河南、贵州等中西部人口大省的劳动力，大规模流向珠三角、长三角、京津冀三大板块。",
+                    "<strong>农村 $\rightarrow$ 城镇 (工业化拉动)：</strong>第二、第三产业高度聚集在华东和华南沿海，拉动中西部农村劳动力向现代工业化都市大跨越。",
+                    "<strong>省内向省会级中心城集聚：</strong>伴随内陆省份的强省会化战略，省内小城镇和农村人口持续向成都、武汉、西安等内陆核心都市大举集聚。"
+                ],
+                paths: [
+                    { from: "china_inland", to: "china_south", count: 6, type: "川湘劳动力南下" },
+                    { from: "china_inland", to: "china_east", count: 5, type: "劳动力东进长三角" },
+                    { from: "china_east", to: "china_south", count: 2, type: "跨沿海人才交流" }
+                ],
+                activeFactors: {
+                    push: [2],    
+                    pull: [0, 1, 2] 
+                }
+            }
+        ];
+
+        function buildBeaconLabels() {
+            while(beaconsGroup.children.length > 0) {
+                beaconsGroup.remove(beaconsGroup.children[0]);
+            }
+            
+            const oldLabels = document.querySelectorAll('.beacon-label');
+            oldLabels.forEach(lb => lb.remove());
+            labelsArray = [];
+
+            const laserGeo = new THREE.CylinderGeometry(0.3, 0.3, 20, 6);
+            laserGeo.rotateX(Math.PI / 2);
+            laserGeo.translate(0, 0, -10);
+
+            const laserMat = new THREE.MeshBasicMaterial({
+                color: 0xf43f5e,
+                transparent: true,
+                opacity: 0.4,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
+
+            const targetBeacons = currentMode === 0 ? regionCoords : {}; 
+
+            for(let key in targetBeacons) {
+                const c = targetBeacons[key];
+                const pos = get3DPosition(c, EARTH_RADIUS);
+                const mesh = new THREE.Mesh(laserGeo, laserMat);
+                mesh.position.copy(pos);
+                mesh.lookAt(0,0,0);
+                beaconsGroup.add(mesh);
+
+                const div = document.createElement('div');
+                div.className = 'beacon-label';
+                div.innerHTML = `${c.name}<span>人口: ${c.pop}</span>`;
+                document.getElementById('canvas-container').appendChild(div);
+
+                const labelPos = get3DPosition(c, EARTH_RADIUS + 12);
+                labelsArray.push({ pos: labelPos, element: div, key });
+            }
+        }
+
+        function setupControls() {
+            document.getElementById('slider-height').addEventListener('input', (e) => {
+                currentHeightMultiplier = parseFloat(e.target.value);
+                document.getElementById('val-height').innerText = `${currentHeightMultiplier.toFixed(1)}x`;
+                updateInstances();
+            });
+
+            document.getElementById('slider-thresh').addEventListener('input', (e) => {
+                currentThreshold = parseFloat(e.target.value);
+                document.getElementById('val-thresh').innerText = `${Math.round(currentThreshold * 100)}%`;
+                updateInstances();
+            });
+        }
+
+        function switchMode(mode) {
+            currentMode = mode;
+            document.getElementById('btn-dist').className = currentMode === 0 ? 'tab-btn active' : 'tab-btn';
+            document.getElementById('btn-mig').className = currentMode === 1 ? 'tab-btn active' : 'tab-btn';
+
+            document.getElementById('section-dist').className = currentMode === 0 ? 'module-section active' : 'module-section';
+            document.getElementById('section-mig').className = currentMode === 1 ? 'module-section active' : 'module-section';
+            document.getElementById('edu-dist').className = currentMode === 0 ? 'module-section active' : 'module-section';
+            document.getElementById('edu-mig').className = currentMode === 1 ? 'module-section active' : 'module-section';
+
+            if (currentMode === 0) {
+                setDensityMode(currentDensityMode);
+            } else {
+                if(iMesh) iMesh.visible = false;
+                if(heatMesh) heatMesh.visible = false;
+                if (viewType === '3d') {
+                    switchViewType('2d'); // 自动切换到 2D 平面（只保留2D迁移）
+                }
+                initFlatParticles();
+            }
+            
+            buildBeaconLabels();
+            updateBentoGrid();
+        }
+
+        function switchViewType(type) {
+            viewType = type;
+            document.getElementById('btn-view-3d').className = viewType === '3d' ? 'tab-btn active' : 'tab-btn';
+            document.getElementById('btn-view-2d').className = viewType === '2d' ? 'tab-btn active' : 'tab-btn';
+
+            const webglCanvas = renderer.domElement;
+            const statusHudEl = document.getElementById('status-hud');
+            
+            if (viewType === '3d') {
+                flatCanvas.style.display = 'none';
+                webglCanvas.style.display = 'block';
+                if(statusHudEl) {
+                    statusHudEl.innerHTML = `
+                        <div class="hud-item" style="color:var(--primary);"><span class="hud-dot" style="background-color:var(--primary);"></span><span>三维全息视口</span></div>
+                        <div class="hud-item" style="color:#eab308;"><span class="hud-dot" style="background-color:#eab308;"></span><span>人口核心聚集区</span></div>
+                        <div class="hud-item" style="color:#f43f5e;"><span class="hud-dot" style="background-color:#f43f5e;"></span><span>超级都会 beacon 极光</span></div>
+                        <div class="hud-item" style="color:#38bdf8;"><span class="hud-dot" style="background-color:#38bdf8;"></span><span>国际/国内人口流动飞线</span></div>
+                    `;
+                }
+                controls.enabled = true;
+            } else {
+                flatCanvas.style.display = 'block';
+                webglCanvas.style.display = 'none';
+                if(statusHudEl) {
+                    statusHudEl.innerHTML = `
+                        <div class="hud-item" style="color:var(--primary);"><span class="hud-dot" style="background-color:var(--primary);"></span><span>二维全息平面视口</span></div>
+                        <div class="hud-item" style="color:#eab308;"><span class="hud-dot" style="background-color:#eab308;"></span><span>人口核心聚集区</span></div>
+                        <div class="hud-item" style="color:#f43f5e;"><span class="hud-dot" style="background-color:#f43f5e;"></span><span>超级都会 beacon 极光</span></div>
+                        <div class="hud-item" style="color:#38bdf8;"><span class="hud-dot" style="background-color:#38bdf8;"></span><span>国际/国内人口流动飞线</span></div>
+                    `;
+                }
+                controls.enabled = false;
+                onResize();
+                if (currentMode === 1) initFlatParticles();
+            }
+            buildBeaconLabels();
+        }
+
+        function initFlatParticles() {
+            flatParticles = [];
+            if (currentMode !== 1) return;
+            const data = eraData[currentEra];
+            data.paths.forEach(p => {
+                const r1 = regionCoords[p.from];
+                const r2 = regionCoords[p.to];
+                if (!r1 || !r2) return;
+                for (let i = 0; i < p.count * 3; i++) {
+                    flatParticles.push({
+                        from: r1,
+                        to: r2,
+                        progress: Math.random(),
+                        speed: 0.002 + Math.random() * 0.003
+                    });
+                }
+            });
+        }
+
+        function drawFlatCanvas() {
+            const width = flatCanvas.width / (window.devicePixelRatio || 1);
+            const height = flatCanvas.height / (window.devicePixelRatio || 1);
+            flatCtx.fillStyle = '#030712';
+            flatCtx.fillRect(0, 0, width, height);
+
+            const narrow = width <= 1200;
+            flatMapScale = Math.min(width / 1700, height / 900) * 1.05;
+            if (flatMapScale > 1.2) flatMapScale = 1.2;
+            
+            const hudOffset = narrow ? 0 : 0; 
+            flatCx = width / 2 + hudOffset;
+            flatCy = height / 2 + (narrow ? 40 : 0);
+
+            flatCtx.save();
+            flatCtx.translate(flatCx, flatCy);
+            flatCtx.scale(flatMapScale, flatMapScale);
+
+            // Draw base map
+            if (flatMapImageLoaded) {
+                flatCtx.globalAlpha = 0.85; /* 调亮 2D 卫星图 */
+                flatCtx.drawImage(flatMapImage, -800, -400, 1600, 800);
+                flatCtx.globalAlpha = 1.0;
+            }
+
+            // Grid lines
+            flatCtx.strokeStyle = 'rgba(0, 242, 254, 0.03)';
+            flatCtx.lineWidth = 1;
+            flatCtx.beginPath();
+            for (let x = -800; x <= 800; x += 80) {
+                flatCtx.moveTo(x, -400);
+                flatCtx.lineTo(x, 400);
+            }
+            for (let y = -400; y <= 400; y += 80) {
+                flatCtx.moveTo(-800, y);
+                flatCtx.lineTo(800, y);
+            }
+            flatCtx.stroke();
+
+            // Distribution Mode
+            if (currentMode === 0) {
+                if (currentDensityMode === 'heatmap' && cachedHeatmapCanvas) {
+                    flatCtx.save();
+                    flatCtx.globalAlpha = 0.8;
+                    flatCtx.drawImage(cachedHeatmapCanvas, -800, -400, 1600, 800);
+                    flatCtx.restore();
+                } else if (currentDensityMode === 'hex') {
+                    for (let i = 0; i < instancesData.length; i += 3) {
+                        const d = instancesData[i];
+                        if (d.density < currentThreshold) continue;
+                        
+                        const fx = (d.lon / 180.0) * 800.0;
+                        const fy = -(d.lat / 90.0) * 400.0;
+                        
+                        let color = '#0055ff';
+                        if (d.density > 0.8) color = '#ffffff';
+                        else if (d.density > 0.4) color = '#f43f5e';
+                        else if (d.density > 0.15) color = '#eab308';
+                        
+                        flatCtx.fillStyle = color;
+                        flatCtx.beginPath();
+                        flatCtx.arc(fx, fy, Math.max(1, d.density * 5 * currentHeightMultiplier), 0, Math.PI*2);
+                        flatCtx.fill();
+                    }
+                }
+            } else {
+                // Migration Mode
+                const data = eraData[currentEra];
+                const colors = ['#eab308', '#00f2fe', '#f43f5e'];
+                const routeColor = colors[currentEra];
+
+                // 1. Draw Bezier lines
+                data.paths.forEach(p => {
+                    const r1 = regionCoords[p.from];
+                    const r2 = regionCoords[p.to];
+                    if (!r1 || !r2) return;
+                    const p1 = getFlatPosition(r1);
+                    const p2 = getFlatPosition(r2);
+
+                    flatCtx.strokeStyle = routeColor;
+                    flatCtx.globalAlpha = 0.3;
+                    flatCtx.lineWidth = 2.0;
+                    flatCtx.setLineDash([6, 4]);
+                    
+                    flatCtx.beginPath();
+                    flatCtx.moveTo(p1.x, p1.y);
+                    const ctrlX = (p1.x + p2.x) / 2;
+                    const ctrlY = (p1.y + p2.y) / 2 - Math.abs(p2.x - p1.x) * 0.22;
+                    flatCtx.quadraticCurveTo(ctrlX, ctrlY, p2.x, p2.y);
+                    flatCtx.stroke();
+                });
+                flatCtx.setLineDash([]);
+                flatCtx.globalAlpha = 1.0;
+
+                // 2. Flight particles
+                if (flatParticles.length === 0) {
+                    initFlatParticles();
+                }
+
+                flatParticles.forEach(p => {
+                    p.progress += p.speed;
+                    if (p.progress >= 1.0) p.progress = 0;
+
+                    const p1 = getFlatPosition(p.from);
+                    const p2 = getFlatPosition(p.to);
+                    const ctrlX = (p1.x + p2.x) / 2;
+                    const ctrlY = (p1.y + p2.y) / 2 - Math.abs(p2.x - p1.x) * 0.22;
+                    
+                    const t = p.progress;
+                    const oneMinusT = 1 - t;
+                    const px = oneMinusT * oneMinusT * p1.x + 2 * oneMinusT * t * ctrlX + t * t * p2.x;
+                    const py = oneMinusT * oneMinusT * p1.y + 2 * oneMinusT * t * ctrlY + t * t * p2.y;
+
+                    const radGlow = flatCtx.createRadialGradient(px, py, 1, px, py, 6);
+                    radGlow.addColorStop(0, '#ffffff');
+                    radGlow.addColorStop(0.3, routeColor);
+                    radGlow.addColorStop(1, 'rgba(0,0,0,0)');
+
+                    flatCtx.fillStyle = radGlow;
+                    flatCtx.beginPath();
+                    flatCtx.arc(px, py, 6, 0, Math.PI * 2);
+                    flatCtx.fill();
+                });
+            }
+
+            // Draw Beacons
+            for (let key in regionCoords) {
+                const c = regionCoords[key];
+                const point = getFlatPosition(c);
+                const pulse = (Date.now() % 1500) / 1500;
+                flatCtx.strokeStyle = '#f43f5e';
+                flatCtx.lineWidth = 1.5;
+                flatCtx.globalAlpha = 1 - pulse;
+                flatCtx.beginPath();
+                flatCtx.arc(point.x, point.y, 5 + pulse * 15, 0, Math.PI * 2);
+                flatCtx.stroke();
+
+                flatCtx.fillStyle = '#f43f5e';
+                flatCtx.globalAlpha = 0.9;
+                flatCtx.beginPath();
+                flatCtx.arc(point.x, point.y, 4, 0, Math.PI * 2);
+                flatCtx.fill();
+            }
+            flatCtx.globalAlpha = 1.0;
+
+            flatCtx.restore();
+        }
+
+        function setDensityMode(mode) {
+            currentDensityMode = mode;
+            document.getElementById('btn-mode-heatmap').className = currentDensityMode === 'heatmap' ? 'tab-btn active' : 'tab-btn';
+            document.getElementById('btn-mode-hex').className = currentDensityMode === 'hex' ? 'tab-btn active' : 'tab-btn';
+            
+            document.getElementById('height-ctrl').style.display = currentDensityMode === 'hex' ? 'flex' : 'none';
+
+            if(currentMode === 0) {
+                if(iMesh) iMesh.visible = (currentDensityMode === 'hex');
+                if(heatMesh) heatMesh.visible = (currentDensityMode === 'heatmap');
+            }
+        }
+
+        function switchEra(era) {
+            currentEra = era;
+            const nodes = document.querySelectorAll('.timeline-node');
+            nodes.forEach((n, idx) => {
+                n.className = idx === era ? 'timeline-node active' : 'timeline-node';
+            });
+
+            const data = eraData[currentEra];
+            document.getElementById('mig-era-title').innerText = data.title;
+            
+            let html = "";
+            data.facts.forEach(f => {
+                html += `<li>${f}</li>`;
+            });
+            document.getElementById('mig-era-list').innerHTML = html;
+
+            initFlatParticles();
+            updateBentoGrid();
+        }
+
+        function updateBentoGrid() {
+            const pushItems = document.querySelectorAll('.factor-card:nth-child(1) .factor-item');
+            const pullItems = document.querySelectorAll('.factor-card:nth-child(2) .factor-item');
+
+            let activeP = [0, 1, 2, 3]; 
+            let activeL = [0, 1, 2, 3];
+
+            if (currentMode === 1) {
+                activeP = eraData[currentEra].activeFactors.push;
+                activeL = eraData[currentEra].activeFactors.pull;
+            }
+
+            pushItems.forEach((item, idx) => {
+                item.className = activeP.includes(idx) ? 'factor-item active-push' : 'factor-item';
+            });
+            pullItems.forEach((item, idx) => {
+                item.className = activeL.includes(idx) ? 'factor-item active-pull' : 'factor-item';
+            });
+        }
+
+        function showHud(lat, lon, density) {
+            if(density < currentThreshold || density < 0.02) {
+                hud.style.opacity = '0';
+                return;
+            }
+            hud.style.opacity = '1';
+
+            const latStr = Math.abs(lat).toFixed(1) + '° ' + (lat >= 0 ? 'N' : 'S');
+            const lonStr = Math.abs(lon).toFixed(1) + '° ' + (lon >= 0 ? 'E' : 'W');
+            const denPct = Math.round(density * 100);
+
+            let desc = "人口稀少区";
+            let themeColor = "var(--primary)";
+            if(density > 0.8) { desc = "超级都会连连区"; themeColor = "#f43f5e"; }
+            else if(density > 0.45) { desc = "高度稠密核心区"; themeColor = "#eab308"; }
+            else if(density > 0.15) { desc = "中等人口聚居区"; themeColor = "#3b82f6"; }
+
+            hud.style.borderColor = themeColor;
+            hud.style.color = themeColor;
+
+            hud.innerHTML = `
+                <strong>${desc}</strong><br>
+                纬度位置: <span style="color:#fff">${latStr}</span><br>
+                经度位置: <span style="color:#fff">${lonStr}</span><br>
+                相对密度: <span style="color:#fff">${denPct}%</span>
+            `;
+        }
+
+        function setupRaycaster() {
+            window.addEventListener('mousemove', (e) => {
+                const canvasHost = document.getElementById('canvas-container');
+                const interactionRect = (renderer && renderer.domElement ? renderer.domElement : canvasHost).getBoundingClientRect();
+                const sceneX = e.clientX - interactionRect.left;
+                const sceneY = e.clientY - interactionRect.top;
+
+                if (sceneX < 0 || sceneY < 0 || sceneX > interactionRect.width || sceneY > interactionRect.height) {
+                    hud.style.opacity = '0';
+                    return;
+                }
+
+                hud.style.left = sceneX + 16 + 'px';
+                hud.style.top = sceneY + 16 + 'px';
+
+                if (viewType === '2d') {
+                    const canvasRect = flatCanvas.getBoundingClientRect();
+                    const mouseX = e.clientX - canvasRect.left;
+                    const mouseY = e.clientY - canvasRect.top;
+                    
+                    const localX = (mouseX - flatCx) / flatMapScale;
+                    const localY = (mouseY - flatCy) / flatMapScale;
+                    
+                    if (currentMode === 0) {
+                        if (currentDensityMode === 'hex') {
+                            let closest = null;
+                            let minDist = 18 / flatMapScale;
+                            for (let i = 0; i < instancesData.length; i++) {
+                                const d = instancesData[i];
+                                if (d.density < currentThreshold) continue;
+                                const fx = (d.lon / 180.0) * 800.0;
+                                const fy = -(d.lat / 90.0) * 400.0;
+                                const dx = localX - fx;
+                                const dy = localY - fy;
+                                const dist = Math.sqrt(dx*dx + dy*dy);
+                                if (dist < minDist) {
+                                    minDist = dist;
+                                    closest = d;
+                                }
+                            }
+                            if (closest) {
+                                showHud(closest.lat, closest.lon, closest.density);
+                            } else {
+                                hud.style.opacity = '0';
+                            }
+                        } else {
+                            let lon = (localX / 800.0) * 180.0;
+                            let lat = -(localY / 400.0) * 90.0;
+                            if (lon >= -180 && lon <= 180 && lat >= -90 && lat <= 90) {
+                                let d = getPopulationDensity(lat, lon);
+                                showHud(lat, lon, d);
+                            } else {
+                                hud.style.opacity = '0';
+                            }
+                        }
+                    } else {
+                        hud.style.opacity = '0';
+                    }
+                    return;
+                }
+
+                mouse.x = (sceneX / interactionRect.width) * 2 - 1;
+                mouse.y = -(sceneY / interactionRect.height) * 2 + 1;
+
+                raycaster.setFromCamera(mouse, camera);
+
+                if (currentMode === 0) {
+                    if (currentDensityMode === 'hex' && iMesh) {
+                        const intersects = raycaster.intersectObject(iMesh);
+                        if (intersects.length > 0) {
+                            const d = instancesData[intersects[0].instanceId];
+                            showHud(d.lat, d.lon, d.density);
+                        } else {
+                            hud.style.opacity = '0';
+                        }
+                    } else if (currentDensityMode === 'heatmap' && heatMesh) {
+                        const intersects = raycaster.intersectObject(heatMesh);
+                        if (intersects.length > 0) {
+                            const p = heatMesh.worldToLocal(intersects[0].point.clone());
+                            const geo = spherePointToLatLon(p);
+                            let lat = geo.lat;
+                            let lon = geo.lon;
+
+                            let d = getPopulationDensity(lat, lon);
+                            showHud(lat, lon, d);
+                        } else {
+                            hud.style.opacity = '0';
+                        }
+                    }
+                } else {
+                    hud.style.opacity = '0';
+                }
+            });
+        }
+
+        function onResize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+
+            const dpr = window.devicePixelRatio || 1;
+            flatCanvas.width = width * dpr;
+            flatCanvas.height = height * dpr;
+            flatCanvas.style.width = width + 'px';
+            flatCanvas.style.height = height + 'px';
+            flatCtx.setTransform(1, 0, 0, 1, 0, 0);
+            flatCtx.scale(dpr, dpr);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (viewType === '3d') {
+                if(controls) controls.update();
+
+                if(earthGroup && !isUserInteracting) {
+                    earthGroup.rotation.y += 0.0004;
+                }
+
+                if(labelsArray.length > 0) {
+                    const tempV = new THREE.Vector3();
+                    const canvasHost = document.getElementById('canvas-container');
+                    const hostRect = canvasHost ? canvasHost.getBoundingClientRect() : { left: 0, top: 0, width: window.innerWidth, height: window.innerHeight };
+                    labelsArray.forEach(item => {
+                        tempV.copy(item.pos);
+                        tempV.applyMatrix4(earthGroup.matrixWorld);
+
+                        const normal = tempV.clone().normalize();
+                        const camToPoint = camera.position.clone().sub(tempV).normalize();
+
+                        if (normal.dot(camToPoint) > -0.05) {
+                            tempV.project(camera);
+                            const x = (tempV.x * .5 + .5) * hostRect.width;
+                            const y = (tempV.y * -.5 + .5) * hostRect.height;
+                            const labelWidth = item.element.offsetWidth || 112;
+                            const labelHeight = item.element.offsetHeight || 36;
+                            const edgePad = 8;
+                            const fitsHost = (
+                                x - labelWidth / 2 >= edgePad &&
+                                y - labelHeight >= edgePad &&
+                                x + labelWidth / 2 <= hostRect.width - edgePad &&
+                                y + 6 <= hostRect.height - edgePad
+                            );
+                            if (!fitsHost) {
+                                item.element.style.opacity = '0';
+                            } else {
+                                item.element.style.left = `${x}px`;
+                                item.element.style.top = `${y}px`;
+                                item.element.style.opacity = '1';
+                            }
+                        } else {
+                            item.element.style.opacity = '0';
+                        }
+                    });
+                }
+
+                renderer.render(scene, camera);
+            } else {
+                drawFlatCanvas();
+                
+                // 2D Label projection positioning
+                if(labelsArray.length > 0) {
+                    labelsArray.forEach(item => {
+                        const c = regionCoords[item.key];
+                        if (c) {
+                            const offset = twoDLabelOffsets[item.key] || { x: 0, y: 0 };
+                            const point = getFlatPosition(c);
+                            const screenX = flatCx + point.x * flatMapScale + offset.x;
+                            const screenY = flatCy + point.y * flatMapScale + offset.y;
+                            item.element.style.left = `${screenX}px`;
+                            item.element.style.top = `${screenY}px`;
+                            item.element.style.opacity = '1';
+                        } else {
+                            item.element.style.opacity = '0';
+                        }
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+</html>

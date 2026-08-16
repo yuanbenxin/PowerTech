@@ -1,0 +1,19 @@
+{
+  "cardId": "sx3m14",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-carbon-cycle-dual-carbon-pathway",
+  "visualLevel": "A",
+  "vendor": {
+    "three": false,
+    "orbitControls": false
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "以碳库、碳通量、气候响应与政策杠杆的同一状态模型，理解碳循环失衡及碳达峰、碳中和路径。"
+}

@@ -1,0 +1,150 @@
+{
+    "version": "0.2.0",
+    "updated": "2026-06-27",
+    "splitBy": "book",
+    "ui": {
+        "stageTabs": [
+            {
+                "id": "junior",
+                "label": "初中"
+            },
+            {
+                "id": "senior",
+                "label": "高中"
+            }
+        ],
+        "contentModes": [
+            {
+                "id": "all",
+                "label": "全部架构",
+                "icon": "Layers"
+            },
+            {
+                "id": "lab",
+                "label": "地貌模拟",
+                "icon": "Mountain"
+            },
+            {
+                "id": "interactive",
+                "label": "可视化互动",
+                "icon": "Globe2"
+            },
+            {
+                "id": "dynamic",
+                "label": "演变过程",
+                "icon": "Activity"
+            },
+            {
+                "id": "card",
+                "label": "知识卡片",
+                "icon": "Map"
+            },
+            {
+                "id": "exam",
+                "label": "高频考点",
+                "icon": "Zap"
+            }
+        ],
+        "defaults": {
+            "stage": "junior",
+            "book": "j7a",
+            "chapter": "all",
+            "contentMode": "all"
+        }
+    },
+    "stages": [
+        {
+            "id": "junior",
+            "label": "初中",
+            "books": [
+                {
+                    "id": "j7a",
+                    "label": "七年级上册",
+                    "stageId": "junior",
+                    "stageLabel": "初中",
+                    "dataPath": "course-data/books/j7a.json",
+                    "chapterCount": 5,
+                    "cardCount": 13
+                },
+                {
+                    "id": "j7b",
+                    "label": "七年级下册",
+                    "stageId": "junior",
+                    "stageLabel": "初中",
+                    "dataPath": "course-data/books/j7b.json",
+                    "chapterCount": 6,
+                    "cardCount": 14
+                },
+                {
+                    "id": "j8a",
+                    "label": "八年级上册",
+                    "stageId": "junior",
+                    "stageLabel": "初中",
+                    "dataPath": "course-data/books/j8a.json",
+                    "chapterCount": 4,
+                    "cardCount": 14
+                },
+                {
+                    "id": "j8b",
+                    "label": "八年级下册",
+                    "stageId": "junior",
+                    "stageLabel": "初中",
+                    "dataPath": "course-data/books/j8b.json",
+                    "chapterCount": 5,
+                    "cardCount": 14
+                }
+            ]
+        },
+        {
+            "id": "senior",
+            "label": "高中",
+            "books": [
+                {
+                    "id": "s_b1",
+                    "label": "必修第一册",
+                    "stageId": "senior",
+                    "stageLabel": "高中",
+                    "dataPath": "course-data/books/s_b1.json",
+                    "chapterCount": 6,
+                    "cardCount": 15
+                },
+                {
+                    "id": "s_b2",
+                    "label": "必修第二册",
+                    "stageId": "senior",
+                    "stageLabel": "高中",
+                    "dataPath": "course-data/books/s_b2.json",
+                    "chapterCount": 5,
+                    "cardCount": 10
+                },
+                {
+                    "id": "s_x1",
+                    "label": "选择性必修1",
+                    "stageId": "senior",
+                    "stageLabel": "高中",
+                    "dataPath": "course-data/books/s_x1.json",
+                    "chapterCount": 5,
+                    "cardCount": 10
+                },
+                {
+                    "id": "s_x2",
+                    "label": "选择性必修2",
+                    "stageId": "senior",
+                    "stageLabel": "高中",
+                    "dataPath": "course-data/books/s_x2.json",
+                    "chapterCount": 4,
+                    "cardCount": 7
+                },
+                {
+                    "id": "s_x3",
+                    "label": "选择性必修3",
+                    "stageId": "senior",
+                    "stageLabel": "高中",
+                    "dataPath": "course-data/books/s_x3.json",
+                    "chapterCount": 5,
+                    "cardCount": 9
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,235 @@
+{
+  "book": {
+    "id": "j8b",
+    "label": "八年级下册",
+    "stageId": "junior",
+    "stageLabel": "初中"
+  },
+  "chapterTree": [
+    {
+      "id": "j8b_c5",
+      "label": "第五章 中国的地理差异",
+      "children": [
+        {
+          "id": "j8b_c5_1",
+          "label": "四大地理区域的划分"
+        }
+      ]
+    },
+    {
+      "id": "j8b_c6",
+      "label": "第六章 北方地区",
+      "children": [
+        {
+          "id": "j8b_c6_1",
+          "label": "自然特征与农业"
+        }
+      ]
+    },
+    {
+      "id": "j8b_c7",
+      "label": "第七章 南方地区",
+      "children": [
+        {
+          "id": "j8b_c7_1",
+          "label": "自然特征与农业"
+        }
+      ]
+    },
+    {
+      "id": "j8b_c8",
+      "label": "第八章 西北地区",
+      "children": [
+        {
+          "id": "j8b_c8_1",
+          "label": "8.1 自然特征与农业"
+        }
+      ]
+    },
+    {
+      "id": "j8b_c9",
+      "label": "第九章 青藏地区",
+      "children": [
+        {
+          "id": "j8b_c9_1",
+          "label": "9.1 自然特征与农业"
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j8b_m01",
+      "chapterIds": [
+        "j8b_c5_1"
+      ],
+      "title": "中国四大地理区域划分",
+      "detail": "叠加气候、地形等自然要素，动态推演秦岭-淮河线等重要地理分界线，划分四大区域",
+      "image": "assets/cards/j8b_m01.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8b_m02",
+      "chapterIds": [
+        "j8b_c6_1"
+      ],
+      "title": "黄土高原的水土流失沙盘",
+      "detail": "通过粒子流体力学引擎，模拟降水对黄土高原地表形态的冲刷及水土流失过程",
+      "image": "assets/cards/j8b_m02.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "particle"
+    },
+    {
+      "cardId": "j8b_m05",
+      "chapterIds": [
+        "j8b_c6_1"
+      ],
+      "title": "黄土高原的水土流失动力学",
+      "detail": "暴雨径流切割地表的千沟万壑形成过程",
+      "image": "assets/cards/j8b_m05.webp",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j8b_m06",
+      "chapterIds": [
+        "j8b_c8_1"
+      ],
+      "title": "塔里木盆地与绿洲分布",
+      "detail": "被雪山环抱的极端干旱的 3D 气候模型",
+      "image": "assets/cards/j8b_m06.webp",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j8b_m07",
+      "chapterIds": [
+        "j8b_c7_1"
+      ],
+      "title": "长三角珠三角城市群热力模拟",
+      "detail": "中国两大经济引擎的城市化扩张与人口密度三维热力图",
+      "image": "assets/cards/j8b_m07.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "globe"
+    },
+    {
+      "cardId": "j8b_m08",
+      "chapterIds": [
+        "j8b_c9_1"
+      ],
+      "title": "青藏高原隆起与高寒气候模拟",
+      "detail": "印度板块与亚欧板块碰撞抬升青藏高原的亿年地质动画",
+      "image": "assets/cards/j8b_m08.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j8b_m09",
+      "chapterIds": [
+        "j8b_c7_1"
+      ],
+      "title": "港澳台地理位置与区域联系",
+      "detail": "粤港澳大湾区的地理纽带与经济辐射三维网络",
+      "image": "assets/cards/j8b_m09.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "globe"
+    },
+    {
+      "cardId": "j8bm10",
+      "chapterIds": [
+        "j8b_c6_1"
+      ],
+      "title": "北方地区旱作农业与水资源约束",
+      "detail": "展示北方地区旱作农业、水资源约束和治理方式，理解区域人地关系。",
+      "image": "assets/cards/j8bm10.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8bm11",
+      "chapterIds": [
+        "j8b_c7_1"
+      ],
+      "title": "南方地区水田农业与河湖城市",
+      "detail": "展示南方水田农业、河湖水系和城市分布，理解湿润区区域特征。",
+      "image": "assets/cards/j8bm11.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8bm12",
+      "chapterIds": [
+        "j8b_c6_1"
+      ],
+      "title": "东北三省地形气候与重工业转型",
+      "detail": "展示东北三省地形气候、粮食基地和重工业转型，理解区域发展。",
+      "image": "assets/cards/j8bm12.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "CloudSun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8bm13",
+      "chapterIds": [
+        "j8b_c7_1"
+      ],
+      "title": "北京城市职能与水资源",
+      "detail": "展示北京城市职能、交通和水资源约束，理解首都城市地理。",
+      "image": "assets/cards/j8bm13.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8bm14",
+      "chapterIds": [
+        "j8b_c7_1"
+      ],
+      "title": "台湾地形气候与产业联系",
+      "detail": "展示台湾地形、气候、产业和海峡联系，理解台湾区域特征。",
+      "image": "assets/cards/j8bm14.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "CloudSun",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8bm15",
+      "chapterIds": [
+        "j8b_c8_1"
+      ],
+      "title": "西北干旱区水资源与荒漠化治理",
+      "detail": "展示西北干旱区水资源、绿洲和荒漠化治理，理解干旱区治理。",
+      "image": "assets/cards/j8bm15.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8bm16",
+      "chapterIds": [
+        "j8b_c9_1"
+      ],
+      "title": "青藏地区高寒农业、交通与生态保护",
+      "detail": "展示青藏地区高寒农业、交通和生态保护，理解高寒区人地关系。",
+      "image": "assets/cards/j8bm16.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    }
+  ]
+}

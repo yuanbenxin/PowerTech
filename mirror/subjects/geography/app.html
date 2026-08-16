@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>PowerTech在线教学演示 v12.0 - 地理全景教学系统</title>
+    <link rel="icon" type="image/webp" href="assets/cards/geo_generic_1.webp?v=303a94a7d030">
+    <link rel="stylesheet" href="assets/vendor/fonts/geography-local-fonts.css?v=3d76f36c344d">
+    <script src="assets/vendor/js/tailwind.min.js?v=a2c3d9b38e8e"></script>
+    <script src="assets/vendor/js/react.production.min.js?v=4b4969fa4ef3"></script>
+    <script src="assets/vendor/js/react-dom.production.min.js?v=21758ed084cd"></script>
+    <script src="assets/vendor/js/lucide.min.js?v=0cb3d1d6855b"></script>
+    <script id="shg-build-version-redirect">
+    (function () {
+        var expected = "20260809193335";
+        try {
+            var url = new URL(window.location.href);
+            if (url.searchParams.get("v") !== expected) {
+                url.searchParams.set("v", expected);
+                window.location.replace(url.toString());
+            }
+        } catch (error) {}
+    })();
+    </script>
+    <script src="geography.config.js?v=af4dcf9cd222"></script>
+    <style>
+        :root { --bg-color: #050608; --primary-color: #eab308; }
+        html, body, #root { width: 100%; height: 100%; min-height: 100dvh; margin: 0; overflow: hidden; }
+        body { background-color: var(--bg-color); color: white; font-family: 'Inter', 'Noto Sans SC', sans-serif; overscroll-behavior: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        [data-bio-scene-controls] *,
+        [data-courseware-aside] * { -ms-overflow-style: none; scrollbar-width: none; }
+        [data-bio-scene-controls] *::-webkit-scrollbar,
+        [data-courseware-aside] *::-webkit-scrollbar { width: 0; height: 0; display: none; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .custom-scrollbar::-webkit-scrollbar { width: 2px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+        .lucide-icon { display: inline-block; vertical-align: middle; }
+        .text-shadow-glow { text-shadow: 0 0 20px rgba(234, 179, 8, 0.4); }
+        .bg-transition { transition: background-image 0.8s ease-in-out; }
+    </style>
+    <link rel="stylesheet" href="./shg-subject-auth-gate.css?v=2111788607f8">
+    <link rel="stylesheet" href="./trial-user-notice.css?v=3a5f39abea8b">
+    <script src="./shg-subject-gate.config.js?v=20260809193335"></script>
+    <script src="./shg-subject-auth-gate.js?v=d068c739a2fd"></script>
+<script>window.ModelViewerElement=window.ModelViewerElement||{};window.ModelViewerElement.dracoDecoderLocation="/draco/1.5.6/";</script>
+<script src="/powertech-ui.js"></script>
+</head>
+<body>
+    <div class="shg-subject-auth-overlay" id="shgSubjectAuthOverlay">
+        <div class="shg-subject-auth-card">
+            <div class="shg-subject-auth-glow shg-subject-auth-glow-a"></div>
+            <div class="shg-subject-auth-glow shg-subject-auth-glow-b"></div>
+            <div class="shg-subject-auth-visual" aria-hidden="true">
+                <span class="shg-subject-auth-orbit shg-subject-auth-orbit-a"></span>
+                <span class="shg-subject-auth-orbit shg-subject-auth-orbit-b"></span>
+                <span class="shg-subject-auth-core-ring"></span>
+                <span class="shg-subject-auth-core"></span>
+            </div>
+            <p class="shg-subject-auth-eyebrow">SHIGUANG VISION</p>
+            <div class="shg-subject-auth-meta-row">
+                <div class="shg-subject-auth-meta" data-shg-auth-meta>地理入口</div>
+                <div class="shg-subject-auth-phase" data-shg-auth-phase>正在连接统一权限中心</div>
+            </div>
+            <h1 class="shg-subject-auth-title" data-shg-auth-title>正在进入地理系统</h1>
+            <p class="shg-subject-auth-desc" data-shg-auth-desc>正在核验当前账号的统一登录状态，并准备进入该学科系统，请稍候。</p>
+            <div class="shg-subject-auth-progress" aria-hidden="true">
+                <span class="is-done">身份识别</span>
+                <span class="is-active">权限核验</span>
+                <span>系统载入</span>
+            </div>
+            <div class="shg-subject-auth-actions">
+                <a class="shg-subject-auth-button shg-subject-auth-button-primary" data-shg-auth-primary href="/">返回统一入口</a>
+                <a class="shg-subject-auth-button shg-subject-auth-button-secondary" data-shg-auth-secondary href="">刷新重试</a>
+            </div>
+        </div>
+    </div>
+    <div id="root"></div>
+    <script src="app/geography-shared.compiled.js?v=787622df9e19"></script>
+    <script src="app/geography-unified-auth.compiled.js?v=67e873623b30"></script>
+    <script src="app/geography-scene-components.compiled.js?v=f477a97aa5f5"></script>
+    <script src="app/geography-layout-components.compiled.js?v=f2701370a584"></script>
+    <script src="app/geography-entry.compiled.js?v=15e9fc83675d"></script>
+</body>
+</html>

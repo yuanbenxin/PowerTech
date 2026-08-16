@@ -1,0 +1,19 @@
+{
+  "cardId": "sx3m15",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-pollution-transfer-environmental-security",
+  "visualLevel": "A",
+  "vendor": {
+    "three": false,
+    "orbitControls": false
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "通过大气和水体输送、跨境废弃物与产业转移等路径及全球治理杠杆，理解污染转移如何影响环境安全。"
+}

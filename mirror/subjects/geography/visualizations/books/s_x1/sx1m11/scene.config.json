@@ -1,0 +1,19 @@
+{
+  "cardId": "sx1m11",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-day-length-noon-solar-altitude",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "visualizations/books/s_x1/sx1m11/assets/vendor/three/three.min.js",
+    "orbitControls": "visualizations/books/s_x1/sx1m11/assets/vendor/three/OrbitControls.js"
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "联动太阳直射点纬度、观测点纬度和时刻，实时推导昼夜长短、日出日落与正午太阳高度，并在三维地球上显示昼夜半球和昼弧。"
+}

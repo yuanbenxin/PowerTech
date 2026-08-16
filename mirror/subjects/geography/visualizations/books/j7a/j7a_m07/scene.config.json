@@ -1,0 +1,21 @@
+{
+  "cardId": "j7a_m07",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "orbit-controls",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js",
+    "orbitControls": "assets/vendor/three/OrbitControls.js",
+    "d3": "assets/vendor/js/d3.v7.min.js",
+    "topojson": "assets/vendor/js/topojson-client.min.js"
+  },
+  "panelSelectors": [
+    "#top-panel"
+  ],
+  "notes": "地壳运动与盘古大陆分裂源码接入。左侧保留电影级 3D 地球、板块形变、化石证据带与自由 OrbitControls；右侧单一操作面板承载事件时间线、证据说明和地幔动力剖面，避免内部卡片被重复提取；外部 Three.js、D3、TopoJSON、世界地图、板块边界和地球贴图均已本地化。"
+}

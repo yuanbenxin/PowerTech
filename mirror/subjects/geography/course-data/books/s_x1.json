@@ -1,0 +1,212 @@
+{
+  "version": "0.2.0",
+  "updated": "2026-05-11",
+  "book": {
+    "id": "s_x1",
+    "label": "选择性必修1 自然地理基础",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "c1",
+        "label": "地球的运动",
+        "cardCount": 1
+      },
+      {
+        "id": "c2",
+        "label": "地表形态的塑造",
+        "cardCount": 4
+      },
+      {
+        "id": "c3",
+        "label": "大气的运动",
+        "cardCount": 1
+      },
+      {
+        "id": "c4",
+        "label": "水的运动",
+        "cardCount": 2
+      },
+      {
+        "id": "c5",
+        "label": "自然环境的整体性与差异性",
+        "cardCount": 2
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "sx1m11",
+      "chapterIds": [
+        "c1"
+      ],
+      "title": "昼夜长短与正午太阳高度计算模拟",
+      "detail": "联动日期、纬度、昼夜长短和正午太阳高度，训练高中地球运动计算。",
+      "image": "assets/cards/sx1m11.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Globe2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx1_m01",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "构造地貌的形成",
+      "abstract": "深入探讨褶皱、断层等地质构造及其形成的地貌",
+      "detail": "通过剖面交互模型，观察岩层受力弯曲与断裂的动态过程",
+      "topics": [
+        "自然地理"
+      ],
+      "points": [
+        "褶皱",
+        "断层"
+      ],
+      "experiments": [
+        "地质剖面交互"
+      ],
+      "image": "assets/cards/sx1_m01.webp",
+      "icon": "Layers",
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "sx1_m02",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "锋面气旋与天气",
+      "abstract": "分析冷锋、暖锋与气旋系统带来的天气变化",
+      "detail": "利用粒子系统模拟冷暖气团交汇及降水的发生",
+      "topics": [
+        "天气系统"
+      ],
+      "points": [
+        "锋面",
+        "气旋"
+      ],
+      "experiments": [
+        "粒子模拟"
+      ],
+      "image": "assets/cards/sx1_m02.webp",
+      "icon": "CloudLightning",
+      "engine": "particle"
+    },
+    {
+      "cardId": "sx1_m03",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "褶皱与断层的地质构造力学",
+      "detail": "地壳水平挤压形成背斜向斜与正断层逆断层的三维力学动画",
+      "image": "assets/cards/sx1_m01.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "sx1_m04",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "洋流分布与渔场形成机制",
+      "detail": "全球洋流环流系统与寒暖流交汇处渔场的粒子聚集模拟",
+      "image": "assets/cards/sb1_m03.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "globe"
+    },
+    {
+      "cardId": "sx1m12",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "岩石圈物质循环",
+      "detail": "展示三大类岩石及转化路径，理解岩石圈物质循环。",
+      "image": "assets/cards/sx1m12.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Mountain",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx1m13",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "外力作用与地貌组合",
+      "detail": "对比流水、风力、海浪和冰川地貌，理解外力作用差异。",
+      "image": "assets/cards/sx1m13.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Mountain",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx1m14",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "水循环、河湖补给与流量过程",
+      "detail": "联动补给类型、月份和流量过程线，训练河湖补给判读。",
+      "image": "assets/cards/sx1m14.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx1m15",
+      "chapterIds": [
+        "c5"
+      ],
+      "title": "自然环境整体性",
+      "detail": "通过改变气候、地貌、水文、土壤、植被要素，观察自然环境整体性。",
+      "image": "assets/cards/sx1m15.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx1m16",
+      "chapterIds": [
+        "c5"
+      ],
+      "title": "地域分异规律",
+      "detail": "展示纬度地带性、干湿度地带性和垂直地带性规律。",
+      "image": "assets/cards/sx1m16.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Globe2",
+      "engine": "source-html-adapter"
+    }
+  ],
+  "chapterTree": [
+    {
+      "id": "c1",
+      "label": "地球的运动",
+      "children": []
+    },
+    {
+      "id": "c2",
+      "label": "地表形态的塑造",
+      "children": []
+    },
+    {
+      "id": "c3",
+      "label": "大气的运动",
+      "children": []
+    },
+    {
+      "id": "c4",
+      "label": "水的运动",
+      "children": []
+    },
+    {
+      "id": "c5",
+      "label": "自然环境的整体性与差异性",
+      "children": []
+    }
+  ]
+}

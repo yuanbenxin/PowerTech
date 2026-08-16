@@ -1,0 +1,141 @@
+{
+  "version": "0.2.0",
+  "updated": "2026-05-11",
+  "book": {
+    "id": "s_x2",
+    "label": "选择性必修2 区域发展",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "c1",
+        "label": "区域与区域发展",
+        "cardCount": 1
+      },
+      {
+        "id": "c2",
+        "label": "资源、环境与区域发展",
+        "cardCount": 3
+      },
+      {
+        "id": "c3",
+        "label": "城市、产业与区域发展",
+        "cardCount": 1
+      },
+      {
+        "id": "c4",
+        "label": "区际联系与区域协调发展",
+        "cardCount": 2
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "sx2_m01",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "流域的综合开发",
+      "abstract": "以特定流域为例，分析水资源开发与生态保护",
+      "detail": "在三维地形中布置水坝，模拟梯级开发对防洪、发电及生态的影响",
+      "topics": [
+        "区域发展"
+      ],
+      "points": [
+        "流域开"
+      ],
+      "experiments": [
+        "水电站模"
+      ],
+      "image": "assets/cards/sx2_m01.webp",
+      "icon": "Waves",
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "sx2_m02",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "产业转移与资源跨区域调配",
+      "abstract": "探究产业转移及资源调配对区域经济与环境的作用",
+      "detail": "动态呈现西气东输、西电东送工程路线及沿线环境",
+      "topics": [
+        "区域经济"
+      ],
+      "points": [
+        "产业转移"
+      ],
+      "experiments": [
+        "路径推演"
+      ],
+      "image": "assets/cards/sx2_m02.webp",
+      "icon": "Activity",
+      "engine": "gis"
+    },
+    {
+      "cardId": "sx2m11",
+      "chapterIds": [
+        "c1"
+      ],
+      "title": "区域发展阶段与区域类型判读",
+      "detail": "通过区域指标变化，判读区域发展阶段与区域类型。",
+      "image": "assets/cards/sx2m11.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx2m12",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "资源型城市转型",
+      "detail": "模拟资源开发、衰退、替代产业和生态修复，理解资源型城市转型。",
+      "image": "assets/cards/sx2m12.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx2m13",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "生态脆弱区治理",
+      "detail": "对比生态脆弱区类型、驱动因素和治理措施，理解区域治理。",
+      "image": "assets/cards/sx2m13.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx2m14",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "城市群协同与都市圈",
+      "detail": "展示城市等级、通勤圈、产业分工和交通网络，理解城市群协同。",
+      "image": "assets/cards/sx2m14.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx2m15",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "区域协调发展评价模型",
+      "detail": "通过经济、生态、人口、交通等指标权重，评价区域协调发展。",
+      "image": "assets/cards/sx2m15.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "version": "0.2.0",
+  "updated": "2026-05-11",
+  "book": {
+    "id": "s_b2",
+    "label": "必修第二册",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "c1",
+        "label": "人口",
+        "cardCount": 1
+      },
+      {
+        "id": "c2",
+        "label": "乡村和城镇",
+        "cardCount": 3
+      },
+      {
+        "id": "c3",
+        "label": "产业区位因素",
+        "cardCount": 4
+      },
+      {
+        "id": "c4",
+        "label": "环境与发展",
+        "cardCount": 2
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "sb2_m01",
+      "chapterIds": [
+        "c1"
+      ],
+      "title": "人口分布与迁移",
+      "abstract": "分析影响人口分布和人口迁移的主要因素",
+      "detail": "通过热力图和动态连线展示全球与中国人口流动趋势",
+      "topics": [
+        "人文地理"
+      ],
+      "points": [
+        "人口迁移"
+      ],
+      "experiments": [
+        "动态热力图"
+      ],
+      "image": "assets/cards/sb2_m01.webp",
+      "icon": "Users",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb2_m02",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "城镇化过程及影响",
+      "abstract": "探讨城镇化演变及其对地理环境的影响",
+      "detail": "对比历史影像与数字高程模型，模拟城市热岛与积水成涝",
+      "topics": [
+        "人文地理"
+      ],
+      "points": [
+        "城市热岛"
+      ],
+      "experiments": [
+        "城市演变"
+      ],
+      "image": "assets/cards/sb2_m02.webp",
+      "icon": "Building",
+      "engine": "particle"
+    },
+    {
+      "cardId": "sb2_m03",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "农业区位因素与世界农业带",
+      "detail": "全球主要农业带在纬度与气候梯度上的三维分布模型",
+      "image": "assets/cards/sb2_m04.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "globe"
+    },
+    {
+      "cardId": "sb2_m04",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "工业区位与产业转移路径",
+      "detail": "从发达国家到发展中国家的全球产业转移动态粒子流",
+      "image": "assets/cards/sb2_m05.webp",
+      "fallbackImage": "",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb2_m05",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "城市内部空间结构模型",
+      "detail": "同心圆模式、扇形模式与多核心模式的全息城市沙盘，联动地租曲线分析功能区分化",
+      "image": "assets/cards/sb2_m03.webp",
+      "fallbackImage": "",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb2_m06",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "全球交通网络与航线可视化",
+      "detail": "全球航空航线与海运通道的弧形粒子流网络",
+      "image": "assets/cards/sb2_m06.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "globe"
+    },
+    {
+      "cardId": "sb2m07",
+      "chapterIds": [
+        "c2"
+      ],
+      "title": "乡村聚落与地域文化景观",
+      "detail": "展示乡村聚落形态、地域文化景观和自然环境关系。",
+      "image": "assets/cards/sb2m07.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb2m08",
+      "chapterIds": [
+        "c3"
+      ],
+      "title": "服务业区位与商业中心",
+      "detail": "通过人流、交通、服务半径和商业中心等级，理解服务业区位。",
+      "image": "assets/cards/sb2m08.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb2m09",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "环境问题与人地协调",
+      "detail": "联动环境问题、驱动因素和治理措施，理解人地协调。",
+      "image": "assets/cards/sb2m09.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sb2m10",
+      "chapterIds": [
+        "c4"
+      ],
+      "title": "可持续发展路径模拟",
+      "detail": "通过资源、经济和环境变量调节，模拟可持续发展路径。",
+      "image": "assets/cards/sb2m10.webp",
+      "fallbackImage": "assets/geography_card_bg_senior.webp",
+      "isLocked": false,
+      "icon": "Globe2",
+      "engine": "source-html-adapter"
+    }
+  ],
+  "chapterTree": [
+    {
+      "id": "c1",
+      "label": "人口",
+      "children": []
+    },
+    {
+      "id": "c2",
+      "label": "乡村和城镇",
+      "children": []
+    },
+    {
+      "id": "c3",
+      "label": "产业区位因素",
+      "children": []
+    },
+    {
+      "id": "c4",
+      "label": "环境与发展",
+      "children": []
+    }
+  ]
+}

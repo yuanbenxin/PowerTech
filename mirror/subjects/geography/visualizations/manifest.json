@@ -1,0 +1,2678 @@
+{
+  "version": "0.1.0",
+  "generatedAt": "2026-05-12",
+  "source": "课程架构数据.json",
+  "engines": [
+    {
+      "id": "globe",
+      "label": "3D 地球系统引擎",
+      "description": "用于地球运动、昼夜更替、四季变化、经纬网与全球空间分布类可视化。",
+      "folder": "visualizations/engines/globe",
+      "defaults": {
+        "cameraPreset": "orbit-earth",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "sandbox",
+      "label": "地貌沙盘引擎",
+      "description": "用于等高线、地貌、区域地形与空间推演类可视化。",
+      "folder": "visualizations/engines/sandbox",
+      "defaults": {
+        "cameraPreset": "terrain-oblique",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "particle",
+      "label": "地理过程粒子引擎",
+      "description": "用于洋流、风带、板块运动、人口迁移等动态过程可视化。",
+      "folder": "visualizations/engines/particle",
+      "defaults": {
+        "cameraPreset": "process-field",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "source-html-adapter",
+      "label": "源 HTML 课件适配引擎",
+      "description": "用于接入本地 HTML 课件，并统一适配平台模拟框、操作面板和触摸交互。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "source-scene-fit",
+        "interactionMode": "scene-controls"
+      }
+    }
+  ],
+  "books": [
+    {
+      "bookId": "j7a",
+      "label": "七年级上册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j7a",
+      "cardIds": [
+        "j7a_m01",
+        "j7a_m02",
+        "j7a_m03",
+        "j7a_m04",
+        "j7a_m05",
+        "j7a_m06",
+        "j7a_m07",
+        "j7a_m08",
+        "j7a_m09",
+        "j7am10",
+        "j7am11",
+        "j7am12",
+        "j7am13"
+      ]
+    },
+    {
+      "bookId": "j7b",
+      "label": "七年级下册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j7b",
+      "cardIds": [
+        "j7b_m01",
+        "j7b_m02",
+        "j7b_m05",
+        "j7b_m06",
+        "j7b_m07",
+        "j7b_m08",
+        "j7b_m09",
+        "j7b_m10",
+        "j7bm11",
+        "j7bm12",
+        "j7bm13",
+        "j7bm14",
+        "j7bm15",
+        "j7bm16"
+      ]
+    },
+    {
+      "bookId": "j8a",
+      "label": "八年级上册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j8a",
+      "cardIds": [
+        "j8a_m01",
+        "j8a_m09",
+        "j8a_m02",
+        "j8a_m06",
+        "j8a_m07",
+        "j8a_m08",
+        "j8am10",
+        "j8am11",
+        "j8am12",
+        "j8am13",
+        "j8am14",
+        "j8am15",
+        "j8am16"
+      ]
+    },
+    {
+      "bookId": "j8b",
+      "label": "八年级下册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j8b",
+      "cardIds": [
+        "j8b_m01",
+        "j8b_m02",
+        "j8b_m06",
+        "j8b_m07",
+        "j8b_m08",
+        "j8b_m09",
+        "j8bm10",
+        "j8bm11",
+        "j8bm12",
+        "j8bm13",
+        "j8bm14",
+        "j8bm15",
+        "j8bm16"
+      ]
+    },
+    {
+      "bookId": "s_b1",
+      "label": "必修第一册",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_b1",
+      "cardIds": [
+        "sb1_m01",
+        "sb1_m06",
+        "sb1_m07",
+        "sb1_m08",
+        "sb1_m10",
+        "sb1_m02",
+        "sb1_m03",
+        "sb1_m04",
+        "sb1_m05",
+        "sb1m11",
+        "sb1m12",
+        "sb1m13",
+        "sb1m14",
+        "sb1m15"
+      ]
+    },
+    {
+      "bookId": "s_b2",
+      "label": "必修第二册",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_b2",
+      "cardIds": [
+        "sb2_m01",
+        "sb2_m04",
+        "sb2_m05",
+        "sb2_m02",
+        "sb2_m03",
+        "sb2_m06",
+        "sx1_m01",
+        "sx1_m02",
+        "sx1_m03",
+        "sx1_m04",
+        "sx2_m01",
+        "sx2_m02",
+        "sx3_m01",
+        "sx3_m02",
+        "sb2m07",
+        "sb2m08",
+        "sb2m09",
+        "sb2m10"
+      ]
+    },
+    {
+      "bookId": "s_x1",
+      "label": "高中选择性必修一",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x1",
+      "cardIds": [
+        "sx1m11",
+        "sx1m12",
+        "sx1m13",
+        "sx1m14",
+        "sx1m15",
+        "sx1m16"
+      ]
+    },
+    {
+      "bookId": "s_x2",
+      "label": "高中选择性必修二",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x2",
+      "cardIds": [
+        "sx2m11",
+        "sx2m12",
+        "sx2m13",
+        "sx2m14",
+        "sx2m15"
+      ]
+    },
+    {
+      "bookId": "s_x3",
+      "label": "高中选择性必修三",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x3",
+      "cardIds": [
+        "sx3m11",
+        "sx3m12",
+        "sx3m13",
+        "sx3m14",
+        "sx3m15",
+        "sx3m16",
+        "sx3m17"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "cardId": "j7a_m01",
+      "title": "地球的自转与公转模拟",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "chapterTitles": [
+        "地球的运动"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m01",
+      "assetsDir": "visualizations/books/j7a/j7a_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m02",
+      "title": "等高线地形图的三维投影",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_4"
+      ],
+      "chapterTitles": [
+        "地形图的判读"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m02",
+      "assetsDir": "visualizations/books/j7a/j7a_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m03",
+      "title": "七大洲与五大洋全景分布",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "chapterTitles": [
+        "大洲和大洋"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m03",
+      "assetsDir": "visualizations/books/j7a/j7a_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m04",
+      "title": "板块构造与海陆变迁",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c2_2"
+      ],
+      "chapterTitles": [
+        "第二节 海陆的变迁"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m04",
+      "assetsDir": "visualizations/books/j7a/j7a_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m05",
+      "title": "世界气温与气候类型分布",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c3_4"
+      ],
+      "chapterTitles": [
+        "世界的气候"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m05",
+      "assetsDir": "visualizations/books/j7a/j7a_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m06",
+      "title": "全球人口密度 3D 热力带",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "chapterTitles": [
+        "人口与人种"
+      ],
+      "folder": "visualizations/books/j7a/j7a_m06",
+      "assetsDir": "visualizations/books/j7a/j7a_m06/assets"
+    },
+    {
+      "cardId": "j7a_m07",
+      "title": "地壳运动与盘古大陆分裂",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c2_2"
+      ],
+      "chapterTitles": [
+        "第二节 海陆的变迁"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m07",
+      "assetsDir": "visualizations/books/j7a/j7a_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m08",
+      "title": "经纬网坐标系与地球仪定位",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "chapterIds": [
+        "j7a_c1_1"
+      ],
+      "chapterTitles": [
+        "地球的形状和大小"
+      ],
+      "folder": "visualizations/books/j7a/j7a_m08",
+      "assetsDir": "visualizations/books/j7a/j7a_m08/assets"
+    },
+    {
+      "cardId": "j7a_m09",
+      "title": "地球五带划分与太阳直射点",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "chapterTitles": [
+        "第二节 地球的运动"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m09",
+      "assetsDir": "visualizations/books/j7a/j7a_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m01",
+      "title": "亚洲地形与河流放射状分布",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c6_2"
+      ],
+      "chapterTitles": [
+        "自然环境"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m01",
+      "assetsDir": "visualizations/books/j7b/j7b_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m01",
+      "title": "中国辽阔的疆域与邻国",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "chapterTitles": [
+        "第一节 疆域"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m01",
+      "assetsDir": "visualizations/books/j8a/j8a_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m09",
+      "title": "中国自然资源分布总览",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "chapterTitles": [
+        "3.1 自然资源的基本特征"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m09",
+      "assetsDir": "visualizations/books/j8a/j8a_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m02",
+      "title": "中国三级阶梯地势模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c2_1"
+      ],
+      "chapterTitles": [
+        "第一节 地形和地势"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m02",
+      "assetsDir": "visualizations/books/j8a/j8a_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m01",
+      "title": "中国四大地理区域划分",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c5_1"
+      ],
+      "chapterTitles": [
+        "四大地理区域的划分"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m01",
+      "assetsDir": "visualizations/books/j8b/j8b_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m01",
+      "title": "天体系统与太阳活动",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "c1"
+      ],
+      "chapterTitles": [
+        "宇宙中的地球"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m01",
+      "assetsDir": "visualizations/books/s_b1/sb1_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m06",
+      "title": "科里奥利力与全球风带",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "c2"
+      ],
+      "chapterTitles": [
+        "地球上的大气"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m06",
+      "assetsDir": "visualizations/books/s_b1/sb1_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m07",
+      "title": "热力环流与海陆风城市热岛",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "c2"
+      ],
+      "chapterTitles": [
+        "地球上的大气"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m07",
+      "assetsDir": "visualizations/books/s_b1/sb1_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m08",
+      "title": "气旋与反气旋台风结构剖面",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "c2"
+      ],
+      "chapterTitles": [
+        "地球上的大气"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m08",
+      "assetsDir": "visualizations/books/s_b1/sb1_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m10",
+      "title": "气象与地质灾害",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "c6"
+      ],
+      "chapterTitles": [
+        "自然灾害"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m10",
+      "assetsDir": "visualizations/books/s_b1/sb1_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m01",
+      "title": "人口分布与迁移",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "c1"
+      ],
+      "chapterTitles": [
+        "人口"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m01",
+      "assetsDir": "visualizations/books/s_b2/sb2_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m04",
+      "title": "工业区位与产业转移路径",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "c3"
+      ],
+      "chapterTitles": [
+        "产业区位因素"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m04",
+      "assetsDir": "visualizations/books/s_b2/sb2_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m05",
+      "title": "城市内部空间结构模型",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "c2"
+      ],
+      "chapterTitles": [
+        "乡村和城镇"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m05",
+      "assetsDir": "visualizations/books/s_b2/sb2_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m02",
+      "title": "日本的地形与火山地震",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "初中七年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m02",
+      "assetsDir": "visualizations/books/j7b/j7b_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m05",
+      "title": "日本列岛：地震带与火山地震带",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "初中七年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m05",
+      "assetsDir": "visualizations/books/j7b/j7b_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m06",
+      "title": "欧洲西部的温带海洋性气候",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "初中七年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m06",
+      "assetsDir": "visualizations/books/j7b/j7b_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m07",
+      "title": "东南亚十字路口的海峡与航线",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "初中七年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m07",
+      "assetsDir": "visualizations/books/j7b/j7b_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m08",
+      "title": "中东石油资源三维分布",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "初中七年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m08",
+      "assetsDir": "visualizations/books/j7b/j7b_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m09",
+      "title": "撒哈拉以南非洲的气候带",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "初中七年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m09",
+      "assetsDir": "visualizations/books/j7b/j7b_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m10",
+      "title": "南北美洲纵贯山脉与气候",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "初中七年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m10",
+      "assetsDir": "visualizations/books/j7b/j7b_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m06",
+      "title": "季风气候：冬夏季风进退模拟",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "初中八年级上册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m06",
+      "assetsDir": "visualizations/books/j8a/j8a_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m07",
+      "title": "长江流域水系三维地形与三峡大坝",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "初中八年级上册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m07",
+      "assetsDir": "visualizations/books/j8a/j8a_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m08",
+      "title": "黄河地上悬河与历史改道",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "初中八年级上册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m08",
+      "assetsDir": "visualizations/books/j8a/j8a_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m02",
+      "title": "黄土高原的水土流失沙盘",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "初中八年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m02",
+      "assetsDir": "visualizations/books/j8b/j8b_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m06",
+      "title": "塔里木盆地与绿洲分布",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "初中八年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m06",
+      "assetsDir": "visualizations/books/j8b/j8b_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m07",
+      "title": "长三角珠三角城市群热力模拟",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "初中八年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m07",
+      "assetsDir": "visualizations/books/j8b/j8b_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m08",
+      "title": "青藏高原隆起与高寒气候模拟",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "初中八年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m08",
+      "assetsDir": "visualizations/books/j8b/j8b_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m09",
+      "title": "港澳台地理位置与区域联系",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "初中八年级下册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m09",
+      "assetsDir": "visualizations/books/j8b/j8b_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m02",
+      "title": "大气热力环流",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "高中必修第一册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m02",
+      "assetsDir": "visualizations/books/s_b1/sb1_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m03",
+      "title": "海水的运动：洋流",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "高中必修第一册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m03",
+      "assetsDir": "visualizations/books/s_b1/sb1_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m04",
+      "title": "河流地貌的发育",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "高中必修第一册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m04",
+      "assetsDir": "visualizations/books/s_b1/sb1_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m05",
+      "title": "大气层垂直分层与臭氧层",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "高中必修第一册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m05",
+      "assetsDir": "visualizations/books/s_b1/sb1_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m02",
+      "title": "城镇化过程及影响",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中必修第二册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m02",
+      "assetsDir": "visualizations/books/s_b2/sb2_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m03",
+      "title": "农业区位因素与世界农业带",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中必修第二册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m03",
+      "assetsDir": "visualizations/books/s_b2/sb2_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m06",
+      "title": "全球交通网络与航线可视化",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中必修第二册",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m06",
+      "assetsDir": "visualizations/books/s_b2/sb2_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m01",
+      "title": "构造地貌的形成",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx1_m01",
+      "assetsDir": "visualizations/books/s_b2/sx1_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m02",
+      "title": "锋面气旋与天气",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx1_m02",
+      "assetsDir": "visualizations/books/s_b2/sx1_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m03",
+      "title": "褶皱与断层的地质构造力学",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx1_m03",
+      "assetsDir": "visualizations/books/s_b2/sx1_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m04",
+      "title": "洋流分布与渔场形成机制",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx1_m04",
+      "assetsDir": "visualizations/books/s_b2/sx1_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx2_m01",
+      "title": "流域的综合开发",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx2_m01",
+      "assetsDir": "visualizations/books/s_b2/sx2_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx2_m02",
+      "title": "产业转移与资源跨区域调配",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx2_m02",
+      "assetsDir": "visualizations/books/s_b2/sx2_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx3_m01",
+      "title": "化石能源开发与安全",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx3_m01",
+      "assetsDir": "visualizations/books/s_b2/sx3_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx3_m02",
+      "title": "生态退化与生态安全",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "高中选择性必修",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sx3_m02",
+      "assetsDir": "visualizations/books/s_b2/sx3_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7am10",
+      "title": "地图三要素与比例尺方向图例",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7am10",
+      "assetsDir": "visualizations/books/j7a/j7am10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级上册，地球和地图。"
+    },
+    {
+      "cardId": "j7am11",
+      "title": "天气符号与卫星云图判读",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7am11",
+      "assetsDir": "visualizations/books/j7a/j7am11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级上册，天气与气候。"
+    },
+    {
+      "cardId": "j7am12",
+      "title": "气温曲线与降水柱状图气候判读",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7am12",
+      "assetsDir": "visualizations/books/j7a/j7am12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级上册，天气与气候。"
+    },
+    {
+      "cardId": "j7am13",
+      "title": "聚落形态与自然环境",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7am13",
+      "assetsDir": "visualizations/books/j7a/j7am13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级上册，居民与聚落。"
+    },
+    {
+      "cardId": "j7bm11",
+      "title": "亚洲位置范围与分区拼图",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7bm11",
+      "assetsDir": "visualizations/books/j7b/j7bm11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级下册，亚洲。"
+    },
+    {
+      "cardId": "j7bm12",
+      "title": "印度季风农业与人口城市",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7bm12",
+      "assetsDir": "visualizations/books/j7b/j7bm12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级下册，区域国家。"
+    },
+    {
+      "cardId": "j7bm13",
+      "title": "俄罗斯工业带与交通线",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7bm13",
+      "assetsDir": "visualizations/books/j7b/j7bm13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级下册，区域国家。"
+    },
+    {
+      "cardId": "j7bm14",
+      "title": "澳大利亚矿产、牧羊带与城市",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7bm14",
+      "assetsDir": "visualizations/books/j7b/j7bm14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级下册，区域国家。"
+    },
+    {
+      "cardId": "j7bm15",
+      "title": "巴西地形气候与亚马孙",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7bm15",
+      "assetsDir": "visualizations/books/j7b/j7bm15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级下册，区域国家。"
+    },
+    {
+      "cardId": "j7bm16",
+      "title": "极地地区冰盖、科考与生态保护",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7bm16",
+      "assetsDir": "visualizations/books/j7b/j7bm16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "七年级下册，极地地区。"
+    },
+    {
+      "cardId": "j8am10",
+      "title": "中国人口分布与胡焕庸线",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8am10",
+      "assetsDir": "visualizations/books/j8a/j8am10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级上册，从世界看中国。"
+    },
+    {
+      "cardId": "j8am11",
+      "title": "中国民族分布与文化景观",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8am11",
+      "assetsDir": "visualizations/books/j8a/j8am11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级上册，从世界看中国。"
+    },
+    {
+      "cardId": "j8am12",
+      "title": "中国行政区划拼图与省级轮廓",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8am12",
+      "assetsDir": "visualizations/books/j8a/j8am12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级上册，从世界看中国。"
+    },
+    {
+      "cardId": "j8am13",
+      "title": "中国气温降水、温度带与干湿区",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8am13",
+      "assetsDir": "visualizations/books/j8a/j8am13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级上册，中国自然环境。"
+    },
+    {
+      "cardId": "j8am14",
+      "title": "中国农业分布与因地制宜",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8am14",
+      "assetsDir": "visualizations/books/j8a/j8am14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级上册，中国经济地理。"
+    },
+    {
+      "cardId": "j8am15",
+      "title": "中国交通运输网络",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8am15",
+      "assetsDir": "visualizations/books/j8a/j8am15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级上册，中国经济地理。"
+    },
+    {
+      "cardId": "j8am16",
+      "title": "中国工业基地与高新技术产业",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8am16",
+      "assetsDir": "visualizations/books/j8a/j8am16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级上册，中国经济地理。"
+    },
+    {
+      "cardId": "j8bm10",
+      "title": "北方地区旱作农业与水资源约束",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8bm10",
+      "assetsDir": "visualizations/books/j8b/j8bm10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级下册，北方地区。"
+    },
+    {
+      "cardId": "j8bm11",
+      "title": "南方地区水田农业与河湖城市",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8bm11",
+      "assetsDir": "visualizations/books/j8b/j8bm11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级下册，南方地区。"
+    },
+    {
+      "cardId": "j8bm12",
+      "title": "东北三省地形气候与重工业转型",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8bm12",
+      "assetsDir": "visualizations/books/j8b/j8bm12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级下册，北方地区/区域发展。"
+    },
+    {
+      "cardId": "j8bm13",
+      "title": "北京城市职能与水资源",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8bm13",
+      "assetsDir": "visualizations/books/j8b/j8bm13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级下册，区域城市。"
+    },
+    {
+      "cardId": "j8bm14",
+      "title": "台湾地形气候与产业联系",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8bm14",
+      "assetsDir": "visualizations/books/j8b/j8bm14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级下册，区域地理。"
+    },
+    {
+      "cardId": "j8bm15",
+      "title": "西北干旱区水资源与荒漠化治理",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8bm15",
+      "assetsDir": "visualizations/books/j8b/j8bm15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级下册，西北地区。"
+    },
+    {
+      "cardId": "j8bm16",
+      "title": "青藏地区高寒农业、交通与生态保护",
+      "status": "draft",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8bm16",
+      "assetsDir": "visualizations/books/j8b/j8bm16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "八年级下册，青藏地区。"
+    },
+    {
+      "cardId": "sb1m11",
+      "title": "地球内部圈层结构透视",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1m11",
+      "assetsDir": "visualizations/books/s_b1/sb1m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修一。"
+    },
+    {
+      "cardId": "sb1m12",
+      "title": "地质年代与地球演化时间轴",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1m12",
+      "assetsDir": "visualizations/books/s_b1/sb1m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修一。"
+    },
+    {
+      "cardId": "sb1m13",
+      "title": "水循环与陆地水体补给",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1m13",
+      "assetsDir": "visualizations/books/s_b1/sb1m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修一。"
+    },
+    {
+      "cardId": "sb1m14",
+      "title": "植被分布与自然带",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1m14",
+      "assetsDir": "visualizations/books/s_b1/sb1m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修一，植被与土壤章节。"
+    },
+    {
+      "cardId": "sb1m15",
+      "title": "土壤剖面与土壤形成过程",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1m15",
+      "assetsDir": "visualizations/books/s_b1/sb1m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修一，植被与土壤章节。"
+    },
+    {
+      "cardId": "sb2m07",
+      "title": "乡村聚落与地域文化景观",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2m07",
+      "assetsDir": "visualizations/books/s_b2/sb2m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修二。"
+    },
+    {
+      "cardId": "sb2m08",
+      "title": "服务业区位与商业中心",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2m08",
+      "assetsDir": "visualizations/books/s_b2/sb2m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修二。"
+    },
+    {
+      "cardId": "sb2m09",
+      "title": "环境问题与人地协调",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2m09",
+      "assetsDir": "visualizations/books/s_b2/sb2m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修二，环境与发展。"
+    },
+    {
+      "cardId": "sb2m10",
+      "title": "可持续发展路径模拟",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2m10",
+      "assetsDir": "visualizations/books/s_b2/sb2m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中必修二，环境与发展。"
+    },
+    {
+      "cardId": "sx1m11",
+      "title": "昼夜长短与正午太阳高度计算模拟",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1m11",
+      "assetsDir": "visualizations/books/s_x1/sx1m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修一。"
+    },
+    {
+      "cardId": "sx1m12",
+      "title": "岩石圈物质循环",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1m12",
+      "assetsDir": "visualizations/books/s_x1/sx1m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修一。"
+    },
+    {
+      "cardId": "sx1m13",
+      "title": "外力作用与地貌组合",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1m13",
+      "assetsDir": "visualizations/books/s_x1/sx1m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修一。"
+    },
+    {
+      "cardId": "sx1m14",
+      "title": "水循环、河湖补给与流量过程",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1m14",
+      "assetsDir": "visualizations/books/s_x1/sx1m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修一。"
+    },
+    {
+      "cardId": "sx1m15",
+      "title": "自然环境整体性",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1m15",
+      "assetsDir": "visualizations/books/s_x1/sx1m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修一。"
+    },
+    {
+      "cardId": "sx1m16",
+      "title": "地域分异规律",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1m16",
+      "assetsDir": "visualizations/books/s_x1/sx1m16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修一。"
+    },
+    {
+      "cardId": "sx2m11",
+      "title": "区域发展阶段与区域类型判读",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2m11",
+      "assetsDir": "visualizations/books/s_x2/sx2m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修二。"
+    },
+    {
+      "cardId": "sx2m12",
+      "title": "资源型城市转型",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2m12",
+      "assetsDir": "visualizations/books/s_x2/sx2m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修二。"
+    },
+    {
+      "cardId": "sx2m13",
+      "title": "生态脆弱区治理",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2m13",
+      "assetsDir": "visualizations/books/s_x2/sx2m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修二。"
+    },
+    {
+      "cardId": "sx2m14",
+      "title": "城市群协同与都市圈",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2m14",
+      "assetsDir": "visualizations/books/s_x2/sx2m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修二。"
+    },
+    {
+      "cardId": "sx2m15",
+      "title": "区域协调发展评价模型",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2m15",
+      "assetsDir": "visualizations/books/s_x2/sx2m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修二。"
+    },
+    {
+      "cardId": "sx3m11",
+      "title": "粮食安全与耕地保护",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3m11",
+      "assetsDir": "visualizations/books/s_x3/sx3m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修三。"
+    },
+    {
+      "cardId": "sx3m12",
+      "title": "水资源安全与流域调控",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3m12",
+      "assetsDir": "visualizations/books/s_x3/sx3m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修三。"
+    },
+    {
+      "cardId": "sx3m13",
+      "title": "海洋空间资源与海洋权益",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3m13",
+      "assetsDir": "visualizations/books/s_x3/sx3m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修三。"
+    },
+    {
+      "cardId": "sx3m14",
+      "title": "碳循环与双碳路径",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3m14",
+      "assetsDir": "visualizations/books/s_x3/sx3m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修三。"
+    },
+    {
+      "cardId": "sx3m15",
+      "title": "污染转移与环境安全",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3m15",
+      "assetsDir": "visualizations/books/s_x3/sx3m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修三。"
+    },
+    {
+      "cardId": "sx3m16",
+      "title": "生物多样性与自然保护地",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3m16",
+      "assetsDir": "visualizations/books/s_x3/sx3m16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修三。"
+    },
+    {
+      "cardId": "sx3m17",
+      "title": "国家战略资源安全图谱",
+      "status": "draft",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "",
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3m17",
+      "assetsDir": "visualizations/books/s_x3/sx3m17/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "description": "高中选择性必修三。"
+    }
+  ]
+}

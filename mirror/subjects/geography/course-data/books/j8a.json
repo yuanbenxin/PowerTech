@@ -1,0 +1,237 @@
+{
+  "book": {
+    "id": "j8a",
+    "label": "八年级上册",
+    "stageId": "junior",
+    "stageLabel": "初中"
+  },
+  "chapterTree": [
+    {
+      "id": "j8a_c1",
+      "label": "第一章 从世界看中国",
+      "children": [
+        {
+          "id": "j8a_c1_1",
+          "label": "第一节 疆域"
+        },
+        {
+          "id": "j8a_c1_2",
+          "label": "第二节 人口"
+        },
+        {
+          "id": "j8a_c1_3",
+          "label": "第三节 民族"
+        }
+      ]
+    },
+    {
+      "id": "j8a_c2",
+      "label": "第二章 中国的自然环境",
+      "children": [
+        {
+          "id": "j8a_c2_1",
+          "label": "第一节 地形和地势"
+        },
+        {
+          "id": "j8a_c2_2",
+          "label": "第二节 气候"
+        }
+      ]
+    },
+    {
+      "id": "j8a_c2",
+      "label": "第二章 中国的自然环境",
+      "children": [
+        {
+          "id": "j8a_c2_2",
+          "label": "第二节 气候"
+        }
+      ]
+    },
+    {
+      "id": "j8a_c3",
+      "label": "第三章 中国的自然资源",
+      "children": [
+        {
+          "id": "j8a_c3_1",
+          "label": "3.1 自然资源的基本特征"
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j8a_m01",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "title": "中国辽阔的疆域与邻国",
+      "detail": "在本地 Leaflet 地图与三维地球视角中观察中国疆域、邻国、国界、海岸线和重点地理位置。",
+      "image": "assets/cards/j8a_m01.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8a_m02",
+      "chapterIds": [
+        "j8a_c2_1"
+      ],
+      "title": "中国三级阶梯地势模型",
+      "detail": "利用精密的立体沙盘，直观展现中国西高东低、呈三级阶梯状分布的宏大宏大地势特征",
+      "image": "assets/cards/j8a_m02.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8a_m05",
+      "chapterIds": [
+        "j8a_c2_1"
+      ],
+      "title": "中国地势三级阶梯 3D 沙盘",
+      "detail": "中国地形的高程可视化与剖面切割",
+      "image": "assets/cards/j8a_m05.webp",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j8a_m06",
+      "chapterIds": [
+        "j8a_c2_2"
+      ],
+      "title": "季风气候：冬夏季风进退模拟",
+      "detail": "从西伯利亚与太平洋吹来的粒子风暴",
+      "image": "assets/cards/j8a_m06.webp",
+      "isLocked": true,
+      "engine": "particle"
+    },
+    {
+      "cardId": "j8a_m07",
+      "chapterIds": [
+        "j8a_c2_2"
+      ],
+      "title": "长江流域水系三维地形与三峡大坝",
+      "detail": "从青藏高原源头到东海入海口的全流域高程渲染与三峡大坝剖面",
+      "image": "assets/cards/j8a_m07.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j8a_m08",
+      "chapterIds": [
+        "j8a_c2_2"
+      ],
+      "title": "黄河地上悬河与历史改道",
+      "detail": "黄河下游河床高于两岸地面的三维剖面与千年改道动画",
+      "image": "assets/cards/j8a_m08.webp",
+      "fallbackImage": "",
+      "isLocked": true,
+      "engine": "sandbox"
+    },
+    {
+      "cardId": "j8a_m09",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "title": "中国自然资源分布总览",
+      "detail": "在中国地图中切换矿产、水资源、土地等自然资源图层，观察资源空间分布和数据面板变化。",
+      "image": "assets/cards/j8a_m09.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8am10",
+      "chapterIds": [
+        "j8a_c1_2"
+      ],
+      "title": "中国人口分布与胡焕庸线",
+      "detail": "通过中国人口热力和胡焕庸线，解释人口分布东西差异。",
+      "image": "assets/cards/j8am10.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8am11",
+      "chapterIds": [
+        "j8a_c1_3"
+      ],
+      "title": "中国民族分布与文化景观",
+      "detail": "展示民族分布、自治区和文化景观，理解民族分布格局。",
+      "image": "assets/cards/j8am11.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Building2",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8am12",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "title": "中国行政区划拼图与省级轮廓",
+      "detail": "通过省级轮廓拼图、省会定位和简称匹配，训练行政区划识别。",
+      "image": "assets/cards/j8am12.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8am13",
+      "chapterIds": [
+        "j8a_c2_2"
+      ],
+      "title": "中国气温降水、温度带与干湿区",
+      "detail": "联动中国气温、降水、温度带和干湿区，理解气候分区。",
+      "image": "assets/cards/j8am13.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Waves",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8am14",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "title": "中国农业分布与因地制宜",
+      "detail": "叠加地形、气候和作物分布，理解农业因地制宜。",
+      "image": "assets/cards/j8am14.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8am15",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "title": "中国交通运输网络",
+      "detail": "展示中国主要交通网络和枢纽，理解交通对区域联系的作用。",
+      "image": "assets/cards/j8am15.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Map",
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "j8am16",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "title": "中国工业基地与高新技术产业",
+      "detail": "展示中国工业基地和高新技术产业分布，理解工业布局条件。",
+      "image": "assets/cards/j8am16.webp",
+      "fallbackImage": "assets/geography_card_bg_golden.webp",
+      "isLocked": false,
+      "icon": "Leaf",
+      "engine": "source-html-adapter"
+    }
+  ]
+}

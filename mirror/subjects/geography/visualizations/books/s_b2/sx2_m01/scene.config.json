@@ -1,0 +1,19 @@
+{
+  "cardId": "sx2_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-river-basin-integrated-development",
+  "visualLevel": "A",
+  "vendor": {
+    "three": false,
+    "orbitControls": false
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "以田纳西河流域为例，联动自然背景、无序开发后果、梯级开发措施与水库调度，理解流域综合开发必须统筹防洪、发电、航运、灌溉和生态。"
+}
