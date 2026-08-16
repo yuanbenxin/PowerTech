@@ -1,0 +1,22 @@
+{
+  "cardId": "j9b_m12",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-similar-polygon-ratio",
+  "visualLevel": "A",
+  "notes": "九年级下册 27.2 相似三角形：相似多边形面积比，支持多边形切换、相似比、旋转、网格和辅助线实时探索。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j9b_m12",
+    "panelSelector": ".panel-container",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j9b_m12",
+    "panelClass": "math-source-panel-j9b_m12",
+    "inlineFunctionNames": ["switchTab", "changeShape", "resetCurrentShape", "updateRatio", "updateRotation", "toggleHelper", "hoverTri"],
+    "stylePreScoped": false
+  }
+}

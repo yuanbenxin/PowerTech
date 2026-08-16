@@ -1,0 +1,23 @@
+{
+  "cardId": "j8b_m06",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-radical-simplify-combine",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8b_m06",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j8b_m06",
+    "panelClass": "math-source-panel-j8b_m06",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：二次根式化简与合并。左侧承载根式反应堆与代数板书 HUD，右侧平台面板承载根式卡片库、自定义输入和反应控制。"
+}

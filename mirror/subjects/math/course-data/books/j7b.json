@@ -1,0 +1,579 @@
+{
+  "book": {
+    "id": "j7b",
+    "label": "七年级下册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "j7b_c5",
+        "label": "第五章 相交线与平行线",
+        "title": "第五章 相交线与平行线",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7b_c5_1",
+        "label": "5.1 相交线",
+        "title": "5.1 相交线",
+        "sampleTopics": [
+          "垂线",
+          "点到直线距离"
+        ]
+      },
+      {
+        "id": "j7b_c5_2",
+        "label": "5.2 平行线的判定与性质",
+        "title": "5.2 平行线的判定与性质",
+        "sampleTopics": [
+          "平行线",
+          "截线角"
+        ]
+      },
+      {
+        "id": "j7b_c5_3",
+        "label": "5.3 平移",
+        "title": "5.3 平移",
+        "sampleTopics": [
+          "平移",
+          "坐标变化"
+        ]
+      },
+      {
+        "id": "j7b_c6",
+        "label": "第六章 实数",
+        "title": "第六章 实数",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7b_c6_1",
+        "label": "6.1 平方根",
+        "title": "6.1 平方根",
+        "sampleTopics": [
+          "平方根",
+          "算术平方根"
+        ]
+      },
+      {
+        "id": "j7b_c6_2",
+        "label": "6.2 立方根",
+        "title": "6.2 立方根",
+        "sampleTopics": [
+          "立方根",
+          "开方"
+        ]
+      },
+      {
+        "id": "j7b_c6_3",
+        "label": "6.3 实数",
+        "title": "6.3 实数",
+        "sampleTopics": [
+          "无理数",
+          "实数"
+        ]
+      },
+      {
+        "id": "j7b_c7",
+        "label": "第七章 平面直角坐标系",
+        "title": "第七章 平面直角坐标系",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7b_c7_1",
+        "label": "7.1 平面直角坐标系",
+        "title": "7.1 平面直角坐标系",
+        "sampleTopics": [
+          "象限",
+          "坐标"
+        ]
+      },
+      {
+        "id": "j7b_c7_2",
+        "label": "7.2 坐标方法的简单应用",
+        "title": "7.2 坐标方法的简单应用",
+        "sampleTopics": [
+          "坐标平移",
+          "几何变换"
+        ]
+      },
+      {
+        "id": "j7b_c8",
+        "label": "第八章 二元一次方程组",
+        "title": "第八章 二元一次方程组",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7b_c8_1",
+        "label": "8.1 二元一次方程组",
+        "title": "8.1 二元一次方程组",
+        "sampleTopics": [
+          "方程组",
+          "交点"
+        ]
+      },
+      {
+        "id": "j7b_c8_2",
+        "label": "8.2 消元法",
+        "title": "8.2 消元法",
+        "sampleTopics": [
+          "代入消元",
+          "加减消元"
+        ]
+      },
+      {
+        "id": "j7b_c8_3",
+        "label": "8.3 实际问题与二元一次方程组",
+        "title": "8.3 实际问题与二元一次方程组",
+        "sampleTopics": [
+          "方程组应用",
+          "建模"
+        ]
+      },
+      {
+        "id": "j7b_c9",
+        "label": "第九章 不等式与不等式组",
+        "title": "第九章 不等式与不等式组",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7b_c9_1",
+        "label": "9.1 不等式",
+        "title": "9.1 不等式",
+        "sampleTopics": [
+          "不等式",
+          "数轴表示"
+        ]
+      },
+      {
+        "id": "j7b_c9_2",
+        "label": "9.2 一元一次不等式",
+        "title": "9.2 一元一次不等式",
+        "sampleTopics": [
+          "不等式解法",
+          "变号"
+        ]
+      },
+      {
+        "id": "j7b_c9_3",
+        "label": "9.3 一元一次不等式组",
+        "title": "9.3 一元一次不等式组",
+        "sampleTopics": [
+          "不等式组",
+          "交集"
+        ]
+      },
+      {
+        "id": "j7b_c10",
+        "label": "第十章 数据的收集、整理与描述",
+        "title": "第十章 数据的收集、整理与描述",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7b_c10_1",
+        "label": "10.1 统计调查",
+        "title": "10.1 统计调查",
+        "sampleTopics": [
+          "抽样",
+          "总体样本"
+        ]
+      },
+      {
+        "id": "j7b_c10_2",
+        "label": "10.2 直方图",
+        "title": "10.2 直方图",
+        "sampleTopics": [
+          "统计图",
+          "频数"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "j7b_c5",
+      "label": "第五章 相交线与平行线",
+      "children": [
+        {
+          "id": "j7b_c5_1",
+          "label": "5.1 相交线",
+          "sampleTopics": [
+            "垂线",
+            "点到直线距离"
+          ]
+        },
+        {
+          "id": "j7b_c5_2",
+          "label": "5.2 平行线的判定与性质",
+          "sampleTopics": [
+            "平行线",
+            "截线角"
+          ]
+        },
+        {
+          "id": "j7b_c5_3",
+          "label": "5.3 平移",
+          "sampleTopics": [
+            "平移",
+            "坐标变化"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7b_c6",
+      "label": "第六章 实数",
+      "children": [
+        {
+          "id": "j7b_c6_1",
+          "label": "6.1 平方根",
+          "sampleTopics": [
+            "平方根",
+            "算术平方根"
+          ]
+        },
+        {
+          "id": "j7b_c6_2",
+          "label": "6.2 立方根",
+          "sampleTopics": [
+            "立方根",
+            "开方"
+          ]
+        },
+        {
+          "id": "j7b_c6_3",
+          "label": "6.3 实数",
+          "sampleTopics": [
+            "无理数",
+            "实数"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7b_c7",
+      "label": "第七章 平面直角坐标系",
+      "children": [
+        {
+          "id": "j7b_c7_1",
+          "label": "7.1 平面直角坐标系",
+          "sampleTopics": [
+            "象限",
+            "坐标"
+          ]
+        },
+        {
+          "id": "j7b_c7_2",
+          "label": "7.2 坐标方法的简单应用",
+          "sampleTopics": [
+            "坐标平移",
+            "几何变换"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7b_c8",
+      "label": "第八章 二元一次方程组",
+      "children": [
+        {
+          "id": "j7b_c8_1",
+          "label": "8.1 二元一次方程组",
+          "sampleTopics": [
+            "方程组",
+            "交点"
+          ]
+        },
+        {
+          "id": "j7b_c8_2",
+          "label": "8.2 消元法",
+          "sampleTopics": [
+            "代入消元",
+            "加减消元"
+          ]
+        },
+        {
+          "id": "j7b_c8_3",
+          "label": "8.3 实际问题与二元一次方程组",
+          "sampleTopics": [
+            "方程组应用",
+            "建模"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7b_c9",
+      "label": "第九章 不等式与不等式组",
+      "children": [
+        {
+          "id": "j7b_c9_1",
+          "label": "9.1 不等式",
+          "sampleTopics": [
+            "不等式",
+            "数轴表示"
+          ]
+        },
+        {
+          "id": "j7b_c9_2",
+          "label": "9.2 一元一次不等式",
+          "sampleTopics": [
+            "不等式解法",
+            "变号"
+          ]
+        },
+        {
+          "id": "j7b_c9_3",
+          "label": "9.3 一元一次不等式组",
+          "sampleTopics": [
+            "不等式组",
+            "交集"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7b_c10",
+      "label": "第十章 数据的收集、整理与描述",
+      "children": [
+        {
+          "id": "j7b_c10_1",
+          "label": "10.1 统计调查",
+          "sampleTopics": [
+            "抽样",
+            "总体样本"
+          ]
+        },
+        {
+          "id": "j7b_c10_2",
+          "label": "10.2 直方图",
+          "sampleTopics": [
+            "统计图",
+            "频数"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j7b_m01",
+      "chapterIds": [
+        "j7b_c5_2"
+      ],
+      "title": "平行线的性质与截线定理",
+      "detail": "动态拖拽相交直线，实时计算并高亮同位角、内错角，直观验证平行线的几何规律",
+      "image": "assets/media/j7b_m01.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7b_m02",
+      "chapterIds": [
+        "j7b_c7_2"
+      ],
+      "title": "坐标系中的多边形平移",
+      "detail": "在笛卡尔坐标系中，拖动多边形并实时展示顶点坐标的变化规律及平移向量",
+      "image": "assets/media/j7b_m02.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7b_m03",
+      "chapterIds": [
+        "j7b_c9_1"
+      ],
+      "title": "不等式解集的数轴表示",
+      "detail": "动态生成不等式区域及区间交集",
+      "image": "assets/media/j7b_m03.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7b_m05",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "title": "二元一次方程组的交点求解",
+      "detail": "两条直线在坐标系中的交点就是方程组的解",
+      "image": "assets/media/j7b_m05.webp",
+      "fallbackImage": "",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7b_m07",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "title": "无理数逼近与根号定位",
+      "detail": "用奥多鲁斯螺旋、十进制夹逼和连分数交替逼近，把根号类无理数从几何长度转化为数轴上的可见位置。",
+      "image": "assets/media/j7b_m07.webp",
+      "fallbackImage": "assets/media/j7b_m07.webp",
+      "isLocked": false,
+      "engine": "irrational-root-location-model",
+      "visualLevel": "A",
+      "tags": [
+        "无理数",
+        "逼近",
+        "根号"
+      ],
+      "points": [
+        "无理数",
+        "逼近",
+        "根号"
+      ]
+    },
+    {
+      "cardId": "j7b_m09",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "title": "消元法解二元一次方程组",
+      "detail": "围绕代入消元、加减消元和天平模型，分步展示变形对齐、消元、一元求解与回代检验的完整流程。",
+      "image": "assets/media/j7b_m09.webp",
+      "fallbackImage": "assets/media/j7b_m09.webp",
+      "isLocked": false,
+      "engine": "linear-system-elimination-model",
+      "visualLevel": "A",
+      "tags": [
+        "消元法",
+        "方程组",
+        "代数推演"
+      ],
+      "points": [
+        "消元法",
+        "方程组",
+        "代数推演"
+      ]
+    },
+    {
+      "cardId": "j7b_m04",
+      "chapterIds": [
+        "j7b_c5_2"
+      ],
+      "title": "同位角与内错角辨析",
+      "detail": "几何相交线模型的色彩高亮推理",
+      "image": "assets/media/j7b_m04.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7b_m06",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "title": "平方根与立方根数轴定位",
+      "detail": "用开方滑块在数轴上定位平方根、立方根和近似值，支持数轴定位、作图播放和典型值预设。",
+      "image": "assets/media/j7b_m06.webp",
+      "fallbackImage": "assets/media/j7b_m06.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "实数",
+        "平方根",
+        "立方根"
+      ],
+      "points": [
+        "实数",
+        "平方根",
+        "立方根"
+      ]
+    },
+    {
+      "cardId": "j7b_m10",
+      "chapterIds": [
+        "j7b_c5_1"
+      ],
+      "title": "点到直线距离与垂线段",
+      "detail": "拖动点和垂足，验证垂线段最短以及点到直线距离，联动几何证明和路径记录面板完成演示。",
+      "image": "assets/media/j7b_m10.webp",
+      "fallbackImage": "assets/media/j7b_m10.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "垂线",
+        "距离",
+        "最短"
+      ],
+      "points": [
+        "垂线",
+        "距离",
+        "最短"
+      ]
+    },
+    {
+      "cardId": "j7b_m11",
+      "chapterIds": [
+        "j7b_c7_1"
+      ],
+      "title": "坐标象限与点的符号规律",
+      "detail": "拖动点 P 穿越四个象限，联动观察横纵坐标符号、坐标轴例外点和到坐标轴距离。",
+      "image": "assets/media/j7b_m11.webp",
+      "fallbackImage": "assets/media/j7b_m11.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "坐标系",
+        "象限",
+        "符号"
+      ],
+      "points": [
+        "坐标系",
+        "象限",
+        "符号"
+      ]
+    },
+    {
+      "cardId": "j7b_m12",
+      "chapterIds": [
+        "j7b_c10_1",
+        "j7b_c10_2"
+      ],
+      "title": "数据收集与统计图生成",
+      "detail": "通过水果投票、正字划记、统计图变形与直方图组距实验，理解数据收集、整理和统计图表达。",
+      "image": "assets/media/j7b_m12.webp",
+      "fallbackImage": "assets/media/j7b_m12.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "统计",
+        "数据",
+        "图表"
+      ],
+      "points": [
+        "统计",
+        "数据",
+        "图表"
+      ]
+    },
+    {
+      "cardId": "j7b_m14",
+      "chapterIds": [
+        "j7b_c9_2"
+      ],
+      "title": "实际问题中的不等式建模",
+      "detail": "把费用、范围和限制条件转成一元一次不等式，在数轴与情境模型中同步显示可行区间和临界值。",
+      "image": "assets/media/j7b_m14.webp",
+      "fallbackImage": "assets/media/j7b_m14.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "不等式应用",
+        "建模",
+        "范围"
+      ],
+      "points": [
+        "不等式应用",
+        "建模",
+        "范围"
+      ]
+    }
+  ]
+}

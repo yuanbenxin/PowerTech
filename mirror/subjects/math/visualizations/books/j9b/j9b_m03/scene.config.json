@@ -1,0 +1,35 @@
+{
+  "cardId": "j9b_m03",
+  "status": "ready",
+  "engine": "similarity-homothety-polygons",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-homothety-polygons",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码已接入：位似变换与相似多边形；统一为左侧模拟框和右侧操作面板；保留位似比、辅助射线、测量、坐标、磁吸、预设图形、自动演播和触控拖拽缩放。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j9b_m03",
+    "panelSelector": ".control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j9b_m03",
+    "panelClass": "math-source-panel-j9b_m03",
+    "inlineFunctionNames": [
+      "toggleOption",
+      "setPreset",
+    "centerOrigin",
+    "toggleAutoPlay",
+    "resetShapes",
+    "setMode",
+    "setQuickK",
+    "setChallenge",
+    "init",
+      "resize",
+      "update",
+      "render"
+    ],
+    "stylePreScoped": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m14",
+  "status": "ready",
+  "engine": "hidden-circle-model",
+  "entry": "scene.js?v=3aedeabe41b9",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-hidden-circle",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=54cb3b14153e",
+  "script": "app.js?v=79c7673969b2",
+  "notes": "隐圆模型正式互动课件：支持直角定圆、同弧同角、对角互补三类判定，包含拖点吸附、实时偏差反馈、自动演示、画布缩放平移与触屏防长按菜单。"
+}

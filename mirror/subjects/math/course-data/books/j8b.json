@@ -1,0 +1,481 @@
+{
+  "book": {
+    "id": "j8b",
+    "label": "八年级下册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "j8b_c16",
+        "label": "第十六章 二次根式",
+        "title": "第十六章 二次根式",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8b_c16_1",
+        "label": "16.1 二次根式",
+        "title": "16.1 二次根式",
+        "sampleTopics": [
+          "二次根式",
+          "定义"
+        ]
+      },
+      {
+        "id": "j8b_c16_2",
+        "label": "16.2 二次根式的乘除",
+        "title": "16.2 二次根式的乘除",
+        "sampleTopics": [
+          "乘除",
+          "化简"
+        ]
+      },
+      {
+        "id": "j8b_c16_3",
+        "label": "16.3 二次根式的加减",
+        "title": "16.3 二次根式的加减",
+        "sampleTopics": [
+          "同类二次根式",
+          "加减"
+        ]
+      },
+      {
+        "id": "j8b_c17",
+        "label": "第十七章 勾股定理",
+        "title": "第十七章 勾股定理",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8b_c17_1",
+        "label": "17.1 勾股定理",
+        "title": "17.1 勾股定理",
+        "sampleTopics": [
+          "勾股定理",
+          "面积证明"
+        ]
+      },
+      {
+        "id": "j8b_c17_2",
+        "label": "17.2 勾股定理的逆定理",
+        "title": "17.2 勾股定理的逆定理",
+        "sampleTopics": [
+          "逆定理",
+          "直角判定"
+        ]
+      },
+      {
+        "id": "j8b_c18",
+        "label": "第十八章 平行四边形",
+        "title": "第十八章 平行四边形",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8b_c18_1",
+        "label": "18.1 平行四边形",
+        "title": "18.1 平行四边形",
+        "sampleTopics": [
+          "平行四边形",
+          "判定"
+        ]
+      },
+      {
+        "id": "j8b_c18_2",
+        "label": "18.2 特殊的平行四边形",
+        "title": "18.2 特殊的平行四边形",
+        "sampleTopics": [
+          "矩形",
+          "菱形",
+          "正方形"
+        ]
+      },
+      {
+        "id": "j8b_c19",
+        "label": "第十九章 一次函数",
+        "title": "第十九章 一次函数",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8b_c19_1",
+        "label": "19.1 函数",
+        "title": "19.1 函数",
+        "sampleTopics": [
+          "变量",
+          "函数"
+        ]
+      },
+      {
+        "id": "j8b_c19_2",
+        "label": "19.2 一次函数",
+        "title": "19.2 一次函数",
+        "sampleTopics": [
+          "斜率",
+          "截距"
+        ]
+      },
+      {
+        "id": "j8b_c19_3",
+        "label": "19.3 一次函数应用",
+        "title": "19.3 一次函数应用",
+        "sampleTopics": [
+          "分段函数",
+          "方案选择"
+        ]
+      },
+      {
+        "id": "j8b_c20",
+        "label": "第二十章 数据的分析",
+        "title": "第二十章 数据的分析",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8b_c20_1",
+        "label": "20.1 数据的集中趋势",
+        "title": "20.1 数据的集中趋势",
+        "sampleTopics": [
+          "平均数",
+          "中位数",
+          "众数"
+        ]
+      },
+      {
+        "id": "j8b_c20_2",
+        "label": "20.2 数据的波动程度",
+        "title": "20.2 数据的波动程度",
+        "sampleTopics": [
+          "方差",
+          "波动"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "j8b_c16",
+      "label": "第十六章 二次根式",
+      "children": [
+        {
+          "id": "j8b_c16_1",
+          "label": "16.1 二次根式",
+          "sampleTopics": [
+            "二次根式",
+            "定义"
+          ]
+        },
+        {
+          "id": "j8b_c16_2",
+          "label": "16.2 二次根式的乘除",
+          "sampleTopics": [
+            "乘除",
+            "化简"
+          ]
+        },
+        {
+          "id": "j8b_c16_3",
+          "label": "16.3 二次根式的加减",
+          "sampleTopics": [
+            "同类二次根式",
+            "加减"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8b_c17",
+      "label": "第十七章 勾股定理",
+      "children": [
+        {
+          "id": "j8b_c17_1",
+          "label": "17.1 勾股定理",
+          "sampleTopics": [
+            "勾股定理",
+            "面积证明"
+          ]
+        },
+        {
+          "id": "j8b_c17_2",
+          "label": "17.2 勾股定理的逆定理",
+          "sampleTopics": [
+            "逆定理",
+            "直角判定"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8b_c18",
+      "label": "第十八章 平行四边形",
+      "children": [
+        {
+          "id": "j8b_c18_1",
+          "label": "18.1 平行四边形",
+          "sampleTopics": [
+            "平行四边形",
+            "判定"
+          ]
+        },
+        {
+          "id": "j8b_c18_2",
+          "label": "18.2 特殊的平行四边形",
+          "sampleTopics": [
+            "矩形",
+            "菱形",
+            "正方形"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8b_c19",
+      "label": "第十九章 一次函数",
+      "children": [
+        {
+          "id": "j8b_c19_1",
+          "label": "19.1 函数",
+          "sampleTopics": [
+            "变量",
+            "函数"
+          ]
+        },
+        {
+          "id": "j8b_c19_2",
+          "label": "19.2 一次函数",
+          "sampleTopics": [
+            "斜率",
+            "截距"
+          ]
+        },
+        {
+          "id": "j8b_c19_3",
+          "label": "19.3 一次函数应用",
+          "sampleTopics": [
+            "分段函数",
+            "方案选择"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8b_c20",
+      "label": "第二十章 数据的分析",
+      "children": [
+        {
+          "id": "j8b_c20_1",
+          "label": "20.1 数据的集中趋势",
+          "sampleTopics": [
+            "平均数",
+            "中位数",
+            "众数"
+          ]
+        },
+        {
+          "id": "j8b_c20_2",
+          "label": "20.2 数据的波动程度",
+          "sampleTopics": [
+            "方差",
+            "波动"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j8b_m01",
+      "chapterIds": [
+        "j8b_c17_1"
+      ],
+      "title": "勾股定理的经典几何面积证明",
+      "detail": "通过弦图拼图与面积割补动画（赵爽弦图、欧几里得证法），无字证明 a²+b²=c²",
+      "image": "assets/media/j8b_m01.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j8b_m02",
+      "chapterIds": [
+        "j8b_c19_2"
+      ],
+      "title": "一次函数斜率与截距动态图",
+      "detail": "通过滑块实时改变 k 与 b 的值，观察直线 y=kx+b 在坐标系中的旋转与平移运动",
+      "image": "assets/media/j8b_m02.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j8b_m03",
+      "chapterIds": [
+        "j8b_c18_2"
+      ],
+      "title": "菱形与矩形的动态形变",
+      "detail": "拖动平行四边形顶点，观察对角线变化规律",
+      "image": "assets/media/j8b_m03.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j8b_m04",
+      "chapterIds": [
+        "j8b_c17_1"
+      ],
+      "title": "毕达哥拉斯树分形动画",
+      "detail": "由勾股定理衍生出的无穷分形几何之美",
+      "image": "assets/media/j8b_m04.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "j8b_m05",
+      "chapterIds": [
+        "j8b_c20_1"
+      ],
+      "title": "频率分布直方图与数据分析",
+      "detail": "实时生成数据集的频率分布直方图并动态计算均值与方差",
+      "image": "assets/media/j8b_m05.webp",
+      "fallbackImage": "assets/media/j8b_m05.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j8b_m06",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "title": "二次根式化简与合并",
+      "detail": "通过根式卡片、裂变化简与同类项聚合，动态展示二次根式的最简化过程、同类二次根式识别与合并规则。",
+      "image": "assets/media/j8b_m06.webp",
+      "fallbackImage": "assets/media/j8b_m06.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "二次根式",
+        "化简",
+        "合并"
+      ],
+      "points": [
+        "二次根式",
+        "化简",
+        "合并"
+      ]
+    },
+    {
+      "cardId": "j8b_m07",
+      "chapterIds": [
+        "j8b_c17_2"
+      ],
+      "title": "勾股定理逆定理判定器",
+      "detail": "通过三边长度滑块、经典勾股数组与可拖拽顶点，实时比较 a^2+b^2 与 c^2，判断三角形是直角、锐角还是钝角。",
+      "image": "assets/media/j8b_m07.webp",
+      "fallbackImage": "assets/media/j8b_m07.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "勾股逆定理",
+        "三角形",
+        "判定"
+      ],
+      "points": [
+        "勾股逆定理",
+        "三角形",
+        "判定"
+      ]
+    },
+    {
+      "cardId": "j8b_m08",
+      "chapterIds": [
+        "j8b_c18_1"
+      ],
+      "title": "平行四边形判定实验室",
+      "detail": "通过连杆长度、对角线分段与夹角调节，动态验证平行四边形的多种判定条件，并观察矩形、菱形、正方形等特殊形态的演化关系。",
+      "image": "assets/media/j8b_m08.webp",
+      "fallbackImage": "assets/media/j8b_m08.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "平行四边形",
+        "判定",
+        "四边形"
+      ],
+      "points": [
+        "平行四边形",
+        "判定",
+        "四边形"
+      ]
+    },
+    {
+      "cardId": "j8b_m09",
+      "chapterIds": [
+        "j8b_c20_1",
+        "j8b_c20_2"
+      ],
+      "title": "数据集中趋势与波动分析",
+      "detail": "数据集中趋势与波动分析实验室：可拖动数据点与数据序列，比较平均数、中位数、众数、极差、方差与标准差的变化，并支持经典分布预设与探究任务。",
+      "image": "assets/media/j8b_m09.webp",
+      "fallbackImage": "assets/media/j8b_m09.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "统计",
+        "集中趋势",
+        "方差"
+      ],
+      "points": [
+        "统计",
+        "集中趋势",
+        "方差"
+      ]
+    },
+    {
+      "cardId": "j8b_m10",
+      "chapterIds": [
+        "j8b_c19_2"
+      ],
+      "title": "一次函数与方程不等式",
+      "detail": "占位卡片：用直线与水平线、区域交点连接一次函数、方程和不等式。正式互动内容待制作。",
+      "image": "assets/media/j8b_m10.webp",
+      "fallbackImage": "assets/media/j8b_m10.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "一次函数",
+        "方程",
+        "不等式"
+      ],
+      "points": [
+        "一次函数",
+        "方程",
+        "不等式"
+      ]
+    },
+    {
+      "cardId": "j8b_m11",
+      "chapterIds": [
+        "j8b_c19_3"
+      ],
+      "title": "一次函数实际问题分段图",
+      "detail": "占位卡片：搭建收费、行程、用水等分段函数图像并读取实际意义。正式互动内容待制作。",
+      "image": "assets/media/j8b_m11.png",
+      "fallbackImage": "assets/media/j8b_m11.png",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "一次函数应用",
+        "分段函数",
+        "建模"
+      ],
+      "points": [
+        "一次函数应用",
+        "分段函数",
+        "建模"
+      ]
+    }
+  ]
+}

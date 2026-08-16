@@ -1,0 +1,23 @@
+{
+  "cardId": "sx1_m04",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-ellipse-hyperbola-focus-locus",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sx1_m04",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": true,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sx1_m04",
+    "panelClass": "math-source-panel-sx1_m04",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "椭圆与双曲线的焦点轨迹；焦点轴向、距离不变量、离心率和渐近线联动。"
+}

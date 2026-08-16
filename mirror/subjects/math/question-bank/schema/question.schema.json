@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unified-platform.local/math/question-bank/question.schema.json",
+  "title": "Math Question Bank Question",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "stageId",
+    "grade",
+    "bookId",
+    "chapterIds",
+    "knowledgePoints",
+    "type",
+    "difficulty",
+    "stem",
+    "answer",
+    "analysis",
+    "matchedCards",
+    "source",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stageId": {
+      "type": "string",
+      "enum": [
+        "junior",
+        "senior"
+      ]
+    },
+    "grade": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bookId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chapterIds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "knowledgePoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "选择题",
+        "多选题",
+        "分步选择题",
+        "判断题"
+      ]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "基础",
+        "提升",
+        "综合"
+      ]
+    },
+    "stem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "text"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "answer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "analysis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "figure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "title",
+        "alt",
+        "svg"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "svg"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "svg": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "matchedCards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "cardId",
+          "role",
+          "reason",
+          "stepLabel"
+        ],
+        "properties": {
+          "cardId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "related",
+              "extension"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stepLabel": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "license"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "needs_review",
+        "missing_solution",
+        "needs_mapping",
+        "blocked_by_license"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "prompt",
+          "options",
+          "answer"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "label",
+                "text"
+              ],
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "answer": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

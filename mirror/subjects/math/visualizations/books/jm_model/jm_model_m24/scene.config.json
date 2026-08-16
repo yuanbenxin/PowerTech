@@ -1,0 +1,12 @@
+{
+  "cardId": "jm_model_m24",
+  "status": "ready",
+  "engine": "equilateral-60-rotation-model",
+  "entry": "scene.js?v=8b2de282e92f",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-equilateral-60-rotation",
+  "visualLevel": "A",
+  "source": "source.html",
+  "generator": "junior-model-courseware-v1",
+  "notes": "60 度等边旋转模型正式互动课件：支持等边构造、P 点绕 A 旋转 60°、全等对应边标记、自动演示、触屏拖拽、缩放平移和防长按菜单。"
+}

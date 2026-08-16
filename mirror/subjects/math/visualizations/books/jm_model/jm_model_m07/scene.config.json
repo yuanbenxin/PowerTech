@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m07",
+  "status": "ready",
+  "engine": "angle-bisector-double-perpendicular-model",
+  "entry": "scene.js?v=ad2d1d31f86d",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-angle-bisector-double-perpendicular",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=365d13513cb9",
+  "script": "app.js?v=b7c5c76fffe3",
+  "notes": "角平分线双垂线模型正式互动课件：支持双垂线全等对折、面积法推导角平分线定理、垂线构造等腰、触屏拖拽点位、画布缩放平移与防长按菜单。"
+}

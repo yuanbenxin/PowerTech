@@ -1,0 +1,2631 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "senior",
+  "grade": "高中开源题",
+  "source": {
+    "name": "TAL-SCQ5K-CN",
+    "license": "MIT",
+    "type": "open_dataset",
+    "origin": "TAL-SCQ5K-CN",
+    "url": "https://github.com/math-eval/TAL-SCQ5K"
+  },
+  "questions": [
+    {
+      "id": "sr_tal_0001",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "函数图像",
+        "函数",
+        "图像",
+        "数形结合"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(★★)若一系列函数的解析式相同，值域相同，但其定义域不同，则称这些函数为同族函数，那么函数解析式为y=-x^2，值域为 0, -1, -9 的同族函数共有．",
+      "options": [
+        {
+          "label": "A",
+          "text": "7个"
+        },
+        {
+          "label": "B",
+          "text": "8个"
+        },
+        {
+          "label": "C",
+          "text": "9个"
+        },
+        {
+          "label": "D",
+          "text": "10个"
+        }
+      ],
+      "answer": "C",
+      "analysis": "1× 3× 3=9．",
+      "matchedCards": [
+        {
+          "cardId": "sb1_m01",
+          "role": "primary",
+          "reason": "围绕指数函数与对数函数图像反演的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "236",
+        "routes": [
+          "课内体系->知识点->函数的概念与性质->函数的概念及其表示->函数的概念->函数的定义",
+          "竞赛->知识点->函数->函数的概念"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0002",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "从公路旁的材料工地沿笔直公路向同一方向运送电线杆到500m以外的公路边埋栽，在500m处栽一根，然后每间隔50m在公路边栽一根．已知运输车辆一次最多只能运3根，要完成运栽20根电线杆的任务，并返回材料工地，则运输车总的行程最小为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "13000"
+        },
+        {
+          "label": "B",
+          "text": "14000"
+        },
+        {
+          "label": "C",
+          "text": "15000"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "analysis": "先假设要完成21根电线杆的运栽，每次3根，设第k次往返的路程为a_k(k=1, 2,…, 7)，则a_1=2× 600=1200，且 a_k+1=a_k+2× 150(k=1, 2,…, 6)． 所以 a_n 是首项为1200，公差为300的等差数列． 故S_7=7× 1200+(7× 6)/(2)× 300=14700（m）． 但实际只运栽20根，那么必有一次运2根，其余6次均运3根． 若将运2根的安排在第k次（k=1, 2,…, 7），则a_1, a_2,…, a_k-1均不变，a_k, a_k+1,…, a_7各减少100m，所以 S_7(k)=S_7-100(8-k)=13800+100k. 显然，当k=1，即第1次运2根，其余6次各运3根时，总的行程最小，最小值为14000m．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "173",
+        "routes": [
+          "竞赛->知识点->数列与数学归纳法->数列的通项与求和",
+          "课内体系->知识点->数列"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0003",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "函数图像",
+        "函数",
+        "图像",
+        "数形结合"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设n是正整数，以下各组数a，b中，使(b)/(a)为既约分数的是（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "a=n+1，b=2n-1"
+        },
+        {
+          "label": "B",
+          "text": "a=2n-1，b=5n+2"
+        },
+        {
+          "label": "C",
+          "text": "a=n+1，b=3n+1"
+        },
+        {
+          "label": "D",
+          "text": "a=3n+1，b=5n+2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "(3n+1,5n+2)=(3n+1,2n+1)=(n,2n+1)=1． 故选D．",
+      "matchedCards": [
+        {
+          "cardId": "sb1_m01",
+          "role": "primary",
+          "reason": "围绕指数函数与对数函数图像反演的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1059",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->函数的应用->函数与方程"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0004",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆锥曲线",
+        "坐标法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知实数x，y，z满足x^2+2y^2+3z^2=24，则x+2y+3z的最小值为 ．",
+      "options": [
+        {
+          "label": "A",
+          "text": "-12"
+        },
+        {
+          "label": "B",
+          "text": "12"
+        },
+        {
+          "label": "C",
+          "text": "-16"
+        },
+        {
+          "label": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由柯西不等式，(x+2y+3z)^2≤ (1+2+3)(x^2+2y^2+3z^2)=144， 所以-12≤ x+2y+3z≤ 12．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m04",
+          "role": "primary",
+          "reason": "围绕椭圆与双曲线的焦点轨迹的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "775",
+        "routes": [
+          "竞赛->知识点->不等式->几个重要的不等式->柯西",
+          "课内体系->知识点->等式与不等式->不等式->柯西不等式"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0005",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "将10个相同的小球装入3个编号为1，2，3的盒子（每次要把10个球装完），要求每个盒子里球的个数不少于盒子的编号数，这样的装法种数是（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "9"
+        },
+        {
+          "label": "B",
+          "text": "12"
+        },
+        {
+          "label": "C",
+          "text": "15"
+        },
+        {
+          "label": "D",
+          "text": "18"
+        }
+      ],
+      "answer": "C",
+      "analysis": "根据题意， 先在编号为2、3的三个盒子中分别放入1、2个小球，编号为1的盒子里不放， 再将剩下的7个小球放入3个盒子里，每个盒子里至少一个， 分析可得，7个小球排好，有6个空位，在6个空位中任选2个， 插入挡板，共C_6^2=15种装法， 即可得符合题目要求的装法共有15种， 故选：C．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "761",
+        "routes": [
+          "课内体系->素养->逻辑推理",
+          "课内体系->知识点->计数原理->排列与组合->组合->隔板法"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0006",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "若等差数列 a_n 满足3a_8=5a_13，且a_1>0，则前n项之和S_n的最大值是（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "S_10"
+        },
+        {
+          "label": "B",
+          "text": "S_11"
+        },
+        {
+          "label": "C",
+          "text": "S_20"
+        },
+        {
+          "label": "D",
+          "text": "S_21"
+        }
+      ],
+      "answer": "C",
+      "analysis": "由3a_8=5a_13可得a_20>0，a_21 <0，∴S_20最大．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "988",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->素养->逻辑推理",
+          "课内体系->知识点->数列->等差数列->等差数列的前n项和->求等差数列前n项和的最值  "
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0007",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆锥曲线",
+        "坐标法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知复数z满足(i)/(z-1)=3，则复数z的实部与虚部之和为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "3+i"
+        },
+        {
+          "label": "B",
+          "text": "1+(1)/(3)i"
+        },
+        {
+          "label": "C",
+          "text": "(2)/(3)"
+        },
+        {
+          "label": "D",
+          "text": "(4)/(3)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "z=1+(i)/(3)，故实部与虚部之和为1+(1)/(3)=(4)/(3)．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m04",
+          "role": "primary",
+          "reason": "围绕椭圆与双曲线的焦点轨迹的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "841",
+        "routes": [
+          "课内体系->知识点->复数->复数的概念及几何意义->复数的基本概念",
+          "课内体系->知识点->复数->复数的运算->复数的四则运算综合",
+          "课内体系->知识点->复数->复数的运算->复数的乘法和除法",
+          "课内体系->素养->数学运算"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0011",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "三角函数",
+        "单位圆",
+        "周期性"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "f(x)是定义在R上的以3为周期的奇函数，且f(2)=0，则方程f(x)=0在区间(0,6)内解的个数的最小值是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "D",
+      "analysis": "f(x)是定义在R周期为3的奇函数，∴f(0)=0=f(3)，f(5)=f(2)=-f(-2)=-f(1)=0，∴f(1)=0=f(4)，∴选D.",
+      "matchedCards": [
+        {
+          "cardId": "sb1_m01",
+          "role": "primary",
+          "reason": "围绕指数函数与对数函数图像反演的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "662",
+        "routes": [
+          "课内体系->知识点->函数的概念与性质->函数的性质->周期性->函数周期性与奇偶性综合问题",
+          "课内体系->知识点->函数的概念与性质->函数的概念及其表示->函数的概念->抽象函数",
+          "课内体系->知识点->函数的应用->函数的零点->零点的个数问题->求零点个数问题（不含参）",
+          "课内体系->素养->数学抽象",
+          "课内体系->素养->数学运算"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0012",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "6个人围成一圈，若2种站法经过旋转可以重合则算同1种，则不同的站法有．",
+      "options": [
+        {
+          "label": "A",
+          "text": "30种"
+        },
+        {
+          "label": "B",
+          "text": "60种"
+        },
+        {
+          "label": "C",
+          "text": "120种"
+        },
+        {
+          "label": "D",
+          "text": "720种"
+        }
+      ],
+      "answer": "C",
+      "analysis": "总共10个球，先考虑选5个位置放篮球，共有C_10^5=252种，再从剩下的5个位置种选3个位置放排球，总共有10种方法，剩下的2个位置放橄榄球，故有252× 10=2520种.",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "69",
+        "routes": [
+          "竞赛->知识点->排列组合与概率->两个基本计数原理",
+          "竞赛->知识点->排列组合与概率->排列与组合",
+          "课内体系->知识点->计数原理->两个基本计数原理->分步乘法计数原理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0013",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(a+2b-3c)^4的展开式中abc^2的系数为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "208"
+        },
+        {
+          "label": "B",
+          "text": "216"
+        },
+        {
+          "label": "C",
+          "text": "217"
+        },
+        {
+          "label": "D",
+          "text": "218"
+        }
+      ],
+      "answer": "B",
+      "analysis": "依题意，知abc^2的系数为C_4^2(-3)^2C_2^1× 2× 1=216．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "919",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->计数原理->二项式定理->求项的系数或二项式系数",
+          "课内体系->知识点->计数原理->二项式定理->求二项式展开式的特定项"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0014",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "将正整数中所有数码不超过5的数从小到大排成一列，则第2021个数是（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "10000"
+        },
+        {
+          "label": "B",
+          "text": "13205"
+        },
+        {
+          "label": "C",
+          "text": "13321"
+        },
+        {
+          "label": "D",
+          "text": "14102"
+        }
+      ],
+      "answer": "B",
+      "analysis": "方法一：所有数码不超过5的一位正整数有5个，两位正整数有5× 6=30个，三位正整数有5× 6^2=180个，四位正整数有5× 6^3=1080个，共有1295个； 万位数为1，千位为0，共216个； 万位数为1，千位为1，共216个； 万位数为1，千位为2，共216个；共1943个， 万位数为1，千位为3，百位是0，1各36个，共72个， 一共1943+72=2015个，还差6个，百位是2，个位取0，1，2，3，4，5， 所以第2021个数是13205． 方法二：数码不超过5的数可以与一个六进制数建立一一对应关系，2021=1× 6^4+3× 6^3+2× 6^2+0× 6+5，利用除6取余法可得， 即(2021)_10=(13205)_6， 所以答案是：13205．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "768",
+        "routes": [
+          "课内体系->知识点->计数原理->排列与组合",
+          "竞赛->知识点->排列组合与概率->两个基本计数原理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0015",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(x^2-(1)/(x))^6的展开式中，常数项为 ．（用数字作答）",
+      "options": [
+        {
+          "label": "A",
+          "text": "25"
+        },
+        {
+          "label": "B",
+          "text": "15"
+        },
+        {
+          "label": "C",
+          "text": "30"
+        },
+        {
+          "label": "D",
+          "text": "45"
+        }
+      ],
+      "answer": "B",
+      "analysis": "T_r+1=C_6^r(x^2)^6-r(-(1)/(x))^2 =(-1)^rC_6^rx^12-2r· x^-r =(-1)^rC_6^rx^12-3r， ∵求常数项， ∴令12-3r=0，则r=4， ∴T_5=(-1)^4· C_6^4x^0=15． 故答案为：15．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1038",
+        "routes": [
+          "课内体系->知识点->计数原理->二项式定理->二项式定理的展开式",
+          "课内体系->知识点->计数原理->二项式定理->求项的系数或二项式系数",
+          "课内体系->素养->数学运算"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0016",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "体育课下课后，老师要求体育委员把3个相同的篮球、2个相同的排球、1个相同的橄榄球排成一排放好，则不同的放法有．",
+      "options": [
+        {
+          "label": "A",
+          "text": "30种"
+        },
+        {
+          "label": "B",
+          "text": "60种"
+        },
+        {
+          "label": "C",
+          "text": "120种"
+        },
+        {
+          "label": "D",
+          "text": "720种"
+        }
+      ],
+      "answer": "B",
+      "analysis": "总共10个球，先考虑选5个位置放篮球，共有C_10^5=252种，再从剩下的5个位置种选3个位置放排球，总共有10种方法，剩下的2个位置放橄榄球，故有252× 10=2520种.",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "560",
+        "routes": [
+          "竞赛->知识点->排列组合与概率->两个基本计数原理",
+          "竞赛->知识点->排列组合与概率->排列与组合",
+          "课内体系->知识点->计数原理->两个基本计数原理->分步乘法计数原理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0017",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆锥曲线",
+        "坐标法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若实数a, b, c满足：a+b+c=a^2+b^2+c^2，则a+b+c的最大值是（）.",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "B",
+      "analysis": "提示：据柯西不等式， 3(a+b+c)=(1^2+1^2+1^2)(a^2+b^2+c^2)≥ (a+b+c)^2，所以a+b+c≤ 3，当a=b=c=1时取得等号．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m04",
+          "role": "primary",
+          "reason": "围绕椭圆与双曲线的焦点轨迹的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "414",
+        "routes": [
+          "竞赛->知识点->不等式->几个重要的不等式->柯西",
+          "课内体系->知识点->等式与不等式->不等式->柯西不等式"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0018",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "用数字0，1，2，3组成无重复数字的四位数，这样的四位数的个数为（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "24"
+        },
+        {
+          "label": "B",
+          "text": "18"
+        },
+        {
+          "label": "C",
+          "text": "16"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "B",
+      "analysis": "最高位只能填1、2、3，有3种方法，其余的位置没有限制， 任意排有A_3^3=6种方法， 这样的四位数的个数为3× 6=18种． 故选B．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "700",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->计数原理->排列与组合->排列->特殊元素优先法"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0019",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "向量与空间",
+        "向量",
+        "空间几何",
+        "角与距离"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在边长为a的立方体的表面及内部可以找到9个点，使得其中任意两个点的距离至少为1，则a的最小值是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(2√(2))/(3)"
+        },
+        {
+          "label": "B",
+          "text": "(2√(3))/(3)"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "√(3)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "由于是9个点，故4个为上平面的顶点，下平面4个顶点，正方体中心为1个点， 故只需要 a≥ 1 √(3)a≥ 2，解得a≥ (2√(3))/(3)，故当a=(2√(3))/(3)时， 一定存在9个点使得两两距离至少为1．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "围绕空间向量与立体几何法向量的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "34",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的概念->棱柱、棱锥、棱台的结构特征"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0020",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "一个有限项的数列满足：任何3个连续项之和都是负数，且任何4个连续项之和都是正数，则此数列项数的最大值为（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "7"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "C",
+      "analysis": "如果有6项，则 0 <(a_1+a_2+a_3+a_4)+(a_2+a_3+a_4+a_5)+(a_3+a_4+a_5+a_6) =(a_1+a_2+a_3)+(a_2+a_3+a_4)+(a_3+a_4+a_5)+(a_4+a_5+a_6) <0． 矛盾，所以最多5项． 数列2，2，-5，2，2满足要求，所以数列项数最大值为5． 故选C．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "71",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->素养->逻辑推理",
+          "课内体系->思想->转化化归思想",
+          "课内体系->思想->函数思想",
+          "课内体系->知识点->数列->数列的概念->数列的表示方法->通项公式",
+          "课内体系->知识点->数列->数列的概念->数列的函数特性->数列中最大项与最小项的求解问题",
+          "课内体系->知识点->数列->等差数列->等差数列的性质及应用"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0021",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆锥曲线",
+        "坐标法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知i为虚数单位，则复数(1+2i)/(i-2)=．",
+      "options": [
+        {
+          "label": "A",
+          "text": "i"
+        },
+        {
+          "label": "B",
+          "text": "-i"
+        },
+        {
+          "label": "C",
+          "text": "-(4)/(5)-(3)/(5)i"
+        },
+        {
+          "label": "D",
+          "text": "-(4)/(5)+(3)/(5)i"
+        }
+      ],
+      "answer": "B",
+      "analysis": "(1+2i)/(i-2)=((1+2i)(i+2))/((i-2)(i+2))=-i．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m04",
+          "role": "primary",
+          "reason": "围绕椭圆与双曲线的焦点轨迹的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1193",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->复数->复数的运算->复数的四则运算综合",
+          "课内体系->知识点->复数->复数的运算->复数的乘法和除法",
+          "课内体系->知识点->复数->复数的概念及几何意义->复数的基本概念",
+          "课内体系->知识点->复数->复数的概念及几何意义->复数的代数表示法"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0022",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在等差数列 a_n 中，a_1+2a_8+a_15=96，则2a_9-a_10=．",
+      "options": [
+        {
+          "label": "A",
+          "text": "24"
+        },
+        {
+          "label": "B",
+          "text": "22"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "8"
+        }
+      ],
+      "answer": "A",
+      "analysis": "a_1+2a_8+a_15=4a_8=96，a_8=24． 2a_9-a_10=a_8=24．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "25",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->数列->等差数列->等差数列的性质及应用",
+          "课内体系->知识点->数列->等差数列->等差数列的概念与通项公式->等差数列求通项问题"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0024",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "a，b，c，d成等差数列是a+d=b+c的（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "充分而不必要条件"
+        },
+        {
+          "label": "B",
+          "text": "必要而不充分条件"
+        },
+        {
+          "label": "C",
+          "text": "充分必要条件"
+        },
+        {
+          "label": "D",
+          "text": "既不充分也不必要条件"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由等差数列的性质可知命题的充分性，取a=1，b=2，c=4，d=5可知不满足必要性，即为充分不必要条件．",
+      "matchedCards": [
+        {
+          "cardId": "sb1_m09",
+          "role": "primary",
+          "reason": "围绕常用逻辑用语与充分必要条件的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "885",
+        "routes": [
+          "课内体系->知识点->常用逻辑用语->充分条件与必要条件->充要条件与数列结合",
+          "课内体系->素养->逻辑推理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0025",
+      "stageId": "senior",
+      "grade": "高中专题",
+      "bookId": "sm_model",
+      "chapterIds": [
+        "sm_model_probability"
+      ],
+      "knowledgePoints": [
+        "统计概率",
+        "概率",
+        "统计",
+        "数据分析"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "有下列调查方式： ①学校为了解高一学生的数学学习情况，从每班抽2人进行座谈； ②一次数学竞赛中，某班有15人在100分以上，35人在90～ 100分，10人低于90分．现在从中抽取12人座谈了解情况； ③运动会中工作人员为参加400m比赛的6名同学公平安排跑道． 就这三个调查方式，最合适的抽样方法依次为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "分层抽样，系统抽样，简单随机抽样"
+        },
+        {
+          "label": "B",
+          "text": "系统抽样，系统抽样，简单随机抽样"
+        },
+        {
+          "label": "C",
+          "text": "分层抽样，简单随机抽样，简单随机抽样"
+        },
+        {
+          "label": "D",
+          "text": "系统抽样，分层抽样，简单随机抽样"
+        }
+      ],
+      "answer": "D",
+      "analysis": "在①中，因为总体已经按班级进行分组，故适合于系统抽样； 在②中，因为总体形成差异明显的三个层次，故适合于分层抽样； 在③中，因为总体单元数较少，故适合于简单随机抽样． 故选：D．",
+      "matchedCards": [
+        {
+          "cardId": "sm_model_m13",
+          "role": "primary",
+          "reason": "围绕概率分布列与期望最优的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "576",
+        "routes": [
+          "课内体系->素养->数据分析",
+          "课内体系->知识点->统计与概率->统计->随机抽样->系统抽样",
+          "课内体系->知识点->统计与概率->统计->随机抽样->分层随机抽样",
+          "课内体系->知识点->统计与概率->统计->随机抽样->简单随机抽样"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高中专题"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0027",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在数列 a_n 中，a_1=2,a_2=10，对所有的正整数n都有a_n+2=a_n+1-a_n，则a_2021=（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "-10"
+        },
+        {
+          "label": "B",
+          "text": "-2"
+        },
+        {
+          "label": "C",
+          "text": "0"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        },
+        {
+          "label": "E",
+          "text": "10"
+        }
+      ],
+      "answer": "A",
+      "analysis": "a_n+3=a_n+2-a_n+1=(a_n+1-a_n)-a_n+1=-a_n，所以a_n+6=-a_n+3=a_n，即 a_n 是周期为6的周期数列．故a_2021=a_5=-a_2=-10．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "666",
+        "routes": [
+          "竞赛->知识点->数列与数学归纳法->（模）周期数列",
+          "课内体系->知识点->数列->数列的概念->递推数列与递推方法"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0028",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_2"
+      ],
+      "knowledgePoints": [
+        "代数与不等式",
+        "代数",
+        "不等式",
+        "逻辑推理"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "命题所有实数的平方都是正数的否定为（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "所有实数的平方都不是正数"
+        },
+        {
+          "label": "B",
+          "text": "有的实数的平方是正数"
+        },
+        {
+          "label": "C",
+          "text": "至少有一个实数的平方是正数"
+        },
+        {
+          "label": "D",
+          "text": "至少有一个实数的平方不是正数"
+        }
+      ],
+      "answer": "D",
+      "analysis": "∵全称命题的否定一定是存在性命题， ∴命题所有实数的平方都是正数的否定是：至少有一个实数的平方不是正数． 故选：D．",
+      "matchedCards": [
+        {
+          "cardId": "sb1_m09",
+          "role": "primary",
+          "reason": "围绕常用逻辑用语与充分必要条件的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1030",
+        "routes": [
+          "课内体系->素养->逻辑推理",
+          "课内体系->知识点->常用逻辑用语->命题->逻辑联结词",
+          "课内体系->知识点->常用逻辑用语->命题->全称量词命题与存在量词命题的否定"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0030",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知等差数列 a_n 满足，a_1>0，5a_8=8a_13，则前n项和S_n取最大值时，n的值为（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "20"
+        },
+        {
+          "label": "B",
+          "text": "21"
+        },
+        {
+          "label": "C",
+          "text": "22"
+        },
+        {
+          "label": "D",
+          "text": "23"
+        }
+      ],
+      "answer": "B",
+      "analysis": "设数列的公差为d，由5a_8=8a_13得5(a_1+7d)=8(a_1+12d)，解得d=-(3)/(61)a_1， 由a_n=a_1+(n-1)d=a_1+(n-1)(-(3)/(61)a_1)≥ 0，可得n≤ (64)/(3)=21(1)/(3)， 所以数列 a_n 前21项都是正数，以后各项都是负数， 故S_n取最大值时，n的值为21. 故选：B．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "855",
+        "routes": [
+          "课内体系->知识点->数列->等差数列->等差数列的前n项和->求等差数列前n项和的最值  ",
+          "课内体系->知识点->数列->等差数列->等差数列的性质及应用",
+          "课内体系->素养->数学运算"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0031",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设M=1!2!3… 99!100!，N是M末位连续零的个数，试求N被1000除所得的余数．",
+      "options": [
+        {
+          "label": "A",
+          "text": "24"
+        },
+        {
+          "label": "B",
+          "text": "104"
+        },
+        {
+          "label": "C",
+          "text": "124"
+        },
+        {
+          "label": "D",
+          "text": "224"
+        },
+        {
+          "label": "E",
+          "text": "634"
+        }
+      ],
+      "answer": "C",
+      "analysis": "设M=1!2!3!… 99!100!． 那么N等于M含有的因子5的个数． 注意到M=1^100· 2^99· … · 99^2· 100^1， 其中每出现一个5的倍数产生一个5的因子， 每出现一个25的倍数就额外加增加一个5的因子． 5的倍数一共有96+91+86+… +1=970个， 25的倍数一共有76+51+26+1=154个， 所以最终M末尾零的个数为970+154=1124， 故所得的余数为124．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "972",
+        "routes": [
+          "竞赛->知识点->数论模块->整除->质数（算数基本定理）",
+          "课内体系->知识点->计数原理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0032",
+      "stageId": "senior",
+      "grade": "高中专题",
+      "bookId": "sm_model",
+      "chapterIds": [
+        "sm_model_probability"
+      ],
+      "knowledgePoints": [
+        "统计概率",
+        "概率",
+        "统计",
+        "数据分析"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "对于简单随机抽样，每个个体每次被抽到的机会．",
+      "options": [
+        {
+          "label": "A",
+          "text": "相等"
+        },
+        {
+          "label": "B",
+          "text": "不相等"
+        },
+        {
+          "label": "C",
+          "text": "无法确定"
+        },
+        {
+          "label": "D",
+          "text": "与抽取的次数有关"
+        }
+      ],
+      "answer": "A",
+      "analysis": "根据简单随机抽样的定义可得，每个个体被抽到的机会都是相等的． 故选A．",
+      "matchedCards": [
+        {
+          "cardId": "sm_model_m13",
+          "role": "primary",
+          "reason": "围绕概率分布列与期望最优的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "549",
+        "routes": [
+          "课内体系->素养->逻辑推理",
+          "课内体系->知识点->统计与概率->统计->随机抽样->简单随机抽样"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高中专题"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0033",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆锥曲线",
+        "坐标法"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "过抛物线y^2=8(x+2)的焦点F作倾斜角为60° 的直线，若此直线与抛物线交于A、B两点，弦AB的中垂线与x轴交于P点，则线段PF的长等于（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(16)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "(8)/(3)"
+        },
+        {
+          "label": "C",
+          "text": "(16√(3))/(3)"
+        },
+        {
+          "label": "D",
+          "text": "8√(3)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "易知此抛物线焦点F与坐标原点重合，故直线AB的方程为y=√(3)x，因此，A，B两点的横坐标满足方程3x^2=8x+16，由此求得AB中点的横坐标x_0=(4)/(3)，纵坐标y_0=(4)/(√(3))，进而求得其中垂线方程为y-(4)/(√(3))=-(1)/(√(3))(x-(4)/(3))，令y=0，得P点的横坐标x=(16)/(3)，即PF=(16)/(3)． 故选A．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m04",
+          "role": "primary",
+          "reason": "围绕椭圆与双曲线的焦点轨迹的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "635",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->素养->数学抽象",
+          "课内体系->知识点->直线和圆的方程->直线与方程->直线方程的五种形式->直线的点斜式方程",
+          "课内体系->知识点->圆锥曲线->直线与圆锥曲线问题->弦长求解问题",
+          "课内体系->知识点->圆锥曲线->抛物线->直线和抛物线的位置关系",
+          "课内体系->知识点->圆锥曲线->抛物线->抛物线的定义、标准方程->抛物线的标准方程"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0034",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知数列 x_n 满足x_1=20，x_n+1=10x_n-3× 5^n+1，则x_6=．",
+      "options": [
+        {
+          "label": "A",
+          "text": "5^7"
+        },
+        {
+          "label": "B",
+          "text": "6^7"
+        },
+        {
+          "label": "C",
+          "text": "6× 5^7"
+        },
+        {
+          "label": "D",
+          "text": "7× 5^5"
+        }
+      ],
+      "answer": "D",
+      "analysis": "由题得x_n+1-3× 5^n+1=10(x_n-3× 5^n)， 所以数列 x_n-3× 5^n 是以5为首项， 以10为公比的等比数列， 所以x_6-3× 5^6=5× 10^5，即x_6=3× 5^6+5× 10^5=7× 5^7． 故选：D．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "93",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->数列->等比数列->等比数列的概念与通项公式->等比数列求通项问题"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0035",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c4_2"
+      ],
+      "knowledgePoints": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在等差数列 a_n 中，a_1+2a_8+a_15=96，则2a_9-a_10=（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "24"
+        },
+        {
+          "label": "B",
+          "text": "22"
+        },
+        {
+          "label": "C",
+          "text": "20"
+        },
+        {
+          "label": "D",
+          "text": "-8"
+        }
+      ],
+      "answer": "A",
+      "analysis": "a_1+2a_8+a_15=4a_8=96，a_8=24． 2a_9-a_10=a_8=24．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m05",
+          "role": "primary",
+          "reason": "围绕等差数列的阶梯面积求和的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "843",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->数列->等差数列->等差数列的性质及应用",
+          "课内体系->知识点->数列->等差数列->等差数列的概念与通项公式->等差数列求通项问题"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0036",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c2_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "体育课下课后，老师要求体育委员把3个相同的篮球、2个相同的排球、2个相同的橄榄球排成一排放好，则不同的放法有．",
+      "options": [
+        {
+          "label": "A",
+          "text": "30种"
+        },
+        {
+          "label": "B",
+          "text": "60种"
+        },
+        {
+          "label": "C",
+          "text": "120种"
+        },
+        {
+          "label": "D",
+          "text": "720种"
+        }
+      ],
+      "answer": "B",
+      "analysis": "总共10个球，先考虑选5个位置放篮球，共有C_10^5=252种，再从剩下的5个位置种选3个位置放排球，总共有10种方法，剩下的2个位置放橄榄球，故有252× 10=2520种.",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m05",
+          "role": "primary",
+          "reason": "围绕排列组合的树状计数图的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "743",
+        "routes": [
+          "竞赛->知识点->排列组合与概率->两个基本计数原理",
+          "竞赛->知识点->排列组合与概率->排列与组合",
+          "课内体系->知识点->计数原理->两个基本计数原理->分步乘法计数原理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0037",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "函数图像",
+        "函数",
+        "图像",
+        "数形结合"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "函数f(x)=e^x+2x-3的零点所在的一个区间是（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-1,0)"
+        },
+        {
+          "label": "B",
+          "text": "(0,(1)/(2))"
+        },
+        {
+          "label": "C",
+          "text": "((1)/(2),1)"
+        },
+        {
+          "label": "D",
+          "text": "(1,(3)/(2))"
+        }
+      ],
+      "answer": "C",
+      "analysis": "函数单调递增， ∵f((1)/(2))=√(e)+(1)/(2)-3<0， f(1)=e+1-3=e-2>0， ∴函数在((1)/(2),1)内存在唯一零点．",
+      "matchedCards": [
+        {
+          "cardId": "sb1_m01",
+          "role": "primary",
+          "reason": "围绕指数函数与对数函数图像反演的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "459",
+        "routes": [
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->函数的应用->函数的零点->求零点所在区间的问题->判定函数零点所在区间（存在性定理）",
+          "课内体系->知识点->函数的应用->函数的零点->函数零点存在定理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0038",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "向量与空间",
+        "向量",
+        "空间几何",
+        "角与距离"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若三棱锥的三个侧面两两垂直，且侧棱长均为√(3)，则其外接球的表面积是（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "3 π"
+        },
+        {
+          "label": "B",
+          "text": "6 π"
+        },
+        {
+          "label": "C",
+          "text": "9 π"
+        },
+        {
+          "label": "D",
+          "text": "以上都不对"
+        }
+      ],
+      "answer": "C",
+      "analysis": "三棱锥的三个侧面两两垂直，说明三棱锥的三条侧棱两两垂直， 设其外接球的半径为R，则有(2R)^2=(√(3))^2+(√(3))^2+(√(3))^2=9， 所以外接球的表面积为S=4π R^2=9π ． 在棱长为√(3)的正方体ABCD-A_1B_1C_1D_1中，以截面BDA_1为底面，A为顶点的三棱锥的三个侧面两两垂直，且侧棱长均为√(3)的三棱锥，而正方体一定有一个外接球，该外接球也是所述三棱锥的外接球，正方体的体对角线是其外接球的直径，于是，所求三棱锥外接球的表面积是4 π × ((1)/(2)× √(3)× √(3))^2=9 π ． 故答案为：9 π ．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "围绕空间向量与立体几何法向量的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "698",
+        "routes": [
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的体积、表面积->空间几何体的体积",
+          "竞赛->知识点->立体几何与空间向量->空间几何体中的求值问题"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0039",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c5_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "△ ABC内有2015个点，加上三个顶点，共有2018个点，把这些点连线，形成互不重叠的小三角形，则一共可以形成小三角形的个数是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "4031"
+        },
+        {
+          "label": "B",
+          "text": "4032"
+        },
+        {
+          "label": "C",
+          "text": "4033"
+        },
+        {
+          "label": "D",
+          "text": "4034"
+        },
+        {
+          "label": "E",
+          "text": "4036"
+        }
+      ],
+      "answer": "A",
+      "analysis": "所有小三角形的内角和为2015· 2 π + π =4031 π，所以小三角形的个数有4031个．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m06",
+          "role": "primary",
+          "reason": "围绕正弦余弦定理的三角测量的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "524",
+        "routes": [
+          "竞赛->知识点->逻辑->逻辑推理",
+          "课内体系->知识点->计数原理"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0040",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "函数图像",
+        "函数",
+        "图像",
+        "数形结合"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(★★)函数f(x)的定义域为R，若f(x+1)与f(x-1)都是奇函数，则．",
+      "options": [
+        {
+          "label": "A",
+          "text": "f(x)是偶函数"
+        },
+        {
+          "label": "B",
+          "text": "f(x)是奇函数"
+        },
+        {
+          "label": "C",
+          "text": "f(x+3)是奇函数"
+        },
+        {
+          "label": "D",
+          "text": "f(x+3)是偶函数"
+        }
+      ],
+      "answer": "C",
+      "analysis": "因为f(x+1)是奇函数，所以 f(x+1)=-f(-x+1), f(x)=-f(-x+2)．① 同理，由f(x-1)是奇函数，可得 f(x)=-f(-x-2)．② 由①、②可得，f(-x+2)=f(-x-2)，所以f(x+2)=f(x-2), f(x+4)=f(x)，即f(x)是周期为4的函数． 又因为f(x-1)是奇函数，所以f(x+3)是奇函数，故选C．",
+      "matchedCards": [
+        {
+          "cardId": "sb1_m01",
+          "role": "primary",
+          "reason": "围绕指数函数与对数函数图像反演的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "417",
+        "routes": [
+          "竞赛->知识点->函数->函数的图像与性质",
+          "课内体系->知识点->函数的概念与性质->函数的性质->奇偶性->函数奇偶性的判定->利用定义判断函数奇偶性"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0041",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "向量与空间",
+        "向量",
+        "空间几何",
+        "角与距离"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在棱长为1的正四面体ABCD中，G为△ BCD的重心，M是线段AG的中点，则三棱锥M-BCD的外接球的表面积为（）．",
+      "options": [
+        {
+          "label": "A",
+          "text": "π"
+        },
+        {
+          "label": "B",
+          "text": "(3)/(2) π"
+        },
+        {
+          "label": "C",
+          "text": "(√(6))/(4) π"
+        },
+        {
+          "label": "D",
+          "text": "(√(6))/(8) π"
+        }
+      ],
+      "answer": "B",
+      "analysis": "易算出AG=(√(6))/(3)，所以MG=(√(6))/(6)．因为GD=(√(3))/(3)> MG，所以外心O在MG的延长线上． 设MG的延长线交外接球于另一点N，由射影定理，DM^2=MG· MN， 即DG^2+MG^2=MG· 2R（R是外接球半径），解得R=(√(6))/(4)． 所以外接球表面积S=4 π R^2=(3)/(2) π ． 故选B．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "围绕空间向量与立体几何法向量的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "799",
+        "routes": [
+          "课内体系->素养->直观想象",
+          "课内体系->素养->数学运算",
+          "课内体系->知识点->立体几何初步->基本图形位置关系->空间中的基本事实与定理->点、直线、平面之间的位置关系",
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的概念->空间几何体的内切球、外接球问题",
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的概念->棱柱、棱锥、棱台的结构特征"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0042",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c5_1"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "以正十三边形的顶点为顶点的形状不同的三角形共有（）个．（全等的三角形视为形状相同）",
+      "options": [
+        {
+          "label": "A",
+          "text": "14"
+        },
+        {
+          "label": "B",
+          "text": "13"
+        },
+        {
+          "label": "C",
+          "text": "12"
+        },
+        {
+          "label": "D",
+          "text": "11"
+        },
+        {
+          "label": "E",
+          "text": "10"
+        }
+      ],
+      "answer": "A",
+      "analysis": "问题等价于将13分成3个正整数的和的方式的种数， 最小数是1时，13=1+1+11=1+2+10=1+3+9=1+4+8=1+5+7=1+6+6，有6种； 最小数是2时，13=2+2+9=2+3+8=2+4+7=2+5+6，有4种； 最小数是3时，13=3+3+7=3+4+6=3+5+5，有3种； 最小数是4时，13=4+4+5，有1种． 总共6+4+3+1=14种． 故答案为：14．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m06",
+          "role": "primary",
+          "reason": "围绕正弦余弦定理的三角测量的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "753",
+        "routes": [
+          "课内体系->知识点->计数原理",
+          "竞赛->知识点->组合->图论（二试）"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_0043",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "计数原理",
+        "排列组合",
+        "二项式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知球的半径为2，球面上的三个大圆所在的平面两两垂直，则以三个大圆的交点为顶点的八面体的体积为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(16)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "(32)/(3)"
+        },
+        {
+          "label": "C",
+          "text": "(64)/(3)"
+        },
+        {
+          "label": "D",
+          "text": "32"
+        }
+      ],
+      "answer": "B",
+      "analysis": "(1)/(3)· (4· 4· (1)/(2))· 2× 2=(32)/(3)．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "围绕空间向量与立体几何法向量的关键关系进行可视化观察、练习和讲评。",
+          "stepLabel": "直达对应可视化卡片"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "835",
+        "routes": [
+          "课内体系->思想->数形结合思想",
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的体积、表面积->组合体求体积、表面积问题",
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的体积、表面积->空间几何体的体积",
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的概念->圆柱、圆锥、圆台和球的结构特征",
+          "课内体系->知识点->立体几何初步->基本立体图形->空间几何体的概念->空间几何体的内切球、外接球问题",
+          "课内体系->素养->直观想象",
+          "课内体系->素养->数学运算"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    }
+  ]
+}

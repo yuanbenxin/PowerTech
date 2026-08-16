@@ -1,0 +1,14 @@
+{
+  "cardId": "jm_topic_m16",
+  "status": "ready",
+  "engine": "spatial-three-view-topic-model",
+  "entry": "scene.js?v=a03d28b2f806",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-spatial-three-view",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=99199b3480d2",
+  "script": "app.js?v=71847bc06f82",
+  "generator": "math-topic-source-bridge-v1",
+  "notes": "已接入空间想象与三视图专题：左侧 3D 方块沙盒、三视图投影盘与可收起 HUD，右侧平台操作面板承载视角、显示、标数、预设和任务。"
+}

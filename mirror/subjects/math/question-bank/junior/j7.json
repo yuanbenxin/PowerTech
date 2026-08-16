@@ -1,0 +1,840 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "junior",
+  "grade": "七年级",
+  "questions": [
+    {
+      "id": "jr_j7_q0001",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "数轴",
+        "大小比较",
+        "绝对值"
+      ],
+      "type": "分步选择题",
+      "difficulty": "基础",
+      "stem": "在数轴上理解 -3、2 的位置，完成下面三个判断。",
+      "answer": "1:A；2:C；3:A",
+      "analysis": "在数轴上，数值越大的点越靠右。-3 位于原点左侧 3 个单位处，2 位于原点右侧 2 个单位处，因此 -3 在 2 的左边，所以 -3 < 2。绝对值表示一个数在数轴上对应点到原点的距离，所以 |-3| = 3。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m13",
+          "role": "primary",
+          "reason": "用数轴解释位置、左右顺序与大小比较。",
+          "stepLabel": "先看数轴位置"
+        },
+        {
+          "cardId": "j7a_m03",
+          "role": "related",
+          "reason": "用点到原点距离解释绝对值的几何意义。",
+          "stepLabel": "再看绝对值距离"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "steps": [
+        {
+          "id": "compare-position",
+          "prompt": "-3 和 2 的大小关系是？",
+          "options": [
+            {
+              "label": "A",
+              "text": "-3 < 2"
+            },
+            {
+              "label": "B",
+              "text": "-3 > 2"
+            },
+            {
+              "label": "C",
+              "text": "-3 = 2"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "absolute-value",
+          "prompt": "|-3| 的值是？",
+          "options": [
+            {
+              "label": "A",
+              "text": "-3"
+            },
+            {
+              "label": "B",
+              "text": "0"
+            },
+            {
+              "label": "C",
+              "text": "3"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "geometry-meaning",
+          "prompt": "|-3| 的几何意义是？",
+          "options": [
+            {
+              "label": "A",
+              "text": "-3 在数轴上对应点到原点的距离"
+            },
+            {
+              "label": "B",
+              "text": "-3 到 2 的距离"
+            },
+            {
+              "label": "C",
+              "text": "-3 在数轴上的方向"
+            }
+          ],
+          "answer": "A"
+        }
+      ],
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0002",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c3_1"
+      ],
+      "knowledgePoints": [
+        "一元一次方程",
+        "等式性质",
+        "移项"
+      ],
+      "type": "分步选择题",
+      "difficulty": "基础",
+      "stem": "解方程 3x - 5 = 10，按步骤选择正确的变形和依据。",
+      "answer": "1:A；2:C；3:B",
+      "analysis": "由 3x - 5 = 10，根据等式性质，两边同时加 5，得 3x = 15；再根据等式性质，两边同时除以 3，得 x = 5。也可以理解为将 -5 移到等号右边变为 +5，再把 x 的系数化为 1。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m04",
+          "role": "primary",
+          "reason": "用天平模型解释等式两边同时变化仍保持平衡。",
+          "stepLabel": "先看等式平衡"
+        },
+        {
+          "cardId": "j7a_m11",
+          "role": "extension",
+          "reason": "把方程求解拓展到实际问题建模。",
+          "stepLabel": "拓展到应用题"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "steps": [
+        {
+          "id": "add-five",
+          "prompt": "从 3x - 5 = 10 到下一步，应怎样变形？",
+          "options": [
+            {
+              "label": "A",
+              "text": "两边同时加 5，得到 3x = 15"
+            },
+            {
+              "label": "B",
+              "text": "两边同时减 5，得到 3x = 5"
+            },
+            {
+              "label": "C",
+              "text": "两边同时除以 3，得到 x - 5 = 10/3"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "divide-three",
+          "prompt": "由 3x = 15 可得 x 的值是？",
+          "options": [
+            {
+              "label": "A",
+              "text": "x = 18"
+            },
+            {
+              "label": "B",
+              "text": "x = 12"
+            },
+            {
+              "label": "C",
+              "text": "x = 5"
+            }
+          ],
+          "answer": "C"
+        },
+        {
+          "id": "equation-property",
+          "prompt": "上面两步共同使用的主要依据是？",
+          "options": [
+            {
+              "label": "A",
+              "text": "等式两边只能同时加同一个数，不能同时除以同一个数"
+            },
+            {
+              "label": "B",
+              "text": "等式两边同时加同一个数、同时除以同一个非零数，等式仍成立"
+            },
+            {
+              "label": "C",
+              "text": "移项时符号不需要改变"
+            }
+          ],
+          "answer": "B"
+        }
+      ],
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0003",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c4_4"
+      ],
+      "knowledgePoints": [
+        "余角",
+        "补角",
+        "方位角"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知一个角的补角比它的余角大 90°，下列说法正确的是（）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "这个结论对所有小于 90° 的角都成立"
+        },
+        {
+          "label": "B",
+          "text": "只有当这个角是 45° 时成立"
+        },
+        {
+          "label": "C",
+          "text": "这个角必须大于 90°"
+        },
+        {
+          "label": "D",
+          "text": "补角和余角相等"
+        }
+      ],
+      "answer": "A",
+      "analysis": "设这个角为 x°，且 0 < x < 90。它的余角是 90° - x，补角是 180° - x。两者相差 (180° - x) - (90° - x) = 90°，与 x 的具体大小无关，所以该结论对所有小于 90° 的角都成立。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m12",
+          "role": "primary",
+          "reason": "动态识别互余、互补与方位角读法。",
+          "stepLabel": "看角度仪表"
+        },
+        {
+          "cardId": "j7a_m09",
+          "role": "related",
+          "reason": "复习角的度量和角度读数。",
+          "stepLabel": "复习角度量"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0004",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c4_4"
+      ],
+      "knowledgePoints": [
+        "余角",
+        "补角"
+      ],
+      "type": "判断题",
+      "difficulty": "基础",
+      "stem": "判断：任意一个小于 90° 的角，它的补角一定比它的余角大 90°。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "analysis": "设这个角为 x°，且 0 < x < 90。它的余角是 90° - x，补角是 180° - x，二者相差 (180° - x) - (90° - x) = 90°，所以判断正确。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m12",
+          "role": "primary",
+          "reason": "用动态角度关系观察余角、补角的差值。",
+          "stepLabel": "看余补角关系"
+        },
+        {
+          "cardId": "j7a_m09",
+          "role": "related",
+          "reason": "复习角的度量和角度读数。",
+          "stepLabel": "复习角度量"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0005",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "绝对值",
+        "数轴"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "数轴上点 A 表示 -8，则点 A 到原点的距离是（）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-8"
+        },
+        {
+          "label": "B",
+          "text": "0"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "C",
+      "analysis": "绝对值表示数轴上对应点到原点的距离。-8 到原点的距离是 8，所以答案是 C。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m03",
+          "role": "primary",
+          "reason": "用点到原点的距离解释绝对值。",
+          "stepLabel": "看绝对值距离"
+        },
+        {
+          "cardId": "j7a_m13",
+          "role": "related",
+          "reason": "用数轴位置帮助判断距离。",
+          "stepLabel": "看数轴位置"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0006",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "数轴",
+        "大小比较"
+      ],
+      "type": "多选题",
+      "difficulty": "提升",
+      "stem": "在数轴上表示 -2、0、3，下列说法正确的有（多选）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "-2 在 0 的左侧"
+        },
+        {
+          "label": "B",
+          "text": "3 在 0 的右侧"
+        },
+        {
+          "label": "C",
+          "text": "-2 > 3"
+        },
+        {
+          "label": "D",
+          "text": "-2 到 0 的距离是 2"
+        }
+      ],
+      "answer": "A,B,D",
+      "analysis": "数轴上右边的数大于左边的数。-2 位于 0 左侧，3 位于 0 右侧，且 -2 到 0 的距离是 2。-2 < 3，所以 C 错。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m13",
+          "role": "primary",
+          "reason": "用数轴位置比较有理数大小。",
+          "stepLabel": "看数轴比较"
+        },
+        {
+          "cardId": "j7a_m03",
+          "role": "related",
+          "reason": "用距离理解绝对值和点到原点的距离。",
+          "stepLabel": "关联距离"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0007",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c3_1"
+      ],
+      "knowledgePoints": [
+        "一元一次方程",
+        "等式性质"
+      ],
+      "type": "分步选择题",
+      "difficulty": "基础",
+      "stem": "解方程 2x + 3 = 11，按步骤选择正确变形。",
+      "answer": "1:B；2:C",
+      "analysis": "由 2x + 3 = 11，两边同时减 3 得 2x = 8；再两边同时除以 2 得 x = 4。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m04",
+          "role": "primary",
+          "reason": "用天平模型解释等式两边同时变形。",
+          "stepLabel": "看等式平衡"
+        },
+        {
+          "cardId": "j7a_m11",
+          "role": "extension",
+          "reason": "把方程求解拓展到应用题建模。",
+          "stepLabel": "拓展方程应用"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "steps": [
+        {
+          "id": "subtract-three",
+          "prompt": "第一步应怎样变形？",
+          "options": [
+            {
+              "label": "A",
+              "text": "两边同时加 3，得 2x = 14"
+            },
+            {
+              "label": "B",
+              "text": "两边同时减 3，得 2x = 8"
+            },
+            {
+              "label": "C",
+              "text": "两边同时除以 2，得 x + 3 = 11/2"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "solve-x",
+          "prompt": "由 2x = 8 可得？",
+          "options": [
+            {
+              "label": "A",
+              "text": "x = 6"
+            },
+            {
+              "label": "B",
+              "text": "x = 8"
+            },
+            {
+              "label": "C",
+              "text": "x = 4"
+            }
+          ],
+          "answer": "C"
+        }
+      ],
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0008",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "有理数",
+        "倒数"
+      ],
+      "type": "判断题",
+      "difficulty": "基础",
+      "stem": "判断：0 有倒数。",
+      "options": [
+        {
+          "label": "A",
+          "text": "正确"
+        },
+        {
+          "label": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "analysis": "乘积为 1 的两个数互为倒数。不存在任何数与 0 相乘得到 1，所以 0 没有倒数。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m13",
+          "role": "primary",
+          "reason": "在数轴和有理数背景下复习 0 的特殊性。",
+          "stepLabel": "看有理数位置"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0009",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c4_4"
+      ],
+      "knowledgePoints": [
+        "角平分线",
+        "角的度量"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若射线 OP 平分 ∠AOB，且 ∠AOB = 64°，则 ∠AOP =（）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "16°"
+        },
+        {
+          "label": "B",
+          "text": "32°"
+        },
+        {
+          "label": "C",
+          "text": "64°"
+        },
+        {
+          "label": "D",
+          "text": "128°"
+        }
+      ],
+      "answer": "B",
+      "analysis": "角平分线把一个角分成两个相等的角，所以 ∠AOP = 64° ÷ 2 = 32°。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m09",
+          "role": "primary",
+          "reason": "通过角度读数观察角平分线把角分成相等两部分。",
+          "stepLabel": "看角平分线"
+        },
+        {
+          "cardId": "j7a_m12",
+          "role": "related",
+          "reason": "关联角度关系和余补角识别。",
+          "stepLabel": "复习角关系"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0010",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c3_1"
+      ],
+      "knowledgePoints": [
+        "等式性质",
+        "方程"
+      ],
+      "type": "多选题",
+      "difficulty": "提升",
+      "stem": "若 a = b，下列变形一定正确的有（多选）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "a + 5 = b + 5"
+        },
+        {
+          "label": "B",
+          "text": "a - 3 = b - 3"
+        },
+        {
+          "label": "C",
+          "text": "2a = 2b"
+        },
+        {
+          "label": "D",
+          "text": "a/0 = b/0"
+        }
+      ],
+      "answer": "A,B,C",
+      "analysis": "等式两边同时加同一个数、减同一个数、乘同一个数，等式仍成立；但除以 0 没有意义，所以 D 不正确。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m04",
+          "role": "primary",
+          "reason": "用天平模型解释等式性质。",
+          "stepLabel": "看等式性质"
+        },
+        {
+          "cardId": "j7a_m11",
+          "role": "extension",
+          "reason": "把等式性质迁移到方程建模。",
+          "stepLabel": "拓展应用"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j7_q0011",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c4_4"
+      ],
+      "knowledgePoints": [
+        "余角",
+        "角的度量"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "一个角为 28°，它的余角是（）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "28°"
+        },
+        {
+          "label": "B",
+          "text": "62°"
+        },
+        {
+          "label": "C",
+          "text": "90°"
+        },
+        {
+          "label": "D",
+          "text": "152°"
+        }
+      ],
+      "answer": "B",
+      "analysis": "两个角的和为 90° 时互为余角，所以 28° 的余角是 90° - 28° = 62°。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m12",
+          "role": "primary",
+          "reason": "动态识别互余关系。",
+          "stepLabel": "看余角"
+        },
+        {
+          "cardId": "j7a_m09",
+          "role": "related",
+          "reason": "复习角的度量。",
+          "stepLabel": "复习读数"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    }
+  ]
+}

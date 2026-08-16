@@ -1,0 +1,1375 @@
+/* ==========================================================================
+   平行四边形判定实验室 - 样式表 (style.css)
+   设计风格：暗色几何实验室风格、高饱和霓虹状态、对折卡片与检查指示灯
+   ========================================================================== */
+
+:root {
+    --bg-primary: #0b0f19;       /* 实验室深暗底色 */
+    --bg-card: rgba(17, 24, 39, 0.7);
+    --border-color: rgba(31, 41, 55, 0.8);
+    
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --text-muted: #6b7280;
+    
+    --color-success: #10b981;    /* 达成绿 */
+    --color-inactive: #374151;   /* 熄灭灰 */
+    --color-active-glow: #3b82f6; /* 激活蓝 */
+    --color-warning: #f59e0b;    /* 特殊形状橙 */
+    --color-error: #f43f5e;      /* 不成立警报红 */
+    
+    --font-math: 'Fredoka', 'Outfit', 'Noto Sans SC', sans-serif;
+    --font-sans: 'Outfit', 'Noto Sans SC', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 16px;
+    gap: 16px;
+}
+
+/* 头部 Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-left h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.badge {
+    background: rgba(139, 92, 246, 0.15);
+    color: #c084fc;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 8px;
+    border: 1.2px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Tab 模式选择器 */
+.mode-tabs {
+    display: flex;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    padding: 4px;
+    border-radius: 12px;
+    gap: 4px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background: var(--color-active-glow);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.tab-btn:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.btn-help {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 8px;
+}
+
+.btn-help:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+/* 主内容布局 */
+.app-main {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    min-height: 0;
+}
+
+/* 左侧控制与列表 */
+.control-column {
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 0;
+}
+
+.panel-section {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 隐藏面板样式 */
+.hidden {
+    display: none !important;
+}
+
+/* 调节滑块 */
+.range-group {
+    margin-bottom: 8px;
+}
+
+.range-group:last-child {
+    margin-bottom: 0;
+}
+
+.range-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.side-name {
+    font-size: 12.5px;
+    font-weight: 700;
+}
+
+/* 连杆特色色 */
+.side-name.color-ab { color: #f43f5e; } /* 红色 */
+.side-name.color-bc { color: #3b82f6; } /* 蓝色 */
+.side-name.color-cd { color: #10b981; } /* 绿色 */
+.side-name.color-da { color: #eab308; } /* 黄色 */
+
+/* 对角线特色色 */
+.side-name.color-diag-ac { color: #a855f7; } /* 紫色 AC */
+.side-name.color-diag-bd { color: #14b8a6; } /* 青色 BD */
+
+.side-value {
+    font-family: var(--font-math);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* 滑块条自定义样式 */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #1f2937;
+    border-radius: 3px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
+}
+
+#range-ab::-webkit-slider-thumb { background: #f43f5e; box-shadow: 0 0 10px rgba(244, 63, 94, 0.6); }
+#range-bc::-webkit-slider-thumb { background: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.6); }
+#range-cd::-webkit-slider-thumb { background: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.6); }
+#range-da::-webkit-slider-thumb { background: #eab308; box-shadow: 0 0 10px rgba(234, 179, 8, 0.6); }
+
+#range-oa::-webkit-slider-thumb, #range-oc::-webkit-slider-thumb { background: #a855f7; box-shadow: 0 0 10px rgba(168, 85, 247, 0.6); }
+#range-ob::-webkit-slider-thumb, #range-od::-webkit-slider-thumb { background: #14b8a6; box-shadow: 0 0 10px rgba(20, 184, 166, 0.6); }
+#range-angle::-webkit-slider-thumb { background: #ffffff; box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.3);
+}
+
+/* 预设栏 */
+.preset-sub-section {
+    margin-top: 16px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+    padding-top: 14px;
+}
+
+.preset-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.preset-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn-sub-preset, .btn-sub-preset-diag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1.2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-sub-preset:hover, .btn-sub-preset-diag:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   2. Canvas 几何沙盒作图区
+   ========================================================================== */
+.sandbox-column {
+    flex: 1;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 16px 20px 20px 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    min-height: 0;
+}
+
+.chamber-status-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+/* 状态霓虹辉光效果 */
+.chamber-status-header.success {
+    border-color: var(--color-success);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+}
+.chamber-status-header.special {
+    border-color: var(--color-warning);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+}
+.chamber-status-header.error {
+    border-color: var(--color-error);
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.15);
+}
+
+.status-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    transition: all 0.3s;
+}
+
+.success .status-indicator-dot { background: var(--color-success); box-shadow: 0 0 8px var(--color-success); }
+.special .status-indicator-dot { background: var(--color-warning); box-shadow: 0 0 8px var(--color-warning); }
+.error .status-indicator-dot { background: var(--color-error); box-shadow: 0 0 8px var(--color-error); }
+
+.status-text {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.canvas-container-wrapper {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    border: 1.5px solid var(--border-color);
+    background: radial-gradient(circle at center, #111827 0%, #030712 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 6px 30px rgba(0, 0, 0, 0.8);
+    min-height: 0;
+}
+
+#geometry-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 底部操作面板 */
+.bottom-controller-panel {
+    margin-top: 12px;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border-color);
+    padding: 12px 18px;
+    border-radius: 14px;
+}
+
+.helper-info-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tip-icon {
+    font-size: 16px;
+}
+
+.tip-desc-container {
+    flex: 1;
+}
+
+.tip-desc {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   3. HUD 判定指示灯核对表
+   ========================================================================== */
+.hud-panel {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+.hud-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.hud-arrow-icon {
+    font-size: 10px;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease;
+}
+
+.hud-panel.collapsed .hud-arrow-icon {
+    transform: rotate(-90deg);
+}
+
+.hud-body {
+    padding: 14px 18px;
+    flex: 1;
+    overflow-y: auto;
+    transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hud-panel.collapsed {
+    flex: 0 0 auto !important;
+}
+
+.hud-panel.collapsed .hud-body {
+    max-height: 0;
+    padding: 0;
+}
+
+/* 指示灯规则行 */
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.04);
+}
+
+.checklist-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* 指示灯泡圈 */
+.checker-light {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-inactive);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.checklist-item.active .checker-light {
+    background: var(--color-success);
+    border-color: var(--color-success);
+    box-shadow: 0 0 8px var(--color-success);
+}
+
+.checklist-content {
+    flex: 1;
+}
+
+.checklist-name {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.checklist-item.active .checklist-name {
+    color: #ffffff;
+}
+
+.checklist-math {
+    font-family: var(--font-math);
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.checklist-item.active .checklist-math {
+    color: #a7f3d0;
+}
+
+/* 特殊图形卡片 */
+.special-verdict-box {
+    margin-top: 14px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px dashed rgba(245, 158, 11, 0.35);
+    padding: 10px 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.special-verdict-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--color-warning);
+    text-shadow: 0 0 6px rgba(245, 158, 11, 0.3);
+}
+
+/* ==========================================================================
+   4. 全局 Canvas 粒子与弹窗
+   ========================================================================== */
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(3, 7, 18, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: #111827;
+    border: 1px solid var(--border-color);
+    width: 520px;
+    max-width: 90vw;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 24px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.help-section {
+    background: rgba(15, 23, 42, 0.3);
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.help-section h4 {
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.help-section ul {
+    padding-left: 18px;
+    margin-top: 6px;
+}
+
+.help-section li {
+    margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   5. 探究任务卡面板样式 (Quest Panel)
+   ========================================================================== */
+.quest-panel {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.quest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+.quest-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.quest-arrow-icon {
+    font-size: 10px;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease;
+}
+
+.quest-panel.collapsed .quest-arrow-icon {
+    transform: rotate(-90deg);
+}
+
+.quest-body {
+    padding: 10px 12px;
+    flex: 1;
+    overflow-y: auto;
+    transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quest-panel.collapsed {
+    flex: 0 0 auto !important;
+}
+
+.quest-panel.collapsed .quest-body {
+    max-height: 0;
+    padding: 0;
+}
+
+/* 任务卡片 */
+.quest-card {
+    display: flex;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    transition: all 0.3s ease;
+    align-items: flex-start;
+}
+
+.quest-card:last-child {
+    margin-bottom: 0;
+}
+
+.quest-card.completed {
+    border-color: var(--color-success);
+    background: rgba(16, 185, 129, 0.05);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.08);
+}
+
+.quest-card.active-quest {
+    border-color: var(--color-active-glow);
+    background: rgba(59, 130, 246, 0.04);
+}
+
+.quest-status-badge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1.5px 5px;
+    border-radius: 5px;
+    background: #374151;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+.quest-card.active-quest .quest-status-badge {
+    background: var(--color-active-glow);
+    color: #ffffff;
+}
+
+.quest-card.completed .quest-status-badge {
+    background: var(--color-success);
+    color: #ffffff;
+}
+
+.quest-details {
+    flex: 1;
+}
+
+.quest-name {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.quest-desc {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    line-height: 1.35;
+}
+
+.quest-card.active-quest .quest-desc {
+    color: var(--text-secondary);
+}
+
+.btn-quest-action {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1.2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 9.5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: all 0.2s;
+}
+
+.btn-quest-action:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.quest-card.completed .btn-quest-action {
+    border-color: rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.1);
+    color: #a7f3d0;
+}
+
+/* ==========================================================================
+   Platform visual standard for j8b_m08
+   ========================================================================== */
+.math-source-scene-j8b_m08,
+.math-source-scene-j8b_m08 * {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.math-source-scene-j8b_m08,
+body {
+    background: #f8fafc;
+}
+
+.math-source-scene-j8b_m08 .app-container,
+.app-container {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    background: transparent !important;
+}
+
+.math-source-scene-j8b_m08 .app-header,
+.app-header {
+    display: none !important;
+}
+
+.math-source-scene-j8b_m08 .app-main,
+.app-main {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+}
+
+.math-source-scene-j8b_m08 .sandbox-column,
+.sandbox-column {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 14px !important;
+    border: 1px solid rgba(37, 99, 235, 0.18) !important;
+    border-radius: 8px !important;
+    background: #f8fafc !important;
+    background-image:
+        linear-gradient(rgba(37, 99, 235, 0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.10) 1px, transparent 1px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.16) 1.2px, transparent 1.2px) !important;
+    background-size: 108px 108px, 108px 108px, 36px 36px !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.76), 0 14px 34px rgba(15, 23, 42, 0.08) !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-j8b_m08 .chamber-status-header,
+.chamber-status-header,
+.math-source-scene-j8b_m08 .bottom-controller-panel,
+.bottom-controller-panel {
+    display: none !important;
+}
+
+.math-source-scene-j8b_m08 .canvas-container-wrapper,
+.canvas-container-wrapper {
+    position: absolute !important;
+    inset: 14px !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-j8b_m08 #geometry-canvas,
+#geometry-canvas {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    touch-action: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}
+
+.math-source-scene-j8b_m08 #particles-canvas,
+#particles-canvas {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel,
+.sandbox-column #hud-checklist-panel {
+    position: absolute !important;
+    left: 18px !important;
+    top: 18px !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 180 !important;
+    width: min(360px, calc(100% - 36px)) !important;
+    max-width: calc(100% - 36px) !important;
+    max-height: calc(100% - 36px) !important;
+    padding: 0 !important;
+    border: 1px solid rgba(203, 213, 225, 0.94) !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    color: #0f172a !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel.collapsed,
+.sandbox-column #hud-checklist-panel.collapsed {
+    width: max-content !important;
+    min-width: max-content !important;
+    max-width: calc(100% - 36px) !important;
+    border-radius: 999px !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel .hud-header,
+.sandbox-column #hud-checklist-panel .hud-header {
+    min-height: 38px !important;
+    padding: 8px 11px 8px 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    border-bottom: 1px solid rgba(203, 213, 225, 0.72) !important;
+    background: transparent !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel.collapsed .hud-header,
+.sandbox-column #hud-checklist-panel.collapsed .hud-header {
+    width: max-content !important;
+    border-bottom: 0 !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel .hud-title,
+.sandbox-column #hud-checklist-panel .hud-title {
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    color: #0f172a !important;
+    font-size: 13px !important;
+    font-weight: 850 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel.collapsed .hud-title,
+.sandbox-column #hud-checklist-panel.collapsed .hud-title {
+    white-space: nowrap !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel .hud-arrow-icon,
+.sandbox-column #hud-checklist-panel .hud-arrow-icon {
+    flex: 0 0 auto !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #334155 !important;
+    font-size: 10px !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel .hud-body,
+.sandbox-column #hud-checklist-panel .hud-body {
+    padding: 10px 12px 12px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: rgba(248, 250, 252, 0.74) !important;
+}
+
+.math-source-scene-j8b_m08 #hud-checklist-panel.collapsed .hud-body,
+.sandbox-column #hud-checklist-panel.collapsed .hud-body {
+    display: none !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+}
+
+.math-source-scene-j8b_m08 .checklist-item,
+.checklist-item {
+    gap: 8px !important;
+    margin-bottom: 7px !important;
+    padding-bottom: 7px !important;
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.34) !important;
+}
+
+.math-source-scene-j8b_m08 .checker-light,
+.checker-light {
+    width: 12px !important;
+    height: 12px !important;
+    margin-top: 3px !important;
+    background: #cbd5e1 !important;
+    border-color: rgba(100, 116, 139, 0.34) !important;
+}
+
+.math-source-scene-j8b_m08 .checklist-name,
+.checklist-name {
+    color: #1e293b !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+}
+
+.math-source-scene-j8b_m08 .checklist-math,
+.checklist-math {
+    color: #475569 !important;
+    font-size: 10.5px !important;
+    line-height: 1.25 !important;
+}
+
+.math-source-scene-j8b_m08 .checklist-item.active .checker-light,
+.checklist-item.active .checker-light {
+    background: #10b981 !important;
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.16) !important;
+}
+
+.math-source-scene-j8b_m08 .checklist-item.active .checklist-name,
+.checklist-item.active .checklist-name {
+    color: #065f46 !important;
+}
+
+.math-source-scene-j8b_m08 .checklist-item.active .checklist-math,
+.checklist-item.active .checklist-math {
+    color: #047857 !important;
+}
+
+.math-source-panel-j8b_m08 .math-source-panel-scroll {
+    padding: 8px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 8px !important;
+    background: rgba(2, 6, 23, 0.30) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 16px 34px rgba(2, 6, 23, 0.18) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain !important;
+    touch-action: pan-y !important;
+}
+
+.math-source-panel-j8b_m08 .math-source-panel-content {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow: visible !important;
+}
+
+.math-source-panel-j8b_m08 .control-column,
+.control-column {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    max-height: none !important;
+    flex: 0 0 auto !important;
+    gap: 10px !important;
+    padding: 1px 0 14px !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+}
+
+.math-source-panel-j8b_m08 .panel-section,
+.math-source-panel-j8b_m08 .math-source-panel-content .panel-section {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #f8fafc !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.math-source-panel-j8b_m08 .section-title,
+.math-source-panel-j8b_m08 .quest-title {
+    margin: 0 0 8px !important;
+    color: rgba(248, 250, 252, 0.95) !important;
+    font-size: 12.5px !important;
+    font-weight: 850 !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+}
+
+.math-source-panel-j8b_m08 .range-group,
+.math-source-panel-j8b_m08 .preset-sub-section,
+.math-source-panel-j8b_m08 .quest-card {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    padding: 10px 11px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 8px !important;
+    background: rgba(15, 23, 42, 0.48) !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-j8b_m08 .range-group {
+    margin: 0 0 7px !important;
+    padding: 9px 11px !important;
+}
+
+.math-source-panel-j8b_m08 .range-group:last-child {
+    margin-bottom: 0 !important;
+}
+
+.math-source-panel-j8b_m08 .preset-sub-section {
+    margin-top: 8px !important;
+    border-top: 1px solid rgba(148, 163, 184, 0.18) !important;
+}
+
+.math-source-panel-j8b_m08 .range-label-row {
+    min-height: 24px !important;
+    margin-bottom: 2px !important;
+}
+
+.math-source-panel-j8b_m08 .side-name,
+.math-source-panel-j8b_m08 .preset-label,
+.math-source-panel-j8b_m08 .quest-desc {
+    font-size: 12px !important;
+    font-weight: 750 !important;
+    line-height: 1.35 !important;
+    color: rgba(226, 232, 240, 0.86) !important;
+}
+
+.math-source-panel-j8b_m08 .side-value {
+    color: #67e8f9 !important;
+    font-size: 15px !important;
+    font-weight: 850 !important;
+}
+
+.math-source-panel-j8b_m08 input[type="range"] {
+    height: 30px !important;
+    min-height: 30px !important;
+    background: transparent !important;
+    accent-color: #0891b2 !important;
+    touch-action: pan-y !important;
+}
+
+.math-source-panel-j8b_m08 input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px !important;
+    border-radius: 999px !important;
+    background: rgba(15, 23, 42, 0.72) !important;
+    box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.22) inset !important;
+}
+
+.math-source-panel-j8b_m08 input[type="range"]::-webkit-slider-thumb {
+    width: 22px !important;
+    height: 22px !important;
+    margin-top: -8px !important;
+    border: 3px solid #ecfeff !important;
+    box-shadow: 0 6px 14px rgba(8, 47, 73, 0.34), 0 0 0 1px rgba(15, 23, 42, 0.16) inset !important;
+}
+
+.math-source-panel-j8b_m08 .preset-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+}
+
+.math-source-panel-j8b_m08 .btn-sub-preset,
+.math-source-panel-j8b_m08 .btn-sub-preset-diag,
+.math-source-panel-j8b_m08 .btn-quest-action {
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 8px !important;
+    background: rgba(15, 23, 42, 0.48) !important;
+    color: rgba(226, 232, 240, 0.92) !important;
+    font-size: 12px !important;
+    font-weight: 750 !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-break: keep-all !important;
+    box-shadow: none !important;
+    touch-action: manipulation !important;
+}
+
+.math-source-panel-j8b_m08 .btn-sub-preset:hover,
+.math-source-panel-j8b_m08 .btn-sub-preset-diag:hover,
+.math-source-panel-j8b_m08 .btn-quest-action:hover {
+    border-color: rgba(103, 232, 249, 0.44) !important;
+    background: rgba(8, 145, 178, 0.22) !important;
+    color: #ecfeff !important;
+    transform: none !important;
+}
+
+.math-source-panel-j8b_m08 .quest-header {
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    cursor: pointer !important;
+}
+
+.math-source-panel-j8b_m08 .quest-body {
+    display: grid !important;
+    gap: 8px !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+.math-source-panel-j8b_m08 .quest-card {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 8px !important;
+    margin-bottom: 0 !important;
+}
+
+.math-source-panel-j8b_m08 .quest-name {
+    color: #f8fafc !important;
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+}
+
+.math-source-panel-j8b_m08 .quest-status-badge {
+    align-self: start !important;
+    padding: 3px 6px !important;
+    border-radius: 6px !important;
+    background: rgba(71, 85, 105, 0.72) !important;
+    color: rgba(226, 232, 240, 0.82) !important;
+}
+
+.math-source-panel-j8b_m08 .quest-card.active-quest {
+    border-color: rgba(103, 232, 249, 0.58) !important;
+    background: rgba(8, 145, 178, 0.22) !important;
+    box-shadow: inset 3px 0 0 #67e8f9 !important;
+}
+
+.math-source-panel-j8b_m08 .quest-card.completed {
+    border-color: rgba(52, 211, 153, 0.48) !important;
+    background: rgba(16, 185, 129, 0.16) !important;
+}
+
+.math-source-panel-j8b_m08 .panel-action-row,
+.math-source-panel-j8b_m08 .scenario-grid,
+.math-source-panel-j8b_m08 .annotation-toggle-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+}
+
+.math-source-panel-j8b_m08 .scenario-grid {
+    grid-template-columns: 1fr !important;
+}
+
+.math-source-panel-j8b_m08 .btn-panel-mode,
+.math-source-panel-j8b_m08 .btn-scenario,
+.math-source-panel-j8b_m08 .btn-auto-demo,
+.math-source-panel-j8b_m08 .proof-coach-card,
+.math-source-panel-j8b_m08 .panel-toggle-row {
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 8px !important;
+    background: rgba(15, 23, 42, 0.48) !important;
+    color: rgba(226, 232, 240, 0.92) !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-j8b_m08 .btn-panel-mode,
+.math-source-panel-j8b_m08 .btn-scenario,
+.math-source-panel-j8b_m08 .btn-auto-demo {
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    touch-action: manipulation !important;
+}
+
+.math-source-panel-j8b_m08 .btn-panel-mode.active,
+.math-source-panel-j8b_m08 .btn-scenario.active {
+    color: #ecfeff !important;
+    border-color: rgba(103, 232, 249, 0.58) !important;
+    background: rgba(8, 145, 178, 0.22) !important;
+    box-shadow: inset 3px 0 0 #67e8f9 !important;
+}
+
+.math-source-panel-j8b_m08 .btn-scenario.danger:not(.active) {
+    border-color: rgba(251, 113, 133, 0.24) !important;
+}
+
+.math-source-panel-j8b_m08 .btn-scenario.danger.active {
+    border-color: rgba(251, 113, 133, 0.58) !important;
+    background: rgba(190, 18, 60, 0.20) !important;
+    box-shadow: inset 3px 0 0 #fb7185 !important;
+}
+
+.math-source-panel-j8b_m08 .proof-coach-card {
+    display: grid !important;
+    gap: 6px !important;
+    min-height: 96px !important;
+    margin-bottom: 8px !important;
+}
+
+.math-source-panel-j8b_m08 .proof-kicker {
+    color: #67e8f9 !important;
+    font-size: 10.5px !important;
+    font-weight: 850 !important;
+    line-height: 1.25 !important;
+}
+
+.math-source-panel-j8b_m08 .proof-sentence {
+    color: #f8fafc !important;
+    font-size: 13px !important;
+    font-weight: 850 !important;
+    line-height: 1.36 !important;
+}
+
+.math-source-panel-j8b_m08 .proof-hint {
+    color: rgba(226, 232, 240, 0.78) !important;
+    font-size: 11.5px !important;
+    line-height: 1.38 !important;
+}
+
+.math-source-panel-j8b_m08 .panel-toggle-row {
+    min-height: 42px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 12px !important;
+    font-weight: 750 !important;
+    line-height: 1.2 !important;
+}
+
+.math-source-panel-j8b_m08 .panel-toggle-row input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    accent-color: #0891b2 !important;
+}
+
+.math-source-panel-j8b_m08 .btn-auto-demo {
+    margin-top: 8px !important;
+    min-height: 46px !important;
+    color: #ecfeff !important;
+    background: #0891b2 !important;
+    border-color: rgba(103, 232, 249, 0.44) !important;
+    text-align: center !important;
+}
+
+.math-source-panel-j8b_m08 .btn-auto-demo.is-running {
+    background: rgba(250, 204, 21, 0.20) !important;
+    border-color: rgba(250, 204, 21, 0.52) !important;
+    color: #fef3c7 !important;
+}
+
+.math-source-scene-j8b_m08 .checklist-item.primary-evidence {
+    border-radius: 8px !important;
+    padding: 8px !important;
+    background: rgba(16, 185, 129, 0.12) !important;
+    border: 1px solid rgba(16, 185, 129, 0.28) !important;
+}
+
+.math-source-scene-j8b_m08 .evidence-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 18px !important;
+    margin-top: 4px !important;
+    padding: 2px 6px !important;
+    border-radius: 999px !important;
+    background: rgba(14, 165, 233, 0.12) !important;
+    color: #0369a1 !important;
+    font-size: 10px !important;
+    font-weight: 850 !important;
+}
+
+.header-left h1,
+.task-kicker,
+.math-source-panel-j8b_m08 * {
+    letter-spacing: 0 !important;
+}

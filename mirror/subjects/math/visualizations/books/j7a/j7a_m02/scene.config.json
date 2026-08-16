@@ -1,0 +1,10 @@
+{
+  "cardId": "j7a_m02",
+  "status": "ready",
+  "engine": "geom3d",
+  "entry": "scene.js?v=8f82608aa659",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "free-orbit-net-folding",
+  "visualLevel": "A",
+  "notes": "立体图形展开与折叠、自由视角、折叠滑杆、自动折叠、爆炸分离、透视和面片追踪。所有资源本地化，无 CDN。"
+}

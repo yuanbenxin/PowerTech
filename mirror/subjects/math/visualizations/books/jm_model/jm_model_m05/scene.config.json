@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m05",
+  "status": "ready",
+  "engine": "double-median-model",
+  "entry": "scene.js?v=5acc6850769b",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-double-median",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=fc579cdf8761",
+  "script": "app.js?v=a390fa209785",
+  "notes": "倍长中线模型正式互动课件：支持拖拽顶点 A、延长中线 AD 到 E、绕中点 D 旋转 180° 演示 △ADC≅△EDB、中线不等式、平行四边形性质、缩放平移、HUD 板书与触屏防长按菜单。"
+}

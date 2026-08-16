@@ -1,0 +1,5131 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "senior",
+  "grade": "高中 CMM-Math 已审图片题",
+  "source": {
+    "name": "CMM-Math",
+    "license": "bsd-3-clause",
+    "type": "open_dataset",
+    "origin": "ecnu-icalk/cmm-math",
+    "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math"
+  },
+  "review": {
+    "importedFrom": "question-bank-staging/review/image-review-top100.jsonl",
+    "sourceImageRoot": "question-bank-staging/sources/cmm-math/images",
+    "policy": "source-image-direct-use top100-machine-priority no-redraw stage-split",
+    "importedCount": 68
+  },
+  "questions": [
+    {
+      "id": "sr_cmm_image_0001",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "若实数 x , y 满足 x+2 y-4 ≤ 0, ； x ≥ 0, ； y ≥ 0, 则 z=(y+2)/(x-1) 的取值范围为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-∞,-4] ∪[(2)/(3),+∞)"
+        },
+        {
+          "label": "B",
+          "text": "(-∞,-2] ∪[(2)/(3),+∞)"
+        },
+        {
+          "label": "C",
+          "text": "[-2, (2)/(3)]"
+        },
+        {
+          "label": "D",
+          "text": "[-4, (2)/(3)]"
+        }
+      ],
+      "answer": "B",
+      "analysis": "作出约束条件表示的可行域, 如图 △ O A B 内部 (含边界), z=(y+2)/(x-1) 表示可行域内部的点 (x, y) 与点 (1,-2) 连线的斜率, k_O P=(-2)/(1)=-2, k_P A=(-2-0)/(1-4)=(2)/(3), 结合图可知, z 的取值范围是 z ≤-2 或 z ≥ (2)/(3), 故选 B. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000003",
+        "qid": "cmm-math-000003",
+        "originalFileName": "9263.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9263.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9263.jpg",
+        "originalFileName": "9263.jpg",
+        "originalWidth": 483,
+        "originalHeight": 409,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.074Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0002",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "实数 x, y, k 满足 x+y-3 ≥ 0, ； x-y+1 ≥ 0, z=x^2+y^2 , 若 z 的最大值为 13 , 则 k 的值为 ( ) ； x ≤ k,",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "B",
+      "analysis": "画出可行域 (如图阴影部分所示) 和曲线 x^2+y^2=13, 观察图形, 知直线 x=k 过直线 x-y+1=0 和 x^2+y^2=13 的交点 (2,3), 解得 k=2, 故选 B. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000004",
+        "qid": "cmm-math-000004",
+        "originalFileName": "9265.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9265.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9265.jpg",
+        "originalFileName": "9265.jpg",
+        "originalWidth": 408,
+        "originalHeight": 363,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.080Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0003",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "若 x, y 满足 x ≤ 3, ； x+y ≥ 2, ； y ≤ x, 则 x+2 y 的最大值为",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "D",
+      "analysis": "如图, 画出可行域, 见图 z=x+2 y 表示斜率为 -(1)/(2) 的一组平行线, 当 z=x+2 y 过点 C(3,3) 时, 目标函数取得最大值 z_max =3+2 × 3=9, 故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000005",
+        "qid": "cmm-math-000005",
+        "originalFileName": "9276.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9276.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9276.jpg",
+        "originalFileName": "9276.jpg",
+        "originalWidth": 870,
+        "originalHeight": 777,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.084Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0004",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "若 x, y 满足 x-y+3 ≥ 0, ； x+y+1 ≥ 0, ； x ≤ k,",
+      "options": [
+        {
+          "label": "A",
+          "text": "-7"
+        },
+        {
+          "label": "B",
+          "text": "-1"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "C",
+      "analysis": "画出满足条件的平面区域, 如图所示, 由 x=k, ； x-y+3=0, 解得 x=k, ； y=k+3, 则 A(k, k+3),由 z=2 x+y, 得 y=-2 x+z, 显然直线 y=-2 x+z 过 A(k, k+3) 时, z 最大, 故 2 k+k+3=6,解得 k=1, 故选 C. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000008",
+        "qid": "cmm-math-000008",
+        "originalFileName": "9282.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9282.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9282.jpg",
+        "originalFileName": "9282.jpg",
+        "originalWidth": 414,
+        "originalHeight": 532,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.090Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0005",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 x, y 满足约束条件 x-y ≥ 0, ； x+y ≤ 2, ； y ≥ 0,围为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-1,1)"
+        },
+        {
+          "label": "B",
+          "text": "[-1,1)"
+        },
+        {
+          "label": "C",
+          "text": "[-1,1]"
+        },
+        {
+          "label": "D",
+          "text": "(-1,1]"
+        }
+      ],
+      "answer": "C",
+      "analysis": "不等式组表示的平面区域如图所示: 见图 因为 z=a x+y 的最大值为 a+1, 所以 最值是在 (1,1) 处取得, 因为 y=-a x+z, 当 -a ≥ 0 时, -a ≤ 1, 即 -1 ≤ a ≤ 0; 当 -a<0 时, 需满足 -a ≥-1, 即 0<a ≤ 1, 故 -1 ≤ a ≤ 1. 考点: 由线性目标函数的最值求参数范围.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000009",
+        "qid": "cmm-math-000009",
+        "originalFileName": "9284.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9284.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9284.jpg",
+        "originalFileName": "9284.jpg",
+        "originalWidth": 457,
+        "originalHeight": 357,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.095Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0006",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在平面直角坐标系 x O y 中, M 为不等式组 2 x-y-2 ≥ 0, ； x+2 y-1 ≥ 0, ； 3 x+y-8 ≤ 0 . 所表示的区域上一动点,则直线 OM 斜率的最小值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "-(1)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "-(1)/(2)"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由线性约束条件可知其对应的可行域如图, 通过观察图象可知当过原点的直线经过点 A 的时候斜率最小, 见图 由方程组 3 x+y-8=0, ； x+2 y-1=0 . 得 A(3,-1), 所以直线 OM 斜率的最小值为 k=(-1)/(3)=-(1)/(3).",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000010",
+        "qid": "cmm-math-000010",
+        "originalFileName": "9285.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9285.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9285.jpg",
+        "originalFileName": "9285.jpg",
+        "originalWidth": 491,
+        "originalHeight": 477,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.099Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0007",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "设变量 x, y 满足约束条件 x+y-2 ≤ 0, ； x-y+2 ≥ 0, ； x ≥-1, ； y ≥-1,, 则目标函数 z=-4 x+y 的最大值为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "D",
+      "analysis": "已知不等式组表示的平面区域如图中的阴影部分. 目标函数的几何意义是直线 y=4 x+z 在 y 轴上的截距, 故目标函数在点 A 处取得最大值. 由 x-y+2=0, ； x=-1 ., 得 A(-1,1), 所以 Z_max =-4 ×(-1)+1=5. 故选 C. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000016",
+        "qid": "cmm-math-000016",
+        "originalFileName": "9176.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9176.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9176.jpg",
+        "originalFileName": "9176.jpg",
+        "originalWidth": 719,
+        "originalHeight": 654,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.102Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0008",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2018 天津) 设变量 x, y 满足约束条件 x+y ≤ 5, ； 2 x-y ≤ 4, ； -x+y ≤ 1, ； y ≥ 0, 则目标函数 z=3 x+5 y 的最大值为",
+      "options": [
+        {
+          "label": "A",
+          "text": "6"
+        },
+        {
+          "label": "B",
+          "text": "19"
+        },
+        {
+          "label": "C",
+          "text": "21"
+        },
+        {
+          "label": "D",
+          "text": "45"
+        }
+      ],
+      "answer": "C",
+      "analysis": "不等式组表示的平面区域如图中阴影部分所示, 见图 作出直线 y=-(3)/(5) x. 平移该直线, 当经过点 C 时, z 取得最大值, 由 -x+y=1 ； x+y=5 ., 得 x=2 ； y=3 ., 即 C(2,3), 所以 a_max =3 × 2+5 × 3=21, 故选 C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000038",
+        "qid": "cmm-math-000038",
+        "originalFileName": "9211.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9211.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9211.jpg",
+        "originalFileName": "9211.jpg",
+        "originalWidth": 534,
+        "originalHeight": 571,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.104Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0009",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2017 山东) 已知 x, y 满足 x-y+3 ≤ 0 ； 3 x+y+5 ≤ 0 ； x+3 ≥ 0 ., 则 z=x+2 y 的最大值是",
+      "options": [
+        {
+          "label": "A",
+          "text": "0"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "C",
+      "analysis": "不等式组表示的可行域如图阴影部分, 见图 当目标函数过 (-3,4) 时取得最大值, 即 Z_max =-3+2 × 4=5. 选 C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000040",
+        "qid": "cmm-math-000040",
+        "originalFileName": "9214.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9214.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9214.jpg",
+        "originalFileName": "9214.jpg",
+        "originalWidth": 734,
+        "originalHeight": 754,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.109Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0010",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2017 北京) 若 x, y 满足 x ≤ 3 ； x+y ≥ 2 ； y ≤ x . 则 x+2 y 的最大值为",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "D",
+      "analysis": "不等式组可行域如图阴影部分, 见图 目标函数 z=x+2 y 过点 C(3,3) 时, 取得最大值 Z_max =3+2 × 3=9, 故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000041",
+        "qid": "cmm-math-000041",
+        "originalFileName": "9215.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9215.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9215.jpg",
+        "originalFileName": "9215.jpg",
+        "originalWidth": 574,
+        "originalHeight": 566,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.116Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0011",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "设 x, y 满足约束条件 2 x-y+6 ≥ 0 ； x-2 y ≤ 0 ； y-2 ≤ 0 ., 则 |x-y| 的取值范围为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "[0,4]"
+        },
+        {
+          "label": "B",
+          "text": "[2,4]"
+        },
+        {
+          "label": "C",
+          "text": "[0,2]"
+        },
+        {
+          "label": "D",
+          "text": "[2,6]"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由题意, 可作出约束条件的可行域, 如图所示, 在可行域内, 当 x=y 时, |x-y|=0 取得最小值;不妨设 |x-y| 的最大值为 z, 则有 x-y=z 或 x-y=-z, 即 y=x-z 或 y=x+z, 结合图形, 当直线 y=x+z 过点 A(-2,2) 时, z 取得最大值为 4 , 所以 |x-y| 的取值范围为 [0,4]. 故正确答案为 A. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000129",
+        "qid": "cmm-math-000129",
+        "originalFileName": "9223.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9223.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9223.jpg",
+        "originalFileName": "9223.jpg",
+        "originalWidth": 756,
+        "originalHeight": 557,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.147Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0012",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知实数 x, y 满足约束条件 x+2 y-2 ≥ 0 ； x-2 y+2 ≥ 0 ； x ≤ 2 ., 则 x^2+y^2 的取值范围是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "[2 √(5)5, 2 √(2)]"
+        },
+        {
+          "label": "B",
+          "text": "[(4)/(5), 8]"
+        },
+        {
+          "label": "C",
+          "text": "[(2)/(5), 8]"
+        },
+        {
+          "label": "D",
+          "text": "[1,8]"
+        }
+      ],
+      "answer": "B",
+      "analysis": "由约束条件作出可行域是由 A(2,0), B(0,1), C(2,2) 三点所围成的三角形及其内部, 如图中阴影部分, 而 x^2+y^2 可理解为可行域内的点到原点距离的平方, 显然原点到 A B 所在的直线 x+2 y-2=0 的距离是可行域内的点到原点距离的最小值, 此时 x^2+y^2=O D^2=((O A · O B)/(A B))^2=(4)/(5), 点 C 到原点的距离是可行域内的点到原点距离的最大值, 此时 x^2+y^2=2^2+2^2=8. 所以 x^2+y^2 的取值范围是 [(4)/(5), 8]. 见图 故选 B.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000133",
+        "qid": "cmm-math-000133",
+        "originalFileName": "9226.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9226.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9226.jpg",
+        "originalFileName": "9226.jpg",
+        "originalWidth": 368,
+        "originalHeight": 377,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.150Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0013",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 x, y 满足不等式组 2 x+y-2 ≤ 0 ； x-2 y-1 ≤ 0 ； x ≥ 0 ., 则点 P(x, y) 所在区域的面积是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "(5)/(4)"
+        },
+        {
+          "label": "D",
+          "text": "(4)/(5)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "不等式表示的平面区域如图: 见图 直线 2 x+y-2=0 的斜率为 -2 , 直线 x-2 y-1 的斜率为 (1)/(2), 所以两直线垂直, 故 △ B C D 为直角三角形, 易得 B(1,0), D(0,-(1)/(2)), C(0,2),|B D|=√(5)2,|B C|=√(5) 所以阴影部分面积 S_△ B C D=(1)/(2)|B D| ·|B C|=(1)/(2) × √(5)2 × √(5)=(5)/(4), 故选 C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000137",
+        "qid": "cmm-math-000137",
+        "originalFileName": "9231.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9231.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9231.jpg",
+        "originalFileName": "9231.jpg",
+        "originalWidth": 759,
+        "originalHeight": 602,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.153Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0014",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "设变量 x, y 满足约束条件 x+y ≤ 3, ； x-y ≥-1, ； y ≥ 1, 则目标函数 z=4 x+2 y 的最大值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "12"
+        },
+        {
+          "label": "B",
+          "text": "10"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析 画出可行域如图中阴影部分所示, 见图目标函数 z=4 x+2 y 可转化为 y=-2 x+(Z)/(2),作出直线 y=-2 x 并平移, 显然当其过点 A 时纵截距 (Z)/(2) 最大. 解方程组 x+y=3, ； y=1 . 得 A(2,1), 所以 z_ =10.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000140",
+        "qid": "cmm-math-000140",
+        "originalFileName": "9165.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9165.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9165.jpg",
+        "originalFileName": "9165.jpg",
+        "originalWidth": 343,
+        "originalHeight": 291,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.155Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0015",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2014 福建) 已知圆 C:(x-a)^2+(y-b)^2=1, 设平面区域 = x+y-7 ≤ 0, ； x-y+7 ≥ 0, ； y ≥ 0 ., 若圆心 C ,且. 圆 C 与 x 轴相切, 则 a^2+b^2 的最大值为",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "29"
+        },
+        {
+          "label": "C",
+          "text": "37"
+        },
+        {
+          "label": "D",
+          "text": "49"
+        }
+      ],
+      "answer": "C",
+      "analysis": "平面区域 为如图所示的阴影部分的 △ A B D, 见图 因圆心 C(a, b) , 且圆 C 与 x 轴相切, 所以点 C 在如图所示的线段 M N 上, 线段 M N 的方程为 y=1(-2 ≤ x ≤ 6), 由图形得, 当点 C 在点 N(6,1) 处时, a^2+b^2 取得最大值 6^2+1^2=37, 故选 C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000190",
+        "qid": "cmm-math-000190",
+        "originalFileName": "9237.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9237.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9237.jpg",
+        "originalFileName": "9237.jpg",
+        "originalWidth": 576,
+        "originalHeight": 329,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.158Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0016",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2012 福建) 若直线 y=2 x 上存在点 (x, y) 满足约束条件 x+y-3 ≤ 0, ； x-2 y-3 ≤ 0, ； x ≥ m,, 则实数 m 的最大值为",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "(3)/(2)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "由题意, y=2 x ； x+y-3=0 ., 可求得交点坐标为 (1,2) 要使直线 y=2 x 上存在点 (x, y) 满足约条件 x+y-3 ≤ 0 ； x-2 y-3 ≤ 0, ； x ≥ m . 如图所示. 见图 则 3-m ≥ 2 m, 可得 m ≤ 1, 所以 实数 m 的最大值为 1 , 故选 B.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000191",
+        "qid": "cmm-math-000191",
+        "originalFileName": "9242.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9242.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9242.jpg",
+        "originalFileName": "9242.jpg",
+        "originalWidth": 554,
+        "originalHeight": 562,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.165Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0017",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2016 浙江)在平面上, 过点 P 作直线 l 的垂线所得的垂足称为点 P 在直线 l 上的投影. 由区域 x-2 ≤ 0 ； x+y ≥ 0 ； x-3 y+4 ≥ 0 ., 中的点在直线 x+y-2=0 上的投影构成的线段记为 A B, 则 |A B|=",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 √(2)"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "3 √(2)"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "C",
+      "analysis": "作出不等式组所表示的平面区域如图中阴影部分所示, 过点 C, D 分别作直线 x+y-2=0 的垂线, 垂足分别为 A, B, 则四边形 A B D C 为矩形; 又 C(2,-2), D(-1,1), 所以 |A B|=|C D|=(2+1)^2+(-2-1)^2=3 √(2), 故选 C. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000197",
+        "qid": "cmm-math-000197",
+        "originalFileName": "9249.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9249.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9249.jpg",
+        "originalFileName": "9249.jpg",
+        "originalWidth": 620,
+        "originalHeight": 468,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.169Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0018",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知点 F 是双曲线 ^2a^2-^2b^2=1(a>0, b>0) 的左焦点, 点 E 是该双曲线的右顶点, 过点 F 且垂直于 x 轴的直线与双曲线交于 A, B 两点, 若 △ A B E 是针角三角形, 则该双曲线的离心率的取值范围是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1, √(2))"
+        },
+        {
+          "label": "B",
+          "text": "(√(2),+∞)"
+        },
+        {
+          "label": "C",
+          "text": "(1,2)"
+        },
+        {
+          "label": "D",
+          "text": "(2,+∞)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "设 A(c, y_0 ight) 代入双曲线方程得 racc^2a^2- racy_0^2b^2=1, herefore y_0^2= racb^4a^2.见图 herefore|y_0 ight|= racb^2a, herefore|A F|= racb^2a.\because riangle A B E 是钝角三角形, herefore ∠ A E F>45^°.则只需 |A F|>|E F|, 即 racb^2a>a+c, herefore b^2>a^2+a c,即 c^2-a^2>a^2+a c, c^2-a c-2 a^2>0. herefore e^2-e-2>0, 解得 e>2, 或 e<-1 (舍去). 故选 D.答案 :D",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000351",
+        "qid": "cmm-math-000351",
+        "originalFileName": "9318.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9318.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9318.jpg",
+        "originalFileName": "9318.jpg",
+        "originalWidth": 531,
+        "originalHeight": 551,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.173Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0019",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "某观察站 C 与两灯塔 A , B 的距离分别为 x 米和 3 千米, 测得灯塔 A 在观察站 C 的正西方向, 灯塔 B 在观察站 C 西偏南 30^°, 若两灯塔 A , B 之间的距离恰好为 √(3) 千米,则 x 的值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "√(3)"
+        },
+        {
+          "label": "C",
+          "text": "2 √(3)"
+        },
+        {
+          "label": "D",
+          "text": "√(3) 或 2 √(3)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "如图所示, 在 △ ABC 中, 由余弦定理可得: (√(3))^2=3^2+x^2-2 × 3 × X × 30^°, 见图 化为 x^2-3 √(3) x+6=0, 解得 x=√(3) 或 2 √(3). 故选: D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000555",
+        "qid": "cmm-math-000555",
+        "originalFileName": "9254.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9254.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9254.jpg",
+        "originalFileName": "9254.jpg",
+        "originalWidth": 420,
+        "originalHeight": 294,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.180Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0020",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "函数与图像",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知函数 f(x)=A ((π)/(3) x+(π)/(6)), x R, A>0, y=f(x) 的部分图象如图, P, Q 分别为该图象的最高点和最低点,点 P 的横坐标为 1 . 若点 R 的坐标为 (1,0), ∠ P R Q=(2 π)/(3), 则 A=( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(3)"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "2 √(3)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "函数 f(x) 的周期为 T=2 π(π)/(3)=6, 所以 Q(4,-A). 又 ∠ P R Q=(2 π)/(3), 所以 直线 R Q 的倾斜角为 (5 π)/(6), 所以 (A)/(1-4)=-√(3)3, A=√(3). 故选 A.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000570",
+        "qid": "cmm-math-000570",
+        "originalFileName": "9063.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9063.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9063.jpg",
+        "originalFileName": "9063.jpg",
+        "originalWidth": 325,
+        "originalHeight": 255,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.187Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0021",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "算术",
+        "函数与图像",
+        "数列",
+        "导数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 a_n=-√(98)n-√(99), 则这个数列的前 30 项中最大项和最小项分别是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "a_1, a_30"
+        },
+        {
+          "label": "B",
+          "text": "a_1, a_9"
+        },
+        {
+          "label": "C",
+          "text": "a_10, a_9"
+        },
+        {
+          "label": "D",
+          "text": "a_10, a_30"
+        }
+      ],
+      "answer": "C",
+      "analysis": "因为 a_n=-√(99)+(√(99)-√(98))n-√(99) =√(99)-√(98)n-√(99)+1 所以 点 (n, a_n) 在函数 y=√(99)-√(98)x-√(99)+1 的图象上,在直角坐标系中作出函数 y=√(99)-√(98)x-√(99)+1 的图象, 见图 由图象易知 当 x (0, √(99)) 时, 函数单调递减. 所以 a_9<a_8<a_7<·s<a_1<1, 当 x (√(99),+∞) 时, 函数单调递减, 所以 a_10>a_11>·s>a_30>1. 所以, 数列 _n 的前 30 项中最大的项是 a_10, 最小的项是 a_9.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000813",
+        "qid": "cmm-math-000813",
+        "originalFileName": "9124.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9124.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9124.jpg",
+        "originalFileName": "9124.jpg",
+        "originalWidth": 326,
+        "originalHeight": 251,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.189Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0022",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知实数 x, y 满足约束条件 x+y-2 ≤ 0 ； x-2 y-2 ≤ 0, ； x ≥ 1 ., 则目标函数 z=(y-2)/(x+1) 的最小值为",
+      "options": [
+        {
+          "label": "A",
+          "text": "-(2)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "-(5)/(4)"
+        },
+        {
+          "label": "C",
+          "text": "-(4)/(3)"
+        },
+        {
+          "label": "D",
+          "text": "-(1)/(2)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "作出不等式组对应的平面区域如图: 目标函数 z=(y-2)/(x+1) 的几何意义为动点 M(x, y) 到定点 D(-1,2) 的斜率,当 M 位于 A(1,-(1)/(2)) 时, 此时 D A 的斜率最小, 此时 Z_min =-(1)/(2)-21+1=-(5)/(4).故选 B. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000965",
+        "qid": "cmm-math-000965",
+        "originalFileName": "9173.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9173.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9173.jpg",
+        "originalFileName": "9173.jpg",
+        "originalWidth": 506,
+        "originalHeight": 459,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.193Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0023",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2017 新课标 II ) 设 x, y 满足约束条件 2 x+3 y-3 ≤ 0 ； 2 x-3 y+3 ≥ 0 ； y+3 ≥ 0 ., 则 z=2 x+y 的最小值是",
+      "options": [
+        {
+          "label": "A",
+          "text": "-15"
+        },
+        {
+          "label": "B",
+          "text": "-9"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "9"
+        }
+      ],
+      "answer": "A",
+      "analysis": "如图为可行域 见图 结合目标函数的几何意义可得函数在点 B(-6,-3) 处取得最小值, 最小值为 z_min =-12-3=-15. 故选 A.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000982",
+        "qid": "cmm-math-000982",
+        "originalFileName": "9212.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9212.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9212.jpg",
+        "originalFileName": "9212.jpg",
+        "originalWidth": 1190,
+        "originalHeight": 634,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.199Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0024",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2012 辽宁) 设变量 x, y 满足 x-y ≤ 10 ； 0 ≤ x+y ≤ 20 ； 0 ≤ y ≤ 15 ., 则 2 x+3 y 的最大值为",
+      "options": [
+        {
+          "label": "A",
+          "text": "20"
+        },
+        {
+          "label": "B",
+          "text": "35"
+        },
+        {
+          "label": "C",
+          "text": "45"
+        },
+        {
+          "label": "D",
+          "text": "55"
+        }
+      ],
+      "answer": "D",
+      "analysis": "作出可行域如图中阴影部分所示, 由图知目标函数 见图 过点 A(5,15) 时, 2 x+3 y 的最大值为 55 , 故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000985",
+        "qid": "cmm-math-000985",
+        "originalFileName": "9217.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9217.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9217.jpg",
+        "originalFileName": "9217.jpg",
+        "originalWidth": 468,
+        "originalHeight": 394,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.229Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0025",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "若 x, y 满足 |x| ≤ 1-y, 且 y ≥-1, 则 3 x+y 的最大值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "-7"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "7"
+        }
+      ],
+      "answer": "C",
+      "analysis": "由题意 -1 ≤ y ； y-1 ≤ x ≤ 1-y ., 作出可行域如图阴影部分所示. 见图 设 z=3 x+y, y=z-3 x, 当直线 l_0: y=z-3 x 经过点 (2,-1) 时, z 取最大值 5故选 C. [名师点睛]本题是简单线性规划问题的基本题型,根据\"画,移,解\"等步骤可得解,题目难度不大,注重了基础知识.基本技能的考查.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001008",
+        "qid": "cmm-math-001008",
+        "originalFileName": "9230.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9230.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9230.jpg",
+        "originalFileName": "9230.jpg",
+        "originalWidth": 625,
+        "originalHeight": 565,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.231Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0026",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "若 x, y 满足约束条件 x+y ≥ 1 ； x-y ≥-1 ； 2 x-y ≤ 2 ., 目标函数 z=a x+2 y 仅在点 (1,0) 处取得最小值, 则 a 的取值范围是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-1,2)"
+        },
+        {
+          "label": "B",
+          "text": "(-4,2)"
+        },
+        {
+          "label": "C",
+          "text": "(-4,0]"
+        },
+        {
+          "label": "D",
+          "text": "(-2,4)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析 作出可行域如图所示见图 , 直线 a x+2 y=z 仅在点 (1,0) 处取得最小值, 由图象可知 -1<-(a)/(2)<2, 即 -4<a<2.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001010",
+        "qid": "cmm-math-001010",
+        "originalFileName": "9162.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9162.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9162.jpg",
+        "originalFileName": "9162.jpg",
+        "originalWidth": 326,
+        "originalHeight": 348,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.233Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0027",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在下列各函数中,最小值等于 2 的函数是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "y=x+(1)/(x)"
+        },
+        {
+          "label": "B",
+          "text": "y= x+(1)/( x)(0<x<(π)/(2))"
+        },
+        {
+          "label": "C",
+          "text": "y=^2+3^2+2"
+        },
+        {
+          "label": "D",
+          "text": "y=e^x+4e^x-2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析 选项 A 中, x>0 时, y ≥ 2, x<0 时, y ≤-2; 选项 B 中, x ≠ 1, 故最小值不等于 2 ; 选项 C 中, ^2+3^2+2=^2+2+1^2+2=^2+2+1^2+2, 当 x=0 时, y_min =3 √(2)2. 见图 当且仅当 e^x=2, 即 x= 2 时, y_min =2, 适合.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001018",
+        "qid": "cmm-math-001018",
+        "originalFileName": "9166.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9166.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9166.jpg",
+        "originalFileName": "9166.jpg",
+        "originalWidth": 620,
+        "originalHeight": 98,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.306Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0028",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "(2014 安徽) x, y 满足约束条件 x+y-2 ≤ 0 ； x-2 y-2 ≤ 0 ； 2 x-y+2 ≥ 0 ., 若 z=y-a x 取得最大值的最优解页唯一,则实数 a 的值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(2) 或 -1"
+        },
+        {
+          "label": "B",
+          "text": "2 或 (1)/(2)"
+        },
+        {
+          "label": "C",
+          "text": "2 或 1"
+        },
+        {
+          "label": "D",
+          "text": "2 或 -1"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解法一 由题中条件画出可行域, 见图 可知三交点 A(0,2), B(2,0), C(-2,-2), 则 z_A=2, z_B=-2 a, z_C=2 a-2, 要使目标函数取得最大值的最优解不唯一, 只要 z_A=z_B>z_C 或 z_A=z_C>z_B 或 z_B=z_C>z_A, 解得 a=-1 或 a=2.解法二 目标函数 z=y-a x 可化为 y=a x+z, 令 l_0: y=a x, 平移 l_0, 则当 l_0 / / A B 或 l_0 / / A C时符合题意, 故 a=-1 或 a=2.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001039",
+        "qid": "cmm-math-001039",
+        "originalFileName": "9236.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9236.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9236.jpg",
+        "originalFileName": "9236.jpg",
+        "originalWidth": 394,
+        "originalHeight": 371,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.336Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0029",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "椭圆 ^24+^2a^2=1 与双曲线 ^2a-^22=1 有相同的焦点, 则 a 的值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "√(2)"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "A",
+      "analysis": "因为粗圆 racx^24+ racy^2a^2=1 与双曲线 racx^2a- racy^22=1 有相同的焦点, 所以 a>0, 且椭见图圆的焦点应该在 x 轴上, 所以 4-a^2=a+2, 所以 a=-2, 或 a=1, 因为 a>0, 所以 a=1.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-003781",
+        "qid": "cmm-math-003781",
+        "originalFileName": "9527.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9527.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9527.jpg",
+        "originalFileName": "9527.jpg",
+        "originalWidth": 309,
+        "originalHeight": 241,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.353Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0030",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "设 F 为抛物线 C: y^2=4 x 的焦点, 曲线 y=(k)/(x)(k>0) 与 C 交于点 P, PF ⊥ x 轴, 则 k=",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "(3)/(2)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "抛物线 C: y^2=4 x 的焦点 F 为 (1,0), 曲线 y= rackx(k>0) 与 C 交于点 P 在第一象限,见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-003786",
+        "qid": "cmm-math-003786",
+        "originalFileName": "9528.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9528.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9528.jpg",
+        "originalFileName": "9528.jpg",
+        "originalWidth": 1422,
+        "originalHeight": 71,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.360Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0031",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x3_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "若 f(x)=x^4-(2)/(x), 则 f^(1) 等于 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "D",
+      "analysis": "答案: D [解析] 因为 f(x)=x^4-(2)/(x), 所以 f^(x)=4 x^3+2x^2, 所以 f^(1)=4+2=6. 故答案为: D. 见图 2.答案: C [解析] 因为 f(x)= x, 则 f^(x)=(1)/(x), 所以 f^(2)=(1)/(2). 故答案为: C. [分析]先对函数求导, 再将 x=2 代入, 即可得出结果.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004133",
+        "qid": "cmm-math-004133",
+        "originalFileName": "9570.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9570.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9570.jpg",
+        "originalFileName": "9570.jpg",
+        "originalWidth": 1145,
+        "originalHeight": 80,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.371Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0032",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "导数"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "已知 f(x)=^xx-2 t( x+x+(2)/(x)) 恰有一个极值点为 1 , 则 t 的取值范围是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-∞, (1)/(4)] ∪(e)/(6)"
+        },
+        {
+          "label": "B",
+          "text": "f(x)= 2^x, x ≤ 0, ； -x^2+1, x>0"
+        },
+        {
+          "label": "C",
+          "text": "[0, (1)/(4)] ∪(e)/(6)"
+        },
+        {
+          "label": "D",
+          "text": "(-∞, (1)/(4)]"
+        }
+      ],
+      "answer": "D",
+      "analysis": "由题意, 函数 f(x) 的定义域为 (0,+∞),对函数 f(x) 求导得 f^(x)= race^x(x-1)x^2-2 t( rac1x+1- rac2x^2 ight)= rac(x-1)[e^x-2 t(x+2) ight]x^2,\because f(x)= race^xx-2 t( x+x+ rac2x ight) 恰有一个极值点为 1 ,见图令 g(x)= race^x2(x+2)(x ≥ 0), 则 g(x)= rac2 e^x(x+2)-2 e^x2(x+2)^2= rac2 e^x(x+1)2(x+2)^2>0, herefore 函数 g(x) 在 [0,+∞) 单调递增,当 x (0,+∞) 时, g(x)>g(0)= rac14, herefore a ≤ rac14.故答案为: D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004147",
+        "qid": "cmm-math-004147",
+        "originalFileName": "9578.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9578.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9578.jpg",
+        "originalFileName": "9578.jpg",
+        "originalWidth": 1217,
+        "originalHeight": 114,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.388Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0033",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_b2_c8_1"
+      ],
+      "knowledgePoints": [
+        "立体几何学",
+        "平面几何",
+        "立体几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 在四面体 ABCD 中, 设 G 是 CD 的中点, 则 AB+(1)/(2)(BD+BC)=( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "AD"
+        },
+        {
+          "label": "B",
+          "text": "BG"
+        },
+        {
+          "label": "C",
+          "text": "CD"
+        },
+        {
+          "label": "D",
+          "text": "AG"
+        }
+      ],
+      "answer": "D",
+      "analysis": "G 是 CD 的中点, herefore AB+ rac12(BD+BC)=AB+BG=AG, 故选: D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004386",
+        "qid": "cmm-math-004386",
+        "originalFileName": "9532.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：立体几何图",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9532.jpg",
+        "source": "open_dataset",
+        "kind": "solid_geometry",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9532.jpg",
+        "originalFileName": "9532.jpg",
+        "originalWidth": 294,
+        "originalHeight": 247,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.532Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0034",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "立体几何学",
+        "圆",
+        "平面几何",
+        "立体几何",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 过点 F_1 作 F_1 Q ⊥ G_1 G_2, △ Q F_1 F_2 为等腰直角三角形, 则粗圆的离心率为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(2)2"
+        },
+        {
+          "label": "B",
+          "text": "√(2)-12"
+        },
+        {
+          "label": "C",
+          "text": "2- √(2)"
+        },
+        {
+          "label": "D",
+          "text": "√(2)-1"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析:解答:设椭圆的长轴长,短轴长,焦距分别为 2 a, 2 b, 2 c. 因为 △ QF_1 F_2 是等腰直角三角形, 所以 QF_1=F_1 F_2=2 c, QF_2=2 √(2) c. 由粗圆的定义, 得 QF_1+QF_2=2 a, 所以 e=(2 c)/(2 a)=2 c2 c+2 √(2) c=11+√(2)=√(2)-1. 分析: 本题主要考查了平面与圆柱面的截线, 解决问题的关键是根据平面与圆柱面的截线的性质结合粗圆性质计算即可",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004410",
+        "qid": "cmm-math-004410",
+        "originalFileName": "10021.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 10021.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10021.jpg",
+        "originalFileName": "10021.jpg",
+        "originalWidth": 326,
+        "originalHeight": 531,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.535Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0035",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "导数",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, P A 为 O 的切线, A 为切点, 已知 P A=4, O A=3, 则 ∠ A P O 的值为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "(3)/(4)"
+        },
+        {
+          "label": "B",
+          "text": "(3)/(5)"
+        },
+        {
+          "label": "C",
+          "text": "(4)/(5)"
+        },
+        {
+          "label": "D",
+          "text": "(4)/(3)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "解析: 解答: 由 PA 为 O 的切线,知 OA ⊥ PA. 在 Rt △ OAP 中, 由勾股定理, 得 OP=^2+AP^2=5. 故 ∠ APO=(PA)/(OP)=(4)/(5). 分析: 本题主要考查了圆的切线的性质及判定定理, 解决问题的关键是根据圆的切线的性质及判定定理分析计算即可",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004487",
+        "qid": "cmm-math-004487",
+        "originalFileName": "9963.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9963.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9963.jpg",
+        "originalFileName": "9963.jpg",
+        "originalWidth": 326,
+        "originalHeight": 260,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.537Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0036",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "导数"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, △ ABC 内接于 O, EC 切 O 于点 C. 若 ∠ BOC=76^°, 则 ∠ BCE 等于 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "14^°"
+        },
+        {
+          "label": "B",
+          "text": "38^°"
+        },
+        {
+          "label": "C",
+          "text": "52^°"
+        },
+        {
+          "label": "D",
+          "text": "76^°"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析: 解答: 因为 EC 为 O 的切线, 所以 ∠ BCE=∠ BAC=(1)/(2) ∠ BOC=38^°. 分析: 本题主要考查了弦切角的性质, 解决问题的关键是根据弦切角的性质结合所给图形分析计算即可",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004495",
+        "qid": "cmm-math-004495",
+        "originalFileName": "9993.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9993.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9993.jpg",
+        "originalFileName": "9993.jpg",
+        "originalWidth": 303,
+        "originalHeight": 291,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.539Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0037",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "抛物线 C: y^2=2 p x 上一点 M(9, y) 到该抛物线焦点的距离为 13 , 又抛物线 C 的准线经过双曲线 E: ^2a^2-^28=1(a>0) 的一个焦点, 则双曲线 E 的离心率为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 √(2)"
+        },
+        {
+          "label": "B",
+          "text": "√(2)"
+        },
+        {
+          "label": "C",
+          "text": "√(3)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "抛物线 y^2=2 p x(p>0) 的焦点为 F( racp2, 0 ight), 其准线方程为 x=- racp2, \because 点 M(9, y) 到该抛物线焦点的距离为 13 , 点 M(9, y) 到准线的距离为 13, herefore 9+ racp2=13, 解得 p=8, 抛物线准线方程为 x=-4,见图 0), herefore c=4, \because c^2=a^2+b^2, herefore a=^2-b^2=√(16-8)=2 √(2), herefore e= rac42 √(2)=√(2). 故选 B.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004497",
+        "qid": "cmm-math-004497",
+        "originalFileName": "9530.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9530.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9530.jpg",
+        "originalFileName": "9530.jpg",
+        "originalWidth": 1579,
+        "originalHeight": 83,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.541Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0038",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "导数"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, PT 是外切两圆的公切线, T 为切点, PAB, PCD 分别为这两圆的割线. 若 PA=3, PB=6, PC=2, 则 PD 等于 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "12"
+        }
+      ],
+      "answer": "C",
+      "analysis": "解析: 解答: PT^2=PA · PB=PC · PD, 则 PD=(PA · PB)/(PC)=(3 × 6)/(2)=9. 分析: 本题主要考查了与圆有关的比例线段, 解决问题的关键是根据与圆有关的比例线段的性质分析计算即可",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004501",
+        "qid": "cmm-math-004501",
+        "originalFileName": "10009.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 10009.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10009.jpg",
+        "originalFileName": "10009.jpg",
+        "originalWidth": 366,
+        "originalHeight": 285,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.547Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0039",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x3_c7_1"
+      ],
+      "knowledgePoints": [
+        "计数",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "若随机变量 X 的分布列如下表, 则 E(X)= ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(18)"
+        },
+        {
+          "label": "B",
+          "text": "(1)/(9)"
+        },
+        {
+          "label": "C",
+          "text": "(9)/(20)"
+        },
+        {
+          "label": "D",
+          "text": "(20)/(9)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "答案: D [解析] 因为 2 x+3 x+7 x+2 x+3 x+x=1, 所以 x=(1)/(18), E(X)=3 x+14 x+6 x+12 x+5 x=40 x=(20)/(9), 故答案为: D",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004662",
+        "qid": "cmm-math-004662",
+        "originalFileName": "9786.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高三"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高三数学题目配图，来源 CMM-Math 原图 9786.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9786.jpg",
+        "originalFileName": "9786.jpg",
+        "originalWidth": 285,
+        "originalHeight": 206,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.549Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0040",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(2020 ·长沙模拟) 阅读程序框图, 如果输出的函数值在区间 [(1)/(4), (1)/(2)] 内, 则输入的实数 x 的取值范围是 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-∞,-2]"
+        },
+        {
+          "label": "B",
+          "text": "[-2,-1]"
+        },
+        {
+          "label": "C",
+          "text": "[-1,2]"
+        },
+        {
+          "label": "D",
+          "text": "[2,+∞)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解:分析程序中各变量,各语句的作用 再根据流程图所示的顺序, 可知: 该程序的作用是计算分段函数 f(x)= 2^x, x [-2,2] ； 2, x (-∞,-2) ∪(2,+∞) . 的函数值. 又 因为 输出的函数值在区间 [(1)/(4), (1)/(2)] 内, 所以 x [-2,-1] 故选: B.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004776",
+        "qid": "cmm-math-004776",
+        "originalFileName": "8738.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 8738.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8738.jpg",
+        "originalFileName": "8738.jpg",
+        "originalWidth": 511,
+        "originalHeight": 709,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.572Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0041",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(2016 甲卷模拟) 对任意非零实数 a, b, 若 a^ b 的运算原理如图所示, 则 2^0.5 _0.5 (1)/(4) 的值为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(2)+12"
+        },
+        {
+          "label": "B",
+          "text": "√(2)"
+        },
+        {
+          "label": "C",
+          "text": "√(2)2"
+        },
+        {
+          "label": "D",
+          "text": "√(2)-12"
+        }
+      ],
+      "answer": "C",
+      "analysis": "解:分析程序中各变量,各语句的作用, 再根据流程图所示的顺序, 可知: 该程序的作用是计算分段函数 y= (b-1)/(a) a ≤ b ； (a+1)/(b) a>b . 函数值, 因为 2^0.5 _0.5 (1)/(4)=√(2) ^, 此时 a=√(2)<b=2, 所以 y=2-1√(2)=√(2)2. 故选: C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004786",
+        "qid": "cmm-math-004786",
+        "originalFileName": "8852.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 8852.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8852.jpg",
+        "originalFileName": "8852.jpg",
+        "originalWidth": 606,
+        "originalHeight": 657,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.602Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0042",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "导数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设函数 f(x)= |x^2-x-2|, x ≥ a ； a x-6, x<a . 是定义在 R 上的增函数, 则实数 a 取值范围 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "[2,+∞)"
+        },
+        {
+          "label": "B",
+          "text": "[0,3]"
+        },
+        {
+          "label": "C",
+          "text": "[2,3]"
+        },
+        {
+          "label": "D",
+          "text": "[2,4]"
+        }
+      ],
+      "answer": "D",
+      "analysis": "[详解] 画出函数 y=|x^2-x-2| 的图象如下图所示, 见图 结合图象可得, 要使函数 (x)= |x^2-x-2|, x ≥ a, ； a x-6, x<a, 是在 R 上的增函数, 需满足 a ≥ 2 ； a^2-a-2 ≥ a^2-6 ., 解得 2 ≤ x ≤ 4. 所以实数 取值范围是 [2,4]. 故选 D. [点睛] 解答本题的关键有两个: (1) 画出函数的图象, 结合图象求解, 增强了解题的直观性和形象性; (2) 讨论函数在实数集上的单调性时, 除了考虑每个段上的单调性之外, 还要考虑在分界点处的函数值的大小关系.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004815",
+        "qid": "cmm-math-004815",
+        "originalFileName": "7320.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7320.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7320.jpg",
+        "originalFileName": "7320.jpg",
+        "originalWidth": 585,
+        "originalHeight": 568,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.616Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0043",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知函数 f(x)= e^x, x ≤ 0, ； x, x>0, g(x)=f(x)+x+a.. 若 g(x) 存在 2 个零点, 则 a 的取值范围是",
+      "options": [
+        {
+          "label": "A",
+          "text": "[-1,0)"
+        },
+        {
+          "label": "B",
+          "text": "[0,+∞)"
+        },
+        {
+          "label": "C",
+          "text": "[-1,+∞)"
+        },
+        {
+          "label": "D",
+          "text": "[1,+∞)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "分析: 首先根据 g(x) 存在 2 个零点, 得到方程 f(x)+x+a=0 有两个解, 将其转化为 f(x)=-x-a 有两个解, 即直线 y=-x-a 与曲线 y=f(x) 有两个交点, 根据题中所给的函数解析式, 画出函数 f(x) 的 图像(将 e^x(x>0) 去掉), 再画出直线 y=-x, 并将其上下移动, 从图中可以发现, 当 -a leq 1 时, 满足 y=-x-a 与曲线 y=f(x) 有两个交点, 从而求得结果. 画出函数 f(x) 的图像, y=e^x 在 y 轴右侧的去掉, 再画出直线 y=-x, 之后上下移动, 可以发现当直线过点 A 时,直线与函数图像有两个交点, 并且向下可以无限移动, 都可以保证直线与函数的图像有两个交点, 即方程 f(x)=-x-a 有两个解, 也就是函数 g(x) 有两个零点, 此时满足 -a ≤ 1, 即 a ≥-1, 故选 C. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004830",
+        "qid": "cmm-math-004830",
+        "originalFileName": "7360.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7360.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7360.jpg",
+        "originalFileName": "7360.jpg",
+        "originalWidth": 622,
+        "originalHeight": 557,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.682Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0044",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知函数 f(x)= 2^x-1 x>0 ； -x^2-2 x x ≤ 0, 若函数 g(x)=f(x)-m 有 3 个零点, 则实数 m 的取值范围",
+      "options": [
+        {
+          "label": "A",
+          "text": "(0, (1)/(2))"
+        },
+        {
+          "label": "B",
+          "text": "((1)/(2), 1]"
+        },
+        {
+          "label": "C",
+          "text": "(0,1]"
+        },
+        {
+          "label": "D",
+          "text": "(0,1)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "见图 见图 见图 实数 m 的取值范围是 (0,11. 故答案为: C. [分析]函数 g(x)=f(x)-m 有 3 个零点, 所以 g(x)=f(x)-m=0 有三个实根, 即直线 y=m 与函数 y=f(x) 的图象有三个交点, 作出图象, 即可求出实数 m 的取值范围.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004874",
+        "qid": "cmm-math-004874",
+        "originalFileName": "7273.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7273.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7273.jpg",
+        "originalFileName": "7273.jpg",
+        "originalWidth": 1345,
+        "originalHeight": 72,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.694Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0045",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设函数 f(x) 是定义在 R 上的奇函数, 当 x<0 时, f(x)=-x^2-5 x, 则不等式 f(x)-f(x-1)<0的解集为",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-1,2)"
+        },
+        {
+          "label": "B",
+          "text": "(-1,3)"
+        },
+        {
+          "label": "C",
+          "text": "(-2,3)"
+        },
+        {
+          "label": "D",
+          "text": "(-2,4)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "根据题意, 设 x>0, 则 -x<0, 所以 f(-x)=-x^2+5 x, 因为 f(x) 是定义在 R 上的奇函数, 所以 f(-x)=-x^2+5 x=-f(x), 所以 f(x)=x^2-5 x, 即 x ≥ 0 时, 当 x<0 时, f(x)=-x^2-5 x, 则 f(x) 的图象如图: 见图 在区间 (-(5)/(2), (5)/(2)) 上为减函数, 若 f(x)-f(x-1)<0, 即 f(x-1)>f(x), 又由 x-1<x, 且 f(-3)=f(-2), f(2)=f(3), 必有 x-1>-3 ； x<3 . 时, f(x)-f(x-1)<0, 解得 -2<x<3, 因此不等式的解集是 (-2,3), 故选 C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004902",
+        "qid": "cmm-math-004902",
+        "originalFileName": "7624.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7624.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7624.jpg",
+        "originalFileName": "7624.jpg",
+        "originalWidth": 734,
+        "originalHeight": 654,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.709Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0046",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "代数式与方程不等式",
+        "导数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知函数 f(x)= -x^2+2 x-1, x ≤ 1 ； |x-1|, x>1 ., 若 f(a^2-4)>f(3 a),, 则实数 a 的取值范围是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-4,1)"
+        },
+        {
+          "label": "B",
+          "text": "(-∞,-4) ∪(1,+∞)"
+        },
+        {
+          "label": "C",
+          "text": "(-1,4)"
+        },
+        {
+          "label": "D",
+          "text": "(-∞,-1) ∪(4,+∞)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "[详解] f(x)= -x^2+2 x-1, x ≤ 1 ； |x-1|, x>1 =f(x)= -x^2+2 x-1, x ≤ 1 ； x-1, x>1 .., 如图所示: 画出函数图像, 根据图像知函数单调递增, f(a^2-4)>f(3 a), 即 a^2-4>3 a, 解得 a>4 或 a<-1. 故选: D. 见图 [点睛] 本题考查了根据函数单调性解不等式, 画出函数图像确定单调性是解题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004905",
+        "qid": "cmm-math-004905",
+        "originalFileName": "7362.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7362.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7362.jpg",
+        "originalFileName": "7362.jpg",
+        "originalWidth": 628,
+        "originalHeight": 642,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.715Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0047",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "导数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "函数 f(x)= x^2+1, x ≥ 0, ； -x^2, x<0 . 的单调性为( ).",
+      "options": [
+        {
+          "label": "A",
+          "text": "在 (0,+∞) 上为减函数"
+        },
+        {
+          "label": "B",
+          "text": "在 (-∞, 0) 上为增函数, 在 (0,+∞) 上为减函数"
+        },
+        {
+          "label": "C",
+          "text": "不能判断单调性"
+        },
+        {
+          "label": "D",
+          "text": "在 (-∞,+∞) 上是增函数"
+        }
+      ],
+      "answer": "D",
+      "analysis": "D 点拨: 画出分段函数 f(x) 的图像可知, f(x) 在 (-∞,+∞) 上是增函数. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004961",
+        "qid": "cmm-math-004961",
+        "originalFileName": "7388.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7388.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7388.jpg",
+        "originalFileName": "7388.jpg",
+        "originalWidth": 503,
+        "originalHeight": 594,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.718Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0048",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知函数 f(x)= 2^x, x ≥ a ； -x, x<a . 若函数 f(x) 存在零点, 则实数 a 的取值范围是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-∞, 0)"
+        },
+        {
+          "label": "B",
+          "text": "(0,+∞)"
+        },
+        {
+          "label": "C",
+          "text": "(-∞, 1)"
+        },
+        {
+          "label": "D",
+          "text": "(1,+∞)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "指数函数 y=2^x>0, 没有零点, y=-x 有唯一的零点 x=0, 所以若函数 f(x) 存在零点, 须 f(x)=-x(x<a) 有零点, 即 0 (-∞, a), 则 a>0, 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-004979",
+        "qid": "cmm-math-004979",
+        "originalFileName": "7638.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7638.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7638.jpg",
+        "originalFileName": "7638.jpg",
+        "originalWidth": 289,
+        "originalHeight": 249,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.721Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0049",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若定义运算 a b= a, a<b, ； b, a ≥ b, 则函数 f(x)=3^x 3^-x 的值域是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(0,1]"
+        },
+        {
+          "label": "B",
+          "text": "[1,+∞)"
+        },
+        {
+          "label": "C",
+          "text": "(0,+∞)"
+        },
+        {
+          "label": "D",
+          "text": "(-∞,+∞)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析: 法一: 选 A 当 x>0 时, 3^x>3^-x, f(x)=3^-x, f(x) (0,1); 当 x=0 时, f(x)=3^x=3^-x=1; 当 x<0 时, 3^x<3^-x, f(x)=3^x, f(x) (0,1). 综上, f(x) 的值域是 (0,1]. 法二: 作出 f(x)=3^x 3^-x 的图象, 如图. 可知值域为 (0,1]. 见图",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-005000",
+        "qid": "cmm-math-005000",
+        "originalFileName": "7412.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7412.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7412.jpg",
+        "originalFileName": "7412.jpg",
+        "originalWidth": 280,
+        "originalHeight": 263,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.723Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0050",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_x3_c7_1"
+      ],
+      "knowledgePoints": [
+        "组合几何学",
+        "平面几何",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "如图, 点 E 是正方形 ABCD 的边 BC 的中点, 在该正方形内随机取一点, 则它在阴影部分的概率为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(6)"
+        },
+        {
+          "label": "B",
+          "text": "(1)/(5)"
+        },
+        {
+          "label": "C",
+          "text": "(1)/(4)"
+        },
+        {
+          "label": "D",
+          "text": "(1)/(3)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "由题易知, 该几何概型与面积有关, 设正方形边长为 a, 则所求概率 P=_△ A C ES_正方形 A B C D=(1)/(4) a^2a^2=(1)/(4) 答案: C",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-005398",
+        "qid": "cmm-math-005398",
+        "originalFileName": "8642.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 8642.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8642.jpg",
+        "originalFileName": "8642.jpg",
+        "originalWidth": 368,
+        "originalHeight": 331,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.728Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0051",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_x3_c7_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "如图, 点 C 在以 A B 为直径的圆上, 且满足 C A=C B, 圆内的弧线是以 C 为圆心, C A 为半径的圆的一部分. 记 △ A B C 三边所围成的区域 (灰色部分) 为 I ,右侧月牙形区域 (黑色部分) 为 II. 在整个图形中随机取一点, 记此点取自 I, II 的概率分别为 P_1, P_2, 则 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "P_1=P_2"
+        },
+        {
+          "label": "B",
+          "text": "P_1>P_2"
+        },
+        {
+          "label": "C",
+          "text": "P_1+P_2=(4)/(π+1)"
+        },
+        {
+          "label": "D",
+          "text": "P_2-P_1=(1)/(π+1)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "设圆的半径为 1 , 则区域 I 的面积为 S_1=(1)/(2) × 2 × 1=1; 区域 II 的面积 S_2=(1)/(2) π × 1^2-[(1)/(4) π ×(√(2))^2-(1)/(2) × 2 × 1]=1, 圆的面积为 π × 1^2=π. 所以 P_1=P_2=(1)/(π), 故选 A.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-005413",
+        "qid": "cmm-math-005413",
+        "originalFileName": "8691.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 8691.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8691.jpg",
+        "originalFileName": "8691.jpg",
+        "originalWidth": 421,
+        "originalHeight": 443,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.733Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0052",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_x3_c7_1"
+      ],
+      "knowledgePoints": [
+        "计数",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(2021·十一模拟)采购经理指数(简称 PMI)是国际上通行的宏观经济监测指标体系之一, 对国家经济活动的监测和预测具有重要作用. 制造业 PMI 在 50%以上, 通常反映制造业总体扩张, 低于 50%, 通常反映制造业总体衰退. 如图是 2018 年 10 月到 2019 年 10 月我国制造业 PMI 的统计图, 下列说法错误的是() ## 制造业 PMI ( 经季节调整) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "大部分月份制造业总体衰退"
+        },
+        {
+          "label": "B",
+          "text": "2019 年 3 月制造业总体扩张最大"
+        },
+        {
+          "label": "C",
+          "text": "2018 年 11 月到 2019 年 10 月中有 3 个月的 PMI 比上月增长"
+        },
+        {
+          "label": "D",
+          "text": "2019 年 10 月份, P M I 为 49.3 %, 比上月下降 0.5 个百分点"
+        }
+      ],
+      "answer": "C",
+      "analysis": "解:根据折线图可知, 大部分月份制造业总体衰退, 所以 A 正确; 2019 年 3 月 P M I 为 50.5 % , 制造业总体扩张最大,所以 B 正确; 2018 年 11 月到 2019 年 10 月中有 4 个月的 PMI 比上月增长, 所以 C 错误; 2019 年 10 月份 P M I 为 49.3%,比上月下降 0.5 个百分点, 所以 D 正确. 故选: C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-005464",
+        "qid": "cmm-math-005464",
+        "originalFileName": "8832.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：统计图",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 8832.jpg",
+        "source": "open_dataset",
+        "kind": "statistics",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8832.jpg",
+        "originalFileName": "8832.jpg",
+        "originalWidth": 1359,
+        "originalHeight": 711,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.736Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0053",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_x3_c7_1"
+      ],
+      "knowledgePoints": [
+        "计数",
+        "函数与图像",
+        "平面几何",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "阅读图所示的程序框图, 如果函数的定义域为 (-3,4), 则输出函数的值在(会内的概率为",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(7)"
+        },
+        {
+          "label": "B",
+          "text": "(3)/(7)"
+        },
+        {
+          "label": "C",
+          "text": "(2)/(7)"
+        },
+        {
+          "label": "D",
+          "text": "(4)/(7)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "12.A 由程序框图得, 若 f(x)= 2^x+1,-1 ≤ x ≤ 1 ； 2^-x+1, x<-1, (1)/(2) x>1 ., 若 -1 ≤ x ≤ 1,令 (5)/(4)<2^x+1<(3)/(2), 即 (1)/(4)<2^x<(1)/(2), 所以-2<x<-1 (舍去); 若 x< 即(舍去); -1 或 x>1, 令 (5)/(4)<2^-x+1<(3)/(2), 即 (1)/(4)<2^-x<(1)/(2), 所以 1<x<2 问题转化为长度的几何概型, 总长度为 4- (-3)=7, 所求事件表示的长度为 2-1=1, 则所求的概率为 (1)/(7) 故选 A. 答案: A",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-005523",
+        "qid": "cmm-math-005523",
+        "originalFileName": "8679.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 8679.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8679.jpg",
+        "originalFileName": "8679.jpg",
+        "originalWidth": 308,
+        "originalHeight": 311,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.739Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0054",
+      "stageId": "senior",
+      "grade": "高一",
+      "bookId": "s_b1",
+      "chapterIds": [
+        "s_b2_c8_1"
+      ],
+      "knowledgePoints": [
+        "立体几何学",
+        "平面几何",
+        "立体几何"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知四棱雉 P-A B C D 的三视图如图所示, 则四棱雉 P-A B C D 的体积为 ( ) 见图 正程娄 见图 州蝶娄 见图 䑁祝围 第 2 题",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "(2)/(3)"
+        },
+        {
+          "label": "C",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "D",
+          "text": "(3)/(2)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "因为 四棱雉 P-ABCD 的三视图俯视图为正方形且边长为 1 , 正视图和侧视图的高为 2 ,故四棱雉 P-ABCD 的底面面积 S=1, 高 h=2 故四棱雉 P-ABCD 的 V=(1)/(3) · 1 · 2=(2)/(3). 本题选择 B 选项. 点睛: (1)求解以三视图为载体的空间几何体的体积的关键是由三视图确定直观图的形状以及直观图中线面的位置关系和数量关系, 利用相应体积公式求解; (2)若所给几何体的体积不能直接利用公式得出, 则常用等积法,分割法,补形法等方法进行求解.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-005611",
+        "qid": "cmm-math-005611",
+        "originalFileName": "7895.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高一"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：立体几何图",
+        "alt": "高一数学题目配图，来源 CMM-Math 原图 7895.jpg",
+        "source": "open_dataset",
+        "kind": "solid_geometry",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/7895.jpg",
+        "originalFileName": "7895.jpg",
+        "originalWidth": 169,
+        "originalHeight": 208,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.748Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0055",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 , 是平面内两个互相垂直的单位向量, 若向量 满足 (-) ·(-)=0, 则 的最大值是",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "√(2)"
+        },
+        {
+          "label": "D",
+          "text": "√(2)2"
+        }
+      ],
+      "answer": "C",
+      "analysis": "解析: 以 , 所在的直线为 x 轴, y 轴建立平面直角坐标系,由 (-) ·(-)=0 ,得 (- ) ⊥(-) ,故将 的起点放在坐标原点,则终点在以 ((1)/(2) , (1)/(2)) 为圆心,以 √(2) 为直径的圆上,如图所示,所以 |c| 的最大值为 √(2). 见图 答案: C",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000070",
+        "qid": "cmm-math-000070",
+        "originalFileName": "9058.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9058.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9058.jpg",
+        "originalFileName": "9058.jpg",
+        "originalWidth": 400,
+        "originalHeight": 368,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.751Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0056",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "设抛物线 y^2=8 x 的焦点为 F, 准线为 l, P 为抛物线上一点, P A ⊥ l, A 为垂足. 如果直线 A F 的斜率为 -√(3), 那么 |P F|=( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "4 √(3)"
+        },
+        {
+          "label": "B",
+          "text": "8"
+        },
+        {
+          "label": "C",
+          "text": "8 √(3)"
+        },
+        {
+          "label": "D",
+          "text": "16"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析: 解答: 如图, K_A F=-√(3), 所以 ∠ A F O=60^°, 因为|B F|=4, 所以|A B|=4 √(3), 即 P 点的纵坐标为 4 √(3), 所以(4 √(3))^2=8 x, 所以 x=6, 所以|P A|=8=|P F|, 故选 B. 见图分析: 结合已知条件, 设抛物线 y^2=8 x 的焦点为 F, 准线为 l, P 为抛物线上一点, P A ⊥ l, A 为垂足, 结合图像, 求解即可.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000266",
+        "qid": "cmm-math-000266",
+        "originalFileName": "9291.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9291.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9291.jpg",
+        "originalFileName": "9291.jpg",
+        "originalWidth": 345,
+        "originalHeight": 363,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.760Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0057",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "下列三图中的多边形均为正多边形, M, N 是所在边上的中点, 双曲线均以图中的 F_1, F_2 为焦点, 设图(1),(2),(3)中的双曲线的离心率分别为 e_1, e_2, e_3, 则 ( ) 见图 (1) 见图 (2) 见图 (3)",
+      "options": [
+        {
+          "label": "A",
+          "text": "e_1>e_2>e_3"
+        },
+        {
+          "label": "B",
+          "text": "e_1<e_2<e_3"
+        },
+        {
+          "label": "C",
+          "text": "e_1=e_3<e_2"
+        },
+        {
+          "label": "D",
+          "text": "e_1=e_3>e_2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析 :设 |F_1 F_2|=2 c, 在(1) 中 2 a=|M F_2|-|M F_1|=(√(3)-1) c; 在(2)中, 2 a=|M F_2|-|M F_1|=√(10)-√(2)2 c; 在(3)中, 2 a=|A F_2|-|A F_1|=(√(3)- 1)c. 所以 e_1=e_3>e_2. 答案: D",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000354",
+        "qid": "cmm-math-000354",
+        "originalFileName": "9319.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9319.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9319.jpg",
+        "originalFileName": "9319.jpg",
+        "originalWidth": 346,
+        "originalHeight": 419,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.763Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0058",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "如图, 在 △ A B C 中, D 是边 A C 上的点, 且 A B=A D, 2 A B=√(3) B D, B C=2 B D, 则 C的值为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(3)3"
+        },
+        {
+          "label": "B",
+          "text": "√(3)6"
+        },
+        {
+          "label": "C",
+          "text": "√(6)3"
+        },
+        {
+          "label": "D",
+          "text": "√(6)6"
+        }
+      ],
+      "answer": "D",
+      "analysis": "设 A B=c, 则 A D=c, B D=2 c√(3), B C=4 c√(3), 在 △ A B D 中, 由余弦定理得 A=^2+c^2-(4)/(3) c^22 c^2=(1)/(3), 则 A=2 √(2)3, 在 △ A B C 中, 由正弦定理得 (C)/( C)=(B C)/( A)=(4 C√(3))/(2 √(2)3)",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000523",
+        "qid": "cmm-math-000523",
+        "originalFileName": "9190.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9190.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9190.jpg",
+        "originalFileName": "9190.jpg",
+        "originalWidth": 516,
+        "originalHeight": 277,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.767Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0059",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "如图所示, 设 A , B 两点在河的两岸, 一测量者在 A 的同侧, 在 A 所在的河岸边选定一点 C, 测出 A C 的距离为 50 m, ∠ A C B=45^°, ∠ C A B=105^° 后, 就可以计算 A , B 两点的距离为( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "50 √(2) m"
+        },
+        {
+          "label": "B",
+          "text": "50 √(3) m"
+        },
+        {
+          "label": "C",
+          "text": "25 √(2) m"
+        },
+        {
+          "label": "D",
+          "text": "25 √(2)2 m"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析 由题意知 ∠ A B C=30^°, 由正弦定理 (A C)/( ∠ A B C)=(A B)/( ∠ A C B), 所以 A B=(A C · ∠ A C B)/( ∠ A B C)=50 × √(2)2(1)/(2)=50 √(2) (m).",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000561",
+        "qid": "cmm-math-000561",
+        "originalFileName": "9110.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9110.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9110.jpg",
+        "originalFileName": "9110.jpg",
+        "originalWidth": 232,
+        "originalHeight": 205,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.769Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0060",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "如图, 一货轮航行到 M 处, 测得灯塔 S 在货轮的北偏东 15^°, 与灯塔 S 相距 20 海里,随后货轮按北偏西 30^° 的方向航行 30 分钟后到达 N 处, 又测得灯塔在货轮的东北方向, 则货轮的速度为(",
+      "options": [
+        {
+          "label": "A",
+          "text": "20(√(6)+√(2)) 海里/小时"
+        },
+        {
+          "label": "B",
+          "text": "20(√(6)-√(2)) 海里/小时"
+        },
+        {
+          "label": "C",
+          "text": "20(√(6)+√(3)) 海里/小时"
+        },
+        {
+          "label": "D",
+          "text": "20(√(6)-√(3)) 海里/小时"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析由题意, ∠ S M N=45^°, ∠ S N M=105^°, ∠ N S M=30^°. 由正弦定理得 N 30^°= S 105^°. 所以 M N= S 30^° 105^°=10√(6)+√(2)4=10(√(6)-√(2)). 则 v_化 =20(√(6)-√(2)) 海里/小时.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000562",
+        "qid": "cmm-math-000562",
+        "originalFileName": "9111.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9111.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9111.jpg",
+        "originalFileName": "9111.jpg",
+        "originalWidth": 212,
+        "originalHeight": 254,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.771Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0061",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "如图, 为测一树的高度, 在地面上选取 A , B 两点, 从 A , B 两点分别测得望树尖的仰角为 30^°, 45^°, 且 A , B 两点之间的距离为 60 m, 则树的高度为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "30+30 √(3) m"
+        },
+        {
+          "label": "B",
+          "text": "30+15 √(3) m"
+        },
+        {
+          "label": "C",
+          "text": "15+30 √(3) m"
+        },
+        {
+          "label": "D",
+          "text": "15+3 √(3) m"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析 在 △ P A B 中, 由正弦定理可得 60 (45^°-30^°)= B 30^°, P B=60 × (1)/(2) 15^°=30 15^°, h=P B 45^°=(30+30 √(3)) m.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000564",
+        "qid": "cmm-math-000564",
+        "originalFileName": "9120.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9120.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9120.jpg",
+        "originalFileName": "9120.jpg",
+        "originalWidth": 340,
+        "originalHeight": 166,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.774Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0062",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "《九章算术》是我国古代数学成就的杰出代表作, 其中《方田》章给出计算弧田面积所用的经验方式为: 弧田面积 =(1)/(2) (弦 × 矢+矢 ^2 ), 弧田(如图)由圆弧和其所对弦所围成, 公式中\"弦\"指圆弧所对弦长, \"矢\"等于半径长与圆心到弦的距离之差, 现有圆心角为 (2 π)/(3), 半径等于 4 米的弧田, 按照上述经验公式计算所得弧田面积约是()( √(3) ≈ 1.73 ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "15 平方米"
+        },
+        {
+          "label": "B",
+          "text": "12 平方米"
+        },
+        {
+          "label": "C",
+          "text": "9 平方米"
+        },
+        {
+          "label": "D",
+          "text": "6 平方米"
+        }
+      ],
+      "answer": "C",
+      "analysis": "如图,根据题意可得: ∠ A O B=(2 π)/(3), O A=4, 在 Rt △ A O D 中, 可得: ∠ A O D=(π)/(3), ∠ D A O=(π)/(6), O D=(1)/(2) A O=(1)/(2) × 4=2, 可得: 矢 =4-2=2, 由 A D=A O · (π)/(3)=4 × √(3)2=2 √(3), 可得:弦 =2 A D=2 × 2 √(3)=4 √(3), 所以:弧田面积 =(1)/(2) (弦 × 矢 ÷ 矢 .^2)=(1)/(2)(4 √(3) × 2+2^2)=4 √(3)+2 ≈ 9 平方米.所以 C 选项是正确的.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000601",
+        "qid": "cmm-math-000601",
+        "originalFileName": "9076.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9076.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9076.jpg",
+        "originalFileName": "9076.jpg",
+        "originalWidth": 343,
+        "originalHeight": 334,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.781Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0063",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "设函数 f(x)= (2 x+(π)/(4))(x [0, (9 π)/(8)]), 若方程 f(x)=a 恰好有三个根, 分别为 x_1, x_2, x_3(x_1<x_2<x_3), 则 2 x_1+3 x_2+x_3 的值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "π"
+        },
+        {
+          "label": "B",
+          "text": "(3 π)/(4)"
+        },
+        {
+          "label": "C",
+          "text": "(3 π)/(2)"
+        },
+        {
+          "label": "D",
+          "text": "(7 π)/(4)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "作出函数 y=f(x) 的图象如图, 由图可知直线 y=a 与 y=f(x) 的图象的交点 A, B 关于直线 x=(π)/(8) 对称, 交点 B, C 关于直线 x=(5 π)/(8) 对称,所以 x_1+x_2=(π)/(4), x_2+x_3=(5 π)/(4), 所以 2 x_1+3 x_2+x_3=2(x_1+x_2)+(x_2+x_3) 见图 =(2 π)/(4)+(5 π)/(4)=(7 π)/(4). 故选 D",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000622",
+        "qid": "cmm-math-000622",
+        "originalFileName": "9177.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9177.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9177.jpg",
+        "originalFileName": "9177.jpg",
+        "originalWidth": 469,
+        "originalHeight": 388,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.784Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0064",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "平面几何",
+        "代数式与方程不等式",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 [0,2 π] 内, 不等式 x<-√(3)2 的解集是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(0, π)"
+        },
+        {
+          "label": "B",
+          "text": "((π)/(3), (4 π)/(3))"
+        },
+        {
+          "label": "C",
+          "text": "((4 π)/(3), (5 π)/(3))"
+        },
+        {
+          "label": "D",
+          "text": "((5 π)/(3), 2 π)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "画出 y= x, x [0,2 π] 的草图如下:见图 因为 (π)/(3)=√(3)2, 所以 (π+(π)/(3))=-√(3)2, (2 π-(π)/(3))=-√(3)2. 即在 [0,2 π] 内, 满足 x=-√(3)2 的是 x=(4 π)/(3) 或 x=(5 π)/(3). 可知不等式 x<-√(3)2 的解集是 ((4 π)/(3), (5 π)/(3)). ## [答案]C",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-000646",
+        "qid": "cmm-math-000646",
+        "originalFileName": "8897.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：数轴图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 8897.jpg",
+        "source": "open_dataset",
+        "kind": "number_line",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8897.jpg",
+        "originalFileName": "8897.jpg",
+        "originalWidth": 457,
+        "originalHeight": 194,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.787Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0065",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "如图, 函数 y=f(x) 在 A, B 两点间的平均变化率是 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "-1"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "-2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析: 解答: 依题意可知 y=y_B-y_A=1-3=-2, x=x_B-x_A=3-1=2, 所以函数 y=f(x) 在 A, B 两点间的平均变化率为 ( y)/( x)=(-2)/(2)=-1, 故选 B. 分析: 本题主要考查了变化的快慢与变化率, 解决问题的关键是根据变化率的概念进行分析即可.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001075",
+        "qid": "cmm-math-001075",
+        "originalFileName": "9294.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9294.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9294.jpg",
+        "originalFileName": "9294.jpg",
+        "originalWidth": 328,
+        "originalHeight": 265,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.789Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0066",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知函数 f(x)=A ( x+)(A>0, >0,||<(π)/(2)) 的部分图象如图所示, 则函数 f(x) 的解析式为 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "f(x)=√(2) ((π)/(8) x+(π)/(4))"
+        },
+        {
+          "label": "B",
+          "text": "f(x)=√(2) ((π)/(8) x-(π)/(4))"
+        },
+        {
+          "label": "C",
+          "text": "f(x)=√(2) ((π)/(8) x+(3 π)/(4))"
+        },
+        {
+          "label": "D",
+          "text": "f(x)=√(2) ((π)/(8) x-(3 π)/(4))"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由函数图像可知 A=√(2), (T)/(2)=6-(-2)=8=(π)/(), 所以 =(π)/(8). 由点 (2, √(2)), 可得 2 × (π)/(8)+=(π)/(2)+2 k π, k Z, 解得 =(π)/(4)+2 k π, k Z. 由 ||<(π)/(2), 可得 =(π)/(4), 所以 f(x)=√(2) ((π)/(8) x+(π)/(4)). 故选 A.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001125",
+        "qid": "cmm-math-001125",
+        "originalFileName": "9064.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9064.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9064.jpg",
+        "originalFileName": "9064.jpg",
+        "originalWidth": 486,
+        "originalHeight": 342,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.797Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0067",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "圆",
+        "代数式与方程不等式",
+        "导数",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "如果 (π)/(4)<<(π)/(2), 那么下列不等式成立的是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "< <"
+        },
+        {
+          "label": "B",
+          "text": "< <"
+        },
+        {
+          "label": "C",
+          "text": "< <"
+        },
+        {
+          "label": "D",
+          "text": "< <"
+        }
+      ],
+      "answer": "A",
+      "analysis": "如图所示, 见图在单位圆中分别作出 的正弦线 M P ,余弦线 O M ,正切线 A T, 很容易地观察出 O M<M P<A T, 即 < < .故选A.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001141",
+        "qid": "cmm-math-001141",
+        "originalFileName": "9098.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 9098.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/9098.jpg",
+        "originalFileName": "9098.jpg",
+        "originalWidth": 280,
+        "originalHeight": 294,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.800Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_image_0068",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_b1_c4_4"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "下列函数中, 图象的一部分是如图 1-5-3 的是( ) 见图 图 1-5-3",
+      "options": [
+        {
+          "label": "A",
+          "text": "y= (x+(π)/(6))"
+        },
+        {
+          "label": "B",
+          "text": "y= (2 x-(π)/(6))"
+        },
+        {
+          "label": "C",
+          "text": "y= (4 x-(π)/(3))"
+        },
+        {
+          "label": "D",
+          "text": "y= (2 x-(π)/(6))"
+        }
+      ],
+      "answer": "D",
+      "analysis": "由图象知, (1)/(4) T=(π)/(12)-(-(π)/(6))=(π)/(4), 所以 T=π=(2 π)/(), 所以 =2, 把 y= 2 x 的图象向右平移 (π)/(12) 个单位即得所给图象, 所以 所求函数为 y= 2(x-(π)/(12))= (2 x-(π)/(6)). ## [答案]D",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001157",
+        "qid": "cmm-math-001157",
+        "originalFileName": "8912.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "高二"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "高二数学题目配图，来源 CMM-Math 原图 8912.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/8912.jpg",
+        "originalFileName": "8912.jpg",
+        "originalWidth": 306,
+        "originalHeight": 302,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.802Z"
+      },
+      "status": "ready"
+    }
+  ]
+}

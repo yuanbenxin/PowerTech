@@ -1,0 +1,23 @@
+{
+  "cardId": "j8a_m07",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-isosceles-triangle-property-proof",
+  "visualLevel": "A",
+  "source": "source.html?rev=20260718-isosceles-hud-single-screen-v1",
+  "sourceAdapter": {
+    "cardId": "j8a_m07",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j8a_m07",
+    "panelClass": "math-source-panel-j8a_m07",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：等腰三角形性质与判定。左侧承载 SVG 几何画板、顶点拖拽和性质板书 HUD，右侧平台面板承载探究主题、参数调节和证明步骤。"
+}

@@ -1,0 +1,29 @@
+{
+  "cardId": "j9b_m04",
+  "status": "ready",
+  "engine": "cube-section-explorer",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-cube-section-explorer",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码已接入：正方体截面的所有可能；统一为左侧模拟框和右侧操作面板；资源均为本地文件，无 CDN。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j9b_m04",
+    "panelSelector": ".panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j9b_m04",
+    "panelClass": "math-source-panel-j9b_m04",
+    "inlineFunctionNames": [
+      "preset",
+      "draw",
+      "setMode",
+      "playBuild",
+      "nextChallenge",
+      "toggleMiniZoom"
+    ],
+    "stylePreScoped": true
+  }
+}

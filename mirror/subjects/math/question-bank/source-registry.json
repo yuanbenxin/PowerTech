@@ -1,0 +1,446 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": {
+    "principle": "题库扩充优先使用公开真题、授权题库和开源数据集；AI 只做结构化、拆解建议、字段清洗和可视化卡片匹配，不凭空生成生产题目。",
+    "productionQuestionRule": "进入正式题库的题目必须保留来源、许可证或使用状态、原始题号或父题关系、答案解析审核状态。",
+    "figureRule": "题目图片必须来自官方 PDF 裁图、开源数据集原图、人工重绘或已验证模板；未审核图片不能进入 ready 题库。"
+  },
+  "sourceTypes": [
+    {
+      "type": "exam_real",
+      "label": "考试真题",
+      "priority": 1,
+      "requiresUrl": true,
+      "requiresOriginalQuestionNo": true,
+      "defaultLearningStage": "exam_real"
+    },
+    {
+      "type": "exam_decomposed",
+      "label": "真题拆解",
+      "priority": 2,
+      "requiresUrl": true,
+      "requiresParentQuestionId": true,
+      "defaultLearningStage": "exam_decomposed"
+    },
+    {
+      "type": "exam_adapted",
+      "label": "真题改编",
+      "priority": 3,
+      "requiresUrl": true,
+      "requiresParentQuestionId": true,
+      "defaultLearningStage": "exam_decomposed"
+    },
+    {
+      "type": "school_exam",
+      "label": "校内/模拟",
+      "priority": 4,
+      "requiresUrl": false,
+      "requiresOriginalQuestionNo": true,
+      "defaultLearningStage": "topic_boost"
+    },
+    {
+      "type": "open_dataset",
+      "label": "开源题库",
+      "priority": 5,
+      "requiresUrl": true,
+      "requiresOriginalQuestionNo": false,
+      "defaultLearningStage": "sync_basic"
+    },
+    {
+      "type": "card_training",
+      "label": "可视化专项",
+      "priority": 6,
+      "requiresUrl": false,
+      "requiresOriginalQuestionNo": false,
+      "defaultLearningStage": "sync_basic"
+    }
+  ],
+  "registeredSources": [
+    {
+      "name": "TAL-SCQ5K-CN",
+      "status": "imported",
+      "stageScope": [
+        "junior",
+        "senior"
+      ],
+      "sourceType": "open_dataset",
+      "license": "MIT",
+      "url": "https://github.com/math-eval/TAL-SCQ5K",
+      "importedShards": [
+        "junior/tal-scq5k-junior.json",
+        "senior/tal-scq5k-senior.json",
+        "junior/tal-scq5k-junior-extra.json",
+        "senior/tal-scq5k-senior-weak-coverage.json"
+      ],
+      "notes": "中文数学选择题，已按题型、答案解析、学段信号和可视化卡片匹配过滤；本次新增高中弱项补齐 29 道，聚焦导数和向量。分布：derivative=11，vector=18。"
+    },
+    {
+      "name": "CMM-Math",
+      "status": "imported",
+      "stageScope": [
+        "junior",
+        "senior"
+      ],
+      "sourceType": "open_dataset",
+      "license": "bsd-3-clause",
+      "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+      "importedShards": [
+        "junior/cmm-math-junior.json",
+        "senior/cmm-math-senior.json",
+        "senior/cmm-math-senior-extra.json",
+        "senior/cmm-math-senior-topic-fill.json",
+        "junior/cmm-math-junior-topic-fill.json",
+        "junior/cmm-math-junior-extra.json",
+        "senior/cmm-math-senior-curriculum-gap.json",
+        "junior/cmm-math-junior-j9b-gap.json",
+        "senior/cmm-math-senior-weak-coverage.json",
+        "senior/cmm-math-reviewed-image-questions.json",
+        "junior/cmm-math-reviewed-image-questions.json"
+      ],
+      "notes": "只导入或重分类无未审核图片、四选项、有答案、有解析且学段明确的 CMM-Math 题；本次新增高中弱项补齐 210 题，优先覆盖导数、向量、数列。分布：derivative=88，vector=32，sequence=90。 本次新增已审核原图直用图片题，图片来自 CMM-Math images.zip，导入前已由本地复核页标记为可用。 本次将已审原图直用图片题按真实学段拆分为初中/高中两个 shard，图片来自 CMM-Math images.zip，导入前已由本地复核页标记为可用。"
+    },
+    {
+      "name": "GAOKAO-Bench",
+      "status": "imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "Apache-2.0",
+      "url": "https://github.com/OpenLMLab/GAOKAO-Bench",
+      "importedShards": [
+        "senior/gaokao-bench-senior.json"
+      ],
+      "notes": "只导入高中数学客观选择题；过滤无解析、多答案、非四选项、图片链接、残留 LaTeX/OCR 或控制字符异常的题目。"
+    },
+    {
+      "name": "MathMC",
+      "status": "reviewed_not_imported",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "cc-by-4.0",
+      "url": "https://huggingface.co/datasets/SallyTan/MathMC",
+      "importedShards": [],
+      "notes": "许可证 CC BY 4.0，满足可再分发和商用要求；抽样显示题目主要为小学算术、生活化三四选题，答案解析较短，和当前初中/高中可视化卡片体系不匹配。后续可作为小初衔接或补弱包候选，不进入当前初高中 ready 题库。"
+    },
+    {
+      "name": "MM-Math",
+      "status": "imported",
+      "stageScope": [
+        "junior"
+      ],
+      "sourceType": "open_dataset",
+      "license": "MIT",
+      "url": "https://github.com/kge-sun/MM-Math",
+      "importedShards": [
+        "junior/mm-math-ready-pilot.json"
+      ],
+      "notes": "多模态初中数学推理数据集，来源自中国初中真实考试；当前已有 106 道人工核验图片、中文化和客观化拆解的 ready 图形题，其余候选仍需图片审核、答案验算和客观化复核。"
+    },
+    {
+      "name": "cn-k12",
+      "status": "reviewed_not_imported",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "cc-by-nc-2.0",
+      "url": "https://huggingface.co/datasets/aslawliet/cn-k12",
+      "importedShards": [],
+      "notes": "Hugging Face 上的 K12 数学题库，规模较大但许可证含 NC 非商业限制，且抽样存在英文 LaTeX 表达与非当前题库口径题型；不混入当前可再分发 ready 题库。"
+    },
+    {
+      "name": "C-Eval",
+      "status": "reviewed_not_imported",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "mixed_or_unclear",
+      "url": "https://github.com/hkust-nlp/ceval",
+      "importedShards": [],
+      "notes": "包含初中/高中多学科选择题，GitHub 页面显示代码 MIT 但数据许可证存在 Unknown LICENSE-DATA；未确认题目可再分发前不进入 ready 题库。"
+    },
+    {
+      "name": "CMMLU",
+      "status": "reviewed_not_imported",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "cc-by-nc-sa-4.0",
+      "url": "https://www.modelscope.cn/datasets/opencompass/cmmlu",
+      "importedShards": [],
+      "notes": "中文多任务评测集，含数学相关科目；许可证为非商业 CC BY-NC-SA 4.0，不混入当前可再分发 ready 题库。"
+    },
+    {
+      "name": "AGIEval",
+      "status": "reviewed_not_imported",
+      "stageScope": [],
+      "sourceType": "exam_real",
+      "license": "original-datasets",
+      "url": "https://github.com/ruixiangcui/AGIEval",
+      "importedShards": [],
+      "notes": "包含高考数学等任务，但项目说明要求数据使用遵循原始数据集许可证；未逐项确认原始试题授权前不进入 ready 题库。"
+    },
+    {
+      "name": "CMATH",
+      "status": "reviewed_not_imported",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "cc-by-4.0",
+      "url": "https://huggingface.co/datasets/weitianwen/cmath",
+      "importedShards": [],
+      "notes": "许可证 CC BY 4.0，满足可再分发和商用要求；数据集说明为 Chinese Elementary School Math Word Problems，抽样字段为 grade 1-6 的小学应用题，且多为非选择题数值答案，不适合当前初中/高中自动判分选择题和可视化卡片匹配。后续可作为小初衔接或补弱包候选。"
+    },
+    {
+      "name": "Math23K",
+      "status": "needs_license",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "unknown",
+      "url": "https://github.com/LYH-YF/MWPToolkit",
+      "importedShards": [],
+      "notes": "常见中文数学应用题数据集，但题源偏算术应用题且许可证/再分发授权链不适合直接进入正式初中题库；只作为后续授权核查候选。"
+    },
+    {
+      "name": "APE210K",
+      "status": "needs_license",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "unknown",
+      "url": "https://github.com/LYH-YF/MWPToolkit",
+      "importedShards": [],
+      "notes": "大规模中文应用题数据集，但当前未确认可再分发许可证，且主观/应用题形态不符合自动可判选择题入库规则。"
+    },
+    {
+      "name": "public-zhongkao-pdf",
+      "status": "needs_license",
+      "stageScope": [],
+      "sourceType": "exam_real",
+      "license": "unknown",
+      "url": "https://www.google.com/search?q=%E4%B8%AD%E8%80%83+%E6%95%B0%E5%AD%A6+pdf",
+      "importedShards": [],
+      "notes": "网上可检索到大量中考 PDF，但多数无明确再分发授权；没有官方授权或可复用许可证前，不截图、不转写、不进入 ready 题库。"
+    },
+    {
+      "name": "GeoQA",
+      "status": "imported",
+      "stageScope": [
+        "junior"
+      ],
+      "sourceType": "open_dataset",
+      "license": "MIT",
+      "url": "https://huggingface.co/datasets/hz2475/geoQA",
+      "importedShards": [
+        "junior/geoqa-geometry.json"
+      ],
+      "notes": "初中几何图形问答数据集，已导入 400 道四选项、单答案、有解析、有原图且通过联系表抽检的题目；文本已清理 LaTeX/OCR 残留，并按知识点匹配到现有可视化卡片。"
+    },
+    {
+      "name": "GAOKAO-MM",
+      "status": "imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "Apache-2.0",
+      "url": "https://github.com/OpenMOSS/GAOKAO-MM",
+      "importedShards": [
+        "senior/gaokao-mm-senior-figures.json"
+      ],
+      "notes": "高考多模态数学选择题数据集，导入 79 道高中数学带图选择题；多图题已合成为完整题图，并按现有高中可视化卡片匹配。"
+    },
+    {
+      "name": "Figshare-Gaokao-Probability-2013-2025",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "CC BY 4.0",
+      "url": "https://figshare.com/articles/dataset/Gaokao_Mathematics_Probability_Question_Dataset_289_items_with_three_difficulty_tiers_/32794536",
+      "importedShards": [],
+      "notes": "2026-06-25 发布的高考概率题数据集，元数据说明含 289 道 2014-2023 高考概率题、官方答案和解析，许可证 CC BY 4.0 满足可再分发和商用要求；实际压缩包为英文 LaTeX 题面和图片资源，主文件约 296 个题号但存在重复编号、工作提示残留、英文翻译题面、中文/英文混杂，且只有少量示例带 Answer/Analysis。后续可作为高中概率专题人工清洗候选，但必须先回到中文原题、补齐并核验答案解析、逐张审核图片后再导入 ready 题库。"
+    },
+    {
+      "name": "llmeval-Gaokao2024-Math",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "unknown",
+      "url": "https://github.com/llmeval/llmeval-Gaokao2024-Math",
+      "importedShards": [],
+      "notes": "高考 2024 数学评测候选源；当前未确认可再分发许可证和中文题面结构化质量，不进入 ready 题库。"
+    },
+    {
+      "name": "dipikakhullar-gaokao-imagefolder",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "mit",
+      "url": "https://huggingface.co/datasets/dipikakhullar/gaokao",
+      "importedShards": [],
+      "notes": "Hugging Face 图片数据集，形式更接近高考试卷图片包；缺少可直接判题的中文题干、选项、答案解析结构，必须先 OCR、裁题、答案核验和图片审核，不直接进入正式题库。"
+    },
+    {
+      "name": "MARIO-Gaokao2023-Math-En",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "mit",
+      "url": "https://huggingface.co/datasets/MARIO-Math-Reasoning/Gaokao2023-Math-En",
+      "importedShards": [],
+      "notes": "英文版 2023 高考数学推理数据集，可用于研究题目覆盖，但当前题库面向中文学练系统；若导入需要回到中文原题和官方解析核验，不能直接用英文翻译题凑数。"
+    },
+    {
+      "name": "NuminaMath-1.5-cn_k12",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "junior",
+        "senior"
+      ],
+      "sourceType": "open_dataset",
+      "license": "apache-2.0",
+      "url": "https://huggingface.co/datasets/AI-MO/NuminaMath-1.5",
+      "importedShards": [],
+      "notes": "NuminaMath-1.5 标注为 Apache-2.0，含约 26.8 万 cn_k12 样本并提供 answer/problem_type/question_type 元数据；抽样显示题干和解析主要为英文翻译和 CoT 推理文本，不适合直接进入当前中文学练题库。后续若使用，必须回到中文原题或人工翻译核验后再导入。"
+    },
+    {
+      "name": "CMMaTH",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "junior",
+        "senior"
+      ],
+      "sourceType": "open_dataset",
+      "license": "unknown",
+      "url": "https://github.com/zzli2022/CMMaTH",
+      "importedShards": [],
+      "notes": "中文 K12 多模态数学 benchmark，样例题面贴近当前题库需求，但仓库未提供明确 LICENSE，GitHub API 也未识别许可证；README 说明当前仅释放部分数据。未确认可再分发前不导入 ready 题库。"
+    },
+    {
+      "name": "deekur-gaokaomath",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "CC BY 4.0",
+      "url": "https://github.com/deekur/gaokaomath",
+      "importedShards": [],
+      "notes": "历年高考数学真题 PDF 汇总，仓库 LICENSE 声明 CC BY 4.0，目录审查显示约 775 个 PDF，主要是整卷扫描/排版文件而非可判题的结构化题库；README 还标注部分历史卷来源网络、真实性存疑。可作为人工查卷和后续 OCR/裁题管线的来源候选，但当前缺少题干、选项、答案解析、图片裁剪和卡片匹配结构，不直接进入 ready 题库。"
+    },
+    {
+      "name": "BelleGroup-school_math_0.25M",
+      "status": "reviewed_not_imported",
+      "stageScope": [],
+      "sourceType": "open_dataset",
+      "license": "gpl-3.0-with-non-commercial-readme-limit",
+      "url": "https://huggingface.co/datasets/BelleGroup/school_math_0.25M",
+      "importedShards": [],
+      "notes": "Hugging Face 元数据标注 GPL-3.0，但数据卡正文明确要求仅用于研究目的且不得商业使用；同时数据由 ChatGPT 生成且未严格校验。按当前规则属于禁止商用来源，并且不符合高质量真题/开源题库入库标准，不导入。"
+    },
+    {
+      "name": "FrankieYao-GaoKaoMath",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "MIT",
+      "url": "https://huggingface.co/datasets/FrankieYao/GaoKaoMath",
+      "importedShards": [],
+      "notes": "MIT 许可证满足可再分发和商用要求，数据结构含 problem、answer、score、year、number、province；抽样显示题面为英文 LaTeX 翻译，且只有最终答案，缺少中文题面、选项结构和解析。若后续使用，必须回到中文原题和官方解析核验后再进入题库，不能直接用英文翻译题凑数。"
+    },
+    {
+      "name": "dmayhem93-agieval-gaokao-mathqa",
+      "status": "reviewed_not_imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "exam_real",
+      "license": "MIT",
+      "url": "https://huggingface.co/datasets/dmayhem93/agieval-gaokao-mathqa",
+      "importedShards": [],
+      "notes": "Hugging Face 数据卡标注 MIT，字段为 query、choices、gold，共 351 道高考数学选择题；来源说明为 AGIEval 加工版本。当前缺少解析字段，且 AGIEval 原项目要求遵循原始数据集许可。未逐题确认原始授权与解析前，不进入 ready 题库；可作为后续补解析和原题核验候选。"
+    },
+    {
+      "name": "Conic10K",
+      "status": "imported",
+      "stageScope": [
+        "senior"
+      ],
+      "sourceType": "open_dataset",
+      "license": "MIT",
+      "url": "https://github.com/whyNLP/Conic10K",
+      "importedShards": [
+        "senior/conic10k-senior-conics.json"
+      ],
+      "notes": "中文高中圆锥曲线数据集，MIT 许可证；本次只导入带解析 process、答案表达式简单可核验、题面可匹配现有抛物线/椭圆双曲线可视化卡片的题目，并用同源答案表达式构造四选一客观题，避免主观填空进入 ready 题库。"
+    }
+  ],
+  "figureSources": [
+    {
+      "source": "official_pdf_crop",
+      "label": "官方 PDF 裁图",
+      "requiresReviewer": true
+    },
+    {
+      "source": "open_dataset",
+      "label": "开源数据集原图",
+      "requiresReviewer": true
+    },
+    {
+      "source": "manual_redraw",
+      "label": "按原题人工重绘",
+      "requiresReviewer": true
+    },
+    {
+      "source": "validated_template",
+      "label": "已验证模板图",
+      "requiresReviewer": false
+    }
+  ],
+  "figureKinds": [
+    "number_line",
+    "coordinate",
+    "function_graph",
+    "geometry",
+    "circle",
+    "statistics",
+    "probability",
+    "solid_geometry",
+    "sequence",
+    "vector",
+    "set",
+    "diagram"
+  ],
+  "learningStages": [
+    {
+      "stage": "sync_basic",
+      "label": "同步基础",
+      "lowGradeDefault": true
+    },
+    {
+      "stage": "topic_boost",
+      "label": "专题提升",
+      "lowGradeDefault": true
+    },
+    {
+      "stage": "exam_decomposed",
+      "label": "真题拆解",
+      "lowGradeDefault": true
+    },
+    {
+      "stage": "exam_real",
+      "label": "考试真题",
+      "lowGradeDefault": false
+    },
+    {
+      "stage": "challenge",
+      "label": "压轴挑战",
+      "lowGradeDefault": false
+    }
+  ]
+}

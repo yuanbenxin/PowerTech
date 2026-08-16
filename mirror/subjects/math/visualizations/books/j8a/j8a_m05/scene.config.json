@@ -1,0 +1,23 @@
+{
+  "cardId": "j8a_m05",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-triangle-side-inequality-lab",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8a_m05",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j8a_m05",
+    "panelClass": "math-source-panel-j8a_m05",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：三角形三边关系实验室。左侧承载 SVG 几何画板、端点拖拽和三边关系板书 HUD，右侧平台面板承载预设、边长调节、动画与判定说明。"
+}

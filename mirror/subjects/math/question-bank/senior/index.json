@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "senior",
+  "label": "高中数学题库",
+  "status": "ready",
+  "shards": [
+    {
+      "grade": "高中开源题",
+      "file": "tal-scq5k-senior.json"
+    },
+    {
+      "grade": "TAL-SCQ5K 高中弱项补齐题",
+      "file": "tal-scq5k-senior-weak-coverage.json"
+    },
+    {
+      "grade": "高中 GAOKAO-MM 高考图形题",
+      "file": "gaokao-mm-senior-figures.json"
+    },
+    {
+      "grade": "高中 Conic10K 圆锥曲线题",
+      "file": "conic10k-senior-conics.json"
+    },
+    {
+      "grade": "高中 CMM-Math 扩展题",
+      "file": "cmm-math-senior-extra.json"
+    },
+    {
+      "grade": "高中 CMM-Math 专题补齐题",
+      "file": "cmm-math-senior-topic-fill.json"
+    },
+    {
+      "grade": "高中 CMM-Math 课程缺口补齐题",
+      "file": "cmm-math-senior-curriculum-gap.json"
+    },
+    {
+      "grade": "高中 CMM-Math 弱项补齐题",
+      "file": "cmm-math-senior-weak-coverage.json"
+    },
+    {
+      "grade": "高中 GAOKAO-Bench 高考真题",
+      "file": "gaokao-bench-senior.json"
+    },
+    {
+      "grade": "高中 CMM-Math 开源题",
+      "file": "cmm-math-senior.json"
+    },
+    {
+      "grade": "暂存库优选题",
+      "file": "staging-open-candidates-senior.json"
+    },
+    {
+      "grade": "高中 CMM-Math 已审图片题",
+      "file": "cmm-math-reviewed-image-questions.json"
+    }
+  ]
+}

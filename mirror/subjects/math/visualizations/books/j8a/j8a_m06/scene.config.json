@@ -1,0 +1,23 @@
+{
+  "cardId": "j8a_m06",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-polygon-angle-sum-decomposition",
+  "visualLevel": "A",
+  "source": "source.html?rev=20260718-hud-single-screen-v2",
+  "sourceAdapter": {
+    "cardId": "j8a_m06",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j8a_m06",
+    "panelClass": "math-source-panel-j8a_m06",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：三角形与多边形内角和拆分。左侧承载动态 SVG 几何画板、缩放工具和割补板书 HUD，右侧平台面板承载拆分方法、边数、动画与定理说明。"
+}

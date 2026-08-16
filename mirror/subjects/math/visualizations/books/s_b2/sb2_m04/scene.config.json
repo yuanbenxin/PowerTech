@@ -1,0 +1,24 @@
+{
+  "cardId": "sb2_m04",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-complex-plane-rotation-riemann-sphere",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb2_m04",
+    "panelSelector": ".panel",
+    "needsThree": true,
+    "stagePointerWindow": true,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sb2_m04",
+    "panelClass": "math-source-panel-sb2_m04",
+    "inlineFunctionNames": [
+      "setMode"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "Local HTML source: complex plane geometry, multiplication rotation, roots of unity, epicycle drawing, and Riemann sphere mode."
+}

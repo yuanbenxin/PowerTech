@@ -1,0 +1,456 @@
+{
+  "book": {
+    "id": "jm_topic",
+    "label": "学科专题",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "jm_topic_number",
+        "label": "数与式专题",
+        "title": "数与式专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_topic_equation",
+        "label": "方程与不等式专题",
+        "title": "方程与不等式专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_topic_function",
+        "label": "函数专题",
+        "title": "函数专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_topic_geometry",
+        "label": "几何证明专题",
+        "title": "几何证明专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_topic_circle",
+        "label": "圆与相似专题",
+        "title": "圆与相似专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_topic_statistics",
+        "label": "统计概率与空间专题",
+        "title": "统计概率与空间专题",
+        "sampleTopics": []
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "jm_topic_m13",
+      "chapterIds": [
+        "jm_topic_circle"
+      ],
+      "title": "圆的性质综合专题",
+      "detail": "围绕垂径定理、圆周角定理和切线长定理，提供可拖拽圆形几何图形、实时测量读数、公式推导和探索预设。",
+      "image": "assets/media/jm_topic_m13.webp",
+      "fallbackImage": "assets/media/jm_topic_m13.webp",
+      "isLocked": false,
+      "engine": "circle-properties-topic-model",
+      "visualLevel": "A",
+      "tags": [
+        "圆",
+        "性质",
+        "专题"
+      ],
+      "points": [
+        "圆",
+        "性质",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m14",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "title": "面积法专题",
+      "detail": "围绕维维亚尼定理、直角三角形双高和角平分线面积比，提供可拖拽几何图形、实时面积读数和面积演算推导。",
+      "image": "assets/media/jm_topic_m14.webp",
+      "fallbackImage": "assets/media/jm_topic_m14.webp",
+      "isLocked": false,
+      "engine": "area-method-topic-model",
+      "visualLevel": "A",
+      "tags": [
+        "面积法",
+        "几何",
+        "专题"
+      ],
+      "points": [
+        "面积法",
+        "几何",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m16",
+      "chapterIds": [
+        "jm_topic_statistics"
+      ],
+      "title": "空间想象与三视图专题",
+      "detail": "围绕立体方块搭建、主视图/左视图/俯视图投影和反向还原，提供可旋转 3D 画布、投影盘、标数控制器和挑战任务。",
+      "image": "assets/media/jm_topic_m16.webp",
+      "fallbackImage": "assets/media/jm_topic_m16.webp",
+      "isLocked": false,
+      "engine": "spatial-three-view-topic-model",
+      "visualLevel": "A",
+      "tags": [
+        "空间想象",
+        "三视图",
+        "专题"
+      ],
+      "points": [
+        "空间想象",
+        "三视图",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m01",
+      "chapterIds": [
+        "jm_topic_number"
+      ],
+      "title": "数与式变形总览",
+      "detail": "本地互动课件：数与式变形总览。支持课堂触控操作与动态探究。",
+      "image": "assets/media/jm_topic_m01.webp",
+      "fallbackImage": "assets/media/jm_topic_m01.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "数与式",
+        "变形",
+        "专题"
+      ],
+      "points": [
+        "数与式",
+        "变形",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m02",
+      "chapterIds": [
+        "jm_topic_number"
+      ],
+      "title": "整式与因式分解专题",
+      "detail": "本地互动课件：整式与因式分解专题。支持课堂触控操作与动态探究。",
+      "image": "assets/media/jm_topic_m02.webp",
+      "fallbackImage": "assets/media/jm_topic_m02.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "整式",
+        "因式分解",
+        "专题"
+      ],
+      "points": [
+        "整式",
+        "因式分解",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m03",
+      "chapterIds": [
+        "jm_topic_number"
+      ],
+      "title": "根式化简专题",
+      "detail": "整合二次根式定义、化简、乘除和合并规则，在白色模拟框中完成拆因数、化简与同类根式合并推演。",
+      "image": "assets/media/jm_topic_m03.webp",
+      "fallbackImage": "assets/media/jm_topic_m03.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "根式",
+        "化简",
+        "专题"
+      ],
+      "points": [
+        "根式",
+        "化简",
+        "专题"
+      ],
+      "interactionMode": "touch-topic-lab"
+    },
+    {
+      "cardId": "jm_topic_m04",
+      "chapterIds": [
+        "jm_topic_equation"
+      ],
+      "title": "方程解法流程专题",
+      "detail": "按一元一次、二元一次和一元二次方程串联解法流程，在白色模拟框中呈现代数变形、步骤判断与错误警报。",
+      "image": "assets/media/jm_topic_m04.webp",
+      "fallbackImage": "assets/media/jm_topic_m04.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "方程",
+        "流程",
+        "专题"
+      ],
+      "points": [
+        "方程",
+        "流程",
+        "专题"
+      ],
+      "interactionMode": "touch-topic-lab"
+    },
+    {
+      "cardId": "jm_topic_m05",
+      "chapterIds": [
+        "jm_topic_equation"
+      ],
+      "title": "不等式与区间专题",
+      "detail": "把不等式、不等式组和数轴区间表示放在同一视图，联动观察解集、交并关系和临界点。",
+      "image": "assets/media/jm_topic_m05.webp",
+      "fallbackImage": "assets/media/jm_topic_m05.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "不等式",
+        "区间",
+        "专题"
+      ],
+      "points": [
+        "不等式",
+        "区间",
+        "专题"
+      ],
+      "interactionMode": "touch-topic-lab"
+    },
+    {
+      "cardId": "jm_topic_m06",
+      "chapterIds": [
+        "jm_topic_function"
+      ],
+      "title": "一次函数专题",
+      "detail": "梳理一次函数图像、解析式、斜率、截距和实际问题，在坐标白板中动态观察直线变化。",
+      "image": "assets/media/jm_topic_m06.webp",
+      "fallbackImage": "assets/media/jm_topic_m06.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "一次函数",
+        "图像",
+        "专题"
+      ],
+      "points": [
+        "一次函数",
+        "图像",
+        "专题"
+      ],
+      "interactionMode": "touch-topic-lab"
+    },
+    {
+      "cardId": "jm_topic_m07",
+      "chapterIds": [
+        "jm_topic_function"
+      ],
+      "title": "二次函数专题",
+      "detail": "整合抛物线参数、顶点、交点、最值和建模，在坐标白板中动态观察二次函数核心性质。",
+      "image": "assets/media/jm_topic_m07.webp",
+      "fallbackImage": "assets/media/jm_topic_m07.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "二次函数",
+        "抛物线",
+        "专题"
+      ],
+      "points": [
+        "二次函数",
+        "抛物线",
+        "专题"
+      ],
+      "interactionMode": "touch-topic-lab"
+    },
+    {
+      "cardId": "jm_topic_m09",
+      "chapterIds": [
+        "jm_topic_function"
+      ],
+      "title": "函数与方程交点专题",
+      "detail": "用图像交点统一解释方程根、不等式解集和函数关系，在坐标白板中联动直线、曲线和交点。",
+      "image": "assets/media/jm_topic_m09.webp",
+      "fallbackImage": "assets/media/jm_topic_m09.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "函数",
+        "方程",
+        "交点"
+      ],
+      "points": [
+        "函数",
+        "方程",
+        "交点"
+      ],
+      "interactionMode": "touch-topic-lab"
+    },
+    {
+      "cardId": "jm_topic_m10",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "title": "几何辅助线构造专题",
+      "detail": "整理延长、截取、平行、垂直、旋转、翻折等辅助线策略，在几何白板中完成构造和证明推演。",
+      "image": "assets/media/jm_topic_m10.webp",
+      "fallbackImage": "assets/media/jm_topic_m10.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "辅助线",
+        "几何证明",
+        "专题"
+      ],
+      "points": [
+        "辅助线",
+        "几何证明",
+        "专题"
+      ],
+      "interactionMode": "touch-topic-lab"
+    },
+    {
+      "cardId": "jm_topic_m11",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "title": "全等证明链专题",
+      "detail": "通过可拖拽几何画板、条件卡片和证明链卡槽，训练全等三角形证明中的条件识别、对应关系、判定定理和结论导出。",
+      "image": "assets/media/jm_topic_m11.webp",
+      "fallbackImage": "assets/media/jm_topic_m11.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "全等",
+        "证明链",
+        "几何证明"
+      ],
+      "points": [
+        "条件识别",
+        "全等判定",
+        "结论推导"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m12",
+      "chapterIds": [
+        "jm_topic_circle"
+      ],
+      "title": "相似证明链专题",
+      "detail": "通过可拖拽相似图形、比例条件卡片和证明链卡槽，训练相似三角形证明中的角关系、比例线段和结论推导。",
+      "image": "assets/media/jm_topic_m12.webp",
+      "fallbackImage": "assets/media/jm_topic_m12.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "相似",
+        "证明链",
+        "几何证明"
+      ],
+      "points": [
+        "角关系",
+        "比例线段",
+        "相似判定"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m17",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "title": "飞镖模型：凹四边形角关系",
+      "detail": "拖动凹四边形四个顶点，观察 ∠BDC = ∠A + ∠B + ∠C 的实时角度关系，并通过辅助线步骤完成飞镖模型证明和闯关练习。",
+      "image": "assets/media/jm_topic_m10.webp",
+      "fallbackImage": "assets/media/jm_topic_m10.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "飞镖模型",
+        "凹四边形",
+        "角关系",
+        "几何证明"
+      ],
+      "points": [
+        "凹角等于三个尖角之和",
+        "拖拽四点验证角度恒等式",
+        "两种辅助线证明方法"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m15",
+      "chapterIds": [
+        "jm_topic_statistics"
+      ],
+      "title": "统计概率专题",
+      "detail": "围绕频率稳定、树状图与列表法、集中趋势和统计图表，提供可操作的统计与概率综合实验室。",
+      "image": "assets/media/jm_topic_m15.webp",
+      "fallbackImage": "assets/media/jm_topic_m15.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "统计",
+        "概率",
+        "数据分析"
+      ],
+      "points": [
+        "频率稳定",
+        "概率模型",
+        "集中趋势"
+      ]
+    }
+  ],
+  "chapterTree": [
+    {
+      "id": "jm_topic_number",
+      "label": "数与式专题",
+      "children": []
+    },
+    {
+      "id": "jm_topic_equation",
+      "label": "方程与不等式专题",
+      "children": []
+    },
+    {
+      "id": "jm_topic_function",
+      "label": "函数专题",
+      "children": []
+    },
+    {
+      "id": "jm_topic_geometry",
+      "label": "几何证明专题",
+      "children": []
+    },
+    {
+      "id": "jm_topic_circle",
+      "label": "圆与相似专题",
+      "children": []
+    },
+    {
+      "id": "jm_topic_statistics",
+      "label": "统计概率与空间专题",
+      "children": []
+    }
+  ]
+}

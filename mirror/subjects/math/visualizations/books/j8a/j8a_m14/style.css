@@ -1,0 +1,880 @@
+/* ==========================================================================
+   轴对称与折叠作图实验室 - 样式表 (style.css)
+   设计风格：拟真木质工作台、磨砂玻璃面板、卡片式三维高仿真折纸
+   ========================================================================== */
+
+:root {
+    --bg-primary: #f8fafc;
+    --bg-card: rgba(255, 255, 255, 0.92);
+    --border-color: rgba(226, 232, 240, 0.85);
+    
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    
+    --primary: #4f46e5;          /* 科技靛蓝 */
+    --primary-light: rgba(79, 70, 229, 0.15);
+    --color-accent: #10b981;     /* 智能绿 */
+    --color-danger: #ef4444;     /* 警告红 */
+    
+    --font-math: 'Fredoka', 'Outfit', 'Noto Sans SC', sans-serif;
+    --font-sans: 'Outfit', 'Noto Sans SC', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/* ==========================================================================
+   1. 布局结构 (Grid Layout)
+   ========================================================================== */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 16px;
+    gap: 16px;
+}
+
+/* 头部 Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-left h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.badge {
+    background: var(--primary-light);
+    color: #a5b4fc;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 8px;
+    border: 1.2px solid rgba(79, 70, 229, 0.3);
+}
+
+.btn-help {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-help:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+/* 主内容布局 */
+.main-layout {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    min-height: 0;
+}
+
+/* 左侧主模拟画布（平台白网格舞台） */
+.simulation-column {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: #f8fafc;
+    background-image:
+        linear-gradient(rgba(226, 232, 240, 0.65) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(226, 232, 240, 0.65) 1px, transparent 1px);
+    background-size: 40px 40px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.sandbox-container {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.chamber-status-header {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    width: auto;
+    max-width: min(360px, calc(100% - 24px));
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    padding: 8px 12px;
+    border-radius: 999px;
+    margin: 0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.status-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.45);
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.status-indicator-dot.alert {
+    background: #ef4444;
+    box-shadow: 0 0 6px rgba(239, 68, 68, 0.45);
+}
+
+.status-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+    line-height: 1.35;
+}
+
+/* 右侧控制操作面板（平台统一深色样式） */
+.control-column {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    align-content: start;
+    gap: 14px;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.panel-section {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #f8fafc;
+}
+
+/* Unified operation panel standard: match j8a_m10/j8a_m11/j8a_m12 */
+.section-title,
+.panel-section h3 {
+    font-size: 13px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: rgba(248, 250, 252, 0.95);
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.section-title svg {
+    display: none;
+}
+
+/* ==========================================================================
+   2. Canvas 绘图容器
+   ========================================================================== */
+.canvas-container-wrapper {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    min-height: 0;
+}
+
+#folding-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.bottom-controller-panel {
+    display: none !important;
+}
+
+.angle-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.slider-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.angle-label,
+.slider-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(226, 232, 240, 0.86);
+}
+
+.angle-label strong,
+.slider-val-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    color: #67e8f9;
+    font-size: 16px;
+    font-weight: 850;
+    font-variant-numeric: tabular-nums;
+}
+
+.slider-row .scene-range-slider {
+    display: block;
+    width: 100%;
+    height: 28px;
+    min-height: 28px;
+    margin: 2px 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    accent-color: #3b82f6;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.slider-row .scene-range-slider::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        #3b82f6 0%,
+        #3b82f6 var(--slider-pct, 0%),
+        rgba(148, 163, 184, 0.22) var(--slider-pct, 0%),
+        rgba(148, 163, 184, 0.22) 100%
+    );
+}
+
+.slider-row .scene-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    margin-top: -11px;
+    border-radius: 50%;
+    border: 3px solid #0f172a;
+    background: #67e8f9;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.38);
+    cursor: pointer;
+}
+
+.slider-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 13px 11px;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.48);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: none;
+}
+
+.control-action-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.btn-auto-fold,
+.btn-control-action,
+.btn-mini-control,
+.btn-action.secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 38px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(15, 23, 42, 0.48);
+    color: rgba(226, 232, 240, 0.92);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-auto-fold:hover,
+.btn-control-action:hover,
+.btn-mini-control:hover,
+.btn-action.secondary:hover {
+    border-color: rgba(103, 232, 249, 0.46);
+    background: rgba(8, 145, 178, 0.18);
+    color: #f8fafc;
+}
+
+.btn-auto-fold.active-run {
+    border-color: rgba(103, 232, 249, 0.58);
+    background: rgba(8, 145, 178, 0.22);
+    color: #ecfeff;
+    box-shadow: inset 3px 0 0 #67e8f9;
+}
+
+/* ==========================================================================
+   3. 教学模式与辅助控制
+   ========================================================================== */
+.modes-grid,
+.presets-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+}
+
+.btn-mode,
+.btn-preset {
+    width: 100%;
+    min-height: 52px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 8px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.48);
+    color: rgba(226, 232, 240, 0.92);
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-mode .preset-num,
+.btn-preset .preset-num {
+    grid-row: 1 / span 2;
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: rgba(148, 163, 184, 0.14);
+    color: rgba(226, 232, 240, 0.78);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.btn-mode .mode-name,
+.btn-mode .preset-name,
+.btn-preset .preset-name {
+    display: block;
+    min-width: 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: rgba(248, 250, 252, 0.92);
+}
+
+.btn-mode .mode-desc,
+.btn-mode .preset-desc,
+.btn-preset .preset-desc {
+    display: block;
+    min-width: 0;
+    font-size: 11px;
+    line-height: 1.35;
+    color: rgba(203, 213, 225, 0.78);
+    margin-top: 1px;
+}
+
+.btn-mode:hover,
+.btn-preset:hover {
+    border-color: rgba(103, 232, 249, 0.46);
+    background: rgba(8, 145, 178, 0.18);
+    color: #f8fafc;
+}
+
+.btn-mode.active,
+.btn-preset.active,
+.btn-mini-control.active {
+    border-color: rgba(103, 232, 249, 0.58);
+    background: rgba(8, 145, 178, 0.22);
+    color: #ecfeff;
+    box-shadow: inset 3px 0 0 #67e8f9;
+}
+
+.btn-mode.active::after,
+.btn-preset.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #67e8f9;
+}
+
+.btn-mode.active .preset-num,
+.btn-preset.active .preset-num {
+    background: rgba(103, 232, 249, 0.9);
+    color: #0f172a;
+}
+
+.btn-mode.active .mode-name,
+.btn-mode.active .preset-name,
+.btn-preset.active .preset-name {
+    color: #ecfeff;
+}
+
+.btn-mode.active .mode-desc,
+.btn-mode.active .preset-desc,
+.btn-preset.active .preset-desc {
+    color: rgba(207, 250, 254, 0.82);
+}
+
+.interactive-action-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.compact-action-card {
+    gap: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+
+.action-card-text {
+    font-size: 12px;
+    color: rgba(203, 213, 225, 0.78);
+    line-height: 1.5;
+}
+
+.action-buttons-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-mini-control {
+    width: 100%;
+    min-height: 38px;
+    background: rgba(15, 23, 42, 0.48);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    color: rgba(226, 232, 240, 0.92);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-mini-control:hover {
+    border-color: rgba(103, 232, 249, 0.46);
+    background: rgba(8, 145, 178, 0.18);
+    color: #f8fafc;
+}
+
+.btn-mini-control.active {
+    border-color: rgba(103, 232, 249, 0.58);
+    background: rgba(8, 145, 178, 0.22);
+    color: #ecfeff;
+    box-shadow: inset 3px 0 0 #67e8f9;
+}
+
+/* ==========================================================================
+   4. HUD 板书（白玻璃卡，默认收起）
+   ========================================================================== */
+.simulation-column .hud-panel,
+.sandbox-container .hud-panel {
+    position: absolute;
+    left: 20px !important;
+    top: 20px !important;
+    right: auto !important;
+    z-index: 180 !important;
+    width: 360px !important;
+    max-width: calc(100% - 40px) !important;
+    max-height: none !important;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.24) !important;
+    border-radius: 14px !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9)) !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14), 0 2px 8px rgba(15, 23, 42, 0.06) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: #0f172a !important;
+}
+
+.simulation-column .hud-panel.collapsed,
+.sandbox-container .hud-panel.collapsed {
+    width: auto !important;
+    min-width: max-content !important;
+    max-width: calc(100% - 40px) !important;
+    height: 46px !important;
+    min-height: 46px !important;
+    max-height: none !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    border-color: rgba(148, 163, 184, 0.28) !important;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.13), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 46px !important;
+    height: 46px !important;
+    padding: 10px 12px !important;
+    background: rgba(248, 250, 252, 0.72) !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.76) !important;
+    gap: 10px !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+.simulation-column .hud-panel.collapsed .hud-header,
+.sandbox-container .hud-panel.collapsed .hud-header {
+    border-bottom: 0;
+    background: rgba(248, 250, 252, 0.72) !important;
+    border-radius: 999px !important;
+}
+
+.hud-title {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    white-space: nowrap !important;
+}
+
+.hud-title::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    flex: 0 0 14px;
+    background: radial-gradient(circle at 35% 35%, #ecfeff 0 18%, #38bdf8 22% 48%, #22c55e 52% 100%);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.12);
+}
+
+#hud-chalkboard-panel.hud-panel .hud-title::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    flex: 0 0 14px;
+    background: radial-gradient(circle at 35% 35%, #ecfeff 0 18%, #38bdf8 22% 48%, #22c55e 52% 100%);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.12);
+}
+
+.hud-arrow-icon {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 999px !important;
+    background: rgba(245, 158, 11, 0.12) !important;
+    border: 1px solid rgba(245, 158, 11, 0.18) !important;
+    color: #92400e !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 10px;
+    transition: transform 0.3s ease;
+    flex: 0 0 auto !important;
+}
+
+.hud-panel.collapsed .hud-arrow-icon {
+    transform: rotate(-90deg);
+}
+
+.hud-body {
+    padding: 8px 10px !important;
+    font-size: 13px;
+    line-height: 1.55;
+    max-height: none !important;
+    overflow: visible !important;
+    color: #334155 !important;
+}
+
+.hud-panel.collapsed .hud-body {
+    display: none;
+}
+
+.hud-row {
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed rgba(226, 232, 240, 0.9);
+}
+
+.hud-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.hud-row-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.hud-row-val {
+    color: #334155;
+    margin-top: 2px;
+    font-size: 12.5px;
+}
+
+.math-highlight-green { color: #059669; font-weight: 700; }
+.math-highlight-blue { color: #2563eb; font-weight: 700; }
+.math-highlight-orange { color: #d97706; font-weight: 700; }
+
+.hud-verdict-box {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.22);
+}
+
+.verdict-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 2px;
+}
+
+.verdict-desc {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+    #hud-chalkboard-panel.hud-panel {
+        display: none !important;
+    }
+}
+
+/* 平台统一 HUD 强约束：对齐半角模型标准 */
+#hud-chalkboard-panel.hud-panel {
+    top: 20px !important;
+    left: 20px !important;
+    right: auto !important;
+    width: 360px !important;
+    max-width: calc(100% - 40px) !important;
+    max-height: none !important;
+}
+
+#hud-chalkboard-panel.hud-panel.collapsed {
+    width: auto !important;
+    min-width: max-content !important;
+    max-width: calc(100% - 40px) !important;
+    border-radius: 999px !important;
+}
+
+#hud-chalkboard-panel.hud-panel .hud-body {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* ==========================================================================
+   5. 底部动作控制按钮与弹窗说明
+   ========================================================================== */
+.action-buttons-container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.btn-action.secondary {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(2, 6, 23, 0.36);
+    color: rgba(226, 232, 240, 0.86);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn-action.secondary:hover {
+    border-color: rgba(250, 204, 21, 0.3);
+    background: rgba(15, 23, 42, 0.82);
+    color: #f8fafc;
+}
+
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    width: 520px;
+    max-width: 90vw;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 24px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.modal-body ul {
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+.modal-body li {
+    margin-bottom: 8px;
+}
+
+.help-section {
+    background: rgba(15, 23, 42, 0.3);
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.help-section h4 {
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+}

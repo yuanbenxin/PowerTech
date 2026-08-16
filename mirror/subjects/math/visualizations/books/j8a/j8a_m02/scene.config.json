@@ -1,0 +1,27 @@
+{
+  "cardId": "j8a_m02",
+  "status": "ready",
+  "engine": "axis-symmetry-reflection",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-axis-reflection-transform",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码接入：轴对称与镜面反射空间构建.html；已经统一左侧模拟框与右侧操作面板，所有资源本地化，无 CDN。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8a_m02",
+    "panelSelector": "#control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j8a_m02",
+    "panelClass": "math-source-panel-j8a_m02",
+    "inlineFunctionNames": [
+      "updateMode",
+      "draw",
+      "updateDist",
+      "updateAngle"
+    ],
+    "stylePreScoped": true
+  }
+}

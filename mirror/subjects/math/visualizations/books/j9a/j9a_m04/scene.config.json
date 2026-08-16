@@ -1,0 +1,34 @@
+{
+  "cardId": "j9a_m04",
+  "status": "ready",
+  "engine": "perpendicular-diameter-geometry",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-perpendicular-diameter-proof",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码已接入：垂径定理的几何构造；统一为左侧模拟框和右侧操作面板；移除 Google Fonts 外链；保留模式切换、动态扫描、发车测试、证明与触控拖动。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j9a_m04",
+    "panelSelector": ".control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j9a_m04",
+    "panelClass": "math-source-panel-j9a_m04",
+    "inlineFunctionNames": [
+      "changeMode",
+      "selectMode",
+      "updateSim",
+      "render",
+      "toggleRadiusLayer",
+      "toggleAutoSweep",
+      "startDrive"
+    ],
+    "stylePreScoped": true
+  }
+}
+
+
+
+

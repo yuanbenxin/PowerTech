@@ -1,0 +1,1106 @@
+/* ==========================================================================
+   二次根式化简与合并实验室 - 样式表 (style.css)
+   设计风格：科幻实验室深邃蓝底色、霓虹发光触感、玻璃卡片及高保真黑板板书
+   ========================================================================== */
+
+:root {
+    --bg-primary: #0b0f19;       /* 反应堆深邃暗蓝 */
+    --bg-card: rgba(17, 24, 39, 0.7);
+    --border-color: rgba(31, 41, 55, 0.8);
+    
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --text-muted: #6b7280;
+    
+    --primary: #8b5cf6;          /* 聚变高能紫 */
+    --primary-light: rgba(139, 92, 246, 0.15);
+    --color-accent: #10b981;     /* 稳定绿 */
+    --color-danger: #f43f5e;     /* 裂变红 */
+    --color-warning: #f59e0b;    /* 高能橙 */
+    
+    --font-math: 'Fredoka', 'Outfit', 'Noto Sans SC', sans-serif;
+    --font-sans: 'Outfit', 'Noto Sans SC', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 16px;
+    gap: 16px;
+}
+
+/* 头部 Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-left h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.badge {
+    background: var(--primary-light);
+    color: #c084fc;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 8px;
+    border: 1.2px solid rgba(139, 92, 246, 0.3);
+}
+
+.btn-help {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-help:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+/* 主内容布局 */
+.app-main {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    min-height: 0;
+}
+
+/* 左侧控制与列表 */
+.control-column {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.panel-section {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 预设根式卡片库 */
+.card-library {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.library-card-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1.2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: var(--font-math);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.library-card-btn:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: #e9d5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+}
+
+.typeset-radical {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 34px;
+    color: currentColor;
+    font-family: "Cambria Math", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.typeset-radical-hook {
+    display: inline-block;
+    font-family: "Cambria Math", serif;
+    font-size: 1.18em;
+    font-weight: 700;
+    line-height: 1;
+    transform: translateY(1px) scaleX(0.94);
+    transform-origin: right top;
+}
+
+.typeset-radicand {
+    display: inline-block;
+    min-width: 1.25em;
+    margin-left: -1px;
+    padding: 2px 2px 0 1px;
+    border-top: 2px solid currentColor;
+    line-height: 1;
+    text-align: center;
+}
+
+/* 自定义输入框 */
+.custom-input-form {
+    display: flex;
+    gap: 10px;
+}
+
+.input-wrapper-group {
+    display: flex;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0 12px;
+    flex: 1;
+}
+
+.radical-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: var(--primary);
+    user-select: none;
+}
+
+.radical-symbol svg {
+    width: 28px;
+    height: 28px;
+    overflow: visible;
+}
+
+.input-wrapper-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+    padding: 10px 6px;
+    font-family: var(--font-math);
+    font-size: 14px;
+}
+
+.btn-generate-card {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-generate-card:hover {
+    background: #7c3aed;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+/* ==========================================================================
+   2. Canvas 物理熔炉作图区
+   ========================================================================== */
+.sandbox-column {
+    flex: 1;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 16px 20px 20px 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    min-height: 0;
+}
+
+.chamber-status-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.status-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 8px var(--primary);
+    transition: all 0.3s;
+}
+
+.status-indicator-dot.fusion {
+    background: var(--color-accent);
+    box-shadow: 0 0 12px var(--color-accent);
+}
+
+.status-indicator-dot.fission {
+    background: var(--color-danger);
+    box-shadow: 0 0 12px var(--color-danger);
+}
+
+.status-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.canvas-container-wrapper {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    border: 1.5px solid var(--border-color);
+    background: radial-gradient(circle at center, #111827 0%, #030712 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 6px 30px rgba(0, 0, 0, 0.8);
+    min-height: 0;
+}
+
+#reactor-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+/* 底部熔炉总控制器 */
+.bottom-controller-panel {
+    margin-top: 16px;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border-color);
+    padding: 14px 20px;
+    border-radius: 16px;
+}
+
+.reactor-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-reactor {
+    flex: 1;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-reactor.primary {
+    background: var(--primary);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
+}
+.btn-reactor.primary:hover {
+    background: #7c3aed;
+    transform: translateY(-1px);
+}
+
+.btn-reactor.success {
+    background: var(--color-accent);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+.btn-reactor.success:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+.btn-reactor.secondary {
+    background: rgba(31, 41, 55, 0.6);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+.btn-reactor.secondary:hover {
+    background: rgba(31, 41, 55, 0.8);
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   3. HUD 黑板板书及折叠收纳
+   ========================================================================== */
+.hud-panel {
+    padding: 0;
+    overflow: hidden;
+}
+
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+.hud-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.hud-arrow-icon {
+    font-size: 10px;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease;
+}
+
+.hud-panel.collapsed .hud-arrow-icon {
+    transform: rotate(-90deg);
+}
+
+.hud-body {
+    padding: 16px 20px;
+    font-family: var(--font-math);
+    font-size: 14px;
+    line-height: 1.7;
+    max-height: 250px;
+    overflow-y: auto;
+    transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hud-panel.collapsed .hud-body {
+    max-height: 0;
+    padding: 0;
+}
+
+.hud-row {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+.hud-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.hud-row-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.hud-row-val {
+    color: var(--text-secondary);
+}
+
+.math-glow-purple {
+    color: #c084fc;
+    text-shadow: 0 0 8px rgba(192, 132, 252, 0.3);
+    font-weight: 700;
+}
+
+.math-glow-green {
+    color: var(--color-accent);
+    text-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+    font-weight: 700;
+}
+
+.math-glow-orange {
+    color: var(--color-warning);
+    text-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   4. 帮助弹窗
+   ========================================================================== */
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(3, 7, 18, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: #111827;
+    border: 1px solid var(--border-color);
+    width: 520px;
+    max-width: 90vw;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 24px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.help-section {
+    background: rgba(15, 23, 42, 0.3);
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.help-section h4 {
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Platform visual standard for j8b_m06 */
+.math-source-scene-j8b_m06,
+.math-source-scene-j8b_m06 * {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.math-source-scene-j8b_m06 {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+.math-source-scene-j8b_m06 .app-container,
+.app-container {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    background: transparent !important;
+}
+
+.math-source-scene-j8b_m06 .app-header,
+.app-header {
+    display: none !important;
+}
+
+.math-source-scene-j8b_m06 .app-main,
+.app-main {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+}
+
+.math-source-scene-j8b_m06 .sandbox-column,
+.sandbox-column {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 14px !important;
+    border: 1px solid rgba(37, 99, 235, 0.18) !important;
+    border-radius: 8px !important;
+    background: #f8fbff !important;
+    background-image:
+        linear-gradient(rgba(51, 65, 85, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(51, 65, 85, 0.075) 1px, transparent 1px),
+        linear-gradient(rgba(14, 165, 233, 0.036) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.036) 1px, transparent 1px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.20) 0.8px, transparent 1px) !important;
+    background-size: 108px 108px, 108px 108px, 36px 36px, 36px 36px, 18px 18px !important;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px, 0 0 !important;
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.88),
+        inset 0 0 44px rgba(14,165,233,0.035),
+        0 14px 34px rgba(15,23,42,0.08) !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-j8b_m06 .chamber-status-header,
+.sandbox-column .chamber-status-header,
+.math-source-scene-j8b_m06 .sandbox-column .bottom-controller-panel,
+.sandbox-column > .bottom-controller-panel {
+    display: none !important;
+}
+
+.math-source-scene-j8b_m06 .canvas-container-wrapper,
+.canvas-container-wrapper {
+    position: absolute !important;
+    inset: 14px !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-j8b_m06 #reactor-canvas,
+#reactor-canvas {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    cursor: grab !important;
+    touch-action: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}
+
+.math-source-scene-j8b_m06 #particles-canvas,
+#particles-canvas {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel,
+.sandbox-column #hud-chalkboard-panel {
+    position: absolute !important;
+    left: 18px !important;
+    top: 18px !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 180 !important;
+    width: fit-content !important;
+    min-width: min(248px, calc(100% - 36px)) !important;
+    max-width: min(326px, calc(100% - 36px)) !important;
+    max-height: calc(100% - 36px) !important;
+    padding: 0 !important;
+    border: 1px solid rgba(203, 213, 225, 0.94) !important;
+    border-radius: 12px !important;
+    background: rgba(255,255,255,0.96) !important;
+    box-shadow: 0 12px 28px rgba(15,23,42,0.14), inset 0 1px 0 rgba(255,255,255,0.9) !important;
+    color: #0f172a !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel.collapsed,
+.sandbox-column #hud-chalkboard-panel.collapsed {
+    width: max-content !important;
+    min-width: max-content !important;
+    max-width: calc(100% - 36px) !important;
+    border-radius: 999px !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel .hud-header,
+.sandbox-column #hud-chalkboard-panel .hud-header {
+    min-height: 38px !important;
+    padding: 8px 11px 8px 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    border-bottom: 1px solid rgba(203, 213, 225, 0.72) !important;
+    background: transparent !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel.collapsed .hud-header,
+.sandbox-column #hud-chalkboard-panel.collapsed .hud-header {
+    width: max-content !important;
+    border-bottom: 0 !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel .hud-title,
+.sandbox-column #hud-chalkboard-panel .hud-title {
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    color: #0f172a !important;
+    font-size: 13px !important;
+    font-weight: 850 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel.collapsed .hud-title,
+.sandbox-column #hud-chalkboard-panel.collapsed .hud-title {
+    white-space: nowrap !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel .hud-arrow-icon,
+.sandbox-column #hud-chalkboard-panel .hud-arrow-icon {
+    flex: 0 0 auto !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #334155 !important;
+    font-size: 10px !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel .hud-body,
+.sandbox-column #hud-chalkboard-panel .hud-body {
+    width: max-content !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px 12px 12px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: rgba(248,250,252,0.74) !important;
+    color: #1e293b !important;
+}
+
+.math-source-scene-j8b_m06 #hud-chalkboard-panel.collapsed .hud-body,
+.sandbox-column #hud-chalkboard-panel.collapsed .hud-body {
+    display: none !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+}
+
+.math-source-scene-j8b_m06 .hud-row,
+.sandbox-column .hud-row {
+    margin-bottom: 7px !important;
+    padding-bottom: 7px !important;
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.34) !important;
+}
+
+.math-source-scene-j8b_m06 .hud-row-label,
+.sandbox-column .hud-row-label {
+    color: #475569 !important;
+    font-size: 10.5px !important;
+    line-height: 1.25 !important;
+    text-transform: none !important;
+}
+
+.math-source-scene-j8b_m06 .hud-row-val,
+.sandbox-column .hud-row-val {
+    color: #1e293b !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+}
+
+.math-source-panel-j8b_m06 .math-source-panel-scroll {
+    padding: 10px !important;
+    border: 1px solid rgba(148, 163, 184, 0.24) !important;
+    border-radius: 8px !important;
+    background: rgba(5, 12, 22, 0.94) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 16px 34px rgba(2,6,23,0.22) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain !important;
+    touch-action: pan-y !important;
+}
+
+.math-source-panel-j8b_m06 .math-source-panel-content {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+.math-source-panel-j8b_m06 .control-column {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: 0 0 auto !important;
+    gap: 13px !important;
+    padding: 2px 0 10px !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+}
+
+.math-source-panel-j8b_m06 .panel-section,
+.math-source-panel-j8b_m06 .bottom-controller-panel,
+.math-source-panel-j8b_m06 .math-source-panel-content .panel-section {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    padding: 0 1px 13px !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #f8fafc !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.math-source-panel-j8b_m06 .bottom-controller-panel {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+
+.math-source-panel-j8b_m06 .section-title {
+    min-height: 22px !important;
+    margin: 0 0 9px !important;
+    padding-left: 8px !important;
+    border-left: 3px solid #22d3ee !important;
+    color: rgba(248,250,252,0.95) !important;
+    font-size: 12.5px !important;
+    font-weight: 850 !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+}
+
+.math-source-panel-j8b_m06 .panel-section:nth-child(2) .section-title {
+    border-left-color: #fbbf24 !important;
+}
+
+.math-source-panel-j8b_m06 .bottom-controller-panel .section-title {
+    border-left-color: #34d399 !important;
+}
+
+.math-source-panel-j8b_m06 .section-title svg {
+    width: 17px !important;
+    height: 17px !important;
+    color: #67e8f9 !important;
+    flex: 0 0 17px !important;
+}
+
+.math-source-panel-j8b_m06 .panel-section:nth-child(2) .section-title svg {
+    color: #fcd34d !important;
+}
+
+.math-source-panel-j8b_m06 .bottom-controller-panel .section-title svg {
+    color: #6ee7b7 !important;
+}
+
+.math-source-panel-j8b_m06 .card-library {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+}
+
+.math-source-panel-j8b_m06 .library-card-btn,
+.math-source-panel-j8b_m06 .input-wrapper-group,
+.math-source-panel-j8b_m06 .btn-generate-card,
+.math-source-panel-j8b_m06 .btn-reactor {
+    min-height: 44px !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    border-radius: 8px !important;
+    background: #0b1422 !important;
+    color: rgba(226, 232, 240, 0.92) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.045) !important;
+    letter-spacing: 0 !important;
+    touch-action: manipulation !important;
+}
+
+.math-source-panel-j8b_m06 .library-card-btn {
+    padding: 6px 3px !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+.math-source-panel-j8b_m06 .typeset-radical {
+    min-width: 0 !important;
+    color: #f8fafc !important;
+    font-size: 14px !important;
+}
+
+.math-source-panel-j8b_m06 .typeset-radicand {
+    border-top-width: 2px !important;
+}
+
+.math-source-panel-j8b_m06 .library-card-btn:hover,
+.math-source-panel-j8b_m06 .library-card-btn:focus-visible {
+    border-color: rgba(103, 232, 249, 0.44) !important;
+    background: rgba(8, 145, 178, 0.19) !important;
+    color: #ecfeff !important;
+    transform: none !important;
+}
+
+.math-source-panel-j8b_m06 button:focus-visible,
+.math-source-panel-j8b_m06 input:focus-visible {
+    outline: 2px solid rgba(103, 232, 249, 0.82) !important;
+    outline-offset: 2px !important;
+}
+
+.math-source-panel-j8b_m06 .custom-input-form {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 94px !important;
+    gap: 7px !important;
+}
+
+.math-source-panel-j8b_m06 .input-wrapper-group {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 9px !important;
+    border-color: rgba(103, 232, 249, 0.28) !important;
+    background: rgba(8, 18, 31, 0.96) !important;
+}
+
+.math-source-panel-j8b_m06 .radical-symbol {
+    color: #67e8f9 !important;
+    width: 28px !important;
+    height: 28px !important;
+    flex: 0 0 28px !important;
+}
+
+.math-source-panel-j8b_m06 .radical-symbol svg {
+    width: 28px !important;
+    height: 28px !important;
+    stroke: currentColor !important;
+}
+
+.math-source-panel-j8b_m06 .input-wrapper-group input {
+    min-width: 0 !important;
+    color: #f8fafc !important;
+    font-size: 13px !important;
+    font-weight: 750 !important;
+    height: 42px !important;
+    padding: 0 4px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-j8b_m06 .input-wrapper-group input::placeholder {
+    color: rgba(203, 213, 225, 0.56) !important;
+}
+
+.math-source-panel-j8b_m06 .btn-generate-card {
+    width: 100% !important;
+    padding: 8px 7px !important;
+    border-color: rgba(34, 211, 238, 0.48) !important;
+    background: #0e7490 !important;
+    color: #ecfeff !important;
+    font-size: 11.5px !important;
+    font-weight: 850 !important;
+    line-height: 1.25 !important;
+}
+
+.math-source-panel-j8b_m06 .btn-generate-card:hover {
+    border-color: rgba(165, 243, 252, 0.76) !important;
+    background: #0891b2 !important;
+}
+
+.math-source-panel-j8b_m06 .reactor-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 8px 6px !important;
+    font-size: 11.5px !important;
+    font-weight: 850 !important;
+    line-height: 1.25 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    white-space: normal !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor.primary {
+    border-color: rgba(34, 211, 238, 0.34) !important;
+    background: rgba(8, 145, 178, 0.18) !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor.success {
+    border-color: rgba(52, 211, 153, 0.34) !important;
+    background: rgba(5, 150, 105, 0.18) !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor.secondary {
+    grid-column: 1 / -1 !important;
+    min-height: 44px !important;
+    border-color: rgba(251, 113, 133, 0.28) !important;
+    background: rgba(159, 18, 57, 0.13) !important;
+    color: #fecdd3 !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor.primary:hover {
+    border-color: rgba(103, 232, 249, 0.68) !important;
+    background: rgba(8, 145, 178, 0.30) !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor.success:hover {
+    border-color: rgba(110, 231, 183, 0.68) !important;
+    background: rgba(5, 150, 105, 0.30) !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor.secondary:hover {
+    border-color: rgba(251, 113, 133, 0.54) !important;
+    background: rgba(159, 18, 57, 0.24) !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex: 0 0 16px !important;
+}
+
+.math-source-panel-j8b_m06 .operation-math-symbol {
+    width: 20px !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #67e8f9 !important;
+    font-family: "Cambria Math", "Noto Sans SC", "Microsoft YaHei", sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+
+.math-source-panel-j8b_m06 .operation-math-symbol.operation-combine-symbol {
+    color: #6ee7b7 !important;
+    font-size: 20px !important;
+}
+
+.math-source-panel-j8b_m06 .btn-reactor.secondary svg {
+    color: #fda4af !important;
+}
+
+.math-source-panel-j8b_m06 .math-source-panel-scroll::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+.math-source-panel-j8b_m06 .math-source-panel-scroll::-webkit-scrollbar-thumb {
+    border-radius: 999px !important;
+    background: rgba(148, 163, 184, 0.28) !important;
+}
+
+.math-source-scene-j8b_m06 *,
+.math-source-panel-j8b_m06 * {
+    letter-spacing: 0 !important;
+}

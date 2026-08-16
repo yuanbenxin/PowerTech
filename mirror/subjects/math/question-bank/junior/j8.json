@@ -1,0 +1,296 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "junior",
+  "grade": "八年级",
+  "questions": [
+    {
+      "id": "jr_j8_q0001",
+      "stageId": "junior",
+      "grade": "八年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "三角形",
+        "全等三角形",
+        "判定"
+      ],
+      "type": "分步选择题",
+      "difficulty": "提升",
+      "stem": "在三角形 ABC 中，AB = AC，点 D 在 BC 上，AD 平分 ∠BAC。按步骤判断 △ABD 与 △ACD 的全等依据。",
+      "answer": "1:A；2:B；3:C",
+      "analysis": "因为 AB = AC，AD 平分 ∠BAC，所以 ∠BAD = ∠DAC。又因为 AD 是两个三角形的公共边，所以 AD = AD。两个三角形有两边及其夹角分别相等，因此 △ABD ≌ △ACD，使用的判定方法是 SAS。",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m05",
+          "role": "primary",
+          "reason": "通过拖动边角参数观察 SAS 条件下三角形的刚性。",
+          "stepLabel": "验证 SAS 刚性"
+        },
+        {
+          "cardId": "jm_model_m02",
+          "role": "extension",
+          "reason": "把全等判定拓展到旋转型几何模型。",
+          "stepLabel": "拓展旋转全等"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "steps": [
+        {
+          "id": "angle-bisector",
+          "prompt": "由 AD 平分 ∠BAC，可以得到哪一组角相等？",
+          "options": [
+            {
+              "label": "A",
+              "text": "∠BAD = ∠DAC"
+            },
+            {
+              "label": "B",
+              "text": "∠ABD = ∠ACD"
+            },
+            {
+              "label": "C",
+              "text": "∠ADB = ∠ADC"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "common-side",
+          "prompt": "两个三角形还共享哪一条边？",
+          "options": [
+            {
+              "label": "A",
+              "text": "BC = BC"
+            },
+            {
+              "label": "B",
+              "text": "AD = AD"
+            },
+            {
+              "label": "C",
+              "text": "BD = CD"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "congruence-rule",
+          "prompt": "结合 AB = AC、∠BAD = ∠DAC、AD = AD，应使用哪种全等判定？",
+          "options": [
+            {
+              "label": "A",
+              "text": "AAS"
+            },
+            {
+              "label": "B",
+              "text": "SSS"
+            },
+            {
+              "label": "C",
+              "text": "SAS"
+            }
+          ],
+          "answer": "C"
+        }
+      ],
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "八年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j8_q0002",
+      "stageId": "junior",
+      "grade": "八年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c2_1"
+      ],
+      "knowledgePoints": [
+        "轴对称",
+        "镜面反射",
+        "最短路径"
+      ],
+      "type": "分步选择题",
+      "difficulty": "综合",
+      "stem": "已知直线 l 同侧有两点 A、B。按步骤选择构造点 P 使 AP + PB 最短的方法和理由。",
+      "answer": "1:B；2:A；3:C",
+      "analysis": "点 A 与其关于直线 l 的对称点 A' 到直线 l 上任一点 P 的距离相等，即 AP = A'P。因此 AP + PB = A'P + PB。根据两点之间线段最短，当 A'、P、B 共线时，A'P + PB 最短，所以连接 A'B 与直线 l 的交点就是所求点 P。",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m06",
+          "role": "primary",
+          "reason": "展示轴对称反射和镜像点构造。",
+          "stepLabel": "先看镜像构造"
+        },
+        {
+          "cardId": "jm_model_m01",
+          "role": "related",
+          "reason": "用将军饮马模型解释最短路径。",
+          "stepLabel": "再看最短路径"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "steps": [
+        {
+          "id": "mirror-point",
+          "prompt": "第一步应该构造哪个点？",
+          "options": [
+            {
+              "label": "A",
+              "text": "作点 B 关于直线 AB 的对称点 B'"
+            },
+            {
+              "label": "B",
+              "text": "作点 A 关于直线 l 的对称点 A'"
+            },
+            {
+              "label": "C",
+              "text": "作线段 AB 的中点 M"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "intersection",
+          "prompt": "构造出 A' 后，点 P 应该怎样确定？",
+          "options": [
+            {
+              "label": "A",
+              "text": "连接 A'B，与直线 l 的交点就是 P"
+            },
+            {
+              "label": "B",
+              "text": "连接 AB，与直线 l 的交点就是 P"
+            },
+            {
+              "label": "C",
+              "text": "在直线 l 上任取一点 P"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "shortest-reason",
+          "prompt": "为什么这样得到的 AP + PB 最短？",
+          "options": [
+            {
+              "label": "A",
+              "text": "因为 AP 与 PB 一定相等"
+            },
+            {
+              "label": "B",
+              "text": "因为点 P 是线段 AB 的中点"
+            },
+            {
+              "label": "C",
+              "text": "因为 AP = A'P，且 A'、P、B 共线时 A'P + PB 最短"
+            }
+          ],
+          "answer": "C"
+        }
+      ],
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "八年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j8_q0003",
+      "stageId": "junior",
+      "grade": "八年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c2_1"
+      ],
+      "knowledgePoints": [
+        "轴对称",
+        "最短路径",
+        "镜面反射"
+      ],
+      "type": "多选题",
+      "difficulty": "提升",
+      "stem": "用轴对称解决直线 l 同侧两点 A、B，到直线 l 上点 P 的 AP + PB 最短问题时，下列说法正确的有（多选）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "应作点 A 关于直线 l 的对称点 A'"
+        },
+        {
+          "label": "B",
+          "text": "连接 A'B 与直线 l 的交点可作为点 P"
+        },
+        {
+          "label": "C",
+          "text": "最短的理由可转化为 A'、P、B 共线时线段和最短"
+        },
+        {
+          "label": "D",
+          "text": "点 P 可以在直线 l 上任意选取，AP + PB 都相等"
+        }
+      ],
+      "answer": "A,B,C",
+      "analysis": "作 A 关于直线 l 的对称点 A' 后，直线 l 上任一点 P 都满足 AP = A'P，所以 AP + PB 可转化为 A'P + PB。当 A'、P、B 共线时，A'P + PB 最短，因此连接 A'B 与直线 l 的交点就是所求点 P。D 说任意点都相等，不符合最短路径条件。",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m06",
+          "role": "primary",
+          "reason": "展示轴对称反射和镜像点构造。",
+          "stepLabel": "先看镜像构造"
+        },
+        {
+          "cardId": "jm_model_m01",
+          "role": "related",
+          "reason": "用将军饮马模型解释最短路径。",
+          "stepLabel": "再看最短路径"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "八年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    }
+  ]
+}

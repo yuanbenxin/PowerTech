@@ -1,0 +1,2172 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "senior",
+  "grade": "TAL-SCQ5K 高中弱项补齐题",
+  "source": {
+    "name": "TAL-SCQ5K-CN",
+    "license": "MIT",
+    "type": "open_dataset",
+    "origin": "TAL-SCQ5K-CN",
+    "url": "https://github.com/math-eval/TAL-SCQ5K"
+  },
+  "review": {
+    "importedCount": 29,
+    "policy": "strict-objective-senior-weak-coverage no-unreviewed-images no-generated-questions",
+    "bucketCounts": {
+      "derivative": 11,
+      "vector": 18
+    }
+  },
+  "questions": [
+    {
+      "id": "sr_tal_weak_0001",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "函数单调性",
+        "极值与最值"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知函数f( x )=aln x+x²在x=1处有极值，则实数a的值是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "-2"
+        },
+        {
+          "label": "B",
+          "text": "-1"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "A",
+      "analysis": "f'( x )=(a)/(x)+2x，由题设f'( 1 )=0，解得a=-2",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m12",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数判单调与极值表卡片辅助理解。",
+          "stepLabel": "看导数判单调与极值表"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "475",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0002",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "空间向量",
+        "法向量",
+        "夹角与距离"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "从正方体的8个顶点的任意两个所确定的所有直线中取出两条，则这两条直线是异面直线的概率是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(29)/(189)"
+        },
+        {
+          "label": "B",
+          "text": "(29)/(63)"
+        },
+        {
+          "label": "C",
+          "text": "(34)/(63)"
+        },
+        {
+          "label": "D",
+          "text": "(4)/(7)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "从8个顶点中任取两点可确定C₈²=28（条）直线， 从8个顶点中任取4个不共面的点共有C₈⁴-12组， 而其中每一组不共面的4点可出现3对异面直线， 所以所求的概率为(3(C₈⁴-12))/(C₂₈²)=(29)/(63). 故选B．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到空间向量与立体几何法向量卡片辅助理解。",
+          "stepLabel": "看空间向量与立体几何法向量"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "625",
+        "routes": [
+          "竞赛->知识点->立体几何与空间向量->空间中的角与距离",
+          "竞赛->知识点->排列组合与概率->概率初步",
+          "课内体系->知识点->空间向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0003",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "空间向量",
+        "法向量",
+        "夹角与距离"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知四面体ABCD内接于球O，且AD是球O的直径．若△ ABC和△ BCD都是边长为1的等边三角形，则四面体ABCD的体积是( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(√(2))/(6)"
+        },
+        {
+          "label": "B",
+          "text": "(√(2))/(12)"
+        },
+        {
+          "label": "C",
+          "text": "(√(3))/(6)"
+        },
+        {
+          "label": "D",
+          "text": "(√(3))/(12)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解：四面体以等腰直角△ ABD为底，高为(√(2))/(2)，故体积为(1)/(3)× (√(2))/(2)× (1)/(2)=(√(2))/(12)．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到空间向量与立体几何法向量卡片辅助理解。",
+          "stepLabel": "看空间向量与立体几何法向量"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "981",
+        "routes": [
+          "竞赛->知识点->立体几何与空间向量",
+          "课内体系->知识点->空间向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0004",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_1"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "导数定义",
+        "切线方程"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若直线y=x-3与曲线y=e^x+a相切，则实数a的值是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "-4"
+        },
+        {
+          "label": "B",
+          "text": "-2"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "A",
+      "analysis": "设切点的横坐标为x₀．在x=x₀处，曲线y=e^x+a的斜率为e^x₀+a．而直线y=x-3的斜率为1．因此e^x₀+a=1，得x₀=-a．因此，切点的纵坐标e^x₀+a=1=x₀-3，即1=-a-3，所以a=-4．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m10",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数定义与割线极限卡片辅助理解。",
+          "stepLabel": "看导数定义与割线极限"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "647",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "竞赛->知识点->函数->基本初等函数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0005",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_1"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "导数定义",
+        "切线方程"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "方程x³-12x+a=0有三个不同的实数根，则实数a的取值范围为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-16,16)"
+        },
+        {
+          "label": "B",
+          "text": "[ -16, 16 ]"
+        },
+        {
+          "label": "C",
+          "text": "(-∞,-8)"
+        },
+        {
+          "label": "D",
+          "text": "(8,+∞ )"
+        }
+      ],
+      "answer": "A",
+      "analysis": "令f(x)=x³-12x+a，则f (x)=3x²-12， f (x)=3x²-12=0 x= 2． 要使f(x)=0有三个不同的实数根，则必须有f(2)f(-2)<0，即(a-16)(a+16)<0，也即有-16< a<16．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m10",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数定义与割线极限卡片辅助理解。",
+          "stepLabel": "看导数定义与割线极限"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "582",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0006",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "函数单调性",
+        "极值与最值"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "函数f(x)=4x³-3x在(a,a+2)上存在最大值，则实数a的取值范围是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(-(5)/(2),-1)"
+        },
+        {
+          "label": "B",
+          "text": "(-(5)/(2),-1]"
+        },
+        {
+          "label": "C",
+          "text": "(-(5)/(2),-(1)/(2))"
+        },
+        {
+          "label": "D",
+          "text": "(-(5)/(2),-(1)/(2)]"
+        }
+      ],
+      "answer": "B",
+      "analysis": "f'( x )=12x²-3=3( 2x+1 )( 2x-1 )，f( x )在( -∞,-(1)/(2) )单调增，在( -(1)/(2),(1)/(2) )单调减，在( (1)/(2),+∞ )单调增，所以f( x )在( a,a+2 )上的最大值只能是f( -(1)/(2) )=1． 因此，a<-(1)/(2)<a+2，另外f( 1 )=1，所以a+2≤ 1，综合有-(5)/(2)<a≤ -1．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m12",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数判单调与极值表卡片辅助理解。",
+          "stepLabel": "看导数判单调与极值表"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "311",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0007",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "空间向量",
+        "法向量",
+        "夹角与距离"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知二面角α -l-β 的大小为30°，则由平面α 上的圆在平面β 上的正射影得到的椭圆的离心率为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "C",
+          "text": "(√(3))/(3)"
+        },
+        {
+          "label": "D",
+          "text": "(√(3))/(2)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "设圆的半径为1，则椭圆的长轴长为2，短轴长为2cos 30° =√(3)，则c=(1)/(2)．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到空间向量与立体几何法向量卡片辅助理解。",
+          "stepLabel": "看空间向量与立体几何法向量"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "589",
+        "routes": [
+          "竞赛->知识点->立体几何与空间向量->空间中的角与距离",
+          "竞赛->知识点->解析几何->椭圆",
+          "课内体系->知识点->空间向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0008",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "空间向量",
+        "法向量",
+        "夹角与距离"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在正三棱柱ABC-A₁B₁C₁中，若AB=√(2)BB₁，则AB₁与C₁B所成的角的大小是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "60°"
+        },
+        {
+          "label": "B",
+          "text": "75°"
+        },
+        {
+          "label": "C",
+          "text": "90°"
+        },
+        {
+          "label": "D",
+          "text": "105°"
+        }
+      ],
+      "answer": "C",
+      "analysis": "取B₁A₁的中点M，易知C₁M⊥ 平面AA₁B₁B，所以C₁M⊥ AB₁， 在矩形ABB₁A₁中，tan ∠ B₁BM=tan ∠ B₁AB=(√(2))/(2)， 于是∠ B₁BM=∠ B₁AB，从而MB⊥ AB₁， 因此，AB₁⊥ 平面BMC₁，所以AB₁⊥ BC₁，即AB₁与C₁B所成的角的大小为90° ．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到空间向量与立体几何法向量卡片辅助理解。",
+          "stepLabel": "看空间向量与立体几何法向量"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1188",
+        "routes": [
+          "竞赛->知识点->立体几何与空间向量->空间中的角与距离",
+          "课内体系->知识点->空间向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0009",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "函数单调性",
+        "极值与最值"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "以下四个数中，最大的为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "ln √(2)"
+        },
+        {
+          "label": "B",
+          "text": "(1)/(e)"
+        },
+        {
+          "label": "C",
+          "text": "(ln π )/(π )"
+        },
+        {
+          "label": "D",
+          "text": "(√(10)ln 10)/(20)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "考虑函数f( x )=(ln x)/(x)． 则四个选项分别为f( 2 )、f( e )、f( π )、f( √(10) )， 又f'( x )= 1-ln xx²，则f( x )在区间( 0,e )上单调递增，在区间( e,+∞ )上单调递减． 从而，f( x )在区间( 0,+∞ )上的最大值为f( e )．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m12",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数判单调与极值表卡片辅助理解。",
+          "stepLabel": "看导数判单调与极值表"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1034",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0010",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "函数单调性",
+        "极值与最值"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设函数f(x)=ln x，g(x)=ax+(b)/(x)，它们的图象在x轴上的公共点处有公切线，则当x>1时，f(x)与g(x)的大小关系是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "f(x)> g(x)"
+        },
+        {
+          "label": "B",
+          "text": "f(x)<g(x)"
+        },
+        {
+          "label": "C",
+          "text": "f(x)=g(x)"
+        },
+        {
+          "label": "D",
+          "text": "不确定"
+        }
+      ],
+      "answer": "B",
+      "analysis": "f(x)与g(x)的图象在x轴上有唯一公共点(1,0)， 所以g(1)=0，即a+b=0． 因为f^ (x)=(1)/(x)，g^ (x)=a- ²， 由题意f^ (1)=g^ (1)=1，即a-b=1． 所以a=(1)/(2)，b=-(1)/(2)． 令F(x)=f(x)-g(x)=ln x-( (1)/(2)x-(1)/(2x) )， 则F^ (x)=(1)/(x)-(1)/(2)- 12x²=-(1)/(2)( (1)/(x)-1 )²≤ 0． 所以F(x)在(1,+∞ )内单调递减．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m12",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数判单调与极值表卡片辅助理解。",
+          "stepLabel": "看导数判单调与极值表"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "779",
+        "routes": [
+          "竞赛->知识点->函数->函数的图像与性质",
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0011",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在正方形ABCD中，M为边BC的中点．若向量AC=λ 向量AM+μ 向量BD，则λ +2μ =．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(4)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "(5)/(3)"
+        },
+        {
+          "label": "C",
+          "text": "(15)/(8)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "注意到， 向量AC=λ 向量AM+μ 向量BD =λ ( 向量AB+向量BM )+μ ( 向量BA+向量AD ) =λ ( 向量AB+(1)/(2)向量AD )+μ ( -向量AB+向量AD ) =( λ -μ )向量AB+( (1)/(2)λ +μ )向量AD． 又向量AC=向量AB+向量AD， 则 λ -μ =1 (1)/(2)λ +μ =1 λ =(4)/(3) μ =(1)/(3)， 故λ +2μ =2．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "852",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量->平面向量的运算->平面向量的线性运算->平面向量的加法运算及运算规则",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0012",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "空间向量",
+        "法向量",
+        "夹角与距离"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在空间直角坐标系中，△ ABC的三个顶点坐标分别为A( 3,4,1 )，B( 0,4,5 )，C( 5,2,0 )，则tan (A)/(2)的值是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(5)"
+        },
+        {
+          "label": "B",
+          "text": "(√(5))/(5)"
+        },
+        {
+          "label": "C",
+          "text": "√(6)"
+        },
+        {
+          "label": "D",
+          "text": "(√(6))/(6)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "cos A=(向量AB· 向量AC)/(| 向量AB || 向量AC |)= ( -3,0,4 )· ( 2,-2,-1 ) ( -3 )²+4²· 2²+( -2 )²+( -1 )²=-(2)/(3)， 又cos A= 1-tan ²(A)/(2)1+tan ²(A)/(2)，解得tan (A)/(2)=√(5)．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到空间向量与立体几何法向量卡片辅助理解。",
+          "stepLabel": "看空间向量与立体几何法向量"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "273",
+        "routes": [
+          "竞赛->知识点->立体几何与空间向量->空间向量",
+          "竞赛->知识点->三角函数->三角恒等变换",
+          "课内体系->知识点->空间向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0013",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知P为三角形ABC内部任一点（不包括边界），且满足(向量PB-向量PA)· (向量PB+向量PA-2向量PC)=0,则△ ABC一定为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "直角三角形"
+        },
+        {
+          "label": "B",
+          "text": "等边三角形"
+        },
+        {
+          "label": "C",
+          "text": "等腰三角形"
+        },
+        {
+          "label": "D",
+          "text": "等腰直角三角形"
+        }
+      ],
+      "answer": "C",
+      "analysis": "因为 向量PB-向量PA=向量AB 向量PB+向量PA-2向量PC=向量CB+向量CA， 所以已知条件可改写为向量AB· (向量CB+向量CA)=0． 容易得到此三角形为等腰三角形．故选C．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "738",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0014",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知点P、Q在△ ABC内，且向量PA+2向量PB+3向量PC=2向量QA+3向量QB+5向量QC=向量0，则(| 向量PQ |)/(| 向量AB |)等于．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(30)"
+        },
+        {
+          "label": "B",
+          "text": "(1)/(31)"
+        },
+        {
+          "label": "C",
+          "text": "(1)/(32)"
+        },
+        {
+          "label": "D",
+          "text": "(1)/(33)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由题设知 S_△ BCP:S_△ CAP:S_△ ABP=1:2:3， S_△ BCQ:S_△ CAQ:S_△ ABQ=2:3:5， 则S_△ ABP=S_△ ABQ=(1)/(2)S_△ ABC，于是，PQ//AB， 且S_△ BCP=(1)/(6)S_△ ABC，S_△ BCQ=(1)/(5)S_△ ABC， 故(|向量PQ|)/(|向量AB|)=(1)/(5)-(1)/(6)=(1)/(30)． 故选A．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "632",
+        "routes": [
+          "课内体系->知识点->平面向量->平面向量的运算->平面向量的线性运算->平面向量线性运算综合（非坐标）",
+          "竞赛->知识点->复数与平面向量",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0015",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "点A，B，C均位于单位圆上，且 | 向量AB|= √(3)，则 向量AB· 向量AC 的最大值为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(3)+ (3)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "2 √(3)"
+        },
+        {
+          "label": "C",
+          "text": "(3 √(3))/(2)"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由已知，可设A( -1,0 )，B( (1)/(2),(√(3))/(2) )，C( cos θ, sin θ )( 0≤ θ ≤ 2π )，则向量AB· 向量AC=( (3)/(2),(√(3))/(2) )· ( cos θ +1,sin θ )=(3)/(2)cos θ +(√(3))/(2)sin θ +(3)/(2) =√(3)sin ( θ +(π )/(3) )+(3)/(2)≤ √(3)+(3)/(2)， 所以，向量AB· 向量AC的最大值为√(3)+(3)/(2)． 故选A．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "84",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0016",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_1"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "导数定义",
+        "切线方程"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知函数f(x)=x³+(a+1)x²+(a+1)x+a在其定义域内既有极大值又有极小值，则实数a的取值范围是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1<a<2"
+        },
+        {
+          "label": "B",
+          "text": "a>2"
+        },
+        {
+          "label": "C",
+          "text": "a<-1"
+        },
+        {
+          "label": "D",
+          "text": "a>2或a<-1"
+        }
+      ],
+      "answer": "D",
+      "analysis": "由f(x)=x³+(a+1)x²+(a+1)x+a, 得f'(x)=3x²+2(a+1)x+(a+1)． 已知f(x)在其定义域内既有极大值又有极小值， 所以f (x)=0一定有两个不相等的实数根． 从而 =4(a+1)²-12(a+1)>0， 解得a>2或a<-1．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m10",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数定义与割线极限卡片辅助理解。",
+          "stepLabel": "看导数定义与割线极限"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "643",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0017",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "给定两个向量a=( 1,2 )，向量b=( x,1 )，若(向量a+2向量b)//(2向量a-2向量b)，则x的值等于．",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "D",
+          "text": "(1)/(3)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "因为向量a=( 1,2 )，向量b=( x,1 )， 所以有(向量a+2向量b)=( 1+2x,4 )， (2向量a-2向量b)=( 2-2x,2 )， 因为(向量a+2向量b)//(2向量a-2向量b)， 所以( 1+2x )× 2=4× ( 2-2x )， 解得x=(1)/(2)，故选C.",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1103",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0018",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "设向量i,向量j分别表示平面直角坐标系x, y轴上的单位向量，且| 向量a-向量i |+| 向量a-向量2j |=√(5)，则| 向量a+向量2i |取值范围为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "[ 2√(3), 3 ]"
+        },
+        {
+          "label": "B",
+          "text": "[ (6√(5))/(5), 2√(2) ]"
+        },
+        {
+          "label": "C",
+          "text": "[ √(5), 4 ]"
+        },
+        {
+          "label": "D",
+          "text": "[ (6√(5))/(5), 3 ]"
+        }
+      ],
+      "answer": "D",
+      "analysis": "满足| 向量a-向量i |+| 向量a-向量2j |=√(5)的向量a的终点在线段2x+y-2=0( 0≤ x≤ 1 )上，所以| 向量a+向量2i |的最大值就是点( -2, 0 )与( 1, 0 )距离3，最小值就是点( -2, 0 )到线段的距离(6√(5))/(5)．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "806",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0019",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知平面内三点A, B, C满足| 向量AB |=3，| 向量BC |=5，| 向量CA |=6，则向量AB· 向量BC+向量BC· 向量CA+向量CA· 向量AB的值为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "-55"
+        },
+        {
+          "label": "B",
+          "text": "-45"
+        },
+        {
+          "label": "C",
+          "text": "-35"
+        },
+        {
+          "label": "D",
+          "text": "-25"
+        }
+      ],
+      "answer": "C",
+      "analysis": "由余弦定理，知向量AB· 向量BC=-向量BA· 向量BC=- | 向量BA |²+| 向量BC |²-| 向量AC |²2 同理 向量BC· 向量CA= | 向量CA |²+| 向量CB |²-| 向量AB |²2 向量CA· 向量AB= | 向量AB |²+| 向量AC |²-| 向量BC |²2 从而得 向量AB· 向量BC+向量BC· 向量CA+向量CA· 向量AB =- | 向量AB |²+| 向量AC |²+| 向量BC |²2=-35．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "673",
+        "routes": [
+          "竞赛->知识点->三角函数->三角形中的问题->解三角形",
+          "竞赛->知识点->复数与平面向量->平面向量的应用",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0020",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设向量a，向量b为两个相互垂直的单位向量．已知向量OP=向量a，向量OQ=向量b，向量OR=r向量a+k向量b，若△ PQR为等边三角形，则k, r的取值为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "k=r=(-1 √(3))/(2)"
+        },
+        {
+          "label": "B",
+          "text": "k=(1 √(3))/(2), r=(1 √(3))/(2)"
+        },
+        {
+          "label": "C",
+          "text": "k=r=(1 √(3))/(2)"
+        },
+        {
+          "label": "D",
+          "text": "k=(-1 √(3))/(2), r=(-1 √(3))/(2)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "| PQ |=| QR |=| PR |， 即 ²+(k-1)²= (r-1)²+k²=√(2), 解得r=k=(1 √(3))/(2)．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "163",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0021",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c1_4"
+      ],
+      "knowledgePoints": [
+        "空间向量",
+        "法向量",
+        "夹角与距离"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知点P为正三棱柱ABC-A₁B₁C₁上底面△ A₁B₁C₁的中心，作平面BCD⊥ AP，与棱AA₁交于D，若AA₁=2AB=2，则三棱锥D-ABC的体积为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(√(3))/(48)"
+        },
+        {
+          "label": "B",
+          "text": "(√(3))/(24)"
+        },
+        {
+          "label": "C",
+          "text": "(√(3))/(16)"
+        },
+        {
+          "label": "D",
+          "text": "(√(3))/(12)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "过AA₁和BC中点M作截面，AP在这个截面内． 由AP⊥ MD，可得AD=(1)/(4)． 所以，V_D-ABC=(1)/(3)· (√(3))/(4)· (1)/(4)=(√(3))/(48)．",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m02",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到空间向量与立体几何法向量卡片辅助理解。",
+          "stepLabel": "看空间向量与立体几何法向量"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "723",
+        "routes": [
+          "竞赛->知识点->立体几何与空间向量->空间几何体中的求值问题",
+          "课内体系->知识点->空间向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0022",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_3"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "数量积",
+        "夹角"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知向量a,向量b的夹角为60°，且| 向量a |=1，| 向量a-2向量b |=√(13)，则| 向量b |=．",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(2)"
+        },
+        {
+          "label": "B",
+          "text": "(3)/(2)"
+        },
+        {
+          "label": "C",
+          "text": "2√(2)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "| 向量a |²-4向量a· 向量b+4| 向量b |²=13，即1-2| 向量b |+4| 向量b |²=13，解得| 向量b |=2",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m08",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到数量积投影与夹角判定卡片辅助理解。",
+          "stepLabel": "看数量积投影与夹角判定"
+        },
+        {
+          "cardId": "sb2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "139",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0023",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_3"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "函数单调性",
+        "极值与最值"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知a、b、c、d均为实数，函数f( x )=(a)/(3)x³+(b)/(2)x²+cx+d（a<0）有两个极值点x₁、x₂（x₁<x₂），满足f( x₂ )=x₁，则方程a[ f( x ) ]²+b[ f( x ) ]+c=0的实根个数是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "0个"
+        },
+        {
+          "label": "B",
+          "text": "2个"
+        },
+        {
+          "label": "C",
+          "text": "3个"
+        },
+        {
+          "label": "D",
+          "text": "4个"
+        }
+      ],
+      "answer": "C",
+      "analysis": "f'( x )=ax²+bx+c，由于a<0，x₁<x₂，则f( x )在( -∞, x₁ )单调递减，在( x₁, x₂ )单调递增，在( x₂, +∞ )单调递减． 且ax₁²+bx₁+c=0，ax₂²+bx₂+c=0． 若f( x )=x₁，此时方程有两个根，若f( x )=x₂，此时方程有一个根． 所以，方程应有三个实根．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m12",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数判单调与极值表卡片辅助理解。",
+          "stepLabel": "看导数判单调与极值表"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1095",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "竞赛->知识点->函数->二次函数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0024",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_3"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "数量积",
+        "夹角"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "在△ ABC中，向量BC· 向量BA=向量CB· 向量CA，则△ ABC是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "等腰三角形"
+        },
+        {
+          "label": "B",
+          "text": "直角三角形"
+        },
+        {
+          "label": "C",
+          "text": "等腰直角三角形"
+        },
+        {
+          "label": "D",
+          "text": "以上均不对"
+        }
+      ],
+      "answer": "A",
+      "analysis": "所给数量积等式可转化为向量BC· ( 向量AB+向量AC )=0．若记BC的中点为D，向量AB+向量AC=2向量AD，从而向量BC· 向量AD=0．这表明BC与中线AD垂直，因此△ ABC是等腰三角形．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m08",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到数量积投影与夹角判定卡片辅助理解。",
+          "stepLabel": "看数量积投影与夹角判定"
+        },
+        {
+          "cardId": "sb2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "407",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的应用",
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0025",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在半径为1的 O上，取一个定点A和一个动点B．设点P满足AP//OB且向量AP· 向量AB=1，则P点的轨迹是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "椭圆"
+        },
+        {
+          "label": "B",
+          "text": "抛物线"
+        },
+        {
+          "label": "C",
+          "text": "双曲线"
+        },
+        {
+          "label": "D",
+          "text": "以上都有可能"
+        }
+      ],
+      "answer": "B",
+      "analysis": "不妨设O(0, 0), A(1, 0), P(x, y)，由于AP//OB，可设B(k(x-1), ky)．将这些坐标代入向量AP· 向量AB=1．可得k= (x-1)²+y²．最后，利用B在 O上，即可得到(x, y)满足的方程为x²=(x-1)²+y²，即y²=2x-1，所以P的轨迹是抛物线．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "1099",
+        "routes": [
+          "竞赛->知识点->复数与平面向量->平面向量的概念与运算",
+          "竞赛->知识点->解析几何->曲线与方程",
+          "竞赛->知识点->解析几何->直线与方程",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0026",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_b2",
+      "chapterIds": [
+        "s_b2_c6_2"
+      ],
+      "knowledgePoints": [
+        "平面向量",
+        "向量运算",
+        "坐标向量"
+      ],
+      "curriculumBucket": "vector",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设等差数列 aₙ 的前n项和为Sₙ，若S₂=10，S₅=55，则经过P(n,aₙ)、Q(n+2,aₙ+2)两点的直线的一个方向向量的坐标可以是．",
+      "options": [
+        {
+          "label": "A",
+          "text": "( 2,(1)/(2) )"
+        },
+        {
+          "label": "B",
+          "text": "( -(1)/(2), -2 )"
+        },
+        {
+          "label": "C",
+          "text": "( -(1)/(2),-1 )"
+        },
+        {
+          "label": "D",
+          "text": "(-1,-1)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "设等差数列 aₙ 的公差为d， 则由 S₂=2a₁+d=10 S₅=5a₁+10d=55，得 a₁=3 d=4， 所以K_PQ= ₙ+2-aₙ(n+2)-n=d=4， 故所B．",
+      "matchedCards": [
+        {
+          "cardId": "sb2_m01",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐向量课程知识点，可跳转到平面向量的合成与正交分解卡片辅助理解。",
+          "stepLabel": "看平面向量的合成与正交分解"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "156",
+        "routes": [
+          "竞赛->知识点->数列与数学归纳法->等差数列与等比数列",
+          "课内体系->知识点->平面向量"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0027",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_1"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "导数定义",
+        "切线方程"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "函数y=x²的图象F₁与它按向量a=(m,1)平移后的函数图象F₂在x=1处的切线互相垂直，则实数m的值为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "-(5)/(4)"
+        },
+        {
+          "label": "B",
+          "text": "-(3)/(4)"
+        },
+        {
+          "label": "C",
+          "text": "(3)/(4)"
+        },
+        {
+          "label": "D",
+          "text": "(5)/(4)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "因为y'(1)=2，故F₂的函数为y=(x-m)²-1，其在x=1处的切线的斜率为k₂=2(1-m)，由2× 2(1-m)=-1知m=(5)/(4)．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m10",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数定义与割线极限卡片辅助理解。",
+          "stepLabel": "看导数定义与割线极限"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "381",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0028",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_1"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "导数定义",
+        "切线方程"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知x, y均为正实数，则(x)/(2x+y)+(y)/(x+2y)的最大值为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "(2)/(3)"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "(4)/(3)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解法一 令s=2x+y,,t=x+2y，则 x=(1)/(3)(2s-t), y=(1)/(3)(2t-s) 所以(x)/(2x+y)+(y)/(x+2y)=(4)/(3)-(1)/(3)((t)/(s)+(s)/(t))≤ (2)/(3)． 解法二 令t=(y)/(x)， 则t (0,+∞ )， 此时 (x)/(2x+y)+(y)/(x+2y)=(1)/(t+2)+(t)/(2t+1)=f(t)， 即有f^ (t)=- 3(t²-1)(t+2)²(2t+1)²． 显然当t<1时，f^ (t)>0；当t>1时，f^ (t)<0，所以函数f(t)在t=1, 即x=y时取得最大值f(1)=(2)/(3)．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m10",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数定义与割线极限卡片辅助理解。",
+          "stepLabel": "看导数定义与割线极限"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "392",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "竞赛->知识点->不等式->几个重要的不等式->均值",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_tal_weak_0029",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c5_1"
+      ],
+      "knowledgePoints": [
+        "导数",
+        "导数定义",
+        "切线方程"
+      ],
+      "curriculumBucket": "derivative",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "对任意实数m，过函数f(x)=x²+mx+1图象上的点(2, f(2))的切线恒过一定点P，则点P的坐标为．",
+      "options": [
+        {
+          "label": "A",
+          "text": "(0, 3)"
+        },
+        {
+          "label": "B",
+          "text": "(0, -3)"
+        },
+        {
+          "label": "C",
+          "text": "( (3)/(2), 0 )"
+        },
+        {
+          "label": "D",
+          "text": "( -(3)/(2), 0 )"
+        }
+      ],
+      "answer": "B",
+      "analysis": "因为f'(x)=2x+m，故f'(2)=4+m．于是过(2, f(2))的切线方程是：y-(5+2m)=(4+m)(x-2)，即y=(m+4)x-3，因此切线方程恒过(0, -3)．故选B．",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m10",
+          "role": "primary",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到导数定义与割线极限卡片辅助理解。",
+          "stepLabel": "看导数定义与割线极限"
+        },
+        {
+          "cardId": "sx2_m01",
+          "role": "related",
+          "reason": "这道 TAL-SCQ5K 高中开源题用于补齐导数课程知识点，可跳转到函数导数与切线、极值探究卡片辅助理解。",
+          "stepLabel": "看函数导数与切线、极值探究"
+        }
+      ],
+      "source": {
+        "name": "TAL-SCQ5K-CN",
+        "license": "MIT",
+        "type": "open_dataset",
+        "origin": "TAL-SCQ5K-CN",
+        "url": "https://github.com/math-eval/TAL-SCQ5K",
+        "qid": "217",
+        "routes": [
+          "竞赛->知识点->导数模块->导数",
+          "课内体系->知识点->函数的应用->导数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中弱项补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "junior",
+  "label": "初中数学题库",
+  "shards": [
+    {
+      "grade": "MM-Math 图形题试点",
+      "file": "mm-math-ready-pilot.json"
+    },
+    {
+      "grade": "GeoQA 几何图形题",
+      "file": "geoqa-geometry.json"
+    },
+    {
+      "grade": "开源拓展",
+      "file": "tal-scq5k-junior.json"
+    },
+    {
+      "grade": "CMM-Math 开源题",
+      "file": "cmm-math-junior.json"
+    },
+    {
+      "grade": "初中 CMM-Math 专题补齐题",
+      "file": "cmm-math-junior-topic-fill.json"
+    },
+    {
+      "grade": "CMM-Math 初中 2000 题扩充",
+      "file": "cmm-math-junior-extra.json"
+    },
+    {
+      "grade": "CMM-Math 九下缺口补齐题",
+      "file": "cmm-math-junior-j9b-gap.json"
+    },
+    {
+      "grade": "TAL-SCQ5K 初中 2000 题补足",
+      "file": "tal-scq5k-junior-extra.json"
+    },
+    {
+      "grade": "暂存库优选题",
+      "file": "staging-open-candidates-junior.json"
+    },
+    {
+      "grade": "初中 CMM-Math 已审图片题",
+      "file": "cmm-math-reviewed-image-questions.json"
+    }
+  ]
+}

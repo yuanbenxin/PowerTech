@@ -1,0 +1,408 @@
+{
+  "book": {
+    "id": "j9b",
+    "label": "九年级下册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "j9b_c26",
+        "label": "第二十六章 反比例函数",
+        "title": "第二十六章 反比例函数",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9b_c26_1",
+        "label": "26.1 反比例函数",
+        "title": "26.1 反比例函数",
+        "sampleTopics": [
+          "反比例函数",
+          "双曲线",
+          "k 的意义"
+        ]
+      },
+      {
+        "id": "j9b_c26_2",
+        "label": "26.2 实际问题与反比例函数",
+        "title": "26.2 实际问题与反比例函数",
+        "sampleTopics": [
+          "反比例建模",
+          "实际问题"
+        ]
+      },
+      {
+        "id": "j9b_c27",
+        "label": "第二十七章 相似",
+        "title": "第二十七章 相似",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9b_c27_1",
+        "label": "27.1 图形的相似",
+        "title": "27.1 图形的相似",
+        "sampleTopics": [
+          "相似",
+          "比例线段"
+        ]
+      },
+      {
+        "id": "j9b_c27_2",
+        "label": "27.2 相似三角形",
+        "title": "27.2 相似三角形",
+        "sampleTopics": [
+          "相似判定",
+          "比例"
+        ]
+      },
+      {
+        "id": "j9b_c27_3",
+        "label": "27.3 位似",
+        "title": "27.3 位似",
+        "sampleTopics": [
+          "位似",
+          "缩放"
+        ]
+      },
+      {
+        "id": "j9b_c28",
+        "label": "第二十八章 锐角三角函数",
+        "title": "第二十八章 锐角三角函数",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9b_c28_1",
+        "label": "28.1 锐角三角函数",
+        "title": "28.1 锐角三角函数",
+        "sampleTopics": [
+          "正弦",
+          "余弦",
+          "正切"
+        ]
+      },
+      {
+        "id": "j9b_c28_2",
+        "label": "28.2 解直角三角形及其应用",
+        "title": "28.2 解直角三角形及其应用",
+        "sampleTopics": [
+          "仰角",
+          "俯角",
+          "坡度"
+        ]
+      },
+      {
+        "id": "j9b_c29",
+        "label": "第二十九章 投影与视图",
+        "title": "第二十九章 投影与视图",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9b_c29_1",
+        "label": "29.1 投影",
+        "title": "29.1 投影",
+        "sampleTopics": [
+          "投影",
+          "光源"
+        ]
+      },
+      {
+        "id": "j9b_c29_2",
+        "label": "29.2 三视图",
+        "title": "29.2 三视图",
+        "sampleTopics": [
+          "主视图",
+          "俯视图",
+          "左视图"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "j9b_c26",
+      "label": "第二十六章 反比例函数",
+      "children": [
+        {
+          "id": "j9b_c26_1",
+          "label": "26.1 反比例函数",
+          "sampleTopics": [
+            "反比例函数",
+            "双曲线",
+            "k 的意义"
+          ]
+        },
+        {
+          "id": "j9b_c26_2",
+          "label": "26.2 实际问题与反比例函数",
+          "sampleTopics": [
+            "反比例建模",
+            "实际问题"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j9b_c27",
+      "label": "第二十七章 相似",
+      "children": [
+        {
+          "id": "j9b_c27_1",
+          "label": "27.1 图形的相似",
+          "sampleTopics": [
+            "相似",
+            "比例线段"
+          ]
+        },
+        {
+          "id": "j9b_c27_2",
+          "label": "27.2 相似三角形",
+          "sampleTopics": [
+            "相似判定",
+            "比例"
+          ]
+        },
+        {
+          "id": "j9b_c27_3",
+          "label": "27.3 位似",
+          "sampleTopics": [
+            "位似",
+            "缩放"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j9b_c28",
+      "label": "第二十八章 锐角三角函数",
+      "children": [
+        {
+          "id": "j9b_c28_1",
+          "label": "28.1 锐角三角函数",
+          "sampleTopics": [
+            "正弦",
+            "余弦",
+            "正切"
+          ]
+        },
+        {
+          "id": "j9b_c28_2",
+          "label": "28.2 解直角三角形及其应用",
+          "sampleTopics": [
+            "仰角",
+            "俯角",
+            "坡度"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j9b_c29",
+      "label": "第二十九章 投影与视图",
+      "children": [
+        {
+          "id": "j9b_c29_1",
+          "label": "29.1 投影",
+          "sampleTopics": [
+            "投影",
+            "光源"
+          ]
+        },
+        {
+          "id": "j9b_c29_2",
+          "label": "29.2 三视图",
+          "sampleTopics": [
+            "主视图",
+            "俯视图",
+            "左视图"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j9b_m05",
+      "chapterIds": [
+        "j9b_c26_1"
+      ],
+      "title": "反比例函数图像与 k 的几何意义",
+      "detail": "拖动双曲线上的动点 P，联动探索 k 的正负、图像象限、矩形面积 |k| 与三角形面积 |k| / 2。",
+      "image": "assets/media/j9b_m05.webp",
+      "fallbackImage": "assets/media/j9b_m05.webp",
+      "isLocked": false,
+      "engine": "inverse-proportion-k-geometry-model",
+      "visualLevel": "A",
+      "tags": [
+        "反比例函数",
+        "双曲线",
+        "面积"
+      ],
+      "points": [
+        "反比例函数",
+        "双曲线",
+        "面积"
+      ]
+    },
+    {
+      "cardId": "j9b_m01",
+      "chapterIds": [
+        "j9b_c28_2"
+      ],
+      "title": "锐角三角函数与测绘应用",
+      "detail": "构建虚拟现实测绘场景，利用仰角与俯角的三角函数关系（sin, cos, tan）动态计算山峰与塔的高度",
+      "image": "assets/media/j9b_m01.webp",
+      "fallbackImage": "assets/media/j9b_m01.webp",
+      "isLocked": false,
+      "engine": "trig-surveying-applications"
+    },
+    {
+      "cardId": "j9b_m02",
+      "chapterIds": [
+        "j9b_c29_2"
+      ],
+      "title": "几何体的三视图光影投影",
+      "detail": "通过打光动画，将复杂的 3D 几何组合体精准投射到三个正交的平面上，生成主视图、俯视图与左视图",
+      "image": "assets/media/j9b_m02.webp",
+      "fallbackImage": "assets/media/j9b_m02.webp",
+      "isLocked": false,
+      "engine": "geom3d"
+    },
+    {
+      "cardId": "j9b_m03",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "title": "位似变换与相似多边形",
+      "detail": "以任意点为位似中心，实现多边形的完美缩放",
+      "image": "assets/media/j9b_m03.webp",
+      "isLocked": false,
+      "engine": "similarity-homothety-polygons",
+      "fallbackImage": "assets/media/j9b_m03.webp"
+    },
+    {
+      "cardId": "j9b_m04",
+      "chapterIds": [
+        "j9b_c29_2"
+      ],
+      "title": "正方体截面的所有可能",
+      "detail": "用发光平面切割正方体，得出三角形、六边形截面",
+      "image": "assets/media/j9b_m04.webp",
+      "isLocked": false,
+      "engine": "geom3d"
+    },
+    {
+      "cardId": "j9b_m06",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "title": "相似三角形判定实验室",
+      "detail": "拖动与调节两个三角形，动态验证 AA、SAS、SSS 三种相似判定条件，并观察对应边角关系。",
+      "image": "assets/media/j9b_m06.webp",
+      "fallbackImage": "assets/media/j9b_m06.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "相似三角形",
+        "判定",
+        "比例"
+      ],
+      "points": [
+        "相似三角形",
+        "判定",
+        "比例"
+      ]
+    },
+    {
+      "cardId": "j9b_m08",
+      "chapterIds": [
+        "j9b_c27_1"
+      ],
+      "title": "平行线分线段成比例",
+      "detail": "在三平行线、A 字型和 X 字型图形中拖动关键点，实时验证平行线分线段成比例。",
+      "image": "assets/media/j9b_m08.png",
+      "fallbackImage": "assets/media/j9b_m08.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "比例线段",
+        "平行线",
+        "相似"
+      ],
+      "points": [
+        "比例线段",
+        "平行线",
+        "相似"
+      ]
+    },
+    {
+      "cardId": "j9b_m10",
+      "chapterIds": [
+        "j9b_c29_1"
+      ],
+      "title": "投影长度与光源位置",
+      "detail": "调节路灯、太阳、物体高度与位置，比较中心投影和正投影下影长、方向与相似关系。",
+      "image": "assets/media/j9b_m10.png",
+      "fallbackImage": "assets/media/j9b_m10.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "投影",
+        "光源",
+        "影长"
+      ],
+      "points": [
+        "投影",
+        "光源",
+        "影长"
+      ]
+    },
+    {
+      "cardId": "j9b_m11",
+      "chapterIds": [
+        "j9b_c28_2"
+      ],
+      "title": "解直角三角形路线规划",
+      "detail": "在避礁航行、双站测距和自由航线场景中，运用解直角三角形完成路线规划与距离计算。",
+      "image": "assets/media/j9b_m11.png",
+      "fallbackImage": "assets/media/j9b_m11.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "解直角三角形",
+        "应用",
+        "测量"
+      ],
+      "points": [
+        "解直角三角形",
+        "应用",
+        "测量"
+      ]
+    },
+    {
+      "cardId": "j9b_m12",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "title": "相似多边形面积比",
+      "detail": "本地互动课件：相似多边形面积比。支持课堂触控操作与动态探究。",
+      "image": "assets/media/j9b_m12.png",
+      "fallbackImage": "assets/media/j9b_m12.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "相似多边形",
+        "面积比",
+        "比例"
+      ],
+      "points": [
+        "相似多边形",
+        "面积比",
+        "比例"
+      ]
+    }
+  ]
+}

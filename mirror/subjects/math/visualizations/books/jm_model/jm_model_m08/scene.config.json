@@ -1,0 +1,12 @@
+{
+  "cardId": "jm_model_m08",
+  "status": "ready",
+  "engine": "perpendicular-bisector-locus-model",
+  "entry": "scene.js?v=2be21e3f0223",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-perpendicular-bisector",
+  "visualLevel": "A",
+  "source": "source.html",
+  "generator": "junior-model-courseware-v1",
+  "notes": "垂直平分线寻点模型正式互动课件：支持拖拽 A/B/P、等距轨迹、尺规交点、等腰顶点寻点、缩放平移和触屏防长按菜单。"
+}

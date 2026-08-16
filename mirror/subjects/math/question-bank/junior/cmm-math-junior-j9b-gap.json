@@ -1,0 +1,2413 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "junior",
+  "grade": "CMM-Math 九下缺口补齐题",
+  "source": {
+    "name": "CMM-Math",
+    "license": "bsd-3-clause",
+    "type": "open_dataset",
+    "origin": "CMM-Math",
+    "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math"
+  },
+  "review": {
+    "importedCount": 29,
+    "reclassifiedExistingCount": 16,
+    "reclassifiedFiles": [
+      "apps\\subjects\\math\\source\\question-bank\\junior\\cmm-math-junior.json",
+      "apps\\subjects\\math\\source\\question-bank\\junior\\cmm-math-junior-extra.json"
+    ],
+    "policy": "strict-objective-j9b-gap no-unreviewed-images no-generated-questions",
+    "bucketCounts": {
+      "inverse": 3,
+      "projection": 1,
+      "similarity": 4,
+      "trig": 21
+    }
+  },
+  "questions": [
+    {
+      "id": "jr_cmm_j9b_gap_0001",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c26_1"
+      ],
+      "knowledgePoints": [
+        "反比例函数",
+        "函数图像",
+        "函数增减性"
+      ],
+      "curriculumBucket": "inverse",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "下列说法错误的是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "一次函数 y=-2 x+3, y 随 x 的增大而减小，"
+        },
+        {
+          "label": "B",
+          "text": "反比例函数 y=(2)/(x) 中, y 随 x 的增大而增大,"
+        },
+        {
+          "label": "C",
+          "text": "抛物线 y=x²+1 与 y=x²-1 的形状相同, 只是位置不同,"
+        },
+        {
+          "label": "D",
+          "text": "二次函数 y=-2(x-2)²+3 中, 当 x>2 时, y 随 x 的增大而减小"
+        }
+      ],
+      "answer": "B",
+      "analysis": "根据一次函数、反比例函数及二次函数的性质可进行求解. 【详解】解: A、一次函数 y=-2 x+3 中, -2<0, y 随 x 的增大而减小, 本选项正确; B、反比例函数 y=-(2)/(x) 中, -2<0, 在每一个象限内, y 随 x 的增大而增大, 本选项错误; C、拋物线 y=x²+1 与 y=x²-1 的形状相同, 只是位置不同, 本选项正确; D、二次函数 y=-2(x-2)²+3 中, -2<0, 拋物线开口向下, 当 x>2 时, y 随 x 的增大而减小, 本选项正确. 故选 B. 【点睛】本题主要考查一次函数、反比例函数及二次函数的性质, 熟练掌握三种函数的性质是解题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下反比例函数知识点，可用于练习后跳转到反比例函数图像与 k 的几何意义可视化卡片。",
+          "stepLabel": "看 反比例函数图像与 k 的几何意义"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1221",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "反比例函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0002",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c26_1"
+      ],
+      "knowledgePoints": [
+        "反比例函数",
+        "函数图像",
+        "函数增减性"
+      ],
+      "curriculumBucket": "inverse",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "给出下列函数，其中 y 随 x 的增大而减小的函数是（）. (1) y=2 x; (2) y=-2 x+1; (3) y=(2)/(x)(x<0); (4) y=-x²(x<1).",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)(3)(4)"
+        },
+        {
+          "label": "B",
+          "text": "(2)(3)(4)"
+        },
+        {
+          "label": "C",
+          "text": "(2)(4)"
+        },
+        {
+          "label": "D",
+          "text": "(2)(3)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "分别根据一次函数、二次函数及反比例函数的增减性进行解答即可. 【详解】解: (1) y=2 x 中 k=2>0, y 随 x 的增大而增大, 故本小题错误; (2) y=-2 x+1 中 k=-2<0, y 随 x 的增大而减小, 故本小题正确; (3) y=(2)/(x)(x<0) 中 k=2>0, x<0 时, y 随 x 的增大而减小, 故本小题正确; (4) y=-x²(x<1) 中 x<1, 当 0<x<1 时, y 随 x 的增大而减小, 故本小题错误. 故选 D. 【点睛】本题考查的是反比例函数的性质, 熟知一次函数、二次函数及反比例函数的增减性是解答此题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下反比例函数知识点，可用于练习后跳转到反比例函数图像与 k 的几何意义可视化卡片。",
+          "stepLabel": "看 反比例函数图像与 k 的几何意义"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1206",
+        "level": "九年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "代数",
+          "九下缺口补齐",
+          "反比例函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0003",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c26_1"
+      ],
+      "knowledgePoints": [
+        "反比例函数",
+        "函数图像",
+        "函数增减性"
+      ],
+      "curriculumBucket": "inverse",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在下列四个函数中，当 x>0 时， y 随 x 的增大而减小的函数是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "y=2 x"
+        },
+        {
+          "label": "B",
+          "text": "y=(3)/(x)"
+        },
+        {
+          "label": "C",
+          "text": "y=3 x-2"
+        },
+        {
+          "label": "D",
+          "text": "y=x²"
+        }
+      ],
+      "answer": "B",
+      "analysis": "分别根据正比例函数、反比例函数、一次函数和二次函数的性质逐项判断即得答案. 【详解】解: A、 2>0, 当 x>0 时, 函数 y=2 x 是 y 随着 x 增大而增大, 故本选项错误; B、 3>0, 当 x>0 时, 函数 y=(3)/(x) 是 y 随着 x 增大而减小, 故本选项正确; C、 3>0, 当 x>0 时，函数 y=3 x-2 是 y 随着 x 增大而增大，故本选项错误; D、函数 y=x², 当 x<0 时, y 随着 x 增大而减小，当 x>0 时， y 随着 x 增大而增大，故本选项错误. 故选: B. 【点睛】本题考查了初中阶段三类常见函数的性质，属于基础题型，熟练掌握一次函数、反比例函数和二次函数的性质是解题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下反比例函数知识点，可用于练习后跳转到反比例函数图像与 k 的几何意义可视化卡片。",
+          "stepLabel": "看 反比例函数图像与 k 的几何意义"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "19",
+        "level": "九年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "代数",
+          "九下缺口补齐",
+          "反比例函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0004",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c29_1"
+      ],
+      "knowledgePoints": [
+        "投影",
+        "中心投影",
+        "视图识别"
+      ],
+      "curriculumBucket": "projection",
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "圆锥的主视图与左视图都是边长为 4 的等边三角形, 则圆锥的侧面展开图扇形的圆心角是 ()²)",
+      "options": [
+        {
+          "label": "A",
+          "text": "90°"
+        },
+        {
+          "label": "B",
+          "text": "120°"
+        },
+        {
+          "label": "C",
+          "text": "150°"
+        },
+        {
+          "label": "D",
+          "text": "180°"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【分析】 本题综合考查有关扇形和圆锥的相关计算．解题思路：解决此类问题时要紧紧抓住两者之间的两个对应关系: (1)圆锥的母线长等于侧面展开图的扇形半径; (2)圆锥的底面周长等于侧面展开图的扇形弧长. 正确对这两个关系的记忆是解题的关键.由圆锥的主视图为等边三角形知圆锥的底面圆直径为 4、侧面展开图扇形的半径为 4, 据此利用弧长公式求解可得. 【解答】 解: 圆锥的主视图与左视图都是边长为 4 的等边三角形, :圆锥的母线长为 4、底面圆的直径为 4, 则圆锥的侧面展开图扇形的半径为 4, 设圆锥的侧面展开图扇形的圆心角是 n, 根据题意, 得: (n · π · 4)/(180°)=4 π, 解得: n=180°, 故选：D.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下投影与视图知识点，可用于练习后跳转到投影长度与光源位置可视化卡片。",
+          "stepLabel": "看 投影长度与光源位置"
+        },
+        {
+          "cardId": "j9b_m02",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下投影与视图知识点，可用于练习后跳转到几何体的三视图光影投影可视化卡片。",
+          "stepLabel": "看 几何体的三视图光影投影"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3343",
+        "level": "九年级",
+        "subject": "立体几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "立体几何学",
+          "九下缺口补齐",
+          "投影与视图"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0005",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "knowledgePoints": [
+        "相似三角形",
+        "相似判定",
+        "比例关系"
+      ],
+      "curriculumBucket": "similarity",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 △ A B C ∽ △ A₁ B₁ C₁, 且 ∠ A=55°, ∠ B₁=95°, 则 ∠ C 等于 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "30°"
+        },
+        {
+          "label": "B",
+          "text": "55°"
+        },
+        {
+          "label": "C",
+          "text": "95°"
+        },
+        {
+          "label": "D",
+          "text": "40°"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【分析】 此题主要考查了相似三角形的性质, 熟练掌握 相似三角形的对应角相等 是解题关键. 根据相似三角形的性质得出对应角相等, 再根据三角形内角和定理即可求出结果. ## 【解答】 解: △ A B C ∽ △ A₁ B₁ C₁, ∠ A₁=∠ A=55°, ∠ B₁=∠ B=95°, 则 ∠ C=180°-∠ A-∠ B=180°-55°-95°=30°. 故选 A.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似三角形判定实验室可视化卡片。",
+          "stepLabel": "看 相似三角形判定实验室"
+        },
+        {
+          "cardId": "j9b_m12",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似多边形面积比可视化卡片。",
+          "stepLabel": "看 相似多边形面积比"
+        },
+        {
+          "cardId": "j9b_m03",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到位似变换与相似多边形可视化卡片。",
+          "stepLabel": "看 位似变换与相似多边形"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "807",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "相似"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0006",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "knowledgePoints": [
+        "相似三角形",
+        "相似判定",
+        "比例关系"
+      ],
+      "curriculumBucket": "similarity",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "下列说法正确的是（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "所有的矩形都是相似形"
+        },
+        {
+          "label": "B",
+          "text": "有一个角等于 100° 的两个等腰三角形相似"
+        },
+        {
+          "label": "C",
+          "text": "对应角相等的两个多边形相似"
+        },
+        {
+          "label": "D",
+          "text": "对应边成比例的两个多边形相似"
+        }
+      ],
+      "answer": "B",
+      "analysis": "利用相似图形的判定方法分别判断得出即可. 【详解】解:A、对应边的比值不一定相等,故此选项错误; B、有一个角等于 100° 的两个等腰三角形相似, 此角度一定是顶角, 即可得出两三角形相似, 故此选项正确; C、对应边的比值不一定相等,故此选项错误; D、对应角不一定相等,故此选项错误; 所以 B 选项是正确的. 【点睛】此题主要考查了相似图形的判定,熟练应用判定方法是解题关键.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似三角形判定实验室可视化卡片。",
+          "stepLabel": "看 相似三角形判定实验室"
+        },
+        {
+          "cardId": "j9b_m12",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似多边形面积比可视化卡片。",
+          "stepLabel": "看 相似多边形面积比"
+        },
+        {
+          "cardId": "j9b_m03",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到位似变换与相似多边形可视化卡片。",
+          "stepLabel": "看 位似变换与相似多边形"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1136",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "相似"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0007",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "knowledgePoints": [
+        "相似三角形",
+        "相似判定",
+        "比例关系"
+      ],
+      "curriculumBucket": "similarity",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "若 △ A B C ∽ △ A' B' C', ∠ A=40°, ∠ B=110°, 则 ∠ C' 的度数为（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "30°"
+        },
+        {
+          "label": "B",
+          "text": "40°"
+        },
+        {
+          "label": "C",
+          "text": "70°"
+        },
+        {
+          "label": "D",
+          "text": "110°"
+        }
+      ],
+      "answer": "A",
+      "analysis": "若 △ A B C ∽ △ A' B' C', 则说明点 A 的对应点为点 A', 点 B 的对应点 B', 点 C 的对应点为点 C', 且对应角相等. 【详解】因为 △ A B C ∽ △ A' B' C', 所以 ∠ C=∠ C'. 因为 ∠ A=40°, ∠ B=110°, 所以 ∠ C=30°,所以 ∠ C'=30°. 故选 A. 【点睛】考核知识点: 相似比.熟记相似三角形性质:对应角相等, 是关键.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似三角形判定实验室可视化卡片。",
+          "stepLabel": "看 相似三角形判定实验室"
+        },
+        {
+          "cardId": "j9b_m12",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似多边形面积比可视化卡片。",
+          "stepLabel": "看 相似多边形面积比"
+        },
+        {
+          "cardId": "j9b_m03",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到位似变换与相似多边形可视化卡片。",
+          "stepLabel": "看 位似变换与相似多边形"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "373",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "相似"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0008",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "knowledgePoints": [
+        "相似三角形",
+        "相似判定",
+        "比例关系"
+      ],
+      "curriculumBucket": "similarity",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在直角坐标系中, △ A B C 的三个顶点分别为 A(1,2), B(2,1), C(3,2), 现以原点 O 为位似中心, 作与 △ A B C 的位似比为 2 的位似图形 △ A' B' C', 则顶点 C' 的坐标是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(6,4)"
+        },
+        {
+          "label": "B",
+          "text": "((3)/(2), 1)"
+        },
+        {
+          "label": "C",
+          "text": "(6,4) 或 (-6,-4)"
+        },
+        {
+          "label": "D",
+          "text": "((3)/(2), 1) 或 (-(3)/(2),-1)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "解: △ A B C 的位似比为 2 的位似图形是 △ A' B' C', 且 C(3,2), 当 △ A' B' C' 与 △ A B C 在原点同侧时 C'(2 × 3,2 × 2), 即 C'(6,4), 当 △ A' B' C' 与 △ A B C 在原点异侧时, C'(-2 × 3,-2 × 2), 即 C'(-6,-4),故选: C. 分 △ A' B' C' 与 △ A B C 在原点同侧和异侧两种情况结合位似图形的性质进行求解即可. 本题主要考查了位似图形的性质, 熟练掌握位似图形的性质是解题关键: 如果 △ A B C 与 △ A' B' C' 是关于原点位似且位似比为 k 的位似图形, 那么 A(a, b) 的对应点 A' 的坐标为 (k a, k b) 或 (-k a,-k b). ##",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似三角形判定实验室可视化卡片。",
+          "stepLabel": "看 相似三角形判定实验室"
+        },
+        {
+          "cardId": "j9b_m12",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到相似多边形面积比可视化卡片。",
+          "stepLabel": "看 相似多边形面积比"
+        },
+        {
+          "cardId": "j9b_m03",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下相似知识点，可用于练习后跳转到位似变换与相似多边形可视化卡片。",
+          "stepLabel": "看 位似变换与相似多边形"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "897",
+        "level": "九年级",
+        "subject": "变换几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "变换几何",
+          "九下缺口补齐",
+          "相似"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0009",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 △ A B C 中, 若 sin B=(√(3))/(2), cos A=(1)/(2), 则 △ A B C 是 (）",
+      "options": [
+        {
+          "label": "A",
+          "text": "等腰三角形"
+        },
+        {
+          "label": "B",
+          "text": "等边三角形"
+        },
+        {
+          "label": "C",
+          "text": "直角三角形"
+        },
+        {
+          "label": "D",
+          "text": "等腰直角三角形"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【分析】利用特殊角的三角函数值得出 ∠ B, ∠ A 的度数, 进而得出答案. 解: 在 △ A B C 中, sin B=(√(3))/(2), cos A=(1)/(2), ∠ B=60°, ∠ A=60° △ ABC 是等边三角形. 故选: B.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3967",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0010",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 Rt △ A B C 中, ∠ C=90°, B C=a, A C=b, 且 3 a=4 b, 则 ∠ A 的度数为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "53.48°"
+        },
+        {
+          "label": "B",
+          "text": "53.13°"
+        },
+        {
+          "label": "C",
+          "text": "53.13'"
+        },
+        {
+          "label": "D",
+          "text": "53.48'"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【分析】首先利用正切函数的定义求得 tan ∠ A 的值, 然后利用计算器即可求得 ∠ A 度数. 解: 由锐角三角函数的定义可知: tan A=(a)/(b)=(4)/(3). ∠ A 53.13°. 故选: B.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3978",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0011",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 △ A B C 中, ∠ C=90°, a, b, c 分别是 ∠ A, ∠ B, ∠ C 的对边, 下列等式: (1) b=c cos B; (2) b=a tan B; (3) a=c sin A; (4) a=c cos B; (5) a=b tan A; (5) a=b A, 其中正确的有（）",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 个"
+        },
+        {
+          "label": "B",
+          "text": "3 个"
+        },
+        {
+          "label": "C",
+          "text": "4 个"
+        },
+        {
+          "label": "D",
+          "text": "5 个"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【分析】在 Rt △ A B C 中, ∠ C=90°, 则利用锐角三角函数的定义分别代入求解即可. 解: 在 Rt △ A B C 中, ∠ C=90°, 则 cos A=(b)/(c), sin A=(a)/(c), tan B=(b)/(a), cos B=(a)/(c), tan A=(a)/(b), A=(b)/(a). 因而 b=c cos A=a tan B, a=c sin A=c cos B=b tan A=(b)/(A), 故正确的是: (2), (3), (4)共 3 个. 故选: B.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3986",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0012",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 △ A B C 中, ∠ A, ∠ B 都是锐角, 且 sin A=(1)/(2), cos B=(√(2))/(2), 则 △ A B C 三个角的大小关系是 （）",
+      "options": [
+        {
+          "label": "A",
+          "text": "∠ C>∠ A>∠ B"
+        },
+        {
+          "label": "B",
+          "text": "∠ B>∠ C>∠ A"
+        },
+        {
+          "label": "C",
+          "text": "∠ A>∠ B>∠ C"
+        },
+        {
+          "label": "D",
+          "text": "∠ C>∠ B>∠ A"
+        }
+      ],
+      "answer": "D",
+      "analysis": "sin A=(1)/(2), cos B=(√(2))/(2), ∠ A=30°, ∠ B=45°. ∠ C=180°-30°-45=105°. ∠ C>∠ B>∠ A. 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3689",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0013",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 △ A B C 中, 若 cos A=(√(2))/(2), tan B=√(3), 则这个三角形一定是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "锐角三角形"
+        },
+        {
+          "label": "B",
+          "text": "直角三角形"
+        },
+        {
+          "label": "C",
+          "text": "钝角三角形"
+        },
+        {
+          "label": "D",
+          "text": "等腰三角形"
+        }
+      ],
+      "answer": "A",
+      "analysis": "cos A=(√(2))/(2), tan B=√(3), ∠ A=45°, ∠ B=60°. ∠ C=180°-45°-60°=75°. △ A B C 为锐角三角形. 故选: A.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3700",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0014",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 △ ABC 中, ∠ C=90°, tan A=(1)/(3), 那么 sin A 的值是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "(√(10))/(10)"
+        },
+        {
+          "label": "C",
+          "text": "(√(3))/(3)"
+        },
+        {
+          "label": "D",
+          "text": "(√(3))/(2)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "tan A=(B C)/(A C)=(1)/(3), B C=x, AC=3 x, 由勾股定理, 得 AB=√(10) x, sin A=(B C)/(A B)=(√(10))/(10), 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3943",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0015",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 △ A B C 中, 若 ∠ A, ∠ B 满足 |sin A-(√(3))/(2)|+(cos B-(1)/(2))²=0, 则 △ A B C 是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "等腰非等边三角形"
+        },
+        {
+          "label": "B",
+          "text": "等边三角形"
+        },
+        {
+          "label": "C",
+          "text": "直角三角形"
+        },
+        {
+          "label": "D",
+          "text": "钝角三角形"
+        }
+      ],
+      "answer": "B",
+      "analysis": "根据题意得 sin A-(√(3))/(2)=0, cos B-(1)/(2)=0, sin A=(√(3))/(2), cos B=(1)/(2), A=60° 或 120°, B=60°, 当 A=120°, B=60°, 不满足 △ A B C, 舍去, A=60°, B=60°, △ A B C 为等边三角形. 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3758",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0016",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 △ A B C 中, tan C=(√(3))/(3), cos A=(√(3))/(2), 则 ∠ B=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "60°"
+        },
+        {
+          "label": "B",
+          "text": "90°"
+        },
+        {
+          "label": "C",
+          "text": "120°"
+        },
+        {
+          "label": "D",
+          "text": "135°"
+        }
+      ],
+      "answer": "C",
+      "analysis": "tan C=(√(3))/(3), cos A=(√(3))/(2), ∠ C=30°, ∠ A=30°, ∠ B=120°. 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3775",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0017",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "∠ A, ∠ B, ∠ C 是 △ ABC 的三个内角, 下列各式成立的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "sin (A+B)/(2)=sin (C)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "cos (B+C)/(2)=cos (A)/(2)"
+        },
+        {
+          "label": "C",
+          "text": "tan (A+C)/(2)=tan (B)/(2)"
+        },
+        {
+          "label": "D",
+          "text": "sin (A)/(2)=cos (C+B)/(2)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【分析】根据锐角三角函数的概念, 可以证明: 若 α+β=90°, 则 sin α=cos β, tan α · tan β=1.解: ∠ A, ∠ B, ∠ C 是 △ ABC 的三个内角, (A+B)/(2)+(C)/(2)=90°, (B+C)/(2)+(A)/(2)=90°, (A+C)/(2)+(B)/(2)=90°. A. 应是 sin (A+B)/(2)=cos (C)/(2). 错误; B、应是 cos (B+C)/(2)=sin (A)/(2). 错误; C、应是 tan (A+C)/(2)=(1)/(tan (B)/(2)). 错误; D、是 sin (A)/(2)=cos (C+B)/(2). 正确; 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3998",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0018",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "sin 70°, cos 70°, tan 70° 的大小关系是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "tan 70°<cos 70°<sin 70°"
+        },
+        {
+          "label": "B",
+          "text": "cos 70°<tan 70°<sin 70°"
+        },
+        {
+          "label": "C",
+          "text": "sin 70°<cos 70°<tan 70°"
+        },
+        {
+          "label": "D",
+          "text": "cos 70°<sin 70°< tan 70°"
+        }
+      ],
+      "answer": "D",
+      "analysis": "根据锐角三角函数的概念, 知 sin 70°<1, cos 70°<1, tan 70°>1. 又 cos 70°=sin 20°, 正弦值随着角的增大而增大, sin 70°>cos 70°=sin 20°. 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3707",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0019",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 α 为锐角, 下列结论: (1) sin α+cos α=1; (2)如果 α>45°, 那么 sin α>cos α; (3)如果 cos α>(1)/(2), 那么 α<60°; (4) √((sin α-1)²)=1-sin α, 正确的有 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 个"
+        },
+        {
+          "label": "B",
+          "text": "2 个"
+        },
+        {
+          "label": "C",
+          "text": "3 个"
+        },
+        {
+          "label": "D",
+          "text": "4 个"
+        }
+      ],
+      "answer": "C",
+      "analysis": "(1)如果 α=30°, 那么 sin α=(1)/(2), cos α=(√(3))/(2), sin α+cos α=(1+√(3))/(2) ≠ 1, 错误; (2) 90°>α>45°, 0°<90°-α<45°<α, sin α>sin (90°-α), sin α>cos α, 正确; (3) cos 60°=(1)/(2),锐角余弦函数随角的增大而减小, 如果 cos α>(1)/(2), 则 α<60°, 正确; (4) sin α ≤ 1, sin α-1 ≤ 0, √((sin α-1)²)=|sin α-1|=1-sin α, 正确. 故选: C.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3966",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0020",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 ∠ A 为锐角, 且 tan A=√(2), 则 ∠ A 的取值范围是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "0°<∠ A<30°"
+        },
+        {
+          "label": "B",
+          "text": "30°<∠ A<45°"
+        },
+        {
+          "label": "C",
+          "text": "45°<∠ A<60°"
+        },
+        {
+          "label": "D",
+          "text": "60°<∠ A<90°"
+        }
+      ],
+      "answer": "C",
+      "analysis": "tan 45°=1, tan 60°=√(3), ∠ A 为锐角, 正切值随角增大而增大, 1<√(2)<√(3), 45°<∠ A<60°. 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3769",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0021",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "如果 ∠ A 为锐角, 且 cos A=0.31, 那么 ∠ A 的范围是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "0°<∠ A<30°"
+        },
+        {
+          "label": "B",
+          "text": "60°<∠ A<90°"
+        },
+        {
+          "label": "C",
+          "text": "45°<∠ A<60°"
+        },
+        {
+          "label": "D",
+          "text": "30°<∠ A<45°"
+        }
+      ],
+      "answer": "B",
+      "analysis": "cos 60°=(1)/(2)=0.5, cos A=0.31,0.5>0.31, 60°<∠ A<90°. 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3776",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0022",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 α 为锐角, 且 tan α=3, 则 (sin α-2 cos α)/(2 cos α+sin α) 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "(1)/(4)"
+        },
+        {
+          "label": "C",
+          "text": "(1)/(5)"
+        },
+        {
+          "label": "D",
+          "text": "(1)/(6)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "α 为锐角, 且 tan α=3, (sin α-2 cos α)/(2 cos α+sin α)=(tan α-2)/(2+tan α)=(3-2)/(2+3)=(1)/(5). 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3940",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0023",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 R t △ A B C 中, ∠ C=90°, cos B=(1)/(2), 则 sin A 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "(√(2))/(2)"
+        },
+        {
+          "label": "C",
+          "text": "(√(3))/(2)"
+        },
+        {
+          "label": "D",
+          "text": "√(3)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解: 在Rt △ A B C 中, ∠ C=90°, cos B=(1)/(2), 则 sin A=cos B=(1)/(2), 故选: A. 利用互余两角三角函数的关系判断即可. 此题考查了互余两角三角函数的关系, 以及特殊角的三角函数值, 熟练掌握各自的性质是解本题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3392",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0024",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在 R t △ A B C 中, ∠ C=90°, a: b=3: 4, 运用计算器计算, ∠ A 的度数为 (精确到 1°)()",
+      "options": [
+        {
+          "label": "A",
+          "text": "30°"
+        },
+        {
+          "label": "B",
+          "text": "37°"
+        },
+        {
+          "label": "C",
+          "text": "38°"
+        },
+        {
+          "label": "D",
+          "text": "39°"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【分析】 本题考查在直角三角形中解题, 根据角的正弦值求出三角形的角度,根据题中所给的条件, 在直角三角形中解题, 根据角的正弦值与三角形边的关系, 可求出各边的长, 然后求出 ∠ A. 【解答】 解: a: b=3: 4, 可设 a=3 x, b=4 x, x>0, 由勾股定理得 c=5 x, sin A=(a)/(c)=(3 x)/(5 x)=0.6, 利用计算器可求得 ∠ A 37°. 故选 B",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3498",
+        "level": "九年级",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "解析几何",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0025",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知 (1)/(2)<cos α<sin 80°, 则锐角 α 的取值范围是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "30°<α<80°"
+        },
+        {
+          "label": "B",
+          "text": "10°<α<80°"
+        },
+        {
+          "label": "C",
+          "text": "60°<α<80°"
+        },
+        {
+          "label": "D",
+          "text": "10°<α<60°"
+        }
+      ],
+      "answer": "D",
+      "analysis": "cos 60°=(1)/(2), sin 80°=cos 10°, 余弦函数随角增大而减小， 10°<α<60°. 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3606",
+        "level": "九年级",
+        "subject": "立体几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "立体几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0026",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "下列命题: (1)所有锐角三角函数值都为正数; (2)解直角三角形时只需已知除直角外的两个元素; (3)Rt △ A B C 中, ∠ B=90°, 则 sin ² A+cos ² A=1; (4) R t △ A B C 中, ∠ A=90°, 则 tan C · sin C=cos C. 其中正确的命题有 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "0 个"
+        },
+        {
+          "label": "B",
+          "text": "1 个"
+        },
+        {
+          "label": "C",
+          "text": "2 个"
+        },
+        {
+          "label": "D",
+          "text": "3 个"
+        }
+      ],
+      "answer": "C",
+      "analysis": "(1)根据锐角三角函数的定义知所有的锐角三角函数值都是正数, 故正确; (2)两个元素中, 至少得有一条边, 故错误; (3)根据锐角三角函数的概念, 以及勾股定理, 得则 sin ² A+cos ² A=(a 2+c 2)/(b 2)=1, 故正确; (4)根据锐角三角函数的概念, 得 tan C=(c)/(b), sin C=(c)/(a), cos C=(b)/(a), 则 tan C · cos C=sin C, 故错误. 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3931",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0027",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "将 R t △ A B C 的三边分别扩大 2 倍, 得到 R t △ A' B' C', 则 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "sin A=sin A'"
+        },
+        {
+          "label": "B",
+          "text": "sin A>sin A'"
+        },
+        {
+          "label": "C",
+          "text": "sin A<sin A'"
+        },
+        {
+          "label": "D",
+          "text": "不能确定"
+        }
+      ],
+      "answer": "A",
+      "analysis": "Rt △ A B C 的三边分别扩大 2 倍, 得到 Rt △ A' B' C', 对边与斜边的比值不变,故 A 正确; 故选: A.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3939",
+        "level": "九年级",
+        "subject": "度量几何学",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "度量几何学",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0028",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在Rt △ A B C 中, ∠ C=90°, ∠ A、 ∠ B 的对边分别是 a、 b, 且满足 a²-a b-b²=0, 则 tan A 等于 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "(1+√(5))/(2)"
+        },
+        {
+          "label": "C",
+          "text": "(1-√(5))/(2)"
+        },
+        {
+          "label": "D",
+          "text": "(1 √(5))/(2)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "a、 b 满足 a²-a b-b²=0, 等式两边同时除以 b² 得: ((a)/(b))²-(a)/(b)-1=0, 解得 (a)/(b)=(1 √(5))/(2)， tan A=(a)/(b)>0, 故 tan A=(1+√(5))/(2). 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3612",
+        "level": "九年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "代数",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_j9b_gap_0029",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c28_1"
+      ],
+      "knowledgePoints": [
+        "锐角三角函数",
+        "解直角三角形",
+        "三角函数值"
+      ],
+      "curriculumBucket": "trig",
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "在实数 π, (1)/(3), √(2), sin 30° 中, 无理数的个数为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "B",
+      "analysis": "先把 sin 30° 化为 (1)/(2) 的形式, 再根据无理数的定义进行解答.",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m01",
+          "role": "primary",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到锐角三角函数与测绘应用可视化卡片。",
+          "stepLabel": "看 锐角三角函数与测绘应用"
+        },
+        {
+          "cardId": "j9b_m11",
+          "role": "related",
+          "reason": "这道 CMM-Math 九年级题对应九下锐角三角函数知识点，可用于练习后跳转到解直角三角形坡度测量可视化卡片。",
+          "stepLabel": "看 解直角三角形坡度测量"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "3367",
+        "level": "九年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "算术",
+          "九下缺口补齐",
+          "锐角三角函数"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "九下缺口补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    }
+  ]
+}

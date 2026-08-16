@@ -1,0 +1,27 @@
+{
+  "cardId": "j7a_m10",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-scale-notation",
+  "visualLevel": "A",
+  "source": "source.html",
+  "assetsDir": "assets",
+  "sourceAdapter": {
+    "cardId": "j7a_m10",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j7a_m10",
+    "panelClass": "math-source-panel-j7a_m10",
+    "inlineFunctionNames": [
+      "switchTab",
+      "toggleInfoHud"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "接入科学记数法与数量级缩放演示，支持数量级滑块、典型尺度定位、数量级比拼和巩固训练。"
+}

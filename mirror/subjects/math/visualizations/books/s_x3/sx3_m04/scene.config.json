@@ -1,0 +1,23 @@
+{
+  "cardId": "sx3_m04",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-conditional-probability-bayes",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sx3_m04",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sx3_m04",
+    "panelClass": "math-source-panel-sx3_m04",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "条件概率与贝叶斯公式可视化 已接入 source-html-adapter；源文件来自 2026-06-03 数学课件 6.3。"
+}

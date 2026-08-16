@@ -1,0 +1,11 @@
+{
+  "cardId": "jm_model_m03",
+  "status": "ready",
+  "engine": "one-line-three-equal-angle-model",
+  "entry": "scene.js?v=a115fcbf45fa",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-one-line-three-angle",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "一线三等角模型正式互动课件：支持标准 K 字、同侧、异侧、三垂直特例，拖拽 A/O/C/B/D，自由验证与模型吸附，三等角判定、相似/全等结论、场景切换、缩放平移和自动演示。"
+}

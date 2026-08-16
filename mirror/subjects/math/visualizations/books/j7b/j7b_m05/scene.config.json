@@ -1,0 +1,10 @@
+{
+  "cardId": "j7b_m05",
+  "status": "ready",
+  "engine": "linear-system-intersection",
+  "entry": "scene.js?v=ecc7c47733a2",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-coordinate",
+  "visualLevel": "A",
+  "notes": "二元一次方程组的两直线交点、平行无解、重合无数解和试探点验算。所有资源本地化，无 CDN。"
+}

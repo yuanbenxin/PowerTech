@@ -1,0 +1,23 @@
+{
+  "cardId": "j7b_m14",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-inequality-real-problem-modeling",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j7b_m14",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j7b_m14",
+    "panelClass": "math-source-panel-j7b_m14",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：实际问题中的不等式建模。左侧承载情境模型、数轴可行区间和板书 HUD，右侧平台面板承载题型场景、参数调节与建模步骤。"
+}

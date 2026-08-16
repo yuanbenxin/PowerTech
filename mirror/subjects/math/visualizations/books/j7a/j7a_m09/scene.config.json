@@ -1,0 +1,11 @@
+{
+  "cardId": "j7a_m09",
+  "status": "ready",
+  "engine": "angle-bisector-lab",
+  "entry": "scene.js?v=0abbb4535608",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-safe-angle-drag",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "角的度量与角平分线：左侧动态角度模拟框，右侧统一操作面板，支持量角器对齐读数、角平分线折叠、双平分线恒定探究、触屏拖拽、缩放与移动。"
+}

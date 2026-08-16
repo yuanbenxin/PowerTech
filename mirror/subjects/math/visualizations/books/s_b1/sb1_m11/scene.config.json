@@ -1,0 +1,22 @@
+{
+  "cardId": "sb1_m11",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-quadratic-linkage",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m11",
+    "panelSelector": ".control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m11",
+    "panelClass": "math-source-panel-sb1_m11",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "二次函数、方程与不等式三联动已接入；支持系数调节、顶点与根拖拽、解集判断和画布缩放平移。"
+}

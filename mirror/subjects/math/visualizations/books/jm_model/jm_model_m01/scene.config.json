@@ -1,0 +1,11 @@
+{
+  "cardId": "jm_model_m01",
+  "status": "ready",
+  "engine": "water-horse-shortest-path",
+  "entry": "scene.js?v=32208a860235",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-shortest-path",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "将军饮马最短路径模型源码接入：左侧模拟框、右侧操作面板，支持拖拽点位、模式切换、自动演示和触屏长按防原生菜单。"
+}

@@ -1,0 +1,12 @@
+{
+  "cardId": "sb2_m15",
+  "status": "planned",
+  "engine": "placeholder-source",
+  "entry": "scene.js?v=d8da5f93e42d",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-safe-placeholder",
+  "visualLevel": "P",
+  "source": "source.html",
+  "generator": "senior-placeholder-card-v1",
+  "notes": "占位卡片：卡片入口已补全，正式互动内容待制作。"
+}

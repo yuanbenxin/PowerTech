@@ -1,0 +1,33 @@
+{
+  "cardId": "j7b_m03",
+  "status": "ready",
+  "engine": "inequality-numberline-solution",
+  "entry": "scene.js?v=8f2288f4115a",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-numberline-interval-proof",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码接入：不等式解集的数轴表示.html；已经统一左侧模拟框与右侧操作面板，所有资源本地化，无 CDN。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j7b_m03",
+    "panelSelector": "#control-panel",
+    "auxiliaryPanelSelectors": [
+      "#data-panel"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "sceneClass": "math-source-scene-j7b_m03",
+    "panelClass": "math-source-panel-j7b_m03",
+    "inlineFunctionNames": [
+      "toggleFocusMode",
+      "setOp",
+      "toggleIneq2",
+      "toggleParamMode",
+      "switchMode",
+      "playDerivation",
+      "updateUI",
+      "draw"
+    ],
+    "stylePreScoped": true
+  }
+}

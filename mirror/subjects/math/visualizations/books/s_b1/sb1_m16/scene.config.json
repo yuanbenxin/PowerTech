@@ -1,0 +1,22 @@
+{
+  "cardId": "sb1_m16",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-abstract-function-transform",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m16",
+    "panelSelector": ".control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m16",
+    "panelClass": "math-source-panel-sb1_m16",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "抽象函数图像变换总控台已接入；支持平移、对称、内外绝对值、曲线拖拽、画布平移与缩放。"
+}

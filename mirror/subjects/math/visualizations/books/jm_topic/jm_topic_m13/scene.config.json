@@ -1,0 +1,14 @@
+{
+  "cardId": "jm_topic_m13",
+  "status": "ready",
+  "engine": "circle-properties-topic-model",
+  "entry": "scene.js?v=30f0d085f357",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-circle-properties",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=794731b986e4",
+  "script": "app.js?v=25275c6aa9fa",
+  "generator": "math-topic-source-bridge-v1",
+  "notes": "已接入圆的性质综合实验室：左侧 SVG 几何沙盒与可收起推导 HUD，右侧平台操作面板承载专题切换、测量值、推导和预设。"
+}

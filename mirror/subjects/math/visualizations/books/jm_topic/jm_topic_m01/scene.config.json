@@ -1,0 +1,22 @@
+{
+  "cardId": "jm_topic_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-algebra-transformation",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码已接入：数与式变形总览；原页头已由平台壳替代，原控制区已迁移至右侧操作面板。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "jm_topic_m01",
+    "panelSelector": ".control-column",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-jm_topic_m01",
+    "panelClass": "math-source-panel-jm_topic_m01",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  }
+}

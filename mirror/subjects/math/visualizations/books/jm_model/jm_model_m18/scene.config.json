@@ -1,0 +1,27 @@
+{
+  "cardId": "jm_model_m18",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-dynamic-point-trajectory",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=e2b2e6927d57",
+  "script": "app.js?v=c56abe2603a1",
+  "sourceAdapter": {
+    "cardId": "jm_model_m18",
+    "panelSelector": ".sidebar-panel",
+    "auxiliaryPanelSelectors": [
+      "#hud-panel"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-jm_model_m18",
+    "panelClass": "math-source-panel-jm_model_m18",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "接入动点轨迹模型课件：左侧轨迹模拟框与可收起 HUD，右侧平台操作面板承载轨迹场景、约束、速度、动画与重置控制。"
+}

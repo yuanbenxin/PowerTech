@@ -1,0 +1,23 @@
+{
+  "cardId": "j8b_m08",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-parallelogram-criterion",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8b_m08",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j8b_m08",
+    "panelClass": "math-source-panel-j8b_m08",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：平行四边形判定实验室。左侧承载几何判定模拟框，右侧平台面板承载模式、参数、任务与核对控制。"
+}

@@ -1,0 +1,7043 @@
+{
+  "version": "0.2.0",
+  "generatedAt": "2026-06-16",
+  "source": "course-data/books/*.json",
+  "engines": [
+    {
+      "id": "numberline",
+      "label": "有理数数轴推演引擎",
+      "description": "用于有理数四则运算、绝对值、相反数和数轴定位的动态可视化。",
+      "folder": "visualizations/engines/numberline",
+      "defaults": {
+        "cameraPreset": "pan-zoom-axis",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "geom3d",
+      "label": "立体图形展开与折叠引擎",
+      "description": "用于正方体、棱柱、棱锥、圆柱等几何体展开图与三维折叠过程演示。",
+      "folder": "visualizations/engines/geom3d",
+      "defaults": {
+        "cameraPreset": "free-orbit",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "numberline-absolute",
+      "label": "绝对值与相反数数轴引擎",
+      "description": "用于展示 |x|、-x 与 |a-b| 的数轴几何意义。",
+      "folder": "visualizations/engines/numberline-absolute",
+      "defaults": {
+        "cameraPreset": "touch-drag-axis",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "balance-3d",
+      "label": "一元一次方程天平引擎",
+      "description": "用于通过 3D 天平、砝码块和等式变形演示一元一次方程求解。",
+      "folder": "visualizations/engines/balance-3d",
+      "defaults": {
+        "cameraPreset": "free-orbit",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "parentheses-sign-machine",
+      "label": "去括号与符号变化机器",
+      "description": "用于通过代数磁贴、分配弧线和符号判定展示去括号、变号与化简过程。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-safe-algebra-tiles"
+      }
+    },
+    {
+      "id": "exponent-explosion",
+      "label": "有理数乘方指数爆炸引擎",
+      "description": "用于通过分形树、棋盘麦粒、折纸厚度和指数曲线展示指数增长。",
+      "folder": "visualizations/engines/exponent-explosion",
+      "defaults": {
+        "cameraPreset": "fixed-stage",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "parallel-lines",
+      "label": "平行线与截线角关系引擎",
+      "description": "用于动态验证同位角、内错角、同旁内角、对顶角和邻补角关系。",
+      "folder": "visualizations/engines/parallel-lines",
+      "defaults": {
+        "cameraPreset": "touch-drag-geometry",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "linear-system-intersection",
+      "label": "二元一次方程组交点引擎",
+      "description": "用于展示两条直线交点、平行无解、重合无数解和试探点验算。",
+      "folder": "visualizations/engines/linear-system-intersection",
+      "defaults": {
+        "cameraPreset": "coordinate-plane",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "angle-identifier",
+      "label": "???????????",
+      "description": "?????????????????????????????????",
+      "folder": "visualizations/engines/math-geometry-suite",
+      "defaults": {
+        "cameraPreset": "orthographic-board",
+        "interactionMode": "touch-angle-picking"
+      }
+    },
+    {
+      "id": "square-puzzle",
+      "label": "????????????",
+      "description": "???? a??ab?ab?b? ?????????????",
+      "folder": "visualizations/engines/math-geometry-suite",
+      "defaults": {
+        "cameraPreset": "orthographic-board",
+        "interactionMode": "slider-puzzle-proof"
+      }
+    },
+    {
+      "id": "hl-congruence",
+      "label": "HL ???????????",
+      "description": "????????????????????????????",
+      "folder": "visualizations/engines/math-geometry-suite",
+      "defaults": {
+        "cameraPreset": "orthographic-board",
+        "interactionMode": "triangle-overlay-proof"
+      }
+    },
+    {
+      "id": "pythagorean-area",
+      "label": "??????????",
+      "description": "???????????????????? a?+b?=c??",
+      "folder": "visualizations/engines/math-geometry-suite",
+      "defaults": {
+        "cameraPreset": "orthographic-board",
+        "interactionMode": "area-proof-animation"
+      }
+    },
+    {
+      "id": "quadrilateral-morph",
+      "label": "???????????",
+      "description": "??????????????????????????",
+      "folder": "visualizations/engines/math-geometry-suite",
+      "defaults": {
+        "cameraPreset": "orthographic-board",
+        "interactionMode": "quadrilateral-slider-morph"
+      }
+    },
+    {
+      "id": "coordinate-polygon-translation",
+      "label": "坐标系中的多边形平移",
+      "description": "在笛卡尔坐标系中，拖动多边形并实时展示顶点坐标的变化规律及平移向量",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-coordinate-translation"
+      }
+    },
+    {
+      "id": "inequality-numberline-solution",
+      "label": "不等式解集的数轴表示",
+      "description": "动态生成不等式区域及区间交集",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-numberline-interval-proof"
+      }
+    },
+    {
+      "id": "triangle-congruence-theorem",
+      "label": "全等三角形的判定定理验证",
+      "description": "自由组合边长与角度参数，动态模拟 SSS、SAS、ASA 等判定条件的几何刚性构建",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-triangle-congruence-proof"
+      }
+    },
+    {
+      "id": "axis-symmetry-reflection",
+      "label": "轴对称与镜面反射空间构建",
+      "description": "在三维或二维空间中设定任意对称轴，动态生成复杂图形的完美镜面反射路径",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-axis-reflection-transform"
+      }
+    },
+    {
+      "id": "linear-function-slope-intercept",
+      "label": "一次函数斜率与截距动态图",
+      "description": "通过滑块实时改变 k 与 b 的值，观察直线 y=kx+b 在坐标系中的旋转与平移运动",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-linear-function"
+      }
+    },
+    {
+      "id": "pythagorean-tree-fractal",
+      "label": "毕达哥拉斯树分形动画",
+      "description": "由勾股定理衍生出的无穷分形几何之美",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-fractal-growth-animation"
+      }
+    },
+    {
+      "id": "frequency-histogram-analysis",
+      "label": "频率分布直方图与数据分析",
+      "description": "实时生成数据集的频率分布直方图并动态计算均值与方差",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-statistics-histogram-simulation"
+      }
+    },
+    {
+      "id": "quadratic-equation-discriminant-roots",
+      "label": "一元二次方程根的判别式",
+      "description": "通过抛物线与目标线交点动态展示 Δ=b²-4ac 与实数根个数、根的位置和应用情境的关系",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-quadratic-discriminant-roots"
+      }
+    },
+    {
+      "id": "quadratic-parabola-vertex",
+      "label": "二次函数的抛物线与顶点",
+      "description": "动态拖动 y=a(x-h)²+k 中的参数，实时观察抛物线开口、顶点及对称轴在坐标系中的平移与形变",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-quadratic-parabola"
+      }
+    },
+    {
+      "id": "circle-inscribed-angle-theorem",
+      "label": "圆与圆周角定理动态推演",
+      "description": "在圆上任意拖动顶点，系统实时计算圆周角与圆心角的度数，直观验证同弧所对的角的关系",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-circle-angle-proof"
+      }
+    },
+    {
+      "id": "geometry-projection-views",
+      "label": "几何体的三视图光影投影",
+      "description": "通过打光动画，将复杂的 3D 几何组合体精准投射到三个正交的平面上，生成主视图、俯视图与左视图",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-build-projection-views"
+      }
+    },
+    {
+      "id": "cube-section-explorer",
+      "label": "正方体截面的所有可能",
+      "description": "用发光平面切割正方体，得出三角形、六边形截面",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-cube-section-explorer"
+      }
+    },
+    {
+      "id": "perpendicular-diameter-geometry",
+      "label": "?????????",
+      "description": "????????????????????????????????????",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-perpendicular-diameter-proof"
+      }
+    },
+    {
+      "id": "rotation-central-symmetry",
+      "label": "???????????",
+      "description": "??????????????????????????????????",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-rotation-symmetry"
+      }
+    },
+    {
+      "id": "probability-tree-list-method",
+      "label": "??????????",
+      "description": "?????????????????????????",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-probability-tree-table"
+      }
+    },
+    {
+      "id": "trig-surveying-applications",
+      "label": "???????????",
+      "description": "???????????????????? sin?cos?tan ???????",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-trig-surveying"
+      }
+    },
+    {
+      "id": "similarity-homothety-polygons",
+      "label": "??????????",
+      "description": "??????????????????????????????????",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-homothety-polygons"
+      }
+    },
+    {
+      "id": "exponential-log-inversion",
+      "label": "指数函数与对数函数图像反演",
+      "description": "绘制 y=a^x 与 y=log_a(x) 的图像，展示它们关于直线 y=x 的对称关系、底数变化与反函数联系。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-exponential-log-inversion"
+      }
+    },
+    {
+      "id": "unit-circle-trig-generation",
+      "label": "三角函数的单位圆动态生成",
+      "description": "拖动单位圆上的动点，实时投影生成正弦、余弦曲线，并保留角度播放、速度调节和手动定位。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-unit-circle-trig-generation"
+      }
+    },
+    {
+      "id": "venn-boolean-operations",
+      "label": "集合的维恩图与布尔运算",
+      "description": "在维恩图和数轴区间之间切换，动态演示交集、并集、补集、差集等集合布尔运算。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-venn-boolean-operations"
+      }
+    },
+    {
+      "id": "logarithmic-spiral-e",
+      "label": "对数螺旋线与自然底数 e",
+      "description": "在极坐标和函数图像中联动观察对数螺旋线、自然底数 e、切线、积分与不等式推演。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-logarithmic-spiral-e"
+      }
+    },
+    {
+      "id": "trig-translation-scaling",
+      "label": "三角函数图像的平移与伸缩",
+      "description": "调节振幅、周期、相位与上下平移，动态演示三角函数图像的伸缩和平移规律。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-trig-translation-scaling"
+      }
+    },
+    {
+      "id": "function-parity-symmetry",
+      "label": "函数奇偶性的图像对称翻转",
+      "description": "通过图像翻转与函数选择，演示偶函数关于 y 轴对称、奇函数关于原点对称的判定过程。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-function-parity-symmetry"
+      }
+    },
+    {
+      "id": "power-function-family-overview",
+      "label": "幂函数族的图像分类总览",
+      "description": "对比 a>1、a=1、0<a<1、a=0、a<0 等幂函数图像类型，并支持单函数性质分析。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-power-function-family-overview"
+      }
+    },
+    {
+      "id": "plane-vector-composition-decomposition",
+      "label": "平面向量的合成与正交分解",
+      "description": "拖拽向量端点，动态演示平行四边形法则、三角形法则、正交分解与数量积投影。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-plane-vector-composition-decomposition"
+      }
+    },
+    {
+      "id": "numberline-interval-boolean",
+      "label": "数轴区间布尔运算推演",
+      "description": "拖动区间端点并切换开闭状态，动态推演数轴区间的交、并、补、差运算。",
+      "folder": "visualizations/engines/source-html-adapter",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-numberline-interval-boolean"
+      }
+    },
+    {
+      "id": "senior-math-lab",
+      "label": "???????????",
+      "description": "????????????????????????????????????????????????",
+      "folder": "visualizations/engines/senior-math-lab",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "scene-controls"
+      }
+    },
+    {
+      "id": "water-horse-shortest-path",
+      "label": "将军饮马最短路径模型",
+      "description": "通过镜像点、折线路径与路程曲线，动态演示将军饮马、两河夹击和造桥平移最短路径模型。",
+      "folder": "visualizations/books/jm_model/jm_model_m01",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-shortest-path"
+      }
+    },
+    {
+      "id": "hand-hand-rotation-model",
+      "label": "手拉手全等旋转模型",
+      "description": "通过共顶点旋转、对应边角标记与动态拖拽，演示手拉手全等旋转模型的构造与证明关系。",
+      "folder": "visualizations/books/jm_model/jm_model_m02",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-rotation-model"
+      }
+    },
+    {
+      "id": "one-line-three-equal-angle-model",
+      "label": "一线三等角模型",
+      "description": "通过一线三点、三等角、K 字抽取和边长条件，动态演示一线三等角模型中的相似与全等判定。",
+      "folder": "visualizations/books/jm_model/jm_model_m03",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-one-line-three-angle"
+      }
+    },
+    {
+      "id": "half-angle-model",
+      "label": "半角模型",
+      "description": "通过正方形 45° 半角、旋转全等、周长恒定与高线相等，动态演示半角模型中的辅助线构造与等量关系。",
+      "folder": "visualizations/books/jm_model/jm_model_m04",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-half-angle"
+      }
+    },
+    {
+      "id": "double-median-model",
+      "label": "倍长中线模型",
+      "description": "通过延长中线、绕中点旋转 180°、中线不等式和平行四边形判定，动态演示倍长中线模型的辅助线转化。",
+      "folder": "visualizations/books/jm_model/jm_model_m05",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-double-median"
+      }
+    },
+    {
+      "id": "angle-bisector-double-perpendicular-model",
+      "label": "角平分线双垂线模型",
+      "description": "通过双垂线全等对折、面积法转化和垂线构造等腰，动态演示角平分线中考模型的辅助线关系。",
+      "folder": "visualizations/books/jm_model/jm_model_m07",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-pan-zoom-angle-bisector-double-perpendicular"
+      }
+    },
+    {
+      "id": "perpendicular-bisector-locus-model",
+      "label": "垂直平分线寻点模型",
+      "description": "通过等距轨迹、尺规交点和等腰三角形顶点寻点，动态演示线段垂直平分线上的点到两端距离相等及其逆命题。",
+      "folder": "visualizations/books/jm_model/jm_model_m08",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-pan-zoom-perpendicular-bisector"
+      }
+    },
+    {
+      "id": "a-shape-similarity-model",
+      "label": "A 字型相似模型",
+      "description": "通过平行截线、分线段成比例和旋转/反 A 字型结构，动态演示 A 字型相似模型的判定与比例关系。",
+      "folder": "visualizations/books/jm_model/jm_model_m09",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-pan-zoom-a-shape-similarity"
+      }
+    },
+    {
+      "id": "eight-shape-similarity-model",
+      "label": "8 字型相似模型",
+      "description": "通过交叉三角形、对顶角、平行线分线段成比例和旋转/反 8 字型结构，动态演示 8 字型相似模型的判定与比例关系。",
+      "folder": "visualizations/books/jm_model/jm_model_m10",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-pan-zoom-eight-shape-similarity"
+      }
+    },
+    {
+      "id": "right-triangle-altitude-similarity-model",
+      "label": "直角三角形斜边高相似模型",
+      "description": "通过斜边高、母子相似三角形、射影定理和面积恒等，动态演示直角三角形斜边高模型中的相似与比例乘积关系。",
+      "folder": "visualizations/books/jm_model/jm_model_m11",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-pan-zoom-right-triangle-altitude"
+      }
+    },
+    {
+      "id": "equilateral-60-rotation-model",
+      "label": "60 度等边旋转模型",
+      "description": "通过等边三角形天然 60°、P 点绕共顶点旋转和全等对应边标记，动态演示 60 度等边旋转模型的构造与证明关系。",
+      "folder": "visualizations/books/jm_model/jm_model_m24",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-pan-zoom-equilateral-60-rotation"
+      }
+    },
+    {
+      "id": "algebra-tiles-combiner",
+      "label": "整式合并同类项积木",
+      "description": "通过代数积木点亮、分类、拖拽对消和系数填写，演示整式同类项合并过程。",
+      "folder": "visualizations/books/j7a/j7a_m06",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-safe-algebra-tiles"
+      }
+    },
+    {
+      "id": "angle-bisector-lab",
+      "label": "角的度量与角平分线",
+      "description": "通过量角器对齐、角平分线折叠和双平分线恒定探究，演示角度度量与等角性质。",
+      "folder": "visualizations/books/j7a/j7a_m09",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-safe-angle-drag"
+      }
+    },
+    {
+      "id": "angle-complement-bearing-model",
+      "label": "余角补角与方位角",
+      "description": "通过角度拖拽、余角补角互补关系和方位角罗盘，动态演示角度关系与方向表达。",
+      "folder": "visualizations/books/j7a/j7a_m12",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-angle-bearing"
+      }
+    },
+    {
+      "id": "circle-properties-topic-model",
+      "label": "圆的性质综合专题",
+      "description": "通过可拖拽圆形几何图形、实时测量和公式推导，动态演示垂径定理、圆周角定理与切线长定理。",
+      "folder": "visualizations/books/jm_topic/jm_topic_m13",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-circle-properties"
+      }
+    },
+    {
+      "id": "area-method-topic-model",
+      "label": "面积法专题",
+      "description": "通过 SVG 几何拖拽、面积拆分和公式推导，动态演示面积法中的等量代换与比值关系。",
+      "folder": "visualizations/books/jm_topic/jm_topic_m14",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-area-method"
+      }
+    },
+    {
+      "id": "spatial-three-view-topic-model",
+      "label": "空间想象与三视图专题",
+      "description": "通过可旋转方块模型、三视图投影和标数搭建，动态训练空间想象、投影识别和三视图还原。",
+      "folder": "visualizations/books/jm_topic/jm_topic_m16",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-spatial-three-view"
+      }
+    },
+    {
+      "id": "rational-numberline-interval-model",
+      "label": "数轴区间与有理数大小比较",
+      "description": "通过可拖拽数轴、区间端点和有理数点，动态演示有理数大小比较、开闭区间和不等式表示。",
+      "folder": "visualizations/books/j7a/j7a_m13",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-rational-numberline-interval"
+      }
+    },
+    {
+      "id": "irrational-root-location-model",
+      "label": "无理数逼近与根号定位",
+      "description": "通过奥多鲁斯螺旋、十进制夹逼和连分数逼近，动态演示根号类无理数的数轴定位。",
+      "folder": "visualizations/books/j7b/j7b_m07",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-irrational-root-location"
+      }
+    },
+    {
+      "id": "linear-system-elimination-model",
+      "label": "消元法解二元一次方程组",
+      "description": "通过代数条带、步骤时间线和天平模型，动态演示代入消元与加减消元解二元一次方程组。",
+      "folder": "visualizations/books/j7b/j7b_m09",
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-linear-system-elimination"
+      }
+    },
+    {
+      "id": "placeholder-source",
+      "label": "占位卡片壳引擎",
+      "description": "用于新增规划卡片的可打开占位课件，后续可替换为正式互动内容。",
+      "folder": "visualizations/books",
+      "defaults": {
+        "cameraPreset": "fixed-stage",
+        "interactionMode": "touch-safe-placeholder"
+      }
+    }
+  ],
+  "books": [
+    {
+      "bookId": "j7a",
+      "label": "七年级上册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j7a",
+      "cardIds": [
+        "j7a_m01",
+        "j7a_m02",
+        "j7a_m03",
+        "j7a_m04",
+        "j7a_m05",
+        "j7a_m06",
+        "j7a_m07",
+        "j7a_m08",
+        "j7a_m09",
+        "j7a_m10",
+        "j7a_m11",
+        "j7a_m12",
+        "j7a_m13"
+      ]
+    },
+    {
+      "bookId": "j7b",
+      "label": "七年级下册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j7b",
+      "cardIds": [
+        "j7b_m01",
+        "j7b_m02",
+        "j7b_m03",
+        "j7b_m04",
+        "j7b_m05",
+        "j7b_m06",
+        "j7b_m07",
+        "j7b_m09",
+        "j7b_m10",
+        "j7b_m11",
+        "j7b_m12",
+        "j7b_m14"
+      ]
+    },
+    {
+      "bookId": "j8a",
+      "label": "八年级上册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j8a",
+      "cardIds": [
+        "j8a_m01",
+        "j8a_m02",
+        "j8a_m03",
+        "j8a_m04",
+        "j8a_m05",
+        "j8a_m06",
+        "j8a_m07",
+        "j8a_m08",
+        "j8a_m10",
+        "j8a_m11",
+        "j8a_m12",
+        "j8a_m14"
+      ]
+    },
+    {
+      "bookId": "j8b",
+      "label": "八年级下册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j8b",
+      "cardIds": [
+        "j8b_m01",
+        "j8b_m02",
+        "j8b_m03",
+        "j8b_m04",
+        "j8b_m05",
+        "j8b_m06",
+        "j8b_m07",
+        "j8b_m08",
+        "j8b_m09",
+        "j8b_m10",
+        "j8b_m11"
+      ]
+    },
+    {
+      "bookId": "j9a",
+      "label": "九年级上册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j9a",
+      "cardIds": [
+        "j9a_m01",
+        "j9a_m02",
+        "j9a_m03",
+        "j9a_m04",
+        "j9a_m05",
+        "j9a_m06",
+        "j9a_m09",
+        "j9a_m10",
+        "j9a_m11",
+        "j9a_m12",
+        "j9a_m13",
+        "j9a_m14",
+        "j9a_m15"
+      ]
+    },
+    {
+      "bookId": "j9b",
+      "label": "九年级下册",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/j9b",
+      "cardIds": [
+        "j9b_m01",
+        "j9b_m02",
+        "j9b_m03",
+        "j9b_m04",
+        "j9b_m05",
+        "j9b_m06",
+        "j9b_m08",
+        "j9b_m10",
+        "j9b_m11",
+        "j9b_m12"
+      ]
+    },
+    {
+      "bookId": "jm_topic",
+      "label": "学科专题",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/jm_topic",
+      "cardIds": [
+        "jm_topic_m01",
+        "jm_topic_m02",
+        "jm_topic_m03",
+        "jm_topic_m04",
+        "jm_topic_m05",
+        "jm_topic_m06",
+        "jm_topic_m07",
+        "jm_topic_m09",
+        "jm_topic_m10",
+        "jm_topic_m11",
+        "jm_topic_m12",
+        "jm_topic_m13",
+        "jm_topic_m14",
+        "jm_topic_m17",
+        "jm_topic_m15",
+        "jm_topic_m16"
+      ]
+    },
+    {
+      "bookId": "jm_model",
+      "label": "中考模型专题",
+      "stageId": "junior",
+      "stageLabel": "初中",
+      "folder": "visualizations/books/jm_model",
+      "cardIds": [
+        "jm_model_m01",
+        "jm_model_m02",
+        "jm_model_m03",
+        "jm_model_m04",
+        "jm_model_m05",
+        "jm_model_m06",
+        "jm_model_m07",
+        "jm_model_m08",
+        "jm_model_m09",
+        "jm_model_m10",
+        "jm_model_m11",
+        "jm_model_m13",
+        "jm_model_m14",
+        "jm_model_m17",
+        "jm_model_m18",
+        "jm_model_m19",
+        "jm_model_m20",
+        "jm_model_m21",
+        "jm_model_m23",
+        "jm_model_m24"
+      ]
+    },
+    {
+      "bookId": "s_b1",
+      "label": "必修第一册",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_b1",
+      "cardIds": [
+        "sb1_m01",
+        "sb1_m02",
+        "sb1_m03",
+        "sb1_m04",
+        "sb1_m05",
+        "sb1_m06",
+        "sb1_m07",
+        "sb1_m08",
+        "sb1_m09",
+        "sb1_m10",
+        "sb1_m11",
+        "sb1_m12",
+        "sb1_m13",
+        "sb1_m14",
+        "sb1_m15",
+        "sb1_m16",
+        "sb1_m17",
+        "sb1_m18",
+        "sb1_m19"
+      ]
+    },
+    {
+      "bookId": "s_b2",
+      "label": "必修第二册",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_b2",
+      "cardIds": [
+        "sb2_m01",
+        "sb2_m02",
+        "sb2_m03",
+        "sb2_m04",
+        "sb2_m05",
+        "sb2_m07",
+        "sb2_m06",
+        "sb2_m08",
+        "sb2_m09",
+        "sb2_m10",
+        "sb2_m11",
+        "sb2_m12",
+        "sb2_m13",
+        "sb2_m14",
+        "sb2_m15",
+        "sb2_m16",
+        "sb2_m17"
+      ]
+    },
+    {
+      "bookId": "s_x1",
+      "label": "选择性必修1",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x1",
+      "cardIds": [
+        "sx1_m02",
+        "sx1_m01",
+        "sx1_m04",
+        "sx1_m03",
+        "sx1_m05",
+        "sx1_m06",
+        "sx1_m07",
+        "sx1_m08",
+        "sx1_m09",
+        "sx1_m10",
+        "sx1_m11",
+        "sx1_m12",
+        "sx1_m13",
+        "sx1_m14",
+        "sx1_m15",
+        "sx1_m16",
+        "sx1_m17"
+      ]
+    },
+    {
+      "bookId": "s_x2",
+      "label": "选择性必修2",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x2",
+      "cardIds": [
+        "sx2_m01",
+        "sx2_m02",
+        "sx2_m03",
+        "sx2_m04",
+        "sx2_m05",
+        "sx2_m06",
+        "sx2_m07",
+        "sx2_m08",
+        "sx2_m09",
+        "sx2_m10",
+        "sx2_m11",
+        "sx2_m12",
+        "sx2_m13",
+        "sx2_m14"
+      ]
+    },
+    {
+      "bookId": "s_x3",
+      "label": "选择性必修3",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/s_x3",
+      "cardIds": [
+        "sx3_m01",
+        "sx3_m02",
+        "sx3_m04",
+        "sx3_m05",
+        "sx3_m06",
+        "sx3_m07",
+        "sx3_m08",
+        "sx3_m09",
+        "sx3_m10",
+        "sx3_m11",
+        "sx3_m12",
+        "sx3_m13",
+        "sx3_m14"
+      ]
+    },
+    {
+      "bookId": "sm_topic",
+      "label": "高中学科专题",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/sm_topic",
+      "cardIds": [
+        "sm_topic_m01",
+        "sm_topic_m02",
+        "sm_topic_m03",
+        "sm_topic_m04",
+        "sm_topic_m05",
+        "sm_topic_m06",
+        "sm_topic_m07",
+        "sm_topic_m08",
+        "sm_topic_m09",
+        "sm_topic_m10",
+        "sm_topic_m11"
+      ]
+    },
+    {
+      "bookId": "sm_model",
+      "label": "高考模型专题",
+      "stageId": "senior",
+      "stageLabel": "高中",
+      "folder": "visualizations/books/sm_model",
+      "cardIds": [
+        "sm_model_m01",
+        "sm_model_m02",
+        "sm_model_m03",
+        "sm_model_m04",
+        "sm_model_m05",
+        "sm_model_m06",
+        "sm_model_m07",
+        "sm_model_m08",
+        "sm_model_m09",
+        "sm_model_m10",
+        "sm_model_m11",
+        "sm_model_m12",
+        "sm_model_m13",
+        "sm_model_m14",
+        "sm_model_m15",
+        "sm_model_m16"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "cardId": "j7a_m01",
+      "title": "有理数的运算与数轴",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "chapterTitles": [
+        "1.2 有理数与数轴"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "numberline",
+      "folder": "visualizations/books/j7a/j7a_m01",
+      "assetsDir": "visualizations/books/j7a/j7a_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m02",
+      "title": "立体图形的展开与折叠",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "chapterTitles": [
+        "4.1 几何图形的展开与折"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "geom3d",
+      "folder": "visualizations/books/j7a/j7a_m02",
+      "assetsDir": "visualizations/books/j7a/j7a_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m03",
+      "title": "绝对值与相反数几何意义",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "chapterTitles": [
+        "1.2 有理数与数轴"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "numberline-absolute",
+      "folder": "visualizations/books/j7a/j7a_m03",
+      "assetsDir": "visualizations/books/j7a/j7a_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m04",
+      "title": "一元一次方程的天平模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c3_1"
+      ],
+      "chapterTitles": [
+        "3.1 从算式到方程"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "balance-3d",
+      "folder": "visualizations/books/j7a/j7a_m04",
+      "assetsDir": "visualizations/books/j7a/j7a_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m05",
+      "title": "有理数乘方的指数爆炸可视化",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "chapterTitles": [
+        "1.2 有理数与数轴"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "exponent-explosion",
+      "folder": "visualizations/books/j7a/j7a_m05",
+      "assetsDir": "visualizations/books/j7a/j7a_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m01",
+      "title": "平行线的性质与截线定理",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c5_2"
+      ],
+      "chapterTitles": [
+        "5.2 平行线的判定与性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "parallel-lines",
+      "folder": "visualizations/books/j7b/j7b_m01",
+      "assetsDir": "visualizations/books/j7b/j7b_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m02",
+      "title": "坐标系中的多边形平移",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c7_2"
+      ],
+      "chapterTitles": [
+        "7.2 坐标方法的简单应"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "coordinate-polygon-translation",
+      "folder": "visualizations/books/j7b/j7b_m02",
+      "assetsDir": "visualizations/books/j7b/j7b_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m03",
+      "title": "不等式解集的数轴表示",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c9_1"
+      ],
+      "chapterTitles": [
+        "9.1 不等"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "inequality-numberline-solution",
+      "folder": "visualizations/books/j7b/j7b_m03",
+      "assetsDir": "visualizations/books/j7b/j7b_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m04",
+      "title": "同位角与内错角辨析",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c5_2"
+      ],
+      "chapterTitles": [
+        "5.2 平行线的判定与性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "angle-identifier",
+      "folder": "visualizations/books/j7b/j7b_m04",
+      "assetsDir": "visualizations/books/j7b/j7b_m04/assets",
+      "starterFiles": [
+        "scene.config.json"
+      ]
+    },
+    {
+      "cardId": "j7b_m05",
+      "title": "二元一次方程组的交点求解",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "chapterTitles": [
+        "8.1 二元一次方程组"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "linear-system-intersection",
+      "folder": "visualizations/books/j7b/j7b_m05",
+      "assetsDir": "visualizations/books/j7b/j7b_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m01",
+      "title": "全等三角形的判定定理验证",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c12_2"
+      ],
+      "chapterTitles": [
+        "12.2 三角形全等的判定"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "triangle-congruence-theorem",
+      "folder": "visualizations/books/j8a/j8a_m01",
+      "assetsDir": "visualizations/books/j8a/j8a_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m02",
+      "title": "轴对称与镜面反射空间构建",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c13_1"
+      ],
+      "chapterTitles": [
+        "13.1 轴对称与镜面反射"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "axis-symmetry-reflection",
+      "folder": "visualizations/books/j8a/j8a_m02",
+      "assetsDir": "visualizations/books/j8a/j8a_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8a_m03",
+      "title": "完全平方公式的几何拼图",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c14_2"
+      ],
+      "chapterTitles": [
+        "14.2 乘法公式"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "square-puzzle",
+      "folder": "visualizations/books/j8a/j8a_m03",
+      "assetsDir": "visualizations/books/j8a/j8a_m03/assets",
+      "starterFiles": [
+        "scene.config.json"
+      ]
+    },
+    {
+      "cardId": "j8a_m04",
+      "title": "HL 判定直角三角形全等",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c12_2"
+      ],
+      "chapterTitles": [
+        "12.2 三角形全等的判定"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "hl-congruence",
+      "folder": "visualizations/books/j8a/j8a_m04",
+      "assetsDir": "visualizations/books/j8a/j8a_m04/assets",
+      "starterFiles": [
+        "scene.config.json"
+      ]
+    },
+    {
+      "cardId": "j8b_m01",
+      "title": "勾股定理的经典几何面积证明",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c17_1"
+      ],
+      "chapterTitles": [
+        "17.1 勾股定理的证"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "pythagorean-area",
+      "folder": "visualizations/books/j8b/j8b_m01",
+      "assetsDir": "visualizations/books/j8b/j8b_m01/assets",
+      "starterFiles": [
+        "scene.config.json"
+      ]
+    },
+    {
+      "cardId": "j8b_m02",
+      "title": "一次函数斜率与截距动态图",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c19_2"
+      ],
+      "chapterTitles": [
+        "19.2 一次函数的图像与性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "linear-function-slope-intercept",
+      "folder": "visualizations/books/j8b/j8b_m02",
+      "assetsDir": "visualizations/books/j8b/j8b_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m03",
+      "title": "菱形与矩形的动态形变",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c18_2"
+      ],
+      "chapterTitles": [
+        "18.2 特殊的平行四边形"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "quadrilateral-morph",
+      "folder": "visualizations/books/j8b/j8b_m03",
+      "assetsDir": "visualizations/books/j8b/j8b_m03/assets",
+      "starterFiles": [
+        "scene.config.json"
+      ]
+    },
+    {
+      "cardId": "j8b_m04",
+      "title": "毕达哥拉斯树分形动画",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c17_1"
+      ],
+      "chapterTitles": [
+        "17.1 勾股定理的证"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "pythagorean-tree-fractal",
+      "folder": "visualizations/books/j8b/j8b_m04",
+      "assetsDir": "visualizations/books/j8b/j8b_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m05",
+      "title": "频率分布直方图与数据分析",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c20_1"
+      ],
+      "chapterTitles": [
+        "20.1 数据的集中趋"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "frequency-histogram-analysis",
+      "folder": "visualizations/books/j8b/j8b_m05",
+      "assetsDir": "visualizations/books/j8b/j8b_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9a_m01",
+      "title": "二次函数的抛物线与顶点",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c22_1"
+      ],
+      "chapterTitles": [
+        "22.1 二次函数的图象和性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "quadratic-parabola-vertex",
+      "folder": "visualizations/books/j9a/j9a_m01",
+      "assetsDir": "visualizations/books/j9a/j9a_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9a_m02",
+      "title": "圆与圆周角定理动态推演",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "chapterTitles": [
+        "24.1 圆的有关性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "circle-inscribed-angle-theorem",
+      "folder": "visualizations/books/j9a/j9a_m02",
+      "assetsDir": "visualizations/books/j9a/j9a_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9a_m03",
+      "title": "一元二次方程根的判别式",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c21_2"
+      ],
+      "chapterTitles": [
+        "21.2 降次——解一元二次方"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "quadratic-equation-discriminant-roots",
+      "folder": "visualizations/books/j9a/j9a_m03",
+      "assetsDir": "visualizations/books/j9a/j9a_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9a_m04",
+      "title": "垂径定理的几何构造",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "chapterTitles": [
+        "24.1 圆的有关性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "perpendicular-diameter-geometry",
+      "folder": "visualizations/books/j9a/j9a_m04",
+      "assetsDir": "visualizations/books/j9a/j9a_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9a_m05",
+      "title": "旋转变换与中心对称图形",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c23_1"
+      ],
+      "chapterTitles": [
+        "23.1 图形的旋"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "rotation-central-symmetry",
+      "folder": "visualizations/books/j9a/j9a_m05",
+      "assetsDir": "visualizations/books/j9a/j9a_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9a_m06",
+      "title": "概率的树状图与列表法",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c22_1"
+      ],
+      "chapterTitles": [
+        "22.1 二次函数的图象和性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "probability-tree-list-method",
+      "folder": "visualizations/books/j9a/j9a_m06",
+      "assetsDir": "visualizations/books/j9a/j9a_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9b_m01",
+      "title": "锐角三角函数与测绘应用",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c28_2"
+      ],
+      "chapterTitles": [
+        "28.2 解直角三角形及其应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "trig-surveying-applications",
+      "folder": "visualizations/books/j9b/j9b_m01",
+      "assetsDir": "visualizations/books/j9b/j9b_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9b_m02",
+      "title": "几何体的三视图光影投影",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c29_2"
+      ],
+      "chapterTitles": [
+        "29.2 三视"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "geometry-projection-views",
+      "folder": "visualizations/books/j9b/j9b_m02",
+      "assetsDir": "visualizations/books/j9b/j9b_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9b_m03",
+      "title": "位似变换与相似多边形",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "chapterTitles": [
+        "27.2 相似三角"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "similarity-homothety-polygons",
+      "folder": "visualizations/books/j9b/j9b_m03",
+      "assetsDir": "visualizations/books/j9b/j9b_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j9b_m04",
+      "title": "正方体截面的所有可能",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c29_2"
+      ],
+      "chapterTitles": [
+        "29.2 三视"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "cube-section-explorer",
+      "folder": "visualizations/books/j9b/j9b_m04",
+      "assetsDir": "visualizations/books/j9b/j9b_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m01",
+      "title": "指数函数与对数函数图像反演",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "chapterTitles": [
+        "4.4 指数与对数函数的关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m01",
+      "assetsDir": "visualizations/books/s_b1/sb1_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m02",
+      "title": "三角函数的单位圆动态生成",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c5_2"
+      ],
+      "chapterTitles": [
+        "5.2 三角函数的概"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m02",
+      "assetsDir": "visualizations/books/s_b1/sb1_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m03",
+      "title": "集合的维恩图与布尔运算",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c1_1"
+      ],
+      "chapterTitles": [
+        "1.1 集合的概念与表示"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m03",
+      "assetsDir": "visualizations/books/s_b1/sb1_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m04",
+      "title": "对数螺旋线与自然底数 e",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "chapterTitles": [
+        "4.4 指数与对数函数的关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m04",
+      "assetsDir": "visualizations/books/s_b1/sb1_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m05",
+      "title": "三角函数图像的平移与伸缩",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c5_2"
+      ],
+      "chapterTitles": [
+        "5.2 三角函数的概"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m05",
+      "assetsDir": "visualizations/books/s_b1/sb1_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m06",
+      "title": "函数奇偶性的图像对称翻转",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "chapterTitles": [
+        "4.4 指数与对数函数的关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m06",
+      "assetsDir": "visualizations/books/s_b1/sb1_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m07",
+      "title": "幂函数族的图像分类总览",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "chapterTitles": [
+        "4.4 指数与对数函数的关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m07",
+      "assetsDir": "visualizations/books/s_b1/sb1_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m08",
+      "title": "数轴区间布尔运算推演",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c2_1"
+      ],
+      "chapterTitles": [
+        "2.1 等式性质与不等式性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m08",
+      "assetsDir": "visualizations/books/s_b1/sb1_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m01",
+      "title": "平面向量的合成与正交分解",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c6_2"
+      ],
+      "chapterTitles": [
+        "6.2 平面向量的运"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m01",
+      "assetsDir": "visualizations/books/s_b2/sb2_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m02",
+      "title": "三维空间中的点、线、面关系",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c8_4"
+      ],
+      "chapterTitles": [
+        "8.4 空间点、直线、平面的位置关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m02",
+      "assetsDir": "visualizations/books/s_b2/sb2_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m03",
+      "title": "空间多面体的欧拉公式",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c8_4"
+      ],
+      "chapterTitles": [
+        "8.4 空间点、直线、平面的位置关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m03",
+      "assetsDir": "visualizations/books/s_b2/sb2_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m04",
+      "title": "复数的几何意义与旋转",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c6_2"
+      ],
+      "chapterTitles": [
+        "6.2 平面向量的运"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m04",
+      "assetsDir": "visualizations/books/s_b2/sb2_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m05",
+      "title": "等差数列的阶梯面积求和",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c4_2"
+      ],
+      "chapterTitles": [
+        "4.2 等差数列"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m05",
+      "assetsDir": "visualizations/books/s_b2/sb2_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m07",
+      "title": "等比数列的指数增长与棋盘麦粒",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c4_3"
+      ],
+      "chapterTitles": [
+        "4.3 等比数列"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m07",
+      "assetsDir": "visualizations/books/s_b2/sb2_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m06",
+      "title": "正弦余弦定理的三角测量",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c5_1"
+      ],
+      "chapterTitles": [
+        "5.1 正弦定理和余弦定"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m06",
+      "assetsDir": "visualizations/books/s_b2/sb2_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m02",
+      "title": "空间向量与立体几何法向量",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修第一册",
+      "chapterIds": [
+        "sx1_c1_4"
+      ],
+      "chapterTitles": [
+        "1.4 空间向量的应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1_m02",
+      "assetsDir": "visualizations/books/s_x1/sx1_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m05",
+      "title": "排列组合的树状计数图",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修第一册",
+      "chapterIds": [
+        "sx1_c2_1"
+      ],
+      "chapterTitles": [
+        "2.1 排列与组合"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1_m05",
+      "assetsDir": "visualizations/books/s_x1/sx1_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m06",
+      "title": "杨辉三角与二项式系数",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修第一册",
+      "chapterIds": [
+        "sx1_c2_1"
+      ],
+      "chapterTitles": [
+        "2.1 排列与组合"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1_m06",
+      "assetsDir": "visualizations/books/s_x1/sx1_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m01",
+      "title": "圆锥曲线的3D截取剖面",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修第一册",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "chapterTitles": [
+        "3.1 椭圆与双曲线"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1_m01",
+      "assetsDir": "visualizations/books/s_x1/sx1_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m04",
+      "title": "椭圆与双曲线的焦点轨迹",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修第一册",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "chapterTitles": [
+        "3.1 椭圆与双曲线"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x1/sx1_m04",
+      "assetsDir": "visualizations/books/s_x1/sx1_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx1_m03",
+      "title": "焦点与准线生成抛物线轨迹",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修第一册",
+      "chapterIds": [
+        "sx1_c3_2"
+      ],
+      "chapterTitles": [
+        "3.2 抛物线"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "senior-math-lab",
+      "folder": "visualizations/books/s_x1/sx1_m03",
+      "assetsDir": "visualizations/books/s_x1/sx1_m03/assets",
+      "starterFiles": [
+        "scene.config.json"
+      ]
+    },
+    {
+      "cardId": "sx2_m01",
+      "title": "函数导数与切线、极值探究",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修第二册",
+      "chapterIds": [
+        "sx2_c5_3"
+      ],
+      "chapterTitles": [
+        "5.3 导数在研究函数中的应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2_m01",
+      "assetsDir": "visualizations/books/s_x2/sx2_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx2_m02",
+      "title": "黎曼和与定积分面积逼近",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修第二册",
+      "chapterIds": [
+        "sx2_c6_1"
+      ],
+      "chapterTitles": [
+        "6.1 定积分与微积分基本定理"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2_m02",
+      "assetsDir": "visualizations/books/s_x2/sx2_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx2_m03",
+      "title": "数学归纳法的多米诺骨牌模型",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修第二册",
+      "chapterIds": [
+        "sx2_c4_1"
+      ],
+      "chapterTitles": [
+        "4.1 数学归纳法"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2_m03",
+      "assetsDir": "visualizations/books/s_x2/sx2_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx2_m04",
+      "title": "斐波那契数列与黄金螺旋",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修第二册",
+      "chapterIds": [
+        "sx2_c4_1"
+      ],
+      "chapterTitles": [
+        "4.1 数列的进一步研究"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x2/sx2_m04",
+      "assetsDir": "visualizations/books/s_x2/sx2_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx3_m01",
+      "title": "高尔顿板与正态分布模拟",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修第三册",
+      "chapterIds": [
+        "sx3_c7_4"
+      ],
+      "chapterTitles": [
+        "7.4 正态分"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3_m01",
+      "assetsDir": "visualizations/books/s_x3/sx3_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx3_m02",
+      "title": "复平面与曼德勃罗分形",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修第三册",
+      "chapterIds": [
+        "sx3_c9_1"
+      ],
+      "chapterTitles": [
+        "9.1 复平面与几何意义"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3_m02",
+      "assetsDir": "visualizations/books/s_x3/sx3_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx3_m04",
+      "title": "条件概率与贝叶斯公式可视化",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修第三册",
+      "chapterIds": [
+        "sx3_c7_4"
+      ],
+      "chapterTitles": [
+        "7.4 正态分"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3_m04",
+      "assetsDir": "visualizations/books/s_x3/sx3_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sx3_m05",
+      "title": "回归分析与最小二乘法拟合",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修第三册",
+      "chapterIds": [
+        "sx3_c8_1"
+      ],
+      "chapterTitles": [
+        "8.1 回归分析"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_x3/sx3_m05",
+      "assetsDir": "visualizations/books/s_x3/sx3_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m06",
+      "title": "整式合并同类项积木",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "chapterTitles": [
+        "2.1 整式"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "algebra-tiles-combiner",
+      "folder": "visualizations/books/j7a/j7a_m06",
+      "assetsDir": "visualizations/books/j7a/j7a_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m07",
+      "title": "去括号与符号变化机器",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c2_2"
+      ],
+      "chapterTitles": [
+        "2.2 整式的加减"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "parentheses-sign-machine",
+      "folder": "visualizations/books/j7a/j7a_m07",
+      "assetsDir": "visualizations/books/j7a/j7a_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m08",
+      "title": "线段中点与线段和差",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c4_2"
+      ],
+      "chapterTitles": [
+        "4.2 直线、射线、线段"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "segment-midpoint-lab",
+      "folder": "visualizations/books/j7a/j7a_m08",
+      "assetsDir": "visualizations/books/j7a/j7a_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m09",
+      "title": "角的度量与角平分线",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c4_3"
+      ],
+      "chapterTitles": [
+        "4.3 角"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "angle-bisector-lab",
+      "folder": "visualizations/books/j7a/j7a_m09",
+      "assetsDir": "visualizations/books/j7a/j7a_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m10",
+      "title": "科学记数法数量级缩放",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "chapterTitles": [
+        "1.5 有理数的乘方"
+      ],
+      "contentModes": [
+        "interactive",
+        "dynamic",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m10",
+      "assetsDir": "visualizations/books/j7a/j7a_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7a_m11",
+      "title": "一元一次方程应用线段图",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c3_4"
+      ],
+      "chapterTitles": [
+        "3.4 实际问题与一元一次方程"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7a/j7a_m11",
+      "assetsDir": "visualizations/books/j7a/j7a_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m12",
+      "title": "余角补角与方位角",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c4_4"
+      ],
+      "chapterTitles": [
+        "4.4 几何图形初步综合"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "angle-complement-bearing-model",
+      "folder": "visualizations/books/j7a/j7a_m12",
+      "assetsDir": "visualizations/books/j7a/j7a_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7a_m13",
+      "title": "数轴区间与有理数大小比较",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7a",
+      "bookLabel": "七年级上册",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "chapterTitles": [
+        "1.2 有理数与数轴"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "rational-numberline-interval-model",
+      "folder": "visualizations/books/j7a/j7a_m13",
+      "assetsDir": "visualizations/books/j7a/j7a_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m06",
+      "title": "平方根与立方根数轴定位",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "chapterTitles": [
+        "6.1 平方根",
+        "6.2 立方根"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m06",
+      "assetsDir": "visualizations/books/j7b/j7b_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m07",
+      "title": "无理数逼近与根号定位",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "chapterTitles": [
+        "6.3 实数"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "irrational-root-location-model",
+      "folder": "visualizations/books/j7b/j7b_m07",
+      "assetsDir": "visualizations/books/j7b/j7b_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m09",
+      "title": "消元法解二元一次方程组",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "chapterTitles": [
+        "8.2 消元法"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "linear-system-elimination-model",
+      "folder": "visualizations/books/j7b/j7b_m09",
+      "assetsDir": "visualizations/books/j7b/j7b_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m10",
+      "title": "点到直线距离与垂线段",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c5_1"
+      ],
+      "chapterTitles": [
+        "5.1 相交线"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m10",
+      "assetsDir": "visualizations/books/j7b/j7b_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m11",
+      "title": "坐标象限与点的符号规律",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c7_1"
+      ],
+      "chapterTitles": [
+        "7.1 平面直角坐标系"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m11",
+      "assetsDir": "visualizations/books/j7b/j7b_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j7b_m12",
+      "title": "数据收集与统计图生成",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c10_1",
+        "j7b_c10_2"
+      ],
+      "chapterTitles": [
+        "10.1 统计调查",
+        "10.2 直方图"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m12",
+      "assetsDir": "visualizations/books/j7b/j7b_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j7b_m14",
+      "title": "实际问题中的不等式建模",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j7b",
+      "bookLabel": "七年级下册",
+      "chapterIds": [
+        "j7b_c9_2"
+      ],
+      "chapterTitles": [
+        "9.2 一元一次不等式"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j7b/j7b_m14",
+      "assetsDir": "visualizations/books/j7b/j7b_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m05",
+      "title": "三角形三边关系实验室",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c11_1"
+      ],
+      "chapterTitles": [
+        "11.1 与三角形有关的线段"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m05",
+      "assetsDir": "visualizations/books/j8a/j8a_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m06",
+      "title": "三角形与多边形内角和拆分",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c11_2",
+        "j8a_c11_3"
+      ],
+      "chapterTitles": [
+        "11.2 与三角形有关的角",
+        "11.3 多边形及其内角和"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m06",
+      "assetsDir": "visualizations/books/j8a/j8a_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m07",
+      "title": "等腰三角形性质与判定",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c13_3"
+      ],
+      "chapterTitles": [
+        "13.3 等腰三角形"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m07",
+      "assetsDir": "visualizations/books/j8a/j8a_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m08",
+      "title": "角平分线与垂直距离",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c12_3"
+      ],
+      "chapterTitles": [
+        "12.3 角的平分线的性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m08",
+      "assetsDir": "visualizations/books/j8a/j8a_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m10",
+      "title": "因式分解面积拼图",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "chapterTitles": [
+        "14.3 因式分解"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m10",
+      "assetsDir": "visualizations/books/j8a/j8a_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m11",
+      "title": "分式约分通分可视化",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "chapterTitles": [
+        "15.1 分式",
+        "15.2 分式的运算"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m11",
+      "assetsDir": "visualizations/books/j8a/j8a_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m12",
+      "title": "分式方程增根警报器",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "chapterTitles": [
+        "15.3 分式方程"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m12",
+      "assetsDir": "visualizations/books/j8a/j8a_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8a_m14",
+      "title": "轴对称折叠作图",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8a",
+      "bookLabel": "八年级上册",
+      "chapterIds": [
+        "j8a_c13_2"
+      ],
+      "chapterTitles": [
+        "13.2 画轴对称图形"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8a/j8a_m14",
+      "assetsDir": "visualizations/books/j8a/j8a_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8b_m06",
+      "title": "二次根式化简与合并",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "chapterTitles": [
+        "16.1 二次根式",
+        "16.2 二次根式的乘除",
+        "16.3 二次根式的加减"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m06",
+      "assetsDir": "visualizations/books/j8b/j8b_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8b_m07",
+      "title": "勾股定理逆定理判定器",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c17_2"
+      ],
+      "chapterTitles": [
+        "17.2 勾股定理的逆定理"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m07",
+      "assetsDir": "visualizations/books/j8b/j8b_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8b_m08",
+      "title": "平行四边形判定实验室",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c18_1"
+      ],
+      "chapterTitles": [
+        "18.1 平行四边形"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m08",
+      "assetsDir": "visualizations/books/j8b/j8b_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8b_m09",
+      "title": "数据集中趋势与波动分析",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c20_1",
+        "j8b_c20_2"
+      ],
+      "chapterTitles": [
+        "20.1 数据的集中趋势",
+        "20.2 数据的波动程度"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m09",
+      "assetsDir": "visualizations/books/j8b/j8b_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j8b_m10",
+      "title": "一次函数与方程不等式",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c19_2"
+      ],
+      "chapterTitles": [
+        "19.2 一次函数"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j8b/j8b_m10",
+      "assetsDir": "visualizations/books/j8b/j8b_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "j8b_m11",
+      "title": "一次函数实际问题分段图",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j8b",
+      "bookLabel": "八年级下册",
+      "chapterIds": [
+        "j8b_c19_3"
+      ],
+      "chapterTitles": [
+        "19.3 一次函数应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "embedded-source-courseware",
+      "folder": "visualizations/books/j8b/j8b_m11",
+      "assetsDir": "visualizations/books/j8b/j8b_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9a_m09",
+      "title": "圆的切线性质与判定",
+      "status": "planned",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c24_2"
+      ],
+      "chapterTitles": [
+        "24.2 点和圆、直线和圆的位置关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/j9a/j9a_m09",
+      "assetsDir": "visualizations/books/j9a/j9a_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9a_m10",
+      "title": "配方法几何拼方",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c21_2"
+      ],
+      "chapterTitles": [
+        "21.2 降次——解一元二次方程"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9a/j9a_m10",
+      "assetsDir": "visualizations/books/j9a/j9a_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9a_m11",
+      "title": "弧弦圆心角关系",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "chapterTitles": [
+        "24.1 圆的有关性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9a/j9a_m11",
+      "assetsDir": "visualizations/books/j9a/j9a_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9a_m12",
+      "title": "随机试验频率稳定性",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c25_3"
+      ],
+      "chapterTitles": [
+        "25.3 用频率估计概率"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9a/j9a_m12",
+      "assetsDir": "visualizations/books/j9a/j9a_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9a_m13",
+      "title": "圆内接四边形与对角互补",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "chapterTitles": [
+        "24.1 圆的有关性质"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9a/j9a_m13",
+      "assetsDir": "visualizations/books/j9a/j9a_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9a_m14",
+      "title": "正多边形与圆",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c24_3"
+      ],
+      "chapterTitles": [
+        "24.3 正多边形和圆"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9a/j9a_m14",
+      "assetsDir": "visualizations/books/j9a/j9a_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9a_m15",
+      "title": "二次函数实际最值建模",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9a",
+      "bookLabel": "九年级上册",
+      "chapterIds": [
+        "j9a_c22_3"
+      ],
+      "chapterTitles": [
+        "22.3 实际问题与二次函数"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9a/j9a_m15",
+      "assetsDir": "visualizations/books/j9a/j9a_m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9b_m05",
+      "title": "反比例函数图像与 k 的几何意义",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c26_1"
+      ],
+      "chapterTitles": [
+        "26.1 反比例函数"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "inverse-proportion-k-geometry-model",
+      "folder": "visualizations/books/j9b/j9b_m05",
+      "assetsDir": "visualizations/books/j9b/j9b_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9b_m06",
+      "title": "相似三角形判定实验室",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "chapterTitles": [
+        "27.2 相似三角形"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9b/j9b_m06",
+      "assetsDir": "visualizations/books/j9b/j9b_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9b_m08",
+      "title": "平行线分线段成比例",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c27_1"
+      ],
+      "chapterTitles": [
+        "27.1 图形的相似"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9b/j9b_m08",
+      "assetsDir": "visualizations/books/j9b/j9b_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9b_m10",
+      "title": "投影长度与光源位置",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c29_1"
+      ],
+      "chapterTitles": [
+        "29.1 投影"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9b/j9b_m10",
+      "assetsDir": "visualizations/books/j9b/j9b_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9b_m11",
+      "title": "解直角三角形路线规划",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c28_2"
+      ],
+      "chapterTitles": [
+        "28.2 解直角三角形及其应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9b/j9b_m11",
+      "assetsDir": "visualizations/books/j9b/j9b_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "j9b_m12",
+      "title": "相似多边形面积比",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "j9b",
+      "bookLabel": "九年级下册",
+      "chapterIds": [
+        "j9b_c27_2"
+      ],
+      "chapterTitles": [
+        "27.2 相似三角形"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/j9b/j9b_m12",
+      "assetsDir": "visualizations/books/j9b/j9b_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m01",
+      "title": "数与式变形总览",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_number"
+      ],
+      "chapterTitles": [
+        "数与式专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m01",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m02",
+      "title": "整式与因式分解专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_number"
+      ],
+      "chapterTitles": [
+        "数与式专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m02",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m03",
+      "title": "根式化简专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_number"
+      ],
+      "chapterTitles": [
+        "数与式专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m03",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m04",
+      "title": "方程解法流程专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_equation"
+      ],
+      "chapterTitles": [
+        "方程与不等式专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m04",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m05",
+      "title": "不等式与区间专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_equation"
+      ],
+      "chapterTitles": [
+        "方程与不等式专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m05",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m06",
+      "title": "一次函数专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_function"
+      ],
+      "chapterTitles": [
+        "函数专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m06",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m07",
+      "title": "二次函数专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_function"
+      ],
+      "chapterTitles": [
+        "函数专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m07",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m09",
+      "title": "函数与方程交点专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_function"
+      ],
+      "chapterTitles": [
+        "函数专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m09",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m10",
+      "title": "几何辅助线构造专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "chapterTitles": [
+        "几何证明专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m10",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m11",
+      "title": "全等证明链专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "chapterTitles": [
+        "几何证明专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam",
+        "dynamic"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m11",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ],
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-congruence-proof-chain"
+      }
+    },
+    {
+      "cardId": "jm_topic_m12",
+      "title": "相似证明链专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_circle"
+      ],
+      "chapterTitles": [
+        "圆与相似专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam",
+        "dynamic"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m12",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ],
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-similarity-proof-chain"
+      }
+    },
+    {
+      "cardId": "jm_topic_m13",
+      "title": "圆的性质综合专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_circle"
+      ],
+      "chapterTitles": [
+        "圆与相似专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "circle-properties-topic-model",
+      "folder": "visualizations/books/jm_topic/jm_topic_m13",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m14",
+      "title": "面积法专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "chapterTitles": [
+        "几何证明专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "area-method-topic-model",
+      "folder": "visualizations/books/jm_topic/jm_topic_m14",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_topic_m17",
+      "title": "飞镖模型：凹四边形角关系",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_geometry"
+      ],
+      "chapterTitles": [
+        "几何证明专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam",
+        "dynamic"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m17",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m17/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ],
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-drag-dart-angle-model"
+      }
+    },
+    {
+      "cardId": "jm_topic_m15",
+      "title": "统计概率专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_statistics"
+      ],
+      "chapterTitles": [
+        "统计概率与空间专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam",
+        "dynamic"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_topic/jm_topic_m15",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ],
+      "defaults": {
+        "cameraPreset": "responsive-canvas-stage",
+        "interactionMode": "touch-statistics-probability-lab"
+      }
+    },
+    {
+      "cardId": "jm_topic_m16",
+      "title": "空间想象与三视图专题",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_topic",
+      "bookLabel": "学科专题",
+      "chapterIds": [
+        "jm_topic_statistics"
+      ],
+      "chapterTitles": [
+        "统计概率与空间专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "spatial-three-view-topic-model",
+      "folder": "visualizations/books/jm_topic/jm_topic_m16",
+      "assetsDir": "visualizations/books/jm_topic/jm_topic_m16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m01",
+      "title": "将军饮马最短路径模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_shortest_path"
+      ],
+      "chapterTitles": [
+        "最短路径模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "water-horse-shortest-path",
+      "folder": "visualizations/books/jm_model/jm_model_m01",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m02",
+      "title": "手拉手全等旋转模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_rotation"
+      ],
+      "chapterTitles": [
+        "旋转构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "hand-hand-rotation-model",
+      "folder": "visualizations/books/jm_model/jm_model_m02",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m03",
+      "title": "一线三等角模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "chapterTitles": [
+        "相似模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "one-line-three-equal-angle-model",
+      "folder": "visualizations/books/jm_model/jm_model_m03",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m04",
+      "title": "半角模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "chapterTitles": [
+        "全等构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "half-angle-model",
+      "folder": "visualizations/books/jm_model/jm_model_m04",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m05",
+      "title": "倍长中线模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "chapterTitles": [
+        "全等构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "double-median-model",
+      "folder": "visualizations/books/jm_model/jm_model_m05",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m06",
+      "title": "截长补短模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "chapterTitles": [
+        "全等构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "cut-add-segment-model",
+      "folder": "visualizations/books/jm_model/jm_model_m06",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m07",
+      "title": "角平分线双垂线模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "chapterTitles": [
+        "全等构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "angle-bisector-double-perpendicular-model",
+      "folder": "visualizations/books/jm_model/jm_model_m07",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m08",
+      "title": "垂直平分线寻点模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "chapterTitles": [
+        "全等构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "perpendicular-bisector-locus-model",
+      "folder": "visualizations/books/jm_model/jm_model_m08",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m09",
+      "title": "A 字型相似模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "chapterTitles": [
+        "相似模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "a-shape-similarity-model",
+      "folder": "visualizations/books/jm_model/jm_model_m09",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m10",
+      "title": "8 字型相似模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "chapterTitles": [
+        "相似模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "eight-shape-similarity-model",
+      "folder": "visualizations/books/jm_model/jm_model_m10",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m11",
+      "title": "直角三角形斜边高相似模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "chapterTitles": [
+        "相似模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "right-triangle-altitude-similarity-model",
+      "folder": "visualizations/books/jm_model/jm_model_m11",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m13",
+      "title": "圆幂模型：切线、相交弦、切割线",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_circle"
+      ],
+      "chapterTitles": [
+        "圆综合模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "power-of-circle-model",
+      "folder": "visualizations/books/jm_model/jm_model_m13",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m14",
+      "title": "隐圆模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_circle"
+      ],
+      "chapterTitles": [
+        "圆综合模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "hidden-circle-model",
+      "folder": "visualizations/books/jm_model/jm_model_m14",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m17",
+      "title": "折叠重合模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_dynamic"
+      ],
+      "chapterTitles": [
+        "动点与轨迹模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_model/jm_model_m17",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m17/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m18",
+      "title": "动点轨迹模型",
+      "status": "planned",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_dynamic"
+      ],
+      "chapterTitles": [
+        "动点与轨迹模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/jm_model/jm_model_m18",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m18/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m19",
+      "title": "胡不归模型",
+      "status": "planned",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_shortest_path"
+      ],
+      "chapterTitles": [
+        "最短路径模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "hu-bugui-model",
+      "folder": "visualizations/books/jm_model/jm_model_m19",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m19/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m20",
+      "title": "阿氏圆模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "chapterTitles": [
+        "相似模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "apollonius-circle-model",
+      "folder": "visualizations/books/jm_model/jm_model_m20",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m20/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m21",
+      "title": "面积比例模型：燕尾与蝴蝶",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_area"
+      ],
+      "chapterTitles": [
+        "面积模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/jm_model/jm_model_m21",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m21/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "style.css",
+        "app.js",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m23",
+      "title": "正方形旋转模型",
+      "status": "planned",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_rotation"
+      ],
+      "chapterTitles": [
+        "旋转构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/jm_model/jm_model_m23",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m23/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "jm_model_m24",
+      "title": "60 度等边旋转模型",
+      "status": "ready",
+      "stageId": "junior",
+      "bookId": "jm_model",
+      "bookLabel": "中考模型专题",
+      "chapterIds": [
+        "jm_model_rotation"
+      ],
+      "chapterTitles": [
+        "旋转构造模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "equilateral-60-rotation-model",
+      "folder": "visualizations/books/jm_model/jm_model_m24",
+      "assetsDir": "visualizations/books/jm_model/jm_model_m24/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m09",
+      "title": "常用逻辑用语与充分必要条件",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c1_2"
+      ],
+      "chapterTitles": [
+        "1.2 充分条件与必要条件"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m09",
+      "assetsDir": "visualizations/books/s_b1/sb1_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m10",
+      "title": "命题真假与全称存在量词",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c1_3"
+      ],
+      "chapterTitles": [
+        "1.3 全称量词与存在量词"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b1/sb1_m10",
+      "assetsDir": "visualizations/books/s_b1/sb1_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m11",
+      "title": "二次函数方程不等式三联动",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c2_1"
+      ],
+      "chapterTitles": [
+        "2.1 二次函数、方程和不等式"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m11",
+      "assetsDir": "visualizations/books/s_b1/sb1_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m12",
+      "title": "基本不等式面积模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c2_2"
+      ],
+      "chapterTitles": [
+        "2.2 基本不等式"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b1/sb1_m12",
+      "assetsDir": "visualizations/books/s_b1/sb1_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m13",
+      "title": "函数定义域与值域扫描器",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c3_1"
+      ],
+      "chapterTitles": [
+        "3.1 函数的概念与表示"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "embedded-source-courseware",
+      "folder": "visualizations/books/s_b1/sb1_m13",
+      "assetsDir": "visualizations/books/s_b1/sb1_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m14",
+      "title": "函数单调性与最值滑坡图",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c3_2"
+      ],
+      "chapterTitles": [
+        "3.2 函数单调性与最值"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "embedded-source-courseware",
+      "folder": "visualizations/books/s_b1/sb1_m14",
+      "assetsDir": "visualizations/books/s_b1/sb1_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m15",
+      "title": "函数零点与二分法",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c3_3"
+      ],
+      "chapterTitles": [
+        "3.3 函数零点与二分法"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b1/sb1_m15",
+      "assetsDir": "visualizations/books/s_b1/sb1_m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m16",
+      "title": "抽象函数图像变换总控台",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c3_4"
+      ],
+      "chapterTitles": [
+        "3.4 函数图像变换"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b1/sb1_m16",
+      "assetsDir": "visualizations/books/s_b1/sb1_m16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb1_m17",
+      "title": "指数对数运算法则天平",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c4_1"
+      ],
+      "chapterTitles": [
+        "4.1 指数与对数运算"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b1/sb1_m17",
+      "assetsDir": "visualizations/books/s_b1/sb1_m17/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m18",
+      "title": "任意角与弧度制旋转盘",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c5_1"
+      ],
+      "chapterTitles": [
+        "5.1 任意角与弧度制"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b1/sb1_m18",
+      "assetsDir": "visualizations/books/s_b1/sb1_m18/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb1_m19",
+      "title": "诱导公式与周期对称折叠",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b1",
+      "bookLabel": "必修第一册",
+      "chapterIds": [
+        "sb1_c5_3"
+      ],
+      "chapterTitles": [
+        "5.3 诱导公式与周期性"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b1/sb1_m19",
+      "assetsDir": "visualizations/books/s_b1/sb1_m19/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m08",
+      "title": "数量积投影与夹角判定",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c6_3"
+      ],
+      "chapterTitles": [
+        "6.3 数量积与投影"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m08",
+      "assetsDir": "visualizations/books/s_b2/sb2_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m09",
+      "title": "三角恒等变换公式拼图",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c5_2"
+      ],
+      "chapterTitles": [
+        "5.2 三角恒等变换"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m09",
+      "assetsDir": "visualizations/books/s_b2/sb2_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m10",
+      "title": "复数四则运算与模辐角",
+      "status": "ready",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c7_1"
+      ],
+      "chapterTitles": [
+        "7.1 复数的几何意义与运算"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "A",
+      "engine": "source-html-adapter",
+      "folder": "visualizations/books/s_b2/sb2_m10",
+      "assetsDir": "visualizations/books/s_b2/sb2_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html"
+      ]
+    },
+    {
+      "cardId": "sb2_m11",
+      "title": "棱柱棱锥圆柱圆锥体积模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c8_1"
+      ],
+      "chapterTitles": [
+        "8.1 基本立体图形"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m11",
+      "assetsDir": "visualizations/books/s_b2/sb2_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m12",
+      "title": "空间截面与投影",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c8_2"
+      ],
+      "chapterTitles": [
+        "8.2 空间截面与投影"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m12",
+      "assetsDir": "visualizations/books/s_b2/sb2_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m13",
+      "title": "线面垂直与面面垂直判定实验",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c8_4"
+      ],
+      "chapterTitles": [
+        "8.4 空间点、直线、平面的位置关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m13",
+      "assetsDir": "visualizations/books/s_b2/sb2_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m14",
+      "title": "抽样方法与样本估计总体",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c9_1"
+      ],
+      "chapterTitles": [
+        "9.1 抽样与样本估计"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m14",
+      "assetsDir": "visualizations/books/s_b2/sb2_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m15",
+      "title": "频率分布直方图与箱线图",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c9_2"
+      ],
+      "chapterTitles": [
+        "9.2 频率分布与统计图表"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m15",
+      "assetsDir": "visualizations/books/s_b2/sb2_m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m16",
+      "title": "古典概型与几何概型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c9_3"
+      ],
+      "chapterTitles": [
+        "9.3 古典概型与事件关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m16",
+      "assetsDir": "visualizations/books/s_b2/sb2_m16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sb2_m17",
+      "title": "互斥事件与独立事件",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_b2",
+      "bookLabel": "必修第二册",
+      "chapterIds": [
+        "sb2_c9_3"
+      ],
+      "chapterTitles": [
+        "9.3 古典概型与事件关系"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_b2/sb2_m17",
+      "assetsDir": "visualizations/books/s_b2/sb2_m17/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m07",
+      "title": "空间直角坐标系与点线面距离",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c1_1"
+      ],
+      "chapterTitles": [
+        "1.1 空间直角坐标系"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m07",
+      "assetsDir": "visualizations/books/s_x1/sx1_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m08",
+      "title": "空间向量求角与距离综合",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c1_4"
+      ],
+      "chapterTitles": [
+        "1.4 空间向量的应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m08",
+      "assetsDir": "visualizations/books/s_x1/sx1_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m09",
+      "title": "直线斜率倾斜角与一般式",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c2_1"
+      ],
+      "chapterTitles": [
+        "2.1 直线的倾斜角与斜率"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m09",
+      "assetsDir": "visualizations/books/s_x1/sx1_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m10",
+      "title": "两直线平行垂直与距离",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c2_2"
+      ],
+      "chapterTitles": [
+        "2.2 直线的位置关系与距离"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m10",
+      "assetsDir": "visualizations/books/s_x1/sx1_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m11",
+      "title": "圆的方程与切线",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c2_3"
+      ],
+      "chapterTitles": [
+        "2.3 圆的方程与切线"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m11",
+      "assetsDir": "visualizations/books/s_x1/sx1_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m12",
+      "title": "直线与圆位置关系",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c2_3"
+      ],
+      "chapterTitles": [
+        "2.3 圆的方程与切线"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m12",
+      "assetsDir": "visualizations/books/s_x1/sx1_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m13",
+      "title": "椭圆标准方程与离心率",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "chapterTitles": [
+        "3.1 椭圆与双曲线"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m13",
+      "assetsDir": "visualizations/books/s_x1/sx1_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m14",
+      "title": "双曲线渐近线与离心率",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "chapterTitles": [
+        "3.1 椭圆与双曲线"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m14",
+      "assetsDir": "visualizations/books/s_x1/sx1_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m15",
+      "title": "圆锥曲线弦长与中点弦",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c3_3"
+      ],
+      "chapterTitles": [
+        "3.3 圆锥曲线综合"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m15",
+      "assetsDir": "visualizations/books/s_x1/sx1_m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m16",
+      "title": "解析几何定点定值与最值探针",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c3_3"
+      ],
+      "chapterTitles": [
+        "3.3 圆锥曲线综合"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m16",
+      "assetsDir": "visualizations/books/s_x1/sx1_m16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx1_m17",
+      "title": "分类加法与分步乘法计数原理",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x1",
+      "bookLabel": "选择性必修1",
+      "chapterIds": [
+        "sx1_c4_1"
+      ],
+      "chapterTitles": [
+        "4.1 分类加法与分步乘法"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x1/sx1_m17",
+      "assetsDir": "visualizations/books/s_x1/sx1_m17/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m05",
+      "title": "递推数列状态机",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c4_2"
+      ],
+      "chapterTitles": [
+        "4.2 递推数列与求和"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m05",
+      "assetsDir": "visualizations/books/s_x2/sx2_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m06",
+      "title": "累加累乘求通项",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c4_2"
+      ],
+      "chapterTitles": [
+        "4.2 递推数列与求和"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m06",
+      "assetsDir": "visualizations/books/s_x2/sx2_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m07",
+      "title": "错位相减求和",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c4_2"
+      ],
+      "chapterTitles": [
+        "4.2 递推数列与求和"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m07",
+      "assetsDir": "visualizations/books/s_x2/sx2_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m08",
+      "title": "裂项相消求和",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c4_2"
+      ],
+      "chapterTitles": [
+        "4.2 递推数列与求和"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m08",
+      "assetsDir": "visualizations/books/s_x2/sx2_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m09",
+      "title": "数列单调性与极限趋势",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c4_3"
+      ],
+      "chapterTitles": [
+        "4.3 数列综合"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m09",
+      "assetsDir": "visualizations/books/s_x2/sx2_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m10",
+      "title": "导数定义与割线极限",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c5_1"
+      ],
+      "chapterTitles": [
+        "5.1 导数的概念与运算"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m10",
+      "assetsDir": "visualizations/books/s_x2/sx2_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m11",
+      "title": "导数运算法则图像链",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c5_1"
+      ],
+      "chapterTitles": [
+        "5.1 导数的概念与运算"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m11",
+      "assetsDir": "visualizations/books/s_x2/sx2_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m12",
+      "title": "导数判单调与极值表",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c5_3"
+      ],
+      "chapterTitles": [
+        "5.3 导数在研究函数中的应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m12",
+      "assetsDir": "visualizations/books/s_x2/sx2_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m13",
+      "title": "导数优化应用",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c5_3"
+      ],
+      "chapterTitles": [
+        "5.3 导数在研究函数中的应用"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m13",
+      "assetsDir": "visualizations/books/s_x2/sx2_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx2_m14",
+      "title": "恒成立与参数分离",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x2",
+      "bookLabel": "选择性必修2",
+      "chapterIds": [
+        "sx2_c5_4"
+      ],
+      "chapterTitles": [
+        "5.4 导数综合与参数问题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x2/sx2_m14",
+      "assetsDir": "visualizations/books/s_x2/sx2_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m06",
+      "title": "限制条件排列组合排座模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c1_1"
+      ],
+      "chapterTitles": [
+        "1.1 排列组合综合"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m06",
+      "assetsDir": "visualizations/books/s_x3/sx3_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m07",
+      "title": "分组分配与隔板法",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c1_1"
+      ],
+      "chapterTitles": [
+        "1.1 排列组合综合"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m07",
+      "assetsDir": "visualizations/books/s_x3/sx3_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m08",
+      "title": "独立重复试验与二项分布",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c7_2"
+      ],
+      "chapterTitles": [
+        "7.2 二项分布与超几何分布"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m08",
+      "assetsDir": "visualizations/books/s_x3/sx3_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m09",
+      "title": "超几何分布抽样盒",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c7_2"
+      ],
+      "chapterTitles": [
+        "7.2 二项分布与超几何分布"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m09",
+      "assetsDir": "visualizations/books/s_x3/sx3_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m10",
+      "title": "随机变量分布列生成器",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c7_1"
+      ],
+      "chapterTitles": [
+        "7.1 离散型随机变量"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m10",
+      "assetsDir": "visualizations/books/s_x3/sx3_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m11",
+      "title": "期望方差与决策",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c7_1"
+      ],
+      "chapterTitles": [
+        "7.1 离散型随机变量"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m11",
+      "assetsDir": "visualizations/books/s_x3/sx3_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m12",
+      "title": "2x2 列联表与独立性检验",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c8_2"
+      ],
+      "chapterTitles": [
+        "8.2 相关系数与独立性检验"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m12",
+      "assetsDir": "visualizations/books/s_x3/sx3_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m13",
+      "title": "抽样误差与置信区间拓展",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c8_1"
+      ],
+      "chapterTitles": [
+        "8.1 回归分析"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m13",
+      "assetsDir": "visualizations/books/s_x3/sx3_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sx3_m14",
+      "title": "相关系数与散点相关强度",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "s_x3",
+      "bookLabel": "选择性必修3",
+      "chapterIds": [
+        "sx3_c8_2"
+      ],
+      "chapterTitles": [
+        "8.2 相关系数与独立性检验"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/s_x3/sx3_m14",
+      "assetsDir": "visualizations/books/s_x3/sx3_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m01",
+      "title": "函数图像语言总览",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_function"
+      ],
+      "chapterTitles": [
+        "函数与图像专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m01",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m02",
+      "title": "不等式证明工具箱",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_inequality"
+      ],
+      "chapterTitles": [
+        "不等式与代数变形专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m02",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m03",
+      "title": "坐标法向量法综合法选择器",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_geometry"
+      ],
+      "chapterTitles": [
+        "几何方法专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m03",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m04",
+      "title": "数学建模流程沙盘",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_modeling"
+      ],
+      "chapterTitles": [
+        "数学建模与技术专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m04",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m05",
+      "title": "参数方程与极坐标拓展",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_geometry"
+      ],
+      "chapterTitles": [
+        "几何方法专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m05",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m06",
+      "title": "数形结合策略地图",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_strategy"
+      ],
+      "chapterTitles": [
+        "数学思想方法专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m06",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m07",
+      "title": "分类讨论决策树",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_strategy"
+      ],
+      "chapterTitles": [
+        "数学思想方法专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m07",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m08",
+      "title": "构造函数方法库",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_function"
+      ],
+      "chapterTitles": [
+        "函数与图像专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m08",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m09",
+      "title": "换元法可视化",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_inequality"
+      ],
+      "chapterTitles": [
+        "不等式与代数变形专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m09",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m10",
+      "title": "放缩法与估计链",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_inequality"
+      ],
+      "chapterTitles": [
+        "不等式与代数变形专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m10",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m11",
+      "title": "信息技术统计模拟专题",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_topic",
+      "bookLabel": "高中学科专题",
+      "chapterIds": [
+        "sm_topic_modeling"
+      ],
+      "chapterTitles": [
+        "数学建模与技术专题"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_topic/sm_topic_m11",
+      "assetsDir": "visualizations/books/sm_topic/sm_topic_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m01",
+      "title": "函数零点个数与参数",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "chapterTitles": [
+        "函数与导数压轴模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m01",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m01/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m02",
+      "title": "导数恒成立压轴模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "chapterTitles": [
+        "函数与导数压轴模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m02",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m02/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m03",
+      "title": "切线放缩与不等式证明",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "chapterTitles": [
+        "函数与导数压轴模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m03",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m03/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m04",
+      "title": "双变量最值与构造函数",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "chapterTitles": [
+        "函数与导数压轴模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m04",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m04/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m05",
+      "title": "数列递推与求和压轴",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_sequence"
+      ],
+      "chapterTitles": [
+        "数列与三角模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m05",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m05/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m06",
+      "title": "解三角形最值与范围",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_sequence"
+      ],
+      "chapterTitles": [
+        "数列与三角模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m06",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m06/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m07",
+      "title": "向量数量积最值",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_geometry"
+      ],
+      "chapterTitles": [
+        "立体几何与向量模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m07",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m07/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m08",
+      "title": "立体几何外接球模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_geometry"
+      ],
+      "chapterTitles": [
+        "立体几何与向量模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m08",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m08/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m09",
+      "title": "二面角与空间向量模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_geometry"
+      ],
+      "chapterTitles": [
+        "立体几何与向量模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m09",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m09/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m10",
+      "title": "圆锥曲线弦长面积最值",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_conic"
+      ],
+      "chapterTitles": [
+        "解析几何与圆锥曲线模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m10",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m10/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m11",
+      "title": "圆锥曲线定点定值",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_conic"
+      ],
+      "chapterTitles": [
+        "解析几何与圆锥曲线模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m11",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m11/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m12",
+      "title": "焦点三角形模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_conic"
+      ],
+      "chapterTitles": [
+        "解析几何与圆锥曲线模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m12",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m12/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m13",
+      "title": "概率分布列与期望最优",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_probability"
+      ],
+      "chapterTitles": [
+        "概率统计与计数模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m13",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m13/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m14",
+      "title": "排列组合限制条件模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_probability"
+      ],
+      "chapterTitles": [
+        "概率统计与计数模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m14",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m14/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m15",
+      "title": "基本不等式多元最值",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_strategy"
+      ],
+      "chapterTitles": [
+        "综合策略模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m15",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m15/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    },
+    {
+      "cardId": "sm_model_m16",
+      "title": "新定义函数与抽象函数模型",
+      "status": "planned",
+      "stageId": "senior",
+      "bookId": "sm_model",
+      "bookLabel": "高考模型专题",
+      "chapterIds": [
+        "sm_model_strategy"
+      ],
+      "chapterTitles": [
+        "综合策略模型"
+      ],
+      "contentModes": [
+        "interactive",
+        "card",
+        "exam"
+      ],
+      "visualLevel": "P",
+      "engine": "placeholder-source",
+      "folder": "visualizations/books/sm_model/sm_model_m16",
+      "assetsDir": "visualizations/books/sm_model/sm_model_m16/assets",
+      "starterFiles": [
+        "scene.config.json",
+        "source.html",
+        "scene.js"
+      ]
+    }
+  ]
+}

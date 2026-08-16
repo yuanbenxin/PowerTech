@@ -1,0 +1,12 @@
+{
+  "cardId": "sb1_m13",
+  "status": "ready",
+  "engine": "embedded-source-courseware",
+  "entry": "scene.js?v=af6bbffcd21d",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-domain-range-scanner",
+  "visualLevel": "A",
+  "source": "source.html",
+  "generator": "senior-domain-range-scanner-v1",
+  "notes": "二次、反比例、根号函数的定义域和值域扫描课件。"
+}

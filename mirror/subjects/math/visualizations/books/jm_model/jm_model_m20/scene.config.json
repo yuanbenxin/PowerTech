@@ -1,0 +1,11 @@
+{
+  "cardId": "jm_model_m20",
+  "status": "ready",
+  "engine": "apollonius-circle-model",
+  "entry": "scene.js?v=e79b86f0966d",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-apollonius-circle",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "阿氏圆模型正式互动课件：支持拖拽 A/B/P、调节比例 k、构造内外分点 C/D、以 CD 为直径生成阿氏圆，并包含 k=1 时的垂直平分线退化情形、轨迹采样、缩放平移和触屏防长按菜单。"
+}

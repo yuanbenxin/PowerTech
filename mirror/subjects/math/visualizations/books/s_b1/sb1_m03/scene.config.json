@@ -1,0 +1,35 @@
+{
+  "cardId": "sb1_m03",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-venn-boolean-operations",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m03",
+    "panelSelector": ".sidebar",
+    "auxiliaryPanelSelectors": [
+      ".status-panel",
+      ".legend",
+      ".drag-hint"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m03",
+    "panelClass": "math-source-panel-sb1_m03",
+    "inlineFunctionNames": [
+      "setMode",
+      "quickLayoutVenn",
+        "setOperationVenn",
+        "answerCheck",
+        "toggleEndpoint",
+      "setOperation1D",
+      "quickLayout1D"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "集合维恩图与布尔运算源码已迁入平台目录；模式、集合运算、端点切换和拖动逻辑保留。"
+}

@@ -1,0 +1,27 @@
+{
+  "cardId": "j7b_m10",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-perpendicular-distance",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=498a9317b34f",
+  "script": "app.js?v=38155bde04a2",
+  "sourceAdapter": {
+    "cardId": "j7b_m10",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [
+      "#modal-help"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j7b_m10",
+    "panelClass": "math-source-panel-j7b_m10",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "接入点到直线距离与垂线段课件：左侧垂线段距离模拟框与可收起 HUD，右侧平台操作面板承载点位、构造、预设与重置控制。"
+}

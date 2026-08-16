@@ -1,0 +1,22 @@
+{
+  "cardId": "sb1_m07",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-power-function-family-overview",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m07",
+    "panelSelector": ".ui-layer",
+    "needsThree": false,
+    "stagePointerWindow": true,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m07",
+    "panelClass": "math-source-panel-sb1_m07",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "幂函数族的图像分类总览源码已迁入平台目录；五类总览、单函数剖析、自由指数滑块、切线导数、渐近线、留影对比和奇偶对称演示保留。"
+}

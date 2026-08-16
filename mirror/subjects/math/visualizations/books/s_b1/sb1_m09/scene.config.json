@@ -1,0 +1,35 @@
+{
+  "cardId": "sb1_m09",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "svg-logic-conditions",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m09",
+    "panelSelector": ".control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m09",
+    "panelClass": "math-source-panel-sb1_m09",
+    "inlineFunctionNames": [
+      "switchModule",
+      "setVennPreset",
+      "updateVennP",
+      "updateVennQ",
+      "setNumPreset",
+      "updateParamA",
+      "setCircuitMode",
+      "updateSwitchP",
+      "updateSwitchQ",
+      "setDomainMode",
+      "setQuantifierType",
+      "updateQuantifierA"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "常用逻辑用语与充分必要条件课件已接入；保留集合包含、数轴区间、逻辑电路与量词否定四个交互模块，并将操作控件迁移至平台右侧面板。"
+}

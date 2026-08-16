@@ -1,0 +1,645 @@
+{
+  "book": {
+    "id": "s_b2",
+    "label": "必修第二册",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "sb2_c4",
+        "label": "第四章 数列",
+        "title": "第四章 数列",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb2_c4_2",
+        "label": "4.2 等差数列",
+        "title": "4.2 等差数列",
+        "sampleTopics": [
+          "等差数列",
+          "通项",
+          "求和"
+        ]
+      },
+      {
+        "id": "sb2_c4_3",
+        "label": "4.3 等比数列",
+        "title": "4.3 等比数列",
+        "sampleTopics": [
+          "等比数列",
+          "指数增长",
+          "求和"
+        ]
+      },
+      {
+        "id": "sb2_c5",
+        "label": "第五章 三角恒等变换与解三角形",
+        "title": "第五章 三角恒等变换与解三角形",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb2_c5_1",
+        "label": "5.1 正弦定理和余弦定理",
+        "title": "5.1 正弦定理和余弦定理",
+        "sampleTopics": [
+          "正弦定理",
+          "余弦定理",
+          "测量"
+        ]
+      },
+      {
+        "id": "sb2_c5_2",
+        "label": "5.2 三角恒等变换",
+        "title": "5.2 三角恒等变换",
+        "sampleTopics": [
+          "和差角",
+          "倍角",
+          "化简"
+        ]
+      },
+      {
+        "id": "sb2_c6",
+        "label": "第六章 平面向量及其应用",
+        "title": "第六章 平面向量及其应用",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb2_c6_2",
+        "label": "6.2 平面向量的运算",
+        "title": "6.2 平面向量的运算",
+        "sampleTopics": [
+          "向量运算",
+          "分解",
+          "坐标"
+        ]
+      },
+      {
+        "id": "sb2_c6_3",
+        "label": "6.3 数量积与投影",
+        "title": "6.3 数量积与投影",
+        "sampleTopics": [
+          "数量积",
+          "投影",
+          "夹角"
+        ]
+      },
+      {
+        "id": "sb2_c7",
+        "label": "第七章 复数",
+        "title": "第七章 复数",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb2_c7_1",
+        "label": "7.1 复数的几何意义与运算",
+        "title": "7.1 复数的几何意义与运算",
+        "sampleTopics": [
+          "复平面",
+          "模",
+          "辐角"
+        ]
+      },
+      {
+        "id": "sb2_c8",
+        "label": "第八章 立体几何初步",
+        "title": "第八章 立体几何初步",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb2_c8_1",
+        "label": "8.1 基本立体图形",
+        "title": "8.1 基本立体图形",
+        "sampleTopics": [
+          "柱体",
+          "锥体",
+          "体积"
+        ]
+      },
+      {
+        "id": "sb2_c8_2",
+        "label": "8.2 空间截面与投影",
+        "title": "8.2 空间截面与投影",
+        "sampleTopics": [
+          "截面",
+          "投影",
+          "三视图"
+        ]
+      },
+      {
+        "id": "sb2_c8_4",
+        "label": "8.4 空间点、直线、平面的位置关系",
+        "title": "8.4 空间点、直线、平面的位置关系",
+        "sampleTopics": [
+          "点线面",
+          "平行",
+          "垂直"
+        ]
+      },
+      {
+        "id": "sb2_c9",
+        "label": "第九章 统计与概率",
+        "title": "第九章 统计与概率",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb2_c9_1",
+        "label": "9.1 抽样与样本估计",
+        "title": "9.1 抽样与样本估计",
+        "sampleTopics": [
+          "抽样",
+          "样本",
+          "总体"
+        ]
+      },
+      {
+        "id": "sb2_c9_2",
+        "label": "9.2 频率分布与统计图表",
+        "title": "9.2 频率分布与统计图表",
+        "sampleTopics": [
+          "直方图",
+          "箱线图",
+          "分布"
+        ]
+      },
+      {
+        "id": "sb2_c9_3",
+        "label": "9.3 古典概型与事件关系",
+        "title": "9.3 古典概型与事件关系",
+        "sampleTopics": [
+          "古典概型",
+          "几何概型",
+          "独立事件"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "sb2_c4",
+      "label": "第四章 数列",
+      "children": [
+        {
+          "id": "sb2_c4_2",
+          "label": "4.2 等差数列",
+          "sampleTopics": [
+            "等差数列",
+            "通项",
+            "求和"
+          ]
+        },
+        {
+          "id": "sb2_c4_3",
+          "label": "4.3 等比数列",
+          "sampleTopics": [
+            "等比数列",
+            "指数增长",
+            "求和"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb2_c5",
+      "label": "第五章 三角恒等变换与解三角形",
+      "children": [
+        {
+          "id": "sb2_c5_1",
+          "label": "5.1 正弦定理和余弦定理",
+          "sampleTopics": [
+            "正弦定理",
+            "余弦定理",
+            "测量"
+          ]
+        },
+        {
+          "id": "sb2_c5_2",
+          "label": "5.2 三角恒等变换",
+          "sampleTopics": [
+            "和差角",
+            "倍角",
+            "化简"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb2_c6",
+      "label": "第六章 平面向量及其应用",
+      "children": [
+        {
+          "id": "sb2_c6_2",
+          "label": "6.2 平面向量的运算",
+          "sampleTopics": [
+            "向量运算",
+            "分解",
+            "坐标"
+          ]
+        },
+        {
+          "id": "sb2_c6_3",
+          "label": "6.3 数量积与投影",
+          "sampleTopics": [
+            "数量积",
+            "投影",
+            "夹角"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb2_c7",
+      "label": "第七章 复数",
+      "children": [
+        {
+          "id": "sb2_c7_1",
+          "label": "7.1 复数的几何意义与运算",
+          "sampleTopics": [
+            "复平面",
+            "模",
+            "辐角"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb2_c8",
+      "label": "第八章 立体几何初步",
+      "children": [
+        {
+          "id": "sb2_c8_1",
+          "label": "8.1 基本立体图形",
+          "sampleTopics": [
+            "柱体",
+            "锥体",
+            "体积"
+          ]
+        },
+        {
+          "id": "sb2_c8_2",
+          "label": "8.2 空间截面与投影",
+          "sampleTopics": [
+            "截面",
+            "投影",
+            "三视图"
+          ]
+        },
+        {
+          "id": "sb2_c8_4",
+          "label": "8.4 空间点、直线、平面的位置关系",
+          "sampleTopics": [
+            "点线面",
+            "平行",
+            "垂直"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb2_c9",
+      "label": "第九章 统计与概率",
+      "children": [
+        {
+          "id": "sb2_c9_1",
+          "label": "9.1 抽样与样本估计",
+          "sampleTopics": [
+            "抽样",
+            "样本",
+            "总体"
+          ]
+        },
+        {
+          "id": "sb2_c9_2",
+          "label": "9.2 频率分布与统计图表",
+          "sampleTopics": [
+            "直方图",
+            "箱线图",
+            "分布"
+          ]
+        },
+        {
+          "id": "sb2_c9_3",
+          "label": "9.3 古典概型与事件关系",
+          "sampleTopics": [
+            "古典概型",
+            "几何概型",
+            "独立事件"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "sb2_m01",
+      "chapterIds": [
+        "sb2_c6_2"
+      ],
+      "title": "平面向量的合成与正交分解",
+      "detail": "遵循平行四边形法则或三角形法则，交互式拖动向量，实时得出合向量及坐标投影",
+      "image": "assets/media/sb2_m01.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "plane-vector-composition-decomposition"
+    },
+    {
+      "cardId": "sb2_m02",
+      "chapterIds": [
+        "sb2_c8_4"
+      ],
+      "title": "三维空间中的点、线、面关系",
+      "detail": "在三维视口中自由旋转空间几何体，精准判定异面直线、直线与平面平行/垂直的空间位置",
+      "image": "assets/media/sb2_m02.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "geom3d"
+    },
+    {
+      "cardId": "sb2_m03",
+      "chapterIds": [
+        "sb2_c8_4"
+      ],
+      "title": "空间多面体的欧拉公式",
+      "detail": "V-E+F=2 在各种凸多面体中的验证",
+      "image": "assets/media/sb2_m03.webp",
+      "isLocked": false,
+      "engine": "geom3d"
+    },
+    {
+      "cardId": "sb2_m04",
+      "chapterIds": [
+        "sb2_c6_2"
+      ],
+      "title": "复数的几何意义与旋转",
+      "detail": "在复平面上乘以 i 带来 90 度刚体旋转",
+      "image": "assets/media/sb2_m04.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "sb2_m05",
+      "chapterIds": [
+        "sb2_c4_2"
+      ],
+      "title": "等差数列的阶梯面积求和",
+      "detail": "首尾配对法的几何解释：用等高阶梯拼成完美矩形求和",
+      "image": "assets/media/sb2_m05.webp",
+      "fallbackImage": "",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "sb2_m07",
+      "chapterIds": [
+        "sb2_c4_3"
+      ],
+      "title": "等比数列的指数增长与棋盘麦粒",
+      "detail": "用 3D 棋盘麦粒模型联动观察等比数列通项、前 n 项和、q=1 边界和 q<1 衰减。",
+      "image": "assets/media/math_card_bg_senior.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sb2_m06",
+      "chapterIds": [
+        "sb2_c5_1"
+      ],
+      "title": "正弦余弦定理的三角测量",
+      "detail": "在双站交会、单站测距和三边反算中联动观察正弦定理、余弦定理、面积公式和误差带。",
+      "image": "assets/media/sb2_m06.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sb2_m10",
+      "chapterIds": [
+        "sb2_c7_1"
+      ],
+      "title": "复数四则运算与模辐角",
+      "detail": "在复平面中拖拽复数点，联动观察模、主辐角、加减法的向量意义，以及乘除法的旋转缩放规律。",
+      "image": "assets/media/sb2_m10.webp",
+      "fallbackImage": "assets/media/sb2_m10.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "复数",
+        "模",
+        "辐角"
+      ],
+      "points": [
+        "复数",
+        "模",
+        "辐角"
+      ]
+    },
+    {
+      "cardId": "sb2_m08",
+      "chapterIds": [
+        "sb2_c6_3"
+      ],
+      "title": "数量积投影与夹角判定",
+      "detail": "占位卡片：拖动两个向量，观察数量积符号、投影长度和夹角变化。正式互动内容待制作。",
+      "image": "assets/media/sb2_m08.webp",
+      "fallbackImage": "assets/media/sb2_m08.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "数量积",
+        "投影",
+        "夹角"
+      ],
+      "points": [
+        "数量积",
+        "投影",
+        "夹角"
+      ]
+    },
+    {
+      "cardId": "sb2_m09",
+      "chapterIds": [
+        "sb2_c5_2"
+      ],
+      "title": "三角恒等变换公式拼图",
+      "detail": "占位卡片：把和差角、倍角和辅助角公式拆成可拼接的公式模块。正式互动内容待制作。",
+      "image": "assets/media/sb2_m09.webp",
+      "fallbackImage": "assets/media/sb2_m09.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "三角恒等变换",
+        "公式",
+        "化简"
+      ],
+      "points": [
+        "三角恒等变换",
+        "公式",
+        "化简"
+      ]
+    },
+    {
+      "cardId": "sb2_m11",
+      "chapterIds": [
+        "sb2_c8_1"
+      ],
+      "title": "棱柱棱锥圆柱圆锥体积模型",
+      "detail": "占位卡片：切换柱体、锥体和旋转体，观察体积公式的结构来源。正式互动内容待制作。",
+      "image": "assets/media/sb2_m11.webp",
+      "fallbackImage": "assets/media/sb2_m11.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "立体几何",
+        "体积",
+        "几何体"
+      ],
+      "points": [
+        "立体几何",
+        "体积",
+        "几何体"
+      ]
+    },
+    {
+      "cardId": "sb2_m12",
+      "chapterIds": [
+        "sb2_c8_2"
+      ],
+      "title": "空间截面与投影",
+      "detail": "占位卡片：用可移动截平面切割几何体，并同步显示截面和投影。正式互动内容待制作。",
+      "image": "assets/media/sb2_m12.webp",
+      "fallbackImage": "assets/media/sb2_m12.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "截面",
+        "投影",
+        "空间想象"
+      ],
+      "points": [
+        "截面",
+        "投影",
+        "空间想象"
+      ]
+    },
+    {
+      "cardId": "sb2_m13",
+      "chapterIds": [
+        "sb2_c8_4"
+      ],
+      "title": "线面垂直与面面垂直判定实验",
+      "detail": "占位卡片：拖动直线和平面，验证线面垂直、面面垂直的判定条件。正式互动内容待制作。",
+      "image": "assets/media/sb2_m13.webp",
+      "fallbackImage": "assets/media/sb2_m13.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "线面垂直",
+        "面面垂直",
+        "判定"
+      ],
+      "points": [
+        "线面垂直",
+        "面面垂直",
+        "判定"
+      ]
+    },
+    {
+      "cardId": "sb2_m14",
+      "chapterIds": [
+        "sb2_c9_1"
+      ],
+      "title": "抽样方法与样本估计总体",
+      "detail": "占位卡片：切换简单随机、分层和系统抽样，观察样本估计总体的偏差。正式互动内容待制作。",
+      "image": "assets/media/sb2_m14.webp",
+      "fallbackImage": "assets/media/sb2_m14.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "抽样",
+        "样本",
+        "总体"
+      ],
+      "points": [
+        "抽样",
+        "样本",
+        "总体"
+      ]
+    },
+    {
+      "cardId": "sb2_m15",
+      "chapterIds": [
+        "sb2_c9_2"
+      ],
+      "title": "频率分布直方图与箱线图",
+      "detail": "占位卡片：拖动数据点并实时生成频率分布直方图和箱线图。正式互动内容待制作。",
+      "image": "assets/media/sb2_m15.webp",
+      "fallbackImage": "assets/media/sb2_m15.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "统计图",
+        "直方图",
+        "箱线图"
+      ],
+      "points": [
+        "统计图",
+        "直方图",
+        "箱线图"
+      ]
+    },
+    {
+      "cardId": "sb2_m16",
+      "chapterIds": [
+        "sb2_c9_3"
+      ],
+      "title": "古典概型与几何概型",
+      "detail": "占位卡片：用格点、面积和随机落点比较古典概型与几何概型。正式互动内容待制作。",
+      "image": "assets/media/sb2_m16.webp",
+      "fallbackImage": "assets/media/sb2_m16.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "概率",
+        "古典概型",
+        "几何概型"
+      ],
+      "points": [
+        "概率",
+        "古典概型",
+        "几何概型"
+      ]
+    },
+    {
+      "cardId": "sb2_m17",
+      "chapterIds": [
+        "sb2_c9_3"
+      ],
+      "title": "互斥事件与独立事件",
+      "detail": "占位卡片：通过事件区域和概率树区分互斥、对立和相互独立。正式互动内容待制作。",
+      "image": "assets/media/sb2_m17.webp",
+      "fallbackImage": "assets/media/sb2_m17.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "互斥事件",
+        "独立事件",
+        "概率"
+      ],
+      "points": [
+        "互斥事件",
+        "独立事件",
+        "概率"
+      ]
+    }
+  ]
+}

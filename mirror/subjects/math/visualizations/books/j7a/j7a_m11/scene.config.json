@@ -1,0 +1,27 @@
+{
+  "cardId": "j7a_m11",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-equation-segment-model",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=ad906c785bb1",
+  "script": "app.js?v=f280a67cd7d2",
+  "sourceAdapter": {
+    "cardId": "j7a_m11",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [
+      "#modal-help"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j7a_m11",
+    "panelClass": "math-source-panel-j7a_m11",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "接入一元一次方程应用线段图课件：左侧线段图模拟框与可收起建模 HUD，右侧平台操作面板承载场景、运动、参数、预设与重置控制。"
+}

@@ -1,0 +1,25 @@
+{
+  "cardId": "jm_topic_m09",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-function-equation-intersection-lab",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "jm_topic_m09",
+    "panelSelector": ".control-panel",
+    "auxiliaryPanelSelectors": [
+      ".tab-grid"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-jm_topic_m09",
+    "panelClass": "math-source-panel-jm_topic_m09",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：函数与方程交点专题。左侧白色模拟框承载专题交互画板和左上可折叠 HUD，右侧平台操作面板承载场景切换、参数调节、演示控制与结论反馈。"
+}

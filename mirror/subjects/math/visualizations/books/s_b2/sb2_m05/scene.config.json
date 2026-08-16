@@ -1,0 +1,24 @@
+{
+  "cardId": "sb2_m05",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-canvas-sequence-sum",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb2_m05",
+    "panelSelector": ".ui-layer",
+    "needsThree": false,
+    "stagePointerWindow": true,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sb2_m05",
+    "panelClass": "math-source-panel-sb2_m05",
+    "inlineFunctionNames": [
+      "setMode"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "Local HTML source: arithmetic sequence staircase area summation with Gauss pairing and continuous limit modes."
+}

@@ -1,0 +1,12 @@
+{
+  "cardId": "sm_topic_m02",
+  "status": "planned",
+  "engine": "placeholder-source",
+  "entry": "scene.js?v=d6e608ce3736",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-safe-placeholder",
+  "visualLevel": "P",
+  "source": "source.html",
+  "generator": "senior-placeholder-card-v1",
+  "notes": "占位卡片：卡片入口已补全，正式互动内容待制作。"
+}

@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m19",
+  "status": "ready",
+  "engine": "hu-bugui-model",
+  "entry": "scene.js?v=766187295dfb",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-hu-bugui-model",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=2cc61ef8458e",
+  "script": "app.js?v=f614157da434",
+  "notes": "胡不归模型正式接入：保留教学交互与右侧操作面板，按平台统一壳渲染。"
+}

@@ -1,0 +1,567 @@
+{
+  "book": {
+    "id": "j7a",
+    "label": "七年级上册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "j7a_c1",
+        "label": "第一章 有理数",
+        "title": "第一章 有理数",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7a_c1_1",
+        "label": "1.1 正数和负数",
+        "title": "1.1 正数和负数",
+        "sampleTopics": [
+          "正负数",
+          "实际意义"
+        ]
+      },
+      {
+        "id": "j7a_c1_2",
+        "label": "1.2 有理数与数轴",
+        "title": "1.2 有理数与数轴",
+        "sampleTopics": [
+          "数轴",
+          "有理数",
+          "大小比较"
+        ]
+      },
+      {
+        "id": "j7a_c1_3",
+        "label": "1.3 有理数的加减法",
+        "title": "1.3 有理数的加减法",
+        "sampleTopics": [
+          "加减法",
+          "运算律"
+        ]
+      },
+      {
+        "id": "j7a_c1_4",
+        "label": "1.4 有理数的乘除法",
+        "title": "1.4 有理数的乘除法",
+        "sampleTopics": [
+          "乘除法",
+          "符号法则"
+        ]
+      },
+      {
+        "id": "j7a_c1_5",
+        "label": "1.5 有理数的乘方",
+        "title": "1.5 有理数的乘方",
+        "sampleTopics": [
+          "乘方",
+          "科学记数法"
+        ]
+      },
+      {
+        "id": "j7a_c2",
+        "label": "第二章 整式的加减",
+        "title": "第二章 整式的加减",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7a_c2_1",
+        "label": "2.1 整式",
+        "title": "2.1 整式",
+        "sampleTopics": [
+          "单项式",
+          "多项式",
+          "同类项"
+        ]
+      },
+      {
+        "id": "j7a_c2_2",
+        "label": "2.2 整式的加减",
+        "title": "2.2 整式的加减",
+        "sampleTopics": [
+          "合并同类项",
+          "去括号"
+        ]
+      },
+      {
+        "id": "j7a_c3",
+        "label": "第三章 一元一次方程",
+        "title": "第三章 一元一次方程",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7a_c3_1",
+        "label": "3.1 从算式到方程",
+        "title": "3.1 从算式到方程",
+        "sampleTopics": [
+          "等式性质",
+          "方程"
+        ]
+      },
+      {
+        "id": "j7a_c3_2",
+        "label": "3.2 解一元一次方程（一）合并同类项与移项",
+        "title": "3.2 解一元一次方程（一）合并同类项与移项",
+        "sampleTopics": [
+          "移项",
+          "合并"
+        ]
+      },
+      {
+        "id": "j7a_c3_3",
+        "label": "3.3 解一元一次方程（二）去括号与去分母",
+        "title": "3.3 解一元一次方程（二）去括号与去分母",
+        "sampleTopics": [
+          "去括号",
+          "去分母"
+        ]
+      },
+      {
+        "id": "j7a_c3_4",
+        "label": "3.4 实际问题与一元一次方程",
+        "title": "3.4 实际问题与一元一次方程",
+        "sampleTopics": [
+          "线段图",
+          "方程建模"
+        ]
+      },
+      {
+        "id": "j7a_c4",
+        "label": "第四章 几何图形初步",
+        "title": "第四章 几何图形初步",
+        "sampleTopics": []
+      },
+      {
+        "id": "j7a_c4_1",
+        "label": "4.1 几何图形与展开图",
+        "title": "4.1 几何图形与展开图",
+        "sampleTopics": [
+          "立体图形",
+          "展开图"
+        ]
+      },
+      {
+        "id": "j7a_c4_2",
+        "label": "4.2 直线、射线、线段",
+        "title": "4.2 直线、射线、线段",
+        "sampleTopics": [
+          "线段和差",
+          "中点"
+        ]
+      },
+      {
+        "id": "j7a_c4_3",
+        "label": "4.3 角",
+        "title": "4.3 角",
+        "sampleTopics": [
+          "角度量",
+          "角平分线"
+        ]
+      },
+      {
+        "id": "j7a_c4_4",
+        "label": "4.4 几何图形初步综合",
+        "title": "4.4 几何图形初步综合",
+        "sampleTopics": [
+          "余角补角",
+          "方位角"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "j7a_c1",
+      "label": "第一章 有理数",
+      "children": [
+        {
+          "id": "j7a_c1_1",
+          "label": "1.1 正数和负数",
+          "sampleTopics": [
+            "正负数",
+            "实际意义"
+          ]
+        },
+        {
+          "id": "j7a_c1_2",
+          "label": "1.2 有理数与数轴",
+          "sampleTopics": [
+            "数轴",
+            "有理数",
+            "大小比较"
+          ]
+        },
+        {
+          "id": "j7a_c1_3",
+          "label": "1.3 有理数的加减法",
+          "sampleTopics": [
+            "加减法",
+            "运算律"
+          ]
+        },
+        {
+          "id": "j7a_c1_4",
+          "label": "1.4 有理数的乘除法",
+          "sampleTopics": [
+            "乘除法",
+            "符号法则"
+          ]
+        },
+        {
+          "id": "j7a_c1_5",
+          "label": "1.5 有理数的乘方",
+          "sampleTopics": [
+            "乘方",
+            "科学记数法"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7a_c2",
+      "label": "第二章 整式的加减",
+      "children": [
+        {
+          "id": "j7a_c2_1",
+          "label": "2.1 整式",
+          "sampleTopics": [
+            "单项式",
+            "多项式",
+            "同类项"
+          ]
+        },
+        {
+          "id": "j7a_c2_2",
+          "label": "2.2 整式的加减",
+          "sampleTopics": [
+            "合并同类项",
+            "去括号"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7a_c3",
+      "label": "第三章 一元一次方程",
+      "children": [
+        {
+          "id": "j7a_c3_1",
+          "label": "3.1 从算式到方程",
+          "sampleTopics": [
+            "等式性质",
+            "方程"
+          ]
+        },
+        {
+          "id": "j7a_c3_2",
+          "label": "3.2 解一元一次方程（一）合并同类项与移项",
+          "sampleTopics": [
+            "移项",
+            "合并"
+          ]
+        },
+        {
+          "id": "j7a_c3_3",
+          "label": "3.3 解一元一次方程（二）去括号与去分母",
+          "sampleTopics": [
+            "去括号",
+            "去分母"
+          ]
+        },
+        {
+          "id": "j7a_c3_4",
+          "label": "3.4 实际问题与一元一次方程",
+          "sampleTopics": [
+            "线段图",
+            "方程建模"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j7a_c4",
+      "label": "第四章 几何图形初步",
+      "children": [
+        {
+          "id": "j7a_c4_1",
+          "label": "4.1 几何图形与展开图",
+          "sampleTopics": [
+            "立体图形",
+            "展开图"
+          ]
+        },
+        {
+          "id": "j7a_c4_2",
+          "label": "4.2 直线、射线、线段",
+          "sampleTopics": [
+            "线段和差",
+            "中点"
+          ]
+        },
+        {
+          "id": "j7a_c4_3",
+          "label": "4.3 角",
+          "sampleTopics": [
+            "角度量",
+            "角平分线"
+          ]
+        },
+        {
+          "id": "j7a_c4_4",
+          "label": "4.4 几何图形初步综合",
+          "sampleTopics": [
+            "余角补角",
+            "方位角"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j7a_m01",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "title": "有理数的运算与数轴",
+      "detail": "通过可无限缩放的一维坐标系，动态可视化正负数加减法则与绝对值几何意义",
+      "image": "assets/media/j7a_m01.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7a_m02",
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "title": "立体图形的展开与折叠",
+      "detail": "实时三维动画：将正方体、圆柱体等 3D 几何体沿棱剪开，平铺生成 2D 展开图（Net）",
+      "image": "assets/media/j7a_m02.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "geom3d"
+    },
+    {
+      "cardId": "j7a_m03",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "title": "绝对值与相反数几何意义",
+      "detail": "在数轴上展示点到原点的距离概念",
+      "image": "assets/media/j7a_m03.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7a_m04",
+      "chapterIds": [
+        "j7a_c3_1"
+      ],
+      "title": "一元一次方程的天平模型",
+      "detail": "通过 3D 天平砝码模拟等式的基本性质",
+      "image": "assets/media/j7a_m04.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "j7a_m05",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "title": "有理数乘方的指数爆炸可视化",
+      "detail": "通过不断翻倍的三维柱状图，直观感受指数增长的恐怖速度",
+      "image": "assets/media/j7a_m05.webp",
+      "fallbackImage": "",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j7a_m06",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "title": "整式合并同类项积木",
+      "detail": "通过代数积木点亮、分类、正负对消和系数填写，直观理解同类项合并。",
+      "image": "assets/media/j7a_m06.webp",
+      "fallbackImage": "assets/media/j7a_m06.webp",
+      "isLocked": false,
+      "engine": "algebra-tiles-combiner",
+      "visualLevel": "A",
+      "tags": [
+        "整式",
+        "同类项",
+        "合并"
+      ],
+      "points": [
+        "整式",
+        "同类项",
+        "合并"
+      ]
+    },
+    {
+      "cardId": "j7a_m07",
+      "chapterIds": [
+        "j7a_c2_2"
+      ],
+      "title": "去括号与符号变化机器",
+      "detail": "通过符号分配机器演示正号、负号和系数进入括号后，每一项的乘法分配、变号和最终化简过程。",
+      "image": "assets/media/j7a_m07.webp",
+      "fallbackImage": "assets/media/j7a_m07.webp",
+      "isLocked": false,
+      "engine": "parentheses-sign-machine",
+      "visualLevel": "A",
+      "tags": [
+        "整式",
+        "去括号",
+        "符号"
+      ],
+      "points": [
+        "整式",
+        "去括号",
+        "符号"
+      ]
+    },
+    {
+      "cardId": "j7a_m08",
+      "chapterIds": [
+        "j7a_c4_2"
+      ],
+      "title": "线段中点与线段和差",
+      "detail": "拖动点 C、调节线段长度，观察线段和差、中点等分与双中点恒定关系。",
+      "image": "assets/media/j7a_m08.webp",
+      "fallbackImage": "assets/media/j7a_m08.webp",
+      "isLocked": false,
+      "engine": "segment-midpoint-lab",
+      "visualLevel": "A",
+      "tags": [
+        "线段",
+        "中点",
+        "长度",
+        "线段和差"
+      ],
+      "points": [
+        "线段",
+        "中点",
+        "长度",
+        "线段和差"
+      ]
+    },
+    {
+      "cardId": "j7a_m09",
+      "chapterIds": [
+        "j7a_c4_3"
+      ],
+      "title": "角的度量与角平分线",
+      "detail": "拖动射线和量角器，观察角度度量、角平分线等分性质与双平分线恒定关系。",
+      "image": "assets/media/j7a_m09.webp",
+      "fallbackImage": "assets/media/j7a_m09.webp",
+      "isLocked": false,
+      "engine": "angle-bisector-lab",
+      "visualLevel": "A",
+      "tags": [
+        "角",
+        "量角器",
+        "角平分线",
+        "双平分线"
+      ],
+      "points": [
+        "角",
+        "量角器",
+        "角平分线",
+        "双平分线"
+      ]
+    },
+    {
+      "cardId": "j7a_m12",
+      "chapterIds": [
+        "j7a_c4_4"
+      ],
+      "title": "余角补角与方位角",
+      "detail": "拖动角度仪表，动态识别互余、互补、方位角与角度换算，联动板书 HUD 与右侧操作面板完成证明演示。",
+      "image": "assets/media/j7a_m12.webp",
+      "fallbackImage": "assets/media/j7a_m12.webp",
+      "isLocked": false,
+      "engine": "angle-complement-bearing-model",
+      "visualLevel": "A",
+      "tags": [
+        "余角",
+        "补角",
+        "方位角"
+      ],
+      "points": [
+        "余角",
+        "补角",
+        "方位角"
+      ]
+    },
+    {
+      "cardId": "j7a_m13",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "title": "数轴区间与有理数大小比较",
+      "detail": "在数轴上联动有理数点、大小比较和开闭区间，通过拖拽、缩放与刻度吸附观察数与点、左右顺序和不等式区间。",
+      "image": "assets/media/j7a_m13.webp",
+      "fallbackImage": "assets/media/j7a_m13.webp",
+      "isLocked": false,
+      "engine": "rational-numberline-interval-model",
+      "visualLevel": "A",
+      "tags": [
+        "数轴",
+        "区间",
+        "大小比较"
+      ],
+      "points": [
+        "数轴",
+        "区间",
+        "大小比较"
+      ]
+    },
+    {
+      "cardId": "j7a_m10",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "title": "科学记数法数量级缩放",
+      "detail": "通过微观到宇宙尺度的连续缩放，观察 10 的整数次幂如何表达数量级，并练习科学记数法转换、倍数比较与估算。",
+      "image": "assets/media/j7a_m10.webp",
+      "fallbackImage": "assets/media/j7a_m10.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "科学记数法",
+        "数量级",
+        "乘方"
+      ],
+      "points": [
+        "科学记数法",
+        "数量级",
+        "乘方"
+      ]
+    },
+    {
+      "cardId": "j7a_m11",
+      "chapterIds": [
+        "j7a_c3_4"
+      ],
+      "title": "一元一次方程应用线段图",
+      "detail": "用线段图表示行程、工程、配比问题中的未知量和等量关系，联动平台右侧操作面板完成建模与求解。",
+      "image": "assets/media/j7a_m11.webp",
+      "fallbackImage": "assets/media/j7a_m11.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "方程应用",
+        "线段图",
+        "建模"
+      ],
+      "points": [
+        "方程应用",
+        "线段图",
+        "建模"
+      ]
+    }
+  ]
+}

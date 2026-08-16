@@ -1,0 +1,24 @@
+{
+  "cardId": "sb1_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-exponential-log-inversion",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m01",
+    "panelSelector": ".sidebar",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sb1_m01",
+    "panelClass": "math-source-panel-sb1_m01",
+    "inlineFunctionNames": [
+      "setBaseValue"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "???????????????????????Google Fonts ????????????????"
+}

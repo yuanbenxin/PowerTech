@@ -1,0 +1,569 @@
+{
+  "book": {
+    "id": "jm_model",
+    "label": "中考模型专题",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "jm_model_shortest_path",
+        "label": "最短路径模型",
+        "title": "最短路径模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_model_rotation",
+        "label": "旋转构造模型",
+        "title": "旋转构造模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_model_congruence",
+        "label": "全等构造模型",
+        "title": "全等构造模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_model_similarity",
+        "label": "相似模型",
+        "title": "相似模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_model_circle",
+        "label": "圆综合模型",
+        "title": "圆综合模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_model_area",
+        "label": "面积模型",
+        "title": "面积模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "jm_model_dynamic",
+        "label": "动点与轨迹模型",
+        "title": "动点与轨迹模型",
+        "sampleTopics": []
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "jm_model_m01",
+      "chapterIds": [
+        "jm_model_shortest_path"
+      ],
+      "title": "将军饮马最短路径模型",
+      "detail": "拖动驻地、城堡与饮马点，观察折线路径如何通过镜像点转化为直线最短距离，并支持单河岸、两河夹击、造桥平移三种模型。",
+      "image": "assets/media/jm_model_m01.png",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "water-horse-shortest-path",
+      "visualLevel": "A",
+      "tags": [
+        "将军饮马",
+        "最短路径",
+        "镜像",
+        "轴对称"
+      ],
+      "points": [
+        "镜像点把折线路径拉直",
+        "拖拽 P 点比较路径总长",
+        "自动演示定位理论最短点"
+      ]
+    },
+    {
+      "cardId": "jm_model_m02",
+      "chapterIds": [
+        "jm_model_rotation"
+      ],
+      "title": "手拉手全等旋转模型",
+      "detail": "拖拽旋转中心和两条手臂，观察 ΔAOB 绕 O 旋转得到 ΔCOD，动态识别对应边、对应角与全等三角形。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "hand-hand-rotation-model",
+      "visualLevel": "A",
+      "tags": [
+        "手拉手",
+        "旋转",
+        "全等"
+      ],
+      "points": [
+        "同角旋转保持长度与角度",
+        "对应边 OA=OC、OB=OD、AB=CD",
+        "由 SSS 或 SAS 判断两个三角形全等"
+      ]
+    },
+    {
+      "cardId": "jm_model_m03",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "title": "一线三等角模型",
+      "detail": "拖动一线三点与等角射线，观察 K 字结构中隐藏的相似三角形，并在边长条件成立时切换到全等判定。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "one-line-three-equal-angle-model",
+      "visualLevel": "A",
+      "tags": [
+        "一线三等角",
+        "K 字模型",
+        "相似",
+        "全等"
+      ],
+      "points": [
+        "三点共线形成一线",
+        "三等角抽出 K 字结构",
+        "相似与全等条件动态判定"
+      ]
+    },
+    {
+      "cardId": "jm_model_m04",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "title": "半角模型",
+      "detail": "拖动正方形边上的点 E，观察 45° 半角射线、旋转全等、EF=BE+DF、△CEF 周长恒定和 AH=AB 的动态证明。",
+      "image": "assets/media/jm_model_m04.webp",
+      "fallbackImage": "assets/media/jm_model_m04.webp",
+      "isLocked": false,
+      "engine": "half-angle-model",
+      "visualLevel": "A",
+      "tags": [
+        "半角",
+        "旋转全等",
+        "正方形",
+        "周长恒定"
+      ],
+      "points": [
+        "45° 半角构造旋转全等",
+        "EF=BE+DF 的线段和关系",
+        "周长恒定与高线相等同步验证"
+      ]
+    },
+    {
+      "cardId": "jm_model_m05",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "title": "倍长中线模型",
+      "detail": "延长中线并构造全等三角形，动态演示 △ADC≅△EDB、BE=AC、中线不等式和平行四边形转化。",
+      "image": "assets/media/jm_model_m05.webp",
+      "fallbackImage": "assets/media/jm_model_m05.webp",
+      "isLocked": false,
+      "engine": "double-median-model",
+      "visualLevel": "A",
+      "tags": [
+        "倍长中线",
+        "全等",
+        "中线不等式",
+        "平行四边形"
+      ],
+      "points": [
+        "倍长中线构造 △ADC≅△EDB",
+        "BE=AC 的对应边转化",
+        "中线长度范围与平行四边形性质"
+      ]
+    },
+    {
+      "cardId": "jm_model_m06",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "title": "截长补短模型",
+      "detail": "占位卡片：通过截取或延长等长线段，制造全等条件。正式互动内容待制作。",
+      "image": "assets/media/jm_model_m06.webp",
+      "fallbackImage": "assets/media/jm_model_m06.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "截长补短",
+        "构造",
+        "全等"
+      ],
+      "points": [
+        "截长补短",
+        "构造",
+        "全等"
+      ]
+    },
+    {
+      "cardId": "jm_model_m07",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "title": "角平分线双垂线模型",
+      "detail": "从角平分线上的点作双垂线，动态演示距离相等、全等对折、面积法推导角平分线定理与垂线构造等腰模型。",
+      "image": "assets/media/jm_model_m07.webp",
+      "fallbackImage": "assets/media/jm_model_m07.webp",
+      "isLocked": false,
+      "engine": "angle-bisector-double-perpendicular-model",
+      "visualLevel": "A",
+      "tags": [
+        "角平分线",
+        "双垂线",
+        "面积法"
+      ],
+      "points": [
+        "角平分线上的点到角两边距离相等",
+        "△ADP≅△AEP 的双垂线全等",
+        "BD/CD=AB/AC 的面积法转化"
+      ]
+    },
+    {
+      "cardId": "jm_model_m08",
+      "chapterIds": [
+        "jm_model_congruence"
+      ],
+      "title": "垂直平分线寻点模型",
+      "detail": "拖动 A、B、P 三点，观察 PA=PB 的等距轨迹、尺规交点和等腰三角形顶点如何统一落在 AB 的垂直平分线上。",
+      "image": "assets/media/jm_model_m08.webp",
+      "fallbackImage": "assets/media/jm_model_m08.webp",
+      "isLocked": false,
+      "engine": "perpendicular-bisector-locus-model",
+      "visualLevel": "A",
+      "tags": [
+        "垂直平分线",
+        "轨迹",
+        "等距",
+        "尺规作图"
+      ],
+      "points": [
+        "PA=PB 的点形成 AB 的垂直平分线",
+        "同半径圆交点连线确定垂直平分线",
+        "等腰三角形顶点寻点转化为垂直平分线"
+      ]
+    },
+    {
+      "cardId": "jm_model_m09",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "title": "A 字型相似模型",
+      "detail": "拖动三角形顶点与截线位置，观察平行 A 字型、分线段成比例和旋转/反 A 字型相似中的对应角、对应边与相似比守恒。",
+      "image": "assets/media/jm_model_m09.webp",
+      "fallbackImage": "assets/media/jm_model_m09.webp",
+      "isLocked": false,
+      "engine": "a-shape-similarity-model",
+      "visualLevel": "A",
+      "tags": [
+        "A 字型",
+        "相似",
+        "平行线",
+        "成比例"
+      ],
+      "points": [
+        "DE ∥ BC 时 △ADE∽△ABC",
+        "AD/AB=AE/AC=DE/BC 的相似比守恒",
+        "AD/DB=AE/EC 的平行线分线段成比例",
+        "旋转/反 A 字型中的交叉对应相似"
+      ]
+    },
+    {
+      "cardId": "jm_model_m10",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "title": "8 字型相似模型",
+      "detail": "拖动交叉三角形顶点与相似比，观察平行 8 字型、分线段成比例和旋转/反 8 字型相似中的对顶角、对应角、对应边与比例守恒。",
+      "image": "assets/media/jm_model_m10.webp",
+      "fallbackImage": "assets/media/jm_model_m10.webp",
+      "isLocked": false,
+      "engine": "eight-shape-similarity-model",
+      "visualLevel": "A",
+      "tags": [
+        "8 字型",
+        "相似",
+        "对顶角",
+        "平行线",
+        "成比例"
+      ],
+      "points": [
+        "AB ∥ CD 时 △OAB∽△OCD",
+        "对顶角相等与对应角相等的相似判定",
+        "OA/OD=OB/OC=AB/CD 的相似比守恒",
+        "旋转/反 8 字型中的交叉对应相似"
+      ]
+    },
+    {
+      "cardId": "jm_model_m11",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "title": "直角三角形斜边高相似模型",
+      "detail": "拖动直角三角形顶点与斜边高，观察 △DBA、△DAC、△ABC 的母子相似关系，验证 AD²=BD·CD、AB²=BD·BC、AC²=CD·BC 以及 AB·AC=BC·AD 的面积恒等。",
+      "image": "assets/media/jm_model_m11.webp",
+      "fallbackImage": "assets/media/jm_model_m11.webp",
+      "isLocked": false,
+      "engine": "right-triangle-altitude-similarity-model",
+      "visualLevel": "A",
+      "tags": [
+        "母子相似",
+        "射影定理",
+        "斜边高",
+        "面积恒等",
+        "直角三角形"
+      ],
+      "points": [
+        "△DBA、△DAC、△ABC 的两两相似",
+        "AD²=BD·CD 的斜边高射影定理",
+        "AB²=BD·BC 与 AC²=CD·BC 的直角边射影关系",
+        "AB·AC=BC·AD 的面积恒等"
+      ]
+    },
+    {
+      "cardId": "jm_model_m13",
+      "chapterIds": [
+        "jm_model_circle"
+      ],
+      "title": "圆幂模型：切线、相交弦、切割线",
+      "detail": "切换相交弦、割线与切割线三种圆幂结构，拖拽 P 点和弦/割线端点，动态验证 PA·PB=PC·PD 与 PT²=PA·PB 的乘积恒定关系。",
+      "image": "assets/media/jm_model_m13.webp",
+      "fallbackImage": "assets/media/jm_model_m13.webp",
+      "isLocked": false,
+      "engine": "power-of-circle-model",
+      "visualLevel": "A",
+      "tags": [
+        "圆幂",
+        "切线长",
+        "相交弦",
+        "割线",
+        "切割线"
+      ],
+      "points": [
+        "相交弦：PA·PB=PC·PD",
+        "割线：PA·PB=PC·PD",
+        "切割线：PT²=PA·PB",
+        "拖拽点与线段观察圆幂恒定"
+      ]
+    },
+    {
+      "cardId": "jm_model_m14",
+      "chapterIds": [
+        "jm_model_circle"
+      ],
+      "title": "隐圆模型",
+      "detail": "通过直角定圆、同弧同角、对角互补三类中考常见条件，拖点发现隐藏圆并判定四点共圆。",
+      "image": "assets/media/jm_model_m14.webp",
+      "fallbackImage": "assets/media/jm_model_m14.webp",
+      "isLocked": false,
+      "engine": "hidden-circle-model",
+      "visualLevel": "A",
+      "tags": [
+        "隐圆",
+        "四点共圆",
+        "直角定圆",
+        "同弧同角",
+        "对角互补"
+      ],
+      "points": [
+        "直角定圆：∠APB=90° 时 AB 为直径",
+        "同弧同角：同弦所对圆周角相等",
+        "对角互补：四边形四点共圆判定"
+      ]
+    },
+    {
+      "cardId": "jm_model_m19",
+      "chapterIds": [
+        "jm_model_shortest_path"
+      ],
+      "title": "胡不归模型",
+      "detail": "占位卡片：把带权折线路径通过旋转或相似转化为最短直线。正式互动内容待制作。",
+      "image": "assets/media/jm_model_m19.webp",
+      "fallbackImage": "assets/media/jm_model_m19.webp",
+      "isLocked": false,
+      "engine": "hu-bugui-model",
+      "visualLevel": "A",
+      "tags": [
+        "胡不归",
+        "最短路径",
+        "加权"
+      ],
+      "points": [
+        "胡不归",
+        "最短路径",
+        "加权"
+      ]
+    },
+    {
+      "cardId": "jm_model_m20",
+      "chapterIds": [
+        "jm_model_similarity"
+      ],
+      "title": "阿氏圆模型",
+      "detail": "拖拽 A/B/P 并调节 PA/PB=k，观察定比轨迹、内外分点 C/D 与阿氏圆的生成；k=1 时转化为垂直平分线。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "apollonius-circle-model",
+      "visualLevel": "A",
+      "tags": [
+        "阿氏圆",
+        "定比轨迹",
+        "相似"
+      ],
+      "points": [
+        "拖拽 P 观察 PA/PB=k 的轨迹",
+        "内分点 C 与外分点 D 决定圆",
+        "k=1 时退化为垂直平分线"
+      ]
+    },
+    {
+      "cardId": "jm_model_m21",
+      "chapterIds": [
+        "jm_model_area"
+      ],
+      "title": "面积比例模型：燕尾与蝴蝶",
+      "detail": "在三角形内点、平行线和梯形交叉结构中切换燕尾与蝴蝶模型，观察面积等量和比例关系。",
+      "image": "assets/media/jm_model_m21.webp",
+      "fallbackImage": "assets/media/jm_model_m21.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "燕尾模型",
+        "蝴蝶模型",
+        "面积比"
+      ],
+      "points": [
+        "燕尾模型",
+        "蝴蝶模型",
+        "面积比"
+      ]
+    },
+    {
+      "cardId": "jm_model_m24",
+      "chapterIds": [
+        "jm_model_rotation"
+      ],
+      "title": "60 度等边旋转模型",
+      "detail": "构造等边三角形提供天然 60°，拖动点 P 绕共顶点旋转，观察 △ABP 与 △ACP′ 的全等对应和 BP = CP′ 的转化关系。",
+      "image": "assets/media/jm_model_m24.webp",
+      "fallbackImage": "assets/media/jm_model_m24.webp",
+      "isLocked": false,
+      "engine": "equilateral-60-rotation-model",
+      "visualLevel": "A",
+      "tags": [
+        "等边三角形",
+        "60 度旋转",
+        "旋转全等"
+      ],
+      "points": [
+        "等边三角形构造 60°",
+        "点绕共顶点旋转",
+        "SAS 全等对应边"
+      ]
+    },
+    {
+      "cardId": "jm_model_m17",
+      "chapterIds": [
+        "jm_model_dynamic"
+      ],
+      "title": "折叠重合模型",
+      "detail": "拖动折叠落点和折角，观察矩形折叠重合、垂直平分线、勾股方程与相似关系的动态对应。",
+      "image": "assets/media/jm_model_m17.webp",
+      "fallbackImage": "assets/media/jm_model_m17.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "折叠",
+        "轴对称",
+        "重合"
+      ],
+      "points": [
+        "折叠",
+        "轴对称",
+        "重合"
+      ]
+    },
+    {
+      "cardId": "jm_model_m18",
+      "chapterIds": [
+        "jm_model_dynamic"
+      ],
+      "title": "动点轨迹模型",
+      "detail": "拖动约束点，观察轨迹线、轨迹圆和最值位置，联动辅助线与证明步骤完成动点轨迹分析。",
+      "image": "assets/media/jm_model_m18.webp",
+      "fallbackImage": "assets/media/jm_model_m18.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "动点",
+        "轨迹",
+        "最值"
+      ],
+      "points": [
+        "动点",
+        "轨迹",
+        "最值"
+      ]
+    },
+    {
+      "cardId": "jm_model_m23",
+      "chapterIds": [
+        "jm_model_rotation"
+      ],
+      "title": "正方形旋转模型",
+      "detail": "围绕公共顶点旋转正方形，识别 90 度旋转全等，并通过步骤面板观察对应边与对应角的变化。",
+      "image": "assets/media/jm_model_m23.webp",
+      "fallbackImage": "assets/media/jm_model_m23.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "正方形",
+        "旋转",
+        "全等"
+      ],
+      "points": [
+        "正方形",
+        "旋转",
+        "全等"
+      ]
+    }
+  ],
+  "chapterTree": [
+    {
+      "id": "jm_model_shortest_path",
+      "label": "最短路径模型",
+      "children": []
+    },
+    {
+      "id": "jm_model_rotation",
+      "label": "旋转构造模型",
+      "children": []
+    },
+    {
+      "id": "jm_model_congruence",
+      "label": "全等构造模型",
+      "children": []
+    },
+    {
+      "id": "jm_model_similarity",
+      "label": "相似模型",
+      "children": []
+    },
+    {
+      "id": "jm_model_circle",
+      "label": "圆综合模型",
+      "children": []
+    },
+    {
+      "id": "jm_model_area",
+      "label": "面积模型",
+      "children": []
+    },
+    {
+      "id": "jm_model_dynamic",
+      "label": "动点与轨迹模型",
+      "children": []
+    }
+  ]
+}

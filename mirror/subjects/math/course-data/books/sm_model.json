@@ -1,0 +1,448 @@
+{
+  "book": {
+    "id": "sm_model",
+    "label": "高考模型专题",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "sm_model_function",
+        "label": "函数与导数压轴模型",
+        "title": "函数与导数压轴模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_model_sequence",
+        "label": "数列与三角模型",
+        "title": "数列与三角模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_model_geometry",
+        "label": "立体几何与向量模型",
+        "title": "立体几何与向量模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_model_conic",
+        "label": "解析几何与圆锥曲线模型",
+        "title": "解析几何与圆锥曲线模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_model_probability",
+        "label": "概率统计与计数模型",
+        "title": "概率统计与计数模型",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_model_strategy",
+        "label": "综合策略模型",
+        "title": "综合策略模型",
+        "sampleTopics": []
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "sm_model_m01",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "title": "函数零点个数与参数",
+      "detail": "占位卡片：用参数滑块扫描函数图像，判断零点个数变化和临界参数。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m01.webp",
+      "fallbackImage": "assets/media/sm_model_m01.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "函数零点",
+        "参数",
+        "高考模型"
+      ],
+      "points": [
+        "函数零点",
+        "参数",
+        "高考模型"
+      ]
+    },
+    {
+      "cardId": "sm_model_m02",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "title": "导数恒成立压轴模型",
+      "detail": "占位卡片：把恒成立问题转化为导数研究最值和参数范围。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m02.webp",
+      "fallbackImage": "assets/media/sm_model_m02.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "导数",
+        "恒成立",
+        "压轴"
+      ],
+      "points": [
+        "导数",
+        "恒成立",
+        "压轴"
+      ]
+    },
+    {
+      "cardId": "sm_model_m03",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "title": "切线放缩与不等式证明",
+      "detail": "占位卡片：用切线、割线和函数单调性构造放缩链证明不等式。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m03.webp",
+      "fallbackImage": "assets/media/sm_model_m03.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "切线放缩",
+        "不等式",
+        "导数"
+      ],
+      "points": [
+        "切线放缩",
+        "不等式",
+        "导数"
+      ]
+    },
+    {
+      "cardId": "sm_model_m04",
+      "chapterIds": [
+        "sm_model_function"
+      ],
+      "title": "双变量最值与构造函数",
+      "detail": "占位卡片：通过换元、消元或固定变量，把双变量最值转化为单变量函数。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m04.webp",
+      "fallbackImage": "assets/media/sm_model_m04.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "双变量",
+        "最值",
+        "构造函数"
+      ],
+      "points": [
+        "双变量",
+        "最值",
+        "构造函数"
+      ]
+    },
+    {
+      "cardId": "sm_model_m05",
+      "chapterIds": [
+        "sm_model_sequence"
+      ],
+      "title": "数列递推与求和压轴",
+      "detail": "占位卡片：串联递推变形、通项求解和多种求和方法的压轴路径。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m05.webp",
+      "fallbackImage": "assets/media/sm_model_m05.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "数列",
+        "递推",
+        "求和"
+      ],
+      "points": [
+        "数列",
+        "递推",
+        "求和"
+      ]
+    },
+    {
+      "cardId": "sm_model_m06",
+      "chapterIds": [
+        "sm_model_sequence"
+      ],
+      "title": "解三角形最值与范围",
+      "detail": "占位卡片：在三角形参数变化中寻找边角范围、面积最值和约束边界。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m06.webp",
+      "fallbackImage": "assets/media/sm_model_m06.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "解三角形",
+        "最值",
+        "范围"
+      ],
+      "points": [
+        "解三角形",
+        "最值",
+        "范围"
+      ]
+    },
+    {
+      "cardId": "sm_model_m07",
+      "chapterIds": [
+        "sm_model_geometry"
+      ],
+      "title": "向量数量积最值",
+      "detail": "占位卡片：把几何最值转化为向量数量积、投影和夹角范围。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m07.webp",
+      "fallbackImage": "assets/media/sm_model_m07.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "向量",
+        "数量积",
+        "最值"
+      ],
+      "points": [
+        "向量",
+        "数量积",
+        "最值"
+      ]
+    },
+    {
+      "cardId": "sm_model_m08",
+      "chapterIds": [
+        "sm_model_geometry"
+      ],
+      "title": "立体几何外接球模型",
+      "detail": "占位卡片：识别墙角模型、长方体模型、棱锥模型中的外接球半径。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m08.webp",
+      "fallbackImage": "assets/media/sm_model_m08.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "外接球",
+        "立体几何",
+        "模型"
+      ],
+      "points": [
+        "外接球",
+        "立体几何",
+        "模型"
+      ]
+    },
+    {
+      "cardId": "sm_model_m09",
+      "chapterIds": [
+        "sm_model_geometry"
+      ],
+      "title": "二面角与空间向量模型",
+      "detail": "占位卡片：用法向量夹角和投影图识别二面角的大小和方向。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m09.webp",
+      "fallbackImage": "assets/media/sm_model_m09.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "二面角",
+        "空间向量",
+        "模型"
+      ],
+      "points": [
+        "二面角",
+        "空间向量",
+        "模型"
+      ]
+    },
+    {
+      "cardId": "sm_model_m10",
+      "chapterIds": [
+        "sm_model_conic"
+      ],
+      "title": "圆锥曲线弦长面积最值",
+      "detail": "占位卡片：联动直线斜率、弦长、面积和参数，寻找圆锥曲线最值结构。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m10.webp",
+      "fallbackImage": "assets/media/sm_model_m10.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "圆锥曲线",
+        "弦长",
+        "面积"
+      ],
+      "points": [
+        "圆锥曲线",
+        "弦长",
+        "面积"
+      ]
+    },
+    {
+      "cardId": "sm_model_m11",
+      "chapterIds": [
+        "sm_model_conic"
+      ],
+      "title": "圆锥曲线定点定值",
+      "detail": "占位卡片：用参数轨迹扫描定点、定值和恒过点出现的原因。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m11.webp",
+      "fallbackImage": "assets/media/sm_model_m11.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "圆锥曲线",
+        "定点",
+        "定值"
+      ],
+      "points": [
+        "圆锥曲线",
+        "定点",
+        "定值"
+      ]
+    },
+    {
+      "cardId": "sm_model_m12",
+      "chapterIds": [
+        "sm_model_conic"
+      ],
+      "title": "焦点三角形模型",
+      "detail": "占位卡片：在椭圆、双曲线和抛物线中构造焦点三角形并读取关系式。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m12.webp",
+      "fallbackImage": "assets/media/sm_model_m12.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "焦点三角形",
+        "圆锥曲线",
+        "模型"
+      ],
+      "points": [
+        "焦点三角形",
+        "圆锥曲线",
+        "模型"
+      ]
+    },
+    {
+      "cardId": "sm_model_m13",
+      "chapterIds": [
+        "sm_model_probability"
+      ],
+      "title": "概率分布列与期望最优",
+      "detail": "占位卡片：把方案选择转成分布列和期望比较，观察最优策略变化。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m13.webp",
+      "fallbackImage": "assets/media/sm_model_m13.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "分布列",
+        "期望",
+        "最优"
+      ],
+      "points": [
+        "分布列",
+        "期望",
+        "最优"
+      ]
+    },
+    {
+      "cardId": "sm_model_m14",
+      "chapterIds": [
+        "sm_model_probability"
+      ],
+      "title": "排列组合限制条件模型",
+      "detail": "占位卡片：整合相邻、不相邻、定序、分组和染色问题的限制条件处理。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m14.webp",
+      "fallbackImage": "assets/media/sm_model_m14.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "排列组合",
+        "限制条件",
+        "模型"
+      ],
+      "points": [
+        "排列组合",
+        "限制条件",
+        "模型"
+      ]
+    },
+    {
+      "cardId": "sm_model_m15",
+      "chapterIds": [
+        "sm_model_strategy"
+      ],
+      "title": "基本不等式多元最值",
+      "detail": "占位卡片：通过配凑、换元和取等条件寻找多元最值。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m15.webp",
+      "fallbackImage": "assets/media/sm_model_m15.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "基本不等式",
+        "多元最值",
+        "模型"
+      ],
+      "points": [
+        "基本不等式",
+        "多元最值",
+        "模型"
+      ]
+    },
+    {
+      "cardId": "sm_model_m16",
+      "chapterIds": [
+        "sm_model_strategy"
+      ],
+      "title": "新定义函数与抽象函数模型",
+      "detail": "占位卡片：把新定义运算、抽象函数和递推关系转成可操作的规则系统。正式互动内容待制作。",
+      "image": "assets/media/sm_model_m16.webp",
+      "fallbackImage": "assets/media/sm_model_m16.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "新定义",
+        "抽象函数",
+        "模型"
+      ],
+      "points": [
+        "新定义",
+        "抽象函数",
+        "模型"
+      ]
+    }
+  ],
+  "chapterTree": [
+    {
+      "id": "sm_model_function",
+      "label": "函数与导数压轴模型",
+      "children": []
+    },
+    {
+      "id": "sm_model_sequence",
+      "label": "数列与三角模型",
+      "children": []
+    },
+    {
+      "id": "sm_model_geometry",
+      "label": "立体几何与向量模型",
+      "children": []
+    },
+    {
+      "id": "sm_model_conic",
+      "label": "解析几何与圆锥曲线模型",
+      "children": []
+    },
+    {
+      "id": "sm_model_probability",
+      "label": "概率统计与计数模型",
+      "children": []
+    },
+    {
+      "id": "sm_model_strategy",
+      "label": "综合策略模型",
+      "children": []
+    }
+  ]
+}

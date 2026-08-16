@@ -1,0 +1,115 @@
+.inverse-k-scene,
+.inverse-k-panel {
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.inverse-k-scene *,
+.inverse-k-scene *::before,
+.inverse-k-scene *::after,
+.inverse-k-panel *,
+.inverse-k-panel *::before,
+.inverse-k-panel *::after { box-sizing: border-box; }
+
+.inverse-k-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 10px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(148, 163, 184, .09), transparent 42%),
+    #071019;
+}
+
+.inverse-k-board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, .95);
+  border-radius: 22px;
+  background: #f8fafc;
+  box-shadow: 0 18px 38px rgba(2, 6, 23, .22), inset 0 1px rgba(255,255,255,.85);
+  container-type: size;
+}
+
+#inverse-k-canvas { display: block; width: 100%; height: 100%; cursor: crosshair; touch-action: none; }
+
+.inverse-k-hud {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  left: 18px;
+  width: min(310px, calc(100% - 28px));
+  overflow: hidden;
+  border: 1px solid rgba(203, 213, 225, .9);
+  border-radius: 12px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 14px 30px rgba(15,23,42,.14), inset 0 1px 0 rgba(255,255,255,.92);
+  color: #0f172a;
+  backdrop-filter: blur(12px);
+}
+
+.inverse-k-hud-head { display: flex; width: 100%; min-height: 48px; padding: 8px 12px 8px 16px; align-items: center; justify-content: space-between; border: 0; border-bottom: 1px solid rgba(226,232,240,.9); background: rgba(248,250,252,.72); color: inherit; cursor: pointer; font: 800 15px/1.25 inherit; text-align: left; }
+.inverse-k-hud-title-wrap { display: flex; min-width: 0; align-items: center; gap: 12px; }
+.inverse-k-hud-mark { width: 18px; height: 18px; flex: 0 0 18px; border-radius: 50%; background: conic-gradient(#f59e0b 0 25%, #38bdf8 25% 50%, #22c55e 50% 75%, #6366f1 75% 100%); box-shadow: inset 0 0 0 4px rgba(255,255,255,.65); }
+.inverse-k-hud-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.inverse-k-hud-arrow { display: grid; width: 32px; height: 32px; flex: 0 0 32px; margin-left: 10px; place-items: center; border-radius: 50%; background: #fff1d6; color: #92400e; transition: transform .22s ease, background .22s ease; }
+.inverse-k-hud:not(.collapsed) .inverse-k-hud-arrow { transform: rotate(180deg); background: #ffedd5; }
+.inverse-k-hud-body { display: grid; gap: 0; padding: 0 14px 12px; color: #334155; }
+.inverse-k-hud.collapsed { width: min(280px, calc(100% - 28px)); border-radius: 999px; }
+.inverse-k-hud.collapsed .inverse-k-hud-head { border-bottom: 0; background: rgba(255,255,255,.94); }
+.inverse-k-hud.collapsed .inverse-k-hud-body { display: none; }
+.inverse-k-hud-row { padding: 10px 0; border-bottom: 1px dashed #e2e8f0; }
+.inverse-k-hud-row:last-of-type { border-bottom: 0; padding-bottom: 0; }
+.inverse-k-hud-label { display: block; margin-bottom: 4px; color: #64748b; font-size: .72rem; font-weight: 700; }
+.inverse-k-hud-text { color: #334155; font-size: .84rem; font-weight: 600; line-height: 1.52; }
+.inverse-k-hud-conclusion { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 10px; margin-top: 10px; padding: 10px 12px; border: 1px solid rgba(16,185,129,.26); border-radius: 10px; background: rgba(209,250,229,.72); color: #0f3f35; }
+.inverse-k-hud-conclusion span { font-size: .76rem; font-weight: 700; }
+.inverse-k-hud-conclusion strong { font-size: .92rem; white-space: nowrap; }
+
+.inverse-k-tip { position: absolute; z-index: 2; bottom: 18px; left: 18px; display: inline-flex; align-items: center; gap: 8px; max-width: min(360px, calc(100% - 116px)); padding: 8px 13px; transform: none; border: 1px solid rgba(148,163,184,.24); border-radius: 999px; background: rgba(15,23,42,.88); box-shadow: 0 7px 16px rgba(15,23,42,.16); color: #e2e8f0; font-size: 12px; font-weight: 700; white-space: nowrap; pointer-events: none; }
+.inverse-k-tip span { width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; box-shadow: 0 0 0 4px rgba(245,158,11,.18); }
+
+.inverse-k-canvas-tools { position: absolute; z-index: 3; right: 18px; bottom: 18px; display: grid; gap: 8px; }
+.inverse-k-canvas-tools button { display: grid; width: 46px; height: 46px; place-items: center; border: 1px solid #dbe3ed; border-radius: 50%; background: rgba(255,255,255,.96); box-shadow: 0 8px 18px rgba(15,23,42,.12); color: #475569; cursor: pointer; font: 800 25px/1 system-ui; }
+.inverse-k-canvas-tools button:last-child { font-size: 20px; }
+.inverse-k-canvas-tools button:hover { border-color: #60a5fa; color: #1d4ed8; }
+
+.inverse-k-panel { display: grid; align-content: start; gap: 10px; min-height: 100%; padding: 10px; overflow-y: auto; background: #030712; color: #e2e8f0; }
+.inverse-k-section { display: grid; gap: 11px; padding: 13px; border: 1px solid rgba(148,163,184,.2); border-radius: 9px; background: linear-gradient(145deg, rgba(15,23,42,.96), rgba(8,15,29,.96)); box-shadow: inset 0 1px rgba(255,255,255,.025); }
+.inverse-k-section h3 { display: flex; margin: 0; align-items: center; gap: 8px; color: #cbd5e1; font-size: 14px; line-height: 1.25; }
+.inverse-k-section h3 span { color: #38bdf8; }
+.inverse-k-steps { display: grid; gap: 9px; }
+.inverse-k-step { display: grid; grid-template-columns: 36px minmax(0,1fr); min-height: 62px; padding: 10px; align-items: center; gap: 10px; border: 1px solid rgba(148,163,184,.18); border-radius: 9px; background: rgba(15,23,42,.56); color: #e2e8f0; cursor: pointer; text-align: left; }
+.inverse-k-step:hover { border-color: rgba(96,165,250,.72); background: rgba(30,58,138,.22); }
+.inverse-k-step.active { border-color: rgba(234,179,8,.78); background: linear-gradient(100deg, rgba(234,179,8,.2), rgba(15,23,42,.65)); }
+.inverse-k-step-num { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 9px; background: #1e293b; color: #cbd5e1; font-size: 17px; font-weight: 900; }
+.inverse-k-step.active .inverse-k-step-num { background: #eab308; color: #172033; }
+.inverse-k-step strong { display: block; color: #f8fafc; font-size: 14px; line-height: 1.3; }
+.inverse-k-step small { display: block; margin-top: 3px; color: #94a3b8; font-size: 11.5px; line-height: 1.35; }
+.inverse-k-slider-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #cbd5e1; font-size: 13px; font-weight: 750; }
+.inverse-k-slider-row output { min-width: 56px; padding: 4px 8px; border: 1px solid rgba(56,189,248,.36); border-radius: 999px; background: rgba(8,145,178,.16); color: #a5f3fc; font-variant-numeric: tabular-nums; text-align: center; }
+.inverse-k-slider { width: 100%; height: 26px; margin: 0; accent-color: #3b82f6; cursor: pointer; }
+.inverse-k-control-hint { margin: 0; color: #94a3b8; font-size: 11.5px; line-height: 1.5; }
+.inverse-k-actions { display: grid; grid-template-columns: minmax(0,1fr) 92px; gap: 9px; }
+.inverse-k-actions button { min-height: 52px; padding: 8px 10px; border-radius: 9px; cursor: pointer; font: 800 13px/1.35 inherit; }
+.inverse-k-play { border: 1px solid rgba(234,179,8,.7); background: linear-gradient(135deg, #4c3a08, #1e293b); color: #fde68a; }
+.inverse-k-play:hover { background: linear-gradient(135deg, #6b4d09, #26344b); }
+.inverse-k-reset { border: 1px solid rgba(148,163,184,.3); background: #0f172a; color: #cbd5e1; }
+.inverse-k-reset:hover { border-color: #60a5fa; color: #fff; }
+.inverse-k-theory { border-color: rgba(56,189,248,.23); background: linear-gradient(145deg, rgba(8,47,73,.35), rgba(15,23,42,.96)); }
+.inverse-k-theory p { margin: 0; color: #cbd5e1; font-size: 12.5px; line-height: 1.65; }
+.inverse-k-theory .formula { display: block; margin-top: 8px; color: #bae6fd; font-weight: 850; }
+.inverse-k-observation { border-color: rgba(16,185,129,.24); background: linear-gradient(145deg, rgba(6,78,59,.24), rgba(15,23,42,.96)); }
+.inverse-k-observation-steps { display: grid; gap: 7px; }
+.inverse-k-observation-steps div { display: grid; grid-template-columns: 20px minmax(0,1fr); gap: 6px; color: #cbd5e1; font-size: 12px; line-height: 1.48; }
+.inverse-k-observation-steps b { color: #5eead4; }
+
+@container (max-width: 480px) { .inverse-k-hud { top: 10px; left: 10px; width: min(254px, calc(100% - 20px)); } .inverse-k-hud.collapsed { width: min(254px, calc(100% - 20px)); } .inverse-k-hud-head { min-height: 40px; padding: 5px 8px 5px 12px; font-size: 12px; } .inverse-k-hud-title-wrap { gap: 8px; } .inverse-k-hud-mark { width: 15px; height: 15px; flex-basis: 15px; } .inverse-k-hud-arrow { width: 26px; height: 26px; flex-basis: 26px; } .inverse-k-hud-arrow svg { width: 15px; height: 15px; } .inverse-k-hud-body { padding: 0 10px 9px; } .inverse-k-hud-row { padding: 7px 0; } .inverse-k-hud-label { margin-bottom: 2px; font-size: .66rem; } .inverse-k-hud-text { font-size: .75rem; line-height: 1.42; } .inverse-k-hud-conclusion { gap: 6px; margin-top: 7px; padding: 7px 8px; } .inverse-k-hud-conclusion span { font-size: .66rem; } .inverse-k-hud-conclusion strong { font-size: .78rem; } }
+@container (max-width: 330px) { .inverse-k-hud { top: 8px; left: 8px; width: min(220px, calc(100% - 16px)); } .inverse-k-hud.collapsed { width: min(220px, calc(100% - 16px)); } .inverse-k-hud-head { min-height: 36px; padding: 4px 7px 4px 10px; font-size: 11px; } .inverse-k-hud-title-wrap { gap: 7px; } .inverse-k-hud-mark { width: 14px; height: 14px; flex-basis: 14px; } .inverse-k-hud-arrow { width: 23px; height: 23px; flex-basis: 23px; } .inverse-k-hud-body { padding: 0 8px 8px; } .inverse-k-hud-row { padding: 6px 0; } .inverse-k-hud-text { font-size: .70rem; } .inverse-k-hud-conclusion { margin-top: 6px; padding: 6px 7px; } }
+@media (max-width: 900px) { .inverse-k-tip { display: none; } .inverse-k-canvas-tools { right: 12px; bottom: 12px; } .inverse-k-canvas-tools button { width: 42px; height: 42px; } }
+@media (max-width: 520px) { .inverse-k-scene { padding: 6px; } .inverse-k-board { border-radius: 13px; } .inverse-k-canvas-tools { right: 9px; bottom: 9px; gap: 6px; } .inverse-k-canvas-tools button { width: 38px; height: 38px; font-size: 21px; } .inverse-k-panel { padding: 8px; } .inverse-k-section { padding: 11px; } }

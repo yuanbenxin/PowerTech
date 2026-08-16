@@ -1,0 +1,10 @@
+{
+  "cardId": "j7a_m01",
+  "status": "ready",
+  "engine": "numberline",
+  "entry": "scene.js?v=c2c9fb75cd68",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "pan-zoom-numberline",
+  "visualLevel": "A",
+  "notes": "有理数四则运算、绝对值、相反数、数轴拖拽缩放和随机挑战。所有资源本地化，无 CDN。"
+}

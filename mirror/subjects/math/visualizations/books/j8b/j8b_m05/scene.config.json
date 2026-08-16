@@ -1,0 +1,25 @@
+{
+  "cardId": "j8b_m05",
+  "status": "ready",
+  "engine": "frequency-histogram-analysis",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-statistics-histogram-simulation",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8b_m05",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [
+      "#hud"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j8b_m05",
+    "panelClass": "math-source-panel-j8b_m05",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统既有卡片：频率分布直方图与数据分析，保留原有引擎 key。"
+}

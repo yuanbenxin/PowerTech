@@ -1,0 +1,23 @@
+{
+  "cardId": "sx1_m02",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-space-vector-plane-normal",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sx1_m02",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": true,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sx1_m02",
+    "panelClass": "math-source-panel-sx1_m02",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "空间向量与立体几何法向量；3D 平面、叉乘法向量、点面距和线面角联动。"
+}

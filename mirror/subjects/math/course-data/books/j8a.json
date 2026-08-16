@@ -1,0 +1,567 @@
+{
+  "book": {
+    "id": "j8a",
+    "label": "八年级上册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "j8a_c11",
+        "label": "第十一章 三角形",
+        "title": "第十一章 三角形",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8a_c11_1",
+        "label": "11.1 与三角形有关的线段",
+        "title": "11.1 与三角形有关的线段",
+        "sampleTopics": [
+          "三边关系",
+          "高线中线角平分线"
+        ]
+      },
+      {
+        "id": "j8a_c11_2",
+        "label": "11.2 与三角形有关的角",
+        "title": "11.2 与三角形有关的角",
+        "sampleTopics": [
+          "内角和",
+          "外角"
+        ]
+      },
+      {
+        "id": "j8a_c11_3",
+        "label": "11.3 多边形及其内角和",
+        "title": "11.3 多边形及其内角和",
+        "sampleTopics": [
+          "多边形",
+          "内角和"
+        ]
+      },
+      {
+        "id": "j8a_c12",
+        "label": "第十二章 全等三角形",
+        "title": "第十二章 全等三角形",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8a_c12_1",
+        "label": "12.1 全等三角形",
+        "title": "12.1 全等三角形",
+        "sampleTopics": [
+          "全等",
+          "对应关系"
+        ]
+      },
+      {
+        "id": "j8a_c12_2",
+        "label": "12.2 三角形全等的判定",
+        "title": "12.2 三角形全等的判定",
+        "sampleTopics": [
+          "SSS",
+          "SAS",
+          "ASA",
+          "AAS",
+          "HL"
+        ]
+      },
+      {
+        "id": "j8a_c12_3",
+        "label": "12.3 角的平分线的性质",
+        "title": "12.3 角的平分线的性质",
+        "sampleTopics": [
+          "角平分线",
+          "距离相等"
+        ]
+      },
+      {
+        "id": "j8a_c13",
+        "label": "第十三章 轴对称",
+        "title": "第十三章 轴对称",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8a_c13_1",
+        "label": "13.1 轴对称",
+        "title": "13.1 轴对称",
+        "sampleTopics": [
+          "轴对称",
+          "镜面反射"
+        ]
+      },
+      {
+        "id": "j8a_c13_2",
+        "label": "13.2 画轴对称图形",
+        "title": "13.2 画轴对称图形",
+        "sampleTopics": [
+          "折叠",
+          "作图"
+        ]
+      },
+      {
+        "id": "j8a_c13_3",
+        "label": "13.3 等腰三角形",
+        "title": "13.3 等腰三角形",
+        "sampleTopics": [
+          "等腰三角形",
+          "性质判定"
+        ]
+      },
+      {
+        "id": "j8a_c14",
+        "label": "第十四章 整式的乘法与因式分解",
+        "title": "第十四章 整式的乘法与因式分解",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8a_c14_1",
+        "label": "14.1 整式的乘法",
+        "title": "14.1 整式的乘法",
+        "sampleTopics": [
+          "整式乘法",
+          "面积模型"
+        ]
+      },
+      {
+        "id": "j8a_c14_2",
+        "label": "14.2 乘法公式",
+        "title": "14.2 乘法公式",
+        "sampleTopics": [
+          "完全平方公式",
+          "平方差公式"
+        ]
+      },
+      {
+        "id": "j8a_c14_3",
+        "label": "14.3 因式分解",
+        "title": "14.3 因式分解",
+        "sampleTopics": [
+          "提公因式",
+          "公式法"
+        ]
+      },
+      {
+        "id": "j8a_c15",
+        "label": "第十五章 分式",
+        "title": "第十五章 分式",
+        "sampleTopics": []
+      },
+      {
+        "id": "j8a_c15_1",
+        "label": "15.1 分式",
+        "title": "15.1 分式",
+        "sampleTopics": [
+          "约分",
+          "通分"
+        ]
+      },
+      {
+        "id": "j8a_c15_2",
+        "label": "15.2 分式的运算",
+        "title": "15.2 分式的运算",
+        "sampleTopics": [
+          "分式运算",
+          "通分"
+        ]
+      },
+      {
+        "id": "j8a_c15_3",
+        "label": "15.3 分式方程",
+        "title": "15.3 分式方程",
+        "sampleTopics": [
+          "分式方程",
+          "增根"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "j8a_c11",
+      "label": "第十一章 三角形",
+      "children": [
+        {
+          "id": "j8a_c11_1",
+          "label": "11.1 与三角形有关的线段",
+          "sampleTopics": [
+            "三边关系",
+            "高线中线角平分线"
+          ]
+        },
+        {
+          "id": "j8a_c11_2",
+          "label": "11.2 与三角形有关的角",
+          "sampleTopics": [
+            "内角和",
+            "外角"
+          ]
+        },
+        {
+          "id": "j8a_c11_3",
+          "label": "11.3 多边形及其内角和",
+          "sampleTopics": [
+            "多边形",
+            "内角和"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8a_c12",
+      "label": "第十二章 全等三角形",
+      "children": [
+        {
+          "id": "j8a_c12_1",
+          "label": "12.1 全等三角形",
+          "sampleTopics": [
+            "全等",
+            "对应关系"
+          ]
+        },
+        {
+          "id": "j8a_c12_2",
+          "label": "12.2 三角形全等的判定",
+          "sampleTopics": [
+            "SSS",
+            "SAS",
+            "ASA",
+            "AAS",
+            "HL"
+          ]
+        },
+        {
+          "id": "j8a_c12_3",
+          "label": "12.3 角的平分线的性质",
+          "sampleTopics": [
+            "角平分线",
+            "距离相等"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8a_c13",
+      "label": "第十三章 轴对称",
+      "children": [
+        {
+          "id": "j8a_c13_1",
+          "label": "13.1 轴对称",
+          "sampleTopics": [
+            "轴对称",
+            "镜面反射"
+          ]
+        },
+        {
+          "id": "j8a_c13_2",
+          "label": "13.2 画轴对称图形",
+          "sampleTopics": [
+            "折叠",
+            "作图"
+          ]
+        },
+        {
+          "id": "j8a_c13_3",
+          "label": "13.3 等腰三角形",
+          "sampleTopics": [
+            "等腰三角形",
+            "性质判定"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8a_c14",
+      "label": "第十四章 整式的乘法与因式分解",
+      "children": [
+        {
+          "id": "j8a_c14_1",
+          "label": "14.1 整式的乘法",
+          "sampleTopics": [
+            "整式乘法",
+            "面积模型"
+          ]
+        },
+        {
+          "id": "j8a_c14_2",
+          "label": "14.2 乘法公式",
+          "sampleTopics": [
+            "完全平方公式",
+            "平方差公式"
+          ]
+        },
+        {
+          "id": "j8a_c14_3",
+          "label": "14.3 因式分解",
+          "sampleTopics": [
+            "提公因式",
+            "公式法"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j8a_c15",
+      "label": "第十五章 分式",
+      "children": [
+        {
+          "id": "j8a_c15_1",
+          "label": "15.1 分式",
+          "sampleTopics": [
+            "约分",
+            "通分"
+          ]
+        },
+        {
+          "id": "j8a_c15_2",
+          "label": "15.2 分式的运算",
+          "sampleTopics": [
+            "分式运算",
+            "通分"
+          ]
+        },
+        {
+          "id": "j8a_c15_3",
+          "label": "15.3 分式方程",
+          "sampleTopics": [
+            "分式方程",
+            "增根"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j8a_m01",
+      "chapterIds": [
+        "j8a_c12_2"
+      ],
+      "title": "全等三角形的判定定理验证",
+      "detail": "自由组合边长与角度参数，动态模拟 SSS、SAS、ASA 等判定条件的几何刚性构建",
+      "image": "assets/media/j8a_m01.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j8a_m02",
+      "chapterIds": [
+        "j8a_c13_1"
+      ],
+      "title": "轴对称与镜面反射空间构建",
+      "detail": "在三维或二维空间中设定任意对称轴，动态生成复杂图形的完美镜面反射路径",
+      "image": "assets/media/j8a_m02.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "geom3d"
+    },
+    {
+      "cardId": "j8a_m03",
+      "chapterIds": [
+        "j8a_c14_2"
+      ],
+      "title": "完全平方公式的几何拼图",
+      "detail": "利用二维面积割补完美证明 (a+b)²",
+      "image": "assets/media/j8a_m03.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j8a_m04",
+      "chapterIds": [
+        "j8a_c12_2"
+      ],
+      "title": "HL 判定直角三角形全等",
+      "detail": "斜边直角边定理的动态几何锁定",
+      "image": "assets/media/j8a_m04.webp",
+      "isLocked": false,
+      "engine": "geom3d"
+    },
+    {
+      "cardId": "j8a_m05",
+      "chapterIds": [
+        "j8a_c11_1"
+      ],
+      "title": "三角形三边关系实验室",
+      "detail": "拖动三条线段长度滑块和端点，实时判断能否围成三角形，并观察两边之和大于第三边的动态边界。",
+      "image": "assets/media/j8a_m05.webp",
+      "fallbackImage": "assets/media/j8a_m05.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "三角形",
+        "三边关系",
+        "判定"
+      ],
+      "points": [
+        "三角形",
+        "三边关系",
+        "判定"
+      ]
+    },
+    {
+      "cardId": "j8a_m06",
+      "chapterIds": [
+        "j8a_c11_2",
+        "j8a_c11_3"
+      ],
+      "title": "三角形与多边形内角和拆分",
+      "detail": "通过可拖拽多边形顶点、三种拆分方法和爆炸分离动画，把多边形拆成三角形并动态推导内角和公式。",
+      "image": "assets/media/j8a_m06.webp",
+      "fallbackImage": "assets/media/j8a_m06.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "三角形",
+        "多边形",
+        "内角和"
+      ],
+      "points": [
+        "三角形",
+        "多边形",
+        "内角和"
+      ]
+    },
+    {
+      "cardId": "j8a_m07",
+      "chapterIds": [
+        "j8a_c13_3"
+      ],
+      "title": "等腰三角形性质与判定",
+      "detail": "拖动等腰三角形顶点并切换性质、判定任务，动态观察等边对等角、等角对等边和辅助线重合关系。",
+      "image": "assets/media/j8a_m07.webp",
+      "fallbackImage": "assets/media/j8a_m07.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "等腰三角形",
+        "性质",
+        "判定"
+      ],
+      "points": [
+        "等腰三角形",
+        "性质",
+        "判定"
+      ]
+    },
+    {
+      "cardId": "j8a_m10",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "title": "因式分解面积拼图",
+      "detail": "通过可拖拽代数瓷砖和网格磁吸拼接，把二次多项式重组成矩形，动态观察面积模型对应的因式分解结果。",
+      "image": "assets/media/j8a_m10.webp",
+      "fallbackImage": "assets/media/j8a_m10.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "因式分解",
+        "面积模型",
+        "拼图"
+      ],
+      "points": [
+        "因式分解",
+        "面积模型",
+        "拼图"
+      ]
+    },
+    {
+      "cardId": "j8a_m11",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "title": "分式约分通分可视化",
+      "detail": "通过分式比例条、因式块消除与通分扩倍动画，直观比较约分前后等值关系和通分后的同分母结构。",
+      "image": "assets/media/j8a_m11.webp",
+      "fallbackImage": "assets/media/j8a_m11.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "分式",
+        "约分",
+        "通分"
+      ],
+      "points": [
+        "分式",
+        "约分",
+        "通分"
+      ]
+    },
+    {
+      "cardId": "j8a_m12",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "title": "分式方程增根警报器",
+      "detail": "通过分式曲线、去分母直线、崩溃渐近线与可拖拽探针，同步观察候选根是否让分母为零并触发增根警报。",
+      "image": "assets/media/j8a_m12.webp",
+      "fallbackImage": "assets/media/j8a_m12.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "分式方程",
+        "增根",
+        "检验"
+      ],
+      "points": [
+        "分式方程",
+        "增根",
+        "检验"
+      ]
+    },
+    {
+      "cardId": "j8a_m14",
+      "chapterIds": [
+        "j8a_c13_2"
+      ],
+      "title": "轴对称折叠作图",
+      "detail": "通过可拖拽折痕、折叠角度滑条与三种探究模式，观察对称点、垂直平分线和角平分线在折叠作图中的生成过程。",
+      "image": "assets/media/j8a_m14.webp",
+      "fallbackImage": "assets/media/j8a_m14.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "轴对称",
+        "折叠",
+        "作图"
+      ],
+      "points": [
+        "轴对称",
+        "折叠",
+        "作图"
+      ]
+    },
+    {
+      "cardId": "j8a_m08",
+      "chapterIds": [
+        "j8a_c12_3"
+      ],
+      "title": "角平分线与垂直距离",
+      "detail": "占位卡片：从角内点向两边作垂线，验证角平分线上的点到两边距离相等。正式互动内容待制作。",
+      "image": "assets/media/j8a_m08.webp",
+      "fallbackImage": "assets/media/j8a_m08.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "角平分线",
+        "垂线距离",
+        "全等"
+      ],
+      "points": [
+        "角平分线",
+        "垂线距离",
+        "全等"
+      ]
+    }
+  ]
+}

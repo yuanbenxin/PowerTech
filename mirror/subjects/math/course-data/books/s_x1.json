@@ -1,0 +1,577 @@
+{
+  "book": {
+    "id": "s_x1",
+    "label": "选择性必修1",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "sx1_c1",
+        "label": "第一章 空间向量与立体几何",
+        "title": "第一章 空间向量与立体几何",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx1_c1_1",
+        "label": "1.1 空间直角坐标系",
+        "title": "1.1 空间直角坐标系",
+        "sampleTopics": [
+          "空间坐标",
+          "距离",
+          "坐标"
+        ]
+      },
+      {
+        "id": "sx1_c1_4",
+        "label": "1.4 空间向量的应用",
+        "title": "1.4 空间向量的应用",
+        "sampleTopics": [
+          "法向量",
+          "角",
+          "距离"
+        ]
+      },
+      {
+        "id": "sx1_c2",
+        "label": "第二章 直线和圆的方程",
+        "title": "第二章 直线和圆的方程",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx1_c2_1",
+        "label": "2.1 直线的倾斜角与斜率",
+        "title": "2.1 直线的倾斜角与斜率",
+        "sampleTopics": [
+          "斜率",
+          "倾斜角",
+          "直线方程"
+        ]
+      },
+      {
+        "id": "sx1_c2_2",
+        "label": "2.2 直线的位置关系与距离",
+        "title": "2.2 直线的位置关系与距离",
+        "sampleTopics": [
+          "平行",
+          "垂直",
+          "距离"
+        ]
+      },
+      {
+        "id": "sx1_c2_3",
+        "label": "2.3 圆的方程与切线",
+        "title": "2.3 圆的方程与切线",
+        "sampleTopics": [
+          "圆",
+          "切线",
+          "位置关系"
+        ]
+      },
+      {
+        "id": "sx1_c3",
+        "label": "第三章 圆锥曲线的方程",
+        "title": "第三章 圆锥曲线的方程",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx1_c3_1",
+        "label": "3.1 椭圆与双曲线",
+        "title": "3.1 椭圆与双曲线",
+        "sampleTopics": [
+          "椭圆",
+          "双曲线",
+          "离心率"
+        ]
+      },
+      {
+        "id": "sx1_c3_2",
+        "label": "3.2 抛物线",
+        "title": "3.2 抛物线",
+        "sampleTopics": [
+          "抛物线",
+          "焦点",
+          "准线"
+        ]
+      },
+      {
+        "id": "sx1_c3_3",
+        "label": "3.3 圆锥曲线综合",
+        "title": "3.3 圆锥曲线综合",
+        "sampleTopics": [
+          "弦长",
+          "中点弦",
+          "定点定值"
+        ]
+      },
+      {
+        "id": "sx1_c4",
+        "label": "第四章 计数原理",
+        "title": "第四章 计数原理",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx1_c4_1",
+        "label": "4.1 分类加法与分步乘法",
+        "title": "4.1 分类加法与分步乘法",
+        "sampleTopics": [
+          "分类加法",
+          "分步乘法",
+          "计数原理"
+        ]
+      },
+      {
+        "id": "sx1_c4_2",
+        "label": "4.2 排列组合与二项式",
+        "title": "4.2 排列组合与二项式",
+        "sampleTopics": [
+          "排列",
+          "组合",
+          "二项式"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "sx1_c1",
+      "label": "第一章 空间向量与立体几何",
+      "children": [
+        {
+          "id": "sx1_c1_1",
+          "label": "1.1 空间直角坐标系",
+          "sampleTopics": [
+            "空间坐标",
+            "距离",
+            "坐标"
+          ]
+        },
+        {
+          "id": "sx1_c1_4",
+          "label": "1.4 空间向量的应用",
+          "sampleTopics": [
+            "法向量",
+            "角",
+            "距离"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx1_c2",
+      "label": "第二章 直线和圆的方程",
+      "children": [
+        {
+          "id": "sx1_c2_1",
+          "label": "2.1 直线的倾斜角与斜率",
+          "sampleTopics": [
+            "斜率",
+            "倾斜角",
+            "直线方程"
+          ]
+        },
+        {
+          "id": "sx1_c2_2",
+          "label": "2.2 直线的位置关系与距离",
+          "sampleTopics": [
+            "平行",
+            "垂直",
+            "距离"
+          ]
+        },
+        {
+          "id": "sx1_c2_3",
+          "label": "2.3 圆的方程与切线",
+          "sampleTopics": [
+            "圆",
+            "切线",
+            "位置关系"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx1_c3",
+      "label": "第三章 圆锥曲线的方程",
+      "children": [
+        {
+          "id": "sx1_c3_1",
+          "label": "3.1 椭圆与双曲线",
+          "sampleTopics": [
+            "椭圆",
+            "双曲线",
+            "离心率"
+          ]
+        },
+        {
+          "id": "sx1_c3_2",
+          "label": "3.2 抛物线",
+          "sampleTopics": [
+            "抛物线",
+            "焦点",
+            "准线"
+          ]
+        },
+        {
+          "id": "sx1_c3_3",
+          "label": "3.3 圆锥曲线综合",
+          "sampleTopics": [
+            "弦长",
+            "中点弦",
+            "定点定值"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx1_c4",
+      "label": "第四章 计数原理",
+      "children": [
+        {
+          "id": "sx1_c4_1",
+          "label": "4.1 分类加法与分步乘法",
+          "sampleTopics": [
+            "分类加法",
+            "分步乘法",
+            "计数原理"
+          ]
+        },
+        {
+          "id": "sx1_c4_2",
+          "label": "4.2 排列组合与二项式",
+          "sampleTopics": [
+            "排列",
+            "组合",
+            "二项式"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "sx1_m02",
+      "chapterIds": [
+        "sx1_c1_4"
+      ],
+      "title": "空间向量与立体几何法向量",
+      "detail": "用 3D 平面和向量联动观察叉乘法向量、点面距离、线面角与投影关系。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sx1_m01",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "title": "圆锥曲线的3D截取剖面",
+      "detail": "旋转双圆锥与截平面，联动观察圆、椭圆、抛物线、双曲线的空间截取和二维方程。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sx1_m04",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "title": "椭圆与双曲线的焦点轨迹",
+      "detail": "切换椭圆和双曲线，观察两焦点距离和、距离差、离心率和渐近线如何控制轨迹形状。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sx1_m03",
+      "chapterIds": [
+        "sx1_c3_2"
+      ],
+      "title": "焦点与准线生成抛物线轨迹",
+      "detail": "拖动焦点、准线和轨迹点，实时验证抛物线上点到焦点与准线的距离相等。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sx1_m05",
+      "chapterIds": [
+        "sx1_c2_1"
+      ],
+      "title": "排列组合的树状计数图",
+      "detail": "用树状分步展开排列、组合与可重复选择，实时对比路径数和公式折叠方式。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx1_m06",
+      "chapterIds": [
+        "sx1_c2_1"
+      ],
+      "title": "杨辉三角与二项式系数",
+      "detail": "在三角阵列中实时观察递推来源、对称系数、展开式与二项分布的联动关系。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx1_m07",
+      "chapterIds": [
+        "sx1_c1_1"
+      ],
+      "title": "空间直角坐标系与点线面距离",
+      "detail": "占位卡片：在三维坐标系中拖动点、线、面，观察距离公式和投影关系。正式互动内容待制作。",
+      "image": "assets/media/sx1_m07.webp",
+      "fallbackImage": "assets/media/sx1_m07.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "空间坐标",
+        "距离",
+        "投影"
+      ],
+      "points": [
+        "空间坐标",
+        "距离",
+        "投影"
+      ]
+    },
+    {
+      "cardId": "sx1_m08",
+      "chapterIds": [
+        "sx1_c1_4"
+      ],
+      "title": "空间向量求角与距离综合",
+      "detail": "占位卡片：用法向量、方向向量联动求线线角、线面角、面面角和距离。正式互动内容待制作。",
+      "image": "assets/media/sx1_m08.webp",
+      "fallbackImage": "assets/media/sx1_m08.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "空间向量",
+        "角",
+        "距离"
+      ],
+      "points": [
+        "空间向量",
+        "角",
+        "距离"
+      ]
+    },
+    {
+      "cardId": "sx1_m09",
+      "chapterIds": [
+        "sx1_c2_1"
+      ],
+      "title": "直线斜率倾斜角与一般式",
+      "detail": "占位卡片：拖动直线观察斜率、倾斜角、点斜式、一般式之间的转换。正式互动内容待制作。",
+      "image": "assets/media/sx1_m09.webp",
+      "fallbackImage": "assets/media/sx1_m09.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "直线",
+        "斜率",
+        "方程"
+      ],
+      "points": [
+        "直线",
+        "斜率",
+        "方程"
+      ]
+    },
+    {
+      "cardId": "sx1_m10",
+      "chapterIds": [
+        "sx1_c2_2"
+      ],
+      "title": "两直线平行垂直与距离",
+      "detail": "占位卡片：动态判定两直线平行、垂直、相交，并计算点到直线距离。正式互动内容待制作。",
+      "image": "assets/media/sx1_m10.webp",
+      "fallbackImage": "assets/media/sx1_m10.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "直线",
+        "平行垂直",
+        "距离"
+      ],
+      "points": [
+        "直线",
+        "平行垂直",
+        "距离"
+      ]
+    },
+    {
+      "cardId": "sx1_m11",
+      "chapterIds": [
+        "sx1_c2_3"
+      ],
+      "title": "圆的方程与切线",
+      "detail": "占位卡片：拖动圆心、半径和切点，观察圆的标准方程与切线条件。正式互动内容待制作。",
+      "image": "assets/media/sx1_m11.webp",
+      "fallbackImage": "assets/media/sx1_m11.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "圆",
+        "方程",
+        "切线"
+      ],
+      "points": [
+        "圆",
+        "方程",
+        "切线"
+      ]
+    },
+    {
+      "cardId": "sx1_m12",
+      "chapterIds": [
+        "sx1_c2_3"
+      ],
+      "title": "直线与圆位置关系",
+      "detail": "占位卡片：移动直线观察相离、相切、相交与判别式和距离条件。正式互动内容待制作。",
+      "image": "assets/media/sx1_m12.webp",
+      "fallbackImage": "assets/media/sx1_m12.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "直线与圆",
+        "位置关系",
+        "判别"
+      ],
+      "points": [
+        "直线与圆",
+        "位置关系",
+        "判别"
+      ]
+    },
+    {
+      "cardId": "sx1_m13",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "title": "椭圆标准方程与离心率",
+      "detail": "占位卡片：调节 a、b、c 和离心率，观察椭圆形状和焦点位置。正式互动内容待制作。",
+      "image": "assets/media/sx1_m13.webp",
+      "fallbackImage": "assets/media/sx1_m13.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "椭圆",
+        "标准方程",
+        "离心率"
+      ],
+      "points": [
+        "椭圆",
+        "标准方程",
+        "离心率"
+      ]
+    },
+    {
+      "cardId": "sx1_m14",
+      "chapterIds": [
+        "sx1_c3_1"
+      ],
+      "title": "双曲线渐近线与离心率",
+      "detail": "占位卡片：联动双曲线开口、焦点、渐近线和离心率变化。正式互动内容待制作。",
+      "image": "assets/media/sx1_m14.webp",
+      "fallbackImage": "assets/media/sx1_m14.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "双曲线",
+        "渐近线",
+        "离心率"
+      ],
+      "points": [
+        "双曲线",
+        "渐近线",
+        "离心率"
+      ]
+    },
+    {
+      "cardId": "sx1_m15",
+      "chapterIds": [
+        "sx1_c3_3"
+      ],
+      "title": "圆锥曲线弦长与中点弦",
+      "detail": "占位卡片：拖动弦和中点，观察弦长公式、中点弦和斜率关系。正式互动内容待制作。",
+      "image": "assets/media/sx1_m15.webp",
+      "fallbackImage": "assets/media/sx1_m15.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "圆锥曲线",
+        "弦长",
+        "中点弦"
+      ],
+      "points": [
+        "圆锥曲线",
+        "弦长",
+        "中点弦"
+      ]
+    },
+    {
+      "cardId": "sx1_m16",
+      "chapterIds": [
+        "sx1_c3_3"
+      ],
+      "title": "解析几何定点定值与最值探针",
+      "detail": "占位卡片：用参数滑块扫描定点、定值和最值出现的结构条件。正式互动内容待制作。",
+      "image": "assets/media/sx1_m16.webp",
+      "fallbackImage": "assets/media/sx1_m16.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "解析几何",
+        "定点定值",
+        "最值"
+      ],
+      "points": [
+        "解析几何",
+        "定点定值",
+        "最值"
+      ]
+    },
+    {
+      "cardId": "sx1_m17",
+      "chapterIds": [
+        "sx1_c4_1"
+      ],
+      "title": "分类加法与分步乘法计数原理",
+      "detail": "占位卡片：用路径树和流程块区分分类相加与分步相乘。正式互动内容待制作。",
+      "image": "assets/media/sx1_m17.webp",
+      "fallbackImage": "assets/media/sx1_m17.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "计数原理",
+        "分类加法",
+        "分步乘法"
+      ],
+      "points": [
+        "计数原理",
+        "分类加法",
+        "分步乘法"
+      ]
+    }
+  ]
+}

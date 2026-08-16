@@ -1,0 +1,10 @@
+{
+  "cardId": "j8a_m03",
+  "status": "ready",
+  "engine": "square-puzzle",
+  "entry": "../../../engines/math-geometry-suite/scene.js?v=d7c4db2493e4",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "slider-puzzle-proof",
+  "visualLevel": "A",
+  "notes": "完全平方公式的几何拼图、拆分和面积恒等验证。所有资源本地化，无 CDN。"
+}

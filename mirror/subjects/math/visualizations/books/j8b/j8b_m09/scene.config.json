@@ -1,0 +1,23 @@
+{
+  "cardId": "j8b_m09",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-statistics-histogram-simulation",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8b_m09",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j8b_m09",
+    "panelClass": "math-source-panel-j8b_m09",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：数据集中趋势与波动分析。保留原课件交互结构，由 source-html-adapter 承接场景与操作面板。"
+}

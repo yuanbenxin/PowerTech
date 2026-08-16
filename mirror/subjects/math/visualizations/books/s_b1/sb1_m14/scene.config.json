@@ -1,0 +1,12 @@
+{
+  "cardId": "sb1_m14",
+  "status": "ready",
+  "engine": "embedded-source-courseware",
+  "entry": "scene.js?v=468336e6c8fd",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-monotonicity-extrema",
+  "visualLevel": "A",
+  "source": "source.html",
+  "generator": "monotonicity-extrema-courseware-v1",
+  "notes": "三种典型函数模型，支持拖动动点、拖动区间端点、画布平移、双指缩放与区间最值联动。"
+}

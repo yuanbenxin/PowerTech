@@ -1,0 +1,1613 @@
+/* ==========================================================================
+   三角形三边关系实验室 - 现代明亮白科技风格样式表 (style.css)
+   ========================================================================== */
+
+:root {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    
+    /* 核心边长配色系统 */
+    --color-side-c: #3b82f6;        /* 蓝色 */
+    --color-side-c-light: rgba(59, 130, 246, 0.08);
+    --color-side-b: #8b5cf6;        /* 紫色 */
+    --color-side-b-light: rgba(139, 92, 246, 0.08);
+    --color-side-a: #ef4444;        /* 红色 */
+    --color-side-a-light: rgba(239, 68, 68, 0.08);
+    
+    /* 系统状态色 */
+    --primary: #2563eb;
+    --success: #10b981;
+    --success-light: rgba(16, 185, 129, 0.1);
+    --danger: #ef4444;
+    --danger-light: rgba(239, 68, 68, 0.15);
+    --warning: #f59e0b;
+    --warning-light: rgba(245, 158, 11, 0.15);
+    
+    --border-color: rgba(15, 23, 42, 0.08);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
+    --font-math: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   1. 布局结构 (App Layout)
+   ========================================================================== */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 16px;
+    gap: 16px;
+}
+
+.app-header {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon {
+    color: var(--primary);
+}
+
+.logo-area h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.badge-stage {
+    font-size: 11px;
+    background: #eff6ff;
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 99px;
+    font-weight: 600;
+}
+
+.btn-icon {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.btn-icon:hover {
+    background: #f8fafc;
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+}
+
+/* 主分栏 */
+.main-layout {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    min-height: 0;
+}
+
+.simulation-column {
+    flex: 1.6;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 4px 30px rgba(15, 23, 42, 0.02);
+    min-width: 0;
+}
+
+.control-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 2px;
+}
+
+/* ==========================================================================
+   2. 几何画布与网格 (Sandbox Canvas)
+   ========================================================================== */
+.sandbox-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.sandbox-wrapper:active {
+    cursor: grabbing;
+}
+
+.sandbox-grid-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+        radial-gradient(circle, rgba(15, 23, 42, 0.08) 1.2px, transparent 1.2px);
+    background-size: 20px 20px, 80px 80px;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sandbox-svg-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.html-overlay-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.fixed-overlay-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 6;
+}
+
+/* ==========================================================================
+   3. 几何元素 SVG 类 (SVG Geometry Elements)
+   ========================================================================== */
+.geo-line-c {
+    stroke: #2563eb !important;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 2px 5px rgba(59, 130, 246, 0.3));
+}
+
+.geo-line-b {
+    stroke: #7c3aed !important;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 2px 5px rgba(139, 92, 246, 0.3));
+}
+
+.geo-line-a {
+    stroke: #dc2626 !important;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 2px 5px rgba(239, 68, 68, 0.3));
+}
+
+.geo-arc-guide {
+    fill: none;
+    stroke-width: 1.5px;
+    stroke-dasharray: 4, 4;
+}
+
+.geo-arc-b {
+    stroke: var(--color-side-b);
+    stroke-opacity: 0.25;
+}
+
+.geo-arc-a {
+    stroke: var(--color-side-a);
+    stroke-opacity: 0.25;
+}
+
+/* 教学优化：尺规轨迹圆样式 */
+.geo-circle-locus {
+    fill: none;
+    stroke-width: 1.2px;
+    stroke-dasharray: 4, 5;
+    pointer-events: none;
+}
+
+.locus-b {
+    stroke: var(--color-side-b);
+    stroke-opacity: 0.08;
+}
+
+.locus-a {
+    stroke: var(--color-side-a);
+    stroke-opacity: 0.08;
+}
+
+/* 顶点与拖拽手柄 */
+.geo-point-wrapper {
+    cursor: pointer;
+}
+
+.geo-point-halo {
+    fill: var(--primary);
+    opacity: 0;
+    transition: opacity 0.2s, r 0.2s;
+}
+
+.geo-point-wrapper:hover .geo-point-halo {
+    opacity: 0.12;
+    r: 16px;
+}
+
+.geo-point {
+    fill: #ffffff;
+    stroke: var(--text-primary);
+    stroke-width: 3.5px;
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.geo-point-wrapper:hover .geo-point {
+    transform: scale(1.22);
+    fill: #ffffff;
+    stroke: var(--primary);
+}
+
+/* 三角形填充面 */
+.geo-triangle-fill {
+    fill: rgba(59, 130, 246, 0.04);
+    transition: fill 0.3s;
+}
+
+.geo-triangle-fill.valid {
+    fill: rgba(16, 185, 129, 0.05);
+}
+
+/* ==========================================================================
+   4. HTML 气泡读数标签 (Floating Badges)
+   ========================================================================== */
+.floating-badge {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.94);
+    border: 1.5px solid var(--border-color);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    font-family: var(--font-math);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    white-space: nowrap;
+    z-index: 4;
+}
+
+.floating-badge.side-c {
+    color: var(--color-side-c);
+    border-color: rgba(59, 130, 246, 0.25);
+}
+
+.floating-badge.side-b {
+    color: var(--color-side-b);
+    border-color: rgba(139, 92, 246, 0.25);
+}
+
+.floating-badge.side-a {
+    color: var(--color-side-a);
+    border-color: rgba(239, 68, 68, 0.25);
+}
+
+.floating-badge.label-c {
+    background: #eff6ff;
+    color: var(--color-side-c);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.floating-badge.label-b {
+    background: #f5f3ff;
+    color: var(--color-side-b);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.floating-badge.label-a {
+    background: #fef2f2;
+    color: var(--color-side-a);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.floating-label-pt {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-primary);
+    font-family: var(--font-math);
+    user-select: none;
+    z-index: 4;
+}
+
+/* ==========================================================================
+   5. HUD 算式板书面板 (HUD Glassmorphic Card)
+   ========================================================================== */
+.hud-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 320px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    z-index: 10;
+    overflow: hidden;
+    transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                opacity 0.2s;
+}
+
+.hud-panel.collapsed {
+    width: 190px;
+    height: 46px;
+}
+
+.hud-header {
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    user-select: none;
+}
+
+.hud-panel:not(.collapsed) .hud-header {
+    border-bottom-color: var(--border-color);
+}
+
+.hud-title {
+    font-size: 13.5px;
+    font-weight: 700;
+}
+
+.hud-control-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hud-arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.hud-panel.collapsed .hud-arrow-icon {
+    transform: rotate(180deg);
+}
+
+.hud-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hud-row {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hud-row-label {
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.hud-row-val {
+    font-family: var(--font-math);
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+/* 表达式状态颜色 */
+.expr-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-math);
+    padding: 4px 0;
+    border-bottom: 1px dashed rgba(15,23,42,0.05);
+}
+
+.expr-formula {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.expr-badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.expr-badge.true {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.expr-badge.false {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* 结果框 */
+.hud-verdict-box {
+    margin-top: 6px;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hud-verdict-box.success {
+    background: var(--success-light);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.hud-verdict-box.danger {
+    background: var(--danger-light);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.verdict-title {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.hud-verdict-box.success .verdict-title { color: #065f46; }
+.hud-verdict-box.danger .verdict-title { color: #991b1b; }
+
+.verdict-desc {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   6. 右侧操作控制面板 (Right Control Column)
+   ========================================================================== */
+.panel-section {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.01);
+}
+
+.panel-section h3 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+/* 预设九宫格 */
+.presets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-preset {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition-smooth);
+}
+
+.btn-preset.active {
+    background: #eff6ff;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.btn-preset:hover:not(.active) {
+    background: #f8fafc;
+    border-color: var(--text-muted);
+}
+
+.preset-num {
+    font-family: var(--font-math);
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-muted);
+    width: 24px;
+}
+
+.btn-preset.active .preset-num {
+    color: var(--primary);
+}
+
+.preset-name {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+}
+
+.preset-desc {
+    font-size: 10.5px;
+    color: var(--text-secondary);
+    display: block;
+}
+
+/* 滑块样式 */
+.slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.slider-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.slider-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.slider-val {
+    font-family: var(--font-math);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+#val-side-c { color: var(--color-side-c); }
+#val-side-b { color: var(--color-side-b); }
+#val-side-a { color: var(--color-side-a); }
+
+.slider-row input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 99px;
+    background: #e2e8f0;
+    outline: none;
+}
+
+.slider-row input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--text-secondary);
+    cursor: pointer;
+    transition: transform 0.1s, background 0.1s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+#slider-side-c::-webkit-slider-thumb { background: var(--color-side-c); }
+#slider-side-b::-webkit-slider-thumb { background: var(--color-side-b); }
+#slider-side-a::-webkit-slider-thumb { background: var(--color-side-a); }
+#slider-snap-progress::-webkit-slider-thumb { background: var(--primary); }
+
+.slider-row input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* 按钮行 */
+.controls-row {
+    display: flex;
+    gap: 10px;
+}
+
+.flex-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37,99,235,0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: #ffffff;
+    border: 1.5px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+}
+
+/* 定理说明卡 */
+.theory-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px dashed var(--border-color);
+}
+
+.theory-content {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 4px;
+}
+
+.theory-content p {
+    margin-bottom: 8px;
+}
+
+.theory-content ul {
+    margin-left: 16px;
+    margin-bottom: 8px;
+}
+
+.theory-content li {
+    margin-bottom: 3px;
+}
+
+/* ==========================================================================
+   7. 帮助模态弹窗 (Help Modal Overlay)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    transform: translateY(15px);
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.help-content-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    padding-right: 6px;
+}
+
+.help-content-scroll p {
+    margin-bottom: 10px;
+}
+
+.help-content-scroll ul {
+    margin-left: 16px;
+    margin-bottom: 12px;
+}
+
+.help-content-scroll li {
+    margin-bottom: 6px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* 视口缩放与画板控制 */
+.canvas-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+.btn-zoom {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.btn-zoom:hover {
+    background: #ffffff;
+    color: var(--primary);
+    transform: scale(1.08);
+}
+
+.btn-zoom:active {
+    transform: scale(0.96);
+}
+
+/* 粒子爆炸层 */
+.particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* ==========================================================================
+   8. 响应式布局 (Responsive Media Queries)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .app-container {
+        height: auto;
+        overflow-y: auto;
+    }
+    .main-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    .simulation-column {
+        height: 50vh;
+        min-height: 380px;
+    }
+    .control-column {
+        height: auto;
+        overflow-y: visible;
+    }
+    .hud-panel {
+        width: calc(100% - 40px);
+    }
+    .hud-panel.collapsed {
+        width: 160px;
+    }
+}
+
+/* ========================================================================== 
+   System integration standard overrides - matched to 半角模型
+   ========================================================================== */
+.simulation-column,
+.sandbox-wrapper,
+.sandbox-container {
+    background-color: #f8fafc !important;
+    background-image:
+        linear-gradient(#e2e8f0 1px, transparent 1px),
+        linear-gradient(90deg, #e2e8f0 1px, transparent 1px) !important;
+    background-size: 40px 40px !important;
+    background-position: center center !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.sandbox-grid-overlay {
+    background-image:
+        linear-gradient(rgba(148, 163, 184, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.18) 1px, transparent 1px) !important;
+    background-size: 40px 40px !important;
+    background-position: center center !important;
+    opacity: 0.58 !important;
+}
+
+.sandbox-wrapper,
+.sandbox-svg-layer,
+.html-overlay-layer {
+    touch-action: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+.hud-panel {
+    top: 12px !important;
+    left: 12px !important;
+    right: auto !important;
+    width: 300px !important;
+    max-width: calc(100% - 36px) !important;
+    max-height: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1px solid rgba(148, 163, 184, 0.35) !important;
+    border-radius: 12px !important;
+    color: #0f172a !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12) !important;
+    z-index: 120 !important;
+    overflow: hidden !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hud-panel.collapsed {
+    top: 18px !important;
+    left: 18px !important;
+    width: auto !important;
+    min-width: max-content !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.13), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.hud-panel .hud-header {
+    height: 41px !important;
+    min-height: 41px !important;
+    padding: 7px 12px !important;
+    gap: 8px !important;
+    background: rgba(248, 250, 252, 0.72) !important;
+    border-bottom: 0 !important;
+}
+
+.hud-panel.collapsed .hud-header {
+    height: 42px !important;
+    min-height: 42px !important;
+    padding: 6px 8px 6px 14px !important;
+    background: transparent !important;
+    border-radius: 999px !important;
+}
+
+.hud-title {
+    color: #0f172a !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+}
+
+.hud-title::before {
+    content: "" !important;
+    width: 14px !important;
+    height: 14px !important;
+    flex: 0 0 auto !important;
+    border-radius: 999px !important;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.96) 0 30%, transparent 32%),
+        conic-gradient(from 0deg, #38bdf8, #f59e0b, #22c55e, #38bdf8) !important;
+}
+
+.hud-control-btn {
+    width: 26px !important;
+    height: 26px !important;
+    flex: 0 0 26px !important;
+    border-radius: 999px !important;
+    background: rgba(245, 158, 11, 0.16) !important;
+    border: 0 !important;
+    color: #92400e !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+
+.hud-arrow-icon {
+    width: 18px !important;
+    height: 18px !important;
+    background: transparent !important;
+    border: 0 !important;
+    color: #92400e !important;
+}
+
+.hud-panel.collapsed .hud-body {
+    display: none !important;
+}
+
+.hud-body {
+    display: grid !important;
+    gap: 8px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 12px 12px !important;
+    border-top: 1px solid #e2e8f0 !important;
+    color: #334155 !important;
+}
+
+.hud-row {
+    display: block !important;
+    gap: 0 !important;
+    padding: 0 0 5px !important;
+}
+
+.hud-row-label {
+    color: #334155 !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    margin-bottom: 3px !important;
+}
+
+.hud-row-val,
+.expr-formula,
+.verdict-desc {
+    color: #0f172a !important;
+}
+
+.expr-row {
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 3px 0 !important;
+}
+
+.expr-formula {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+}
+
+.hud-verdict-box {
+    border-radius: 10px !important;
+    padding: 7px 9px !important;
+}
+
+.teaching-panel {
+    display: grid !important;
+    gap: 2px !important;
+    padding: 8px 9px !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(148, 163, 184, 0.26) !important;
+    background: rgba(248, 250, 252, 0.92) !important;
+}
+
+.teaching-panel.success {
+    border-color: rgba(16, 185, 129, 0.28) !important;
+    background: rgba(236, 253, 245, 0.92) !important;
+}
+
+.teaching-panel.warning {
+    border-color: rgba(245, 158, 11, 0.32) !important;
+    background: rgba(255, 251, 235, 0.94) !important;
+}
+
+.teaching-panel.danger {
+    border-color: rgba(239, 68, 68, 0.28) !important;
+    background: rgba(254, 242, 242, 0.94) !important;
+}
+
+.teaching-panel-kicker {
+    color: #64748b !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0 !important;
+}
+
+.teaching-panel-title {
+    color: #0f172a !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+}
+
+.teaching-panel-desc {
+    color: #334155 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+}
+
+.compact-values .hud-row-val {
+    font-size: 11.5px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+}
+
+.inequality-meter {
+    display: grid !important;
+    gap: 4px !important;
+    padding: 6px 7px !important;
+    border-radius: 9px !important;
+    background: rgba(241, 245, 249, 0.86) !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+}
+
+.inequality-meter + .inequality-meter {
+    margin-top: 5px !important;
+}
+
+.meter-head {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    color: #334155 !important;
+    font-size: 10.5px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+}
+
+.meter-head strong {
+    flex: 0 0 auto !important;
+    color: #0f172a !important;
+    font-family: var(--font-math) !important;
+    font-size: 11px !important;
+}
+
+.meter-bars {
+    display: grid !important;
+    gap: 3px !important;
+}
+
+.meter-bar {
+    display: block !important;
+    height: 5px !important;
+    min-width: 8px !important;
+    border-radius: 999px !important;
+}
+
+.meter-bar.sum {
+    background: #22c55e !important;
+}
+
+.meter-bar.third {
+    background: #94a3b8 !important;
+}
+
+.inequality-meter.false .meter-bar.sum,
+.inequality-meter.equal .meter-bar.sum {
+    background: #ef4444 !important;
+}
+
+.inequality-meter.equal .meter-bar.sum {
+    background: #f59e0b !important;
+}
+
+.hud-verdict-box.warning {
+    background: rgba(255, 251, 235, 0.96) !important;
+    border: 1px solid rgba(245, 158, 11, 0.28) !important;
+}
+
+.hud-verdict-box.warning .verdict-title {
+    color: #92400e !important;
+}
+
+.math-source-panel,
+.math-source-panel-content,
+.math-source-panel-content .control-column,
+.math-source-panel-content .sidebar-panel {
+    background: transparent !important;
+    color: #f8fafc !important;
+}
+
+.math-source-panel-scroll {
+    padding: 10px !important;
+    overflow-x: hidden !important;
+}
+
+.math-source-panel-content,
+.math-source-panel-content .control-column,
+.math-source-panel-content .sidebar-panel {
+    gap: 8px !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+}
+
+.math-source-panel-content .panel-section {
+    width: 280px !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+    background: rgba(15, 23, 42, 0.64) !important;
+    border: 1px solid rgba(148, 163, 184, 0.16) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.math-source-panel-content .panel-section h3 {
+    color: rgba(226, 232, 240, 0.74) !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 8px !important;
+}
+
+.math-source-panel-content .theory-card {
+    display: none !important;
+}
+
+.math-source-panel-content .presets-grid {
+    gap: 10px !important;
+}
+
+.math-source-panel-content .btn-preset {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 28px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 10px !important;
+    row-gap: 2px !important;
+    min-height: 59px !important;
+    width: 100% !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+    background: rgba(2, 6, 23, 0.36) !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    color: rgba(226, 232, 240, 0.82) !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+.math-source-panel-content .btn-preset.active {
+    background: rgba(250, 204, 21, 0.12) !important;
+    border-color: rgba(250, 204, 21, 0.42) !important;
+    color: #fef3c7 !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-content .btn-preset.active::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 auto 0 0 !important;
+    width: 4px !important;
+    border-radius: 8px 0 0 8px !important;
+    background: #3b82f6 !important;
+}
+
+.math-source-panel-content .preset-num {
+    grid-row: 1 / span 2 !important;
+    width: 26px !important;
+    height: 26px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    background: rgba(148, 163, 184, 0.18) !important;
+    color: rgba(226, 232, 240, 0.78) !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+}
+
+.math-source-panel-content .btn-preset.active .preset-num {
+    background: rgba(250, 204, 21, 0.88) !important;
+    color: #111827 !important;
+}
+
+.math-source-panel-content .preset-name {
+    color: #f8fafc !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    min-width: 0 !important;
+}
+
+.math-source-panel-content .preset-desc,
+.math-source-panel-content .slider-label {
+    color: rgba(203, 213, 225, 0.78) !important;
+    line-height: 1.35 !important;
+}
+
+.math-source-panel-content .preset-desc {
+    font-size: 10.5px !important;
+    min-width: 0 !important;
+}
+
+.math-source-panel-content .slider-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-content .slider-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-content .slider-label-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    width: 100% !important;
+}
+
+.math-source-panel-content .slider-label {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    font-size: 12px !important;
+}
+
+.math-source-panel-content .slider-val {
+    flex: 0 0 auto !important;
+    color: #f8fafc !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+}
+
+.math-source-panel-content input[type="range"] {
+    display: block !important;
+    width: 100% !important;
+    height: 6px !important;
+    min-height: 6px !important;
+    max-height: 6px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 99px !important;
+    background: #e2e8f0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.math-source-panel-content input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px !important;
+    border-radius: 99px !important;
+    background: #e2e8f0 !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-content input[type="range"]::-webkit-slider-thumb {
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: -6px !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    background: #3b82f6 !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.38) !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.math-source-panel-content input[type="range"]::-moz-range-track {
+    height: 6px !important;
+    border: 0 !important;
+    border-radius: 99px !important;
+    background: #e2e8f0 !important;
+}
+
+.math-source-panel-content input[type="range"]::-moz-range-thumb {
+    width: 18px !important;
+    height: 18px !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    background: #3b82f6 !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.38) !important;
+}
+
+.math-source-panel-content .controls-row {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    gap: 8px !important;
+}
+
+.math-source-panel-content .flex-btn {
+    min-height: 39px !important;
+    border-radius: 8px !important;
+    padding: 9px 12px !important;
+    font-size: 12px !important;
+}
+
+.math-source-panel-content .btn-primary {
+    background: rgba(250, 204, 21, 0.12) !important;
+    border: 1px solid rgba(250, 204, 21, 0.42) !important;
+    color: #fef3c7 !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-content .btn-secondary {
+    background: rgba(15, 23, 42, 0.42) !important;
+    border: 1px solid rgba(148, 163, 184, 0.16) !important;
+    color: #e2e8f0 !important;
+}
+
+@media (max-width: 640px) {
+    .hud-panel {
+        display: none !important;
+    }
+}
+
+.app-header {
+    display: none !important;
+}
+
+.app-container {
+    padding: 0 !important;
+    gap: 0 !important;
+    height: 100% !important;
+}
+
+.main-layout {
+    height: 100% !important;
+    gap: 16px !important;
+}
+
+.geo-line-c,
+.geo-line-b,
+.geo-line-a {
+    stroke-width: 10px !important;
+    stroke-opacity: 1 !important;
+    filter: drop-shadow(0 3px 8px rgba(15, 23, 42, 0.22)) !important;
+}
+
+.geo-line-c {
+    stroke: #2563eb !important;
+}
+
+.geo-line-b {
+    stroke: #7c3aed !important;
+}
+
+.geo-line-a {
+    stroke: #dc2626 !important;
+}
+
+.geo-arc-guide,
+.geo-circle-locus {
+    stroke-width: 2px !important;
+    stroke-opacity: 0.32 !important;
+}
+
+.gap-line {
+    stroke: #ef4444 !important;
+    stroke-width: 3px !important;
+    stroke-linecap: round !important;
+    stroke-dasharray: 5 4 !important;
+    opacity: 0.9 !important;
+}
+
+.degenerate-line {
+    stroke: #f59e0b !important;
+    stroke-width: 16px !important;
+    stroke-linecap: round !important;
+    opacity: 0.18 !important;
+}
+
+.unreachable-zone {
+    fill: rgba(239, 68, 68, 0.12) !important;
+    stroke: rgba(239, 68, 68, 0.42) !important;
+    stroke-width: 1.5px !important;
+    stroke-dasharray: 4 4 !important;
+    pointer-events: none !important;
+}
+
+.geo-triangle-fill,
+.geo-triangle-fill.valid {
+    fill: rgba(14, 165, 233, 0.09) !important;
+}
+
+.geo-point {
+    r: 7.5px !important;
+    fill: #ffffff !important;
+    stroke: #0f172a !important;
+    stroke-width: 3.5px !important;
+}
+
+.geo-point-halo {
+    opacity: 0.14 !important;
+    r: 18px !important;
+}
+
+.geo-label {
+    fill: #0f172a !important;
+    stroke: rgba(255, 255, 255, 0.94) !important;
+    stroke-width: 4px !important;
+    paint-order: stroke !important;
+    font-size: 14px !important;
+    font-weight: 900 !important;
+}
+
+.floating-badge {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1px solid rgba(148, 163, 184, 0.36) !important;
+    color: #0f172a !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12) !important;
+    opacity: 1 !important;
+}
+
+.floating-badge.side-c {
+    color: #1d4ed8 !important;
+    border-color: rgba(59, 130, 246, 0.42) !important;
+}
+
+.floating-badge.side-b {
+    color: #6d28d9 !important;
+    border-color: rgba(139, 92, 246, 0.42) !important;
+}
+
+.floating-badge.side-a {
+    color: #b91c1c !important;
+    border-color: rgba(239, 68, 68, 0.42) !important;
+}
+
+.floating-label-pt {
+    color: #0f172a !important;
+    text-shadow:
+        0 1px 0 #ffffff,
+        1px 0 0 #ffffff,
+        -1px 0 0 #ffffff,
+        0 -1px 0 #ffffff !important;
+}
+
+.floating-label-pt sub {
+    font-size: 0.72em !important;
+    line-height: 0 !important;
+    vertical-align: -0.28em !important;
+    font-weight: 900 !important;
+}
+
+.state-ribbon {
+    position: absolute !important;
+    top: 12px !important;
+    right: 14px !important;
+    left: auto !important;
+    transform: none !important;
+    display: grid !important;
+    gap: 2px !important;
+    width: 210px !important;
+    padding: 9px 11px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid rgba(148, 163, 184, 0.34) !important;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12) !important;
+    color: #0f172a !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+}
+
+.state-ribbon.success {
+    border-color: rgba(16, 185, 129, 0.32) !important;
+    background: rgba(240, 253, 244, 0.94) !important;
+}
+
+.state-ribbon.warning {
+    border-color: rgba(245, 158, 11, 0.36) !important;
+    background: rgba(255, 251, 235, 0.95) !important;
+}
+
+.state-ribbon.danger {
+    border-color: rgba(239, 68, 68, 0.34) !important;
+    background: rgba(254, 242, 242, 0.95) !important;
+}
+
+.state-ribbon-kicker,
+.state-ribbon span {
+    color: #64748b !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+.state-ribbon strong {
+    color: #0f172a !important;
+    font-size: 14px !important;
+    font-weight: 900 !important;
+    line-height: 1.15 !important;
+}
+
+@media (max-width: 900px) {
+    .state-ribbon {
+        display: none !important;
+    }
+}

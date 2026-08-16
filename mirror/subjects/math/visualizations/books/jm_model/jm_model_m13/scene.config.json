@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m13",
+  "status": "ready",
+  "engine": "power-of-circle-model",
+  "entry": "scene.js?v=133dc41c2b0c",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-power-of-circle",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=60bc038e823b",
+  "script": "app.js?v=0f37fbe42621",
+  "notes": "圆幂模型正式互动课件：支持相交弦、割线、切割线三种结构，拖拽 P 与弦/割线端点观察线段乘积恒定，并支持画布缩放平移与防长按菜单。"
+}

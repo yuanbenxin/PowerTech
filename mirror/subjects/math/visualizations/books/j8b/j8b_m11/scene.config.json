@@ -1,0 +1,12 @@
+{
+  "cardId": "j8b_m11",
+  "status": "planned",
+  "engine": "placeholder-source",
+  "entry": "scene.js?v=995b5041865d",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-safe-placeholder",
+  "visualLevel": "P",
+  "source": "source.html",
+  "generator": "junior-placeholder-card-v1",
+  "notes": "占位卡片：卡片入口已补全，正式互动内容待制作。"
+}

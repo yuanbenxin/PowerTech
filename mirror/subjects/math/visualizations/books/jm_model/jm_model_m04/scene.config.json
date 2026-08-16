@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m04",
+  "status": "ready",
+  "engine": "half-angle-model",
+  "entry": "scene.js?v=2bf76fd99006",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-half-angle",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=3e89d997541a",
+  "script": "app.js?v=d5a37a621c27",
+  "notes": "半角模型正式互动课件：支持正方形 45° 半角构造、拖拽 E 点、旋转全等动画、EF=BE+DF、△CEF 周长恒定、AH=AB 高线性质、缩放平移、HUD 板书与触屏防长按菜单。"
+}

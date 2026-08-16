@@ -1,0 +1,756 @@
+/* ==========================================================================
+   一元一次方程解法流程实验室 CSS 样式表 (style.css)
+   ========================================================================== */
+
+:root {
+    /* 高端色彩系统 */
+    --color-bg-app: #f8fafc;
+    --color-bg-card: #ffffff;
+    --color-border: #e2e8f0;
+    --color-text-main: #0f172a;
+    --color-text-muted: #64748b;
+
+    /* 品牌状态指示色 */
+    --color-blue: #2563eb;
+    --color-purple: #8b5cf6;
+    --color-green: #10b981;
+    --color-orange: #f59e0b;
+    --color-red: #ef4444;
+
+    /* 字体族 */
+    --font-display: 'Outfit', 'Inter', 'Noto Sans SC', sans-serif;
+    --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
+
+    /* 物理投影与圆角 */
+    --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 8px -1px rgba(15, 23, 42, 0.03);
+    --shadow-medium: 0 12px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+    --radius-lg: 16px;
+    --radius-md: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-app);
+    color: var(--color-text-main);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* App 框架结构 */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* 头部导航栏 */
+.app-header {
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 60px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    z-index: 100;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 20px;
+    color: var(--color-blue);
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: -0.3px;
+}
+
+.badge {
+    background-color: #eff6ff;
+    color: var(--color-blue);
+    font-size: 10.5px;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-weight: 700;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.header-nav {
+    display: flex;
+    gap: 8px;
+    height: 100%;
+    align-items: center;
+}
+
+.tab-btn {
+    border: none;
+    background: none;
+    padding: 8px 16px;
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-btn:hover {
+    color: var(--color-text-main);
+    background-color: #f1f5f9;
+}
+
+.tab-btn.active {
+    color: var(--color-blue);
+    background-color: #eff6ff;
+    border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+/* 主体分栏 */
+.app-main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    padding: 16px;
+    gap: 16px;
+    background-color: #f8fafc;
+    height: calc(100vh - 60px);
+}
+
+/* 左侧白板卡片 */
+.whiteboard-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.whiteboard-card {
+    flex: 1;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-soft);
+    min-height: 0;
+    position: relative;
+}
+
+.whiteboard-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 12px;
+}
+
+.canvas-wrapper {
+    flex: 1;
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(#e7edf4 1px, transparent 1px),
+        linear-gradient(90deg, #e7edf4 1px, transparent 1px);
+    background-size: 40px 40px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SVG 只承载模型本体，背景交给平台画布。 */
+#geometry-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    user-select: none;
+    background: transparent;
+}
+
+.geo-grid-line {
+    display: none;
+}
+
+.geo-grid-dot {
+    display: none;
+}
+
+/* 右侧控制面板 */
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 280px;
+    overflow-y: auto;
+}
+
+.control-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.control-card h2 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--color-text-main);
+}
+
+.ctrl-group {
+    display: none;
+}
+
+.ctrl-group.active {
+    display: block;
+}
+
+/* 控制按钮与选择器 */
+.selector-btn {
+    border: 1px solid var(--color-border);
+    background-color: #fafbfc;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: center;
+}
+
+.selector-btn:hover {
+    color: var(--color-text-main);
+    background-color: #f1f5f9;
+}
+
+.selector-btn.active {
+    background-color: var(--color-blue);
+    color: #ffffff;
+    border-color: var(--color-blue);
+}
+
+/* 操作功能按钮 */
+.btn-action {
+    flex: 1;
+    border: 1px solid var(--color-border);
+    background-color: #ffffff;
+    padding: 9px 0;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+}
+
+.btn-action:hover {
+    background-color: #f1f5f9;
+}
+
+.btn-action[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-action.primary {
+    background-color: var(--color-blue);
+    color: #ffffff;
+    border-color: var(--color-blue);
+}
+
+.btn-action.primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* 可折叠悬浮 HUD 面板：对齐半角模型的画布内嵌白板规范。 */
+.hud-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 360px;
+    max-height: min(230px, calc(100% - 40px));
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+    z-index: 5;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                width 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.hud-panel.collapsed {
+    max-height: 46px;
+    width: 200px;
+}
+
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 46px;
+    padding: 9px 12px 9px 18px;
+    background: rgba(248, 250, 252, 0.5);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    cursor: pointer;
+    user-select: none;
+}
+
+.hud-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hud-control-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hud-panel.collapsed .hud-arrow-icon {
+    transform: rotate(-180deg);
+}
+
+.hud-panel.collapsed .hud-header {
+    border-bottom-color: transparent;
+}
+
+/* 画布内的当前任务提示：让学生知道此刻应观察或完成什么。 */
+.learning-cue {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 6;
+    width: min(270px, calc(100% - 244px));
+    padding: 10px 12px;
+    border: 1px solid rgba(37, 99, 235, 0.22);
+    border-left: 4px solid var(--color-blue);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.10);
+    color: var(--color-text-main);
+    pointer-events: none;
+}
+
+.learning-cue[data-tone="success"] { border-left-color: var(--color-green); }
+.learning-cue[data-tone="warning"] { border-left-color: var(--color-orange); }
+.learning-cue[data-tone="error"] { border-left-color: var(--color-red); }
+
+.learning-cue-kicker {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--color-text-muted);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.learning-cue-text {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.42;
+}
+
+.hud-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 12px;
+    font-size: 11.5px;
+    line-height: 1.5;
+}
+
+/* HUD 步骤说明卡 */
+.hud-step-card {
+    background-color: #fafbfc;
+    border-left: 3px solid var(--color-blue);
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.hud-step-card.success {
+    border-left-color: var(--color-green);
+    background-color: #f0fdf4;
+}
+
+.hud-step-card.error {
+    border-left-color: var(--color-red);
+    background-color: #fef2f2;
+}
+
+.hud-step-card.warning {
+    border-left-color: var(--color-orange);
+    background-color: #fffbeb;
+}
+
+.hud-math-block {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--color-blue);
+    margin: 4px 0;
+    padding: 2px 6px;
+    background-color: #eff6ff;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* 数据监控箱 */
+.monitor-box {
+    background-color: #fafbfc;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px;
+}
+
+.monitor-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.monitor-row {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+.monitor-divider {
+    height: 1px;
+    background-color: var(--color-border);
+    margin: 8px 0;
+}
+
+/* ==========================================================================
+   SVG 图层样式设计
+   ========================================================================== */
+
+/* 天平使用深色金属，在白色模拟框内保持清晰对比。 */
+.balance-beam {
+    stroke: #1e3a5f;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.2));
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.balance-stand {
+    fill: #0f172a;
+    filter: drop-shadow(0 3px 6px rgba(15, 23, 42, 0.25));
+}
+
+.balance-pan-hangers {
+    stroke: #334155;
+    stroke-width: 2.5px;
+    fill: none;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.balance-pan {
+    fill: #1e3a5f;
+    stroke: #0f172a;
+    stroke-width: 1.5px;
+    filter: drop-shadow(0 4px 8px rgba(15, 23, 42, 0.15));
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 拖拽块/天平物体 - 3D立体高光圆润化 */
+.eq-block {
+    cursor: grab;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s;
+}
+
+.eq-block:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+.eq-block-rect {
+    stroke-width: 1.5px;
+    rx: 8px;
+    ry: 8px;
+}
+
+/* 玻璃反光层样式 */
+.glass-gloss-overlay {
+    fill: url(#glassGloss);
+    pointer-events: none;
+}
+
+.eq-block-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 800;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+/* X 物块 - 蔚蓝色 3D立方体 */
+.block-x .eq-block-rect {
+    fill: url(#cyanGrad);
+    stroke: #1d4ed8;
+    filter: url(#softShadow);
+}
+.block-x .eq-block-label {
+    fill: #ffffff;
+    text-shadow: 0 1px 2px rgba(15, 23, 42, 0.4);
+}
+
+/* 常数项物块 - 金色 3D立体币 */
+.block-constant .eq-block-rect {
+    fill: url(#goldGrad);
+    stroke: #b45309;
+    filter: url(#softShadow);
+}
+.block-constant .eq-block-label {
+    fill: #ffffff;
+    text-shadow: 0 1px 2px rgba(15, 23, 42, 0.4);
+}
+
+/* ==========================================================================
+   数码天平与扫描闸元素样式
+   ========================================================================== */
+
+/* 电池舱砝码微光呼吸动效 */
+.block-battery-blue rect, .block-battery-purple rect {
+    animation: batteryGlow 3s ease-in-out infinite;
+}
+
+@keyframes batteryGlow {
+    0%, 100% { filter: drop-shadow(0 1px 3px rgba(15, 23, 42, 0.15)); }
+    50% { filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.35)); }
+}
+
+/* 立方体砝码金属材质过渡 */
+.block-weight-gold polygon, .block-weight-rust polygon {
+    transition: fill 0.3s;
+}
+
+/* 移项激光扫描闸等号动效 */
+.transposition-gate circle {
+    animation: gatePulse 2s ease-in-out infinite;
+}
+
+@keyframes gatePulse {
+    0%, 100% { stroke-opacity: 0.5; stroke-width: 1px; }
+    50% { stroke-opacity: 1; stroke-width: 1.5px; }
+}
+
+.transposition-gate line {
+    animation: scanline 2s ease-in-out infinite alternate;
+}
+
+@keyframes scanline {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* 数学缺陷诊断仪/扫描仪跟手样式 */
+.magnifying-glass-rim {
+    fill: none;
+    stroke: #0ea5e9; /* 科技深天蓝 */
+    stroke-width: 3px;
+    filter: drop-shadow(0 0 6px rgba(14, 165, 233, 0.5));
+}
+
+.magnifying-glass-handle {
+    stroke: #475569; /* 深金属灰手柄 */
+    stroke-width: 6px;
+    stroke-linecap: round;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.magnifying-glass-lens {
+    fill: rgba(14, 165, 233, 0.03);
+    stroke: rgba(14, 165, 233, 0.2);
+    stroke-width: 1px;
+}
+
+/* 红色粉笔批改圈动效 */
+.red-pen-circle {
+    fill: none;
+    stroke: var(--color-red);
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawCircle 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.4));
+}
+
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ==========================================================================
+   五步解方程：全息卡片/指示箭头样式
+   ========================================================================== */
+
+.eq-text-element {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 21px;
+    fill: #0f172a;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 方程项的外包圆角背景舱 */
+.eq-capsule-bg {
+    fill: #ffffff;
+    stroke: #e2e8f0;
+    stroke-width: 1.5px;
+    rx: 8px;
+    ry: 8px;
+    filter: drop-shadow(0 2px 5px rgba(15, 23, 42, 0.04));
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.eq-capsule-bg.highlighted {
+    stroke: var(--color-blue);
+    fill: #eff6ff;
+}
+
+.eq-capsule-bg.warning-glow {
+    stroke: var(--color-red);
+    fill: #fef2f2;
+}
+
+.eq-text-element.highlighted {
+    fill: var(--color-blue);
+}
+
+.eq-text-element.warning-glow {
+    fill: var(--color-red);
+}
+
+.eq-fraction-line {
+    stroke: #475569;
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 去括号分配律指向弧线 */
+.distribution-arc {
+    fill: none;
+    stroke: var(--color-orange);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-dasharray: 4, 3;
+    animation: dashOffset 1.5s linear infinite;
+}
+
+@keyframes dashOffset {
+    to {
+        stroke-dashoffset: -14;
+    }
+}
+
+/* 动感扫光/发光 */
+.glow-rect {
+    fill: none;
+    stroke: var(--color-green);
+    stroke-width: 2px;
+    stroke-dasharray: 5, 4;
+    animation: dash 1s linear infinite;
+    rx: 6px;
+    ry: 6px;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -9;
+    }
+}
+
+/* 纠错模式手写卡片 */
+.error-step-group {
+    cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.error-step-group:hover {
+    transform: translateX(8px);
+}
+
+.error-card-bg {
+    fill: #ffffff;
+    stroke: #e2e8f0;
+    stroke-width: 1.5px;
+    rx: 10px;
+    ry: 10px;
+    filter: drop-shadow(0 4px 10px rgba(15, 23, 42, 0.03));
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.error-step-group:hover .error-card-bg {
+    fill: #f8fafc;
+    stroke: var(--color-blue);
+    filter: drop-shadow(0 6px 15px rgba(37, 99, 235, 0.1));
+}
+
+.error-step-group.selected-wrong .error-card-bg {
+    fill: #fef2f2;
+    stroke: var(--color-red);
+    filter: drop-shadow(0 6px 15px rgba(239, 68, 68, 0.15));
+}
+
+.error-step-group.selected-correct .error-card-bg {
+    fill: #f0fdf4;
+    stroke: var(--color-green);
+    filter: drop-shadow(0 6px 15px rgba(16, 185, 129, 0.15));
+}
+
+.error-badge-icon {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 14px;
+}

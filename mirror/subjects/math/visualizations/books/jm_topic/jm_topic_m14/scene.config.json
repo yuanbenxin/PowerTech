@@ -1,0 +1,14 @@
+{
+  "cardId": "jm_topic_m14",
+  "status": "ready",
+  "engine": "area-method-topic-model",
+  "entry": "scene.js?v=26348a0def24",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-area-method",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=8ae467770996",
+  "script": "app.js?v=a6984d5d5c93",
+  "generator": "math-topic-source-bridge-v1",
+  "notes": "已接入面积法专题：左侧 SVG 几何沙盒与可收起解题 HUD，右侧平台操作面板承载专题、读数、推导和启发式探究。"
+}

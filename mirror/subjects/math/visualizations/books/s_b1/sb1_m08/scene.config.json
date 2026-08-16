@@ -1,0 +1,30 @@
+{
+  "cardId": "sb1_m08",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-numberline-interval-boolean",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m08",
+    "panelSelector": ".sidebar",
+    "auxiliaryPanelSelectors": [
+      ".status-panel",
+      ".drag-hint"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m08",
+    "panelClass": "math-source-panel-sb1_m08",
+    "inlineFunctionNames": [
+      "toggleEndpoint",
+      "setOperation",
+      "quickLayout"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "数轴区间布尔运算推演源码已迁入平台目录；端点拖动、区间开闭、交并补差和快速布局保留。"
+}

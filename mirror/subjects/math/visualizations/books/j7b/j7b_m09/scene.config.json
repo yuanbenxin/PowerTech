@@ -1,0 +1,14 @@
+{
+  "cardId": "j7b_m09",
+  "status": "ready",
+  "engine": "linear-system-elimination-model",
+  "entry": "scene.js?v=0e13bd130832",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-linear-system-elimination",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=4513cf0a63dc",
+  "script": "app.js?v=a2768843b90c",
+  "generator": "math-source-bridge-v1",
+  "notes": "已接入消元法解二元一次方程组：左侧 SVG 代数沙盒、步骤时间线与可收起板书 HUD，右侧平台操作面板承载预设、参数、例题与原理解析。"
+}

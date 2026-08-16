@@ -1,0 +1,813 @@
+/* ==========================================================================
+   空间想象与三视图实验室 - 样式表 (style.css)
+   设计风格：亮色几何白板主题、玻璃态积木投影、极简教学操作面板
+   ========================================================================== */
+
+:root {
+    --bg-primary: #f1f5f9;       /* 护眼底色 */
+    --bg-sandbox: #ffffff;      /* 模拟框白色背景 */
+    --bg-control: #f8fafc;      /* 操作面板浅灰底色 */
+    
+    --border-color: #e2e8f0;    /* 边界分割线 */
+    --border-color-hover: #cbd5e1;
+    
+    --text-primary: #0f172a;    /* 核心文字 */
+    --text-secondary: #334155;  /* 次要文本 */
+    --text-muted: #64748b;      /* 弱化标注 */
+    
+    /* 颜色象征 */
+    --color-accent: #2563eb;     /* 活力深蓝：主要高亮 */
+    --color-accent-light: rgba(37, 99, 235, 0.08);
+    
+    /* 三视图配色 */
+    --color-front: #3b82f6;      /* 主视图：宝蓝色 */
+    --color-left: #10b981;       /* 左视图：翡翠绿 */
+    --color-top: #f59e0b;        /* 俯视图：琥珀橙 */
+    --color-success: #10b981;    /* 任务达成绿 */
+
+    --font-math: 'Fredoka', 'Outfit', 'Noto Sans SC', serif;
+    --font-sans: 'Outfit', 'Noto Sans SC', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 14px;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   1. 头部 Header
+   ========================================================================== */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+    flex-shrink: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 20px;
+}
+
+.header-left h1 {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+}
+
+.badge {
+    background: rgba(37, 99, 235, 0.06);
+    color: var(--color-accent);
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 2.5px 8px;
+    border-radius: 6px;
+    border: 1.2px solid rgba(37, 99, 235, 0.2);
+}
+
+.step-guide-indicator {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: #f1f5f9;
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   2. 主体布局 (左侧模拟框，右侧操作面板)
+   ========================================================================== */
+.app-main {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+    min-height: 0;
+}
+
+/* 左侧：模拟框 (Simulation Box - 白色背景) */
+.sandbox-column {
+    flex: 1.35;
+    background-color: var(--bg-sandbox);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 16px;
+    min-height: 0;
+}
+
+/* 右侧：操作面板 (Control Panel - 浅灰背景) */
+.control-column {
+    width: 390px;
+    background-color: var(--bg-control);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.panel-section {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 12px 14px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.02);
+    position: relative;
+}
+
+/* 顶部微发光金属倒角，打造现代晶莹玻璃面板感 */
+.panel-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 16px; right: 16px;
+    height: 1.2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.section-title span {
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   3. 左上角可收起的教学解析 HUD
+   ========================================================================== */
+.analysis-hud {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    width: 290px;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.analysis-hud.collapsed {
+    width: 175px;
+    max-height: 38px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.btn-hud-toggle {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 9px 12px;
+    text-align: left;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+.btn-hud-toggle:hover {
+    background: rgba(15, 23, 42, 0.02);
+}
+
+.hud-arrow {
+    font-size: 8px;
+    transition: transform 0.3s;
+}
+
+.analysis-hud.collapsed .hud-arrow {
+    transform: rotate(-90deg);
+}
+
+.hud-content {
+    padding: 12px 14px;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.hud-content h3 {
+    font-size: 11.5px;
+    color: var(--color-accent);
+    margin-top: 6px;
+    margin-bottom: 2px;
+    border-left: 2.5px solid var(--color-accent);
+    padding-left: 6px;
+}
+
+.hud-content p {
+    font-size: 10.5px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+.hud-content ul {
+    margin-left: 12px;
+    font-size: 10px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.hud-content li {
+    color: var(--text-secondary);
+}
+
+.hud-content strong,
+.hud-content b {
+    color: var(--text-primary);
+}
+
+.hud-content em {
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+.hud-content .hud-muted {
+    color: var(--text-muted);
+}
+
+.hud-example-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 22px);
+    gap: 3px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.hud-example-grid span {
+    width: 22px;
+    height: 22px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-family: var(--font-math);
+    font-weight: bold;
+    color: #b45309;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   4. 3D 画布区与视角控制
+   ========================================================================== */
+.canvas-3d-container {
+    flex: 1;
+    position: relative;
+    border: 1.5px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #ffffff 0%, #f8fafc 100%);
+    box-shadow: inset 0 0 16px rgba(15, 23, 42, 0.02);
+}
+
+#canvas-3d {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.rotation-tip {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 10px;
+    background: rgba(15, 23, 42, 0.05);
+    color: var(--text-muted);
+    padding: 4px 10px;
+    border-radius: 6px;
+    pointer-events: none;
+    font-weight: 500;
+}
+
+/* 摄像机快照视角控制 */
+.snap-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.btn-snap {
+    background: #ffffff;
+    border: 1.2px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 4px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-snap:hover {
+    border-color: var(--border-color-hover);
+    background: #f8fafc;
+}
+
+.btn-snap.active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================================================================
+   5. 标数控制器 & 预设 (Right Column Panels)
+   ========================================================================== */
+.height-control-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.height-control-cell {
+    background: #f8fafc;
+    border: 1.5px dashed var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    height: 44px;
+    transition: all 0.2s;
+}
+
+.height-control-cell:hover {
+    border-color: var(--color-accent);
+    background: rgba(37, 99, 235, 0.02);
+}
+
+.btn-height-adj {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: bold;
+    font-size: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    flex: 0 0 24px;
+}
+
+.btn-height-adj::before {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.height-control-cell .btn-height-adj:first-child::before {
+    content: "+";
+}
+
+.height-control-cell .btn-height-adj:last-child::before {
+    content: "−";
+}
+
+.btn-height-adj:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #ffffff;
+}
+
+.btn-height-adj.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.height-val {
+    font-family: var(--font-math);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    min-width: 18px;
+    text-align: center;
+}
+
+.height-val.non-zero {
+    color: var(--color-accent);
+}
+
+.control-stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.btn-clear-cubes {
+    background: transparent;
+    border: 1px solid #fca5a5;
+    color: #ef4444;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-clear-cubes:hover {
+    background: #fef2f2;
+}
+
+/* 经典题型预设 */
+.presets-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.btn-preset {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 2px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-preset:hover {
+    background: rgba(15, 23, 42, 0.02);
+    border-color: var(--border-color-hover);
+}
+
+.btn-preset.active {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   6. 投影展示与手工涂色绘图板 (Projection Plates)
+   ========================================================================== */
+.projection-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+    flex-shrink: 0;
+}
+
+.proj-plate-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.01);
+}
+
+.plate-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.color-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.dot-front { background: var(--color-front); }
+.dot-left { background: var(--color-left); }
+.dot-top { background: var(--color-top); }
+
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 24px);
+    grid-template-rows: repeat(3, 24px);
+    gap: 2px;
+    background: #f1f5f9;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+.proj-cell {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 画布投影激活状态 */
+.grid-front-active { background: #bfdbfe; border-color: #3b82f6; }
+.grid-left-active { background: #a7f3d0; border-color: #10b981; }
+.grid-top-active { background: #fde68a; border-color: #f59e0b; }
+
+/* 答题绘画激活状态 (黑色涂层) */
+.proj-cell.painted {
+    background: #334155;
+    border-color: #0f172a;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+}
+
+/* 挑战模式格盘闪烁或红框提示 */
+.proj-grid.interactive {
+    cursor: pointer;
+}
+.proj-grid.interactive .proj-cell {
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+.proj-grid.interactive .proj-cell:hover {
+    border-color: var(--color-accent);
+    background: #f1f5f9;
+}
+.proj-grid.interactive .proj-cell.painted,
+.proj-grid.interactive .proj-cell.painted:hover {
+    background: #334155;
+    border-color: #0f172a;
+    box-shadow: inset 0 0 0 2px rgba(15, 23, 42, 0.22);
+}
+.proj-grid.error-border {
+    border: 1.5px solid #ef4444 !important;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+/* ==========================================================================
+   7. 任务挑战卡样式 (Quest Cards)
+   ========================================================================== */
+.quest-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.quest-list {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.quest-card {
+    display: flex;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+    align-items: flex-start;
+}
+
+.quest-card.completed {
+    border-color: var(--color-success);
+    background: rgba(16, 185, 129, 0.03);
+}
+
+.quest-card.active-quest {
+    border-color: var(--color-accent);
+    background: rgba(37, 99, 235, 0.015);
+}
+
+.quest-status {
+    font-size: 8.5px;
+    font-weight: 700;
+    padding: 2.0px 5px;
+    border-radius: 5px;
+    background: #e2e8f0;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+.quest-card.active-quest .quest-status {
+    background: var(--color-accent);
+    color: #ffffff;
+}
+
+.quest-card.completed .quest-status {
+    background: var(--color-success);
+    color: #ffffff;
+}
+
+.quest-details {
+    flex: 1;
+}
+
+.quest-name {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.quest-desc {
+    font-size: 9.5px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    line-height: 1.35;
+}
+
+.quest-card.active-quest .quest-desc {
+    color: var(--text-secondary);
+}
+
+.quest-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.btn-quest-start, .btn-quest-submit {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 9.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-quest-start:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-quest-submit {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #ffffff;
+}
+.btn-quest-submit:hover {
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   8. 滚动条美化
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.08);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.16);
+}
+
+/* ==========================================================================
+   9. 教学优化配置项与自定义勾选框
+   ========================================================================== */
+.vis-options-section {
+    background: #ffffff;
+}
+
+.vis-options-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.option-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    user-select: none;
+    background: #f8fafc;
+    border: 1.2px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.option-checkbox:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent);
+}
+
+.option-checkbox input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid var(--text-muted);
+    border-radius: 4px;
+    outline: none;
+    background: transparent;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.option-checkbox input[type="checkbox"]:checked {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+}
+
+.option-checkbox input[type="checkbox"]:checked::after {
+    content: "✓";
+    font-size: 9px;
+    color: #ffffff;
+    font-weight: bold;
+}

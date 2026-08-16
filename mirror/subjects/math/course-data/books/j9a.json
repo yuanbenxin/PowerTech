@@ -1,0 +1,566 @@
+{
+  "book": {
+    "id": "j9a",
+    "label": "九年级上册",
+    "stageId": "junior",
+    "stageLabel": "初中",
+    "chapters": [
+      {
+        "id": "j9a_c21",
+        "label": "第二十一章 一元二次方程",
+        "title": "第二十一章 一元二次方程",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9a_c21_1",
+        "label": "21.1 一元二次方程",
+        "title": "21.1 一元二次方程",
+        "sampleTopics": [
+          "一元二次方程",
+          "标准形式"
+        ]
+      },
+      {
+        "id": "j9a_c21_2",
+        "label": "21.2 降次——解一元二次方程",
+        "title": "21.2 降次——解一元二次方程",
+        "sampleTopics": [
+          "配方法",
+          "公式法",
+          "判别式"
+        ]
+      },
+      {
+        "id": "j9a_c21_3",
+        "label": "21.3 实际问题与一元二次方程",
+        "title": "21.3 实际问题与一元二次方程",
+        "sampleTopics": [
+          "方程应用",
+          "建模"
+        ]
+      },
+      {
+        "id": "j9a_c22",
+        "label": "第二十二章 二次函数",
+        "title": "第二十二章 二次函数",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9a_c22_1",
+        "label": "22.1 二次函数的图象和性质",
+        "title": "22.1 二次函数的图象和性质",
+        "sampleTopics": [
+          "抛物线",
+          "顶点",
+          "参数"
+        ]
+      },
+      {
+        "id": "j9a_c22_2",
+        "label": "22.2 二次函数与一元二次方程",
+        "title": "22.2 二次函数与一元二次方程",
+        "sampleTopics": [
+          "交点",
+          "函数与方程"
+        ]
+      },
+      {
+        "id": "j9a_c22_3",
+        "label": "22.3 实际问题与二次函数",
+        "title": "22.3 实际问题与二次函数",
+        "sampleTopics": [
+          "最值",
+          "建模"
+        ]
+      },
+      {
+        "id": "j9a_c23",
+        "label": "第二十三章 旋转",
+        "title": "第二十三章 旋转",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9a_c23_1",
+        "label": "23.1 图形的旋转",
+        "title": "23.1 图形的旋转",
+        "sampleTopics": [
+          "旋转",
+          "中心对称"
+        ]
+      },
+      {
+        "id": "j9a_c23_2",
+        "label": "23.2 中心对称",
+        "title": "23.2 中心对称",
+        "sampleTopics": [
+          "中心对称",
+          "对称中心"
+        ]
+      },
+      {
+        "id": "j9a_c24",
+        "label": "第二十四章 圆",
+        "title": "第二十四章 圆",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9a_c24_1",
+        "label": "24.1 圆的有关性质",
+        "title": "24.1 圆的有关性质",
+        "sampleTopics": [
+          "圆周角",
+          "弧弦关系"
+        ]
+      },
+      {
+        "id": "j9a_c24_2",
+        "label": "24.2 点和圆、直线和圆的位置关系",
+        "title": "24.2 点和圆、直线和圆的位置关系",
+        "sampleTopics": [
+          "切线",
+          "位置关系"
+        ]
+      },
+      {
+        "id": "j9a_c24_3",
+        "label": "24.3 正多边形和圆",
+        "title": "24.3 正多边形和圆",
+        "sampleTopics": [
+          "正多边形",
+          "圆"
+        ]
+      },
+      {
+        "id": "j9a_c24_4",
+        "label": "24.4 弧长和扇形面积",
+        "title": "24.4 弧长和扇形面积",
+        "sampleTopics": [
+          "弧长",
+          "扇形面积"
+        ]
+      },
+      {
+        "id": "j9a_c25",
+        "label": "第二十五章 概率初步",
+        "title": "第二十五章 概率初步",
+        "sampleTopics": []
+      },
+      {
+        "id": "j9a_c25_1",
+        "label": "25.1 随机事件与概率",
+        "title": "25.1 随机事件与概率",
+        "sampleTopics": [
+          "随机事件",
+          "概率"
+        ]
+      },
+      {
+        "id": "j9a_c25_2",
+        "label": "25.2 用列举法求概率",
+        "title": "25.2 用列举法求概率",
+        "sampleTopics": [
+          "树状图",
+          "列表法"
+        ]
+      },
+      {
+        "id": "j9a_c25_3",
+        "label": "25.3 用频率估计概率",
+        "title": "25.3 用频率估计概率",
+        "sampleTopics": [
+          "频率",
+          "概率估计"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "j9a_c21",
+      "label": "第二十一章 一元二次方程",
+      "children": [
+        {
+          "id": "j9a_c21_1",
+          "label": "21.1 一元二次方程",
+          "sampleTopics": [
+            "一元二次方程",
+            "标准形式"
+          ]
+        },
+        {
+          "id": "j9a_c21_2",
+          "label": "21.2 降次——解一元二次方程",
+          "sampleTopics": [
+            "配方法",
+            "公式法",
+            "判别式"
+          ]
+        },
+        {
+          "id": "j9a_c21_3",
+          "label": "21.3 实际问题与一元二次方程",
+          "sampleTopics": [
+            "方程应用",
+            "建模"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j9a_c22",
+      "label": "第二十二章 二次函数",
+      "children": [
+        {
+          "id": "j9a_c22_1",
+          "label": "22.1 二次函数的图象和性质",
+          "sampleTopics": [
+            "抛物线",
+            "顶点",
+            "参数"
+          ]
+        },
+        {
+          "id": "j9a_c22_2",
+          "label": "22.2 二次函数与一元二次方程",
+          "sampleTopics": [
+            "交点",
+            "函数与方程"
+          ]
+        },
+        {
+          "id": "j9a_c22_3",
+          "label": "22.3 实际问题与二次函数",
+          "sampleTopics": [
+            "最值",
+            "建模"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j9a_c23",
+      "label": "第二十三章 旋转",
+      "children": [
+        {
+          "id": "j9a_c23_1",
+          "label": "23.1 图形的旋转",
+          "sampleTopics": [
+            "旋转",
+            "中心对称"
+          ]
+        },
+        {
+          "id": "j9a_c23_2",
+          "label": "23.2 中心对称",
+          "sampleTopics": [
+            "中心对称",
+            "对称中心"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j9a_c24",
+      "label": "第二十四章 圆",
+      "children": [
+        {
+          "id": "j9a_c24_1",
+          "label": "24.1 圆的有关性质",
+          "sampleTopics": [
+            "圆周角",
+            "弧弦关系"
+          ]
+        },
+        {
+          "id": "j9a_c24_2",
+          "label": "24.2 点和圆、直线和圆的位置关系",
+          "sampleTopics": [
+            "切线",
+            "位置关系"
+          ]
+        },
+        {
+          "id": "j9a_c24_3",
+          "label": "24.3 正多边形和圆",
+          "sampleTopics": [
+            "正多边形",
+            "圆"
+          ]
+        },
+        {
+          "id": "j9a_c24_4",
+          "label": "24.4 弧长和扇形面积",
+          "sampleTopics": [
+            "弧长",
+            "扇形面积"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j9a_c25",
+      "label": "第二十五章 概率初步",
+      "children": [
+        {
+          "id": "j9a_c25_1",
+          "label": "25.1 随机事件与概率",
+          "sampleTopics": [
+            "随机事件",
+            "概率"
+          ]
+        },
+        {
+          "id": "j9a_c25_2",
+          "label": "25.2 用列举法求概率",
+          "sampleTopics": [
+            "树状图",
+            "列表法"
+          ]
+        },
+        {
+          "id": "j9a_c25_3",
+          "label": "25.3 用频率估计概率",
+          "sampleTopics": [
+            "频率",
+            "概率估计"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "j9a_m01",
+      "chapterIds": [
+        "j9a_c22_1"
+      ],
+      "title": "二次函数的抛物线与顶点",
+      "detail": "动态拖动 y=a(x-h)²+k 中的参数，实时观察抛物线开口、顶点及对称轴在坐标系中的平移与形变",
+      "image": "assets/media/j9a_m01.webp",
+      "fallbackImage": "assets/media/j9a_m01.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j9a_m02",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "title": "圆与圆周角定理动态推演",
+      "detail": "在圆上任意拖动顶点，系统实时计算圆周角与圆心角的度数，直观验证同弧所对的角的关系",
+      "image": "assets/media/j9a_m02.webp",
+      "fallbackImage": "assets/media/j9a_m02.webp",
+      "isLocked": false,
+      "engine": "graph2d"
+    },
+    {
+      "cardId": "j9a_m03",
+      "chapterIds": [
+        "j9a_c21_2"
+      ],
+      "title": "一元二次方程根的判别式",
+      "detail": "Δ=b²-4ac 与抛物线与 x 轴交点的关系联动",
+      "image": "assets/media/j9a_m03.webp",
+      "fallbackImage": "assets/media/j9a_m03.webp",
+      "isLocked": false,
+      "engine": "quadratic-equation-discriminant-roots"
+    },
+    {
+      "cardId": "j9a_m04",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "title": "垂径定理的几何构造",
+      "detail": "弦与半径垂直平分关系的动态推演",
+      "image": "assets/media/j9a_m04.webp",
+      "isLocked": false,
+      "engine": "perpendicular-diameter-geometry",
+      "fallbackImage": "assets/media/j9a_m04.webp"
+    },
+    {
+      "cardId": "j9a_m05",
+      "chapterIds": [
+        "j9a_c23_1"
+      ],
+      "title": "旋转变换与中心对称图形",
+      "detail": "围绕旋转中心拖动角度滑块，实时生成旋转图形与中心对称",
+      "image": "assets/media/j9a_m05.webp",
+      "fallbackImage": "assets/media/j9a_m05.webp",
+      "isLocked": false,
+      "engine": "rotation-central-symmetry"
+    },
+    {
+      "cardId": "j9a_m06",
+      "chapterIds": [
+        "j9a_c22_1"
+      ],
+      "title": "概率的树状图与列表法",
+      "detail": "用粒子模拟大量随机实验，验证古典概型的理论概率",
+      "image": "assets/media/j9a_m06.webp",
+      "fallbackImage": "assets/media/j9a_m06.webp",
+      "isLocked": false,
+      "engine": "probability-tree-list-method"
+    },
+    {
+      "cardId": "j9a_m10",
+      "chapterIds": [
+        "j9a_c21_2"
+      ],
+      "title": "配方法几何拼方",
+      "detail": "本地互动课件：配方法几何拼方。支持课堂触控操作与动态探究。",
+      "image": "assets/media/j9a_m10.png",
+      "fallbackImage": "assets/media/j9a_m10.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "配方法",
+        "面积模型",
+        "方程"
+      ],
+      "points": [
+        "配方法",
+        "面积模型",
+        "方程"
+      ]
+    },
+    {
+      "cardId": "j9a_m11",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "title": "弧弦圆心角关系",
+      "detail": "本地互动课件：弧弦圆心角关系。支持课堂触控操作与动态探究。",
+      "image": "assets/media/j9a_m11.png",
+      "fallbackImage": "assets/media/j9a_m11.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "弧",
+        "弦",
+        "圆心角"
+      ],
+      "points": [
+        "弧",
+        "弦",
+        "圆心角"
+      ]
+    },
+    {
+      "cardId": "j9a_m12",
+      "chapterIds": [
+        "j9a_c25_3"
+      ],
+      "title": "随机试验频率稳定性",
+      "detail": "本地互动课件：随机试验频率稳定性。支持课堂触控操作与动态探究。",
+      "image": "assets/media/j9a_m12.png",
+      "fallbackImage": "assets/media/j9a_m12.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "概率",
+        "频率",
+        "模拟"
+      ],
+      "points": [
+        "概率",
+        "频率",
+        "模拟"
+      ]
+    },
+    {
+      "cardId": "j9a_m13",
+      "chapterIds": [
+        "j9a_c24_1"
+      ],
+      "title": "圆内接四边形与对角互补",
+      "detail": "本地互动课件：圆内接四边形。支持课堂触控操作与动态探究。",
+      "image": "assets/media/j9a_m13.png",
+      "fallbackImage": "assets/media/j9a_m13.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "圆内接四边形",
+        "对角互补",
+        "圆"
+      ],
+      "points": [
+        "圆内接四边形",
+        "对角互补",
+        "圆"
+      ]
+    },
+    {
+      "cardId": "j9a_m14",
+      "chapterIds": [
+        "j9a_c24_3"
+      ],
+      "title": "正多边形与圆",
+      "detail": "本地互动课件：正多边形与圆。支持课堂触控操作与动态探究。",
+      "image": "assets/media/j9a_m14.png",
+      "fallbackImage": "assets/media/j9a_m14.png",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "正多边形",
+        "圆",
+        "中心角"
+      ],
+      "points": [
+        "正多边形",
+        "圆",
+        "中心角"
+      ]
+    },
+    {
+      "cardId": "j9a_m15",
+      "chapterIds": [
+        "j9a_c22_3"
+      ],
+      "title": "二次函数实际最值建模",
+      "detail": "本地互动课件：二次函数实际最值建模。支持课堂触控操作与动态探究。",
+      "image": "assets/media/j9a_m15.webp",
+      "fallbackImage": "assets/media/j9a_m15.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "二次函数应用",
+        "最值",
+        "建模"
+      ],
+      "points": [
+        "二次函数应用",
+        "最值",
+        "建模"
+      ]
+    },
+    {
+      "cardId": "j9a_m09",
+      "chapterIds": [
+        "j9a_c24_2"
+      ],
+      "title": "圆的切线性质与判定",
+      "detail": "占位卡片：拖动切点和圆外点，验证半径垂直切线以及切线判定。正式互动内容待制作。",
+      "image": "assets/media/j9a_m09.png",
+      "fallbackImage": "assets/media/j9a_m09.png",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "圆",
+        "切线",
+        "垂直"
+      ],
+      "points": [
+        "圆",
+        "切线",
+        "垂直"
+      ]
+    }
+  ]
+}

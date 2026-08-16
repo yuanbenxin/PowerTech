@@ -1,0 +1,23 @@
+{
+  "cardId": "j8a_m12",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-rational-equation-extraneous-root",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8a_m12",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j8a_m12",
+    "panelClass": "math-source-panel-j8a_m12",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：分式方程增根警报器。左侧承载分式函数图像、探针读数与代数几何 HUD，右侧平台面板承载系数、探针、变形和检验控制。"
+}

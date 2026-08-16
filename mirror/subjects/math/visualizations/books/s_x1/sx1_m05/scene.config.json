@@ -1,0 +1,23 @@
+{
+  "cardId": "sx1_m05",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-counting-tree",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sx1_m05",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sx1_m05",
+    "panelClass": "math-source-panel-sx1_m05",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "排列组合的树状计数图；顺序保留、组合折叠、可重复选择的树状分步计数。"
+}

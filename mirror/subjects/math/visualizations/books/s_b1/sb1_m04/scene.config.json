@@ -1,0 +1,35 @@
+{
+  "cardId": "sb1_m04",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-logarithmic-spiral-e",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m04",
+    "panelSelector": ".sidebar",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m04",
+    "panelClass": "math-source-panel-sb1_m04",
+    "inlineFunctionNames": [
+      "setAppMode",
+      "toggleTangent",
+      "toggleNautilus",
+      "toggleAnimate",
+      "resetSpiralModel",
+      "answerSpiralCheck",
+      "setGaokaoMode",
+      "lockToE",
+      "lockIneqA",
+      "lockIneqK",
+      "toggleGraph",
+      "lockIntegralE"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "对数螺旋线与自然底数 e 源码已迁入平台目录；螺旋模式、高考模式、切线、动画、证明参数保留。"
+}

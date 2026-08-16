@@ -1,0 +1,23 @@
+{
+  "cardId": "jm_topic_m15",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-statistics-probability-lab",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "jm_topic_m15",
+    "panelSelector": ".control-panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-jm_topic_m15",
+    "panelClass": "math-source-panel-jm_topic_m15",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：统计概率专题。左侧承载频率收敛、树状图/列表法和统计图表实验区及可收起 HUD，右侧平台操作面板承载实验场景、仿真参数、目标事件和统计数据调节。"
+}

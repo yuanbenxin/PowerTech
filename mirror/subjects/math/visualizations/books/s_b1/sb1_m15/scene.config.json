@@ -1,0 +1,12 @@
+{
+  "cardId": "sb1_m15",
+  "status": "ready",
+  "engine": "embedded-source-courseware",
+  "entry": "scene.js?v=20f5457a4aa3",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-pinch-bisection",
+  "visualLevel": "A",
+  "source": "source.html",
+  "generator": "root-bisection-courseware-v1",
+  "notes": "三种函数模型，支持端点拖动、画布平移、滚轮和双指缩放，以及逐步或自动二分夹逼。"
+}

@@ -1,0 +1,29 @@
+{
+  "cardId": "sb1_m02",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-unit-circle-trig-generation",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m02",
+    "panelSelector": "#control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m02",
+    "panelClass": "math-source-panel-sb1_m02",
+    "inlineFunctionNames": [
+      "togglePlay",
+      "resetAnimation",
+      "updateSpeed",
+      "manualAngle",
+      "setAngle",
+      "drawFrame"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "三角函数单位圆动态生成源码已迁入平台目录；控制面板和统计面板移动到系统右侧操作区。"
+}

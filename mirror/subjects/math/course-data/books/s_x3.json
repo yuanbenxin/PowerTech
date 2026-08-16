@@ -1,0 +1,450 @@
+{
+  "book": {
+    "id": "s_x3",
+    "label": "选择性必修3",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "sx3_c1",
+        "label": "第一章 计数原理",
+        "title": "第一章 计数原理",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx3_c1_1",
+        "label": "1.1 排列组合综合",
+        "title": "1.1 排列组合综合",
+        "sampleTopics": [
+          "排列组合",
+          "限制条件",
+          "分配"
+        ]
+      },
+      {
+        "id": "sx3_c7",
+        "label": "第七章 随机变量及其分布",
+        "title": "第七章 随机变量及其分布",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx3_c7_1",
+        "label": "7.1 离散型随机变量",
+        "title": "7.1 离散型随机变量",
+        "sampleTopics": [
+          "分布列",
+          "期望",
+          "方差"
+        ]
+      },
+      {
+        "id": "sx3_c7_2",
+        "label": "7.2 二项分布与超几何分布",
+        "title": "7.2 二项分布与超几何分布",
+        "sampleTopics": [
+          "二项分布",
+          "超几何分布",
+          "抽样"
+        ]
+      },
+      {
+        "id": "sx3_c7_4",
+        "label": "7.4 正态分布",
+        "title": "7.4 正态分布",
+        "sampleTopics": [
+          "正态分布",
+          "均值",
+          "标准差"
+        ]
+      },
+      {
+        "id": "sx3_c8",
+        "label": "第八章 成对数据统计分析",
+        "title": "第八章 成对数据统计分析",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx3_c8_1",
+        "label": "8.1 回归分析",
+        "title": "8.1 回归分析",
+        "sampleTopics": [
+          "回归",
+          "最小二乘",
+          "预测"
+        ]
+      },
+      {
+        "id": "sx3_c8_2",
+        "label": "8.2 相关系数与独立性检验",
+        "title": "8.2 相关系数与独立性检验",
+        "sampleTopics": [
+          "相关系数",
+          "列联表",
+          "独立性检验"
+        ]
+      },
+      {
+        "id": "sx3_c9",
+        "label": "第九章 复数与分形拓展",
+        "title": "第九章 复数与分形拓展",
+        "sampleTopics": []
+      },
+      {
+        "id": "sx3_c9_1",
+        "label": "9.1 复平面与几何意义",
+        "title": "9.1 复平面与几何意义",
+        "sampleTopics": [
+          "复平面",
+          "分形",
+          "迭代"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "sx3_c1",
+      "label": "第一章 计数原理",
+      "children": [
+        {
+          "id": "sx3_c1_1",
+          "label": "1.1 排列组合综合",
+          "sampleTopics": [
+            "排列组合",
+            "限制条件",
+            "分配"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx3_c7",
+      "label": "第七章 随机变量及其分布",
+      "children": [
+        {
+          "id": "sx3_c7_1",
+          "label": "7.1 离散型随机变量",
+          "sampleTopics": [
+            "分布列",
+            "期望",
+            "方差"
+          ]
+        },
+        {
+          "id": "sx3_c7_2",
+          "label": "7.2 二项分布与超几何分布",
+          "sampleTopics": [
+            "二项分布",
+            "超几何分布",
+            "抽样"
+          ]
+        },
+        {
+          "id": "sx3_c7_4",
+          "label": "7.4 正态分布",
+          "sampleTopics": [
+            "正态分布",
+            "均值",
+            "标准差"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx3_c8",
+      "label": "第八章 成对数据统计分析",
+      "children": [
+        {
+          "id": "sx3_c8_1",
+          "label": "8.1 回归分析",
+          "sampleTopics": [
+            "回归",
+            "最小二乘",
+            "预测"
+          ]
+        },
+        {
+          "id": "sx3_c8_2",
+          "label": "8.2 相关系数与独立性检验",
+          "sampleTopics": [
+            "相关系数",
+            "列联表",
+            "独立性检验"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sx3_c9",
+      "label": "第九章 复数与分形拓展",
+      "children": [
+        {
+          "id": "sx3_c9_1",
+          "label": "9.1 复平面与几何意义",
+          "sampleTopics": [
+            "复平面",
+            "分形",
+            "迭代"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "sx3_m01",
+      "chapterIds": [
+        "sx3_c7_4"
+      ],
+      "title": "高尔顿板与正态分布模拟",
+      "detail": "释放小球观察样本频率向二项分布靠近，并叠加正态近似曲线、均值与标准差区间。",
+      "image": "assets/media/sx3_m01.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3_m02",
+      "chapterIds": [
+        "sx3_c9_1"
+      ],
+      "title": "复平面与曼德勃罗分形",
+      "detail": "在复平面中选取参数 c，观察 z₀=0, zₙ₊₁=zₙ²+c 的轨道、逃逸半径和分形边界。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter"
+    },
+    {
+      "cardId": "sx3_m04",
+      "chapterIds": [
+        "sx3_c7_4"
+      ],
+      "title": "条件概率与贝叶斯公式可视化",
+      "detail": "用面积模型和粒子筛选直观展示贝叶斯后验概率的更新过程",
+      "image": "assets/media/sx3_m04.webp",
+      "fallbackImage": "",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sx3_m05",
+      "chapterIds": [
+        "sx3_c8_1"
+      ],
+      "title": "回归分析与最小二乘法拟合",
+      "detail": "拖动散点、切换手动线与最小二乘线，观察残差平方和、R² 和离群点对拟合结果的影响。",
+      "image": "assets/media/math_card_bg_platinum.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "sim"
+    },
+    {
+      "cardId": "sx3_m06",
+      "chapterIds": [
+        "sx3_c1_1"
+      ],
+      "title": "限制条件排列组合排座模型",
+      "detail": "占位卡片：用座位格、禁位和相邻限制展示排列组合的限制条件处理。正式互动内容待制作。",
+      "image": "assets/media/sx3_m06.webp",
+      "fallbackImage": "assets/media/sx3_m06.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "排列组合",
+        "排座",
+        "限制条件"
+      ],
+      "points": [
+        "排列组合",
+        "排座",
+        "限制条件"
+      ]
+    },
+    {
+      "cardId": "sx3_m07",
+      "chapterIds": [
+        "sx3_c1_1"
+      ],
+      "title": "分组分配与隔板法",
+      "detail": "占位卡片：用球盒模型和隔板滑块展示分组、分配和可重复选择。正式互动内容待制作。",
+      "image": "assets/media/sx3_m07.webp",
+      "fallbackImage": "assets/media/sx3_m07.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "分组分配",
+        "隔板法",
+        "计数"
+      ],
+      "points": [
+        "分组分配",
+        "隔板法",
+        "计数"
+      ]
+    },
+    {
+      "cardId": "sx3_m08",
+      "chapterIds": [
+        "sx3_c7_2"
+      ],
+      "title": "独立重复试验与二项分布",
+      "detail": "占位卡片：模拟 n 次独立试验，观察成功次数分布和二项公式。正式互动内容待制作。",
+      "image": "assets/media/sx3_m08.webp",
+      "fallbackImage": "assets/media/sx3_m08.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "独立重复试验",
+        "二项分布",
+        "概率"
+      ],
+      "points": [
+        "独立重复试验",
+        "二项分布",
+        "概率"
+      ]
+    },
+    {
+      "cardId": "sx3_m09",
+      "chapterIds": [
+        "sx3_c7_2"
+      ],
+      "title": "超几何分布抽样盒",
+      "detail": "占位卡片：从有限总体不放回抽样，观察超几何分布参数变化。正式互动内容待制作。",
+      "image": "assets/media/sx3_m09.webp",
+      "fallbackImage": "assets/media/sx3_m09.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "超几何分布",
+        "抽样",
+        "概率"
+      ],
+      "points": [
+        "超几何分布",
+        "抽样",
+        "概率"
+      ]
+    },
+    {
+      "cardId": "sx3_m10",
+      "chapterIds": [
+        "sx3_c7_1"
+      ],
+      "title": "随机变量分布列生成器",
+      "detail": "占位卡片：把随机试验结果映射为随机变量，自动生成分布列。正式互动内容待制作。",
+      "image": "assets/media/sx3_m10.webp",
+      "fallbackImage": "assets/media/sx3_m10.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "随机变量",
+        "分布列",
+        "概率"
+      ],
+      "points": [
+        "随机变量",
+        "分布列",
+        "概率"
+      ]
+    },
+    {
+      "cardId": "sx3_m11",
+      "chapterIds": [
+        "sx3_c7_1"
+      ],
+      "title": "期望方差与决策",
+      "detail": "占位卡片：调整收益与概率，比较期望、方差和风险偏好下的决策。正式互动内容待制作。",
+      "image": "assets/media/sx3_m11.webp",
+      "fallbackImage": "assets/media/sx3_m11.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "期望",
+        "方差",
+        "决策"
+      ],
+      "points": [
+        "期望",
+        "方差",
+        "决策"
+      ]
+    },
+    {
+      "cardId": "sx3_m12",
+      "chapterIds": [
+        "sx3_c8_2"
+      ],
+      "title": "2x2 列联表与独立性检验",
+      "detail": "占位卡片：拖动四格数据，观察独立性检验统计量和判断阈值。正式互动内容待制作。",
+      "image": "assets/media/sx3_m12.webp",
+      "fallbackImage": "assets/media/sx3_m12.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "列联表",
+        "独立性检验",
+        "统计"
+      ],
+      "points": [
+        "列联表",
+        "独立性检验",
+        "统计"
+      ]
+    },
+    {
+      "cardId": "sx3_m13",
+      "chapterIds": [
+        "sx3_c8_1"
+      ],
+      "title": "抽样误差与置信区间拓展",
+      "detail": "占位卡片：模拟重复抽样，观察估计量波动和置信区间覆盖。正式互动内容待制作。",
+      "image": "assets/media/sx3_m13.webp",
+      "fallbackImage": "assets/media/sx3_m13.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "抽样误差",
+        "置信区间",
+        "估计"
+      ],
+      "points": [
+        "抽样误差",
+        "置信区间",
+        "估计"
+      ]
+    },
+    {
+      "cardId": "sx3_m14",
+      "chapterIds": [
+        "sx3_c8_2"
+      ],
+      "title": "相关系数与散点相关强度",
+      "detail": "占位卡片：拖动散点云形状，观察相关系数从 -1 到 1 的变化。正式互动内容待制作。",
+      "image": "assets/media/sx3_m14.webp",
+      "fallbackImage": "assets/media/sx3_m14.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "相关系数",
+        "散点图",
+        "统计"
+      ],
+      "points": [
+        "相关系数",
+        "散点图",
+        "统计"
+      ]
+    }
+  ]
+}

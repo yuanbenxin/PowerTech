@@ -1,0 +1,10 @@
+{
+  "cardId": "j7a_m03",
+  "status": "ready",
+  "engine": "numberline-absolute",
+  "entry": "scene.js?v=04c00c01e898",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-numberline",
+  "visualLevel": "A",
+  "notes": "绝对值、相反数和两点距离的数轴几何意义。所有资源本地化，无 CDN。"
+}

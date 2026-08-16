@@ -1,0 +1,10 @@
+{
+  "cardId": "j7a_m04",
+  "status": "ready",
+  "engine": "balance-3d",
+  "entry": "scene.js?v=f43014838222",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "free-orbit-balance",
+  "visualLevel": "A",
+  "notes": "一元一次方程的 3D 天平模型、等式变形、透视 x 块和沙盒操作。所有资源本地化，无 CDN。"
+}

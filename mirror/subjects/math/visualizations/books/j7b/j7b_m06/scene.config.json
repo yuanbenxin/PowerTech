@@ -1,0 +1,27 @@
+{
+  "cardId": "j7b_m06",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-root-numberline",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=48e26dce0487",
+  "script": "app.js?v=fe095c1bdcd8",
+  "sourceAdapter": {
+    "cardId": "j7b_m06",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [
+      "#modal-help"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j7b_m06",
+    "panelClass": "math-source-panel-j7b_m06",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "接入平方根与立方根数轴定位课件：左侧数轴定位模拟框与可收起 HUD，右侧平台操作面板承载根式类型、作图、参数、预设与说明控制。"
+}

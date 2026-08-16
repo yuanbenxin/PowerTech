@@ -1,0 +1,689 @@
+{
+  "book": {
+    "id": "s_b1",
+    "label": "必修第一册",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "sb1_c1",
+        "label": "第一章 集合与常用逻辑用语",
+        "title": "第一章 集合与常用逻辑用语",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb1_c1_1",
+        "label": "1.1 集合的概念与表示",
+        "title": "1.1 集合的概念与表示",
+        "sampleTopics": [
+          "集合",
+          "元素",
+          "表示法"
+        ]
+      },
+      {
+        "id": "sb1_c1_2",
+        "label": "1.2 充分条件与必要条件",
+        "title": "1.2 充分条件与必要条件",
+        "sampleTopics": [
+          "充分条件",
+          "必要条件",
+          "充要条件"
+        ]
+      },
+      {
+        "id": "sb1_c1_3",
+        "label": "1.3 全称量词与存在量词",
+        "title": "1.3 全称量词与存在量词",
+        "sampleTopics": [
+          "命题",
+          "量词",
+          "否定"
+        ]
+      },
+      {
+        "id": "sb1_c2",
+        "label": "第二章 一元二次函数、方程和不等式",
+        "title": "第二章 一元二次函数、方程和不等式",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb1_c2_1",
+        "label": "2.1 二次函数、方程和不等式",
+        "title": "2.1 二次函数、方程和不等式",
+        "sampleTopics": [
+          "二次函数",
+          "方程",
+          "不等式"
+        ]
+      },
+      {
+        "id": "sb1_c2_2",
+        "label": "2.2 基本不等式",
+        "title": "2.2 基本不等式",
+        "sampleTopics": [
+          "基本不等式",
+          "最值",
+          "面积模型"
+        ]
+      },
+      {
+        "id": "sb1_c3",
+        "label": "第三章 函数的概念与性质",
+        "title": "第三章 函数的概念与性质",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb1_c3_1",
+        "label": "3.1 函数的概念与表示",
+        "title": "3.1 函数的概念与表示",
+        "sampleTopics": [
+          "定义域",
+          "值域",
+          "对应关系"
+        ]
+      },
+      {
+        "id": "sb1_c3_2",
+        "label": "3.2 函数单调性与最值",
+        "title": "3.2 函数单调性与最值",
+        "sampleTopics": [
+          "单调性",
+          "最值",
+          "区间"
+        ]
+      },
+      {
+        "id": "sb1_c3_3",
+        "label": "3.3 函数零点与二分法",
+        "title": "3.3 函数零点与二分法",
+        "sampleTopics": [
+          "零点",
+          "二分法",
+          "近似"
+        ]
+      },
+      {
+        "id": "sb1_c3_4",
+        "label": "3.4 函数图像变换",
+        "title": "3.4 函数图像变换",
+        "sampleTopics": [
+          "平移",
+          "伸缩",
+          "对称"
+        ]
+      },
+      {
+        "id": "sb1_c4",
+        "label": "第四章 指数函数与对数函数",
+        "title": "第四章 指数函数与对数函数",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb1_c4_1",
+        "label": "4.1 指数与对数运算",
+        "title": "4.1 指数与对数运算",
+        "sampleTopics": [
+          "指数",
+          "对数",
+          "运算法则"
+        ]
+      },
+      {
+        "id": "sb1_c4_4",
+        "label": "4.4 指数函数与对数函数的关系",
+        "title": "4.4 指数函数与对数函数的关系",
+        "sampleTopics": [
+          "指数函数",
+          "对数函数",
+          "反函数"
+        ]
+      },
+      {
+        "id": "sb1_c5",
+        "label": "第五章 三角函数",
+        "title": "第五章 三角函数",
+        "sampleTopics": []
+      },
+      {
+        "id": "sb1_c5_1",
+        "label": "5.1 任意角与弧度制",
+        "title": "5.1 任意角与弧度制",
+        "sampleTopics": [
+          "任意角",
+          "弧度制",
+          "终边"
+        ]
+      },
+      {
+        "id": "sb1_c5_2",
+        "label": "5.2 三角函数的概念",
+        "title": "5.2 三角函数的概念",
+        "sampleTopics": [
+          "单位圆",
+          "正弦",
+          "余弦"
+        ]
+      },
+      {
+        "id": "sb1_c5_3",
+        "label": "5.3 诱导公式与周期性",
+        "title": "5.3 诱导公式与周期性",
+        "sampleTopics": [
+          "诱导公式",
+          "周期性",
+          "对称"
+        ]
+      }
+    ]
+  },
+  "chapterTree": [
+    {
+      "id": "sb1_c1",
+      "label": "第一章 集合与常用逻辑用语",
+      "children": [
+        {
+          "id": "sb1_c1_1",
+          "label": "1.1 集合的概念与表示",
+          "sampleTopics": [
+            "集合",
+            "元素",
+            "表示法"
+          ]
+        },
+        {
+          "id": "sb1_c1_2",
+          "label": "1.2 充分条件与必要条件",
+          "sampleTopics": [
+            "充分条件",
+            "必要条件",
+            "充要条件"
+          ]
+        },
+        {
+          "id": "sb1_c1_3",
+          "label": "1.3 全称量词与存在量词",
+          "sampleTopics": [
+            "命题",
+            "量词",
+            "否定"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb1_c2",
+      "label": "第二章 一元二次函数、方程和不等式",
+      "children": [
+        {
+          "id": "sb1_c2_1",
+          "label": "2.1 二次函数、方程和不等式",
+          "sampleTopics": [
+            "二次函数",
+            "方程",
+            "不等式"
+          ]
+        },
+        {
+          "id": "sb1_c2_2",
+          "label": "2.2 基本不等式",
+          "sampleTopics": [
+            "基本不等式",
+            "最值",
+            "面积模型"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb1_c3",
+      "label": "第三章 函数的概念与性质",
+      "children": [
+        {
+          "id": "sb1_c3_1",
+          "label": "3.1 函数的概念与表示",
+          "sampleTopics": [
+            "定义域",
+            "值域",
+            "对应关系"
+          ]
+        },
+        {
+          "id": "sb1_c3_2",
+          "label": "3.2 函数单调性与最值",
+          "sampleTopics": [
+            "单调性",
+            "最值",
+            "区间"
+          ]
+        },
+        {
+          "id": "sb1_c3_3",
+          "label": "3.3 函数零点与二分法",
+          "sampleTopics": [
+            "零点",
+            "二分法",
+            "近似"
+          ]
+        },
+        {
+          "id": "sb1_c3_4",
+          "label": "3.4 函数图像变换",
+          "sampleTopics": [
+            "平移",
+            "伸缩",
+            "对称"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb1_c4",
+      "label": "第四章 指数函数与对数函数",
+      "children": [
+        {
+          "id": "sb1_c4_1",
+          "label": "4.1 指数与对数运算",
+          "sampleTopics": [
+            "指数",
+            "对数",
+            "运算法则"
+          ]
+        },
+        {
+          "id": "sb1_c4_4",
+          "label": "4.4 指数函数与对数函数的关系",
+          "sampleTopics": [
+            "指数函数",
+            "对数函数",
+            "反函数"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sb1_c5",
+      "label": "第五章 三角函数",
+      "children": [
+        {
+          "id": "sb1_c5_1",
+          "label": "5.1 任意角与弧度制",
+          "sampleTopics": [
+            "任意角",
+            "弧度制",
+            "终边"
+          ]
+        },
+        {
+          "id": "sb1_c5_2",
+          "label": "5.2 三角函数的概念",
+          "sampleTopics": [
+            "单位圆",
+            "正弦",
+            "余弦"
+          ]
+        },
+        {
+          "id": "sb1_c5_3",
+          "label": "5.3 诱导公式与周期性",
+          "sampleTopics": [
+            "诱导公式",
+            "周期性",
+            "对称"
+          ]
+        }
+      ]
+    }
+  ],
+  "currentCardMapping": [
+    {
+      "cardId": "sb1_m13",
+      "chapterIds": [
+        "sb1_c3_1"
+      ],
+      "title": "函数定义域与值域扫描器",
+      "detail": "拖动函数手柄与扫描点，比较二次、反比例、根号函数的定义域限制和值域边界。",
+      "image": "assets/media/sb1_m13.webp",
+      "fallbackImage": "assets/media/sb1_m13.webp",
+      "isLocked": false,
+      "engine": "embedded-source-courseware",
+      "visualLevel": "A",
+      "tags": [
+        "函数",
+        "定义域",
+        "值域"
+      ],
+      "points": [
+        "函数",
+        "定义域",
+        "值域"
+      ]
+    },
+    {
+      "cardId": "sb1_m14",
+      "chapterIds": [
+        "sb1_c3_2"
+      ],
+      "title": "函数单调性与最值滑坡图",
+      "detail": "拖动函数图像上的动点与区间端点，联动观察增减区间、局部峰谷、不可导折点及区间最值。",
+      "image": "assets/media/sb1_m14.webp",
+      "fallbackImage": "assets/media/sb1_m14.webp",
+      "isLocked": false,
+      "engine": "embedded-source-courseware",
+      "visualLevel": "A",
+      "tags": [
+        "单调性",
+        "最值",
+        "图像"
+      ],
+      "points": [
+        "单调性",
+        "最值",
+        "图像"
+      ]
+    },
+    {
+      "cardId": "sb1_m15",
+      "chapterIds": [
+        "sb1_c3_3"
+      ],
+      "title": "函数零点与二分法",
+      "detail": "拖动区间端点验证变号条件，用中点二分持续夹逼零点；同时辨析“零点存在”与“端点变号”这两个不同条件。",
+      "image": "assets/media/sb1_m15.webp",
+      "fallbackImage": "assets/media/sb1_m15.webp",
+      "isLocked": false,
+      "engine": "embedded-source-courseware",
+      "visualLevel": "A",
+      "tags": [
+        "零点",
+        "二分法",
+        "近似"
+      ],
+      "points": [
+        "零点",
+        "二分法",
+        "近似"
+      ]
+    },
+    {
+      "cardId": "sb1_m01",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "title": "指数函数与对数函数图像反演",
+      "detail": "绘制 y=a^x 与 y=log_a(x) 的图像，展示它们关于直线 y=x 的对称关系、底数变化与反函数联系。",
+      "image": "assets/media/sb1_m01.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "exponential-log-inversion"
+    },
+    {
+      "cardId": "sb1_m02",
+      "chapterIds": [
+        "sb1_c5_2"
+      ],
+      "title": "三角函数的单位圆动态生成",
+      "detail": "拖动单位圆上的动点，实时投影生成正弦、余弦曲线，并保留角度播放、速度调节和手动定位。",
+      "image": "assets/media/sb1_m02.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "unit-circle-trig-generation"
+    },
+    {
+      "cardId": "sb1_m03",
+      "chapterIds": [
+        "sb1_c1_1"
+      ],
+      "title": "集合的维恩图与布尔运算",
+      "detail": "在维恩图和数轴区间之间切换，动态演示交集、并集、补集、差集等集合布尔运算。",
+      "image": "assets/media/sb1_m03.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "venn-boolean-operations"
+    },
+    {
+      "cardId": "sb1_m04",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "title": "对数螺旋线与自然底数 e",
+      "detail": "在极坐标和函数图像中联动观察对数螺旋线、自然底数 e、切线、积分与不等式推演。",
+      "image": "assets/media/sb1_m04.webp",
+      "isLocked": false,
+      "engine": "logarithmic-spiral-e",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp"
+    },
+    {
+      "cardId": "sb1_m05",
+      "chapterIds": [
+        "sb1_c5_2"
+      ],
+      "title": "三角函数图像的平移与伸缩",
+      "detail": "调节振幅、周期、相位与上下平移，动态演示三角函数图像的伸缩和平移规律。",
+      "image": "assets/media/sb1_m05.webp",
+      "isLocked": false,
+      "engine": "trig-translation-scaling",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp"
+    },
+    {
+      "cardId": "sb1_m06",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "title": "函数奇偶性的图像对称翻转",
+      "detail": "通过图像翻转与函数选择，演示偶函数关于 y 轴对称、奇函数关于原点对称的判定过程。",
+      "image": "assets/media/sb1_m06.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "function-parity-symmetry"
+    },
+    {
+      "cardId": "sb1_m07",
+      "chapterIds": [
+        "sb1_c4_4"
+      ],
+      "title": "幂函数族的图像分类总览",
+      "detail": "y=x^n 在不同 n 值下的图像族谱与定义域变化",
+      "image": "assets/media/sb1_m07.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "power-function-family-overview"
+    },
+    {
+      "cardId": "sb1_m08",
+      "chapterIds": [
+        "sb1_c2_1"
+      ],
+      "title": "数轴区间布尔运算推演",
+      "detail": "拖动区间端点并切换开闭状态，动态推演数轴区间的交、并、补、差运算。",
+      "image": "assets/media/math_card_bg_senior.webp",
+      "fallbackImage": "assets/media/math_card_bg_platinum.webp",
+      "isLocked": false,
+      "engine": "numberline-interval-boolean"
+    },
+    {
+      "cardId": "sb1_m09",
+      "chapterIds": [
+        "sb1_c1_2"
+      ],
+      "title": "常用逻辑用语与充分必要条件",
+      "detail": "占位卡片：用箭头关系图区分充分、必要、充要和既不充分也不必要的条件关系。正式互动内容待制作。",
+      "image": "assets/media/sb1_m09.webp",
+      "fallbackImage": "assets/media/sb1_m09.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "逻辑",
+        "充分必要条件",
+        "命题"
+      ],
+      "points": [
+        "逻辑",
+        "充分必要条件",
+        "命题"
+      ]
+    },
+    {
+      "cardId": "sb1_m11",
+      "chapterIds": [
+        "sb1_c2_1"
+      ],
+      "title": "二次函数方程不等式三联动",
+      "detail": "联动抛物线、x 轴交点和区间符号；通过系数调节、顶点与根的拖拽，观察二次函数、方程和不等式之间的对应关系。",
+      "image": "assets/media/sb1_m11.webp",
+      "fallbackImage": "assets/media/sb1_m11.webp",
+      "isLocked": false,
+      "engine": "source-html-adapter",
+      "visualLevel": "A",
+      "tags": [
+        "二次函数",
+        "方程",
+        "不等式"
+      ],
+      "points": [
+        "二次函数",
+        "方程",
+        "不等式"
+      ]
+    },
+    {
+      "cardId": "sb1_m16",
+      "chapterIds": [
+        "sb1_c3_4"
+      ],
+      "title": "抽象函数图像变换总控台",
+      "detail": "占位卡片：切换 f(x)+a、f(x-a)、-f(x)、f(-x) 等变换并观察图像规则。正式互动内容待制作。",
+      "image": "assets/media/sb1_m16.webp",
+      "fallbackImage": "assets/media/sb1_m16.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "函数变换",
+        "图像",
+        "抽象函数"
+      ],
+      "points": [
+        "函数变换",
+        "图像",
+        "抽象函数"
+      ]
+    },
+    {
+      "cardId": "sb1_m10",
+      "chapterIds": [
+        "sb1_c1_3"
+      ],
+      "title": "命题真假与全称存在量词",
+      "detail": "占位卡片：把全称命题、存在命题和命题否定放到样本集合中验证真假。正式互动内容待制作。",
+      "image": "assets/media/sb1_m10.webp",
+      "fallbackImage": "assets/media/sb1_m10.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "命题",
+        "量词",
+        "否定"
+      ],
+      "points": [
+        "命题",
+        "量词",
+        "否定"
+      ]
+    },
+    {
+      "cardId": "sb1_m12",
+      "chapterIds": [
+        "sb1_c2_2"
+      ],
+      "title": "基本不等式面积模型",
+      "detail": "占位卡片：用矩形面积和正方形边长变化展示 a+b 与 2√ab 的大小关系和取等条件。正式互动内容待制作。",
+      "image": "assets/media/sb1_m12.webp",
+      "fallbackImage": "assets/media/sb1_m12.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "基本不等式",
+        "最值",
+        "面积"
+      ],
+      "points": [
+        "基本不等式",
+        "最值",
+        "面积"
+      ]
+    },
+    {
+      "cardId": "sb1_m17",
+      "chapterIds": [
+        "sb1_c4_1"
+      ],
+      "title": "指数对数运算法则天平",
+      "detail": "占位卡片：用等量天平展示指数、对数运算法则和互化关系。正式互动内容待制作。",
+      "image": "assets/media/sb1_m17.webp",
+      "fallbackImage": "assets/media/sb1_m17.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "指数",
+        "对数",
+        "运算"
+      ],
+      "points": [
+        "指数",
+        "对数",
+        "运算"
+      ]
+    },
+    {
+      "cardId": "sb1_m18",
+      "chapterIds": [
+        "sb1_c5_1"
+      ],
+      "title": "任意角与弧度制旋转盘",
+      "detail": "占位卡片：旋转终边并同步显示角度、弧度、象限和同终边角。正式互动内容待制作。",
+      "image": "assets/media/sb1_m18.webp",
+      "fallbackImage": "assets/media/sb1_m18.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "任意角",
+        "弧度制",
+        "象限"
+      ],
+      "points": [
+        "任意角",
+        "弧度制",
+        "象限"
+      ]
+    },
+    {
+      "cardId": "sb1_m19",
+      "chapterIds": [
+        "sb1_c5_3"
+      ],
+      "title": "诱导公式与周期对称折叠",
+      "detail": "占位卡片：通过单位圆折叠和周期平移理解诱导公式的符号变化。正式互动内容待制作。",
+      "image": "assets/media/sb1_m19.webp",
+      "fallbackImage": "assets/media/sb1_m19.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "诱导公式",
+        "周期",
+        "对称"
+      ],
+      "points": [
+        "诱导公式",
+        "周期",
+        "对称"
+      ]
+    }
+  ]
+}

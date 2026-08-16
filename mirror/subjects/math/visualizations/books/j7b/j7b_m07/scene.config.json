@@ -1,0 +1,14 @@
+{
+  "cardId": "j7b_m07",
+  "status": "ready",
+  "engine": "irrational-root-location-model",
+  "entry": "scene.js?v=0b42dc5631e8",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-irrational-root-location",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=8062096183dc",
+  "script": "app.js?v=17fa906e93f3",
+  "generator": "math-source-bridge-v1",
+  "notes": "已接入无理数逼近与根号定位：左侧 SVG 数轴与几何构造沙盒、可收起板书 HUD，右侧平台操作面板承载预设、滑块、例题与原理解析。"
+}

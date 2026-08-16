@@ -1,0 +1,5460 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "junior",
+  "grade": "初中 CMM-Math 专题补齐题",
+  "source": {
+    "name": "CMM-Math",
+    "license": "bsd-3-clause",
+    "type": "open_dataset",
+    "origin": "CMM-Math",
+    "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math"
+  },
+  "review": {
+    "importedCount": 78,
+    "policy": "strict-objective-topic-fill no-unreviewed-images no-generated-questions",
+    "bucketCounts": {
+      "j7a_m05": 8,
+      "j7a_m06": 6,
+      "j7a_m10": 6,
+      "j7b_m05": 8,
+      "j7b_m06": 8,
+      "j7b_m07": 8,
+      "j7b_m09": 8,
+      "j8a_m10": 6,
+      "j8a_m11": 6,
+      "j8a_m12": 6,
+      "j8b_m06": 8
+    }
+  },
+  "questions": [
+    {
+      "id": "jr_cmm_topic_0002",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "有理数乘方",
+        "指数",
+        "运算规律"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "计算 1^0-(1/2)^2010 ×(-2)^2011 的结果是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-2"
+        },
+        {
+          "label": "B",
+          "text": "-1"
+        },
+        {
+          "label": "C",
+          "text": "2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析】解：原式 =1-(-1/2 × 2)^2010 ×(-2) =1+2 =3. 故选 D. 逆用积的乘方法则, 然后计算乘方, 计算乘法, 最后进行加减计算. 本题考查了实数的混合运算, 正确确定运算顺序是关键.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应有理数乘方的指数爆炸可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看有理数乘方的指数爆炸可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1842",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "有理数乘方的指数爆炸可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0003",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "有理数乘方",
+        "指数",
+        "运算规律"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若 2 x-3 y+z-2=0, 则 16^x ÷ 8^2 y × 4^z 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-16"
+        },
+        {
+          "label": "B",
+          "text": "16"
+        },
+        {
+          "label": "C",
+          "text": "8"
+        },
+        {
+          "label": "D",
+          "text": "4"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 本题考查的是同底数幂的除法运算、幂的乘方, 掌握同底数幂的除法法则: 底数不变,指数相减是解题的关键. 根据题意求出 2 x-3 y+z, 根据同底数幂的乘除法法则计算即可. 【解答】 解: 2 x-3 y+z-2=0, 2 x-3 y+z=2, 则原式 =(2^4)^x ÷(2^3)^2 y ×(2^2)^z =2^4 x ÷ 2^6 y × 2^2 z =2^2(2 x-3 y+z)； =2^4 =16, 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应有理数乘方的指数爆炸可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看有理数乘方的指数爆炸可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23590",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "有理数乘方的指数爆炸可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0004",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "有理数乘方",
+        "指数",
+        "运算规律"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知 a=2^40, b=3^32, c=4^24, 则 a、 b、 c 的大小关系为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "a<b<c"
+        },
+        {
+          "label": "B",
+          "text": "a<c<b"
+        },
+        {
+          "label": "C",
+          "text": "b<a<c"
+        },
+        {
+          "label": "D",
+          "text": "c<b<a"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 本题主要考查积的乘方. 先根据积的乘方把这几个数化为指数相等的数, 再进行比较. 【解答】 解: a=2^40=(2^5)^8=32^8, b=3^32=(3^4)^8=81^8, c=4^24=(4^3)^8=64^8. 因为 81>64>32, 所以 81^8>64^8>32^8, 所以 a<c<b.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应有理数乘方的指数爆炸可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看有理数乘方的指数爆炸可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23591",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "有理数乘方的指数爆炸可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0005",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "有理数乘方",
+        "指数",
+        "运算规律"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "王老师有一个实际容量为 1.8 G B(1 G B=2^20 K B) 的 U 盘, 内有三个文件夹, 已知课件文件夹占用了 0.8 G B 的容量, 照片文件夹内有 32 张大小都是 2^11 K B 的旅行照片, 音乐文件夹内有若干首大小都是 2^15 K B 的音乐, 若该 U 盘容量恰好用完, 则此时文件夹内有音乐(）",
+      "options": [
+        {
+          "label": "A",
+          "text": "28首"
+        },
+        {
+          "label": "B",
+          "text": "30首"
+        },
+        {
+          "label": "C",
+          "text": "32首"
+        },
+        {
+          "label": "D",
+          "text": "34首"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 本题考查了同底数幂乘除法运算, 熟练运用公式是解题的关键. 同底数幂的除法法则:底数不变, 指数相减. a^m ÷ a^n=a^m-n(a ≠ 0, m, n 是正整数, m>n) 解答此题, 求 32 张照片的容量大小, 用 U 盘的实际容量减去课件文件夹的容量, 并转化为 K B 为单位, 再减去照片的容量, 再除以每首音乐的容量即可. 【解答】 解: (1.8-0.8) × 2^20=2^20(K B) 32 × 2^11=2^16(K B), (2^20-2^16) ÷ 2^15=2^5-2=30 (首), 故选: B.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应有理数乘方的指数爆炸可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看有理数乘方的指数爆炸可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23878",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "有理数乘方的指数爆炸可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0006",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "有理数乘方",
+        "指数",
+        "运算规律"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "定义: 形如 a+b i 的数称为复数(其中 a 和 b 为实数, i 为虚数单位, 规定 i^2=-1),a称为复数的实部, b 称为复数的虚部. 复数可以进行四则运算, 运算的结果还是一个复数. 例如 (1+3 i)^2=1^2+2 × 1 × 3 i+(3 i)^2=1+6 i+9 i^2=1+6 i-9= -8+6 i, 因此, (1+3 i)^2 的实部是 -8, 虚部是 6. 已知复数 (3-m i)^2 的虚部是 12,则实部是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-6"
+        },
+        {
+          "label": "B",
+          "text": "6"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "-5"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】 C 【解解析】解: (3-m i)^2=3^2-2 × 3 × m i+(m i)^2=9-6 m i+m^2 i^2=9+m^2 i^2- 6 m i=9-m^2-6 m i, 复数 (3-m i)^2 的实部是 9-m^2, 虚部是 -6 m, -6 m=12, m=-2, 9-m^2=9-(-2)^2=9-4=5. 故选: C. 先利用完全平方公式得出 (3-m i)^2=9-6 m i+m^2 i^2, 再根据新定义得出复数 (3- m i)^2 的实部是 9-m^2, 虚部是 -6 m, 由 (3-m i)^2 的虚部是 12 得出 m=-2, 代入 9-m^2计算即可. 本题考查了新定义, 完全平方公式, 理解新定义是解题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应有理数乘方的指数爆炸可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看有理数乘方的指数爆炸可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23931",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "有理数乘方的指数爆炸可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0007",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_2"
+      ],
+      "knowledgePoints": [
+        "有理数乘方",
+        "指数",
+        "运算规律"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "设 a=2^0, b=(-3)^2, c=3次√(-9), d=(1/2)^-1, 则 a, b, c, d 按由小到大的顺序排列正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "c<a<d<b"
+        },
+        {
+          "label": "B",
+          "text": "b<d<a<c"
+        },
+        {
+          "label": "C",
+          "text": "a<c<d<b"
+        },
+        {
+          "label": "D",
+          "text": "b<c<a<d"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【答案】 A 【解解析】解: a=2°=1, b=(-3)^2=9,-3<c=3次√(-9)<-2, d=(1/2)^-1=2, 3次√(-9)<1<2<9, 即 c<a<d<b. 故选 A. 直接计算, 再根据负数小于一切正数, 两个负数比较大小, 两个负数绝对值大的反而小进行解答. 本题涉及到实数的零指数幂, 负整数指数及负数开立方, 要把它们逐一计算再比较大小.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应有理数乘方的指数爆炸可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看有理数乘方的指数爆炸可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23980",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "有理数乘方的指数爆炸可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0010",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "knowledgePoints": [
+        "同类项",
+        "整式加减",
+        "合并同类项"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "单项式 -1/2 a^2 n-1 b^4 与 3 a b^8 m 是同类项, 则 (1+n)^5(m-1)^7=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "1/4"
+        },
+        {
+          "label": "B",
+          "text": "-1/4"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "-4"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析】 ## 【分解析】 本题考查同类项的定义，解题的关键是正确理解同类项的定义，本题属于基础题型. 根据同类项的定义即可求出答案. ## 【解答】 解: 由题意可知: 2 n-1=1,4=8 m, 解得: n=1, m=1/2, 原式 =2^5 ×(-1/2)^7 =-1/4 故选：B.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应整式合并同类项积木，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看整式合并同类项积木"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2134",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "整式合并同类项积木"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0012",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "knowledgePoints": [
+        "同类项",
+        "整式加减",
+        "合并同类项"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知 2 a^n b^n 与 3 a^3 b^m+2 是同类项, 则 m+n=",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "-4"
+        },
+        {
+          "label": "D",
+          "text": "-3"
+        }
+      ],
+      "answer": "B",
+      "analysis": "2 a^n b^n 与 3 a^3 b^m+2 是同类项, m+2=n, n=3, 解得： m=1, 则 m+n=1+3=4. 故答案为: B.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应整式合并同类项积木，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看整式合并同类项积木"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1494",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "整式合并同类项积木"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0013",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "knowledgePoints": [
+        "同类项",
+        "整式加减",
+        "合并同类项"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "下列说法中, 正确的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "多项式 a^2+2 a^2 b+3 是二次三项式"
+        },
+        {
+          "label": "B",
+          "text": "单项式 -π x^2 y 的系数是 -1"
+        },
+        {
+          "label": "C",
+          "text": "单项式 4 m^2 n 和 -n m^2 是同类项"
+        },
+        {
+          "label": "D",
+          "text": "a b+3 b 是单项式"
+        }
+      ],
+      "answer": "C",
+      "analysis": "A、多项式 a^2+2 a^2 b+3 是三次三项式, 故原说法错误; B、单项式 -π x^2 y 的系数是 -π, 故原说法错误; C、单项式 4 m^2 n 和 -n m^2 是同类项, 故原说法正确; D、 a b+3 b 是多项式, 故原说法错误; 故答案为: C.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应整式合并同类项积木，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看整式合并同类项积木"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1476",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "整式合并同类项积木"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0014",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c2_1"
+      ],
+      "knowledgePoints": [
+        "同类项",
+        "整式加减",
+        "合并同类项"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若单项式 3 a b^4 n+1 与 9 a b^(2 n+2)-1 是同类项, 则 n 的值是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "7"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "0"
+        },
+        {
+          "label": "D",
+          "text": "-1"
+        }
+      ],
+      "answer": "C",
+      "analysis": "单项式 3 a b^4 n+1 与 9 a b^(2 n+2)-1 是同类项, 4 n+1=(2 n+2)-1, 4 n+1=2 n+2-1, 移项得: 2 n=0 n=0, 故选: C.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应整式合并同类项积木，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看整式合并同类项积木"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1572",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "整式合并同类项积木"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0015",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "knowledgePoints": [
+        "科学记数法",
+        "数量级",
+        "近似数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知某新型感冒病毒的直径约为 0.000000823 米, 将 0.000000823 用科学记数法表示为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "8.23 × 10^-6"
+        },
+        {
+          "label": "B",
+          "text": "8.23 × 10^-7"
+        },
+        {
+          "label": "C",
+          "text": "8.23 × 10^6"
+        },
+        {
+          "label": "D",
+          "text": "8.23 × 10^7"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 本题考查用科学记数法表示较小的数, 绝对值小于 1 的正数也可以利用科学记数法表示,一般形式为 a × 10^-n, 与较大数的科学记数法不同的是其所使用的是负指数幂, 指数由原数左边起第一个不为零的数字前面的 0 的个数所决定. 据此解答即可. 【解答】 解: 0.000000823=8.23 × 10^-7. 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应科学记数法数量级缩放，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看科学记数法数量级缩放"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23565",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "科学记数法数量级缩放"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0016",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "knowledgePoints": [
+        "科学记数法",
+        "数量级",
+        "近似数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "肥皂泡的泡壁厚度大约是 0.00000071 米, 数字 0.00000071 用科学记数法表示为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "7.1 × 10^7"
+        },
+        {
+          "label": "B",
+          "text": "0.71 × 10^-6"
+        },
+        {
+          "label": "C",
+          "text": "7.1 × 10^-7"
+        },
+        {
+          "label": "D",
+          "text": "71 × 10^-8"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】 C 【解解析】 【分解析】 本题主要考查用科学记数法表示较小的数. 一般形式为 a × 10^-n, 其中 1 ≤|a|<10, n 为由原数左边起第一个不为零的数字前面的 0 的个数所决定, n 等于原数左边起第一个不为零的数字前面的 0 的个数, 据此解答。 【解答】 解: 数字 0.00000071 用科学记数法表示为 7.1 × 10^-7, 故选: C。",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应科学记数法数量级缩放，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看科学记数法数量级缩放"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23612",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "科学记数法数量级缩放"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0017",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "knowledgePoints": [
+        "科学记数法",
+        "数量级",
+        "近似数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "2021 年5月15日, 天问一号着陆巡视器成功着陆于火星乌托邦平原, 此时距离地球约 320000000千米.数 320000000 用科学记数法表示为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "32 × 10^7"
+        },
+        {
+          "label": "B",
+          "text": "3.2 × 10^8"
+        },
+        {
+          "label": "C",
+          "text": "3.2 × 10^9"
+        },
+        {
+          "label": "D",
+          "text": "0.32 × 10^9"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解: 320000000=",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应科学记数法数量级缩放，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看科学记数法数量级缩放"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1960",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "科学记数法数量级缩放"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0018",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "knowledgePoints": [
+        "科学记数法",
+        "数量级",
+        "近似数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "2020 年 1 月 23 日全国发送 8349.9 万旅客, 其中 8349.9 万用科学记数法表示为(精确到万)()",
+      "options": [
+        {
+          "label": "A",
+          "text": "8.3499 × 10^7"
+        },
+        {
+          "label": "B",
+          "text": "8.349 × 10^7"
+        },
+        {
+          "label": "C",
+          "text": "8.35 × 10^7"
+        },
+        {
+          "label": "D",
+          "text": "8.350 × 10^7"
+        }
+      ],
+      "answer": "D",
+      "analysis": "## 【分解析】 此题主要考查了用科学记数法表示较大的数, 一般形式为 a × 10^n, 其中 1 ≤|a|<10, 确定 a 与 n 的值是解题的关键, 也考查了近似数. 用科学记数法表示较大的数时, 一般形式为 a × 10^n, 其中 1 ≤ |a|<10, n 为整数, 据此判断即可. ## 【解答】 解:",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应科学记数法数量级缩放，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看科学记数法数量级缩放"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2273",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "科学记数法数量级缩放"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0019",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "knowledgePoints": [
+        "科学记数法",
+        "数量级",
+        "近似数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "（2020 秋・田家庵区校级月考） 2020 年初, 新冠病毒肆虐, 新冠病毒是一种传染性很强的病毒,病毒颗粒多呈球形, 其中球形直径 60-140 nm, 请你将 60 nm 换算成单位 m （1 m=1000000000 nm),并用科学记数法表示正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "6.0 × 10^-9"
+        },
+        {
+          "label": "B",
+          "text": "6 × 10^-9"
+        },
+        {
+          "label": "C",
+          "text": "0.6 × 10^-9"
+        },
+        {
+          "label": "D",
+          "text": "6 × 10^-8"
+        }
+      ],
+      "answer": "D",
+      "analysis": "绝对值小于 1 的正数也可以利用科学记数法表示, 一般形式为 a × 10^-n, 与较大数的科学记数法不同的是其所使用的是负指数幂, 指数由原数左边起第一个不为零的数字前面的 0 的个数所决定. 【答案】解: 1 m=100000000 nm, 1 nm=1 × 10^-9 m, 60 nm=6 × 10^-8 m, 故选: D. 【点睛】本题考查用科学记数法表示较小的数, 一般形式为 a × 10^-n, 其中 1 ≤|a|<10, n 为由原数左边起第一个不为零的数字前面的 0 的个数所决定.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应科学记数法数量级缩放，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看科学记数法数量级缩放"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2567",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "科学记数法数量级缩放"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0020",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c1_5"
+      ],
+      "knowledgePoints": [
+        "科学记数法",
+        "数量级",
+        "近似数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "预防和控制新冠肺炎最有效的办法就是接种疫苗.截止 2021 年 12 月 1 日, 某市累计接种新冠病毒疫苗超过 350 万剂次，用科学记数法表示 350 万为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "35 × 10^5"
+        },
+        {
+          "label": "B",
+          "text": "3.5 × 10^5"
+        },
+        {
+          "label": "C",
+          "text": "3.5 × 10^6"
+        },
+        {
+          "label": "D",
+          "text": "3.5 × 10^7"
+        }
+      ],
+      "answer": "C",
+      "analysis": "350 万 =3500000=3.5 × 10^6. 故答案为: C.",
+      "matchedCards": [
+        {
+          "cardId": "j7a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应科学记数法数量级缩放，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看科学记数法数量级缩放"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1334",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "科学记数法数量级缩放"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0021",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "《孙子算经》中有一道题, 原文是: 今有木, 不知长短。引绳度之, 余绳四尺五寸; 屈绳量之, 不足一尺。木长几何? 意思是: 用一根绳子去量一根长木, 绳子还剩余4.5尺; 将绳子对折再量长木, 长木还剩余1尺, 问木长多少尺？设木长为 x 尺，绳子长为 y 尺, 则下列符合题意的方程组是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "y=x+4.5； 1/2 y=x+1"
+        },
+        {
+          "label": "B",
+          "text": "y=4.5-x； 1/2 y=x+1"
+        },
+        {
+          "label": "C",
+          "text": "y=x+4.5； 1/2 y=x-1"
+        },
+        {
+          "label": "D",
+          "text": "y=x-4.5； 1/2 y=x-1"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】C 【解解析】 【分解析】 本题考查由实际问题抽象出二元一次方程组, 解题的关键是明确题意, 列出相应的二元一次方程组. 根据题意可以列出相应的二元一次方程组, 从而本题得以解决. 【解答】 解: 由题意可得, y=x+4.5； 1/2 y=x-1 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23497",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0022",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "《九章算术》中记载: 今有人共买物, 人出八, 盈三; 人出七, 不足四. 问人数、物价各几何? 意思是: 现在一些人共同买一个物品, 每人出 8 元, 还余 3 元; 每人出7元, 还差 4 元. 问共有多少人? 这个物品价格是多少元? 设共有 x 个人, 这个物品价格是 y 元. 则可列方程组为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "8 x=y+3； 7 x=y-4"
+        },
+        {
+          "label": "B",
+          "text": "8 x=y-3； 7 x=y+4"
+        },
+        {
+          "label": "C",
+          "text": "8 x=y+4； 7 x=y-3"
+        },
+        {
+          "label": "D",
+          "text": "8 x=y-4； 7 x=y+3"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【答案】 A 【解解析】解：设共有 x 个人, 这个物品价格是 y 元, 则 8 x=y+3； 7 x=y-4. 故选: A. 设共有 x 个人, 这个物品价格是 y 元, 根据物品的价格不变列出方程. 本题主要考查由实际问题抽象出二元一次方程组, 解题的关键是理解题意, 确定相等关系, 并据此列出方程.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23500",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0023",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "我国古代数学名著《孙子算经》中记载了一道题, 大意是: 100 匹马恰好拉了 100 片瓦, 已知3匹小马能拉1片瓦, 1匹大马能拉 3 片瓦, 求小马, 大马各有多少匹. 若设小马有 x 匹, 大马有 y 匹, 则下列方程组中正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "x+y=100； y=3 x"
+        },
+        {
+          "label": "B",
+          "text": "x+y=100； x=3 y"
+        },
+        {
+          "label": "C",
+          "text": "x+y=100； 1/3 x+3 y=100"
+        },
+        {
+          "label": "D",
+          "text": "x+y=100； 1/3 y+3 x=100"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】 C 【解解析】解: 根据题意可得: x+y=100； (x)/(3)+3 y=100, 故选: C. 根据 3匹小马能拉 1 片瓦, 1 匹大马能拉 3 片瓦, 即可得出关于 x, y 的二元一次方程组, 此题得解. 本题考查了由实际问题抽象出二元一次方程组, 找准等量关系, 正确列出二元一次方程组是解题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23521",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0024",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "一道来自练习册的习题: 从甲地到乙地有一段上坡与一段平路.如果保持上坡每小时走 3 km, 平路每小时走 4 km, 下坡每小时走 5 km, 那么从甲地到乙地需 54 min, 从乙地到甲地需 42 min. 甲地到乙地全程是多少. 小红将这个实际问题转化为二元一次方程组问题, 设未知数 x, y, 已经列出一个方程 (x)/(3)+(y)/(4)=54/60, 则另一个方程正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(x)/(4)+(y)/(3)=42/60"
+        },
+        {
+          "label": "B",
+          "text": "(x)/(5)+(y)/(4)=42/60"
+        },
+        {
+          "label": "C",
+          "text": "(x)/(4)+(y)/(5)=42/60"
+        },
+        {
+          "label": "D",
+          "text": "(x)/(3)+(y)/(4)=42/60"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 此题主要考查了二元一次方程组的应用, 正确理解题意得出等式是解题关键.直接利用已知方程得出上坡的路程为 x, 平路为 y, 进而得出等式求出答案. 【解答】 解: 由已经列出的方程 (x)/(3)+(y)/(4)=54/60 可知, 上坡的路程为 x, 平路为 y,则另一个方程正确的是: (x)/(5)+(y)/(4)=42/60. 故选: B.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23523",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0025",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "我国古代数学著作 《孙子算经》中有鸡兔同笼问题: 今有鸡兔同笼, 上有三十五头, 下有九十四足, 问鸡兔各几何. 设鸡有 x 只, 兔有 y 只, 则根据题意, 下列方程组中正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "x+y=35； 2 x+4 y=94"
+        },
+        {
+          "label": "B",
+          "text": "x+y=35； 4 x+2 y=94"
+        },
+        {
+          "label": "C",
+          "text": "2 x+y=35； x+4 y=94"
+        },
+        {
+          "label": "D",
+          "text": "x+4 y=35； 2 x+y=94"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【答案】 A 【解解析】解：设鸡有 x 只，兔有 y 只， 根据题意, 可列方程组为 x+y=35； 2 x+4 y=94, 故选: A. 根据鸡的数量 + 兔的数量 =35, 鸡的脚的数量 + 兔子的脚的数量 =94 可列方程组.本题主要考查由实际问题抽象出二元一次方程组, 解题的关键是理解题意, 找到题目蕴含的相等关系.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23525",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0026",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若 a=2,； b=1 是二元一次方程组 3/2 a x+b y=5,； a x-b y=2 的解, 则 x+2 y 的算术平方根为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "3,-3"
+        },
+        {
+          "label": "C",
+          "text": "√(3)"
+        },
+        {
+          "label": "D",
+          "text": "√(3),-√(3)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】 C 【解解析】 【分解析】 本题考查加减法解二元一次方程组, 二元一次方程组的解和算术平方根, 熟练掌握二元一次方程组的解与二元一次方程组的关系, 并能准确求算术平方根是解题的关键. 将 a=2； b=1 代入 3/2 a x+b y=5； a x-b y=2, 然后用加减消元法求出方程组的解, 再求 x+2 y 的算术平方根即可. 【解答】 解: a=2； b=1 是二元一次方程组 3/2 a x+b y=5； a x-b y=2 的解, 3 x+y=51； 2 x-y=2 (1) + (2)得, 5 x=7, x=7/5, 将 x=7/5 代入(1)得 y=4/5, x+2 y=7/5+8/5=3, x+2 y 的算术平方根为 √(3), 故选: C.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23952",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0027",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "（2021 秋・威宁县校级期末）为响应国家号召, 某单位积极组织员工去接种新冠疫苗. 该单位共有 x 名员工, 分 y 组接种疫苗, 若每组 60 人, 则只有一组缺 2 人; 若每组 50 人, 则余下 38 人. 根据题意, 可列方程组为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "60 x=y+2； 50 x=y-38"
+        },
+        {
+          "label": "B",
+          "text": "60 y=x-2； 50 y=x+38"
+        },
+        {
+          "label": "C",
+          "text": "60 x=y-2； 50 x=y+38"
+        },
+        {
+          "label": "D",
+          "text": "60 y=x+2； 50 y=x-38"
+        }
+      ],
+      "answer": "D",
+      "analysis": "根据若每组 60 人, 则只有一组缺 2 人; 若每组 50 人, 则余下 38 人, 即可得出关于 x, y 的二元一次方程组, 此题得解. 【答案】解: 若每组 60 人, 则只有一组缺 2 人, 60 y=x+2; 若每组 50 人, 则余下 38 人, 50 y=x-38. 根据题意, 可列方程组为 60 y=x+2； 50 y=x-38. 故选: D. 【点睛】本题考查了由实际问题抽象出二元一次方程组, 找准等量关系, 正确列出二元一次方程组是解题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2618",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0028",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_1"
+      ],
+      "knowledgePoints": [
+        "二元一次方程组",
+        "应用题建模",
+        "交点求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(2020 浙江七年级期末) 已知 x=2； y=1 是二元一次方程组 a x+b y=8； b x-a y=1 的解，则 4 a-5 b 的平方根为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(2)"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "± √(2)"
+        },
+        {
+          "label": "D",
+          "text": "± 2"
+        }
+      ],
+      "answer": "C",
+      "analysis": "由题意可得关于 a、 b 的方程组, 解方程组即可求出 a、 b 的值, 进一步可求出 4 a-5 b 的值,再根据平方根的定义解答即可. 【详解】解: x=2； y=1 是二元一次方程组 a x+b y=8； b x-a y=1 的解, 2 a+b=8； 2 b-a=1, 解得: a=3； b=2, 4 a-5 b=12-10=2,2 的平方根是 ± √(2), 4 a-5 b 的平方根是 ± √(2). 故选: C. 【点睛】本题考查了二元一次方程组的解法和平方根的定义等知识, 属于常考题型, 熟练掌握上述基本知识是解题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二元一次方程组的交点求解，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二元一次方程组的交点求解"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2547",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "二元一次方程组的交点求解"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0029",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "knowledgePoints": [
+        "平方根",
+        "立方根",
+        "实数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(-0.7)^2 的平方根是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-0.7"
+        },
+        {
+          "label": "B",
+          "text": "0.7"
+        },
+        {
+          "label": "C",
+          "text": "± 0.7"
+        },
+        {
+          "label": "D",
+          "text": "0.49"
+        }
+      ],
+      "answer": "C",
+      "analysis": "本题考查了平方根的概念. 注意一个正数有两个平方根, 它们互为相反数. 根据平方根的定义解答即可.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应平方根与立方根数轴定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看平方根与立方根数轴定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1818",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "平方根与立方根数轴定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0030",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "knowledgePoints": [
+        "平方根",
+        "立方根",
+        "实数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "9/16 的平方根是 ± 3/4 用数学式子表示应是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "± √(9/16)= ± 3/4"
+        },
+        {
+          "label": "B",
+          "text": "± √(9/16)=3/4"
+        },
+        {
+          "label": "C",
+          "text": "√(9/16)=3/4"
+        },
+        {
+          "label": "D",
+          "text": "-√(9/16)=-3/4"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析】 ## 【分解析】 本题考查了平方根的定义, 解决本题的根据是熟记平方根的定义. 根据平方根的定义，即可解答. ## 【解答】 解: 9/16 的平方根是 ± 3/4 用数学式表示为 ± √(9/16)= ± 3/4, 故选 A.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应平方根与立方根数轴定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看平方根与立方根数轴定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1829",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "平方根与立方根数轴定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0031",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "knowledgePoints": [
+        "平方根",
+        "立方根",
+        "实数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "一个自然数的算术平方根为 √(m), 则与它相邻的下一个自然数的平方根是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "± √(m+1)"
+        },
+        {
+          "label": "B",
+          "text": "± √(m)+1"
+        },
+        {
+          "label": "C",
+          "text": "± √(m^2+1)"
+        },
+        {
+          "label": "D",
+          "text": "± √(m^2)+1"
+        }
+      ],
+      "answer": "A",
+      "analysis": "## 【分解析】 本题考查了求一个数的算术平方根, 平方根, 比较简单.根据算术平方根的定义得这个自然数为 m,则与这个自然数相邻的后续自然数 m+1, 由此即可得到其平方根. ## 【解答】 解: 一个自然数的算术平方根是 √(m), 这个自然数为 m， 与这个自然数相邻的后续自然数 m+1, 其平方根为 ± √(m+1). 故选 A.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应平方根与立方根数轴定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看平方根与立方根数轴定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1850",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "平方根与立方根数轴定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0032",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "knowledgePoints": [
+        "平方根",
+        "立方根",
+        "实数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "爸爸为颖颖买了一个密码箱, 并告诉其密码(密码为自然数) 是 1、 2、 4、 6、 8、 9 六个数中的三个数的算术平方根, 则这个密码箱的密码可能是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "123"
+        },
+        {
+          "label": "B",
+          "text": "189"
+        },
+        {
+          "label": "C",
+          "text": "169"
+        },
+        {
+          "label": "D",
+          "text": "248"
+        }
+      ],
+      "answer": "A",
+      "analysis": "## 【分解析】 本题主要考查了算术平方根, 首先根据算术平方根的定义, 求出各数的算术平方根, 然后找出是自然数的数即可. ## 【解答】 解： 1 的算术平方根是 1 ; 2 的算术平方根是 √(2) ; 4 的算术平方根是 √(4)=2 ; 6 的算术平方根是 √(6); 8 的算术平方根是 √(8)=2 √(2) ; 9 的算术平方根是 √(9)=3. 这个密码箱的密码可能是",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应平方根与立方根数轴定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看平方根与立方根数轴定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1857",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "平方根与立方根数轴定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0033",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "knowledgePoints": [
+        "平方根",
+        "立方根",
+        "实数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "下列说法正确的有 () (1)带根号的数都是无理数; (2)立方根等于本身的数是 0 和 1 ; (3) -a 一定没有平方根; (4)实数与数轴上的点是一一对应的; (5)两个无理数的差还是无理数.",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 个"
+        },
+        {
+          "label": "B",
+          "text": "2 个"
+        },
+        {
+          "label": "C",
+          "text": "3 个"
+        },
+        {
+          "label": "D",
+          "text": "4 个"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析】解: (1) √(4)=2 是有理数, 故(1)不符合题意; (2)立方根等于本身的数是 0 和 1、-1, 故 (2) 不符合题意; (3)当 a<0 时, -a 有平方根, 故(3)不符合题意; (4)实数与数轴上的点是一一对应的, 故 (4)符合题意; (5)两个无理数的差可能是无理数、可能是有理数, 故(5)不符合题意; 故选: A. 根据无理数的意义, 实数与数轴的关系, 立方根的意义, 可得答案. 本题考查了无理数的意义, 实数与数轴的关系, 立方根的意义是解题关键.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应平方根与立方根数轴定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看平方根与立方根数轴定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1863",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "平方根与立方根数轴定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0034",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "knowledgePoints": [
+        "平方根",
+        "立方根",
+        "实数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若 a, b 满足 (a-1)^2+√(b-15)=0, 则 a+b 的平方根是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "± 4"
+        },
+        {
+          "label": "B",
+          "text": "± 2"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析】 ## 【分解析】 根据非负数的性质列式求出 a v b, 根据平方根的概念计算即可. 本题考查的是非负数的性质、平方根的概念, 掌握非负数之和等于 0 时, 各项都等于 0 是解题的关键. ## 【解答】 解：由题意得， a-1=0, b-15=0, 解得, a=1, b=15, 则 a+b=16, 16 的平方根是 ± 4, 故选: A.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应平方根与立方根数轴定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看平方根与立方根数轴定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2011",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "平方根与立方根数轴定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0035",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_1",
+        "j7b_c6_2"
+      ],
+      "knowledgePoints": [
+        "平方根",
+        "立方根",
+        "实数"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "-√(64) 的立方根是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-4"
+        },
+        {
+          "label": "B",
+          "text": "± 4"
+        },
+        {
+          "label": "C",
+          "text": "± 2"
+        },
+        {
+          "label": "D",
+          "text": "-2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析】 ## 【分解析】 本题考查的是立方根与算术平方根. 先求出 -√(64) 的值, 再用立方根的计算方法进行计算即可. ## 【解答】 解: -√(64)=-8, 而 -8 的立方根是 -2, 则 -√(64) 的立方根是 -2, 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应平方根与立方根数轴定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看平方根与立方根数轴定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2034",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "平方根与立方根数轴定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0037",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "knowledgePoints": [
+        "无理数",
+        "根号估算",
+        "数轴定位"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "估计 √(22) 的值在 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "3 和 4 之间"
+        },
+        {
+          "label": "B",
+          "text": "4 和 5 之间"
+        },
+        {
+          "label": "C",
+          "text": "5 和 6 之间"
+        },
+        {
+          "label": "D",
+          "text": "6 和 7 之间"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析】解: √(16)<√(22)<√(25), 4<√(22)<5, 故选: B. 用夹逼法找到 √(22) 在哪两个可化为整数的算术平方根之间即可.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m07",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应无理数逼近与根号定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看无理数逼近与根号定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1820",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "无理数逼近与根号定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0039",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "knowledgePoints": [
+        "无理数",
+        "根号估算",
+        "数轴定位"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "计算 -√(4)-|-3| 的结果是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1"
+        },
+        {
+          "label": "B",
+          "text": "-5"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "analysis": "## 【分解析】 此题考查了实数的运算, 熟练掌握运算法则是解本题的关键. 原式利用算术平方根定义, 以及绝对值的代数意义计算即可求出值. ## 【解答】 解: 原式 =-2-3=-5, 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m07",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应无理数逼近与根号定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看无理数逼近与根号定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1841",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "无理数逼近与根号定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0040",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "knowledgePoints": [
+        "无理数",
+        "根号估算",
+        "数轴定位"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在下列各数中是无理数的有 () 0.333, √(4), √(5), 1/3, 2 π, 3.14,2.0101010 (相邻两个 1 之间有 1 个 0)",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 个"
+        },
+        {
+          "label": "B",
+          "text": "3 个"
+        },
+        {
+          "label": "C",
+          "text": "4 个"
+        },
+        {
+          "label": "D",
+          "text": "6 个"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解: √(5), 2 π 是无理数, 故选: A. 无理数就是无限不循环小数. 理解无理数的概念, 一定要同时理解有理数的概念, 有理数是整数与分数的统称, 即有限小数和无限循环小数是有理数, 而无限不循环小数是无理数. 由此即可判定选择项. 此题主要考查了无理数的定义, 其中初中范围内学习的无理数有: π, 2 π 等; 开方开不尽的数;以及像",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m07",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应无理数逼近与根号定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看无理数逼近与根号定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1859",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "无理数逼近与根号定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0041",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "knowledgePoints": [
+        "无理数",
+        "根号估算",
+        "数轴定位"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若 a=3次√(7), b=√(5), c=2, 则 a, b, c 的大小关系为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "b<c<a"
+        },
+        {
+          "label": "B",
+          "text": "b<a<c"
+        },
+        {
+          "label": "C",
+          "text": "a<c<b"
+        },
+        {
+          "label": "D",
+          "text": "a<b<c"
+        }
+      ],
+      "answer": "C",
+      "analysis": "## 【分解析】 本题考查实数的大小比较, 理解算术平方根、立方根的意义是正确判断的前提. 根据算术平方根、立方根的意义估算出 a、 b 的范围, 再进行比较即可. ## 【解答】 解: 3次√(1)<3次√(7)<3次√(8), 1<3次√(7)<2, 即 1<a<2， 又 2<√(5)<3, 2<b<3, a<c<b, 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m07",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应无理数逼近与根号定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看无理数逼近与根号定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2031",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "无理数逼近与根号定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0042",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "knowledgePoints": [
+        "无理数",
+        "根号估算",
+        "数轴定位"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "如果 3次√(2.37) 1.333, 3次√(23.7) 2.872，那么 3次√(2370) 约等于 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "28.72"
+        },
+        {
+          "label": "B",
+          "text": "0.2872"
+        },
+        {
+          "label": "C",
+          "text": "13.33"
+        },
+        {
+          "label": "D",
+          "text": "0.1333"
+        }
+      ],
+      "answer": "C",
+      "analysis": "## 【分解析】 本题考查立方根的定义，根据立方根的定义即可解答.关键是确定两个被开方数之间的关系. ## 【解答】 解: [3]",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m07",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应无理数逼近与根号定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看无理数逼近与根号定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2033",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "无理数逼近与根号定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0043",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "knowledgePoints": [
+        "无理数",
+        "根号估算",
+        "数轴定位"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "实数 -2.3, √(7), 0, 3次√(27),-π, 4/11, 0.15 中, 有理数的个数为 a, 无理数的个数为 b, 则 a-b的值是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "7"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解: 在实数 -",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m07",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应无理数逼近与根号定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看无理数逼近与根号定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2035",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "无理数逼近与根号定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0044",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c6_3"
+      ],
+      "knowledgePoints": [
+        "无理数",
+        "根号估算",
+        "数轴定位"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "如果 x、 y 分别是 4-√(3) 的整数部分和小数部分, 则 x-y=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "3次√(3)"
+        },
+        {
+          "label": "B",
+          "text": "-√(3)"
+        },
+        {
+          "label": "C",
+          "text": "1+√(3)"
+        },
+        {
+          "label": "D",
+          "text": "2-√(3)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析】 ## 【分解析】 本题主要考查的是估算无理数的大小, 利用不等式的性质确定出 4-√(3) 的范围是解题的关键. 先估算出 √(3) 的大小, 然后利用不等式的性质得到 4-√(3) 的范围, 从而得到 x、 y 的值, 然后代入计算即可. ## 【解答】 解: 1<3<4, 1<√(3)<2, -1>-√(3)>-2, 3>4-√(3)>2. x=2, y=4-√(3)-2=2-√(3). x-y=2-(2-√(3))=√(3). 故选 A.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m07",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应无理数逼近与根号定位，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看无理数逼近与根号定位"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2301",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "无理数逼近与根号定位"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0045",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若关于 x, y 的二元一次方程组 m x-n y=5； m x+n y=6 的解是 x=8； y=4, 则关于 a, b 的二元一次方程组 m(2 a+b)-2 n b=5； m(2 a+b)+2 n b=6 的解是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "a=2； b=3"
+        },
+        {
+          "label": "B",
+          "text": "a=3； b=2"
+        },
+        {
+          "label": "C",
+          "text": "a=4； b=2"
+        },
+        {
+          "label": "D",
+          "text": "a=8； b=4"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】解: 将关于 a, b 的二元一次方程组 m(2 a+b)-2 n b=5； m(2 a+b)+2 n b=6 变形可得: m ·(2 a+b)-n · 2 b=5,； m ·(2 a+b)+n · b=6 关于 x, y 的二元一次方程组 m · x-n · y=5； m · x+n · y=6 的解是 x=8,； y=4, 2 a+b=x=8； 2 b=y=4 解得: x=3,； b=2, 故选: B.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23479",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0046",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "m 为正整数, 已知二元一次方程组 m x+2 y=10； 3 x-2 y=0 有整数解, 则 m^2 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "4"
+        },
+        {
+          "label": "B",
+          "text": "49"
+        },
+        {
+          "label": "C",
+          "text": "4 或 49"
+        },
+        {
+          "label": "D",
+          "text": "1 或 49"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【答案】A 【解解析】 【分解析】本题主要考查二元一次方程组的解, 求出方程组的解得出 m 满足的条件是解题的关键. 先解方程组, 由条件方程组的解为整数, 再讨论即可求得 m 的值, 进一步计算 m^2 即可. 【解答】解: 解方程组 m x+2 y=10 可得 (m+3) x=10, x=(m+3)/(10),； 3 x-2 y=0 y=(15)/(m+3) 方程组 m x+2 y=10； 3 x-2 y=0 有整数解, m+3 为 10 和 15 的公约数, 且 m 为正整数, m+3=5, 解得 m=2, m^2=4, 故选 A.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23493",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0047",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若关于 x, y 的二元一次方程组 x+y=5 k； x-y=9 k 的解也是二元一次方程 2 x+3 y=6 的解,则 k 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-3/4"
+        },
+        {
+          "label": "B",
+          "text": "3/4"
+        },
+        {
+          "label": "C",
+          "text": "4/3"
+        },
+        {
+          "label": "D",
+          "text": "-4/3"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 此题考查了二元一次方程组的解, 以及二元一次方程的解, 方程的解即为能使方程左右两边成立的未知数的值. 将 k 看做已知数求出 x 与 y, 代入 2 x+3 y=6 中计算即可得到 k 的值. 【解答】 解: x+y=5 k(1)； x-y=9 k(2) (1) + (2)得: 2 x=14 k, 即 x=7 k, 将 x=7 k 代入(1)得: 7 k+y=5 k, 即 y=-2 k, 将 x=7 k, y=-2 k 代入 2 x+3 y=6 得: 14 k-6 k=6, 解得: k=3/4. 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23494",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0048",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知关于 x, y 的二元一次方程组 a x-y=4； 3 x+b y=4 的解是 x=2； y=-2, 则 a+b 的值是",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "-1"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 本题考查二元一次方程组的解; 熟练掌握方程组与方程组的解之间的关系是解题的关键. 将 x=2； y=-2 代入 a x-y=4； 3 x+b y=4 即可求出 a 与 b 的值; 【解答】 解: 将 x=2； y=-2 代入 a x-y=4； 3 x+b y=4 得: 2 a+2=4； 6-2 b=4 解得 a=1； b=1 a+b=2; 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23518",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0049",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "用加减消元法解二元一次方程组 x+3 y=4 (1) 时, 下列方法中无法消元的是 ()； 2 x-y=1 (2)",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1) × 2-(2)"
+        },
+        {
+          "label": "B",
+          "text": "(2) ×(-3)-(1)"
+        },
+        {
+          "label": "C",
+          "text": "(1) ×(-2)+ (2)"
+        },
+        {
+          "label": "D",
+          "text": "(1) - (2) × 3"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】 D 【解解析】解: A、 (1) × 2 - (2)可以消去 x, 不符合题意; B、(2) ×(-3)- (1)可以消去 y, 不符合题意; C、 (1) ×(-2)+ (2) 可以消去 x, 不符合题意; D、(1)-(2) × 3 无法消元, 符合题意. 故选: D. 方程组利用加减消元法变形即可. 此题考查了解二元一次方程组, 熟练掌握加减消元法是解本题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23907",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0050",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "我国古代数学著作《孙子算经》中有鸡兔同笼问题: 今有鸡兔同笼, 上有三十五头, 下有九十四足, 问鸡兔各几何？设有 x 只鸡、 y 只兔, 则可用二元一次方程组表示题中的数量关系为()",
+      "options": [
+        {
+          "label": "A",
+          "text": "x+y=35； 2 x+y=94"
+        },
+        {
+          "label": "B",
+          "text": "x+y=35； 2 x+2 y=94"
+        },
+        {
+          "label": "C",
+          "text": "x+y=35； x+2 y=94"
+        },
+        {
+          "label": "D",
+          "text": "x+y=35； 2 x+4 y=94"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】 D 【解解析】解: 设有 x 只鸡、 y 只兔, 由题意得, 鸡有 1 个头, 2 只脚, 兔有 1 个头, 4 只脚, 结合上有三十五头, 下有九十四足可得: x+y=35； 2 x+4 y=94. 故选: D. 根据等量关系: 上有三十五头, 下有九十四足, 即可列出方程组. 此题考查了由实际问题抽象出二元一次方程组的知识, 解答本题的关键是仔细审题, 根据等量关系得出方程组, 难度一般.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23926",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0051",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在关于 x、 y 的二元一次方程组 x-2 y=a+6； 3 x+y=2 a 的下列说法中, 正确的是 (1)当 a=3 时, 方程的两根互为相反数; (2)当且仅当 a=-4 时，解得 x 与 y 相等; (3) x, y 满足关系式 x+5 y=-12; (4)若 9^x · 27^y=81, 则 a=10.",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)(3)"
+        },
+        {
+          "label": "B",
+          "text": "(1)(2)"
+        },
+        {
+          "label": "C",
+          "text": "(1) (2)(3)"
+        },
+        {
+          "label": "D",
+          "text": "(1)(2)(3)(4)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】 D 【解解析】 【分解析】 本题考查三元一次方程组的解法, 方程组的解. 把 a=3 代入原方程, 求解即可判定(1);把 a=-4 代入原方程求解, 即可判定(2); 把原方程中第一个方程乘以 2, 两式相减即可得 x+5 y 的值, 即可判定(3); 由 9^x × 27^y=81, 得 3^2 x+3 y=3^4, 所以 2 x+3 y=4, 将原方程中第二方程一第一方程, 即可得 2 x+3 y=a-6, 所以有 a-6=4, 即可求出 a 值,从而可判定(4). 继而得出答案. 【解答】 解: x-2 y=a+6； 3 x+y=2 a (2) 把 a=3 代入方程组得 x-2 y=9； 3 x+y=6 解得: x=3； y=-3, x、 y 互为相反数, 故(1)正确; 把 a=-4 代入方程组得 x-2 y=2； 3 x+y=-8, 解得: x=-2； y=-2, x=y, 故(2)正确; (2) - (1) × 2 得 x+5 y=-12, 故(3)正确; (2) - (1) 得 2 x+3 y=a-6, 又 9^x × 27^y=81, 3^2 x+3 y=3^4, 2 x+3 y=4, a-6=4, 解得: a=10, 故(4)正确正确的有(1)(2)(4). 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23979",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0052",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7b",
+      "chapterIds": [
+        "j7b_c8_2"
+      ],
+      "knowledgePoints": [
+        "消元法",
+        "二元一次方程组",
+        "代数求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "(2021 春・卧龙区校级月考) 利用加减消元法解方程组 2 x+5 y=-10(1)； 5 x-3 y=6(2), 下列做法正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "要消去 x, 可以将 (1) × 3+(2) ×(-5)"
+        },
+        {
+          "label": "B",
+          "text": "要消去 y, 可以将 (1) × 5+(2) × 2"
+        },
+        {
+          "label": "C",
+          "text": "要消去 x, 可以将 (1) ×(-5)+(2) × 2"
+        },
+        {
+          "label": "D",
+          "text": "要消去 y, 可以将 (1) × 5+(2) × 3"
+        }
+      ],
+      "answer": "C",
+      "analysis": "利用加减消元法判断即可. 【答案】解: 利用加减消元法解方程组 2 x+5 y=-10(1)； 5 x-3 y=6(2), 要消元 x,(1) ×(-5)+(2) × 2;要消去 y, 可以将 (1) × 3+(2) × 5, 故选: C. 【点睛】此题考查解二元一次方程组, 利用了消元的思想, 消元的方法有: 代入消元法与加减消元法.",
+      "matchedCards": [
+        {
+          "cardId": "j7b_m09",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应消元法解二元一次方程组，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看消元法解二元一次方程组"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2611",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "消元法解二元一次方程组"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0053",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "knowledgePoints": [
+        "因式分解",
+        "提公因式",
+        "公式法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "如果多项式 x^2-m x-35 分解因式为 (x-5)(x+7), 那么 m 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-2"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "12"
+        },
+        {
+          "label": "D",
+          "text": "-12"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【答案】 A 【解解析】 【分解析】 本题主要考查了因式分解与多项式相乘是互逆运算, 解答此题要熟练掌握多项式乘法的运算法则; 解答此题把多项式相乘展开, 然后利用系数对应即可求解. 【解答】 解: (x-5)(x+7) =x^2+7 x-5 x-35； =x^2+2 x-35 =x^2-m x-35, -m=2, m=-2. 故选 A.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应因式分解面积拼图，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看因式分解面积拼图"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23660",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "因式分解面积拼图"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0054",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "knowledgePoints": [
+        "因式分解",
+        "提公因式",
+        "公式法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "将下列多项式因式分解, 结果中不含有因式 a+1 的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "a^2-1"
+        },
+        {
+          "label": "B",
+          "text": "a^2+a"
+        },
+        {
+          "label": "C",
+          "text": "a^2+a-2"
+        },
+        {
+          "label": "D",
+          "text": "(a+2)^2-2(a+2)+1"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】C 【解解析】 【分解析】本题考查了因式分解的意义与方法; 熟练掌握因式分解的方法是解决问题的关键.先把各个多项式分解因式, 即可得出结果. 【解答】 A. a^2-1=(a+1)(a-1), 含因式 a+1; B. a^2+a=a(a+1)，含因式 a+1； C. a^2+a-2=(a+2)(a-1)， 不含因式 a+1; D. (a+2)^2-2(a+2)+1=(a+2-1)^2=(a+1)^2, 含因式 a+1. 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应因式分解面积拼图，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看因式分解面积拼图"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23661",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "因式分解面积拼图"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0055",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "knowledgePoints": [
+        "因式分解",
+        "提公因式",
+        "公式法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "下列因式分解正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "x y^2-3 x^2 y+x y=x y(y-3 x)"
+        },
+        {
+          "label": "B",
+          "text": "x^4-2 x^2+1=(x^2-1)^2"
+        },
+        {
+          "label": "C",
+          "text": "(x-3)(x+4)=x^2+x-12"
+        },
+        {
+          "label": "D",
+          "text": "x^3-x^2+1/4 x=x(x-1/2)^2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】 D 【解解析】 【分解析】 本题考查了对因式分解定义的应用, 能理解因式分解的定义是解此题的关键, 注意: 把一个多项式化成几个整式的积的形式, 叫因式分解, 也叫分解因式. 根据因式分解的定义(把一个多项式化成几个整式的积的形式, 叫因式分解, 也叫分解因式)判断即可. 【解答】 解: A. x y^2-3 x^2 y+x y=x y(y-3 x+1) 是因式分解, 但因式分解结果错误, 故本选项错误; B. x 4-2 x 2+1=(x 2-1)^2=(x+1)^2(x-1)^2, 未分解彻底, 故本选项错误; C. (x-3)(x+4)=x^2+x-12 属于多项式乘多项式, 不是因式分解, 故本选项错误; D. x^3-x^2+1/4 x=x(x-1/2)^2 利用提取公因式法和完全平方公式进行因式分解, 故本选项正确. 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应因式分解面积拼图，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看因式分解面积拼图"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23677",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "因式分解面积拼图"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0056",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "knowledgePoints": [
+        "因式分解",
+        "提公因式",
+        "公式法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "分解因式: 6 x^2-13 x y+6 y^2+5 x-10 y-4 的结果为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(2 x-3 y+1)(3 x-2 y-4)"
+        },
+        {
+          "label": "B",
+          "text": "(2 x-3 y-1)(3 x-2 y+4)"
+        },
+        {
+          "label": "C",
+          "text": "(2 x-3 y-2)(3 x-2 y+2)"
+        },
+        {
+          "label": "D",
+          "text": "(2 x-3 y+2)(3 x-2 y-2)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】B 【解解析】 【分解析】 本题主要考查了多项式的因式分解, 解答此题可采用待定系数法, 解答此题可设 6 x^2- 13 x y+6 y^2+5 x-10 y-4=(2 x-3 y+a)(3 x-2 y+b), 然后展开比较可得关于 a, b 的方程组, 从而可得 a, b 的值, 即可分解多项式, 从而可得结论. 【解答】 解: 6 x^2-13 x y+6 y^2=(2 x-3 y)(3 x-2 y), 可设 6 x^2-13 x y+6 y^2+5 x-10 y-4=(2 x-3 y+a)(3 x-2 y+b), 即 6 x^2-13 x y+6 y^2+5 x-10 y-4=6 x^2-13 x y+6 y^2+(3 a+2 b) x+(-2 a- 3 b) y+a b, a、 b 为待定系数, 3 a+2 b=5； -2 a-3 b=-10； a b=-4 解得 a=-1, b=4, 原式 =(2 x-3 y-1)(3 x-2 y+4). 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应因式分解面积拼图，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看因式分解面积拼图"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23901",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "因式分解面积拼图"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0057",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "knowledgePoints": [
+        "因式分解",
+        "提公因式",
+        "公式法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "下列由左到右的变形, 属于因式分解的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(m+2 n) (m-2 n)=m^2-4 n^2"
+        },
+        {
+          "label": "B",
+          "text": "a^2-b^2+1=(a+b) (a-b)+1"
+        },
+        {
+          "label": "C",
+          "text": "8 a^2 b=2 a · 4 a b"
+        },
+        {
+          "label": "D",
+          "text": "4 m y-2 y=2 y(2 m-1)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "A、从左到右的变形不属于因式分解, 故本选项不符合题意; B、 从从左到右的变形不属于因式分解，故本选项不符合题意; C、 从从左到右的变形不属于因式分解，故本选项不符合题意; D、从左到右的变形属于因式分解, 故本选项符合题意;",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应因式分解面积拼图，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看因式分解面积拼图"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2782",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "因式分解面积拼图"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0058",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c14_3"
+      ],
+      "knowledgePoints": [
+        "因式分解",
+        "提公因式",
+        "公式法"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "下列关于 x 的二次三项式中 (m 表示实数), 在实数范围内一定能分解因式的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "x^2-2 x+2"
+        },
+        {
+          "label": "B",
+          "text": "2 x^2-m x+1"
+        },
+        {
+          "label": "C",
+          "text": "x^2-2 x+m"
+        },
+        {
+          "label": "D",
+          "text": "x^2-m x-1"
+        }
+      ],
+      "answer": "D",
+      "analysis": "选项 A, x^2-2 x+2=0, =4-4 × 2=-4<0, 方程没有实数根, 即 x^2-2 x+2 在数范围内不能分解因式; 选项 B, 2 x^2-m x+1=0, =m^2-8 的值有可能小于 0, 即 2 x^2-m x+1 在数范围内不一定能分解因式; 选项 C, x^2-2 x+m=0, =4-4 m 的值有可能小于 0, 即 x^2-2 x+m 在数范围内不一定能分解因式; 选项 D, x^2-m x-1=0, =m^2+4>0, 方程有两个不相等的实数根, 即 x^2-m x-1 在数范围内一定能分解因式. 故选: D.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m10",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应因式分解面积拼图，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看因式分解面积拼图"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2924",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "因式分解面积拼图"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0059",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "knowledgePoints": [
+        "分式",
+        "约分",
+        "通分"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "分式 (y)/(2 x^7) 与 (1)/(5 x^4) 的最简公分母是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "10 x^7"
+        },
+        {
+          "label": "B",
+          "text": "7 x^7"
+        },
+        {
+          "label": "C",
+          "text": "10 x^11"
+        },
+        {
+          "label": "D",
+          "text": "7 x^11"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【答案】A 【解解析】 【分解析】 本题主要考查最简公分母. 取各分母系数的最小公倍数与字母因式的最高次幂的积即可. 【解答】 解: 分式 (y)/(2 x^7) 与 (1)/(5 x^4) 的最简公分母是 10 x^7.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m11",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式约分通分可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式约分通分可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23705",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "分式约分通分可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0060",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "knowledgePoints": [
+        "分式",
+        "约分",
+        "通分"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "下列各式中, 分式的个数为 (x-y)/(3), (a)/(2 x-1), (x)/(π+1),-(3 a)/(b), (1)/(2 x+y), 1/2 x+y, (2)/(x-2)=(1)/(x+3)",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "3"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】 C 【解解析】 【分解析】 本题考查了分式的定义: 如果 A、 B 表示两个整式, 并且 B 中含有字母, 那么式子 (A)/(B) 叫做分式, A 叫做分式的分子, B 叫做分式的分母. 注意分式不含等号, 也不含不等号. 判断分式的依据是分式的定义, 主要是看代数式的分母中是否含有字母, 如果含有字母则是分式, 如果不含有字母则不是分式. 分式不含等号. 【解答】 解: 根据根式的定义可知: 分式有: (a)/(2 x-1),-(3 a)/(b), (1)/(2 x+y), 共 3 个, 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m11",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式约分通分可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式约分通分可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23718",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "分式约分通分可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0061",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "knowledgePoints": [
+        "分式",
+        "约分",
+        "通分"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若把分式 (x+y)/(2 x y) 中的 x 和 y 都扩大大倍, 那么分式的值()",
+      "options": [
+        {
+          "label": "A",
+          "text": "扩大 3 倍"
+        },
+        {
+          "label": "B",
+          "text": "不变"
+        },
+        {
+          "label": "C",
+          "text": "缩小为原来的 3 倍"
+        },
+        {
+          "label": "D",
+          "text": "缩小为原来的 6 倍"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】 C 【解解析】 【分解析】 本题考查了分式的基本性质, 解题关键是用到了整体代入的思想. 把原式中的 x、 y 分别换成 3 x、 3 y 进行计算, 再与原分式比较即可. 【解答】 解: 把原式中的 x、 y 分别换成 3 x、 3 y, 那么 (3 x+3 y)/(2 · 3 x · 3 y)=1/3 × (x+y)/(2 x y), 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m11",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式约分通分可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式约分通分可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23727",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "分式约分通分可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0062",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "knowledgePoints": [
+        "分式",
+        "约分",
+        "通分"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "根据分式基本性质, 下列变形一定正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(x)/(y)=(x+3)/(y+3)"
+        },
+        {
+          "label": "B",
+          "text": "(x)/(y)=(x y)/(y^2)"
+        },
+        {
+          "label": "C",
+          "text": "(x)/(y)=(x^2)/(x y)"
+        },
+        {
+          "label": "D",
+          "text": "(x)/(y)=(m x)/(m y)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 本题主要考查的是分式的基本性质的有关知识，由题意利用分式的基本性质对各个选项进行逐一分析判断即可. 【解答】 解: A. (x)/(y) ≠ (x+3)/(y+3), 故 A 错误; B. (x)/(y)=(x y)/(y^2), 故 B 正确; C · (x)/(y)=(x^2)/(x y) 成立的条件是 x ≠ 0, 故 C 错误; D. (x)/(y)=(m x)/(m y) 成立的条件是 m ≠ 0, 故 D 错误. 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m11",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式约分通分可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式约分通分可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23728",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "分式约分通分可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0063",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "knowledgePoints": [
+        "分式",
+        "约分",
+        "通分"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若要使分式 (2 x+2)/((x+1)^2) 的值为整数, 则整数 x 可取的个数为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "5 个"
+        },
+        {
+          "label": "B",
+          "text": "2 个"
+        },
+        {
+          "label": "C",
+          "text": "3 个"
+        },
+        {
+          "label": "D",
+          "text": "4 个"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】D 【解解析】 【分解析】 此题考查了分式的值, 认真审题, 抓住关键的字眼, 是正确解题的出路. 如本题整数 x 中的整数, (2)/(x+1) 的值为整数中的整数. 原式约分化简后, 根据值为整数确定出整数 x 的取值个数即可. 【解答】 解: 原式 =(2(x+1))/((x+1)^2)=(2)/(x+1), 由结果为整数, 得到 x+1= ± 1、 ± 2, 解得整数 x 为 0,-2,1,-3, x=0,-2,1,-3 时, x+1 ≠ 0,. 整数 x 为 0,-2,1,-3 共四个. 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m11",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式约分通分可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式约分通分可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23743",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "分式约分通分可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0064",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_1",
+        "j8a_c15_2"
+      ],
+      "knowledgePoints": [
+        "分式",
+        "约分",
+        "通分"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知 b>a>0, 则分式 (a)/(b) 与 (a+1)/(b+1) 的大小关系是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(a)/(b)<(a+1)/(b+1)"
+        },
+        {
+          "label": "B",
+          "text": "(a)/(b)=(a+1)/(b+1)"
+        },
+        {
+          "label": "C",
+          "text": "(a)/(b)>(a+1)/(b+1)"
+        },
+        {
+          "label": "D",
+          "text": "不能确定"
+        }
+      ],
+      "answer": "A",
+      "analysis": "【答案】A 【解解析】解: (a)/(b)-(a+1)/(b+1) =(a(b+1)-b(a+1))/(b(b+1)) =(a-b)/(b(b+1)) b>a>0, a-b<0, b>0, b+1>0, (a-b)/(b(b+1))<0, (a)/(b)-(a+1)/(b+1)<0, (a)/(b)<(a+1)/(b+1), 故选: A. 利用作差法, 与 0 比较大小, 从而得到 (a)/(b) 与 (a+1)/(b+1) 的大小. 本题考查了分式的加减, 利用作差法比较大小是解题的关键.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m11",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式约分通分可视化，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式约分通分可视化"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23753",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "分式约分通分可视化"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0065",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "knowledgePoints": [
+        "分式方程",
+        "增根",
+        "方程求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "分式方程 (x+1)/(x+2)+(x+6)/(x+7)=(x+2)/(x+3)+(x+5)/(x+6) 的解是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "9/2"
+        },
+        {
+          "label": "B",
+          "text": "-9/2"
+        },
+        {
+          "label": "C",
+          "text": "11/2"
+        },
+        {
+          "label": "D",
+          "text": "-11/2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "【答案】 B 【解解析】 【分解析】 此题考查解分式方程, 利用了转化思想, 解分式方程注意要检验.首先将分式方程变形,然后左右两边分别通分化简得到整式方程, 最后求出整式方程的解, 经检验即可得到原分式方程的解. 【解答】 解: 原方程变形为 (x+6)/(x+7)-(x+5)/(x+6)=(x+2)/(x+3)-(x+1)/(x+2), 左右两边分别通分得 (1)/((x+6)(x+7))=(1)/((x+2)(x+3)), (x+6)(x+7)=(x+2)(x+3), 整理得 8 x+36=0, 解的 x=-9/2, 经检验, x=-9/2 是原方程的解. 故选 B.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m12",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式方程增根警报器，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式方程增根警报器"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23709",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "分式方程增根警报器"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0066",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "knowledgePoints": [
+        "分式方程",
+        "增根",
+        "方程求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "分式方程 (x)/(x-1)-1=(m)/((x-1)(x+2)) 有增根, 则 m 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "0 和 3"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "1 和 -2"
+        },
+        {
+          "label": "D",
+          "text": "3"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】D 【解解析】 【分解析】 根据分式方程有增根, 得出 x-1=0, x+2=0, 再代入求出即可. 本题主要考查对分式方程的增根, 解一元一次方程等知识点的理解和掌握, 理解分式方程的增根的意义是解此题的关键. 【解答】 解: 分式方程 (x)/(x-1)-1=(m)/((x-1)(x+2)) 有增根, x-1=0 或 x+2=0, x=1 或 x=-2. 两边同时乘以 (x-1)(x+2), 原方程可化为 x(x+2)-(x-1)(x+2)=m, 整理得, m=x+2, 当 x=1 时, 代入得: m=1+2=3, 当 x=-2 时, 代入得: m=-2+2=0, 当 m=0 时, 方程为 (x)/(x-1)-1=0, 此方程无解, m=3 时, 分式方程有增根, 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m12",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式方程增根警报器，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式方程增根警报器"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23710",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "分式方程增根警报器"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0067",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "knowledgePoints": [
+        "分式方程",
+        "增根",
+        "方程求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "关于 x 的分式方程 (x+m)/(x-2)+(2 m)/(2-x)=3 的解为正实数, 则实数 m 的取值范围是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "m<-6 且 m ≠ 2"
+        },
+        {
+          "label": "B",
+          "text": "m>6 且 m ≠ 2"
+        },
+        {
+          "label": "C",
+          "text": "m<6 且 m ≠-2"
+        },
+        {
+          "label": "D",
+          "text": "m<6 且 m ≠ 2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】D 【解解析】 【分解析】 此题主要考查分的是解分式方程有关知识, 由题意分式方程 (x+m)/(x-2)+(2 m)/(2-x)=3 的解为正实数,解方程求出方程的解 x, 然后令其大于 0, 解出 m 的范围, 注意最简公分母不为 0. 【解答】 解: (x+m)/(x-2)+(2 m)/(2-x)=3, (x+m)/(x-2)+(-2 m)/(x-2)=3, x+m-2 m=3(x-2), x=(6-m)/(2) x>0 且 x ≠ 2, (6-m)/(2)>0 且 (6-m)/(2) ≠ 2, m<6 且 m ≠ 2. 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m12",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式方程增根警报器，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式方程增根警报器"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23735",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "分式方程增根警报器"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0068",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "knowledgePoints": [
+        "分式方程",
+        "增根",
+        "方程求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "分式方程 (2-m)/(x-1)=(1)/(x) 无解, 则 m 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "1或2"
+        },
+        {
+          "label": "D",
+          "text": "0 或2"
+        }
+      ],
+      "answer": "C",
+      "analysis": "【答案】C 【解解析】 【分解析】 本题考查了分式方程的解, 关键是能根据题意得出方程 (m-1) x=1. 先去分母得出整式方程 (2-m) x=x-1, 根据分式方程无解得出 x-1=0 或 m-1=0, 求出 x 和 m 的值,再把 x 的值代入整式方程 (2-m) x=x-1, 求出 m 的值即可. 【解答】 解: 方程两边都乘以 x(x-1), 得 (2-m) x=x-1, 去括号, 移项、合并同类项, 得 (m-1) x=1, 关于 x 的分式方程 (2-m)/(x-1)=(1)/(x) 无解, x-1=0 或 m-1=0, x=1 或 m=1, 把 x=1 代入方程 (2-m) x=x-1, 得 2-m=0, 解得 m=2, m 的值为1或2. 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m12",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式方程增根警报器，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式方程增根警报器"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23755",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "分式方程增根警报器"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0069",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "knowledgePoints": [
+        "分式方程",
+        "增根",
+        "方程求解"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若关于 x 的分式方程 (2 m+x)/(x-3)-1=(2)/(x) 无解, 则 m 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1.5"
+        },
+        {
+          "label": "B",
+          "text": "1"
+        },
+        {
+          "label": "C",
+          "text": "-1.5 或2"
+        },
+        {
+          "label": "D",
+          "text": "-0.5 或 -1.5"
+        }
+      ],
+      "answer": "D",
+      "analysis": "【答案】D 【解解析】 【分解析】 本题考查的是分式方程的解有关知识, 先去分母, 得到关于 x 的整式方程, 分整式方程无解和分式方程有增根两种情况解答. 【解答】 解: 给分式方程两边同时乘以 x(x-3), 得, x(x+2 m)-x(x-3)=2(x-3), x^2+2 m x-x^2+3 x=2 x-6, (2 m+1) x=-6, (1)当 2 m+1=0, 即 m=-0.5 时 (2 m+1) x=-6 无解; (2) 当 2 m+1 ≠ 0 时原分式方程无解, (2 m+1) x=-6 有增根最简公分母 x(x-3)=0, 增根为 x=0 或 3, 将 x=0 代入 (2 m+1) x=-6, m 不存在; 将 x=3 代入 (2 m+1) x=-6 得 m=-1.5; 所以 m=-0.5 或 m=-1.5",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m12",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式方程增根警报器，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式方程增根警报器"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23881",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "分式方程增根警报器"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0070",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c15_3"
+      ],
+      "knowledgePoints": [
+        "分式方程",
+        "增根",
+        "方程求解"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "若实数 a 为不大于 6 的非负整数, 则使关于 x 的分式方程 (1)/(x-3)+(x-a)/(3-x)=1 的解为整数的概率为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "2/3"
+        },
+        {
+          "label": "B",
+          "text": "5/6"
+        },
+        {
+          "label": "C",
+          "text": "4/5"
+        },
+        {
+          "label": "D",
+          "text": "3/7"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析: 解分式方程 (1)/(x-3)+(x-a)/(3-x)=1 得 x=(a+4)/(2), 实数 a 为不大于 6 的非负整数, a=0,1,2,3,4,5,6, 当 a=0 时, x=2; 当 a=2 时, x=3, 方程无解, 故舍去; 当 a=4 时, x=4; 当 a=6 时, x=5, 使关于 x 的分式方程 (1)/(x-3)+(x-a)/(3-x)-1 的解为整数的概率为 3/7, 故选: D. 解分式方程 (1)/(x-3)+(x-a)/(3-x)=1 得 x=(a+4)/(2), 因为实数 a 为不大于 6 的非负整数, 则 a=0,1,2,3,4,5, 6, 分别讨论 a==0,1,2,3,4,5,6 几种情况, 得出使关于 x 的分式方程 (1)/(x-3)+(x-a)/(3-x)-1 的解为整数的概率为 3/7, 本题考查概率公式, 分式方程的解, 解题的关键是掌握相关知识的灵活运用.",
+      "matchedCards": [
+        {
+          "cardId": "j8a_m12",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应分式方程增根警报器，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看分式方程增根警报器"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "1021",
+        "level": "九年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "九年级",
+          "代数",
+          "初中专题补齐",
+          "分式方程增根警报器"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "九年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0071",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知: √(20 n) 是整数, 则满足条件的最小正整数 n 为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析】 ## 【分解析】 本题考查算术平方根, 属于基础题. 根据题意, 即可得解. ## 【解答】 解: √(20 n)=√(4 × 5 n), 且 n 是正整数, 当 n=5 时, √(5 n)=5, √(20 n)=2 × 5=10, n 的最小值为 5. 故选 D.",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2029",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0072",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若 |a|=4, √(b^2)=3, 且 a+b<0, 则 a-b 的值是 （)",
+      "options": [
+        {
+          "label": "A",
+          "text": "1,7"
+        },
+        {
+          "label": "B",
+          "text": "-1,7"
+        },
+        {
+          "label": "C",
+          "text": "1,-7"
+        },
+        {
+          "label": "D",
+          "text": "-1,-7"
+        }
+      ],
+      "answer": "D",
+      "analysis": "## 【分解析】 本题主要考查绝对值的性质、算术平方根的意义以及求代数式的值, 解决问题的关键是深入理解题意, 找出 a 与 b 可能的取值后再代入计算即可. ## 【解答】 解: :|a|=4, a= ± 4, √(b^2)=3, b= ± 3, a+b<0, 所以当 a=-4 时, b=-3 时, a-b=-4+3=-1, 当 a=-4 时, b=3 时, a-b=-4-3=-7, 所以 a-b 的值为 -1 或 -7. 故答案为 D.",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2300",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0073",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "若 a, b 均为正整数, 且 a>√(7), b>3次√(2), 则 a+b 的最小值是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "4"
+        },
+        {
+          "label": "C",
+          "text": "5"
+        },
+        {
+          "label": "D",
+          "text": "6"
+        }
+      ],
+      "answer": "C",
+      "analysis": "## 【分解析】 本题考查无理数、根式等知识, 解题的关键是学会估计无理数的大小, 属于基础题. 由 a, b 均为正整数, 且 a>√(7), b>3次√(2), 推出 a ≥ 3, b ≥ 2, 由此即可解决问题. ## 【解答】 解: a, b 均为正整数, 且 a>√(7), b>3次√(2), a ≥ 3, b ≥ 2, a+b 的最小值为 5, 故选 C.",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2302",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0074",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "√(25) 的相反数是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "5"
+        },
+        {
+          "label": "B",
+          "text": "-5"
+        },
+        {
+          "label": "C",
+          "text": "± 5"
+        },
+        {
+          "label": "D",
+          "text": "25"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析】解: √(25)=5, 而 5 的相反数是 -5, √(25) 的相反数是 5. 故选 B. 先根据算术平方根的定义求出 √(25) 的值，再根据相反数的定义即可得解. 本题考查了算术平方根与相反数的意义, 一个数的相反数就是在这个数前面添上 - 号: 一个正数的相反数是负数, 一个负数的相反数是正数, 0 的相反数是 0.",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2346",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0075",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知 a 是 √(81) 的平方根, b=√(16), c 是 -8 的立方根, 则 a+b-c 的值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "15"
+        },
+        {
+          "label": "B",
+          "text": "15 或 -3"
+        },
+        {
+          "label": "C",
+          "text": "9"
+        },
+        {
+          "label": "D",
+          "text": "9 或 3"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析】 ## 【分解析】 先根据平方根、算术平方根、立方根的定义求得 a、 b、 c 的值, 再代入所求代数式即可计算. 此题考查了平方根，立方根和算术平方根，熟练掌握各自的性质是解本题的关键. ## 【解答】 解: a 是 √(81) 的平方根, b=√(16), c 是 -8 的立方根, a=3 或 -3, b=4, c=-2, 当 a=3, b=4, c=-2 时, a+b-c=3+4-(-2)=9, 当 a=-3, b=4, c=-2 时, a+b-c=-3+4-(-2)=3, 则 a+b-c=9 或 3， 故选: D.",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2370",
+        "level": "七年级",
+        "subject": "算术",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "算术",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0076",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "在 22/7,-π, √(8/9), 3.1 1, 3次√(-27), 0.1010010001 (每两个 1 之间, 逐次多一个0)中, 无理数的个数是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "3"
+        },
+        {
+          "label": "C",
+          "text": "4"
+        },
+        {
+          "label": "D",
+          "text": "5"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解: -π, √(8/9),",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2396",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0077",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知 x+(1)/(x-1)=5, 则 √(x-1)+(1)/(√(x-1)) 的值是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "2"
+        },
+        {
+          "label": "C",
+          "text": "√(5)"
+        },
+        {
+          "label": "D",
+          "text": "√(6)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "(√(x-1)+(1)/(√(x-1)))^2 =x-1+2+(1)/(x-1) =x+(1)/(x-1)+1, 当 x+(1)/(x-1)=5 时, x+(1)/(x-1)+1=6, 则 √(x-1)+(1)/(√(x-1))=√(6)",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2779",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_topic_0078",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j8b",
+      "chapterIds": [
+        "j8b_c16_1",
+        "j8b_c16_2",
+        "j8b_c16_3"
+      ],
+      "knowledgePoints": [
+        "二次根式",
+        "根式化简",
+        "实数运算"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "已知 m^2=4+2 √(3), 则以下对 |m| 的估算正确的",
+      "options": [
+        {
+          "label": "A",
+          "text": "2<|m|<3"
+        },
+        {
+          "label": "B",
+          "text": "3<|m|<4"
+        },
+        {
+          "label": "C",
+          "text": "4<|m|<5"
+        },
+        {
+          "label": "D",
+          "text": "5<|m|<6"
+        }
+      ],
+      "answer": "A",
+      "analysis": ": m^2=4+2 √(3)=(√(3)+1)^2, m= ±(√(3)+1), |m|=√(3)+1, 1<√(3)<2, 2<|m|<3.",
+      "matchedCards": [
+        {
+          "cardId": "j8b_m06",
+          "role": "primary",
+          "reason": "这道 CMM-Math 初中开源题直接对应二次根式化简与合并，可用于练习该知识点并跳转可视化讲评。",
+          "stepLabel": "看二次根式化简与合并"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "2806",
+        "level": "七年级",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "七年级",
+          "代数",
+          "初中专题补齐",
+          "二次根式化简与合并"
+        ]
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级",
+        "初中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    }
+  ]
+}

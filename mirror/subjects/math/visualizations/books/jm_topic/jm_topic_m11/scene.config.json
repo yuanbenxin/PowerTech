@@ -1,0 +1,23 @@
+{
+  "cardId": "jm_topic_m11",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-congruence-proof-chain",
+  "visualLevel": "A",
+  "source": "source.html?rev=20260718-common-hypotenuse-and-right-angle-v2",
+  "sourceAdapter": {
+    "cardId": "jm_topic_m11",
+    "panelSelector": ".control-panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-jm_topic_m11",
+    "panelClass": "math-source-panel-jm_topic_m11",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：全等证明链专题。左侧承载可拖拽几何证明画板和可收起 HUD，右侧平台操作面板承载关卡、证明链卡槽、条件卡片与验证操作。"
+}

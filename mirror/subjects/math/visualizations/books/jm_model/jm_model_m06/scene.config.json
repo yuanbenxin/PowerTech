@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m06",
+  "status": "ready",
+  "engine": "cut-add-segment-model",
+  "entry": "scene.js?v=5327139ae6ed",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-pan-zoom-cut-add-segment",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=a1dfd3252f58",
+  "script": "app.js?v=93aa0772aa1b",
+  "notes": "截长补短模型正式互动课件：支持截长法、补短法、自由探究、角度调节、翻折全等动画、AC=AB+BD 动态板书、画布缩放平移与触屏防长按菜单。"
+}

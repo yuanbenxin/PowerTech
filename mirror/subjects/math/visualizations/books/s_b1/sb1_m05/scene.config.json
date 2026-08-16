@@ -1,0 +1,26 @@
+{
+  "cardId": "sb1_m05",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-trig-translation-scaling",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m05",
+    "panelSelector": ".sidebar",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m05",
+    "panelClass": "math-source-panel-sb1_m05",
+    "inlineFunctionNames": [
+      "setBaseFn",
+      "playAnimation",
+      "answerTransformCheck"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "三角函数图像平移与伸缩源码已迁入平台目录；参数滑条、五点法、动画演示保留。"
+}

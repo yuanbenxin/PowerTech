@@ -1,0 +1,13 @@
+{
+  "cardId": "j7a_m12",
+  "status": "ready",
+  "engine": "angle-complement-bearing-model",
+  "entry": "scene.js?v=7eb63a4cd6bc",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-angle-bearing",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=51f982eb240b",
+  "script": "app.js?v=106bc3b85249",
+  "notes": "余角补角与方位角正式互动课件：左侧模拟框、可收起 HUD、右侧统一操作面板，支持余角、补角、方位角场景切换、角度拖拽、滑块调节、证明动画、缩放复位与触屏适配。"
+}

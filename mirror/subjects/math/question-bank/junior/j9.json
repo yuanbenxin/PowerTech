@@ -1,0 +1,271 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "junior",
+  "grade": "九年级",
+  "questions": [
+    {
+      "id": "jr_j9_q0001",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "二次函数",
+        "抛物线",
+        "顶点"
+      ],
+      "type": "分步选择题",
+      "difficulty": "基础",
+      "stem": "观察二次函数 y = 2(x - 1)^2 + 3 的顶点式，完成下面两个判断。",
+      "answer": "1:A；2:B",
+      "analysis": "函数 y = 2(x - 1)^2 + 3 是顶点式 y = a(x - h)^2 + k，其中 a = 2 > 0，所以抛物线开口向上；h = 1，k = 3，所以顶点坐标为 (1, 3)。",
+      "matchedCards": [
+        {
+          "cardId": "j9a_m10",
+          "role": "primary",
+          "reason": "通过参数变化观察抛物线顶点和开口。",
+          "stepLabel": "看顶点式变化"
+        },
+        {
+          "cardId": "j9a_m09",
+          "role": "related",
+          "reason": "复习一元二次方程根与抛物线交点关系。",
+          "stepLabel": "关联方程图像"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "steps": [
+        {
+          "id": "opening-direction",
+          "prompt": "这个抛物线的开口方向是？",
+          "options": [
+            {
+              "label": "A",
+              "text": "向上"
+            },
+            {
+              "label": "B",
+              "text": "向下"
+            },
+            {
+              "label": "C",
+              "text": "向左"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "vertex",
+          "prompt": "这个抛物线的顶点坐标是？",
+          "options": [
+            {
+              "label": "A",
+              "text": "(-1, 3)"
+            },
+            {
+              "label": "B",
+              "text": "(1, 3)"
+            },
+            {
+              "label": "C",
+              "text": "(2, 3)"
+            }
+          ],
+          "answer": "B"
+        }
+      ],
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j9_q0002",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9b",
+      "chapterIds": [
+        "j9b_c1_1"
+      ],
+      "knowledgePoints": [
+        "圆",
+        "圆周角",
+        "圆心角"
+      ],
+      "type": "分步选择题",
+      "difficulty": "提升",
+      "stem": "在圆 O 中，∠AOB 和 ∠ACB 都对同一条弧 AB。若 ∠AOB = 100°，按步骤选择 ∠ACB 的度数和理由。",
+      "answer": "1:A；2:B；3:C",
+      "analysis": "同弧所对的圆周角等于它所对圆心角的一半。因为 ∠AOB 是弧 AB 所对的圆心角，∠ACB 是同弧 AB 所对的圆周角，且 ∠AOB = 100°，所以 ∠ACB = 100° ÷ 2 = 50°。",
+      "matchedCards": [
+        {
+          "cardId": "j9b_m04",
+          "role": "primary",
+          "reason": "动态拖动圆上点验证圆周角与圆心角关系。",
+          "stepLabel": "验证圆周角定理"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "steps": [
+        {
+          "id": "angle-types",
+          "prompt": "∠AOB 与 ∠ACB 分别是什么角？",
+          "options": [
+            {
+              "label": "A",
+              "text": "∠AOB 是圆心角，∠ACB 是圆周角"
+            },
+            {
+              "label": "B",
+              "text": "∠AOB 是圆周角，∠ACB 是圆心角"
+            },
+            {
+              "label": "C",
+              "text": "二者都是圆心角"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": "angle-relation",
+          "prompt": "同弧 AB 所对的圆周角与圆心角有什么关系？",
+          "options": [
+            {
+              "label": "A",
+              "text": "圆周角等于圆心角"
+            },
+            {
+              "label": "B",
+              "text": "圆周角等于圆心角的一半"
+            },
+            {
+              "label": "C",
+              "text": "圆周角等于圆心角的 2 倍"
+            }
+          ],
+          "answer": "B"
+        },
+        {
+          "id": "compute-angle",
+          "prompt": "若 ∠AOB = 100°，则 ∠ACB 等于多少？",
+          "options": [
+            {
+              "label": "A",
+              "text": "25°"
+            },
+            {
+              "label": "B",
+              "text": "100°"
+            },
+            {
+              "label": "C",
+              "text": "50°"
+            }
+          ],
+          "answer": "C"
+        }
+      ],
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    },
+    {
+      "id": "jr_j9_q0003",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "二次函数",
+        "抛物线",
+        "顶点式"
+      ],
+      "type": "多选题",
+      "difficulty": "提升",
+      "stem": "关于二次函数 y = -3(x + 2)^2 + 4，下列说法正确的有（多选）。",
+      "options": [
+        {
+          "label": "A",
+          "text": "抛物线开口向下"
+        },
+        {
+          "label": "B",
+          "text": "顶点坐标是 (-2, 4)"
+        },
+        {
+          "label": "C",
+          "text": "对称轴是直线 x = 2"
+        },
+        {
+          "label": "D",
+          "text": "函数最大值为 4"
+        }
+      ],
+      "answer": "A,B,D",
+      "analysis": "顶点式 y = a(x - h)^2 + k 中，a = -3 < 0，所以开口向下；x + 2 = x - (-2)，顶点为 (-2, 4)，对称轴是 x = -2。开口向下时顶点处取得最大值，因此最大值为 4。C 把对称轴符号看反了。",
+      "matchedCards": [
+        {
+          "cardId": "j9a_m10",
+          "role": "primary",
+          "reason": "通过参数变化观察抛物线顶点、开口和最值。",
+          "stepLabel": "看顶点式变化"
+        },
+        {
+          "cardId": "j9a_m09",
+          "role": "related",
+          "reason": "关联二次函数图像与方程交点。",
+          "stepLabel": "关联图像性质"
+        }
+      ],
+      "source": {
+        "name": "manual-seed",
+        "license": "internal",
+        "type": "card_training",
+        "origin": "visualization-card-training"
+      },
+      "status": "ready",
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "synthetic_support",
+        "parentQuestionId": ""
+      }
+    }
+  ]
+}

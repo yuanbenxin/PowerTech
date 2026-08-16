@@ -1,0 +1,907 @@
+﻿/* style.css?v=86bcff45e242 - 数轴区间与有理数大小比较课件样式系统 */
+
+:root {
+    --bg-primary: #f8fafc;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-chalkboard: rgba(250, 251, 253, 0.8);
+    --border-color: rgba(226, 232, 240, 0.8);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    
+    --color-point-a: #8b5cf6;       /* 紫色 */
+    --color-point-a-light: rgba(139, 92, 246, 0.15);
+    --color-point-b: #3b82f6;       /* 蓝色 */
+    --color-point-b-light: rgba(59, 130, 246, 0.15);
+    --color-abs: #f59e0b;           /* 橙色 */
+    --color-abs-light: rgba(245, 158, 11, 0.12);
+    --color-interval: #10b981;      /* 绿色 */
+    --color-interval-light: rgba(16, 185, 129, 0.15);
+    
+    --grid-color: rgba(226, 232, 240, 0.5);
+    --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.03);
+    --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.05);
+    
+    --font-math: 'Outfit', -apple-system, sans-serif;
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-ui);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 核心容器 */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 16px;
+}
+
+/* 标题栏 */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+    height: 64px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon {
+    color: var(--color-point-a);
+}
+
+.logo-area h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.badge-stage {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-point-a);
+    background: var(--color-point-a-light);
+    padding: 2px 10px;
+    border-radius: 100px;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background: #f8fafc;
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+}
+
+/* 主布局 */
+.main-layout {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    min-height: 0;
+}
+
+/* 左栏：几何模拟画板 */
+.simulation-column {
+    flex: 1.6;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    min-height: 0;
+}
+
+.sandbox-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 白板网格底纸 */
+.sandbox-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* SVG 几何与线段层 */
+.sandbox-svg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: 0 0;
+    will-change: transform;
+    overflow: visible !important;
+}
+
+/* HTML 飘浮层 */
+.html-overlay-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    transform-origin: 0 0;
+    will-change: transform;
+    overflow: visible !important;
+}
+
+/* 绝对定位浮动 HUD 面板 */
+.hud-panel {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 360px;
+    max-height: 520px;
+    background: var(--bg-chalkboard);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    z-index: 5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                width 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.2s ease;
+}
+
+.hud-panel.collapsed {
+    max-height: 46px;
+    width: 210px;
+}
+
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background: rgba(248, 250, 252, 0.5);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    cursor: pointer;
+    user-select: none;
+}
+
+.hud-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.2px;
+}
+
+.hud-control-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hud-panel.collapsed .hud-arrow-icon {
+    transform: rotate(-180deg);
+}
+
+.hud-body {
+    padding: 18px;
+    overflow-y: auto;
+    font-size: 13.5px;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* HUD 内部的步骤 */
+.hud-row {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(226, 232, 240, 0.8);
+}
+
+.hud-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.hud-row-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.hud-row-val {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* HUD 里的重点对比块 */
+.hud-equation-box {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: var(--color-point-a-light);
+    border-left: 4px solid var(--color-point-a);
+    border-radius: 8px;
+}
+
+.hud-equation-box.success-box {
+    background: var(--color-abs-light);
+    border-left-color: var(--color-abs);
+}
+
+.hud-equation-box .title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.hud-equation-box .formula {
+    font-family: var(--font-math);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+/* 缩放与自适应悬浮工具栏 */
+.canvas-controls {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 4;
+}
+
+.btn-zoom {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.btn-zoom:hover {
+    color: var(--text-primary);
+    background: #ffffff;
+    border-color: var(--text-muted);
+    transform: translateY(-1px);
+}
+
+/* 右栏：控制台 */
+.control-column {
+    width: 340px;
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.panel-section {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.panel-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.panel-section h3 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+/* 场景预设选择 */
+.presets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-preset {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(248, 250, 252, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-preset .preset-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background: #e2e8f0;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.btn-preset .preset-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.btn-preset:hover {
+    background: #ffffff;
+    border-color: var(--text-muted);
+}
+
+.btn-preset.active {
+    background: var(--color-point-a-light);
+    border-color: var(--color-point-a);
+}
+
+.btn-preset.active .preset-num {
+    background: var(--color-point-a);
+    color: #ffffff;
+}
+
+.btn-preset.active .preset-name {
+    color: var(--color-point-a);
+}
+
+/* 滑动调节条 */
+.sliders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.slider-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.slider-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.slider-row input[type="range"] {
+    width: 100%;
+    height: 5px;
+    border-radius: 99px;
+    background: #e2e8f0;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider-row input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-point-a);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.slider-row.slider-row-b input[type="range"]::-webkit-slider-thumb {
+    background: var(--color-point-b);
+}
+
+.slider-row.slider-row-interval input[type="range"]::-webkit-slider-thumb {
+    background: var(--color-interval);
+}
+
+.slider-row input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.slider-val-indicator {
+    align-self: flex-end;
+    font-family: var(--font-math);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* 开闭吸附按钮 */
+.btn-toggle-wrap {
+    margin-top: 10px;
+}
+
+.btn-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px dashed var(--border-color);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-toggle:hover {
+    border-color: var(--text-muted);
+    background: rgba(248, 250, 252, 0.5);
+}
+
+.btn-toggle.active {
+    border-color: var(--color-interval);
+    background: var(--color-interval-light);
+    color: var(--color-interval);
+}
+
+/* 预设预选按钮 */
+.presets-btn-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.btn-preset-problem {
+    padding: 8px 10px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.btn-preset-problem:hover {
+    background: #f8fafc;
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+}
+
+/* 区间场景下的端点样式切换 */
+.btn-group-endpoints {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.btn-sub-toggle {
+    flex: 1;
+    padding: 6px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-sub-toggle.active {
+    background: var(--color-interval-light);
+    border-color: var(--color-interval);
+    color: var(--color-interval);
+}
+
+/* 理论原理解析卡片 */
+.theory-panel {
+    background: rgba(248, 250, 252, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px !important;
+}
+
+.theory-panel h3 {
+    margin-bottom: 8px !important;
+}
+
+.theory-content {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.theory-content p {
+    margin-bottom: 8px;
+}
+
+.theory-content p:last-child {
+    margin-bottom: 0;
+}
+
+.theory-content strong {
+    color: var(--text-primary);
+}
+
+/* 重置按钮 */
+.reset-section {
+    margin-top: auto;
+}
+
+.btn-secondary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   4. SVG 数轴元素与高亮效果
+   ========================================================================== */
+.axis-line {
+    stroke: #0f172a;
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+}
+
+.tick-line {
+    stroke: #334155;
+    stroke-width: 1.5px;
+}
+
+.tick-label {
+    font-family: var(--font-math);
+    font-size: 13.5px;
+    font-weight: 700;
+    fill: #475569;
+}
+
+.origin-tick {
+    stroke: var(--color-abs);
+    stroke-width: 2.5px;
+}
+
+.origin-label {
+    fill: var(--color-abs);
+    font-weight: 800;
+}
+
+/* 绝对值范围阴影 */
+.abs-range-line {
+    stroke: var(--color-abs);
+    stroke-width: 3.5px;
+    stroke-linecap: round;
+    stroke-dasharray: 2, 1; /* 动画用虚线 */
+}
+
+/* 不等式区间着色带 */
+.interval-shading-rect {
+    fill: var(--color-interval-light);
+    stroke: var(--color-interval);
+    stroke-width: 1px;
+    opacity: 0.6;
+}
+
+/* 不等式区间线条带（斜线斑马线） */
+.interval-shading-pattern {
+    fill: url(#diagonal-stripes);
+}
+
+/* 数轴上的点 */
+.geo-point-wrapper {
+    cursor: grab;
+}
+
+.geo-point-wrapper:active {
+    cursor: grabbing;
+}
+
+.geo-point-halo {
+    fill: transparent;
+    transition: fill 0.2s ease;
+}
+
+.geo-point-wrapper:hover .geo-point-halo {
+    fill: rgba(139, 92, 246, 0.08);
+}
+
+.geo-point-wrapper.point-b:hover .geo-point-halo {
+    fill: rgba(59, 130, 246, 0.08);
+}
+
+.geo-point-wrapper.point-interval:hover .geo-point-halo {
+    fill: rgba(16, 185, 129, 0.08);
+}
+
+.geo-point {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: r 0.2s ease;
+}
+
+.geo-point-wrapper:hover .geo-point {
+    transform-origin: center;
+    transform-box: fill-box;
+    r: 7.5px;
+}
+
+/* 霓虹高亮效果 */
+.active-glow {
+    filter: drop-shadow(0 0 8px var(--color-point-a));
+}
+
+.active-glow-b {
+    filter: drop-shadow(0 0 8px var(--color-point-b));
+}
+
+.active-glow-interval {
+    filter: drop-shadow(0 0 8px var(--color-interval));
+}
+
+/* 数值标签 */
+.coord-label-box {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    background: var(--text-primary);
+    color: #ffffff;
+    font-family: var(--font-math);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 6px;
+    border-radius: 6px;
+    pointer-events: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.coord-label-box::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--text-primary) transparent transparent transparent;
+}
+
+.coord-label-box.lbl-a {
+    background: var(--color-point-a);
+}
+.coord-label-box.lbl-a::after {
+    border-color: var(--color-point-a) transparent transparent transparent;
+}
+
+.coord-label-box.lbl-b {
+    background: var(--color-point-b);
+}
+.coord-label-box.lbl-b::after {
+    border-color: var(--color-point-b) transparent transparent transparent;
+}
+
+.coord-label-box.lbl-interval {
+    background: var(--color-interval);
+}
+.coord-label-box.lbl-interval::after {
+    border-color: var(--color-interval) transparent transparent transparent;
+}
+
+/* HUD 里的联动高亮 */
+.math-seg {
+    display: inline-block;
+    padding: 1px 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-math);
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.math-seg.seg-a {
+    color: var(--color-point-a);
+    background: var(--color-point-a-light);
+}
+.math-seg.seg-a:hover {
+    box-shadow: 0 0 6px var(--color-point-a);
+}
+
+.math-seg.seg-b {
+    color: var(--color-point-b);
+    background: var(--color-point-b-light);
+}
+.math-seg.seg-b:hover {
+    box-shadow: 0 0 6px var(--color-point-b);
+}
+
+.math-seg.seg-interval {
+    color: var(--color-interval);
+    background: var(--color-interval-light);
+}
+.math-seg.seg-interval:hover {
+    box-shadow: 0 0 6px var(--color-interval);
+}
+
+/* 帮助弹窗 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    width: 520px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-close-icon {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 24px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-body h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.modal-body ul {
+    list-style-type: none;
+    margin-bottom: 18px;
+}
+
+.modal-body ul li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    padding-left: 14px;
+    position: relative;
+}
+
+.modal-body ul li::before {
+    content: "•";
+    color: var(--color-point-a);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}

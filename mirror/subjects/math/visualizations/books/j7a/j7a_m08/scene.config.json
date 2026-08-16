@@ -1,0 +1,11 @@
+{
+  "cardId": "j7a_m08",
+  "status": "ready",
+  "engine": "segment-midpoint-lab",
+  "entry": "scene.js?v=166dcbb3ac03",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-safe-segment-drag",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "线段中点与线段和差：左侧动态线段模拟框，右侧统一操作面板，支持线段和差、中点等分、双中点恒定探究、触屏拖拽、缩放与移动。"
+}

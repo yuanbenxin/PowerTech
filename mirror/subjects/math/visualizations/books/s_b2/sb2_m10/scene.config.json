@@ -1,0 +1,22 @@
+{
+  "cardId": "sb2_m10",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-complex-plane",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb2_m10",
+    "panelSelector": ".control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sb2_m10",
+    "panelClass": "math-source-panel-sb2_m10",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "复数四则运算与模辐角已接入；支持复平面拖拽、加减向量、乘除旋转缩放、主辐角与一般辐角教学。"
+}

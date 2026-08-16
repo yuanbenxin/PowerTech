@@ -1,0 +1,30 @@
+{
+  "cardId": "j9b_m02",
+  "status": "ready",
+  "engine": "geometry-projection-views",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-build-projection-views",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码已接入：几何体的三视图光影投影；统一为左侧模拟框和右侧操作面板；资源均为本地文件，无 CDN。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j9b_m02",
+    "panelSelector": ".panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j9b_m02",
+    "panelClass": "math-source-panel-j9b_m02",
+    "inlineFunctionNames": [
+      "setMode",
+      "clearGrid",
+      "randomGrid",
+      "resetCamera",
+      "setColor",
+      "toggleViews",
+      "startProjection"
+    ],
+    "stylePreScoped": true
+  }
+}

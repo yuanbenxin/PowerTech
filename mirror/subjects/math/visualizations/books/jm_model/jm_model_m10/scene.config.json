@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m10",
+  "status": "ready",
+  "engine": "eight-shape-similarity-model",
+  "entry": "scene.js?v=947164018fb6",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-eight-shape-similarity",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=5a23b6fce1a3",
+  "script": "app.js?v=4f87b671a723",
+  "notes": "8 字型相似模型正式互动课件：支持平行 8 字型相似、平行线分线段成比例、旋转/反 8 字型相似、触屏拖拽点位、画布缩放平移与防长按菜单。"
+}

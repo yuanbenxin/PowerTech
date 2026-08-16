@@ -1,0 +1,24 @@
+{
+  "cardId": "sb1_m06",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-function-parity-symmetry",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb1_m06",
+    "panelSelector": ".sidebar",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sb1_m06",
+    "panelClass": "math-source-panel-sb1_m06",
+    "inlineFunctionNames": [
+      "playAnim"
+    ],
+    "stylePreScoped": false
+  },
+  "notes": "函数奇偶性与图像对称翻转源码已迁入平台目录；函数选择、偶函数/奇函数动画和悬浮读数保留。"
+}

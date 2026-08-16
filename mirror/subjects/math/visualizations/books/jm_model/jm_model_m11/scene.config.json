@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m11",
+  "status": "ready",
+  "engine": "right-triangle-altitude-similarity-model",
+  "entry": "scene.js?v=42702a1c7371",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-right-triangle-altitude",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=0a759a3852e5",
+  "script": "app.js?v=69e0c88f2be7",
+  "notes": "直角三角形斜边高相似模型正式互动课件：支持母子相似三角形、射影定理、面积恒等、斜边高拖拽、构型预设、画布缩放平移与防长按菜单。"
+}

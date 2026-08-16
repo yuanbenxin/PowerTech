@@ -1,0 +1,10 @@
+{
+  "cardId": "j7a_m05",
+  "status": "ready",
+  "engine": "exponent-explosion",
+  "entry": "scene.js?v=505baec40931",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-slider-exponent",
+  "visualLevel": "A",
+  "notes": "分形树、棋盘麦粒、折纸厚度和指数曲线四种指数爆炸视图。所有资源本地化，无 CDN。"
+}

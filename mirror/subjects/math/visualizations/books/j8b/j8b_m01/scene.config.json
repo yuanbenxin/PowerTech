@@ -1,0 +1,10 @@
+{
+  "cardId": "j8b_m01",
+  "status": "ready",
+  "engine": "pythagorean-area",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "area-proof-animation",
+  "visualLevel": "A",
+  "notes": "勾股定理面积证明，支持三边平方、面积流动和公式追踪。所有资源本地化，无 CDN。"
+}

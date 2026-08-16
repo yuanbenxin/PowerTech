@@ -1,0 +1,25 @@
+{
+  "cardId": "jm_model_m17",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-folding-overlap-model",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "jm_model_m17",
+    "panelSelector": ".sidebar-panel",
+    "auxiliaryPanelSelectors": [
+      "#current-conclusion-card"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-jm_model_m17",
+    "panelClass": "math-source-panel-jm_model_m17",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：折叠重合模型。左侧承载 SVG 折叠画布、默认收起的左上角推导 HUD、必要点位和缩放工具；右侧平台面板承载当前结论、落点、折角、辅助线与分步证明控制。"
+}

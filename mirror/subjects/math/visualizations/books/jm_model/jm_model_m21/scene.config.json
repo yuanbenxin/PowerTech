@@ -1,0 +1,14 @@
+{
+  "cardId": "jm_model_m21",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "scene.js?v=2ef020880c5c",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-butterfly-area",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=082205431ff8",
+  "script": "app.js?v=e49826bce037",
+  "generator": "junior-adapter-card-v2",
+  "notes": "面积比例模型：燕尾与蝴蝶，按平台统一壳接入并保留左模拟框右操作面板。"
+}

@@ -1,0 +1,1252 @@
+/* ==========================================================================
+   几何辅助线构造专题课件 Style System
+   ========================================================================== */
+
+:root {
+    --color-bg-dark: #0f172a;
+    --color-bg-card: rgba(30, 41, 59, 0.7);
+    --color-border: rgba(148, 163, 184, 0.12);
+    --color-text-main: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-accent: #3b82f6; /* 蓝色 */
+    --color-purple: #a855f7; /* 紫色 */
+    --color-green: #10b981; /* 绿色 */
+    --color-orange: #f59e0b; /* 橙色 */
+    --color-cyan: #06b6d4; /* 青色 */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-display: 'Outfit', 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    font-family: var(--font-sans);
+    color: var(--color-text-main);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 头部导航与 iOS 药丸选项卡 */
+header {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand i {
+    font-size: 20px;
+    color: var(--color-cyan);
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));
+}
+
+.brand h1 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0;
+    background: linear-gradient(to right, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.level-tag {
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--color-cyan);
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.tab-grid {
+    display: flex;
+    background: rgba(148, 163, 184, 0.08);
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid var(--color-border);
+    gap: 4px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-btn.active {
+    background: #ffffff;
+    color: #0f172a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 主布局 */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
+    height: calc(100vh - 64px);
+    box-sizing: border-box;
+}
+
+/* 左侧模拟框面板 */
+.canvas-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+.whiteboard-card {
+    background: var(--color-bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(16px);
+    position: relative;
+    padding: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.whiteboard-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.whiteboard-title i {
+    color: var(--color-cyan);
+}
+
+/* 几何 SVG 渲染层 */
+.geometry-svg-container {
+    width: 100%;
+    flex: 1;
+    position: relative;
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.geometry-svg-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 可收起 HUD 面板 */
+.hud-panel {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+    width: 230px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hud-header {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    user-select: none;
+}
+
+.hud-header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--color-cyan);
+}
+
+.hud-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.hud-panel.collapsed .hud-toggle-btn {
+    transform: rotate(-180deg);
+}
+
+.hud-content {
+    padding: 12px;
+    max-height: 240px;
+    overflow-y: auto;
+    font-size: 11px;
+    line-height: 1.5;
+    transition: max-height 0.3s ease-out;
+}
+
+.hud-content::-webkit-scrollbar {
+    width: 4px;
+}
+.hud-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+.hud-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+.hud-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hud-panel.collapsed .hud-content {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+}
+
+.proof-step-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px dashed rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--color-cyan);
+}
+
+.proof-step-card.success {
+    border-left-color: var(--color-green);
+    background: rgba(16, 185, 129, 0.03);
+}
+
+/* 右侧操作面板 */
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+.control-card {
+    background: var(--color-bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(16px);
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.control-card:hover {
+    box-shadow: 0 12px 36px rgba(6, 182, 212, 0.05);
+    border-color: rgba(6, 182, 212, 0.25);
+}
+
+.control-card h2 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-cyan);
+}
+
+/* 控制板块内容 */
+.ctrl-group {
+    display: none;
+}
+
+.ctrl-group.active {
+    display: block;
+}
+
+/* 滑块样式 */
+.slider-container {
+    margin-bottom: 20px;
+}
+
+.slider-label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+}
+
+.slider-val {
+    color: var(--color-cyan);
+}
+
+.modern-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modern-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-cyan);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.8);
+    border: 2px solid #ffffff;
+    transition: transform 0.1s;
+}
+
+.modern-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* 按钮组 */
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-action {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-action:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-action.primary {
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    border: none;
+    box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+}
+
+.btn-action.primary:hover {
+    box-shadow: 0 6px 18px rgba(6, 182, 212, 0.55);
+}
+
+.btn-action.primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transition: left 0.6s ease;
+}
+
+.btn-action.primary:hover::after {
+    left: 100%;
+}
+
+.btn-action.active {
+    background: rgba(6, 182, 212, 0.1);
+    border-color: var(--color-cyan);
+    color: var(--color-cyan);
+}
+
+/* 提示卡片 */
+.hint-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 11.5px;
+    line-height: 1.6;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.hint-card h3 {
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-orange);
+}
+
+.hint-card ul {
+    list-style: none;
+}
+
+.hint-card li {
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 12px;
+}
+
+.hint-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+}
+
+/* ==========================================================================
+   几何 SVG 图形绘制特有效效
+   ========================================================================== */
+.geo-line {
+    stroke: var(--color-text-main);
+    stroke-width: 2.2px;
+    stroke-linecap: round;
+    transition: stroke 0.3s, stroke-width 0.3s;
+}
+
+.geo-line.auxiliary {
+    stroke: var(--color-orange);
+    stroke-width: 2.0px;
+    stroke-dasharray: 6, 6;
+    animation: dash-flow 2.5s infinite linear;
+}
+
+.geo-line.highlight {
+    stroke: var(--color-cyan);
+    stroke-width: 3.5px;
+    stroke-dasharray: 6, 4;
+    animation: dash-flow 2s infinite linear;
+    filter: drop-shadow(0 0 5px var(--color-cyan));
+}
+
+.geo-line.highlight-purple {
+    stroke: var(--color-purple);
+    stroke-width: 3.5px;
+    filter: drop-shadow(0 0 4px var(--color-purple));
+}
+
+@keyframes dash-flow {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
+
+/* 全息定位网格线 */
+.geo-grid-line {
+    stroke: rgba(6, 182, 212, 0.05);
+    stroke-width: 0.8px;
+    stroke-dasharray: 1, 6;
+}
+
+/* 动点发光样式 */
+.geo-point-group.draggable circle {
+    fill: #ffffff;
+    stroke: var(--color-cyan);
+    stroke-width: 2px;
+    filter: drop-shadow(0 0 5px var(--color-cyan));
+    transition: r 0.2s, stroke-width 0.2s, fill 0.2s, filter 0.2s;
+}
+
+.geo-point-group.draggable circle:hover {
+    r: 8.5px;
+    stroke-width: 3.5px;
+    fill: var(--color-cyan);
+    filter: drop-shadow(0 0 10px var(--color-cyan));
+    cursor: grab;
+}
+
+.geo-point-group circle {
+    fill: #ffffff;
+    stroke: var(--color-accent);
+    stroke-width: 2px;
+    filter: drop-shadow(0 0 3px var(--color-accent));
+    transition: r 0.2s, stroke-width 0.2s;
+}
+
+.geo-point-group circle:hover {
+    r: 7.5px;
+    stroke-width: 2.8px;
+    cursor: pointer;
+}
+
+.geo-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 13px;
+    fill: var(--color-text-main);
+    pointer-events: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.angle-arc {
+    fill: none;
+    stroke: var(--color-green);
+    stroke-width: 1.5px;
+    stroke-dasharray: 2, 1;
+}
+
+.angle-text {
+    font-size: 8.5px;
+    font-weight: 700;
+    fill: var(--color-green);
+}
+
+/* 动效图层过渡 */
+#rotating-triangle-adc, #folding-triangle-abh, #rotating-triangle-abe {
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s;
+}
+
+/* 直角标记 */
+.right-angle-marker {
+    fill: none;
+    stroke: var(--color-cyan);
+    stroke-width: 1px;
+}
+
+/* 全等重合高亮指示 */
+.geo-congruent-highlight {
+    animation: neon-pulse-glow 1.5s infinite ease-in-out;
+}
+
+@keyframes neon-pulse-glow {
+    0%, 100% { filter: drop-shadow(0 0 2px var(--color-green)); stroke-width: 2.2px; }
+    50% { filter: drop-shadow(0 0 8px var(--color-green)); stroke-width: 3.5px; }
+}
+
+/* 玻璃卡片霓虹流动边框动画 */
+@keyframes neonBorderPulse {
+    0%, 100% {
+        border-color: rgba(6, 182, 212, 0.12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 4px rgba(6, 182, 212, 0.04);
+    }
+    50% {
+        border-color: rgba(168, 85, 247, 0.28);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 14px rgba(168, 85, 247, 0.12);
+    }
+}
+
+.hud-panel {
+    animation: neonBorderPulse 6s infinite ease-in-out;
+}
+
+.control-card {
+    animation: neonBorderPulse 8s infinite ease-in-out;
+}
+
+.hint-card {
+    animation: neonBorderPulse 10s infinite ease-in-out;
+}
+
+/* 关卡 4 专用角弧与高亮线样式 */
+.angle-arc-green {
+    fill: none;
+    stroke: var(--color-green);
+    stroke-width: 1.5px;
+    stroke-dasharray: 2, 1;
+}
+
+.angle-arc-orange {
+    fill: none;
+    stroke: var(--color-orange);
+    stroke-width: 1.5px;
+    stroke-dasharray: 2, 1;
+}
+
+.geo-line.highlight-green {
+    stroke: var(--color-green);
+    stroke-width: 3.2px;
+    filter: drop-shadow(0 0 4px var(--color-green));
+}
+
+.geo-line.highlight-orange {
+    stroke: var(--color-orange);
+    stroke-width: 3.2px;
+    filter: drop-shadow(0 0 4px var(--color-orange));
+}
+
+/* Platform visual standard for jm_topic_m10 */
+.math-source-scene-jm_topic_m10,
+.math-source-panel-jm_topic_m10,
+.math-source-scene-jm_topic_m10 * ,
+.math-source-panel-jm_topic_m10 * {
+    letter-spacing: 0 !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.math-source-scene-jm_topic_m10 {
+    background: transparent !important;
+    color: #0f172a !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+.math-source-scene-jm_topic_m10 .canvas-panel,
+.math-source-scene-jm_topic_m10 .whiteboard-card {
+    background-color: #f8fafc !important;
+    background-image:
+        linear-gradient(rgba(37, 99, 235, 0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.10) 1px, transparent 1px),
+        radial-gradient(circle, rgba(14, 165, 233, 0.14) 1.2px, transparent 1.2px) !important;
+    background-size: 108px 108px, 108px 108px, 36px 36px !important;
+    border: 1px solid rgba(37, 99, 235, 0.18) !important;
+    border-radius: 8px !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.76), 0 14px 34px rgba(15, 23, 42, 0.08) !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-jm_topic_m10 .geometry-svg-container,
+.math-source-scene-jm_topic_m10 #geometry-svg {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    touch-action: none !important;
+    cursor: grab !important;
+}
+
+.math-source-scene-jm_topic_m10 #geometry-svg.is-panning {
+    cursor: grabbing !important;
+}
+
+.math-source-scene-jm_topic_m10 #geometry-view {
+    transform-box: fill-box !important;
+    transform-origin: 0 0 !important;
+}
+
+.math-source-scene-jm_topic_m10 .whiteboard-title,
+.math-source-scene-jm_topic_m10 header,
+.math-source-scene-jm_topic_m10 .bottom-controller-panel,
+.math-source-scene-jm_topic_m10 .chamber-status-header {
+    display: none !important;
+}
+
+.math-source-scene-jm_topic_m10 #hud-panel.hud-panel,
+.math-source-scene-jm_topic_m10 .hud-panel {
+    top: 18px !important;
+    left: 18px !important;
+    right: auto !important;
+    z-index: 180 !important;
+    width: min(306px, calc(100% - 36px)) !important;
+    max-width: calc(100% - 36px) !important;
+    max-height: none !important;
+    padding: 0 !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(203, 213, 225, 0.94) !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    color: #0f172a !important;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16) !important;
+    backdrop-filter: blur(12px) !important;
+    overflow: visible !important;
+    animation: none !important;
+}
+
+.math-source-scene-jm_topic_m10 #hud-panel.hud-panel.collapsed,
+.math-source-scene-jm_topic_m10 .hud-panel.collapsed {
+    width: max-content !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 36px) !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    max-height: 42px !important;
+    border-radius: 999px !important;
+    overflow: hidden !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-header {
+    width: auto !important;
+    min-width: 0 !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    color: #0f172a !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    border: 0 !important;
+    border-radius: inherit !important;
+    cursor: pointer !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-header-title {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+    color: #0f172a !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-toggle-btn {
+    flex: 0 0 26px !important;
+    width: 26px !important;
+    min-width: 26px !important;
+    height: 26px !important;
+    min-height: 26px !important;
+    margin-left: 2px !important;
+    padding: 0 !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(148, 163, 184, 0.42) !important;
+    background: #f8fafc !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    touch-action: manipulation !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-panel.collapsed .hud-toggle-btn {
+    background: #fff7ed !important;
+    border-color: rgba(251, 146, 60, 0.26) !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 10px 12px 12px !important;
+    color: #1e293b !important;
+    background: rgba(248, 250, 252, 0.94) !important;
+    border-radius: 0 0 12px 12px !important;
+    font-size: 11.5px !important;
+    line-height: 1.5 !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-panel.collapsed .hud-content {
+    display: none !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .proof-step-card {
+    margin: 0 0 8px !important;
+    padding: 10px 12px !important;
+    color: #1e293b !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    border: 1px solid rgba(148, 163, 184, 0.24) !important;
+    border-left: 3px solid #2563eb !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .proof-step-card.success {
+    border-left-color: #16a34a !important;
+    background: rgba(240, 253, 244, 0.90) !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .proof-step-card b {
+    color: #0f172a !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-card {
+    margin: 8px 0 0 !important;
+    padding: 10px 12px !important;
+    color: #1e293b !important;
+    background: rgba(239, 246, 255, 0.92) !important;
+    border: 1px solid rgba(37, 99, 235, 0.18) !important;
+    border-left: 3px solid #2563eb !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-title {
+    display: block !important;
+    margin: 0 0 6px !important;
+    color: #1d4ed8 !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    font-weight: 900 !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-body,
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-body h3,
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-body li {
+    color: #334155 !important;
+    font-size: 11.5px !important;
+    line-height: 1.52 !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-body h3 {
+    margin: 0 0 5px !important;
+    color: #0f172a !important;
+    font-weight: 900 !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-body ul {
+    margin: 0 !important;
+    padding-left: 16px !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-content .hud-hint-body li {
+    margin: 3px 0 !important;
+}
+
+.math-source-panel-jm_topic_m10 {
+    color: rgba(248, 250, 252, 0.94) !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .math-source-panel-scroll {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 8px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 8px !important;
+    background: rgba(2, 6, 23, 0.30) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(148, 163, 184, 0.48) transparent !important;
+}
+
+.math-source-panel-jm_topic_m10 .math-source-panel-scroll::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+.math-source-panel-jm_topic_m10 .math-source-panel-scroll::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.math-source-panel-jm_topic_m10 .math-source-panel-scroll::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.42) !important;
+    border-radius: 999px !important;
+}
+
+.math-source-panel-jm_topic_m10 .math-source-panel-content {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    gap: 10px !important;
+    background: transparent !important;
+}
+
+.math-source-panel-jm_topic_m10 .control-panel,
+.math-source-panel-jm_topic_m10 .control-column {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    gap: 10px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .control-card,
+.math-source-panel-jm_topic_m10 .hint-card,
+.math-source-panel-jm_topic_m10 .tab-grid,
+.math-source-panel-jm_topic_m10 .slider-container,
+.math-source-panel-jm_topic_m10 .monitor-box {
+    border-radius: 8px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    background: rgba(15, 23, 42, 0.48) !important;
+    box-shadow: none !important;
+    animation: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .control-card:hover,
+.math-source-panel-jm_topic_m10 .slider-container:hover,
+.math-source-panel-jm_topic_m10 .btn-action:hover,
+.math-source-panel-jm_topic_m10 .tab-btn:hover {
+    box-shadow: none !important;
+    filter: none !important;
+    transform: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .control-card {
+    padding: 14px !important;
+}
+
+.math-source-panel-jm_topic_m10 .hint-card {
+    display: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .control-card h2,
+.math-source-panel-jm_topic_m10 .hint-card h3 {
+    margin: 0 0 10px !important;
+    color: #f8fafc !important;
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+    font-weight: 900 !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-map {
+    display: grid !important;
+    gap: 7px !important;
+    margin: 0 0 10px !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-step {
+    display: grid !important;
+    grid-template-columns: 24px minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-height: 44px !important;
+    padding: 7px 8px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    background: rgba(15, 23, 42, 0.48) !important;
+    color: #e2e8f0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+    transform: none !important;
+    touch-action: manipulation !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-step:hover {
+    box-shadow: none !important;
+    filter: none !important;
+    transform: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-step:focus-visible {
+    outline: 2px solid rgba(34, 211, 238, 0.70) !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-step.active {
+    border-color: rgba(34, 211, 238, 0.52) !important;
+    background: rgba(8, 47, 73, 0.74) !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-step.complete {
+    border-color: rgba(34, 197, 94, 0.44) !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-index {
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 999px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: rgba(34, 211, 238, 0.16) !important;
+    color: #67e8f9 !important;
+    font: 900 12px/1 Consolas, monospace !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-copy {
+    min-width: 0 !important;
+    display: grid !important;
+    gap: 2px !important;
+    text-align: left !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-copy b {
+    color: #f8fafc !important;
+    font-size: 12px !important;
+    line-height: 1.18 !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-copy small {
+    color: rgba(203, 213, 225, 0.70) !important;
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-state {
+    padding: 2px 6px !important;
+    border-radius: 999px !important;
+    background: rgba(15, 23, 42, 0.62) !important;
+    color: #cbd5e1 !important;
+    font: 900 10.5px/1.35 "Microsoft YaHei", sans-serif !important;
+    white-space: nowrap !important;
+}
+
+.math-source-panel-jm_topic_m10 .strategy-step.complete .strategy-state {
+    background: rgba(22, 163, 74, 0.20) !important;
+    color: #86efac !important;
+}
+
+.math-source-panel-jm_topic_m10 .classroom-tools {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    margin: 0 0 10px !important;
+}
+
+.math-source-panel-jm_topic_m10 .classroom-tools .btn-action {
+    min-height: 38px !important;
+    padding: 8px 6px !important;
+}
+
+.math-source-panel-jm_topic_m10 .state-judge {
+    display: grid !important;
+    gap: 4px !important;
+    margin: 0 0 10px !important;
+    padding: 9px 10px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 8px !important;
+    background: rgba(15, 23, 42, 0.48) !important;
+    color: rgba(226, 232, 240, 0.86) !important;
+    box-shadow: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .state-judge b {
+    color: #f8fafc !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+}
+
+.math-source-panel-jm_topic_m10 .state-judge span {
+    color: rgba(203, 213, 225, 0.82) !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-lesson-grid {
+    display: grid !important;
+    gap: 6px !important;
+    margin: 0 0 8px !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-lesson-card {
+    padding: 7px 9px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    background: rgba(255, 255, 255, 0.90) !important;
+    color: #1e293b !important;
+    box-shadow: none !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-lesson-card b {
+    display: block !important;
+    margin-bottom: 3px !important;
+    color: #0f172a !important;
+    font-size: 11.5px !important;
+    line-height: 1.25 !important;
+}
+
+.math-source-scene-jm_topic_m10 .hud-lesson-card span {
+    display: block !important;
+    color: #334155 !important;
+    font-size: 10.8px !important;
+    line-height: 1.32 !important;
+}
+
+.math-source-panel-jm_topic_m10 .slider-container {
+    padding: 10px !important;
+    display: grid !important;
+    gap: 9px !important;
+}
+
+.math-source-panel-jm_topic_m10 .slider-label-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    color: #e2e8f0 !important;
+    font-size: 12px !important;
+    line-height: 1.32 !important;
+    font-weight: 800 !important;
+}
+
+.math-source-panel-jm_topic_m10 .slider-label-row > span:first-child {
+    min-width: 0 !important;
+    white-space: normal !important;
+}
+
+.math-source-panel-jm_topic_m10 .slider-val {
+    min-width: 40px !important;
+    padding: 2px 7px !important;
+    border-radius: 999px !important;
+    background: rgba(34, 211, 238, 0.12) !important;
+    color: #67e8f9 !important;
+    font: 900 12px/1.35 Consolas, "Microsoft YaHei", monospace !important;
+    text-align: right !important;
+}
+
+.math-source-panel-jm_topic_m10 input[type="range"].modern-slider {
+    display: block !important;
+    width: 100% !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 11px 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    touch-action: pan-x !important;
+}
+
+.math-source-panel-jm_topic_m10 input[type="range"].modern-slider::-webkit-slider-runnable-track {
+    height: 7px !important;
+    border-radius: 999px !important;
+}
+
+.math-source-panel-jm_topic_m10 input[type="range"].modern-slider::-webkit-slider-thumb {
+    width: 22px !important;
+    height: 22px !important;
+    margin-top: -7.5px !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.math-source-panel-jm_topic_m10 input[type="range"].modern-slider::-webkit-slider-thumb:hover {
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.math-source-panel-jm_topic_m10 .btn-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    margin-top: 10px !important;
+}
+
+.math-source-panel-jm_topic_m10 .btn-row:has(.btn-action:only-child) {
+    grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.math-source-panel-jm_topic_m10 .btn-action,
+.math-source-panel-jm_topic_m10 .tab-btn {
+    min-width: 0 !important;
+    min-height: 42px !important;
+    height: auto !important;
+    padding: 9px 10px !important;
+    border-radius: 8px !important;
+    background: rgba(15, 23, 42, 0.48) !important;
+    border: 1px solid rgba(148, 163, 184, 0.20) !important;
+    color: #e2e8f0 !important;
+    box-shadow: none !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+    font-weight: 900 !important;
+    white-space: normal !important;
+    word-break: keep-all !important;
+    touch-action: manipulation !important;
+}
+
+.math-source-panel-jm_topic_m10 .btn-action.primary,
+.math-source-panel-jm_topic_m10 .btn-action.active,
+.math-source-panel-jm_topic_m10 .tab-btn.active {
+    background: rgba(8, 47, 73, 0.82) !important;
+    border-color: rgba(34, 211, 238, 0.48) !important;
+    color: #ffffff !important;
+}
+
+.math-source-scene-jm_topic_m10 .geo-line {
+    stroke: #1e293b !important;
+    stroke-width: 2.8px !important;
+    stroke-linecap: round !important;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.75)) !important;
+}
+
+.math-source-scene-jm_topic_m10 .geo-line.highlight-purple {
+    stroke: #7c3aed !important;
+    stroke-width: 3.6px !important;
+    filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.36)) !important;
+}
+
+.math-source-scene-jm_topic_m10 .geo-line.auxiliary {
+    stroke: #ea580c !important;
+    stroke-width: 3px !important;
+    stroke-dasharray: 7, 5 !important;
+    filter: drop-shadow(0 0 4px rgba(234, 88, 12, 0.28)) !important;
+}
+
+.math-source-scene-jm_topic_m10 .geo-line.highlight {
+    stroke: #0284c7 !important;
+    stroke-width: 3.8px !important;
+    filter: drop-shadow(0 0 5px rgba(2, 132, 199, 0.36)) !important;
+}
+
+.math-source-scene-jm_topic_m10 #rotating-triangle-adc,
+.math-source-scene-jm_topic_m10 #folding-triangle-abh,
+.math-source-scene-jm_topic_m10 #rotating-triangle-abe {
+    fill: rgba(124, 58, 237, 0.22) !important;
+    stroke: #7c3aed !important;
+    stroke-width: 1.8px !important;
+}
+
+.math-source-scene-jm_topic_m10 .geo-point-group circle {
+    fill: #2563eb !important;
+    stroke: #ffffff !important;
+    stroke-width: 3px !important;
+    filter: drop-shadow(0 2px 4px rgba(15, 23, 42, 0.34)) !important;
+}
+
+.math-source-scene-jm_topic_m10 .geo-point-group.draggable circle {
+    fill: #0284c7 !important;
+    stroke: #ffffff !important;
+    stroke-width: 3.2px !important;
+    filter: drop-shadow(0 0 0 3px rgba(14, 165, 233, 0.22)) drop-shadow(0 2px 5px rgba(15, 23, 42, 0.34)) !important;
+}
+
+.math-source-scene-jm_topic_m10 .geo-text {
+    fill: #0f172a !important;
+    stroke: rgba(255, 255, 255, 0.92) !important;
+    stroke-width: 4px !important;
+    paint-order: stroke !important;
+    filter: none !important;
+}

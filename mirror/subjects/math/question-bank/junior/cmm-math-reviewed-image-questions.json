@@ -1,0 +1,2420 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "junior",
+  "grade": "初中 CMM-Math 已审图片题",
+  "source": {
+    "name": "CMM-Math",
+    "license": "bsd-3-clause",
+    "type": "open_dataset",
+    "origin": "ecnu-icalk/cmm-math",
+    "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math"
+  },
+  "review": {
+    "importedFrom": "question-bank-staging/review/image-review-top100.jsonl",
+    "sourceImageRoot": "question-bank-staging/sources/cmm-math/images",
+    "policy": "source-image-direct-use top100-machine-priority no-redraw stage-split",
+    "importedCount": 32
+  },
+  "questions": [
+    {
+      "id": "jr_cmm_image_0001",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "如图, 在长方形 A B C D 中放置 9 个形状,大小都完全相同的小长方形(相关数据如图所示), 则图 中阴影部分的面积为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "23"
+        },
+        {
+          "label": "B",
+          "text": "18"
+        },
+        {
+          "label": "C",
+          "text": "25"
+        },
+        {
+          "label": "D",
+          "text": "15"
+        }
+      ],
+      "answer": "B",
+      "analysis": "设小长方形的长为 x, 宽为 y, 依题意, 得: x+4 y=9 ； x-y=4 ., 解得: x=5 ； y=1 ., 所以 S_阴影 =9 ×(4+3 y)-9 × x y=18.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001934",
+        "qid": "cmm-math-001934",
+        "originalFileName": "3805.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "七年级数学题目配图，来源 CMM-Math 原图 3805.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/3805.jpg",
+        "originalFileName": "3805.jpg",
+        "originalWidth": 442,
+        "originalHeight": 357,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.951Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0002",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "knowledgePoints": [
+        "组合几何学",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "将图 1 中周长为 36 的长方形纸片剪成 1 号, 2 号, 3 号, 4 号正方形和 5 号长方形, 并将它们按图 2 的方式放入周长为 55 的长方形中, 则没有覆盖的阴影部分的周长为 ( ) 见图 因1 见图 _2",
+      "options": [
+        {
+          "label": "A",
+          "text": "18"
+        },
+        {
+          "label": "B",
+          "text": "26"
+        },
+        {
+          "label": "C",
+          "text": "34"
+        },
+        {
+          "label": "D",
+          "text": "46"
+        }
+      ],
+      "answer": "D",
+      "analysis": "1 号正方形的边长为 x, 2 号正方形的边长为 y, 则 3 号正方形的边长为 x+y, 4 号正方形的边长为 2 x+y, 5 号长方形的长为 3 x+y, 宽为 y-x, 由图 1 中长方形的周长为 36, 则 y+2(x+y)+(2 x+y)=18, 所以 x+y=(9)/(2), 如图, 取点 A,B,C,D, 见图 因为 长方形的周长为 55, 所以 2(A B+A D)=2((55)/(2)-3 x-4 y+x+y+2 x+y+y-x) =2((55)/(2)-x-y) =55-2(x+y) =55-9 =46. 故答案为: 46 .",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002054",
+        "qid": "cmm-math-002054",
+        "originalFileName": "3266.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "七年级数学题目配图，来源 CMM-Math 原图 3266.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/3266.jpg",
+        "originalFileName": "3266.jpg",
+        "originalWidth": 249,
+        "originalHeight": 289,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.954Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0003",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 抛物线 y=a x^2+b x+c 与 x 轴交于点 A(1,0), 对称轴为直线 x=-1, 当 y>0 时, x 的取值范围是() 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "-1<x<1"
+        },
+        {
+          "label": "B",
+          "text": "-3<x<1"
+        },
+        {
+          "label": "C",
+          "text": "x<1"
+        },
+        {
+          "label": "D",
+          "text": "x>-1"
+        }
+      ],
+      "answer": "B",
+      "analysis": "根据二次函数图像的对称性可得其与 x 轴的另一个交点为 (-3,0), 再配合图像即可得出结果; [详解]解:因为拋物线的对称轴为直线 x=-1 ; A(1,0) 所以抛物线 y=a x^2+b x+c 与 x 轴的另一个交点为 (-3,0); 根据图像可知, 当 -3<x<1 时, y>0 故选: B. [点睛]本题考查了二次函数图像的性质以及二次函数图像与坐标轴的交点问题; 掌握函数中数形结合的方法是解题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002111",
+        "qid": "cmm-math-002111",
+        "originalFileName": "10131.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10131.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10131.jpg",
+        "originalFileName": "10131.jpg",
+        "originalWidth": 294,
+        "originalHeight": 345,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.957Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0004",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 假设篱笆 (虚线部分) 的长度 16 m,则所围成矩形 ABCD 最大面积是() 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "60 m^2"
+        },
+        {
+          "label": "B",
+          "text": "63 m^2"
+        },
+        {
+          "label": "C",
+          "text": "64 m^2"
+        },
+        {
+          "label": "D",
+          "text": "66 m^2"
+        }
+      ],
+      "answer": "C",
+      "analysis": "mathrmC [详解]试题分析:设 BC=xm, 表示出 AB, 矩形面积为 ym^2, 表示出 y 与 x 的关系式为 y=(16-x) x=-x^2+16 x=-(x-8)^2+64, , 利用二次函数性质即可求出求当 x=8 m 时, y_max =64 m^2,即所围成矩形 ABCD 的最大面积是 64 m^2. 故答案选 C. 考点: 二次函数的应用.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002115",
+        "qid": "cmm-math-002115",
+        "originalFileName": "10141.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10141.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10141.jpg",
+        "originalFileName": "10141.jpg",
+        "originalWidth": 460,
+        "originalHeight": 240,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.963Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0005",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "立体几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "某次比赛中, 羽毛球的运动路线可以看作是抛物线 y=-(1)/(4) x^2+x+(5)/(4) 的一部分 (如图),其中出球点 B 离地面 O 点的距离是 (5)/(4) 米, 球落地点 A 到 O 点的距离是 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "1 米"
+        },
+        {
+          "label": "B",
+          "text": "3 米"
+        },
+        {
+          "label": "C",
+          "text": "5 米"
+        },
+        {
+          "label": "D",
+          "text": "(25)/(16) 米"
+        }
+      ],
+      "answer": "C",
+      "analysis": "令 y=0 求得 x 的值即可求解. [详解]解: 令 y=0, 则 -(1)/(4) x^2+x+(5)/(4)=0, 解得: x_1=5, x_2=-1 (舍去), 所以 球落地点 A 到 O 点的距离是 5 米. 故选: C. [点睛]本题主要考查二次函数的应用, 利用函数的性质是解题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002116",
+        "qid": "cmm-math-002116",
+        "originalFileName": "10142.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：立体几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10142.jpg",
+        "source": "open_dataset",
+        "kind": "solid_geometry",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10142.jpg",
+        "originalFileName": "10142.jpg",
+        "originalWidth": 489,
+        "originalHeight": 297,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.967Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0006",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "二次函数 y=-x^2+a x+b 的图象如图所示, 对称轴为直线 x=2, 下列结论不正确的是 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "a=4"
+        },
+        {
+          "label": "B",
+          "text": "当 x>2.5 时, y 随 x 的增大而减小"
+        },
+        {
+          "label": "C",
+          "text": "当 x=-1 时, b>5"
+        },
+        {
+          "label": "D",
+          "text": "当 b=8 时,函数最大值为 10"
+        }
+      ],
+      "answer": "D",
+      "analysis": "根据二次函数的图象和性质依次对各选项进行判断即可. [详解]解: 因为 二次函数 y=-x^2+a x+b 所以 对称轴为直线 x=-(a)/(2 ×(-1))=2 所以 a=4, 故结论 A 正确; 因为 对称轴为直线 x=2 且图象开口向下, 所以 当 x>2.5 时, y 随 x 的增大而减小, 故结论 B 正确; 当 x=-1 时, 由图象知此时 y>0 即 -1-4+b>0 所以 b>5, 故结论 C 正确; 当 b=8 时, y=-x^2+4 x+8=-(x-2)^2+12 所以 函数有最大值 12 , 故结论 D 不正确; 故选: D. [点睛]此题考查二次函数图形和性质, 解题的关键是熟练运用二次函数的图像与系数之间的关系.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002150",
+        "qid": "cmm-math-002150",
+        "originalFileName": "11374.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11374.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11374.jpg",
+        "originalFileName": "11374.jpg",
+        "originalWidth": 391,
+        "originalHeight": 388,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.970Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0007",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如果一个矩形的周长与面积的差是定值 m(2<m<4), 我们称这个矩形为\"定差值矩形\".如图, 在矩形 A B C D 中, A B=x, A D=y, 2(x+y)-x y=(7)/(2), 那么这个\"定差值矩形\"的对角线 A C 的长的最小值为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(7)2"
+        },
+        {
+          "label": "B",
+          "text": "√(5)"
+        },
+        {
+          "label": "C",
+          "text": "√(3)"
+        },
+        {
+          "label": "D",
+          "text": "2 √(2)3"
+        }
+      ],
+      "answer": "C",
+      "analysis": "根据矩形的性质,由勾股定理可得 A C^2=x^2+y^2=(x+y-2)^2+3, 由二次函数的性质可求解. [详解]解: 因为 在矩形 A B C D 中, ∠ B=90^°, B C=A D=y, A B=x, 所以 A C^2=A B^2+B C^2, 所以 A C^2=x^2+y^2=(x+y)^2-2 x y, 因为 2(x+y)-x y=(7)/(2), 所以 x y=2(x+y)-(7)/(2), 所以 A C^2=x^2+y^2=(x+y)^2-2 x y=(x+y)^2-4(x+y)+7=(x+y-2)^2+3, 所以 当 x+y=2 时, A C^2=3, 所以 A C 有最小值为 √(3) (取正值), 故选: C. [点睛]本题考查了矩形的性质, 勾股定理, 二次函数的性质, 掌握相关性质是本题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002161",
+        "qid": "cmm-math-002161",
+        "originalFileName": "11377.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11377.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11377.jpg",
+        "originalFileName": "11377.jpg",
+        "originalWidth": 529,
+        "originalHeight": 394,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.974Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0008",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "已知函数 y=a x^2+b x+c, 当 y>0 时, -(1)/(3)<x<(1)/(2). 则函数 y=c x^2-b x+a 的图像可能是图中的 ( ) 见图 A 见图 B 见图 C 见图 D",
+      "options": [
+        {
+          "label": "A",
+          "text": "A"
+        },
+        {
+          "label": "B",
+          "text": "B"
+        },
+        {
+          "label": "C",
+          "text": "C"
+        },
+        {
+          "label": "D",
+          "text": "D"
+        }
+      ],
+      "answer": "D",
+      "analysis": "因为 函数 y=a x^2+b x+c, 当 y>0 时, -(1)/(3)<x<(1)/(2). 所以 a<0, c>0, 函数 y=a x^2+b x+c 与 x 轴的交点为 (-(1)/(3), 0) 和 ((1)/(2), 0), 所以-(b)/(a)=(1)/(2)-(1)/(3)=(1)/(6), (c)/(a)=(1)/(2) ×(-(1)/(3))=-(1)/(6) 所以 a=-6 b, a=-6 c, 所以 b=c ,不妨设 c=1 所以 函数 y=c x^2-b x+a 为函数 y=x^2-x-6 即 y=(x+2)(x-3) 所以 与 x 轴的交点坐标是 (-2,0),(3,0). 故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002185",
+        "qid": "cmm-math-002185",
+        "originalFileName": "11396.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11396.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11396.jpg",
+        "originalFileName": "11396.jpg",
+        "originalWidth": 335,
+        "originalHeight": 340,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.979Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0009",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "立体几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "在中考体育训练期间,小宇对自己某次实心球训练的录像进行分析,发现实心球飞行高度 y (米) 与水平距离 x (米)之间的关系式为 y=-(1)/(10) x^2+(3)/(5) x+(8)/(5), 由此可知小宇此次训练实心球落地时的水平距离为() 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "85 米"
+        },
+        {
+          "label": "B",
+          "text": "8 米"
+        },
+        {
+          "label": "C",
+          "text": "10 米"
+        },
+        {
+          "label": "D",
+          "text": "2 米"
+        }
+      ],
+      "answer": "B",
+      "analysis": "小宇此次实心球训练的成绩就是拋物线 y=-(1)/(10) x^2+(3)/(5) x+(8)/(5) 与 x 轴交点的横坐标,即当 y=0 时,求 x 的值即可. [详解]解: 当 y=0 时, 即 y=-(1)/(10) x^2+(3)/(5) x+(8)/(5), 解得: x_1=-2 (舍去), x_2=8, 所以小宇此次实心球训练的成绩为 8 米. 故选: B. [点睛]本题考查了二次函数的应用中函数式中变量与函数表达的实际意义, 需要结合题意,取函数或自变量的特殊值列方程求解是解题关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002192",
+        "qid": "cmm-math-002192",
+        "originalFileName": "11406.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：立体几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11406.jpg",
+        "source": "open_dataset",
+        "kind": "solid_geometry",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11406.jpg",
+        "originalFileName": "11406.jpg",
+        "originalWidth": 602,
+        "originalHeight": 254,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.986Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0010",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "已知二次函数 y=m x^2-2 m x+2(m ≠ 0) 在 -2 ≤ x<2 时有 见图 最小值 -2 , 则 m=( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "-4 或 -(1)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "4 或 -(1)/(2)"
+        },
+        {
+          "label": "C",
+          "text": "-4 或 (1)/(2)"
+        },
+        {
+          "label": "D",
+          "text": "4 或 (1)/(2)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "先求出二次函数对称轴为直线 x=1, 再分 m>0 和 m<0 两种情况, 利用二次函数的性质进行求解即可. [详解]解: 因为 二次函数 y=m x^2-2 m x+2=m(x-1)^2-m+2, 所以 对称轴为直线 x=1, (1)当 m>0, 抛物线开口向上, x=1 时, 有最小值 y=-m+2=-2, 解得: m=4; (2)当 m<0, 抛物线开口向下, 因为 对称轴为直线 x=1, 在 -2 ≤ x<2 时有最小值 -2 , 所以 x=-2 时, 有最小值 y=9 m-m+2=-2, 解得: m=-(1)/(2). 故选: B. [点睛]本题主要考查了二次函数图像的性质, 掌握分类讨论的思想是解题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002213",
+        "qid": "cmm-math-002213",
+        "originalFileName": "10213.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10213.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10213.jpg",
+        "originalFileName": "10213.jpg",
+        "originalWidth": 451,
+        "originalHeight": 391,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.990Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0011",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "某市公园欲修建一个圆型喷泉池, 在水池中垂直于地面安装一个柱子 O P, 安置在柱子顶端 P 处的喷头向外喷水,水流在各个方向上沿形状相同的抛物线路径落下,在过 O P 的任一平面上, 建立平面直角坐标系 (如图所示), 水平距离 x( m) 与水流喷出的高度 y( m) 之间的关系式为 y=-(2)/(9) x^2+(4)/(3) x+2, 则水流喷出的最大高度是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "5.5 m"
+        },
+        {
+          "label": "B",
+          "text": "5 m"
+        },
+        {
+          "label": "C",
+          "text": "4.5 m"
+        },
+        {
+          "label": "D",
+          "text": "4 m"
+        }
+      ],
+      "answer": "D",
+      "analysis": "将 y=-(2)/(9) x^2+(4)/(3) x+2 配方成顶点式求解即可. [详解] y=-(2)/(9) x^2+(4)/(3) x+2=-(2)/(9)(x-3)^2+4 所以 当 x=3 时, y 取得最大值 4 , 所以 水流喷出的最大高度是 4 m. 故选: D. [点睛]本题考查二次函数的应用, 解答本题的关键是明确题意, 利用二次函数的性质和数 形结合的思想解答.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002214",
+        "qid": "cmm-math-002214",
+        "originalFileName": "10229.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10229.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10229.jpg",
+        "originalFileName": "10229.jpg",
+        "originalWidth": 423,
+        "originalHeight": 334,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:03.998Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0012",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 抛物线 y=a x^2+b x+c 与 x 轴交于 A(-1,0) , B(3,0) 两点, 与 y 轴交于点 C,下列结论不正确的是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "3 a+c>0"
+        },
+        {
+          "label": "B",
+          "text": "2 a+b=0"
+        },
+        {
+          "label": "C",
+          "text": "a b c>0"
+        },
+        {
+          "label": "D",
+          "text": "4 a+2 b+c<0"
+        }
+      ],
+      "answer": "A",
+      "analysis": "由抛物线的对称轴的位置判断 a b 的符号,由拋物线与 y 轴的交点判断 c 的符号,然后根据对称轴及抛物线与 x 轴交点情况进行推理, 进而对所得结论进行判断. [详解]解:由图像可得, a>0, c<0,-(b)/(2 a)>0, 所以 b<0, 所以 a b c>0, 故选项 A 正确, 不合题意; 因为 抛物线 y=a x^2+b x+c(a ≠ 0) 与 x 轴交于 A(-1,0) , B(3,0) 两点, 所以-(b)/(2 a)=(-1+3)/(2)=1, 得 b=-2 a, 所以 2 a+b=0, 故选项 B 正确, 不合题意; 当 x=-1 时, y=a-b+c=a+2 a+c=3 a+c=0, 故选项 C 不正确, 符合题意; 当 x=2 时, y=4 a+2 b+c<0, 故选项 D 正确, 不合题意; 故选: A. [点睛]本题主要考查了图像与二次函数系数之间的关系,解题的关键是熟知二次函数的图像及其性质.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002233",
+        "qid": "cmm-math-002233",
+        "originalFileName": "10277.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10277.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10277.jpg",
+        "originalFileName": "10277.jpg",
+        "originalWidth": 351,
+        "originalHeight": 388,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.000Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0013",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "在2022年北京冬奥会开幕式和闭幕式中,一片 \"雪花\" 的故事展现了 \"世界大同,天下一家\"的主题, 让世界观众感受了中国人的浪漫. 如图, 将 \"雪花\" 图案(边长为 4 的正六边形 A B C D E F )放在平面直角坐标系中, 若 A B 与 x 轴垂直, 顶点 A 的坐标为 (2,-3), 则顶点 C 的坐标为 ( )见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "(2-2 √(3), 3)"
+        },
+        {
+          "label": "B",
+          "text": "(0,1+2 √(3))"
+        },
+        {
+          "label": "C",
+          "text": "(2-√(3), 3)"
+        },
+        {
+          "label": "D",
+          "text": "(2-2 √(3), 2+√(3))"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解: 如图, 连接 B D 交 C F 于点 M, 则点 B(2,1), 在Rt △ B C M 中, B C=4, ∠ B C M=(1)/(2) × 120^°=60^°, 所以 C M=(1)/(2) B C=2, B M=√(3)2 B C=2 √(3), 所以 点 C 的横坐标为 -(2 √(3)-2)=2-2 √(3), 纵坐标为 1+2=3, 所以 点 C 的坐标为 (2-2 √(3), 3), 见图 故选: A. 根据正六边形的性质以及坐标与图形的性质进行计算即可. 本题考查正多边形与圆,勾股定理,掌握正六边形的性质以及勾股定理是正确计算的前提,理解坐标与图形的性质是解决问题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002276",
+        "qid": "cmm-math-002276",
+        "originalFileName": "10948.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10948.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10948.jpg",
+        "originalFileName": "10948.jpg",
+        "originalWidth": 445,
+        "originalHeight": 454,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.003Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0014",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "平面直角坐标系中, 拋物线 y=a x^2-3 a x+c(a ≠ 0) 与直线 y=2 x+1 上有三个不同的点 A(x_1, m), B(x_2, m), C(x_3, m). 如果 n=x_1+x_2+x_3, 那么 m 和 n 的关系是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "m=2 n-3"
+        },
+        {
+          "label": "B",
+          "text": "m=n^2-3"
+        },
+        {
+          "label": "C",
+          "text": "m=2 n-5"
+        },
+        {
+          "label": "D",
+          "text": "m=n^2-5"
+        }
+      ],
+      "answer": "C",
+      "analysis": "解: 因为 y=a x^2-3 a x+c, 所以 对称轴为直线 x=-(-3 a)/(2 a)=(3)/(2), 如图, 在抛物线上的两点 A 和 B, 关于直线 x=(3)/(2) 对称, 则 C点在反直线 y=2 x+1 上, 所以 x_1+x_2=3, 因为 n=x_1+x_2+x_3, 见图 所以 n=3+x_3, 所以 x_3=n-3, 所以 m=2(n-3)+1, 所以 m=2 n-5, 故选: C. 根据题意设在拋物线上的两点 A 和 B, 纵坐标相同, 则关于对称轴对称, 即可求得 x_3=n-3, 则 C(n- 3, m), 代入解析式, 即可求得 m=2 n-5. 本题考查了二次函数的性质,一次函数图象上点的坐标特征,图象上的点的坐标适合解析式. ##",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002292",
+        "qid": "cmm-math-002292",
+        "originalFileName": "11172.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11172.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11172.jpg",
+        "originalFileName": "11172.jpg",
+        "originalWidth": 694,
+        "originalHeight": 540,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.006Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0015",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图是一款拋物线型落地灯筒示意图, 防滑螺母 C 为抛物线支架的最高点, 灯罩 D 距离地面1.5米,最高点 C 距灯柱的水平距离为 1.6 米, 灯柱 A B 为 1.5 米, 若茶几摆放在灯罩的正下方, 则茶几到灯柱的距离 A E 为多少米. ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "3.2"
+        },
+        {
+          "label": "B",
+          "text": "0.32"
+        },
+        {
+          "label": "C",
+          "text": "2.5"
+        },
+        {
+          "label": "D",
+          "text": "1.6"
+        }
+      ],
+      "answer": "A",
+      "analysis": "[分析] 本题考查了二次函数的应用以及用待定系数法求函数解析式与能力. 以 A E 所在直线为 x 轴, A B 所在直线为 y 轴建立平面直角坐标系, 利用待定系数法求出函数解析式, 再求出 y=1.5 时 x 的值, 即可得出答案. ## [解答] 解: 如图所示, 以 A E 所在直线为 x 轴, A B 所在直线为 y 轴建立平面直角坐标系, 见图 根据题意知, 拋物线的顶点 C 的坐标为 (1.6,2.5), 设抛物线的解析式为 y=a(x-1.6)^2+2.5, 将点 B(0,1.5) 代入得, 2.56 a+2.5=1.5, 解得 a=-(25)/(64), 所以 抛物线的解析式为 y=-(25)/(64)(x-1.6)^2+2.5, 当 y=1.5 时,-(25)/(64)(x-1.6)^2+2.5=1.5, 解得 x=0 (舍)或 x=3.2, 所以茶几到灯柱的距离 A E 为 3.2 米, 故选: A.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002308",
+        "qid": "cmm-math-002308",
+        "originalFileName": "11200.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11200.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11200.jpg",
+        "originalFileName": "11200.jpg",
+        "originalWidth": 414,
+        "originalHeight": 297,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.013Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0016",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "某大桥的桥拱可以用抛物线的一部分表示,函数关系为 y=-(1)/(25) x^2, 当水面宽度 A B为 20 m 时, 水面与桥拱顶的高度 CO 等于() 见图 (第 6 题)",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 m"
+        },
+        {
+          "label": "B",
+          "text": "4 m"
+        },
+        {
+          "label": "C",
+          "text": "10 m"
+        },
+        {
+          "label": "D",
+          "text": "16 m"
+        }
+      ],
+      "answer": "B",
+      "analysis": "根据题意, 把 x=10 直接代入解析式即可解答. [详解]解:根据题意 B 的横坐标为 10 , 将 x=10 代入 y=-(1)/(25) x^2 得: y=-4, 所以 A(-10,-4), B(10,-4), 即水面与桥拱顶的高度 CO 等于 4 m, 故选: B. [点睛]此题考查了二次函数的实际应用, 掌握二次函数的对称性是解决问题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002318",
+        "qid": "cmm-math-002318",
+        "originalFileName": "10680.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10680.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10680.jpg",
+        "originalFileName": "10680.jpg",
+        "originalWidth": 371,
+        "originalHeight": 291,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.016Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0017",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "拋物线 y=a x^2+b x+c 上部分点的横坐标 x, 纵坐标 y 的对应值如下表: 见图 | x | … | -2 | -1 | 0 | 1 | 2 | ·s | | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | | y | … | 0 | 4 | 6 | 6 | 4 | ·s | 从表中可知, 下列说法中正确的是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "抛物线的对称轴是直线 x=0"
+        },
+        {
+          "label": "B",
+          "text": "抛物线与 x 轴的一个交点为 (3,0)"
+        },
+        {
+          "label": "C",
+          "text": "函数 y=a x^2+b x+c 的最大值为 6"
+        },
+        {
+          "label": "D",
+          "text": "在对称轴右侧, y 随 x 增大而增大"
+        }
+      ],
+      "answer": "B",
+      "analysis": "根据表格信息结合二次函数性质,逐项判断即可. [详解]解:A,由表格可知函数经过 (0,6),(1,6), 所以对称轴 x=(0+1)/(2)=(1)/(2), 故选项不符合题意; B,根据图表, 当 x=-2, y=0, 根据抛物线的对称性, 当 x=3 时, y=0, 即抛物线与 x轴的交点为 (-2,0) 和 (3,0), 故选项正确, 符合题意; C,根据表中数据得到拋物线的开口向下, 所以 当 x=(1)/(2) 时, 函数有最大值, 而不是 x=0, 或 1 对应的函数值 6 , 故选项错误, 不符合题意; D,根据表中数据得到拋物线的开口向下, 并且在直线 x=(1)/(2) 的右侧, y 随 x 增大而减小, 故选项错误,不符合题意; 故选: B. [点睛]本题考查了抛物线 y=a x^2+b x+c 的性质:抛物线是轴对称图形, 它与 x 轴的两个交点是对称点, 对称轴与拋物线的交点为抛物线的顶点; a<0 时, 函数有最大值, 在对称轴左侧, y 随 x 增大而增大.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002322",
+        "qid": "cmm-math-002322",
+        "originalFileName": "10700.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10700.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10700.jpg",
+        "originalFileName": "10700.jpg",
+        "originalWidth": 346,
+        "originalHeight": 303,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.019Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0018",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "已知抛物线 y=-x^2-2 x+3 与 x 轴交于 A. B 两点, 将这条抛物线的顶点记为 C, 连接 A C , B C, 则 ∠ CAB 的值为 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "√(5)5"
+        },
+        {
+          "label": "C",
+          "text": "2 √(5)5"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "[分析]先求出 A . B , C 坐标, 作 C D ⊥ A B 于 D, 根据 ∠ A C D=(C D)/(AD) 即可计算. 解: 令 y=0, 则 -x^2-2 x+3=0, 解得 x=-3 或 1 , 不妨设 A(-3,0), B(1,0), 因为 y=-x^2-2 x+3=-(x+1)^2+4, 所以 顶点 C (-1,4), 如图所示, 作 C D ⊥ A B 于 D. 见图 在 RT △ ACD 中, ∠ CAD=(CD)/(AD)=(4)/(2)=2, 故答案为 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002336",
+        "qid": "cmm-math-002336",
+        "originalFileName": "5618.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 5618.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/5618.jpg",
+        "originalFileName": "5618.jpg",
+        "originalWidth": 511,
+        "originalHeight": 400,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.021Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0019",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, A B 与 0 相切于点 B, A 0 的延长线交 0 于点 C, 连结 B C, 若 ∠ A=36^°, 则 ∠ C 等于 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "36^°"
+        },
+        {
+          "label": "B",
+          "text": "54^°"
+        },
+        {
+          "label": "C",
+          "text": "60^°"
+        },
+        {
+          "label": "D",
+          "text": "27^°"
+        }
+      ],
+      "answer": "D",
+      "analysis": "[分析]根据题目条件易求 ∠ BOA, 根据圆周角定理求出 ∠ C= _(1)/(2)^2 ∠ BOA, 即可求出答案. 因为 AB 与 0 相切于点 B, 所以 ∠ ABO=90^°, 因为 ∠ A=36^° 所以 ∠ BOA=54^°, 所以 由圆周角定理得: ∠ C=(1)/(2) ∠ B 0 A=27^° , 故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002340",
+        "qid": "cmm-math-002340",
+        "originalFileName": "5685.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 5685.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/5685.jpg",
+        "originalFileName": "5685.jpg",
+        "originalWidth": 351,
+        "originalHeight": 308,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.023Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0020",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "圆",
+        "平面几何",
+        "三角函数"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 半径为 3 的 A 经过原点 O和点 C(0,2), B 是 y 轴左侧 A 优弧上一点, 则 ∠ O B C 为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(3)"
+        },
+        {
+          "label": "B",
+          "text": "2 √(2)"
+        },
+        {
+          "label": "C",
+          "text": "√(2)4"
+        },
+        {
+          "label": "D",
+          "text": "2 √(2)3"
+        }
+      ],
+      "answer": "C",
+      "analysis": "作直径 C D, 见图 在Rt △ O C D 中, C D=6, O C=2, 则 O D= D^2-O C^2=4 √(2), ∠ C D O=(O C)/(O D)=√(2)4, 由圆周角定理得, ∠ O B C=∠ C D O, 则 ∠ O B C=√(2)4, 故选: C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002361",
+        "qid": "cmm-math-002361",
+        "originalFileName": "5230.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 5230.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/5230.jpg",
+        "originalFileName": "5230.jpg",
+        "originalWidth": 351,
+        "originalHeight": 331,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.034Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0021",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "组合几何学",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, A B 是 O 的直径, B C . C D . D A 是 O 的弦, 且 B C=C D=D A, 则 ∠ B C D等于 ( ) 见图 (第 4 题)",
+      "options": [
+        {
+          "label": "A",
+          "text": "118^°"
+        },
+        {
+          "label": "B",
+          "text": "120^°"
+        },
+        {
+          "label": "C",
+          "text": "135^°"
+        },
+        {
+          "label": "D",
+          "text": "150^°"
+        }
+      ],
+      "answer": "B",
+      "analysis": "由已知可得, 弦 BC , CD , DA 三等分半圆, 从而可求得 ∠ BCD 的度数. [详解]连接 OC , OD, 因为 B C=C D=D A, 所以 B C=C D=A D, 所以 弦 BC,CD,DA 三等分半圆, 所以 弦 BC 和 CD 和 DA 对的圆心角均为 60^°, 所以 ∠ BCD=(1)/(2)(180^°+60^°)=120^°, 故选 B. 见图 [点睛]本题利用了弧,弦与圆心角的关系求解, 注意半圆对的圆心角 为 180^°.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002475",
+        "qid": "cmm-math-002475",
+        "originalFileName": "10441.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10441.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10441.jpg",
+        "originalFileName": "10441.jpg",
+        "originalWidth": 335,
+        "originalHeight": 294,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.036Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0022",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 路灯距地面 8 m, 身高 1.6 m 的小明从点 A 处沿 A O 所在的直线行走 14 m 到点 B 时, 人影长度( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "变长 3.5 m"
+        },
+        {
+          "label": "B",
+          "text": "变长 2.5 m"
+        },
+        {
+          "label": "C",
+          "text": "变短 3.5 m"
+        },
+        {
+          "label": "D",
+          "text": "变短 2.5 m"
+        }
+      ],
+      "answer": "C",
+      "analysis": "[分析] 此题考查相似三角形对应边成比例, 应注意题中三角形的变化. 小明在不同的位置时, 均可构成两个相似三角形, 可利用相似比求人影长度的变化. [解答] 解:设小明在 A 处时影长为 x, A O 长为 a, B 处时影长为 y. 见图 因为 A C / / O P, B D / / O P, 所以 △ A C M △ O P M, △ B D N △ O P N, 所以 (A C)/(O P)=(M A)/(M O), (B D)/(O P)=(B N)/(O N) 则 (x)/(x+a)=(1.6)/(8), 所以 x=(1)/(4) a (y)/(y+a-14)=(1.6)/(8) 所以 y=(1)/(4) a-3.5 所以 x-y=3.5, 故变短了 3.5 米. 故选: C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002520",
+        "qid": "cmm-math-002520",
+        "originalFileName": "4663.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 4663.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/4663.jpg",
+        "originalFileName": "4663.jpg",
+        "originalWidth": 400,
+        "originalHeight": 234,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.039Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0023",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 四边形 A B C D 是菱形, 点 B, C 在扇形 A E F 的弧 E F 上, 若扇形 A B C 的面积为 (3)/(8) π, 则菱形 A B C D 的边长为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "1"
+        },
+        {
+          "label": "B",
+          "text": "1.5"
+        },
+        {
+          "label": "C",
+          "text": "√(3)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "根据菱形的各边相等和同圆的半径相等发现等边 △ ABC, 可得 ∠ CAB=60^°, 从而根据扇形的面积公式求得扇形所在圆的半径, 即为菱形的边长. [详解]解: 因为 四边形 ABCD 是菱形, 所以 AB=BC. 又 因为 AB=AC, 所以 △ ABC 是等边三角形. 所以 ∠ CAB=60^°. 设扇形的半径是 R. 所以 60 π R^2360=(3)/(8) π, R=1. 5 故选 B. [点睛]此题综合考查了菱形的性质和扇形的面积公式有关知识, 证明 △ ABC 是等边三角形是解答本题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002557",
+        "qid": "cmm-math-002557",
+        "originalFileName": "11298.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11298.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11298.jpg",
+        "originalFileName": "11298.jpg",
+        "originalWidth": 428,
+        "originalHeight": 249,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.040Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0024",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, △ A B C 内接于 O, O D ⊥ A B 于 D, O E ⊥ A C 于 E, 连结 D E. 且 D E=3 √(2)2,则弦 B C 的长为 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(2)"
+        },
+        {
+          "label": "B",
+          "text": "2 √(2)"
+        },
+        {
+          "label": "C",
+          "text": "3 √(2)"
+        },
+        {
+          "label": "D",
+          "text": "√(6)"
+        }
+      ],
+      "answer": "C",
+      "analysis": "由垂径定理可得 AD=BD, AE=CE, 由三角形中位线定理可求解. [详解]解: 因为 O D ⊥ A B, O E ⊥ A C, 所以 A D=B D, A E=C E, 所以 B C=2 D E=2 × 3 √(2)2=3 √(2) 故选: C. [点睛]本题考查了三角形的外接圆与外心, 三角形的中位线定理, 垂径定理等知识, 灵活运用这些性质进行推理是本题的关键.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002562",
+        "qid": "cmm-math-002562",
+        "originalFileName": "11308.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11308.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11308.jpg",
+        "originalFileName": "11308.jpg",
+        "originalWidth": 328,
+        "originalHeight": 309,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.044Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0025",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 正六边形 ABCDEF 内接于圆 O, 正六边形的周长是 12 , 则圆 O 的半径是 ( ) 见图 (第 5 题)",
+      "options": [
+        {
+          "label": "A",
+          "text": "√(3)"
+        },
+        {
+          "label": "B",
+          "text": "2 √(3)"
+        },
+        {
+          "label": "C",
+          "text": "2 √(2)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "详解]试题分析: 已知正六边形的周长是 12, 可得 BC=2, 连接 OB , OC, 可得 ∠ BOC=360^°6=60^°, 所以 △ BOC 为等边三角形, 所以 OB=BC=2, 即 O O 的半径是 2 , 故选 D. 考点: 正多边形和圆.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002611",
+        "qid": "cmm-math-002611",
+        "originalFileName": "10443.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10443.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10443.jpg",
+        "originalFileName": "10443.jpg",
+        "originalWidth": 351,
+        "originalHeight": 317,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.049Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0026",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j9a_c1_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "圆",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如图, 在 O 中, A B, C D 是两条弦, O M ⊥ C D, O N ⊥ A B, 如果 A B=C D, 则下列结论不正确的是( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "∠ A O N=∠ D O M"
+        },
+        {
+          "label": "B",
+          "text": "A N=D M"
+        },
+        {
+          "label": "C",
+          "text": "O M=D M"
+        },
+        {
+          "label": "D",
+          "text": "O M=O N"
+        }
+      ],
+      "answer": "C",
+      "analysis": "[分析] 本题考查圆的认识, 垂径定理,全等三角形的判定和性质等知识, 解题的关键是熟练掌握基本知识,属于中考常考题型. 根据垂径定理和已知条件, 利用全等三角形的性质证明即可; ## [解答] 解: 因为 O M ⊥ C D, O N ⊥ A B, A B=C D, 所以 D M=C M=(1)/(2) C D, A N=N B=(1)/(2) A B, 所以 A N=D M, 故 B 正确, 因为 O A=O D, 所以 Rt △ A O N R t △ D O M(H L), 所以 ∠ A O N=∠ D O M, O N=O M, 故 A , D 正确, 当 ∠ D O C=90^° 时, O M=D M, 根据题意不能判断, 故 C 错误, 故选: C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002654",
+        "qid": "cmm-math-002654",
+        "originalFileName": "10866.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：圆与几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 10866.jpg",
+        "source": "open_dataset",
+        "kind": "circle",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/10866.jpg",
+        "originalFileName": "10866.jpg",
+        "originalWidth": 306,
+        "originalHeight": 297,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.051Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0027",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "代数",
+        "函数与图像"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "加工爆米花时, 爆开且不煳的粒数占加工总粒数的百分比称为\"可食用率\", 在特定条件下, 可食用率 p 与加工时间 t (单位: 分钟)满足函数关系 p=a t^2+b t-2 ( a, b 是常数),如图记录了三次实验的数据, 根据上述函数模型和实验数据, 可得到最佳加工时间为 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "3.75 分钟"
+        },
+        {
+          "label": "B",
+          "text": "4.00 分钟"
+        },
+        {
+          "label": "C",
+          "text": "4.15 分钟"
+        },
+        {
+          "label": "D",
+          "text": "4.25 分钟"
+        }
+      ],
+      "answer": "A",
+      "analysis": "试题解析:据题意,将 (3,0.7) ,(4,0.8) ,(5,0.5) 代入 p=a t^2+b t+c, 得: 9 a+3 b+c=0.7 ； a+4 b+c=0.8 ； a+5 b+c=0.5 . 解得: a=-0.2 ； b=1.5 ； c=-2, 即 p=-0.2 t^2+1.5 t-2. 当 t=-(1.5)/(-0.2 × 2)=3.75 时, p 取得最大值, 故选 A. [点睛]待定系数法求出二次函数的解析式, 在 x=-(b)/(2 a) 时, 二次函数有最大值.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-002790",
+        "qid": "cmm-math-002790",
+        "originalFileName": "11382.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11382.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11382.jpg",
+        "originalFileName": "11382.jpg",
+        "originalWidth": 337,
+        "originalHeight": 297,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.053Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0028",
+      "stageId": "junior",
+      "grade": "九年级",
+      "bookId": "j9a",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "knowledgePoints": [
+        "组合数学",
+        "立体几何",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "一个口袋中有四个完全相同的小球, 把它们分别标号为 1 , 2 , 3 , 4, 随机地摸出一个小球, 然后放回,再随机地摸出一个小球,则两次摸出的小球标号的和等于 4 的概率是()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(1)/(2)"
+        },
+        {
+          "label": "B",
+          "text": "(1)/(4)"
+        },
+        {
+          "label": "C",
+          "text": "(3)/(8)"
+        },
+        {
+          "label": "D",
+          "text": "(3)/(16)"
+        }
+      ],
+      "answer": "D",
+      "analysis": "如图, 见图 2 3 4 5 3 4 5 6 4 5 6 7 见图 随机地摸出一个小球, 然后放回, 再随机地摸出一个小球, 共有 16 种等可能的结果数, 其中两次摸出的小球标号的和等于 4 的占 3 种, 所有两次摸出的小球标号的和等于 4 的概率= (3)/(16). 故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-003006",
+        "qid": "cmm-math-003006",
+        "originalFileName": "11421.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "九年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：立体几何图",
+        "alt": "九年级数学题目配图，来源 CMM-Math 原图 11421.jpg",
+        "source": "open_dataset",
+        "kind": "solid_geometry",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11421.jpg",
+        "originalFileName": "11421.jpg",
+        "originalWidth": 710,
+        "originalHeight": 166,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.055Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0029",
+      "stageId": "junior",
+      "grade": "八年级",
+      "bookId": "j8a",
+      "chapterIds": [
+        "j8a_c1_1"
+      ],
+      "knowledgePoints": [
+        "解析几何",
+        "函数与图像",
+        "平面几何",
+        "代数式与方程不等式"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "定义 [x] 表示不超过实数 x 的最大整数, 如 [1.8]=1 ,[-1.4]=-2 ,[-3]=-3. 函数 y=[x] 的图象如图所示,则方程 [x]=(1)/(2) x^2 在 -2 ≤ x<2 时的解为 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "0 或 √(2)"
+        },
+        {
+          "label": "B",
+          "text": "0 或 2"
+        },
+        {
+          "label": "C",
+          "text": "1 或 -√(2)"
+        },
+        {
+          "label": "D",
+          "text": "√(2) 或 -√(2)"
+        }
+      ],
+      "answer": "A",
+      "analysis": "本题主要考查的是新定义, 函数的图象的有关知识, 根据新定义和函数图象讨论; 然后分别解关于 x 的一元二次方程即可. 解: 当 1 ≤ x<2 时, _2^1 x^2=1, 解得 x_1=√(2), x_2=-√(2) (舍去); 当 0 ≤ x<1 时,(1)/(2) x^2=0, 解得 x=0; 当 -1 ≤ x<0 时, x_2^2 x^2=-1, 方程没有实数解; 当 -2 ≤ x<-1 时, (1)/(2) x^2=-2, 方程没有实数解; 所以方程 [x]=(1)/(2) x^2 的解为 0 或 √(2)",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-003493",
+        "qid": "cmm-math-003493",
+        "originalFileName": "6971.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "八年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "八年级数学题目配图，来源 CMM-Math 原图 6971.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/6971.jpg",
+        "originalFileName": "6971.jpg",
+        "originalWidth": 348,
+        "originalHeight": 294,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.057Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0030",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j7a_c4_1"
+      ],
+      "knowledgePoints": [
+        "度量几何学",
+        "平面几何"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "通过计算比较图1,图2中阴影部分的面积, 可以验证的式子是( ) 见图 图 1 见图 图 2",
+      "options": [
+        {
+          "label": "A",
+          "text": "a(b-x)=a b-a x"
+        },
+        {
+          "label": "B",
+          "text": "b(a-x)=a b-b x"
+        },
+        {
+          "label": "C",
+          "text": "(a-x)(b-x)=a b-a x-b x"
+        },
+        {
+          "label": "D",
+          "text": "(a-x)(b-x)=a b-a x-b x+x^2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "[答案]D [解析] [分析]本题考查多项式乘多项式, 需要利用图形的一些性质得出式子, 考查学生观察图形的能力. 根据图1可知阴影部分的面积为 (a-x)(b-x), 根据图 2 , 阴影部分的面积用大长方形面积减去两个小长方形面积加上边长为 x 的正方形的面积, 通过计算面积相等, 即可得到答案. [解答]解: 题图1中, 阴影部分是长为 (a-x) ,宽为 (b-x) 的长方形, 所以阴影部分的面积 =(a-x)(b-x). 题图 2 中, 阴影部分的面积=大长方形的面积 - 长为 a ,宽为 x 的长方形的面积 - 长为 b ,宽为 x 的长方形的面积+边长为 x 的正方形的面积, 所以阴影部分的面积 =a b-a x-b x+x^2, 所以 (a-x)(b-x)=a b-a x-b x+x^2.故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001870",
+        "qid": "cmm-math-001870",
+        "originalFileName": "11648.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：坐标与可行域图",
+        "alt": "七年级数学题目配图，来源 CMM-Math 原图 11648.jpg",
+        "source": "open_dataset",
+        "kind": "coordinate",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11648.jpg",
+        "originalFileName": "11648.jpg",
+        "originalWidth": 259,
+        "originalHeight": 214,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.062Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0031",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "knowledgePoints": [
+        "计数",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "学校为了了解七年级700名学生上学期参加社会实践活动的时间, 随机对该年级50名学生进行了调查 .根据收集的数据绘制了下面的频数分布直方图, 则以下说法正确的是 ( )",
+      "options": [
+        {
+          "label": "A",
+          "text": "绘制该频数分布直方图时, 选取的组距为 10 ,"
+        },
+        {
+          "label": "B",
+          "text": "这 50 人中大多数学生参加社会实践活动的时间是 12 14 h"
+        },
+        {
+          "label": "C",
+          "text": "这 50 人中有 64 % 的学生参加社会实践活动时间不少于 10 h"
+        },
+        {
+          "label": "D",
+          "text": "可以估计全年级 700 人中参加社会实践活动时间为 6 8 h 的学生大约为 28 人"
+        }
+      ],
+      "answer": "D",
+      "analysis": "[答案]D [解析] [分析] 本题主要考查的是用样本估计总体, 频数分布直方图的有关知识, 阅读频数分布直方图,根据直方图中获取的信息进行判断即可. [解答] 解: 绘制该频数分布直方图时, 选取的组距为 2 , 分成的组数为 5 , 故 A 错误;参加社会实践活动的时间是 12 14 h 有 18 人, 总共有 50 人, 所以不是大多数学生参加社会实践活动的时间是 12 14 h, 故 B 错误; (14+18+10) ÷ 50=84 %, 故 C 错误; 700 × (2)/(50)=28 (人), 故 D 正确. 故选 D.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001946",
+        "qid": "cmm-math-001946",
+        "originalFileName": "11698.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：统计图",
+        "alt": "七年级数学题目配图，来源 CMM-Math 原图 11698.jpg",
+        "source": "open_dataset",
+        "kind": "statistics",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11698.jpg",
+        "originalFileName": "11698.jpg",
+        "originalWidth": 483,
+        "originalHeight": 357,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.064Z"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "jr_cmm_image_0032",
+      "stageId": "junior",
+      "grade": "七年级",
+      "bookId": "j7a",
+      "chapterIds": [
+        "j8a_c3_1"
+      ],
+      "knowledgePoints": [
+        "计数",
+        "概率统计"
+      ],
+      "type": "选择题",
+      "difficulty": "基础",
+      "stem": "如图所示为我国2009～2012年财政收入增长率的折线统计图, 其中2010年我国财政收入约为83100亿元. 给出下列说法: (1)2009年我国财政收入约为83100(121.3 %)亿元; (2)这4年中,我国年财政收入先增后减; (3)这4年中,2009年我国财政收入最少; 4)这4年中, 2011年我国财政收入最多; (5)2012年我国财政收入约为 83100(1+24.8 %)(1+12.8 %) 亿元. 其中正确的个数是 ( ) 见图",
+      "options": [
+        {
+          "label": "A",
+          "text": "0 个"
+        },
+        {
+          "label": "B",
+          "text": "1 个"
+        },
+        {
+          "label": "C",
+          "text": "2 个"
+        },
+        {
+          "label": "D",
+          "text": "3 个"
+        }
+      ],
+      "answer": "C",
+      "analysis": "[答案]C [解析] [分析] 此题主要考查了折线统计图, 根据已知图象得出财政收入增长率先增后减, 财政收入始终在增长是解题关键, 根据折线图的意义得出我国年财政收入增长率先增后减, 但是财政收入始终在增长, 分别分析各个说法即可得出答案. [解答] 解: (1)2009年我国财政收入约为: (83100)/(1+21.3 %) 亿元, 故此选项错误; (2)这4年中, 我国年财政收入增长率先增后减, 但是财政收入始终增长, 故此选项错误; (3)这4年中, 2009年我国财政收入最少, 根据我国年财政收入增长率先增后减, 但是财政收入, 始终在增长, 故2009年财政最少; 故此选项正确; (4)这4年中, 根据我国年财政收入增长率先增后减, 但是始终在增长, 故2012年财政最多; 故此选项错误 (5)2012年我国财政收入约为 83100(1+24.8 %)(1+12.8 %) 亿元, 此选项正确; 故正确的有 2 个. 故选 C.",
+      "matchedCards": [],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "ecnu-icalk/cmm-math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "stagingId": "cmm-math-001962",
+        "qid": "cmm-math-001962",
+        "originalFileName": "11739.jpg"
+      },
+      "learningStage": "sync_basic",
+      "gradeFit": [
+        "七年级"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "figure": {
+        "type": "image",
+        "title": "CMM-Math 原题图：函数图像",
+        "alt": "七年级数学题目配图，来源 CMM-Math 原图 11739.jpg",
+        "source": "open_dataset",
+        "kind": "function_graph",
+        "reviewStatus": "verified",
+        "verified": true,
+        "src": "assets/media/cmm-math-reviewed/11739.jpg",
+        "originalFileName": "11739.jpg",
+        "originalWidth": 560,
+        "originalHeight": 457,
+        "reviewer": "local-image-review",
+        "reviewedAt": "2026-07-06T16:35:04.066Z"
+      },
+      "status": "ready"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "cardId": "jm_model_m02",
+  "status": "ready",
+  "engine": "hand-hand-rotation-model",
+  "entry": "scene.js?v=27afa873d583",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-rotation-model",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "手拉手旋转模型正式互动课件：覆盖全等型、相似型与矩形/正方形载体变式，矩形载体下支持矩形全等与矩形相似双分支，按中考模型链路呈现共顶点、等长/等比、角转化、SAS 全等或相似以及 AC=BD / AC:BD=k 结论；右侧加入证明模板、逐条件判定反馈和矩形隐藏模型点亮训练；左侧模拟框支持拖拽点位、开口角滑块、比例 k、步骤切换、辅助标记、自动演示和触屏长按防原生菜单。"
+}

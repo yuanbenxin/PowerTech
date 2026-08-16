@@ -1,0 +1,23 @@
+{
+  "cardId": "sx1_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-conic-3d-section",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sx1_m01",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": true,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sx1_m01",
+    "panelClass": "math-source-panel-sx1_m01",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "圆锥曲线的3D截取剖面；源文件来自 2026-06-03 数学课件 6.3。"
+}

@@ -1,0 +1,13 @@
+{
+  "cardId": "j9b_m05",
+  "status": "ready",
+  "engine": "inverse-proportion-k-geometry-model",
+  "entry": "scene.js?v=23a19e4037a7",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-inverse-proportion-k-geometry",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=8f092ddffb65",
+  "script": "app.js?v=cf9ec06f0ef4",
+  "notes": "九年级下册 26.1 反比例函数正式互动课件：按半角模型标准提供白色网格主画板、收起式板书 HUD、三段教学场景和平台右侧控制区；支持 k 值调节、动点 P 拖拽、缩放平移、动态演示与移动端触控。"
+}

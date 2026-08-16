@@ -1,0 +1,1749 @@
+{
+  "schemaVersion": "1.0.0",
+  "stageId": "senior",
+  "grade": "高中 CMM-Math 专题补齐题",
+  "source": {
+    "name": "CMM-Math",
+    "license": "bsd-3-clause",
+    "type": "open_dataset",
+    "origin": "CMM-Math",
+    "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math"
+  },
+  "review": {
+    "importedCount": 26,
+    "policy": "strict-objective-topic-fill no-unreviewed-images no-generated-questions",
+    "bucketCounts": {
+      "sx1_m03": 8,
+      "sx2_m02": 6,
+      "sx2_m03": 6,
+      "sx3_m05": 6
+    }
+  },
+  "questions": [
+    {
+      "id": "sr_cmm_topic_0001",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知动圆 M 与直线 y=2 相切, 且与定圆 C: x^2+(y+3)^2=1 外切, 求动圆圆心 M 的轨迹方程. (12 分)",
+      "options": [
+        {
+          "label": "A",
+          "text": "y^2=12 x"
+        },
+        {
+          "label": "B",
+          "text": "x^2=-12 y"
+        },
+        {
+          "label": "C",
+          "text": "x^2=12 y"
+        },
+        {
+          "label": "D",
+          "text": "y^2=-12 x"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析：解答：设动圆圆心为 M(x, y), 半径为 r, 则由题意可得 M 到 C(0,-3) 的距离与到直线 y=3 的距离相等, 由抛物线的定义可知: 动圆圆心的轨迹是以 C(0,-3) 为焦点, 以 y=3 为准线的一条抛物线, 其方程为 x^2=-12 y..故选 B. 分析: 结合已知条件, 设动圆圆心为 M(x, y), 半径为 r, 则由题意可得 M 到 C(0,-3)的距离与到直线 y=3 的距离相等, 求解即可。",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20062",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0002",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知抛物 C: y^2=8 x 与点 M(-2,2), 过C的焦点, 且斜率为 k 的直线与 C 交于 A, B 两点, 若 A · B=0, 则 k=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "1/2"
+        },
+        {
+          "label": "B",
+          "text": "(√(2))/(2)"
+        },
+        {
+          "label": "C",
+          "text": "√(2)"
+        },
+        {
+          "label": "D",
+          "text": "2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析: 解答: 由题意知直线 A B 的方程为 y=k(x-2), 将其代入到 y^2=8 x 得, k^2 x^2-4(k^2+2) x+4 k^2=0, 设 A(x, y_1), B(x_2, y_2), 则 x_1+x_2=(4(k^2+2))/(k^2), x_1 x_2=4 (1) 又 y_1+y_2=k(x_1+x_2)-4 k, (2) y_1 y_2=k^2[x_1 x_2-2(x_1+x_2)+4](3) 因为 A · B=0, 所以 (x_1+2, y_1-2) ·(x_2+2, y_2-2)=0, 即 x_1 x_2+2(x_1+x_2)+y_1 y_2-2(y_1+y_2)+8=0.(4) 由(1)(2)(3)(4)得, k=2..故选 D 分析: 先求出抛物线的焦点, 列出过焦点的直线方程，与抛物线联立，化简成关于 x 的一元二次方程, 利用根与系数关系代入求解.",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20063",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0003",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知抛物线 y^2=2 p x(p>0) 与圆 x^2+y^2=4 相交于 A, B 两点, 且 |A B|=2 √(3), 则 p=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "3/2"
+        },
+        {
+          "label": "C",
+          "text": "(√(3))/(3)"
+        },
+        {
+          "label": "D",
+          "text": "(√(3))/(6)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析: 解答: 抛物线 y^2=2 p x 与圆 x^2+y^2=4 都关于 x 轴对称, 则 A, B 关于 x 轴对称. 又 |A B|=2 √(3), 不妨设 A 在第一象限, 则 A 的纵坐标为 √(3), 代入圆 x^2+y^2=4, 得 A 的横坐标为 1. 再将 x=1, y=√(3) 代入 y^2=2 p x(p>0) 中得 p=3/2. 故选 B. 分析: 本题考查的是抛物线的标准方程, 因为抛物线 y^2=2 p x 与圆 x^2+y^2=4 都关于 x 轴对称，则 A, B 关于 x 轴对称，假设 A 在第一象限，求解即可",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20075",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0004",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "经过抛物线 y^2=2 x 的焦点且平行于直线 3 x-2 y+5=0 的直线的方程是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "6 x-4 y-3=0"
+        },
+        {
+          "label": "B",
+          "text": "3 x-2 y-3=0"
+        },
+        {
+          "label": "C",
+          "text": "2 x+3 y-2=0"
+        },
+        {
+          "label": "D",
+          "text": "2 x+3 y-1=0"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析: 解答: 据题意设所求平行直线方程为 3 x-2 y+c=0, 又直线过抛物线 y^2=2 x 的焦点 (1/2, 0), 代入求得 c=-3/2, 故直线方程为 6 x-4 y-3=0. 故选 A. 分析: 因为经过抛物线 y^2=2 x 的焦点, 可得 (1/2, 0), 与直线 3 x-2 y+5=0 平行,可得斜率, 求解即可。",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20077",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0005",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "正三角形的一个顶点位于坐标原点, 另外两个顶点在抛物线 y^2=2 p x(p>0) 上, 求正三角形外接圆的方程 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "x^2+(y^2)/(2)-8 p x=0"
+        },
+        {
+          "label": "B",
+          "text": "x^2-y^2-8 p x=0"
+        },
+        {
+          "label": "C",
+          "text": "x^2+y^2+8 p x=0"
+        },
+        {
+          "label": "D",
+          "text": "x^2+y^2-8 p x=0"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析：解答：根据题意可得圆心在 x 轴上, 且过原点,故可设圆的方程为: x^2+y^2+D x=0, 又圆过点 A(6 p, 2 √(3)), 所求圆的方程为 x^2+y^2-8 p x=0, 故选 D. 分析: 因为正三角形的一个顶点位于坐标原点, 另外两个顶点在抛物线 y^2=2 p x(p>0)上, 即可设圆的方程为: x^2+y^2+D x=0 求解即可。",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20079",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0006",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知点 P 是抛物线 y^2=2 x 上的一个动点, 则点 P 到点 (0,2)的距离与 P 到抛物线准线的距离之和的最小值为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "3"
+        },
+        {
+          "label": "B",
+          "text": "(√(17))/(2)"
+        },
+        {
+          "label": "C",
+          "text": "√(5)"
+        },
+        {
+          "label": "D",
+          "text": "9/2"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析 :根据扡物线定义, 点 P 到准线的距离转化为到焦点 F(1/2, 0) 的距离, 故为 (0,2) 和 (1/2, 0) 的距离为 (√(17))/(2). 答案: B",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20287",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0007",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "已知抛物线 y=4 a x^2(a>0) 的准线与圆 x^2+y^2+m x-1/4=0 相切,且此抛物线上的点 A(x_0, 2) 到焦点的距离等于 3, 则 m=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "± √(3)"
+        },
+        {
+          "label": "B",
+          "text": "± √(2)"
+        },
+        {
+          "label": "C",
+          "text": "± 1"
+        },
+        {
+          "label": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析 :抛物线 y=4 a x^2 的准线方程为 y=-(1)/(16 a), 由题知 2+(1)/(16 a)=3, a=1/16. 扡物线的准线为 y=-1, 圆的方程可化为 (x+(m)/(2))^2+y^2=1/4+(m^2)/(4), 由圆与抛物线的准线相切可得 √(1/4+(m^2)/(4))=1, 即 m= ± √(3), 故选 A. 答案: A",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20288",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0008",
+      "stageId": "senior",
+      "grade": "高二",
+      "bookId": "s_x1",
+      "chapterIds": [
+        "s_x1_c3_2"
+      ],
+      "knowledgePoints": [
+        "抛物线",
+        "焦点与准线",
+        "解析几何"
+      ],
+      "type": "选择题",
+      "difficulty": "提升",
+      "stem": "设斜率为 2 的直线 l 过抛物线 y^2=a x(a ≠ 0) 的焦点, 且和 y 轴交于点 A, 若 △ O A F(O 为坐标原点)的面积为 4, 则抛物线的方程为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "y^2= ± 4 x"
+        },
+        {
+          "label": "B",
+          "text": "y^2= ± 8 x"
+        },
+        {
+          "label": "C",
+          "text": "y^2=4 x"
+        },
+        {
+          "label": "D",
+          "text": "y^2=8 x"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析：由题可知, 抛物线焦点坐标为 ((a)/(4), 0), 于是过焦点且斜率为 2 的直线的方程为 y=2(x-(a)/(4)), 令 x=0, 可得 A 点坐标为 (0,-(a)/(2)),所以 S_△ O A F=1/2 · (| a)/(4) · (|a|)/(2)=4, a= ± 8, 故选 B. 答案： B",
+      "matchedCards": [
+        {
+          "cardId": "sx1_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应焦点与准线生成抛物线轨迹，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看焦点与准线生成抛物线轨迹"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "20333",
+        "level": "高二",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高二",
+          "解析几何",
+          "课内体系->知识点->圆锥曲线",
+          "焦点与准线生成抛物线轨迹"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高二",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0009",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c6_1"
+      ],
+      "knowledgePoints": [
+        "定积分",
+        "面积模型",
+        "函数应用"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "一辆汽车在平直的公路上行驶, 由于遇到紧急情况, 以速度 v(t)=12-4 t+(20)/(t+1)(t 的单位: s, v 的单位: m / s) 紧急刹车至停止. 则刹车后汽车行驶的路程 (单位: m) 是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "16+20 ln 4"
+        },
+        {
+          "label": "B",
+          "text": "16+20 ln 5"
+        },
+        {
+          "label": "C",
+          "text": "32+20 ln 4"
+        },
+        {
+          "label": "D",
+          "text": "32+20 ln 5"
+        }
+      ],
+      "answer": "B",
+      "analysis": "答案: B 【解析】 当汽车停止时, v(t)=12-4 t+(20)/(t+1)=0, 解得: t=4 或 t=-2 (舍去负值), 所以 ∫_0^4(12-4 t+(20)/(t+1)) d t=(12 t-2 t^2+20 ln (t+1))|_0 ^4=16+20 ln 5. 故答案为: B 【分析】先计算汽车停止的时间, 再利用定积分计算路程.",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m02",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应黎曼和与定积分面积逼近，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看黎曼和与定积分面积逼近"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "21886",
+        "level": "高三",
+        "subject": "解析几何",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "解析几何",
+          "课内体系->知识点->函数的应用",
+          "黎曼和与定积分面积逼近"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0010",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c6_1"
+      ],
+      "knowledgePoints": [
+        "定积分",
+        "面积模型",
+        "函数应用"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "下列积分值等于 1 的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "∫_0^1 x d x"
+        },
+        {
+          "label": "B",
+          "text": "∫_-(π)/(2)^(π)/(2)(-cos x) d x"
+        },
+        {
+          "label": "C",
+          "text": "∫_-1^1 √(1-x^2) d x"
+        },
+        {
+          "label": "D",
+          "text": "∫_1^e (1)/(x) d x"
+        }
+      ],
+      "answer": "D",
+      "analysis": "∫_0^1 x d x=1/2 x 2_0^1=1/2; ∫_-(π)/(2)^(π)/(2)(-cos x) d x=(-sin x)_(π)/(2)^(π)/(2)=-sin (π)/(2)+sin (-(π)/(2))=-2 sin (π)/(2)=-2 令 y=√(1-x^2), 则 y ≥ 0, 因为 y=√(1-x^2) 表示圆心在原点, 半径为 1 的圆的上半部分, 则 ∫_-1^1 √(1-x^2) d x=(π · 1^2)/(2)=(π)/(2) ∫_1^e (1)/(x) d x=ln x|_1 ^e=ln e=1, 故答案为: D 【分析】根据牛顿莱布尼兹公式求解即可.",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m02",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应黎曼和与定积分面积逼近，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看黎曼和与定积分面积逼近"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "21851",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->函数的应用",
+          "黎曼和与定积分面积逼近"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0011",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c6_1"
+      ],
+      "knowledgePoints": [
+        "定积分",
+        "面积模型",
+        "函数应用"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "定积分 ∫_1^2(e^x+(2)/(x)) d x=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "e^2+1"
+        },
+        {
+          "label": "B",
+          "text": "e^2-e+1"
+        },
+        {
+          "label": "C",
+          "text": "e^2+2 ln 2"
+        },
+        {
+          "label": "D",
+          "text": "e^2-e+2 ln 2"
+        }
+      ],
+      "answer": "D",
+      "analysis": "答案: D 【解析】 由题意得: ∫_1^2(e^x+(2)/(x)) d x=(e^x+2 ln x)|_1 ^2=e^2-e+2 ln 2 故答案为: D. 【分析】由题设条件, 求出被积函数的原函数, 求出定积分的值即可.",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m02",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应黎曼和与定积分面积逼近，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看黎曼和与定积分面积逼近"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "21881",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->函数的应用",
+          "黎曼和与定积分面积逼近"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0012",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c6_1"
+      ],
+      "knowledgePoints": [
+        "定积分",
+        "面积模型",
+        "函数应用"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "∫_-2^2(x+√(4-x^2)) d x=",
+      "options": [
+        {
+          "label": "A",
+          "text": "π"
+        },
+        {
+          "label": "B",
+          "text": "4 π"
+        },
+        {
+          "label": "C",
+          "text": "3 π"
+        },
+        {
+          "label": "D",
+          "text": "2 π"
+        }
+      ],
+      "answer": "D",
+      "analysis": "答案: D 【解析】 由 ∫_-2^2(x+√(4-x^2)) d x=∫_-2^2 x d x+∫_-2^2 √(4-x^2) d x=0+2 π=2 π 故答案为: D. 【分析】利用定积分的运算法则求出定积分的值。",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m02",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应黎曼和与定积分面积逼近，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看黎曼和与定积分面积逼近"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "21890",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->函数的应用",
+          "黎曼和与定积分面积逼近"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0013",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c6_1"
+      ],
+      "knowledgePoints": [
+        "定积分",
+        "面积模型",
+        "函数应用"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "已知积分 ∫_0^1(k x+1) d x=k, 则实数 k=()",
+      "options": [
+        {
+          "label": "A",
+          "text": "2"
+        },
+        {
+          "label": "B",
+          "text": "-2"
+        },
+        {
+          "label": "C",
+          "text": "1"
+        },
+        {
+          "label": "D",
+          "text": "-1"
+        }
+      ],
+      "answer": "A",
+      "analysis": "答案: A 【解析】 因为 ∫_0^1(k x+1) d x, 所以 (1/2 k x^2+x)|_0 ^1=k, 所以 1/2 k+1=k, 所以 k=2. 故答案为: A 【分析】利用定积分结合已知条件求出 k 的值。",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m02",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应黎曼和与定积分面积逼近，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看黎曼和与定积分面积逼近"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "21896",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->函数的应用",
+          "黎曼和与定积分面积逼近"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0014",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c6_1"
+      ],
+      "knowledgePoints": [
+        "定积分",
+        "面积模型",
+        "函数应用"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "一物体在力 F(x)= 5, 0 ≤ x ≤ 2； 3 x+4, x>2 (单位: N) 的作用下沿与力 F 相同的方向, 从 x=0 处运动到 x=4 处 (单位: m), 则力 F(x) 所做的功为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "54 焦"
+        },
+        {
+          "label": "B",
+          "text": "40 焦"
+        },
+        {
+          "label": "C",
+          "text": "36 焦"
+        },
+        {
+          "label": "D",
+          "text": "14 焦"
+        }
+      ],
+      "answer": "C",
+      "analysis": "答案: C 【解析】 由题意得: W=∫_0^4 F(x) d x =∫_0^2 5 d x+∫_2^4(3 x+4) d x； =5 x|_0 ^2+(3/2 x^2+4 x)|_2 ^4=36 故答案为: C. 【分析】本题是一个求变力做功的问题, 可以利用积分求解, 由题意, 其积分区间是 [0,4], 被积函数是力的函数表达式, 由积分公式进行计算即可得到答案.",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m02",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应黎曼和与定积分面积逼近，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看黎曼和与定积分面积逼近"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "21899",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->函数的应用",
+          "黎曼和与定积分面积逼近"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0015",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c4_1"
+      ],
+      "knowledgePoints": [
+        "数学归纳法",
+        "证明方法",
+        "数列"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "如果命题 p(n) 对 n=k 成立, 那么它对 n=k+2 也成立, 又若 p(n) 对 n=2 成立, 则下列结论正确的是 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "p(n) 对所有自然数 n 成立"
+        },
+        {
+          "label": "B",
+          "text": "p(n) 对所有正偶数 n 成立"
+        },
+        {
+          "label": "C",
+          "text": "p(n) 对所有正奇数 n 成立"
+        },
+        {
+          "label": "D",
+          "text": "p(n) 对所有大于 1 的自然数 n 成立"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析: 解答: 因为命题 p(n) 对 n=k 成立, 那么它对 n=k+2 也成立, 所以若 p(n) 对 n=2成立，则 p(n) 对所有正偶数 n 成立，选 B 分析: 本题主要考查了数学归纳法的证明步骤, 解决问题的关键是根据数学归纳法的证明步骤分析即可",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应数学归纳法的多米诺骨牌模型，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看数学归纳法的多米诺骨牌模型"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23128",
+        "level": "高三",
+        "subject": "逻辑题",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "逻辑题",
+          "课内体系->知识点->常用逻辑用语",
+          "数学归纳法的多米诺骨牌模型"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0016",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c4_1"
+      ],
+      "knowledgePoints": [
+        "数学归纳法",
+        "证明方法",
+        "数列"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "某个命题与正整数有关, 若当 n=k(k ∈ N^*) 时该命题成立, 那么可推得当 n=k+1 时该命题也成立, 现已知当 n=4 时该命题不成立, 那么可推得",
+      "options": [
+        {
+          "label": "A",
+          "text": "当 n=5 时, 该命题不成立"
+        },
+        {
+          "label": "B",
+          "text": "当 n=5 时, 该命题成立"
+        },
+        {
+          "label": "C",
+          "text": "当 n=3 时, 该命题成立"
+        },
+        {
+          "label": "D",
+          "text": "当 n=3 时, 该命题不成立"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析: 解答: 因为原命题与其逆否命题的真假性一致, 所以可得若 n=k+1(k ∈ N^*) 时该命题不成立, 则当 n=k 时该命题也不成立, 由此可得选 D 分析: 本题主要考查了数学归纳法的证明步骤, 解决问题的关键是根据数学归纳法的证明步骤分析即可",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应数学归纳法的多米诺骨牌模型，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看数学归纳法的多米诺骨牌模型"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23129",
+        "level": "高三",
+        "subject": "逻辑题",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "逻辑题",
+          "课内体系->知识点->常用逻辑用语",
+          "数学归纳法的多米诺骨牌模型"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0017",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c4_1"
+      ],
+      "knowledgePoints": [
+        "数学归纳法",
+        "证明方法",
+        "数列"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "用数学归纳法证明 √(n^2+n)<n+1 (n ∈ N_+)的过程中的第二步 n=k+1 时 (n=1 已验, n=k 已假设成立), 这样证明: √((k+1)^2+(k+1))=√(k^2+3 k+2)<√(k^2+4 k+4)=(k+1)+1, 当 n=k+1 时, 命题成立, 此种证法()",
+      "options": [
+        {
+          "label": "A",
+          "text": "是正确的"
+        },
+        {
+          "label": "B",
+          "text": "归纳假设写法不正确"
+        },
+        {
+          "label": "C",
+          "text": "从 k 到 k+1 推理不严密"
+        },
+        {
+          "label": "D",
+          "text": "从 k 到 k+1 的推理过程未使用归纳假设"
+        }
+      ],
+      "answer": "D",
+      "analysis": "解析: 解答: 在上面的证明中, 当 n=k+1 时证明过程没有错误, 但没有用到当 n=k 时的结论,这样就失去假设当 n=k 时命题成立的意义, 也不能构成一个递推关系, 这不是数学归纳法. A. B. C 都不对，选 D. 分析: 本题主要考查了数学归纳法证明不等式, 解决问题的关键是根据数学归纳法证明不等式的步骤分析即可",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应数学归纳法的多米诺骨牌模型，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看数学归纳法的多米诺骨牌模型"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23138",
+        "level": "高三",
+        "subject": "逻辑题",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "逻辑题",
+          "课内体系->知识点->常用逻辑用语",
+          "数学归纳法的多米诺骨牌模型"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0018",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c4_1"
+      ],
+      "knowledgePoints": [
+        "数学归纳法",
+        "证明方法",
+        "数列"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "用数学归纳法证明当 n 为正奇数时, x^n+y^n 能被 x+y 整除, 第二步归纳假设应写成 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "假设 n=2 k+1(k ∈ N^*) 正确, 再推 n=2 k+3 正确"
+        },
+        {
+          "label": "B",
+          "text": "假设 n=2 k-1(k ∈ N^*) 正确, 再推 n=2 k+1 正确"
+        },
+        {
+          "label": "C",
+          "text": "假设 n=k(k ∈ N^*) 正确, 再推 n=k+1 正确"
+        },
+        {
+          "label": "D",
+          "text": "假设 n=k(k ≥ 1) 正确, 再推 n=k+2 正确"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析: 解答: 根据数学归纳法的证明步骤, 注意 n 为奇数, 所以第二步归纳假设应写成: 假设 n=2 k-1(k ∈ N^*) 正确, 再推 n=2 k+1 正确; 故选 B. 分析: 本题主要考查了数学归纳法, 解决问题的关键是注意 n 为正奇数, 观察第一步取到 1,即可推出第二步的假设.",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应数学归纳法的多米诺骨牌模型，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看数学归纳法的多米诺骨牌模型"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23134",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->常用逻辑用语",
+          "数学归纳法的多米诺骨牌模型"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0019",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c4_1"
+      ],
+      "knowledgePoints": [
+        "数学归纳法",
+        "证明方法",
+        "数列"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "用数学归纳法证明 n^3+(n+1)^3+(n+2)^3(n ∈ N^*) 能被 9 整除, 要利用归纳假设证 n=k +1 时的情况, 只需展开 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "(k+3)^3"
+        },
+        {
+          "label": "B",
+          "text": "(k+2)^3"
+        },
+        {
+          "label": "C",
+          "text": "(k+1)^3"
+        },
+        {
+          "label": "D",
+          "text": "(k+1)^3+(k+2)^3"
+        }
+      ],
+      "answer": "A",
+      "analysis": "解析:解答:假设当 n=k 时, 原式能被 9 整除, 即 k^3+(k+1)^3+(k+2)^3 能被 9 整除. 当 n=k+1 时, (k+1)^3+(k+2)^3+(k+3)^3 为了能用上面的归纳假设, 只需将 (k+3)^3 展开,让其出现 k^3 即可. 分析: 本题主要考查了数学归纳法, 解决问题的关键是根据所学归纳法几何所给式子分析即可",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应数学归纳法的多米诺骨牌模型，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看数学归纳法的多米诺骨牌模型"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23116",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->常用逻辑用语",
+          "数学归纳法的多米诺骨牌模型"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0020",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x2",
+      "chapterIds": [
+        "s_x2_c4_1"
+      ],
+      "knowledgePoints": [
+        "数学归纳法",
+        "证明方法",
+        "数列"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "用数学归纳法证明 (n+1)(n+2)(n+3) (n+n)=2^n · 1 · 3 · ·(2 n-1)(n ∈ N^*) 时, 从 n=k 到 n =k+1, 左端需要增加的代数式为 ()",
+      "options": [
+        {
+          "label": "A",
+          "text": "2 k+1"
+        },
+        {
+          "label": "B",
+          "text": "2(2 k+1)"
+        },
+        {
+          "label": "C",
+          "text": "(2 k+1)/(k+1)"
+        },
+        {
+          "label": "D",
+          "text": "(2 k+3)/(k+1)"
+        }
+      ],
+      "answer": "B",
+      "analysis": "解析: 解答: 当 n=k 到 n=k+1 时, 左端式子为 (k+1+1)(k+1+2) (k+1+k)(k+1+k+1), 所以需要增加的式子为 ((2 k+1)(2 k+2))/(k+1)=2(2 k+1), 应选 B. 分析: 本题主要考查了数学归纳法的证明步骤, 解决问题的关键是根据数学归纳法分析即可",
+      "matchedCards": [
+        {
+          "cardId": "sx2_m03",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应数学归纳法的多米诺骨牌模型，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看数学归纳法的多米诺骨牌模型"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "23130",
+        "level": "高三",
+        "subject": "代数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "代数",
+          "课内体系->知识点->常用逻辑用语",
+          "数学归纳法的多米诺骨牌模型"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0021",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x3_c8_1"
+      ],
+      "knowledgePoints": [
+        "回归分析",
+        "最小二乘法",
+        "统计"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "下列命题错误的是",
+      "options": [
+        {
+          "label": "A",
+          "text": "两个随机变量的线性相关性越强, 相关系数的绝对值越接近于 1"
+        },
+        {
+          "label": "B",
+          "text": "设 -N(0, ^2), 且 P(<-1)=1/4, 则 P(0< <1)=1/2"
+        },
+        {
+          "label": "C",
+          "text": "在残差图中, 残差点分布的带状区域的宽带越狭窄，其模型拟合的精度越高"
+        },
+        {
+          "label": "D",
+          "text": "已知变量 x 和 y 满足关系 y=1-"
+        }
+      ],
+      "answer": "B",
+      "analysis": "答案: B 【解析】 对于 A, 根据相关系数的意义知, A 正确对于 B, 由点 N(0, ^2), 知 =0, 概率密度函数的图象关于 x=0 对称故 P(<-1)=1/4=P(>1), P(-1< <1)=1-2 × P(0< <1)=1/2 所以 P(0< <1)=1/2 · P(-1< <1)=1/2 × 1/2=1/4, 故 B 错误对于 C, 根据残差图的意义, C 正确对于 D, 变量 x 和 y 满足关系 y=1-",
+      "matchedCards": [
+        {
+          "cardId": "sx3_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应回归分析与最小二乘法拟合，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看回归分析与最小二乘法拟合"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "22478",
+        "level": "高三",
+        "subject": "计数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "计数",
+          "课内体系->知识点->统计与概率->统计->随机抽样",
+          "回归分析与最小二乘法拟合"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0024",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x3_c8_1"
+      ],
+      "knowledgePoints": [
+        "回归分析",
+        "最小二乘法",
+        "统计"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "为研究某地区中学生的性别与阅读量的关系, 运用 2 × 2 列联表进行独立性检验, 经计算 K^2=6.705, 则所得的结论是: 有把握认为该地区中学生的性别与阅读量有关系（）附表: | P(K^2 ≥ k_0) | 0.10 | 0.025 | 0.01 | 0.001 | | :--- | :--- | :--- | :--- | :--- | | k_0 | 2.706 | 5.024 | 6.635 | 10.828 |",
+      "options": [
+        {
+          "label": "A",
+          "text": "10"
+        },
+        {
+          "label": "B",
+          "text": "11"
+        },
+        {
+          "label": "C",
+          "text": "12"
+        },
+        {
+          "label": "D",
+          "text": "13"
+        }
+      ],
+      "answer": "C",
+      "analysis": "又由 =13-5.3 × 3=-2.9, 故所求回归直线方程为 =5.3 x-2.9; （2）【解析】 将 x=7 代入 =5.3 x-2.9 中, 求得 =5.3 × 7-2.9=34.2 34,故预测最后一天参加该活动的人数 34. 21.答案:（1）解：根据表中的数据: y=a+b x 适宜作为确诊病例数量 y 关于日期 x 的回归方程类型; (2) 【解析】 由已知数据得: =4, =",
+      "matchedCards": [
+        {
+          "cardId": "sx3_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应回归分析与最小二乘法拟合，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看回归分析与最小二乘法拟合"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "22251",
+        "level": "高三",
+        "subject": "计数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "计数",
+          "课内体系->知识点->统计与概率->统计->随机抽样",
+          "回归分析与最小二乘法拟合"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    },
+    {
+      "id": "sr_cmm_topic_0026",
+      "stageId": "senior",
+      "grade": "高三",
+      "bookId": "s_x3",
+      "chapterIds": [
+        "s_x3_c8_1"
+      ],
+      "knowledgePoints": [
+        "回归分析",
+        "最小二乘法",
+        "统计"
+      ],
+      "type": "选择题",
+      "difficulty": "综合",
+      "stem": "设两个变量 x 和 y 之间具有线性相关关系，它们的相关系数是 r, y 关于 x 的回归直线的斜率是 b，纵轴上的截距是 a，那么必有（",
+      "options": [
+        {
+          "label": "A",
+          "text": "b 与 r 的符号相同"
+        },
+        {
+          "label": "B",
+          "text": "a 与 r 的符号相同"
+        },
+        {
+          "label": "C",
+          "text": "b 与 r 的符号相反"
+        },
+        {
+          "label": "D",
+          "text": "a 与 r 的符号相反"
+        }
+      ],
+      "answer": "A",
+      "analysis": ">3.841 所以有 95 % 的把握认为对嫦娥五号关注与性别有关. (2) 因为随机选一高三女生, 对此事关注的概率 P=12/40=3/10, 又因为 X B(3, 3/10), 所以随机变量 X 的分布列为: | X | 0 | 1 | 2 | 3 | | :---: | :---: | :---: | :---: | :---: | | P | 343/1000 | 441/1000 | 189/1000 | 27/1000 | 显然, E(X)=n p=9/10. 18.答案:(1) =",
+      "matchedCards": [
+        {
+          "cardId": "sx3_m05",
+          "role": "primary",
+          "reason": "这道 CMM-Math 高中开源题直接对应回归分析与最小二乘法拟合，可用于讲评该知识点的题型结构和可视化理解。",
+          "stepLabel": "看回归分析与最小二乘法拟合"
+        }
+      ],
+      "source": {
+        "name": "CMM-Math",
+        "license": "bsd-3-clause",
+        "type": "open_dataset",
+        "origin": "CMM-Math",
+        "url": "https://huggingface.co/datasets/ecnu-icalk/cmm-math",
+        "qid": "22048",
+        "level": "高三",
+        "subject": "计数",
+        "routes": [
+          "CMM-Math",
+          "高三",
+          "计数",
+          "课内体系->知识点->统计与概率->统计->随机抽样",
+          "回归分析与最小二乘法拟合"
+        ]
+      },
+      "learningStage": "topic_boost",
+      "gradeFit": [
+        "高三",
+        "高中专题补齐"
+      ],
+      "reviewStatus": "verified",
+      "answerVerified": true,
+      "analysisVerified": true,
+      "lineage": {
+        "type": "original",
+        "parentQuestionId": ""
+      },
+      "status": "ready"
+    }
+  ]
+}

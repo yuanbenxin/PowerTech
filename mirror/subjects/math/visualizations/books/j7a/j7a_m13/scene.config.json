@@ -1,0 +1,14 @@
+{
+  "cardId": "j7a_m13",
+  "status": "ready",
+  "engine": "rational-numberline-interval-model",
+  "entry": "scene.js?v=b67330878410",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-rational-numberline-interval",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=86bcff45e242",
+  "script": "app.js?v=3381bdaf7446",
+  "generator": "math-source-bridge-v1",
+  "notes": "已接入数轴区间与有理数大小比较：左侧 SVG 数轴沙盒与可收起板书 HUD，右侧平台操作面板承载预设、滑块、吸附、题型与原理解析。"
+}

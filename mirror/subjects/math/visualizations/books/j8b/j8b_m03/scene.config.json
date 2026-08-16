@@ -1,0 +1,10 @@
+{
+  "cardId": "j8b_m03",
+  "status": "ready",
+  "engine": "quadrilateral-morph",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "quadrilateral-slider-morph",
+  "visualLevel": "A",
+  "notes": "菱形、矩形和正方形条件的动态形变、对角线与面积验证。所有资源本地化，无 CDN。"
+}

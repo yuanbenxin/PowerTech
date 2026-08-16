@@ -1,0 +1,27 @@
+{
+  "cardId": "j9b_m01",
+  "status": "ready",
+  "engine": "trig-surveying-applications",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-trig-surveying",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码已接入：锐角三角函数与测绘应用；统一为左侧模拟框和右侧操作面板；移除 Google Fonts 外链；保留自由测绘、热气球、大山、两楼相望、防空雷达等场景和触控拖动。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j9b_m01",
+    "panelSelector": ".control-panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j9b_m01",
+    "panelClass": "math-source-panel-j9b_m01",
+    "inlineFunctionNames": [
+      "init",
+      "loadScene",
+      "resize",
+      "render"
+    ],
+    "stylePreScoped": true
+  }
+}

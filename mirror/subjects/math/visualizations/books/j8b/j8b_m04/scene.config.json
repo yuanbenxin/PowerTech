@@ -1,0 +1,24 @@
+{
+  "cardId": "j8b_m04",
+  "status": "ready",
+  "engine": "pythagorean-tree-fractal",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-fractal-growth-animation",
+  "visualLevel": "A",
+  "notes": "本地 HTML 源码接入：毕达哥拉斯树分形动画.html；已经统一左侧模拟框与右侧操作面板，所有资源本地化，无 CDN。",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8b_m04",
+    "panelSelector": ".panel",
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j8b_m04",
+    "panelClass": "math-source-panel-j8b_m04",
+    "inlineFunctionNames": [
+      "startAutoGrow"
+    ],
+    "stylePreScoped": true
+  }
+}

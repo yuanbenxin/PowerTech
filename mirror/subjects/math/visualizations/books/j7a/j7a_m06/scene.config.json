@@ -1,0 +1,11 @@
+{
+  "cardId": "j7a_m06",
+  "status": "ready",
+  "engine": "algebra-tiles-combiner",
+  "entry": "scene.js?v=a8b50199f4e6",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-safe-algebra-tiles",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "整式合并同类项积木：左侧代数积木模拟框，右侧统一操作面板，支持随机题、点亮同类项、拖拽对消、填写系数与自动演示。"
+}

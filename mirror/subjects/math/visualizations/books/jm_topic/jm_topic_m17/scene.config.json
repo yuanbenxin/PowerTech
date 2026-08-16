@@ -1,0 +1,23 @@
+{
+  "cardId": "jm_topic_m17",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-dart-angle-model",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "jm_topic_m17",
+    "panelSelector": ".control-panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-jm_topic_m17",
+    "panelClass": "math-source-panel-jm_topic_m17",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：飞镖模型：凹四边形角关系。左侧承载可拖拽凹四边形画板和可收起 HUD，右侧平台操作面板承载探索、证明步骤、辅助线方法和闯关练习。"
+}

@@ -1,0 +1,10 @@
+{
+  "cardId": "j7b_m04",
+  "status": "ready",
+  "engine": "angle-identifier",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-angle-picking",
+  "visualLevel": "A",
+  "notes": "同位角、内错角、同旁内角点选辨析与平行条件验证。所有资源本地化，无 CDN。"
+}

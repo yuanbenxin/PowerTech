@@ -1,0 +1,23 @@
+{
+  "cardId": "sx3_m02",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-complex-plane-mandelbrot",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sx3_m02",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-sx3_m02",
+    "panelClass": "math-source-panel-sx3_m02",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "复平面与曼德勃罗分形；源文件来自 2026-06-03 数学课件 6.3。"
+}

@@ -1,0 +1,23 @@
+{
+  "cardId": "j9b_m11",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-right-triangle-route-planning",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j9b_m11",
+    "panelSelector": ".panel-container",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j9b_m11",
+    "panelClass": "math-source-panel-j9b_m11",
+    "inlineFunctionNames": ["switchTab", "selectScenario", "resetCurrentScenario", "changeReefAngle", "changeReefRadius", "changeVoyageProgress", "toggleSailingAnimation", "changeDistAB", "changeDistAngleA", "toggleHelper"],
+    "stylePreScoped": false
+  },
+  "notes": "九年级下册 28.2 解直角三角形及其应用：避礁航行、双站测距与自由航线规划。"
+}

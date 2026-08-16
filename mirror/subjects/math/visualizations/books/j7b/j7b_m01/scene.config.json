@@ -1,0 +1,10 @@
+{
+  "cardId": "j7b_m01",
+  "status": "ready",
+  "engine": "parallel-lines",
+  "entry": "scene.js?v=7cb34ea1e1f1",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-geometry",
+  "visualLevel": "A",
+  "notes": "平行线与截线形成的同位角、内错角、同旁内角、对顶角和邻补角动态验证。所有资源本地化，无 CDN。"
+}

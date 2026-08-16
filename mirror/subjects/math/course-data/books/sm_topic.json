@@ -1,0 +1,322 @@
+{
+  "book": {
+    "id": "sm_topic",
+    "label": "高中学科专题",
+    "stageId": "senior",
+    "stageLabel": "高中",
+    "chapters": [
+      {
+        "id": "sm_topic_function",
+        "label": "函数与图像专题",
+        "title": "函数与图像专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_topic_inequality",
+        "label": "不等式与代数变形专题",
+        "title": "不等式与代数变形专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_topic_geometry",
+        "label": "几何方法专题",
+        "title": "几何方法专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_topic_modeling",
+        "label": "数学建模与技术专题",
+        "title": "数学建模与技术专题",
+        "sampleTopics": []
+      },
+      {
+        "id": "sm_topic_strategy",
+        "label": "数学思想方法专题",
+        "title": "数学思想方法专题",
+        "sampleTopics": []
+      }
+    ]
+  },
+  "currentCardMapping": [
+    {
+      "cardId": "sm_topic_m01",
+      "chapterIds": [
+        "sm_topic_function"
+      ],
+      "title": "函数图像语言总览",
+      "detail": "占位卡片：把定义域、值域、单调性、奇偶性、周期性和零点放进同一张图像语言地图。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m01.webp",
+      "fallbackImage": "assets/media/sm_topic_m01.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "函数图像",
+        "性质",
+        "专题"
+      ],
+      "points": [
+        "函数图像",
+        "性质",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m02",
+      "chapterIds": [
+        "sm_topic_inequality"
+      ],
+      "title": "不等式证明工具箱",
+      "detail": "占位卡片：整理比较法、作差法、基本不等式、构造函数和放缩法的使用场景。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m02.webp",
+      "fallbackImage": "assets/media/sm_topic_m02.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "不等式",
+        "证明",
+        "工具箱"
+      ],
+      "points": [
+        "不等式",
+        "证明",
+        "工具箱"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m03",
+      "chapterIds": [
+        "sm_topic_geometry"
+      ],
+      "title": "坐标法向量法综合法选择器",
+      "detail": "占位卡片：按题目结构提示坐标法、向量法或综合几何法的切入方式。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m03.webp",
+      "fallbackImage": "assets/media/sm_topic_m03.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "坐标法",
+        "向量法",
+        "综合法"
+      ],
+      "points": [
+        "坐标法",
+        "向量法",
+        "综合法"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m04",
+      "chapterIds": [
+        "sm_topic_modeling"
+      ],
+      "title": "数学建模流程沙盘",
+      "detail": "占位卡片：展示审题、设量、建模、求解、检验和解释的完整建模流程。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m04.webp",
+      "fallbackImage": "assets/media/sm_topic_m04.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "数学建模",
+        "流程",
+        "专题"
+      ],
+      "points": [
+        "数学建模",
+        "流程",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m05",
+      "chapterIds": [
+        "sm_topic_geometry"
+      ],
+      "title": "参数方程与极坐标拓展",
+      "detail": "占位卡片：把直角坐标、参数方程和极坐标的曲线表示做联动对比。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m05.webp",
+      "fallbackImage": "assets/media/sm_topic_m05.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "参数方程",
+        "极坐标",
+        "拓展"
+      ],
+      "points": [
+        "参数方程",
+        "极坐标",
+        "拓展"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m06",
+      "chapterIds": [
+        "sm_topic_strategy"
+      ],
+      "title": "数形结合策略地图",
+      "detail": "占位卡片：按代数式、函数、方程和几何关系推荐数形结合视图。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m06.webp",
+      "fallbackImage": "assets/media/sm_topic_m06.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "数形结合",
+        "策略",
+        "专题"
+      ],
+      "points": [
+        "数形结合",
+        "策略",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m07",
+      "chapterIds": [
+        "sm_topic_strategy"
+      ],
+      "title": "分类讨论决策树",
+      "detail": "占位卡片：把参数范围、符号、位置关系和边界条件整理成分类讨论树。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m07.webp",
+      "fallbackImage": "assets/media/sm_topic_m07.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "分类讨论",
+        "参数",
+        "策略"
+      ],
+      "points": [
+        "分类讨论",
+        "参数",
+        "策略"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m08",
+      "chapterIds": [
+        "sm_topic_function"
+      ],
+      "title": "构造函数方法库",
+      "detail": "占位卡片：把不等式、方程根、参数范围问题转化为构造函数视角。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m08.webp",
+      "fallbackImage": "assets/media/sm_topic_m08.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "构造函数",
+        "转化",
+        "专题"
+      ],
+      "points": [
+        "构造函数",
+        "转化",
+        "专题"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m09",
+      "chapterIds": [
+        "sm_topic_inequality"
+      ],
+      "title": "换元法可视化",
+      "detail": "占位卡片：展示三角换元、整体换元、均值换元和参数换元的结构变化。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m09.webp",
+      "fallbackImage": "assets/media/sm_topic_m09.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "换元法",
+        "代数",
+        "可视化"
+      ],
+      "points": [
+        "换元法",
+        "代数",
+        "可视化"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m10",
+      "chapterIds": [
+        "sm_topic_inequality"
+      ],
+      "title": "放缩法与估计链",
+      "detail": "占位卡片：用上下界链条展示放缩方向、等号条件和估计强弱。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m10.webp",
+      "fallbackImage": "assets/media/sm_topic_m10.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "放缩法",
+        "估计",
+        "不等式"
+      ],
+      "points": [
+        "放缩法",
+        "估计",
+        "不等式"
+      ]
+    },
+    {
+      "cardId": "sm_topic_m11",
+      "chapterIds": [
+        "sm_topic_modeling"
+      ],
+      "title": "信息技术统计模拟专题",
+      "detail": "占位卡片：用随机模拟、回归拟合和分布抽样展示信息技术在数学探究中的作用。正式互动内容待制作。",
+      "image": "assets/media/sm_topic_m11.webp",
+      "fallbackImage": "assets/media/sm_topic_m11.webp",
+      "isLocked": false,
+      "engine": "placeholder-source",
+      "visualLevel": "P",
+      "tags": [
+        "信息技术",
+        "统计模拟",
+        "专题"
+      ],
+      "points": [
+        "信息技术",
+        "统计模拟",
+        "专题"
+      ]
+    }
+  ],
+  "chapterTree": [
+    {
+      "id": "sm_topic_function",
+      "label": "函数与图像专题",
+      "children": []
+    },
+    {
+      "id": "sm_topic_inequality",
+      "label": "不等式与代数变形专题",
+      "children": []
+    },
+    {
+      "id": "sm_topic_geometry",
+      "label": "几何方法专题",
+      "children": []
+    },
+    {
+      "id": "sm_topic_modeling",
+      "label": "数学建模与技术专题",
+      "children": []
+    },
+    {
+      "id": "sm_topic_strategy",
+      "label": "数学思想方法专题",
+      "children": []
+    }
+  ]
+}

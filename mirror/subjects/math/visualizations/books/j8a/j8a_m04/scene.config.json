@@ -1,0 +1,10 @@
+{
+  "cardId": "j8a_m04",
+  "status": "ready",
+  "engine": "hl-congruence",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "triangle-overlay-proof",
+  "visualLevel": "A",
+  "notes": "HL 判定直角三角形全等的斜边、直角边、误差陷阱与重合验证。所有资源本地化，无 CDN。"
+}

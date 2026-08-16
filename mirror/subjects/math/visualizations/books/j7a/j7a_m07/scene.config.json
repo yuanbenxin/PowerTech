@@ -1,0 +1,11 @@
+{
+  "cardId": "j7a_m07",
+  "status": "ready",
+  "engine": "parentheses-sign-machine",
+  "entry": "scene.js?v=fee4da42d801",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-safe-algebra-tiles",
+  "visualLevel": "A",
+  "source": "source.html",
+  "notes": "去括号与符号变化机器：左侧符号分配模拟，右侧统一操作面板，支持典型例题、随机题、单步和自动演示。"
+}

@@ -1,0 +1,1336 @@
+﻿/* ==========================================================================
+   1. 设计系统与主题变量 (深色科技与柔美数学美学)
+   ========================================================================== */
+:root {
+    --bg-app: #0b0f19;
+    --panel-bg: rgba(15, 23, 42, 0.45);
+    --panel-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* 功能性颜色 */
+    --color-blue: #3b82f6;
+    --color-blue-glow: rgba(59, 130, 246, 0.35);
+    --color-purple: #a855f7;
+    --color-purple-glow: rgba(168, 85, 247, 0.3);
+    --color-danger: #ef4444;
+    --color-danger-glow: rgba(239, 68, 68, 0.3);
+    --color-safe: #10b981;
+    --color-safe-glow: rgba(16, 185, 129, 0.35);
+    --color-gold: #fbbf24;
+    --color-gold-glow: rgba(251, 191, 36, 0.45);
+
+    /* 区域背景设计 */
+    --sand-bg: #1e1b15;          /* 温暖沙地区域 */
+    --road-bg: #111827;          /* 公路灰深色底 */
+    --road-stroke: #4b5563;      /* 公路中线边框 */
+
+    --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --shadow-premium: 0 12px 40px -12px rgba(0, 0, 0, 0.5);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2. 基础布局与重置
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* ==========================================================================
+   3. 头部导航栏 (Header)
+   ========================================================================== */
+.app-header {
+    height: 64px;
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid var(--panel-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    backdrop-filter: blur(12px);
+    z-index: 10;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    filter: drop-shadow(0 0 8px var(--color-blue));
+}
+
+.header-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-title-group h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #93c5fd;
+}
+
+/* 按钮基础设计 */
+button {
+    font-family: var(--font-sans);
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--panel-border);
+    color: var(--text-primary);
+    padding: 8px 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   4. 主工作区布局 (Main Workspace)
+   ========================================================================== */
+.app-main {
+    flex: 1;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 磨砂玻璃面板通用 */
+.glass-panel {
+    background: var(--panel-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--panel-border);
+    box-shadow: var(--shadow-premium);
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   5. 左侧定理看板 (HUD Panel)
+   ========================================================================== */
+.hud-panel {
+    width: 320px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.hud-panel.collapsed {
+    width: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.hud-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--panel-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.hud-header h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.hud-toggle-btn {
+    background: none;
+    color: var(--text-secondary);
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hud-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.hud-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 318px; /* 防止内容收缩时挤压变形 */
+}
+
+/* 行程用时仪表盘 (Stats Card) */
+.stats-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stats-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-secondary);
+}
+
+.stats-main-value {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.stats-main-value .unit {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* 进度图表组件 (Gauge) */
+.gauge-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gauge-bar-bg {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    position: relative;
+    overflow: visible;
+}
+
+.gauge-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.15s linear;
+}
+
+.gauge-bar-fill.current-fill {
+    background: linear-gradient(90deg, var(--color-blue), var(--color-purple));
+    box-shadow: 0 0 10px var(--color-blue-glow);
+}
+
+.gauge-marker {
+    position: absolute;
+    top: -3px;
+    width: 12px;
+    height: 12px;
+    background: var(--color-safe);
+    border: 2.5px solid #fff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px var(--color-safe-glow);
+    z-index: 2;
+    transition: left 0.3s ease;
+}
+
+.gauge-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: var(--text-secondary);
+}
+
+.efficiency-text {
+    font-weight: 700;
+    color: var(--color-purple);
+}
+
+/* 黑板板书板 (Chalkboard Content) */
+.chalkboard-content {
+    flex: 1;
+    background: rgba(10, 15, 26, 0.5);
+    border: 1px dashed rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 16px;
+    color: #e2e8f0;
+}
+
+/* 板书行列样式 */
+.hud-row {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hud-row:last-child {
+    margin-bottom: 0;
+}
+
+.hud-row-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-gold);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hud-formula-block {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 10px;
+    font-family: var(--font-mono);
+    color: #cbd5e1;
+    font-size: 12px;
+    border-left: 3px solid var(--color-blue);
+    line-height: 1.6;
+}
+
+.hud-mini-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--text-secondary);
+}
+
+.hud-mini-note {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--text-secondary);
+}
+
+/* 提示盒子 */
+.success-chalk-box, .warning-chalk-box {
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 11.5px;
+    line-height: 1.6;
+    border: 1px solid;
+}
+
+.success-chalk-box {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.25);
+    color: #a7f3d0;
+}
+
+.warning-chalk-box {
+    background: rgba(251, 191, 36, 0.08);
+    border-color: rgba(251, 191, 36, 0.25);
+    color: #fde68a;
+}
+
+/* ==========================================================================
+   6. 中间几何图层 (Canvas Sandbox)
+   ========================================================================== */
+.canvas-section {
+    flex: 1;
+    display: block;
+    position: relative;
+    background: #090d16;
+    min-width: 0;
+    min-height: 0;
+}
+
+.sandbox-wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    cursor: default;
+}
+
+.sandbox-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.05s ease-out;
+}
+
+/* HTML 浮动标牌图层 */
+.html-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 让鼠标穿透至 SVG 进行拖拽 */
+    transform-origin: center center;
+    transition: transform 0.05s ease-out;
+}
+
+/* 顶点标牌 */
+.floating-label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8), 0 0 4px rgba(255,255,255,0.2);
+    pointer-events: none;
+    user-select: none;
+    font-family: var(--font-sans);
+}
+
+/* 长度数据气泡 */
+.floating-text-badge {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    padding: 3px 7px;
+    border-radius: 6px;
+    border: 1px solid;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.floating-text-badge.color-blue {
+    background: rgba(59, 130, 246, 0.9);
+    border-color: #60a5fa;
+    color: #ffffff;
+}
+
+.floating-text-badge.color-red {
+    background: rgba(239, 68, 68, 0.9);
+    border-color: #f87171;
+    color: #ffffff;
+}
+
+.floating-text-badge.color-purple {
+    background: rgba(168, 85, 247, 0.9);
+    border-color: #c084fc;
+    color: #ffffff;
+}
+
+.floating-text-badge.color-safe {
+    background: rgba(16, 185, 129, 0.9);
+    border-color: #34d399;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   7. 几何交互元素样式 (Handles & Lines)
+   ========================================================================== */
+/* 拖拽控制手柄 */
+.drag-handle {
+    transform-origin: center;
+    transform-box: fill-box;
+    cursor: grab;
+    transition: r 0.2s, stroke-width 0.2s;
+    pointer-events: all;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+.drag-handle-blue {
+    transform-origin: center;
+    transform-box: fill-box;
+    fill: #3b82f6;
+    stroke: #ffffff;
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0 8px var(--color-blue-glow));
+}
+.drag-handle-blue:hover {
+    r: 10;
+    stroke-width: 3.5;
+}
+
+.drag-handle-danger {
+    transform-origin: center;
+    transform-box: fill-box;
+    fill: #ef4444;
+    stroke: #ffffff;
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0 8px var(--color-danger-glow));
+}
+.drag-handle-danger:hover {
+    r: 10;
+    stroke-width: 3.5;
+}
+
+/* 行程路径折线 */
+.path-line-ap {
+    stroke: var(--color-blue);
+    stroke-dasharray: none;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 4px var(--color-blue-glow));
+}
+
+.path-line-pb {
+    stroke: var(--color-danger);
+    stroke-dasharray: none;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 4px var(--color-danger-glow));
+}
+
+/* 辅助虚线段 */
+.aux-dash-line {
+    stroke: var(--text-muted);
+    stroke-dasharray: 4,4;
+    stroke-width: 1.5;
+}
+
+/* 辅助垂线 */
+.aux-perp-line {
+    stroke: var(--color-purple);
+    stroke-width: 1.8;
+    filter: drop-shadow(0 0 3px var(--color-purple-glow));
+}
+
+/* 完美高亮线 */
+.optimal-highlight-line {
+    stroke: var(--color-safe);
+    stroke-width: 3;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 6px var(--color-safe-glow));
+}
+
+/* 直角符号 */
+.perp-symbol {
+    fill: none;
+    stroke: var(--color-purple);
+    stroke-width: 1.2;
+}
+
+/* 角度标示弧线 */
+.angle-arc-path {
+    stroke: var(--color-gold);
+    stroke-linecap: round;
+    animation: dash 1s ease-out;
+}
+
+/* 教学步骤中淡出的线条 */
+.step-inactive-shape {
+    opacity: 0.15 !important;
+    transition: opacity 0.4s ease;
+}
+
+/* 泥泞沙地阴影/纹理 */
+.muddy-sand-area {
+    fill: var(--sand-bg);
+    fill-opacity: 0.75;
+}
+
+/* 水泥公路样式 */
+.concrete-road-base {
+    fill: var(--road-bg);
+}
+
+.concrete-road-border {
+    stroke: var(--road-stroke);
+    stroke-width: 2;
+}
+
+/* ==========================================================================
+   8. 右侧教学控制面板 (Control Panel)
+   ========================================================================== */
+.control-panel {
+    width: 320px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    padding: 20px;
+    overflow-y: auto;
+    gap: 24px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.group-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-left: 3px solid var(--color-blue);
+    padding-left: 8px;
+}
+
+/* Tab 按钮 */
+.tab-buttons {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--panel-border);
+}
+
+.btn-preset {
+    flex: 1;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: none;
+    color: var(--text-secondary);
+}
+
+.btn-preset.active {
+    background: var(--color-blue);
+    color: #ffffff;
+    box-shadow: 0 2px 8px var(--color-blue-glow);
+}
+
+/* 参数调节 */
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.slider-label-group {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+}
+
+.slider-value {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--color-blue);
+}
+
+.custom-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    outline: none;
+}
+
+.custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-blue);
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 8px var(--color-blue-glow);
+    transition: var(--transition-smooth);
+}
+
+.custom-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.25);
+}
+
+.slider-subtext {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* 证明向导步骤 */
+.proof-step-control {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.step-indicator-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.step-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    color: #d8b4fe;
+    transition: var(--transition-smooth);
+}
+
+.step-nav-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-step {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--panel-border);
+    color: var(--text-primary);
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.btn-step:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* 预设网格 */
+.preset-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.btn-preset-problem {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 6px;
+}
+
+.btn-preset-problem:hover {
+    background: rgba(59, 130, 246, 0.08);
+    border-color: rgba(59, 130, 246, 0.25);
+    color: var(--text-primary);
+}
+
+/* 学术原理解析 */
+.theory-body {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    padding: 10px 10px 8px;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.theory-short-row {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.theory-short-row:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   8b. 平台统一接入面板优化
+   ========================================================================== */
+.control-panel {
+    width: 320px;
+    padding: 12px;
+    gap: 9px;
+    overflow-y: auto;
+    background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.76)),
+        rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.04);
+}
+
+.control-group {
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 14px;
+    background:
+        linear-gradient(180deg, rgba(30, 41, 59, 0.42), rgba(15, 23, 42, 0.28)),
+        rgba(15, 23, 42, 0.34);
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.12);
+}
+
+.group-title {
+    border-left: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: rgba(226, 232, 240, 0.9);
+}
+
+.group-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    margin-left: 8px;
+    background: linear-gradient(90deg, rgba(96, 165, 250, 0.28), transparent);
+}
+
+.tab-buttons {
+    padding: 3px;
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.26);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.btn-preset,
+.btn-step,
+.btn-preset-problem {
+    min-height: 32px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(15, 23, 42, 0.44);
+    color: rgba(226, 232, 240, 0.88);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.btn-preset.active,
+.btn-step:hover,
+.btn-preset-problem:hover {
+    background: rgba(59, 130, 246, 0.14);
+    border-color: rgba(96, 165, 250, 0.34);
+    color: #eaf4ff;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.slider-wrapper {
+    gap: 7px;
+}
+
+.slider-label-group {
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.slider-value {
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.12);
+    color: #93c5fd;
+}
+
+.custom-slider {
+    height: 7px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.55), rgba(59, 130, 246, 0.18));
+}
+
+.custom-slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #dbeafe;
+    border: 4px solid #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+.slider-subtext {
+    font-size: 11px;
+    line-height: 1.45;
+    color: rgba(148, 163, 184, 0.84);
+}
+
+.proof-step-control {
+    padding: 8px;
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.24);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.step-badge {
+    border-radius: 999px;
+    padding: 4px 10px;
+    background: rgba(168, 85, 247, 0.13);
+    border-color: rgba(192, 132, 252, 0.28);
+    color: #ddd6fe;
+}
+
+.step-nav-buttons {
+    gap: 9px;
+}
+
+.preset-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+}
+
+.btn-preset-problem {
+    position: relative;
+    padding: 7px 10px 7px 14px;
+    font-weight: 700;
+}
+
+.btn-preset-problem::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    width: 3px;
+    height: 16px;
+    border-radius: 99px;
+    background: rgba(96, 165, 250, 0.45);
+    transform: translateY(-50%);
+}
+
+.theory-body {
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.22);
+    border: 1px dashed rgba(148, 163, 184, 0.16);
+}
+
+.theory-short-row {
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 5px;
+}
+
+.theory-short-row strong:first-child {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: rgba(59, 130, 246, 0.12);
+    color: #93c5fd;
+    font-size: 11px;
+}
+
+.result-card {
+    display: grid;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid rgba(96, 165, 250, 0.18);
+    border-radius: 13px;
+    background:
+        radial-gradient(circle at 16% 12%, rgba(96, 165, 250, 0.18), transparent 32%),
+        rgba(2, 6, 23, 0.24);
+}
+
+.result-main {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.result-label,
+.result-unit,
+.result-grid span {
+    color: rgba(148, 163, 184, 0.86);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.result-main strong {
+    color: #eaf4ff;
+    font: 800 24px/1 var(--font-mono);
+    letter-spacing: 0;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.result-grid > div {
+    display: grid;
+    gap: 3px;
+    padding: 7px 8px;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.35);
+}
+
+.result-grid strong {
+    color: #cbd5e1;
+    font: 800 14px/1 var(--font-mono);
+}
+
+.route-status {
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    border-radius: 9px;
+    background: rgba(15, 23, 42, 0.42);
+    color: rgba(203, 213, 225, 0.9);
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.route-status.is-optimal {
+    background: rgba(16, 185, 129, 0.12);
+    color: #a7f3d0;
+}
+
+.btn-demo-main {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.36), rgba(14, 165, 233, 0.2)) !important;
+    border-color: rgba(96, 165, 250, 0.38) !important;
+    color: #eff6ff !important;
+}
+
+.btn-step:disabled {
+    opacity: 0.62;
+    cursor: wait;
+}
+
+.drag-hit-area {
+    fill: transparent;
+    stroke: transparent;
+    pointer-events: all;
+    cursor: grab;
+    touch-action: none;
+}
+
+.drag-hit-area:active,
+.drag-hit-area.active {
+    cursor: grabbing;
+}
+
+.p0-guide-line {
+    stroke: rgba(16, 185, 129, 0.46);
+    stroke-width: 2;
+    stroke-dasharray: 3, 5;
+    pointer-events: none;
+}
+
+.p0-guide-marker {
+    fill: rgba(16, 185, 129, 0.9);
+    stroke: rgba(255, 255, 255, 0.92);
+    stroke-width: 2;
+    filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.35));
+    pointer-events: none;
+}
+
+.optimal-current-line {
+    stroke-width: 4 !important;
+    filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.52));
+}
+
+.optimal-current-point {
+    fill: var(--color-safe);
+    filter: drop-shadow(0 0 12px var(--color-safe-glow));
+}
+
+/* ==========================================================================
+   9. 特效动画与浮动章 (Particles & Badges)
+   ========================================================================== */
+/* 最佳折返点浮动气泡 */
+.float-tip {
+    position: absolute;
+    background: var(--color-safe);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    margin-top: -15px;
+    box-shadow: 0 4px 12px var(--color-safe-glow);
+    z-index: 10;
+}
+
+.float-tip::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 4px 0;
+    border-style: solid;
+    border-color: var(--color-safe) transparent transparent;
+}
+
+/* 金色爆开星星粒子 */
+.sparkle-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--color-gold);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    pointer-events: none;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    animation: sparkle-explode 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes sparkle-explode {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0) rotate(var(--rot));
+        opacity: 0;
+    }
+}
+
+/* 完美比率徽章 */
+.perfect-ratio-badge {
+    position: absolute;
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--color-gold-glow);
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    z-index: 110;
+    animation: badge-float-up 1.2s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+}
+
+@keyframes badge-float-up {
+    0% {
+        opacity: 0;
+        margin-top: 15px;
+    }
+    15% {
+        opacity: 1;
+        margin-top: -15px;
+    }
+    85% {
+        opacity: 1;
+        margin-top: -15px;
+    }
+    100% {
+        opacity: 0;
+        margin-top: -30px;
+    }
+}
+
+/* ==========================================================================
+   10. 帮助弹窗模态框 (Modal Box)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 8, 16, 0.75);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #0f172a;
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+    padding: 28px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: var(--shadow-premium);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.modal-content p {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.modal-content ul {
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.btn-primary {
+    background: var(--color-blue);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 13.5px;
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px var(--color-blue-glow);
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.45);
+}
+
+/* ==========================================================================
+   11. 辅助工具样式
+   ========================================================================== */
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   12. 教学优化：速度意象与步骤高亮动画
+   ========================================================================== */
+/* 物理速度标识背景图层 */
+.speed-entity-label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 600;
+    pointer-events: none;
+    user-select: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(4px);
+    transition: var(--transition-smooth);
+}
+
+.speed-entity-label.sand-label {
+    left: 45px;
+    top: 40px;
+    color: var(--color-gold);
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.speed-entity-label.road-label {
+    left: 45px;
+    top: 360px;
+    color: var(--color-blue);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* 脚印与风速风向纹理 */
+.footprint-path {
+    stroke: var(--color-gold);
+    stroke-opacity: 0.18;
+    stroke-width: 1.5;
+    stroke-dasharray: 2, 8;
+}
+
+.wind-speed-line {
+    stroke: var(--color-blue);
+    stroke-opacity: 0.15;
+    stroke-width: 1.2;
+    stroke-dasharray: 15, 12;
+}
+
+/* 呼吸闪烁高亮类，用于强调重要三角形或线段 */
+.congruent-pulse-highlight {
+    animation: congruent-pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes congruent-pulse {
+    0%, 100% {
+        stroke-opacity: 0.8;
+        fill-opacity: 0.06;
+        stroke-width: 2.2;
+    }
+    50% {
+        stroke-opacity: 1.0;
+        fill-opacity: 0.16;
+        stroke-width: 3.5;
+        filter: drop-shadow(0 0 8px var(--color-purple-glow));
+    }
+}
+
+.highlight-text-blink {
+    animation: text-blink 1.5s infinite ease-in-out;
+}
+
+@keyframes text-blink {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+        color: var(--color-gold);
+        text-shadow: 0 0 6px var(--color-gold-glow);
+    }
+}

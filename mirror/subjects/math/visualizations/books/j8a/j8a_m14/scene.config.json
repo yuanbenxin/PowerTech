@@ -1,0 +1,23 @@
+{
+  "cardId": "j8a_m14",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-axis-folding-construction",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8a_m14",
+    "panelSelector": ".control-column",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": true,
+    "sceneClass": "math-source-scene-j8a_m14",
+    "panelClass": "math-source-panel-j8a_m14",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统接入卡片：轴对称折叠作图。左侧承载折叠画布、角度滑条与几何公理 HUD，右侧平台面板承载模式选择、辅助操作和重置控制。"
+}

@@ -1,0 +1,23 @@
+{
+  "cardId": "sb2_m07",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-geometric-sequence-wheat-board",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "sb2_m07",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [],
+    "needsThree": true,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-sb2_m07",
+    "panelClass": "math-source-panel-sb2_m07",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "等比数列的指数增长与棋盘麦粒；3D 棋盘、通项、前 n 项和、q=1 边界与 q<1 衰减。"
+}

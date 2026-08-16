@@ -1,0 +1,17 @@
+{
+  "cardId": "sx1_m03",
+  "status": "ready",
+  "engine": "senior-math-lab",
+  "entry": "../../../engines/senior-math-lab/scene.js?v=98ea1daedb1c",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-parabola-focus-directrix",
+  "visualLevel": "A",
+  "mathLab": {
+    "type": "parabola-focus",
+    "accent": "#f59e0b",
+    "title": "焦点准线抛物线实验",
+    "formula": "x² = 4py",
+    "summary": "拖动焦点、准线和轨迹点，观察等距轨迹生成。"
+  },
+  "notes": "焦点与准线生成抛物线轨迹；统一 senior-math-lab 引擎。"
+}

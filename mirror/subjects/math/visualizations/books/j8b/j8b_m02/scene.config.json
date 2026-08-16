@@ -1,0 +1,25 @@
+{
+  "cardId": "j8b_m02",
+  "status": "ready",
+  "engine": "linear-function-slope-intercept",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-linear-function",
+  "visualLevel": "A",
+  "source": "source.html",
+  "sourceAdapter": {
+    "cardId": "j8b_m02",
+    "panelSelector": "#panel",
+    "auxiliaryPanelSelectors": [
+      "#hud"
+    ],
+    "needsThree": false,
+    "stagePointerWindow": false,
+    "bridgeTouchToMouse": false,
+    "sceneClass": "math-source-scene-j8b_m02",
+    "panelClass": "math-source-panel-j8b_m02",
+    "inlineFunctionNames": [],
+    "stylePreScoped": false
+  },
+  "notes": "系统既有卡片：一次函数斜率与截距动态图。主体 source.html 保持原课件风格，仅由 source-html-adapter 拆分模拟框与操作面板。"
+}

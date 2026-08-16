@@ -1,0 +1,27 @@
+{
+    "source":  "source.html",
+    "coursewarePanelMode":  "scene-controls",
+    "cardId":  "sx1_m06",
+    "sourceAdapter":  {
+                          "stagePointerWindow":  false,
+                          "auxiliaryPanelSelectors":  [
+
+                                                      ],
+                          "cardId":  "sx1_m06",
+                          "panelSelector":  "#panel",
+                          "needsThree":  false,
+                          "inlineFunctionNames":  [
+
+                                                  ],
+                          "stylePreScoped":  false,
+                          "panelClass":  "math-source-panel-sx1_m06",
+                          "sceneClass":  "math-source-scene-sx1_m06",
+                          "bridgeTouchToMouse":  false
+                      },
+    "engine":  "source-html-adapter",
+    "notes":  "杨辉三角与二项式系数；第 n 行、递推来源、展开式与二项分布联动。",
+    "interactionMode":  "touch-pascal-triangle-binomial",
+    "visualLevel":  "A",
+    "status":  "ready",
+    "entry":  "../../../engines/source-html-adapter/scene.js?v=a564c4d773e0"
+}

@@ -1,0 +1,13 @@
+{
+  "cardId": "jm_model_m09",
+  "status": "ready",
+  "engine": "a-shape-similarity-model",
+  "entry": "scene.js?v=ed485da5fd92",
+  "coursewarePanelMode": "scene-controls",
+  "interactionMode": "touch-drag-pan-zoom-a-shape-similarity",
+  "visualLevel": "A",
+  "source": "source.html",
+  "style": "style.css?v=0e08c5cff977",
+  "script": "app.js?v=9332fbb38689",
+  "notes": "A 字型相似模型正式互动课件：支持平行 A 字型相似、平行线分线段成比例、旋转/反 A 字型相似、触屏拖拽点位、画布缩放平移与防长按菜单。"
+}
