@@ -1,0 +1,10 @@
+{
+  "cardId": "c7a_m05",
+  "title": "峨眉山月歌",
+  "status": "pending",
+  "engine": "poetry-appreciation",
+  "contentType": "poetry",
+  "coursewarePanelMode": "pending",
+  "source": "",
+  "notes": "仅创建卡片目录与基础元数据。课件原文、译注、交互场景和资源将在后续单卡接入时补充。"
+}
