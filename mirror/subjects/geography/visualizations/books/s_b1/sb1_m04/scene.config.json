@@ -1,0 +1,19 @@
+{
+  "cardId": "sb1_m04",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-river-landform-development",
+  "visualLevel": "A",
+  "vendor": {
+    "three": false,
+    "orbitControls": false
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "通过河流侵蚀、搬运和沉积过程以及流速和阶段切换，观察河谷、曲流、牛轭湖与三角洲等河流地貌的发育。"
+}

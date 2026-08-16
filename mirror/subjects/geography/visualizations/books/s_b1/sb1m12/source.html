@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>地质年代与地球演化时间轴 · 交互课件</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;background:#0d0a14;color:#efe9f7;
+    font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+  body{display:flex}
+  /* ---------- 左侧画布 ---------- */
+  #stage{flex:1;position:relative;min-width:0;background:#0b1024}
+  #cv{display:block;width:100%;height:100%}
+  .geologyFallback{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;justify-content:center;padding:9% 8%;color:#f6edcf;background:linear-gradient(rgba(7,9,25,.52),rgba(7,9,25,.70)),url('assets/e4_mesozoic.webp') center/cover no-repeat,#0b1024}
+  .geologyFallback h2{font-size:clamp(22px,3vw,40px);letter-spacing:.12em;text-align:center;margin-bottom:12px}
+  .geologyFallback p{margin:0 auto;max-width:650px;text-align:center;font-size:clamp(12px,1.4vw,17px);line-height:1.7;color:#d7cdeb}
+  .geologyFallback .geoLine{display:grid;grid-template-columns:1.3fr 1.1fr 1.2fr 1.25fr 1.15fr 1fr 1fr;gap:5px;margin-top:16vh}
+  .geologyFallback .geoNode{min-width:0;padding:13px 7px;border:1px solid rgba(220,209,255,.38);background:rgba(11,9,31,.58);text-align:center;font-size:clamp(10px,1vw,14px);line-height:1.45}
+  .geologyFallback .geoNode b{display:block;font-size:clamp(11px,1.15vw,16px);color:#fff1bc;margin-bottom:3px}
+  .geologyFallback .geoNode.on{border-color:#f0a35a;background:rgba(240,163,90,.17);box-shadow:0 0 24px rgba(240,163,90,.20)}
+  .geologyFallback .geoAxis{height:6px;margin:22px 2% 0;background:linear-gradient(90deg,#ff7a45,#e8b23a,#8bc34a,#4ecdc4,#7cb342,#f0a35a,#a78bfa);border-radius:99px}
+  .ovTitle{position:absolute;top:18px;left:22px;z-index:5;pointer-events:none}
+  .ovTitle h1{font-size:21px;letter-spacing:2px;font-weight:700;
+    background:linear-gradient(90deg,#f0b45a,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 2px 12px rgba(0,0,0,.6)}
+  .ovTitle p{font-size:12px;color:#b8a8d4;margin-top:4px;letter-spacing:1px}
+  /* 视角切换 */
+  #viewPills{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:7;display:flex;gap:8px}
+  .vp{padding:8px 18px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;
+    background:rgba(13,10,20,.7);border:1px solid rgba(255,255,255,.18);color:#cbb8ff;backdrop-filter:blur(6px);
+    transition:.2s;user-select:none}
+  .vp:hover{border-color:#f0b45a;color:#ffd98a}
+  .vp.on{background:rgba(240,180,90,.2);border-color:#f0b45a;color:#ffd98a;box-shadow:0 0 16px rgba(240,180,90,.35)}
+  /* 巨大年代标题 */
+  #eraBig{display:none !important;position:absolute;left:30px;top:36%;z-index:4;pointer-events:none}
+  #eraBig .nm{font-size:60px;font-weight:900;letter-spacing:10px;color:#fff;
+    text-shadow:0 4px 30px rgba(0,0,0,.75),0 0 60px rgba(240,180,90,.35)}
+  #eraBig .en{font-size:15px;letter-spacing:6px;color:rgba(255,255,255,.75);margin-top:2px;text-transform:uppercase}
+  #eraBig .ag{font-size:19px;color:#f0b45a;margin-top:8px;font-variant-numeric:tabular-nums;letter-spacing:1px;
+    text-shadow:0 2px 10px rgba(0,0,0,.7)}
+  .fadeIn{animation:eraIn .9s ease both}
+  @keyframes eraIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  /* 事件闪卡 */
+  #flash{position:absolute;left:50%;top:24%;transform:translateX(-50%);z-index:8;text-align:center;
+    pointer-events:none;opacity:0;transition:opacity .45s}
+  #flash .t{font-size:34px;font-weight:900;letter-spacing:6px;color:#ffd98a;
+    text-shadow:0 0 40px rgba(240,180,90,.8),0 4px 20px rgba(0,0,0,.8)}
+  #flash .a{font-size:17px;color:#fff;margin-top:6px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+  /* 时间轴 */
+  #tlWrap{position:absolute;left:26px;right:26px;bottom:16px;z-index:6;user-select:none}
+  .tlBar{position:relative;border-radius:9px;cursor:pointer}
+  #tlZoom{height:20px;margin-bottom:7px;opacity:.95}
+  #tlMain{height:34px}
+  .seg{position:absolute;top:0;bottom:0;display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:700;color:rgba(0,0,0,.72);letter-spacing:1px;white-space:nowrap;overflow:hidden}
+  .seg.first{border-radius:9px 0 0 9px}.seg.last{border-radius:0 9px 9px 0}
+  .cursor{position:absolute;left:0;top:-5px;bottom:-5px;width:3px;background:#fff;border-radius:2px;
+    box-shadow:0 0 10px #fff,0 0 22px rgba(240,180,90,.9);pointer-events:none}
+  .cursor::after{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);
+    border:5px solid transparent;border-top-color:#fff}
+  #tlCap{position:absolute;right:0;top:-22px;font-size:11px;color:#b8a8d4;letter-spacing:1px}
+  #hint{position:absolute;left:50%;bottom:86px;transform:translateX(-50%);z-index:7;
+    background:rgba(13,10,20,.85);border:1px solid rgba(240,180,90,.45);padding:9px 20px;border-radius:999px;
+    font-size:13px;color:#f3e6cd;opacity:0;transition:opacity .5s;pointer-events:none;white-space:nowrap}
+  /* ---------- 右侧面板 ---------- */
+  #panel{width:380px;flex:none;background:linear-gradient(180deg,#171126,#0d0a14);
+    border-left:1px solid rgba(167,139,250,.18);overflow-y:auto;padding:16px 16px 26px}
+  #panel::-webkit-scrollbar{width:6px}
+  #panel::-webkit-scrollbar-thumb{background:rgba(167,139,250,.3);border-radius:3px}
+  .card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+    border-radius:14px;padding:13px 14px;margin-bottom:13px}
+  .card h3{font-size:13px;color:#b8a8d4;font-weight:600;letter-spacing:2px;margin-bottom:10px;
+    display:flex;align-items:center;gap:7px}
+  .ageBig{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .ageBig .v{font-size:32px;font-weight:800;color:#f0b45a;font-variant-numeric:tabular-nums;line-height:1.1}
+  .eraBadge{font-size:13px;padding:4px 13px;border-radius:999px;background:rgba(167,139,250,.16);
+    border:1px solid rgba(167,139,250,.5);color:#cbb8ff;font-weight:700;letter-spacing:1px}
+  .grid4{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:11px}
+  .g4{font-size:11.5px;border-radius:10px;padding:8px 10px;line-height:1.5;background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);color:#d8cfe8}
+  .g4 b{display:block;font-size:11px;letter-spacing:1px;margin-bottom:2px}
+  .g4.life b{color:#8be89b}.g4.tec b{color:#f0b45a}.g4.min b{color:#e8be78}.g4.oc b{color:#7fd0ff}
+  .calLine{margin-top:11px;font-size:13px;color:#e8ddc8;background:rgba(0,0,0,.3);border-radius:9px;
+    padding:8px 11px;line-height:1.6}
+  .calLine b{color:#ffd98a;font-size:15px}
+  .anchors{margin-top:8px;font-size:12px;color:#a597c2;line-height:2}
+  .anchors b{color:#e8ddc8;font-weight:600}
+  .pills{display:flex;gap:6px;flex-wrap:wrap}
+  .pill{font-size:12px;padding:6px 12px;border-radius:999px;cursor:pointer;user-select:none;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#ddd2ee;transition:.2s}
+  .pill:hover{border-color:#f0b45a;color:#f0b45a}
+  .pill.on{background:rgba(240,180,90,.16);border-color:#f0b45a;color:#ffd98a}
+  .note{font-size:11.5px;color:#8d7fa8;margin-top:9px;line-height:1.65}
+  .note b{color:#cbb8ff}
+  .utility{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}
+  .utility .pill{width:100%;min-height:36px;display:flex;align-items:center;justify-content:center}
+  /* quiz */
+  .q{font-size:13px;color:#e6def2;margin-bottom:10px;line-height:1.5}
+  .opts{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+  .opt{flex:1;min-width:88px;text-align:center;font-size:12.5px;padding:7px 4px;border-radius:9px;cursor:pointer;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);transition:.2s;user-select:none}
+  .opt:hover{border-color:#a78bfa}
+  .opt.ok{background:rgba(80,220,140,.18);border-color:#50dc8c;color:#7ff0ae}
+  .opt.no{background:rgba(255,90,90,.16);border-color:#ff5a5a;color:#ff9a9a}
+  #scoreLine{font-size:12px;color:#8d7fa8;margin-left:auto}
+  #scoreLine b{color:#f0b45a}
+  @media (max-width:860px){body{flex-direction:column}#panel{width:100%;height:44%}#stage{height:56%}
+    #eraBig .nm{font-size:36px}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="eraAssets" aria-hidden="true" hidden><img id="eraHadean" src="assets/e0_hadean.webp?v=ad63a3d8adab" alt=""><img id="eraArchean" src="assets/e1_archean.webp?v=74a5d0bbe82a" alt=""><img id="eraCambrian" src="assets/e2_cambrian.webp?v=43cbf33cc9b1" alt=""><img id="eraCoal" src="assets/e3_coal.webp?v=d2cc20df41a7" alt=""><img id="eraMesozoic" src="assets/e4_mesozoic.webp?v=651aaa1c35d4" alt=""><img id="eraCenozoic" src="assets/e5_cenozoic.webp?v=f728e3b58fef" alt=""></div>
+  <div class="geologyFallback" aria-hidden="true"><h2>地球演化 · 46 亿年时间轴</h2><p>拖动下方时间轴，从地球形成走到现代；比较生命演化、板块运动与海陆格局怎样共同留下地层记录。</p><div class="geoLine"><div class="geoNode"><b>冥古宙</b>地球形成</div><div class="geoNode"><b>太古宙</b>原始生命</div><div class="geoNode"><b>元古宙</b>含氧环境</div><div class="geoNode"><b>古生代</b>生命大爆发</div><div class="geoNode"><b>晚古生代</b>成煤森林</div><div class="geoNode on"><b>中生代</b>恐龙 · 古陆解体</div><div class="geoNode"><b>新生代</b>现代海陆</div></div><div class="geoAxis"></div></div>
+  <canvas id="cv"></canvas>
+  <div class="ovTitle"><h1>地质年代与地球演化时间轴</h1><p>地层 · 构造 · 海陆 · 矿产 —— 拖动底部时间轴穿越 46 亿年</p></div>
+  <div id="viewPills">
+    <span class="vp on" data-v="scene">🎬 演化场景</span>
+    <span class="vp" data-v="strata">🪨 地层柱</span>
+    <span class="vp" data-v="map">🗺 海陆变迁</span>
+  </div>
+  <div id="eraBig" class="fadeIn">
+    <div class="nm" id="eraNm">中生代</div>
+    <div class="en" id="eraEn">Mesozoic</div>
+    <div class="ag" id="eraAg">距今 1.50 亿年前</div>
+  </div>
+  <div id="flash"><div class="t" id="flashT"></div><div class="a" id="flashA"></div></div>
+  <div id="tlWrap">
+    <div id="tlCap">上条：显生宙放大（5.41亿年→今）· 下条：全程（46亿年→今）</div>
+    <div class="tlBar" id="tlZoom">
+      <div class="seg first" style="left:0;width:53.4%;background:#4ecdc4">古生代</div>
+      <div class="seg" style="left:53.4%;width:34.4%;background:#f0a35a">中生代</div>
+      <div class="seg last" style="left:87.8%;width:12.2%;background:#a78bfa">新生代</div>
+      <div class="cursor" id="curZ"></div>
+    </div>
+    <div class="tlBar" id="tlMain">
+      <div class="seg first" style="left:0;width:13%;background:#ff7a45">冥古宙</div>
+      <div class="seg" style="left:13%;width:32.6%;background:#e8b23a">太古宙</div>
+      <div class="seg" style="left:45.6%;width:42.6%;background:#8bc34a">元古宙</div>
+      <div class="seg last" style="left:88.2%;width:11.8%;background:#4ecdc4">显生宙</div>
+      <div class="cursor" id="curM"></div>
+    </div>
+  </div>
+  <div id="hint"></div>
+</div>
+
+<div id="panel">
+  <div class="card">
+    <h3>🧭 时空坐标</h3>
+    <div class="ageBig"><span class="v" id="vAge">1.50 亿年</span><span class="eraBadge" id="vEra">中生代</span></div>
+    <div class="grid4">
+      <div class="g4 life"><b>🧬 代表生物</b><span id="gLife">恐龙 · 裸子植物</span></div>
+      <div class="g4 tec"><b>🏔 构造运动</b><span id="gTec">联合古陆解体</span></div>
+      <div class="g4 min"><b>⛏ 矿产形成</b><span id="gMin">成煤 · 石油</span></div>
+      <div class="g4 oc"><b>🌊 海陆格局</b><span id="gOc">大西洋张开</span></div>
+    </div>
+    <div class="calLine" id="calLine" style="display:none">📅 若把地球史压缩成 <b>一年</b>：此刻约是 <b id="calDate">12月13日</b></div>
+    <div class="anchors" id="anchors" style="display:none">
+      <b>1月1日</b> 地球形成　<b>3月上旬</b> 生命起源<br>
+      <b>11月19日</b> 寒武纪生命大爆发<br>
+      <b>12月13日</b> 恐龙登场　<b>12月27日</b> 恐龙灭绝<br>
+      <b>12月31日 23时</b> 人类出现 —— 文明只在最后一瞬
+    </div>
+    <div class="pills" style="margin-top:10px">
+      <span class="pill" id="btnCal">📅 地球历：压缩为一年</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🪨 地层 · 记录历史的"书页"</h3>
+    <div class="note" style="margin-top:0">
+      <b>层序律</b>：正常层序下，越靠下的地层形成年代越<b>古老</b>。<br>
+      <b>化石律</b>：同一时代的地层含有相同或相似的化石；越古老的地层，化石越简单、越低等。<br>
+      <b>不整合面</b>：地层间的波状界面，代表一段沉积间断（地壳抬升遭受侵蚀）——点开「🪨 地层柱」视图可点击任意岩层穿越。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>⚡ 一键穿越</h3>
+    <div class="pills" id="jumpPills">
+      <span class="pill" data-a="4600">🌍 地球形成</span>
+      <span class="pill" data-a="541">🦐 生命大爆发</span>
+      <span class="pill" data-a="330">🌿 成煤森林</span>
+      <span class="pill on" data-a="150">🦕 恐龙时代</span>
+      <span class="pill" data-a="66">☄️ 大灭绝</span>
+      <span class="pill" data-a="3">🧑 人类登场</span>
+    </div>
+    <div class="utility"><span class="pill" id="btnTour">▶ 演化巡游</span><span class="pill" id="btnResetTime">↺ 回到中生代</span></div>
+  </div>
+
+  <div class="card">
+    <h3>✏️ 课堂检测 <span id="scoreLine">得分 <b id="score">0</b>/5</span></h3>
+    <div class="q" data-a="0">1. 含有三叶虫化石的地层，形成于？
+      <div class="opts"><span class="opt">古生代早期</span><span class="opt">中生代</span><span class="opt">新生代</span></div></div>
+    <div class="q" data-a="0">2. 正常层序中，位置越靠下的地层，年代？
+      <div class="opts"><span class="opt">越古老</span><span class="opt">越年轻</span><span class="opt">无法判断</span></div></div>
+    <div class="q" data-a="1">3. 联合古陆解体、大陆漂移加剧是在？
+      <div class="opts"><span class="opt">古生代早期</span><span class="opt">中生代</span><span class="opt">新生代</span></div></div>
+    <div class="q" data-a="2">4. 喜马拉雅造山运动奠定了现代地貌，它发生在？
+      <div class="opts"><span class="opt">太古宙</span><span class="opt">中生代</span><span class="opt">新生代</span></div></div>
+    <div class="q" data-a="1">5. 地质历史上重要的成煤期是？
+      <div class="opts"><span class="opt">冥古宙</span><span class="opt">古生代晚期与中生代</span><span class="opt">仅在新生代</span></div></div>
+  </div>
+</div>
+
+<script>
+/* ================= 基础 ================= */
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+const stage=document.getElementById('stage');
+const $=id=>document.getElementById(id);
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const lerp=(a,b,t)=>a+(b-a)*t;
+let W=0,H=0,DPR=1;
+function resize(){DPR=Math.min(devicePixelRatio,2);
+  W=stage.clientWidth;H=stage.clientHeight;cv.width=W*DPR;cv.height=H*DPR;}
+window.addEventListener('resize',resize);resize();
+
+/* ================= 年代数据（年龄单位 Ma） ================= */
+const ERAS=[
+  {a0:4600,a1:4000,name:'冥古宙',en:'Hadean',life:'无生命',tec:'地壳初步形成',min:'—',oc:'原始海洋出现',c:'#ff7a45'},
+  {a0:4000,a1:2500,name:'太古宙',en:'Archean',life:'蓝藻等原核生物',tec:'地壳薄 · 火山频繁',min:'条带状铁矿',oc:'海洋广阔 · 陆核萌芽',c:'#e8b23a'},
+  {a0:2500,a1:541,name:'元古宙',en:'Proterozoic',life:'真核 · 多细胞生物',tec:'陆核扩大 · 稳定地块',min:'铁矿 · 海相沉积',oc:'浅海广布',c:'#8bc34a'},
+  {a0:541,a1:405,name:'古生代·早期',en:'Early Paleozoic',life:'三叶虫 · 海洋无脊椎',tec:'加里东运动',min:'海相灰岩沉积',oc:'海侵 · 陆地扩大',c:'#4ecdc4'},
+  {a0:405,a1:252,name:'古生代·晚期',en:'Late Paleozoic',life:'鱼类→两栖 · 蕨类森林',tec:'海西运动 · 联合古陆形成',min:'重要成煤期',oc:'泛大陆 · 泛大洋',c:'#7cb342'},
+  {a0:252,a1:66,name:'中生代',en:'Mesozoic',life:'恐龙 · 裸子植物',tec:'联合古陆解体 · 板块漂移',min:'成煤 · 石油',oc:'大西洋张开',c:'#f0a35a'},
+  {a0:66,a1:0,name:'新生代',en:'Cenozoic',life:'哺乳动物 · 被子植物',tec:'喜马拉雅造山运动',min:'石油',oc:'现代海陆格局形成',c:'#a78bfa'},
+];
+const BOUNDS=[4000,541,405,252,66];
+const SCENE_STEPS=[
+  {age:4550,icon:'✦',name:'地球形成',note:'熔融地表逐步冷却'},
+  {age:3800,icon:'◌',name:'原始生命',note:'海洋中出现早期生命'},
+  {age:2400,icon:'↑',name:'含氧环境',note:'光合作用改变大气'},
+  {age:541,icon:'✺',name:'生命大爆发',note:'海洋生物迅速多样化'},
+  {age:300,icon:'♧',name:'成煤森林',note:'蕨类繁盛并形成煤层'},
+  {age:150,icon:'♜',name:'恐龙时代',note:'联合古陆解体 · 大洋张开'},
+  {age:3,icon:'●',name:'现代地球',note:'哺乳动物繁盛 · 人类登场'}
+];
+const SCENE_IMAGES=[
+  {min:4000,id:'eraHadean'}, {min:2500,id:'eraArchean'}, {min:541,id:'eraCambrian'},
+  {min:252,id:'eraCoal'}, {min:66,id:'eraMesozoic'}, {min:-1,id:'eraCenozoic'}
+];
+const fmtAge=a=>a>=100?((a/100).toFixed(2).replace(/0+$/,'').replace(/\.$/,'')+' 亿年')
+                     :(Math.round(a*100)+' 万年');
+const eraOf=age=>ERAS.find(e=>age>e.a1&&age<=e.a0)||ERAS[ERAS.length-1];
+function earthCal(age){
+  const day=Math.min((1-age/4600)*365.25,364.99);
+  const M=[31,28,31,30,31,30,31,31,30,31,30,31];
+  let d=Math.floor(day),mo=0;
+  while(mo<11&&d>=M[mo]){d-=M[mo];mo++;}
+  if(mo===11&&d>30)d=30;
+  const hr=(day-Math.floor(day))*24;
+  return (mo+1)+'月'+(d+1)+'日'+(mo===11&&d>=30?' '+Math.floor(hr)+'时':'');
+}
+
+/* ================= 状态 ================= */
+const S={scrub:0.967,view:'scene',touring:false};
+const T={scrub:0.967};
+const ageOf=s=>(1-s)*4600;
+
+/* ================= 渐变权重 ================= */
+const SB=BOUNDS.map(b=>1-b/4600);
+function weights(s){
+  const ks=BOUNDS.map((b,i)=>{
+    const prev=SB[i-1]??-1,next=SB[i+1]??2;
+    const m=Math.min(0.028,(SB[i]-prev)/2,(next-SB[i])/2);
+    return clamp((s-(SB[i]-m))/(2*m),0,1);
+  });
+  const w=[1-ks[0]];
+  for(let i=0;i<ks.length;i++)w.push(ks[i]*(i<ks.length-1?1-ks[i+1]:1));
+  return w;
+}
+
+/* ================= 视图一：演化场景 ================= */
+function drawScene(t){
+  const age=ageOf(S.scrub),era=eraOf(age),left=W*.075,right=W*.93,y=H*.69;
+  const sceneAsset=SCENE_IMAGES.find(item=>age>item.min)?.id;
+  const image=$(sceneAsset);
+  if(image&&image.complete&&image.naturalWidth){
+    const scale=Math.max(W/image.naturalWidth,H/image.naturalHeight),dw=image.naturalWidth*scale,dh=image.naturalHeight*scale;
+    ctx.drawImage(image,(W-dw)/2,(H-dh)/2,dw,dh);
+    ctx.fillStyle='rgba(5,8,22,.46)';ctx.fillRect(0,0,W,H);
+  }else{
+    const bg=ctx.createLinearGradient(0,0,W,H);bg.addColorStop(0,'#0b1024');bg.addColorStop(.55,'#17122b');bg.addColorStop(1,'#0a1720');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  }
+  for(let i=0;i<78;i++){
+    const x=(i*73%997)/997*W,y0=(i*149%613)/613*H*.64,r=.5+(i%3)*.45;
+    ctx.fillStyle=`rgba(255,225,160,${.16+.18*Math.sin(t*.001+i)})`;ctx.beginPath();ctx.arc(x,y0,r,0,7);ctx.fill();
+  }
+  ctx.strokeStyle='rgba(202,186,255,.36)';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(right,y);ctx.stroke();
+  const xFor=a=>left+(1-a/4600)*(right-left);
+  SCENE_STEPS.forEach((step,i)=>{
+    const x=xFor(step.age),active=Math.abs(step.age-age)<(step.age>600?480:step.age>80?90:35);
+    const pulse=active?.55+.45*Math.sin(t*.004+i):0;
+    ctx.strokeStyle=active?`${era.c}`:'rgba(203,190,241,.34)';ctx.lineWidth=active?3:1.5;
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y-(active?98:62));ctx.stroke();
+    const boxW=Math.min(128,Math.max(82,W*.105)),boxH=active?76:58,boxY=y-(active?142:108);
+    ctx.fillStyle=active?'rgba(240,180,90,.19)':'rgba(15,12,33,.74)';ctx.fillRect(x-boxW/2,boxY,boxW,boxH);
+    ctx.strokeStyle=active?`${era.c}`:'rgba(203,190,241,.36)';ctx.lineWidth=active?2:1;ctx.strokeRect(x-boxW/2,boxY,boxW,boxH);
+    ctx.textAlign='center';ctx.fillStyle=active?'#fff0bd':'#d9d2ed';ctx.font=`700 ${active?18:15}px "Microsoft YaHei"`;ctx.fillText(step.icon,x,boxY+22);
+    ctx.font=`700 ${Math.max(10,Math.min(13,W*.009))}px "Microsoft YaHei"`;ctx.fillText(step.name,x,boxY+44);
+    if(active){ctx.font='11px "Microsoft YaHei"';ctx.fillStyle='#f7dbab';ctx.fillText(step.note,x,boxY+62);}
+    if(active){ctx.fillStyle=`${era.c}55`;ctx.beginPath();ctx.arc(x,y,7+4*pulse,0,7);ctx.fill();}
+  });
+  const cardW=Math.min(W*.72,560),cardH=90,cx=W*.5,cy=H*.18;
+  ctx.fillStyle='rgba(5,8,20,.66)';ctx.fillRect(cx-cardW/2,cy-cardH/2,cardW,cardH);
+  ctx.strokeStyle=`${era.c}aa`;ctx.lineWidth=1.5;ctx.strokeRect(cx-cardW/2,cy-cardH/2,cardW,cardH);
+  ctx.textAlign='center';ctx.fillStyle='#fff3cf';ctx.font='700 22px "Microsoft YaHei"';ctx.fillText(`${era.name} · 距今 ${fmtAge(Math.max(age,.2))}前`,cx,cy-14);
+  ctx.fillStyle='#d6caea';ctx.font='13px "Microsoft YaHei"';ctx.fillText(`生命证据：${era.life}　｜　地球过程：${era.tec}`,cx,cy+16);
+  ctx.fillStyle='#9fdefa';ctx.font='12px "Microsoft YaHei"';ctx.fillText('拖动时间轴：从地球形成到现代，比较不同时代的环境与生命演化。',cx,cy+39);
+  ctx.textAlign='left';ctx.fillStyle='rgba(215,205,240,.72)';ctx.font='11px "Microsoft YaHei"';ctx.fillText('46 亿年前',left,H*.78);ctx.textAlign='right';ctx.fillText('现在',right,H*.78);
+}
+function drawWarp(){
+  const v=Math.abs(T.scrub-S.scrub);
+  if(v<0.008)return;
+  ctx.save();ctx.globalAlpha=clamp(v*6,0,0.5);
+  ctx.strokeStyle='rgba(255,230,180,.8)';ctx.lineWidth=1.5;
+  for(let i=0;i<10;i++){
+    const y=Math.random()*H,x0=Math.random()*W;
+    ctx.beginPath();ctx.moveTo(x0,y);ctx.lineTo(x0+120+Math.random()*220,y-60-Math.random()*60);ctx.stroke();
+  }
+  ctx.restore();
+}
+
+/* ================= 视图二：地层柱 ================= */
+// 自上而下（新→老）
+const STRATA=[
+  {name:'新生代地层',age:'< 6600 万年',a0:66,a1:0,color:'#d9c58a',fossil:'🦣',note:'哺乳动物化石 · 松散沉积物'},
+  {name:'中生代地层',age:'2.52亿–6600万年',a0:252,a1:66,color:'#c98d5a',fossil:'🦕',note:'恐龙化石 · 煤层与石油'},
+  {name:'晚古生代地层',age:'4.05亿–2.52亿年',a0:405,a1:252,color:'#8f9c6b',fossil:'🌿',note:'蕨类化石 · 重要煤层（黑色）'},
+  {name:'早古生代地层',age:'5.41亿–4.05亿年',a0:541,a1:405,color:'#5aa8a0',fossil:'🦐',note:'三叶虫化石 · 海相灰岩'},
+  {name:'元古宙地层',age:'25亿–5.41亿年',a0:2500,a1:541,color:'#7a8a99',fossil:'🧫',note:'叠层石 · 低等微生物'},
+  {name:'太古宙基底',age:'> 25 亿年',a0:4000,a1:2500,color:'#5c5c66',fossil:'🪨',note:'变质岩基底 · 几乎无化石'},
+];
+let strataRects=[];
+function drawStrata(t){
+  // 背景：岩壁
+  const bg=ctx.createLinearGradient(0,0,W,0);
+  bg.addColorStop(0,'#141019');bg.addColorStop(1,'#1e1826');
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  const age=ageOf(S.scrub);
+  const cx=W*0.14,cw=W*0.36,top=H*0.09,bot=H*0.90;
+  const lh=(bot-top)/STRATA.length;
+  strataRects=[];
+  // 标题
+  ctx.font='bold 20px "Microsoft YaHei"';ctx.textAlign='center';ctx.fillStyle='#e8ddc8';
+  ctx.fillText('地 层 柱 状 剖 面',cx+cw/2,top-22);
+  STRATA.forEach((L,i)=>{
+    const y=top+i*lh;
+    strataRects.push({x:cx,y,w:cw,h:lh,L});
+    // 岩层主体
+    ctx.fillStyle=L.color;
+    ctx.fillRect(cx,y,cw,lh-3);
+    // 沉积纹理（水平细纹）
+    ctx.strokeStyle='rgba(0,0,0,.16)';ctx.lineWidth=1;
+    for(let s=1;s<5;s++){ctx.beginPath();ctx.moveTo(cx+8,y+lh*s/5);
+      ctx.bezierCurveTo(cx+cw*0.3,y+lh*s/5+3,cx+cw*0.7,y+lh*s/5-3,cx+cw-8,y+lh*s/5+2);ctx.stroke();}
+    // 煤层特别纹理
+    if(L.note.includes('煤')){ctx.fillStyle='rgba(10,8,8,.5)';
+      ctx.fillRect(cx,y+lh*0.42,cw,5);}
+    // 当前年代所在层：发光描边
+    const cur=age>L.a1&&age<=L.a0;
+    if(cur){const p=0.6+0.4*Math.sin(t*0.006);
+      ctx.strokeStyle=`rgba(240,180,90,${p})`;ctx.lineWidth=3.5;
+      ctx.strokeRect(cx-3,y-2,cw+6,lh+1);
+      ctx.fillStyle=`rgba(240,180,90,${0.10+0.08*p})`;ctx.fillRect(cx,y,cw,lh-3);}
+    else{ctx.strokeStyle='rgba(255,255,255,.14)';ctx.lineWidth=1;
+      ctx.strokeRect(cx,y,cw,lh-3);}
+    // 化石图标
+    ctx.font='34px serif';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(L.fossil,cx+cw*0.22,y+lh/2);
+    ctx.textBaseline='alphabetic';
+    // 层名与说明（柱右侧）
+    ctx.textAlign='left';
+    ctx.font='bold 16px "Microsoft YaHei"';ctx.fillStyle=cur?'#ffd98a':'#e8ddc8';
+    ctx.fillText(L.name,cx+cw+22,y+lh/2-10);
+    ctx.font='12px "Microsoft YaHei"';ctx.fillStyle='#a597c2';
+    ctx.fillText(L.age,cx+cw+22,y+lh/2+8);
+    ctx.fillStyle='#c9bede';
+    ctx.fillText(L.note,cx+cw+22,y+lh/2+25);
+  });
+  // 不整合面（元古宙与早古生代之间 = i=3 与 i=4 之间）
+  const uy=top+4*lh-3;
+  ctx.strokeStyle='#ff9a6a';ctx.lineWidth=2.5;ctx.setLineDash([]);
+  ctx.beginPath();ctx.moveTo(cx-6,uy);
+  for(let x=0;x<=cw+12;x+=14)ctx.lineTo(cx-6+x,uy+Math.sin(x*0.35)*4);
+  ctx.stroke();
+  ctx.font='bold 13px "Microsoft YaHei"';ctx.fillStyle='#ff9a6a';
+  ctx.fillText('～～ 不整合面（沉积间断）',cx-10,uy-9);
+  // 层序律箭头
+  ctx.font='bold 15px "Microsoft YaHei"';ctx.textAlign='center';
+  ctx.fillStyle='#8be89b';ctx.fillText('↑ 新（年轻）',cx-58,top+16);
+  ctx.fillStyle='#f0a35a';ctx.fillText('↓ 老（古老）',cx-58,bot-8);
+  ctx.strokeStyle='rgba(255,255,255,.5)';ctx.lineWidth=2;
+  ctx.beginPath();ctx.moveTo(cx-46,top+26);ctx.lineTo(cx-46,bot-22);ctx.stroke();
+  // 提示
+  ctx.font='13px "Microsoft YaHei"';ctx.fillStyle='rgba(255,255,255,.55)';
+  ctx.fillText('点击任意岩层，时间轴即刻穿越到该年代',cx+cw/2,bot+26);
+}
+
+/* ================= 视图三：海陆变迁 ================= */
+// 5 大洲 4 个关键帧 {300,180,100,0 Ma}：[cx,cy,rx,ry]
+const CONT={
+  '北美洲':{c:'#7ba15c',k:{300:[.40,.30,.10,.08],180:[.36,.22,.11,.08],100:[.30,.28,.12,.09],0:[.22,.30,.13,.10]}},
+  '南美洲':{c:'#8aa84f',k:{300:[.41,.46,.07,.09],180:[.42,.40,.07,.10],100:[.36,.55,.07,.11],0:[.30,.62,.07,.12]}},
+  '非洲':{c:'#a8924f',k:{300:[.54,.44,.08,.09],180:[.50,.48,.08,.10],100:[.50,.50,.08,.11],0:[.52,.55,.09,.12]}},
+  '欧亚大陆':{c:'#7d9b68',k:{300:[.57,.27,.11,.08],180:[.56,.20,.13,.08],100:[.55,.26,.15,.09],0:[.60,.28,.17,.10]}},
+  '澳大利亚':{c:'#b3925a',k:{300:[.60,.54,.06,.05],180:[.58,.60,.06,.05],100:[.72,.62,.07,.06],0:[.80,.68,.08,.06]}},
+};
+const KAGES=[300,180,100,0];
+function contParams(age){
+  age=clamp(age,0,300);
+  let i=0;while(i<KAGES.length-2&&age<KAGES[i+1])i++;
+  const a1=KAGES[i],a2=KAGES[i+1],k=(a1-age)/(a1-a2||1);
+  const out={};
+  for(const n in CONT){
+    const p1=CONT[n].k[a1],p2=CONT[n].k[a2];
+    out[n]=p1.map((v,j)=>lerp(v,p2[j],k));
+  }
+  return out;
+}
+function drawMapView(t){
+  // 海洋
+  const og=ctx.createLinearGradient(0,0,0,H);
+  og.addColorStop(0,'#0b2a45');og.addColorStop(1,'#06182b');
+  ctx.fillStyle=og;ctx.fillRect(0,0,W,H);
+  // 纬线
+  ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=1;
+  for(let i=1;i<6;i++){ctx.beginPath();ctx.moveTo(0,H*i/6);ctx.lineTo(W,H*i/6);ctx.stroke();}
+  const age=ageOf(S.scrub);
+  const mx=W*0.06,my=H*0.10,mw=W*0.88,mh=H*0.72;
+  const params=contParams(age);
+  const names=Object.keys(CONT);
+  names.forEach((n,ci)=>{
+    const [px,py,rx,ry]=params[n];
+    const cx=mx+px*mw,cy=my+py*mh,RX=rx*mw,RY=ry*mh;
+    ctx.beginPath();
+    for(let j=0;j<=10;j++){
+      const a=j/10*Math.PI*2;
+      const r=1+0.16*Math.sin(j*2.3+ci*1.7)+0.09*Math.cos(j*3.9+ci);
+      const x=cx+RX*r*Math.cos(a),y=cy+RY*r*Math.sin(a);
+      j?ctx.lineTo(x,y):ctx.moveTo(x,y);
+    }
+    ctx.closePath();
+    ctx.fillStyle=CONT[n].c;ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1.5;ctx.stroke();
+    // 内陆高光
+    ctx.save();ctx.clip();
+    const hg=ctx.createLinearGradient(cx,cy-RY,cx,cy+RY);
+    hg.addColorStop(0,'rgba(255,255,255,.16)');hg.addColorStop(1,'rgba(0,0,0,.18)');
+    ctx.fillStyle=hg;ctx.fillRect(cx-RX*1.4,cy-RY*1.4,RX*2.8,RY*2.8);
+    ctx.restore();
+    // 名称（接近现代才显示）
+    if(age<120){ctx.font='bold 14px "Microsoft YaHei"';ctx.textAlign='center';
+      ctx.fillStyle=`rgba(255,255,255,${clamp((120-age)/120,0,1)*0.9})`;
+      ctx.fillText(n,cx,cy+5);}
+  });
+  // 标题随年代切换
+  let title,sub;
+  if(age>252){title='联合古陆（泛大陆）';sub='古生代晚期 · 所有大陆连成一体，周围是泛大洋';}
+  else if(age>66){title='联合古陆解体 · 大陆漂移';sub='中生代 · 板块运动使古陆分裂，大西洋逐渐张开';}
+  else{title='现代海陆格局形成';sub='新生代 · 喜马拉雅造山运动，七大洲四大洋定型';}
+  ctx.textAlign='center';
+  ctx.font='bold 26px "Microsoft YaHei"';ctx.fillStyle='#fff';
+  ctx.shadowColor='rgba(0,0,0,.8)';ctx.shadowBlur=12;
+  ctx.fillText(title,W/2,my-8);
+  ctx.font='14px "Microsoft YaHei"';ctx.fillStyle='#9fd8ff';
+  ctx.fillText(sub,W/2,my+mh+30);
+  ctx.shadowBlur=0;
+}
+
+/* ================= 主循环 ================= */
+let lastT=0;
+function frame(t){
+  requestAnimationFrame(frame);
+  const dt=Math.min((t-lastT)/1000||0.016,0.05);lastT=t;
+  if(S.touring){
+    T.scrub=Math.min(1,T.scrub+dt*.035);
+    if(T.scrub>=.999){S.touring=false;$('btnTour').textContent='▶ 演化巡游';toast('巡游完成：显生宙只占地球历史的最后一小段。');}
+  }
+  S.scrub=lerp(S.scrub,T.scrub,Math.min(1,dt*4));
+  if(Math.abs(S.scrub-T.scrub)<0.0004)S.scrub=T.scrub;
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  if(S.view==='scene'){drawScene(t);drawWarp();}
+  else if(S.view==='strata'){drawStrata(t);drawWarp();}
+  else{drawMapView(t);drawWarp();}
+  refreshText();
+}
+requestAnimationFrame(frame);
+
+/* ================= 文本 & 游标 ================= */
+let rtKey='',eraIdx=-1;
+function refreshText(){
+  const age=ageOf(S.scrub),era=eraOf(age);
+  const zm=$('tlZoom').getBoundingClientRect(),mm=$('tlMain').getBoundingClientRect();
+  $('curZ').style.transform=`translateX(${(541-clamp(age,0,541))/541*zm.width}px)`;
+  $('curZ').style.opacity=age<=541?1:0.25;
+  $('curM').style.transform=`translateX(${S.scrub*mm.width}px)`;
+  const key=Math.round(age)+'|'+era.name;
+  if(key===rtKey)return;rtKey=key;
+  $('vAge').textContent=fmtAge(Math.max(age,0.2))+'前';
+  $('vEra').textContent=era.name;
+  $('gLife').textContent=era.life;$('gTec').textContent=era.tec;
+  $('gMin').textContent=era.min;$('gOc').textContent=era.oc;
+  $('calDate').textContent=earthCal(age);
+  const ei=ERAS.indexOf(era);
+  if(ei!==eraIdx){
+    eraIdx=ei;
+    $('eraNm').textContent=era.name;$('eraEn').textContent=era.en;
+    $('eraAg').textContent='距今 '+fmtAge(Math.max(age,0.2))+'前';
+    $('eraNm').style.textShadow=`0 4px 30px rgba(0,0,0,.75),0 0 60px ${era.c}66`;
+    const eb=$('eraBig');eb.classList.remove('fadeIn');void eb.offsetWidth;eb.classList.add('fadeIn');
+    document.querySelectorAll('#jumpPills .pill').forEach(p=>{
+      const a=+p.dataset.a;
+      p.classList.toggle('on',Math.abs(a-age)<(a>500?120:a>60?40:12));
+    });
+  }
+}
+
+/* ================= 时间轴拖拽 ================= */
+function bindBar(el,mapper){
+  let down=false;
+  const set=e=>{const r=el.getBoundingClientRect();
+    S.touring=false;$('btnTour').textContent='▶ 演化巡游';T.scrub=mapper(clamp((e.clientX-r.left)/r.width,0,1));rtKey='';};
+  el.addEventListener('pointerdown',e=>{down=true;el.setPointerCapture(e.pointerId);set(e);});
+  el.addEventListener('pointermove',e=>{if(down)set(e);});
+  el.addEventListener('pointerup',()=>down=false);
+}
+bindBar($('tlMain'),x=>x);
+bindBar($('tlZoom'),x=>1-(541*(1-x))/4600);
+/* 地层柱点击穿越 */
+stage.addEventListener('click',e=>{
+  if(S.view!=='strata')return;
+  const r=stage.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;
+  const hit=strataRects.find(sR=>mx>=sR.x&&mx<=sR.x+sR.w&&my>=sR.y&&my<=sR.y+sR.h);
+  if(hit){
+    const mid=(hit.L.a0+hit.L.a1)/2;
+    T.scrub=1-mid/4600;rtKey='';
+    $('flashT').textContent=hit.L.name;
+    $('flashA').textContent=hit.L.age+' · '+hit.L.note;
+    const fl=$('flash');fl.style.opacity=1;
+    clearTimeout(fl._h);fl._h=setTimeout(()=>fl.style.opacity=0,2200);
+  }
+});
+/* ================= 视图切换 & 穿越 & 地球历 ================= */
+document.querySelectorAll('.vp').forEach(v=>v.addEventListener('click',()=>{
+  document.querySelectorAll('.vp').forEach(x=>x.classList.remove('on'));
+  v.classList.add('on');S.view=v.dataset.v;
+  $('eraBig').style.display=S.view==='scene'?'block':'none';
+  toast({scene:'演化场景：拖动时间轴看 46 亿年环境变迁',
+    strata:'地层柱：下老上新 · 化石标记年代 · 注意波状不整合面',
+    map:'海陆变迁：联合古陆 → 解体漂移 → 现代格局'}[S.view]);
+}));
+const FLASH={4600:['地球形成','距今约 46 亿年 · 地壳开始形成'],
+  541:['寒武纪生命大爆发','距今 5.41 亿年 · 显生宙开端'],
+  330:['石炭纪成煤期','距今约 3.3 亿年 · 蕨类森林成煤'],
+  150:['恐龙时代','距今约 1.5 亿年 · 联合古陆加速解体'],
+  66:['第五次生物大灭绝','距今 6600 万年 · 中生代落幕'],
+  3:['人类登场','距今约 300 万年 · 新生代第四纪前夜']};
+$('jumpPills').addEventListener('click',e=>{
+  const a=e.target.dataset.a;if(a===undefined)return;
+  S.touring=false;$('btnTour').textContent='▶ 演化巡游';T.scrub=1-(+a)/4600;rtKey='';
+  const f=FLASH[a];
+  if(f){$('flashT').textContent=f[0];$('flashA').textContent=f[1];
+    const fl=$('flash');fl.style.opacity=1;
+    clearTimeout(fl._h);fl._h=setTimeout(()=>fl.style.opacity=0,2400);}
+});
+$('btnTour').addEventListener('click',()=>{
+  S.touring=!S.touring;
+  if(S.touring){T.scrub=0;$('btnTour').textContent='⏸ 暂停巡游';toast('从地球形成开始巡游；可随时拖动时间轴接管。');}
+  else{$('btnTour').textContent='▶ 演化巡游';}
+});
+$('btnResetTime').addEventListener('click',()=>{
+  S.touring=false;T.scrub=.967;rtKey='';$('btnTour').textContent='▶ 演化巡游';toast('已回到中生代：比较恐龙时代的生命、构造与海陆格局。');
+});
+$('btnCal').addEventListener('click',()=>{
+  const on=$('calLine').style.display==='none';
+  $('calLine').style.display=on?'block':'none';
+  $('anchors').style.display=on?'block':'none';
+  $('btnCal').classList.toggle('on',on);
+});
+function toast(msg){const t=$('hint');t.textContent=msg;t.style.opacity=1;
+  clearTimeout(t._h);t._h=setTimeout(()=>t.style.opacity=0,3400);}
+setTimeout(()=>toast('三种视角：场景看环境 · 地层柱读"书页" · 海陆变迁看大陆漂移'),900);
+/* Quiz */
+let score=0;
+document.querySelectorAll('.q').forEach(q=>{
+  q.querySelectorAll('.opt').forEach((o,i)=>o.addEventListener('click',()=>{
+    if(q.dataset.done)return;q.dataset.done=1;
+    if(i===+q.dataset.a){o.classList.add('ok');score++;$('score').textContent=score;}
+    else{o.classList.add('no');q.querySelectorAll('.opt')[+q.dataset.a].classList.add('ok');}
+  }));
+});
+</script>
+</body>
+</html>

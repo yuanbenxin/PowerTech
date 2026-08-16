@@ -1,0 +1,20 @@
+{
+  "cardId": "sb1_m06",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-coriolis-global-wind-belts",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "panelSelectors": [
+    "#left-panel",
+    "#bottom-panel[data-ui-panel]"
+  ],
+  "notes": "Coriolis force and global wind belts source integrated with local Three.js, OrbitControls, and local Earth textures."
+}

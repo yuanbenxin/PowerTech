@@ -1,0 +1,20 @@
+{
+  "cardId": "sb1m12",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-geologic-time-earth-evolution",
+  "visualLevel": "A",
+  "vendor": {
+    "three": false,
+    "orbitControls": false
+  },
+  "panelSelectors": [
+    "#panel",
+    "#viewPills"
+  ],
+  "notes": "通过地质年代时间轴、时代切换和重大生物演化事件，理解地球从冥古宙到新生代的长尺度演化。"
+}

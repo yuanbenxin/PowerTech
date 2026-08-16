@@ -1,0 +1,21 @@
+{
+  "cardId": "sb1_m07",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-thermal-circulation-sea-land-urban-heat",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "assets/vendor/three/OrbitControls.js?v=02bb4ade710f"
+  },
+  "panelSelectors": [
+    "#control-panel",
+    "#info-panel",
+    "#hud-panel"
+  ],
+  "notes": "热力环流、海陆风与城市热岛源码接入；Three.js、OrbitControls 与地表贴图均已本地化。"
+}

@@ -1,0 +1,31 @@
+{
+  "cardId": "sb1_m01",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-celestial-system-solar-activity",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "visualizations/books/s_b1/sb1_m01/assets/vendor/three/three.min.js",
+    "orbitControls": "visualizations/books/s_b1/sb1_m01/assets/vendor/three/OrbitControls.js",
+    "scripts": [
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/tween/tween.umd.js",
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/three/postprocessing/EffectComposer.js",
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/three/postprocessing/RenderPass.js",
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/three/postprocessing/ShaderPass.js",
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/three/shaders/CopyShader.js",
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/three/shaders/LuminosityHighPassShader.js",
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/three/postprocessing/UnrealBloomPass.js",
+      "visualizations/books/s_b1/sb1_m01/assets/vendor/three/Lensflare.js"
+    ]
+  },
+  "panelSelectors": [
+    ".left-panel",
+    ".right-panel",
+    ".bottom-panel"
+  ],
+  "notes": "天体系统与太阳活动源码接入；Three.js、OrbitControls、Tween、后处理、Lensflare、太阳/地月贴图和太阳分层插图均已本地化。"
+}

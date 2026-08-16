@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>河流地貌的发育 · 交互课件</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;background:#071310;color:#e9f3ec;
+    font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+  body{display:flex}
+  /* ---------- 左侧画布 ---------- */
+  #stage{flex:1;position:relative;min-width:0;cursor:crosshair;background:#071310}
+  .riverBackdrops{position:absolute;inset:0;z-index:0;overflow:hidden;background:#071310}
+  .riverBackdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .24s linear;pointer-events:none}
+  #cv{position:absolute;inset:0;z-index:1;display:block;width:100%;height:100%}
+  .baseLabels{position:absolute;inset:0;z-index:4;pointer-events:none}
+  .baseLabels span{position:absolute;transform:translate(-50%,-50%);min-width:74px;padding:6px 10px;
+    border:1px solid rgba(255,226,133,.78);background:rgba(5,15,10,.88);color:#fff0b6;
+    font-size:13px;font-weight:700;line-height:1;text-align:center;white-space:nowrap}
+  .ovTitle{position:absolute;top:18px;left:22px;z-index:5;pointer-events:none}
+  .ovTitle h1{font-size:22px;letter-spacing:2px;font-weight:700;
+    background:linear-gradient(90deg,#8be89b,#6fc3ff);-webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 2px 12px rgba(0,0,0,.5)}
+  .ovTitle p{font-size:12px;color:#a9c4b2;margin-top:4px;letter-spacing:1px}
+  #badges{position:absolute;top:18px;right:16px;z-index:5;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  .bdg{padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:1px;
+    background:rgba(6,20,14,.75);border:1px solid rgba(139,232,155,.4);backdrop-filter:blur(6px);color:#c9ecd1}
+  .bdg.gold{border-color:rgba(255,209,102,.55);color:#ffd166}
+  .bdg.blue{border-color:rgba(111,195,255,.5);color:#9fd8ff}
+  #hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:6;
+    background:rgba(6,20,14,.85);border:1px solid rgba(139,232,155,.45);padding:9px 20px;border-radius:999px;
+    font-size:13px;color:#d7f0dd;opacity:0;transition:opacity .5s;pointer-events:none;white-space:nowrap}
+  /* 知识卡 */
+  #kcard{position:absolute;z-index:7;max-width:270px;background:rgba(6,20,14,.9);
+    border:1px solid rgba(139,232,155,.5);border-radius:14px;padding:12px 15px;backdrop-filter:blur(8px);
+    box-shadow:0 8px 30px rgba(0,0,0,.5);display:none;pointer-events:none}
+  #kcard h4{font-size:15px;color:#8be89b;margin-bottom:5px;letter-spacing:1px}
+  #kcard p{font-size:12.5px;line-height:1.65;color:#cfe6d5}
+  /* ---------- 右侧面板 ---------- */
+  #panel{width:372px;flex:none;background:linear-gradient(180deg,#0a1a12,#07130d);
+    border-left:1px solid rgba(139,232,155,.16);overflow-y:auto;padding:16px 16px 26px}
+  #panel::-webkit-scrollbar{width:6px}
+  #panel::-webkit-scrollbar-thumb{background:rgba(139,232,155,.25);border-radius:3px}
+  .card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+    border-radius:14px;padding:13px 14px;margin-bottom:13px}
+  .card h3{font-size:13px;color:#9fbfa9;font-weight:600;letter-spacing:2px;margin-bottom:10px;
+    display:flex;align-items:center;gap:7px}
+  .stageName{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+  .stageName .v{font-size:26px;font-weight:800;color:#8be89b;letter-spacing:2px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip2{font-size:12px;padding:5px 11px;border-radius:999px;background:rgba(139,232,155,.1);
+    border:1px solid rgba(139,232,155,.3);color:#bfe6c8}
+  .chip2.gold{background:rgba(255,209,102,.1);border-color:rgba(255,209,102,.4);color:#ffe1a0}
+  .chip2.blue{background:rgba(111,195,255,.1);border-color:rgba(111,195,255,.4);color:#bfe4ff}
+  .sld{margin-bottom:4px}
+  .sld .lab{display:flex;justify-content:space-between;font-size:13px;color:#cfe0d5;margin-bottom:6px}
+  .sld .lab b{color:#8be89b;font-variant-numeric:tabular-nums}
+  input[type=range]{width:100%;appearance:none;height:6px;border-radius:3px;outline:none;
+    background:linear-gradient(90deg,#8be89b var(--p,50%),rgba(255,255,255,.13) var(--p,50%))}
+  input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;border-radius:50%;
+    background:#fff;border:3px solid #8be89b;cursor:pointer;box-shadow:0 0 10px rgba(139,232,155,.7)}
+  .sld.blue input[type=range]{background:linear-gradient(90deg,#6fc3ff var(--p,50%),rgba(255,255,255,.13) var(--p,50%))}
+  .sld.blue input[type=range]::-webkit-slider-thumb{border-color:#6fc3ff;box-shadow:0 0 10px rgba(111,195,255,.7)}
+  .pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+  .pill{font-size:12px;padding:5px 11px;border-radius:999px;cursor:pointer;user-select:none;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#cfe0d5;transition:.2s}
+  .pill:hover{border-color:#8be89b;color:#8be89b}
+  .pill.on{background:rgba(139,232,155,.16);border-color:#8be89b;color:#8be89b}
+  .btns{display:flex;gap:8px}
+  .btn{flex:1;text-align:center;padding:11px 4px;border-radius:11px;cursor:pointer;user-select:none;
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);color:#cfe0d5;transition:.2s}
+  .btn .ic{font-size:20px;display:block;margin-bottom:4px}
+  .btn small{font-size:12px;letter-spacing:1px}
+  .btn:hover{border-color:#8be89b}
+  .btn.on{background:rgba(139,232,155,.15);border-color:#8be89b;color:#8be89b;
+    box-shadow:0 0 14px rgba(139,232,155,.25)}
+  .btn.on.blue{background:rgba(111,195,255,.15);border-color:#6fc3ff;color:#9fd8ff;box-shadow:0 0 14px rgba(111,195,255,.25)}
+  .note{font-size:11.5px;color:#7d9a87;margin-top:9px;line-height:1.6}
+  .evidence{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
+  .evidence div{min-width:0;padding:8px 9px;border-radius:10px;background:rgba(139,232,155,.07);border:1px solid rgba(139,232,155,.18);font-size:11.5px;line-height:1.5;color:#d8ecdd}
+  .evidence b{display:block;margin-bottom:2px;color:#8be89b;font-size:10.5px;letter-spacing:1px}
+  .taskLine{margin-top:9px;padding:8px 10px;border-left:2px solid #ffd166;background:rgba(255,209,102,.07);color:#f7e4b1;font-size:11.5px;line-height:1.55}
+  .utility{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}
+  .utility .pill{width:100%;text-align:center;padding:8px 6px}
+  /* quiz */
+  .q{font-size:13px;color:#e2efe6;margin-bottom:10px;line-height:1.5}
+  .opts{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+  .opt{flex:1;min-width:88px;text-align:center;font-size:12.5px;padding:7px 4px;border-radius:9px;cursor:pointer;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);transition:.2s;user-select:none}
+  .opt:hover{border-color:#8be89b}
+  .opt.ok{background:rgba(80,220,140,.18);border-color:#50dc8c;color:#7ff0ae}
+  .opt.no{background:rgba(255,90,90,.16);border-color:#ff5a5a;color:#ff9a9a}
+  #scoreLine{font-size:12px;color:#7d9a87;margin-left:auto}
+  #scoreLine b{color:#ffd166}
+  @media (max-width:860px){body{flex-direction:column}#panel{width:100%;height:46%}#stage{height:54%}}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="riverBackdrops" aria-hidden="true">
+    <img class="riverBackdrop" id="riverYoung" src="assets/river_young.webp?v=f86e425a3e29" alt="">
+    <img class="riverBackdrop" id="riverMature" src="assets/river_mature.webp?v=da4f210d9921" alt="" style="opacity:1">
+    <img class="riverBackdrop" id="riverOld" src="assets/river_old.webp?v=93ae1a9cbb65" alt="">
+  </div>
+  <canvas id="cv"></canvas>
+  <div class="baseLabels" aria-hidden="true">
+    <span style="left:59.5%;top:10.4%">溯源侵蚀</span><span style="left:75.8%;top:21.6%">峡谷发育</span>
+    <span style="left:70%;top:32.6%">泥沙沉积</span><span style="left:30.2%;top:20.5%">山地</span>
+    <span style="left:51%;top:68.2%">河流主槽</span><span style="left:73.4%;top:58.2%">三角洲沉积</span>
+    <span style="left:85.7%;top:82%">海平面</span>
+  </div>
+  <div class="ovTitle"><h1>河流地貌的发育</h1><p>源头 → 峡谷 → 曲流 → 三角洲 · 点击画面中的发光点</p></div>
+  <div id="badges">
+    <div class="bdg gold" id="bdStage">中期 · 曲流发育</div>
+    <div class="bdg" id="bdForce">下蚀 · 侧蚀增强</div>
+    <div class="bdg blue" id="bdLand">河谷展宽 · 河漫滩</div>
+  </div>
+  <div id="kcard"><h4 id="kcT"></h4><p id="kcP"></p></div>
+  <div id="hint"></div>
+</div>
+
+<div id="panel">
+  <div class="card">
+    <h3>⏳ 河谷发育阶段</h3>
+    <div class="stageName"><span class="v" id="vStage">中期</span><span style="font-size:12px;color:#7d9a87" id="vStageSub">河谷展宽，曲流出现</span></div>
+    <div class="chips" id="autoChips">
+      <span class="chip2 gold" id="chForce">下蚀·侧蚀增强</span>
+      <span class="chip2" id="chLand">曲流·河漫滩</span>
+    </div>
+    <div class="sld" style="margin-top:12px"><div class="lab"><span>初期 ←→ 成熟期</span><b id="vS">50</b></div>
+      <input type="range" id="sS" min="0" max="100" step="0.5" value="50"></div>
+    <div class="pills" id="stagePills">
+      <span class="pill" data-s="10">上游 · V形谷</span>
+      <span class="pill on" data-s="50">中游 · 曲流</span>
+      <span class="pill" data-s="90">下游 · 堆积</span>
+    </div>
+    <div class="taskLine" id="taskLine">观察任务：先看曲流两岸，判断哪里侵蚀、哪里堆积。</div>
+  </div>
+
+  <div class="card">
+    <h3>🏔 侵蚀方式（点开看画面）</h3>
+    <div class="btns">
+      <div class="btn" data-e="head"><span class="ic">⛏️</span><small>溯源侵蚀</small></div>
+      <div class="btn" data-e="down"><span class="ic">⬇️</span><small>下蚀</small></div>
+      <div class="btn" data-e="side"><span class="ic">↔️</span><small>侧蚀</small></div>
+    </div>
+    <div class="note" id="eNote">三种侵蚀共同塑造河谷，点击按钮看各自发生的位置与方向。</div>
+  </div>
+
+  <div class="card">
+    <h3>🌊 曲流河岸演示</h3>
+    <div class="btns">
+      <div class="btn" id="btnBank"><span class="ic">🌀</span><small>凹岸侵蚀 · 凸岸堆积</small></div>
+    </div>
+    <div class="note">弯道环流把泥沙从凹岸搬向凸岸：凹岸后退成陡坎，凸岸前积成边滩——曲流越来越弯，最终<span style="color:#ffd166">裁弯取直成牛轭湖</span>。</div>
+  </div>
+
+  <div class="card">
+    <h3>💧 流速</h3>
+    <div class="sld blue"><div class="lab"><span>慢 ←→ 快</span><b id="vF" style="color:#6fc3ff">50</b></div>
+      <input type="range" id="sF" min="5" max="100" step="1" value="50"></div>
+    <div class="note">流速快→侵蚀强、搬运强；流速慢→泥沙堆积。看出山口与入海口因减速而堆积。</div>
+    <div class="evidence">
+      <div><b>主导过程</b><span id="evProcess">侧蚀与搬运</span></div>
+      <div><b>画面证据</b><span id="evEvidence">曲流凹岸后退</span></div>
+      <div><b>沉积物命运</b><span id="evSediment">细颗粒继续搬运</span></div>
+      <div><b>地貌结果</b><span id="evLandform">河漫滩发育</span></div>
+    </div>
+    <div class="utility"><span class="pill" id="btnPause">⏸ 暂停观察</span><span class="pill" id="btnReset">↺ 重置模型</span></div>
+  </div>
+
+  <div class="card">
+    <h3>✏️ 课堂检测 <span id="scoreLine">得分 <b id="score">0</b>/4</span></h3>
+    <div class="q" data-a="1">1. 曲流河段，凹岸与凸岸分别发生？
+      <div class="opts"><span class="opt">凹岸堆积、凸岸侵蚀</span><span class="opt">凹岸侵蚀、凸岸堆积</span><span class="opt">两岸都侵蚀</span></div></div>
+    <div class="q" data-a="2">2. 牛轭湖的形成直接缘于？
+      <div class="opts"><span class="opt">溯源侵蚀</span><span class="opt">下蚀加深</span><span class="opt">曲流裁弯取直</span></div></div>
+    <div class="q" data-a="0">3. 山前冲积扇形成的主因是？
+      <div class="opts"><span class="opt">出山口流速骤减，泥沙堆积</span><span class="opt">海浪堆积</span><span class="opt">风力堆积</span></div></div>
+    <div class="q" data-a="1">4. 瀑布逐年向上游方向后退，属于？
+      <div class="opts"><span class="opt">下蚀</span><span class="opt">溯源侵蚀</span><span class="opt">侧蚀</span></div></div>
+  </div>
+</div>
+
+<script>
+/* ================= 基础 ================= */
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+const stage=document.getElementById('stage');
+const $=id=>document.getElementById(id);
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const lerp=(a,b,t)=>a+(b-a)*t;
+let W=0,H=0,DPR=1;
+function resize(){DPR=Math.min(devicePixelRatio,2);
+  W=stage.clientWidth;H=stage.clientHeight;
+  cv.width=W*DPR;cv.height=H*DPR;}
+window.addEventListener('resize',resize);resize();
+
+/* ================= 三阶段同源底图（三档 WebP 由适配器自动选择） ================= */
+const IMGS=[
+  {el:$('riverYoung')},
+  {el:$('riverMature')},
+  {el:$('riverOld')},
+];
+function drawBG(){
+  // 阶段权重：0→初期，50→中期，100→成熟期
+  const s=S.stage;
+  let w0=clamp(1-s/50,0,1),w2=clamp((s-50)/50,0,1),w1=1-w0-w2;
+  const W8=[w0,w1,w2];
+  // 原生 img 负责稳定预加载，Canvas 负责统一叠绘，避免代理 Image 的首帧时序问题。
+  const iw=2048,ih=1152,sc=Math.max(W/iw,H/ih);
+  const dw=iw*sc,dh=ih*sc,dx=(W-dw)/2,dy=(H-dh)/2;
+  ctx.fillStyle='#071310';ctx.fillRect(0,0,W,H);
+  let first=true;
+  IMGS.forEach((o,i)=>{
+    const image=o.el;
+    if(W8[i]<=0.002||!image.complete||!image.naturalWidth)return;
+    ctx.globalAlpha=first?1:W8[i];
+    first=false;
+    ctx.drawImage(image,dx,dy,dw,dh);
+  });
+  ctx.globalAlpha=1;
+  return {dx,dy,dw,dh};
+}
+let RECT={dx:0,dy:0,dw:1,dh:1};
+const X=x=>RECT.dx+x*RECT.dw, Y=y=>RECT.dy+y*RECT.dh;
+
+/* ================= 状态 ================= */
+const S={stage:50,flow:50,erosion:null,bank:false,running:true};
+const T={stage:50};
+
+/* ================= 地理标注（相对坐标，已校验） ================= */
+const PT={waterfall:[0.115,0.24],gorge:[0.16,0.52],fan:[0.28,0.63],
+  bendOut:[0.50,0.75],bendIn:[0.51,0.64],floodplain:[0.55,0.50],
+  delta:[0.80,0.72],oxbow:[0.30,0.58]};
+const PATH=[[0.115,0.26],[0.13,0.40],[0.16,0.52],[0.20,0.66],[0.26,0.72],[0.34,0.66],[0.40,0.56],
+  [0.44,0.68],[0.52,0.73],[0.60,0.70],[0.63,0.58],[0.62,0.46],[0.68,0.47],[0.76,0.52],[0.83,0.62]];
+const HOTSPOTS=[
+  {k:'waterfall',t:'瀑布 · 溯源侵蚀',p:'河床受侵蚀向上游方向后退，河谷不断向源头延长——瀑布因此逐年后退。'},
+  {k:'fan',t:'山前冲积扇',p:'河流出山口，地形骤缓、流速锐减，搬运的泥沙碎石呈扇形堆积。'},
+  {k:'floodplain',t:'河漫滩平原',p:'凸岸堆积形成边滩，洪水期泛滥淤积，逐渐连成平坦的河漫滩。'},
+  {k:'delta',t:'河口三角洲',p:'入海口水流分散、流速极缓，加上海水顶托，泥沙长期堆积成三角洲。'},
+  {k:'oxbow',t:'牛轭湖（成熟期）',p:'曲流发展到极致，洪水冲开曲流颈裁弯取直，废弃的弯河道积水成湖。',old:true},
+];
+
+/* ================= 特效绘制 ================= */
+function arrow(x1,y1,x2,y2,color,lw,glow){
+  ctx.strokeStyle=color;ctx.lineWidth=lw;ctx.lineCap='round';
+  if(glow){ctx.shadowColor=color;ctx.shadowBlur=10;}
+  ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+  const a=Math.atan2(y2-y1,x2-x1),hs=7+lw*2;
+  ctx.fillStyle=color;ctx.beginPath();
+  ctx.moveTo(x2,y2);
+  ctx.lineTo(x2-hs*Math.cos(a-0.42),y2-hs*Math.sin(a-0.42));
+  ctx.lineTo(x2-hs*Math.cos(a+0.42),y2-hs*Math.sin(a+0.42));
+  ctx.closePath();ctx.fill();ctx.shadowBlur=0;
+}
+function glowTag(txt,x,y,color){
+  ctx.font='bold 15px "Microsoft YaHei"';ctx.textAlign='center';
+  const w=ctx.measureText(txt).width;
+  ctx.fillStyle='rgba(5,15,10,.78)';
+  ctx.fillRect(x-w/2-11,y-14,w+22,27);
+  ctx.strokeStyle=color;ctx.lineWidth=1.2;ctx.strokeRect(x-w/2-11,y-14,w+22,27);
+  ctx.fillStyle=color;ctx.fillText(txt,x,y+5);
+}
+// 流动粒子
+let particles=[];
+function drawFlow(t){
+  const n=Math.round(20+S.flow*0.9),spd=(0.0012+S.flow*0.00007);
+  if(particles.length!==n){particles=Array.from({length:n},()=>Math.random());}
+  // 路径总长按段近似
+  const pts=PATH.map(p=>[X(p[0]),Y(p[1])]);
+  const segs=[];let total=0;
+  for(let i=0;i<pts.length-1;i++){const d=Math.hypot(pts[i+1][0]-pts[i][0],pts[i+1][1]-pts[i][1]);
+    segs.push(d);total+=d;}
+  ctx.fillStyle='rgba(220,245,255,.9)';ctx.shadowColor='rgba(140,220,255,.9)';ctx.shadowBlur=6;
+  particles.forEach((p,index)=>{
+    p=S.running?(p+spd)%1:p;
+    particles[index]=p;
+    let dist=p*total,i=0;
+    while(i<segs.length-1&&dist>segs[i]){dist-=segs[i];i++;}
+    const k=segs[i]?dist/segs[i]:0;
+    const x=lerp(pts[i][0],pts[i+1][0],k),y=lerp(pts[i][1],pts[i+1][1],k);
+    ctx.globalAlpha=0.35+0.65*Math.sin(p*Math.PI);
+    ctx.beginPath();ctx.arc(x,y,2.2,0,7);ctx.fill();
+  });
+  ctx.globalAlpha=1;ctx.shadowBlur=0;
+}
+function drawSediment(t){
+  const slow=clamp((58-S.flow)/53,0,1),fast=clamp((S.flow-58)/42,0,1);
+  if(slow>0.03){
+    const [dx,dy]=[X(PT.delta[0]),Y(PT.delta[1])];
+    ctx.fillStyle=`rgba(232,190,120,${0.25+slow*.55})`;
+    for(let i=0;i<28;i++){
+      const a=i*2.399+t*.00016,r=(18+(i%7)*7)*slow;
+      ctx.beginPath();ctx.arc(dx+Math.cos(a)*r*2.2,dy+Math.sin(a)*r*.7,1.2+(i%3)*.5,0,7);ctx.fill();
+    }
+    glowTag('流速减小 · 泥沙沉积',dx+2,dy+42,'#e8be78');
+  }
+  if(fast>0.03){
+    const [gx,gy]=[X(PT.gorge[0]),Y(PT.gorge[1])];
+    for(let i=0;i<3;i++) arrow(gx-38+i*28,gy+18,gx-12+i*28,gy-12,`rgba(145,220,255,${.35+fast*.55})`,2.2,true);
+  }
+}
+// 侵蚀方式特效
+function drawErosion(t){
+  const pulse=0.6+0.4*Math.sin(t*0.005);
+  if(S.erosion==='head'){
+    const [fx,fy]=[X(PT.waterfall[0]),Y(PT.waterfall[1])];
+    // 向上游（左上）方向的连续箭头
+    for(let i=0;i<3;i++){
+      const k=(t*0.0006+i/3)%1;
+      arrow(fx+34-66*k,fy+46-70*k,fx+22-66*k,fy+34-70*k,`rgba(255,209,102,${1-k*0.7})`,3,true);
+    }
+    ctx.strokeStyle=`rgba(255,209,102,${pulse})`;ctx.lineWidth=2.5;
+    ctx.beginPath();ctx.arc(fx,fy,26+pulse*8,0,7);ctx.stroke();
+    glowTag('溯源侵蚀 · 河谷向源头延长',fx+110,fy-8,'#ffd166');
+  }
+  if(S.erosion==='down'){
+    const [gx,gy]=[X(PT.gorge[0]),Y(PT.gorge[1])];
+    for(let i=0;i<3;i++){
+      const k=(t*0.0008+i/3)%1;
+      arrow(gx-40+i*40,gy-52, gx-40+i*40,gy-52+58*k+18,`rgba(255,120,90,${0.4+k*0.6})`,3.2,true);
+    }
+    glowTag('下蚀 · 河床加深，V形谷形成',gx+30,gy-72,'#ff785a');
+  }
+  if(S.erosion==='side'){
+    const [bx,by]=[X(PT.bendIn[0]),Y(PT.bendIn[1])];
+    for(let i=0;i<3;i++){
+      const k=(t*0.0007+i/3)%1;
+      arrow(bx-70,by-30+i*28, bx-70+54*k+12,by-30+i*28,`rgba(111,195,255,${0.4+k*0.6})`,3,true);
+      arrow(bx+70,by-30+i*28, bx+70-54*k-12,by-30+i*28,`rgba(111,195,255,${0.4+k*0.6})`,3,true);
+    }
+    glowTag('侧蚀 · 河谷向两侧展宽',bx,by-58,'#6fc3ff');
+  }
+}
+// 凹岸凸岸演示
+let sedDots=[];
+function drawBank(t){
+  if(!S.bank)return;
+  const [ox,oy]=[X(PT.bendOut[0]),Y(PT.bendOut[1])];
+  const [ix,iy]=[X(PT.bendIn[0]),Y(PT.bendIn[1])];
+  // 弯道环流：表层水流冲向凹岸
+  ctx.strokeStyle='rgba(140,220,255,.85)';ctx.lineWidth=3;ctx.setLineDash([9,7]);
+  ctx.lineDashOffset=-t*0.05;
+  ctx.beginPath();ctx.moveTo(ix-90,iy-40);
+  ctx.quadraticCurveTo((ix+ox)/2,(iy+oy)/2+26,ox+8,oy-22);ctx.stroke();ctx.setLineDash([]);
+  // 凹岸：红色侵蚀箭头撞击
+  for(let i=0;i<3;i++){
+    const k=(t*0.0009+i/3)%1;
+    arrow(ox-10-40*k,oy-44-8*i, ox-10-40*k+34,oy-14-6*i,`rgba(255,90,80,${0.5+k*0.5})`,3.4,true);
+  }
+  glowTag('凹岸 · 侵蚀（凹退）',ox+6,oy+34,'#ff6a5e');
+  // 凸岸：泥沙颗粒累积
+  if(sedDots.length<46&&Math.random()<0.3)
+    sedDots.push({x:ix+(Math.random()-0.5)*66,y:iy+(Math.random()-0.5)*30,r:1.5+Math.random()*2.5,a:0});
+  sedDots.forEach(d=>{d.a=Math.min(0.85,d.a+0.02);
+    ctx.fillStyle=`rgba(232,190,120,${d.a})`;
+    ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,7);ctx.fill();});
+  glowTag('凸岸 · 堆积（凸进）',ix,iy-38,'#e8be78');
+}
+// 热点
+function drawHotspots(t){
+  HOTSPOTS.forEach(h=>{
+    if(h.old&&S.stage<68)return;
+    const x=X(PT[h.k][0]),y=Y(PT[h.k][1]);
+    const pulse=0.5+0.5*Math.sin(t*0.004+h.k.length);
+    ctx.strokeStyle=`rgba(255,255,255,${0.35+0.45*pulse})`;ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(x,y,10+7*pulse,0,7);ctx.stroke();
+    ctx.fillStyle='rgba(255,255,255,.95)';
+    ctx.beginPath();ctx.arc(x,y,3.4,0,7);ctx.fill();
+  });
+}
+
+/* ================= 主循环 ================= */
+let lastT=0;
+function frame(t){
+  requestAnimationFrame(frame);
+  const dt=Math.min((t-lastT)/1000||0.016,0.05);lastT=t;
+  S.stage=lerp(S.stage,T.stage,Math.min(1,dt*4.5));
+  if(Math.abs(S.stage-T.stage)<0.05)S.stage=T.stage;
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  RECT=drawBG();
+  drawFlow(t);
+  drawSediment(t);
+  drawErosion(t);
+  drawBank(t);
+  drawHotspots(t);
+  refreshText();
+}
+requestAnimationFrame(frame);
+
+/* ================= 文本刷新 ================= */
+let rtKey='';
+function refreshText(){
+  const s=S.stage;
+  $('vS').textContent=Math.round(s);
+  const key=Math.round(s/4)+'|'+Math.round(S.flow/5);
+  if(key===rtKey)return;rtKey=key;
+  let name,sub,force,land;
+  if(s<36){name='初期';sub='河谷深窄，峡谷发育';force='溯源侵蚀 · 下蚀为主';land='V形谷 · 瀑布·急流';}
+  else if(s<70){name='中期';sub='河谷展宽，曲流出现';force='下蚀减弱 · 侧蚀加强';land='曲流 · 河漫滩';}
+  else{name='成熟期';sub='宽浅槽形谷，曲流极盛';force='侧蚀 · 堆积为主';land='槽形谷 · 牛轭湖 · 三角洲';}
+  $('vStage').textContent=name;$('vStageSub').textContent=sub;
+  $('bdStage').textContent=name+' · '+(s<36?'V形峡谷':s<70?'曲流发育':'宽谷牛轭湖');
+  $('bdForce').textContent=force;$('bdLand').textContent=land;
+  $('chForce').textContent=force;$('chLand').textContent=land;
+  document.querySelectorAll('#stagePills .pill').forEach(p=>{
+    const v=+p.dataset.s;
+    p.classList.toggle('on',(v<36&&s<36)||(v===50&&s>=36&&s<70)||(v>70&&s>=70));
+  });
+  const slow=S.flow<40, fast=S.flow>72;
+  let task,process,evidence,sediment,landform;
+  if(s<36){
+    task='观察任务：点击「下蚀」，看河床为什么加深、V形谷为什么形成。';
+    process=fast?'下蚀与强搬运':'下蚀为主'; evidence='峡谷深切 · 瀑布后退'; sediment=fast?'粗颗粒可继续搬运':'粗颗粒在坡折处滞留'; landform='V形谷 · 瀑布';
+  }else if(s<70){
+    task='观察任务：先看曲流两岸，判断哪里侵蚀、哪里堆积。';
+    process=fast?'侧蚀与搬运增强':'侧蚀与堆积并存'; evidence='凹岸后退 · 凸岸边滩'; sediment=slow?'细颗粒在凸岸沉积':'细颗粒继续沿河道搬运'; landform='曲流 · 河漫滩';
+  }else{
+    task='观察任务：把流速调慢，观察泥沙为什么在河口形成三角洲。';
+    process=slow?'堆积占优势':'搬运逐渐减弱'; evidence='河道分汊 · 河口外伸'; sediment=slow?'泥沙在河口大量沉积':'细颗粒仍可输送至河口'; landform='三角洲 · 牛轭湖';
+  }
+  $('taskLine').textContent=task;$('evProcess').textContent=process;$('evEvidence').textContent=evidence;
+  $('evSediment').textContent=sediment;$('evLandform').textContent=landform;
+}
+
+/* ================= 交互 ================= */
+function setRangeFill(el){const p=(el.value-el.min)/(el.max-el.min)*100;el.style.setProperty('--p',p+'%');}
+['sS','sF'].forEach(i=>setRangeFill($(i)));
+$('sS').addEventListener('input',e=>{T.stage=+e.target.value;setRangeFill(e.target);rtKey='';});
+$('sF').addEventListener('input',e=>{S.flow=+e.target.value;$('vF').textContent=e.target.value;setRangeFill(e.target);});
+$('stagePills').addEventListener('click',e=>{const s=e.target.dataset.s;if(s===undefined)return;
+  T.stage=+s;$('sS').value=s;setRangeFill($('sS'));rtKey='';});
+const ENOTE={head:'⛏️ 溯源侵蚀：向源头方向的侵蚀，使河谷延长——看瀑布处的箭头。',
+  down:'⬇️ 下蚀：垂直向下的侵蚀，使河床加深——造就 V 形峡谷。',
+  side:'↔️ 侧蚀：向两侧的侵蚀，使河谷展宽——曲流因此越来越弯。'};
+document.querySelectorAll('.btn[data-e]').forEach(b=>b.addEventListener('click',()=>{
+  const e=b.dataset.e;
+  if(S.erosion===e){S.erosion=null;b.classList.remove('on');$('eNote').textContent='三种侵蚀共同塑造河谷，点击按钮看各自发生的位置与方向。';return;}
+  S.erosion=e;
+  document.querySelectorAll('.btn[data-e]').forEach(x=>x.classList.toggle('on',x===b));
+  $('eNote').textContent=ENOTE[e];
+}));
+$('btnBank').addEventListener('click',()=>{
+  S.bank=!S.bank;$('btnBank').classList.toggle('on',S.bank);
+  if(S.bank){sedDots=[];T.stage=Math.max(T.stage,55);$('sS').value=T.stage;setRangeFill($('sS'));rtKey='';}
+});
+$('btnPause').addEventListener('click',()=>{S.running=!S.running;$('btnPause').textContent=S.running?'⏸ 暂停观察':'▶ 继续观察';});
+$('btnReset').addEventListener('click',()=>{
+  T.stage=50;S.stage=50;S.flow=50;S.erosion=null;S.bank=false;S.running=true;particles=[];sedDots=[];rtKey='';
+  $('sS').value=50;$('sF').value=50;$('vF').textContent='50';setRangeFill($('sS'));setRangeFill($('sF'));
+  $('btnPause').textContent='⏸ 暂停观察';$('btnBank').classList.remove('on');document.querySelectorAll('.btn[data-e]').forEach(x=>x.classList.remove('on'));
+  $('eNote').textContent='三种侵蚀共同塑造河谷，点击按钮看各自发生的位置与方向。';toast('已回到中游曲流的观察起点');
+});
+// 热点点击
+stage.addEventListener('click',e=>{
+  const r=stage.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;
+  let best=null,bd=1e9;
+  HOTSPOTS.forEach(h=>{
+    if(h.old&&S.stage<68)return;
+    const x=X(PT[h.k][0]),y=Y(PT[h.k][1]);
+    const d=Math.hypot(mx-x,my-y);
+    if(d<bd){bd=d;best=h;}
+  });
+  if(best&&bd<52){
+    $('kcT').textContent=best.t;$('kcP').textContent=best.p;
+    const kc=$('kcard');
+    kc.style.display='block';
+    let lx=X(PT[best.k][0])+26,ly=Y(PT[best.k][1])-10;
+    lx=Math.min(lx,W-290);ly=clamp(ly,10,H-140);
+    kc.style.left=lx+'px';kc.style.top=ly+'px';
+    clearTimeout(kc._h);kc._h=setTimeout(()=>kc.style.display='none',6000);
+  }else $('kcard').style.display='none';
+});
+// 提示
+function toast(msg){const t=$('hint');t.textContent=msg;t.style.opacity=1;
+  clearTimeout(t._h);t._h=setTimeout(()=>t.style.opacity=0,3200);}
+setTimeout(()=>toast('拖动「发育阶段」滑杆：看 V形谷 → 曲流 → 宽谷牛轭湖 的完整演变'),800);
+// Quiz
+let score=0;
+document.querySelectorAll('.q').forEach(q=>{
+  q.querySelectorAll('.opt').forEach((o,i)=>o.addEventListener('click',()=>{
+    if(q.dataset.done)return;q.dataset.done=1;
+    if(i===+q.dataset.a){o.classList.add('ok');score++;$('score').textContent=score;}
+    else{o.classList.add('no');q.querySelectorAll('.opt')[+q.dataset.a].classList.add('ok');}
+  }));
+});
+</script>
+</body>
+</html>

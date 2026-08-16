@@ -1,0 +1,28 @@
+{
+  "cardId": "sb1m11",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "sourceStyles": [
+    "style.css?v=c09840108eb3"
+  ],
+  "sourceScripts": [
+    "app.js?v=71362c932fbf"
+  ],
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-orbit-earth-interior-layers",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "assets/vendor/three/three.min.js?v=9274bbcec8d9",
+    "orbitControls": "assets/vendor/three/OrbitControls.js?v=02bb4ade710f",
+    "scripts": [
+      "visualizations/books/s_b1/sb1m11/assets/vendor/three/GLTFLoader.js"
+    ]
+  },
+  "panelSelectors": [
+    "#panel"
+  ],
+  "notes": "地球内部圈层结构透视：直接复用原课件 app_glb 的圈层分组、剖切、分层剥离、P/S 波传播和阴影区逻辑；仅把 GLB 改为 desktop/tablet/mobile 三档同源资源，并将原 #panel 迁移到平台右侧操作面板。"
+}

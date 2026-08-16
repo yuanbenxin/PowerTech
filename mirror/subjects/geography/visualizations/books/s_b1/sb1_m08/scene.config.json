@@ -1,0 +1,31 @@
+{
+  "cardId": "sb1_m08",
+  "status": "ready",
+  "engine": "source-html-adapter",
+  "entry": "../../../engines/source-html-adapter/scene.js?v=fe1481113778",
+  "source": "source.html",
+  "coursewarePanelMode": "scene-controls",
+  "assetsDir": "assets",
+  "interactionMode": "touch-cyclone-anticyclone-typhoon-section",
+  "visualLevel": "A",
+  "vendor": {
+    "three": "visualizations/books/s_b1/sb1_m08/assets/vendor/three/three.min.js",
+    "orbitControls": "visualizations/books/s_b1/sb1_m08/assets/vendor/three/OrbitControls.js",
+    "scripts": [
+      "visualizations/books/s_b1/sb1_m08/assets/vendor/tween/tween.umd.js",
+      "visualizations/books/s_b1/sb1_m08/assets/vendor/three/postprocessing/EffectComposer.js",
+      "visualizations/books/s_b1/sb1_m08/assets/vendor/three/postprocessing/RenderPass.js",
+      "visualizations/books/s_b1/sb1_m08/assets/vendor/three/postprocessing/ShaderPass.js",
+      "visualizations/books/s_b1/sb1_m08/assets/vendor/three/shaders/CopyShader.js",
+      "visualizations/books/s_b1/sb1_m08/assets/vendor/three/shaders/LuminosityHighPassShader.js",
+      "visualizations/books/s_b1/sb1_m08/assets/vendor/three/postprocessing/UnrealBloomPass.js"
+    ]
+  },
+  "panelSelectors": [
+    ".controls-box",
+    ".title-box",
+    ".legend-box",
+    "#info-desc"
+  ],
+  "notes": "气旋、反气旋与台风结构剖面源码接入；Three.js、OrbitControls、Tween 与后处理脚本均已本地化。"
+}
